@@ -111,7 +111,7 @@ export async function POST(req: NextRequest) {
       : null;
 
     const user = await userPromise;
-    const quote = quotePromise ? await quotePromise : null;
+    let quote = quotePromise ? await quotePromise : null;
 
     // DEDUPLICATION CHECK 1: If an active order already exists for this quote, return it immediately
     if (quote) {
