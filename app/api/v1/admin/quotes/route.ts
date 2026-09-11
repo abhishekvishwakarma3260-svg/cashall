@@ -10,28 +10,28 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   const limit = parseInt(searchParams.get("limit") || "200", 10);
   const skip = (page - 1) * limit;
 
-  const [quotes, total] = await Promise.all([
-    prisma.quote.findMany({
-      where: { deletedAt: null },
-      include: {
-        orders: {
-          include: {
-            user: true,
-            address: true,
-          },
-        },
-        variant: {
-          include: {
-            model: { include: { brand: true } },
-          },
+  const total = await prisma.quote.count({ where: { deletedAt: null } });
+  const quotes = await prisma.quote.findMany({
+    where: { deletedAt: null },
+    include: {
+      orders: {
+        take: 1,
+        orderBy: { createdAt: "desc" },
+        include: {
+          user: true,
+          address: true,
         },
       },
-      orderBy: { createdAt: "desc" },
-      skip,
-      take: limit,
-    }),
-    prisma.quote.count({ where: { deletedAt: null } }),
-  ]);
+      variant: {
+        include: {
+          model: { include: { brand: true } },
+        },
+      },
+    },
+    orderBy: { createdAt: "desc" },
+    skip,
+    take: limit,
+  });
 
   const mapped = quotes.map((q) => {
     let deviceName = q.variant

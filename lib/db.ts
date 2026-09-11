@@ -12,7 +12,7 @@ const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 // Supabase IPv4 Transaction Pooler URL (Port 6543 handles high concurrent traffic via transaction pooling)
 const SUPABASE_IPV4_POOLER_URL =
-  "postgresql://postgres.jqysknhobtpcbyyltnfc:cashall%407003216788@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1&pool_timeout=20&sslmode=require";
+  "postgresql://postgres.jqysknhobtpcbyyltnfc:cashall%407003216788@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=5&pool_timeout=30&sslmode=require";
 
 // STRICT: NEVER use POSTGRES_URL_NON_POOLING (port 5432 session mode, max 15 clients).
 // Always prioritize pooled connection URLs (port 6543).
@@ -36,16 +36,8 @@ if (!dbUrl.includes("pgbouncer=true")) {
   dbUrl += (dbUrl.includes("?") ? "&" : "?") + "pgbouncer=true";
 }
 
-// In serverless environments (Vercel, AWS Lambda), each function container processes ONE request at a time.
-// Setting connection_limit=1 per container allows 150+ concurrent serverless lambdas without saturating PgBouncer (200 limit).
-// In local dev/non-serverless, 5 connections are allowed for concurrency.
-const isServerless = Boolean(
-  process.env.VERCEL ||
-  process.env.AWS_LAMBDA_FUNCTION_NAME ||
-  process.env.NETLIFY ||
-  process.env.NODE_ENV === "production"
-);
-const connectionLimit = isServerless ? "3" : "5";
+// Ensure connection_limit is set to 5 to allow parallel queries within requests without queue timeout
+const connectionLimit = "5";
 
 if (dbUrl.includes("connection_limit=")) {
   dbUrl = dbUrl.replace(/connection_limit=\d+/, `connection_limit=${connectionLimit}`);
@@ -53,11 +45,11 @@ if (dbUrl.includes("connection_limit=")) {
   dbUrl += `&connection_limit=${connectionLimit}`;
 }
 
-// Pool timeout: 20s so during traffic bursts, queries wait safely rather than failing immediately
+// Pool timeout: 30s so queries queue safely under traffic surges
 if (dbUrl.includes("pool_timeout=")) {
-  dbUrl = dbUrl.replace(/pool_timeout=\d+/, "pool_timeout=20");
+  dbUrl = dbUrl.replace(/pool_timeout=\d+/, "pool_timeout=30");
 } else {
-  dbUrl += "&pool_timeout=20";
+  dbUrl += "&pool_timeout=30";
 }
 
 if (!dbUrl.includes("sslmode=")) {

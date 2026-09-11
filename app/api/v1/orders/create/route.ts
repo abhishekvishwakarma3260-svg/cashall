@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
     const incomingQuoteId = (data.quoteId || body.quoteId || "").trim();
     const isQuoteUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(incomingQuoteId);
 
-    const userPromise = prisma.user.upsert({
+    const user = await prisma.user.upsert({
       where: { phone: cleanPhone },
       update: {
         name: fullName,
@@ -100,18 +100,16 @@ export async function POST(req: NextRequest) {
       else quoteConditions.push({ quoteNumber: incomingQuoteId });
     }
 
-    const quotePromise = quoteConditions.length > 0
-      ? prisma.quote.findFirst({
-          where: {
-            OR: quoteConditions,
-            deletedAt: null,
-          },
-          orderBy: { createdAt: "desc" },
-        })
-      : null;
-
-    const user = await userPromise;
-    let quote = quotePromise ? await quotePromise : null;
+    let quote = null;
+    if (quoteConditions.length > 0) {
+      quote = await prisma.quote.findFirst({
+        where: {
+          OR: quoteConditions,
+          deletedAt: null,
+        },
+        orderBy: { createdAt: "desc" },
+      });
+    }
 
     // DEDUPLICATION CHECK 1: If an active order already exists for this quote, return it immediately
     if (quote) {

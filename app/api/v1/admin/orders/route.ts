@@ -32,56 +32,53 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   let total = 0;
 
   try {
-    const res = await Promise.all([
-      prisma.order.findMany({
-        where,
-        include: {
-          user: true,
-          agent: true,
-          address: true,
-          quote: {
-            include: {
-              variant: {
-                include: {
-                  model: {
-                    include: {
-                      brand: true,
-                    },
+    total = await prisma.order.count({ where });
+    orders = await prisma.order.findMany({
+      where,
+      include: {
+        user: true,
+        agent: true,
+        address: true,
+        quote: {
+          include: {
+            variant: {
+              include: {
+                model: {
+                  include: {
+                    brand: true,
                   },
                 },
               },
             },
           },
-          pickups: {
-            take: 1,
-            orderBy: { createdAt: "desc" },
-            include: { partner: true },
-          },
-          payments: {
-            take: 1,
-            orderBy: { createdAt: "desc" },
-          },
-          qcReports: {
-            take: 1,
-            orderBy: { inspectedAt: "desc" },
-          },
-          imeiRecords: {
-            take: 1,
-            orderBy: { createdAt: "desc" },
-          },
         },
-        orderBy: { createdAt: "desc" },
-        skip,
-        take: limit,
-      }),
-      prisma.order.count({ where }),
-    ]);
-    orders = res[0];
-    total = res[1];
+        pickups: {
+          take: 1,
+          orderBy: { createdAt: "desc" },
+          include: { partner: true },
+        },
+        payments: {
+          take: 1,
+          orderBy: { createdAt: "desc" },
+        },
+        qcReports: {
+          take: 1,
+          orderBy: { inspectedAt: "desc" },
+        },
+        imeiRecords: {
+          take: 1,
+          orderBy: { createdAt: "desc" },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+      skip,
+      take: limit,
+    });
   } catch (dbErr) {
     console.warn("DB findMany with agent relation failed, falling back without agent relation:", dbErr);
-    const res = await Promise.all([
-      prisma.order.findMany({
+    try {
+      total = await prisma.order.count({ where });
+      orders = await prisma.order.findMany({
         where,
         include: {
           user: true,
@@ -120,11 +117,11 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         orderBy: { createdAt: "desc" },
         skip,
         take: limit,
-      }),
-      prisma.order.count({ where }),
-    ]);
-    orders = res[0];
-    total = res[1];
+      });
+    } catch (fallbackErr) {
+      console.error("Orders query failed completely:", fallbackErr);
+      throw fallbackErr;
+    }
   }
 
   const formattedOrders = orders.map((ord: any) => {
