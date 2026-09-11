@@ -45,7 +45,7 @@ const isServerless = Boolean(
   process.env.NETLIFY ||
   process.env.NODE_ENV === "production"
 );
-const connectionLimit = isServerless ? "1" : "5";
+const connectionLimit = isServerless ? "3" : "5";
 
 if (dbUrl.includes("connection_limit=")) {
   dbUrl = dbUrl.replace(/connection_limit=\d+/, `connection_limit=${connectionLimit}`);
