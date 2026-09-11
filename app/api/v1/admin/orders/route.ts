@@ -124,6 +124,19 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     }
   }
 
+  // Helper to identify support staff (must NEVER be counted as logistics agent)
+  const isSupportStaff = (name: string = "", phone: string = "") => {
+    const lowerName = (name || "").toLowerCase();
+    const cleanPhone = (phone || "").replace(/\D/g, "");
+    return (
+      lowerName.includes("harshita") ||
+      lowerName.includes("vyas") ||
+      lowerName.includes("sangeet") ||
+      lowerName.includes("support") ||
+      cleanPhone.includes("8981191734")
+    );
+  };
+
   // Fetch recent agent call logs to match against orders
   let agentCalls: any[] = [];
   try {
@@ -141,18 +154,21 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       take: 200,
     });
 
-    agentCalls = rawAgentLogs.map((log) => {
-      let data: any = {};
-      try {
-        data = JSON.parse(log.newValuesJson || "{}");
-      } catch {}
-      return {
-        orderNumber: (data.quoteId || data.orderNumber || "").toUpperCase().trim(),
-        customerPhone: (data.customerPhone || "").replace(/\D/g, "").slice(-10),
-        agentName: data.supportPersonName || data.agentName || null,
-        calledAt: data.callTimeIST || new Date(log.createdAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
-      };
-    });
+    agentCalls = rawAgentLogs
+      .map((log) => {
+        let data: any = {};
+        try {
+          data = JSON.parse(log.newValuesJson || "{}");
+        } catch {}
+        return {
+          orderNumber: (data.quoteId || data.orderNumber || "").toUpperCase().trim(),
+          customerPhone: (data.customerPhone || "").replace(/\D/g, "").slice(-10),
+          agentName: data.supportPersonName || data.agentName || null,
+          agentPhone: data.supportPersonPhone || data.agentPhone || null,
+          calledAt: data.callTimeIST || new Date(log.createdAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        };
+      })
+      .filter((c) => !isSupportStaff(c.agentName, c.agentPhone));
   } catch (logErr) {
     console.warn("Could not fetch agent call logs for orders:", logErr);
   }
@@ -162,16 +178,56 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     const customerPhoneDigits = (ord.user?.phone || ord.customerPhone || ord.address?.phone || "").replace(/\D/g, "").slice(-10);
     const quoteNumClean = (ord.quote?.quoteNumber || "").toUpperCase().trim();
 
-    const matchedCall = agentCalls.find(
-      (c) =>
-        (orderNumClean && c.orderNumber === orderNumClean) ||
-        (quoteNumClean && c.orderNumber === quoteNumClean) ||
-        (customerPhoneDigits && c.customerPhone && c.customerPhone === customerPhoneDigits)
-    );
+    const pickup = ord.pickups?.[0];
+    const assignedPartner = pickup?.partner;
+    const pickupNotes = (pickup?.notes && pickup.notes !== "Doorstep pickup order confirmed." && pickup.notes !== "Order synced to database automatically.")
+      ? pickup.notes
+      : null;
 
-    const agentCalled = Boolean(matchedCall);
-    const agentCalledAt = matchedCall ? matchedCall.calledAt : null;
-    const agentCalledBy = matchedCall ? matchedCall.agentName : null;
+    let agentName: string | null = null;
+    // Only resolve agentName if ord.agent has role AGENT
+    if (ord.agent && ord.agent.role === "AGENT") {
+      agentName = ord.agent.name;
+    }
+    if (!agentName && pickupNotes) {
+      agentName = pickupNotes;
+    }
+
+    const hasAssignedAgent = Boolean(ord.agentId || ord.agent || (pickupNotes && pickupNotes !== "CashALL Logistics"));
+
+    let agentCalled = false;
+    let agentCalledAt: string | null = null;
+    let agentCalledBy: string | null = null;
+
+    // Strict rule: An order can ONLY have an agent call if it is assigned to an agent
+    if (hasAssignedAgent) {
+      const matchedCall = agentCalls.find((c) => {
+        const matchesOrder =
+          (orderNumClean && c.orderNumber === orderNumClean) ||
+          (quoteNumClean && c.orderNumber === quoteNumClean) ||
+          (customerPhoneDigits && c.customerPhone && c.customerPhone === customerPhoneDigits);
+
+        if (!matchesOrder) return false;
+
+        // Ensure caller is not support staff
+        if (isSupportStaff(c.agentName, c.agentPhone)) return false;
+
+        // If assignedAgentName is available and call has a specific name, verify match
+        if (agentName && c.agentName && c.agentName !== "Field Agent") {
+          const cNameLower = c.agentName.toLowerCase();
+          const aNameLower = agentName.toLowerCase();
+          return cNameLower.includes(aNameLower) || aNameLower.includes(cNameLower);
+        }
+
+        return true;
+      });
+
+      if (matchedCall) {
+        agentCalled = true;
+        agentCalledAt = matchedCall.calledAt;
+        agentCalledBy = matchedCall.agentName || agentName;
+      }
+    }
     // Resolve deviceName: breakdownJson → variant→model chain → fallback
     let deviceName = "Mobile Device";
     if (ord.quote?.breakdownJson) {
@@ -191,21 +247,6 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         const sa = JSON.parse(ord.quote.selectedAnswersJson);
         if (sa?.device && sa.device !== "Customer Mobile Device") deviceName = sa.device;
       } catch {}
-    }
-
-    const pickup = ord.pickups?.[0];
-    const assignedPartner = pickup?.partner;
-    const pickupNotes = (pickup?.notes && pickup.notes !== "Doorstep pickup order confirmed." && pickup.notes !== "Order synced to database automatically.")
-      ? pickup.notes
-      : null;
-
-    let agentName = null;
-    // Only resolve agentName if ord.agent has role AGENT
-    if (ord.agent && ord.agent.role === "AGENT") {
-      agentName = ord.agent.name;
-    }
-    if (!agentName && pickupNotes) {
-      agentName = pickupNotes;
     }
 
     const customerEmail = ord.user?.email || ord.customerEmail || null;

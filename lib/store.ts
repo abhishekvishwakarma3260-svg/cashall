@@ -15829,6 +15829,19 @@ const LAPTOP_MODELS_PART_1: DeviceModelData[] = [
     "category": "LAPTOP"
   },
   {
+    "id": "m-laptop-apple-macbook-pro-2012",
+    "brandId": "b-apple",
+    "brandSlug": "apple",
+    "name": "MacBook Pro 2012",
+    "slug": "macbook-pro-2012",
+    "imageUrl": "https://s3ng.cashify.in/cashify/product/img/xhdpi/05692cbe-c41d.jpg?w=800",
+    "releaseYear": 2012,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "LAPTOP"
+  },
+  {
     "id": "m-laptop-apple-macbook-air-2023",
     "brandId": "b-apple",
     "brandSlug": "apple",
@@ -48952,6 +48965,14 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "active": true
   },
   {
+    "id": "v-m-laptop-apple-macbook-pro-2012-standard",
+    "modelId": "m-laptop-apple-macbook-pro-2012",
+    "ram": "4 GB",
+    "storage": "Standard",
+    "basePrice": 11850,
+    "active": true
+  },
+  {
     "id": "v-m-laptop-apple-macbook-air-2023-standard",
     "modelId": "m-laptop-apple-macbook-air-2023",
     "storage": "Standard",
@@ -59616,6 +59637,14 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "modelId": "m-laptop-apple-macbook-pro-retina-early-2013",
     "storage": "Standard",
     "basePrice": 14069,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-apple-macbook-pro-2012-standard-laptop",
+    "modelId": "m-laptop-apple-macbook-pro-2012",
+    "ram": "4 GB",
+    "storage": "Standard",
+    "basePrice": 11850,
     "active": true
   },
   {

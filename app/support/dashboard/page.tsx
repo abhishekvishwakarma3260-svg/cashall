@@ -58,6 +58,7 @@ export default function SupportDashboardPage() {
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [callFilter, setCallFilter] = useState<"MY_CALLS" | "ALL_CALLS">("MY_CALLS");
+  const [quoteStatusFilter, setQuoteStatusFilter] = useState<"ALL" | "PENDING" | "ORDERED" | "COMPLETED">("ALL");
 
   // Modal State for Call Logging
   const [selectedQuote, setSelectedQuote] = useState<QuoteLead | null>(null);
@@ -132,7 +133,7 @@ export default function SupportDashboardPage() {
     setError("");
     try {
       const [quotesRes, callsRes] = await Promise.all([
-        fetch("/api/v1/admin/quotes?limit=100"),
+        fetch("/api/v1/admin/quotes?limit=1000"),
         fetch("/api/v1/support/calls"),
       ]);
 
@@ -295,12 +296,19 @@ export default function SupportDashboardPage() {
     }
   };
 
+  const totalQuotesCount = quotes.length;
+  const pendingLeadsCount = quotes.filter((q) => q.status.includes("UNCOMPLETED")).length;
+  const orderedCount = quotes.filter((q) => q.status === "ORDERED" || q.status === "CONVERTED").length;
+  const completedCount = quotes.filter((q) => q.status === "COMPLETED").length;
+
   const filteredQuotes = quotes.filter((q) => {
+    if (quoteStatusFilter === "PENDING" && !q.status.includes("UNCOMPLETED")) return false;
+    if (quoteStatusFilter === "ORDERED" && q.status !== "ORDERED" && q.status !== "CONVERTED") return false;
+    if (quoteStatusFilter === "COMPLETED" && q.status !== "COMPLETED") return false;
+
     const qStr = (q.quoteNumber + " " + (q.customerName || "") + " " + (q.customerPhone || "") + " " + q.deviceName).toLowerCase();
     return qStr.includes(searchQuery.toLowerCase());
   });
-
-  const pendingLeadsCount = quotes.filter((q) => q.status.includes("UNCOMPLETED")).length;
 
   const myCalls = callLogs.filter((c) => {
     const sName = (supportSession?.name || "").toLowerCase().trim();
@@ -334,7 +342,7 @@ export default function SupportDashboardPage() {
           <button
             onClick={fetchData}
             disabled={loading}
-            className="p-2.5 bg-neutral-800 hover:bg-neutral-750 text-yellow-400 border border-neutral-700 rounded-xl transition"
+            className="p-2.5 bg-neutral-800 hover:bg-neutral-750 text-yellow-400 border border-neutral-700 rounded-xl transition cursor-pointer"
             title="Refresh Leads"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
@@ -342,7 +350,7 @@ export default function SupportDashboardPage() {
 
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 px-3.5 py-2 bg-neutral-800 hover:bg-red-950/60 hover:text-red-400 text-neutral-300 text-xs font-bold rounded-xl border border-neutral-700 transition"
+            className="flex items-center gap-2 px-3.5 py-2 bg-neutral-800 hover:bg-red-950/60 hover:text-red-400 text-neutral-300 text-xs font-bold rounded-xl border border-neutral-700 transition cursor-pointer"
           >
             <LogOut className="w-3.5 h-3.5" />
             <span>Sign Out</span>
@@ -362,63 +370,96 @@ export default function SupportDashboardPage() {
       )}
 
       {/* METRICS STATS */}
-      <div className="grid grid-cols-1 gap-3">
-        <div className="bg-neutral-900 border border-amber-900/50 bg-amber-950/10 p-5 rounded-2xl flex items-center justify-between">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="bg-neutral-900 border border-blue-900/40 bg-blue-950/10 p-4 sm:p-5 rounded-2xl flex items-center justify-between">
           <div>
-            <div className="text-xs text-amber-300 font-bold uppercase tracking-wider">Leads Pending Follow-Up</div>
-            <div className="text-2xl font-black text-amber-400 font-price mt-1">{pendingLeadsCount}</div>
+            <div className="text-[11px] text-blue-300 font-bold uppercase tracking-wider">All Saved Quotes</div>
+            <div className="text-xl sm:text-2xl font-black text-blue-400 font-price mt-1">{totalQuotesCount}</div>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-black">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-xs sm:text-sm">
+            {totalQuotesCount}
+          </div>
+        </div>
+
+        <div className="bg-neutral-900 border border-amber-900/50 bg-amber-950/10 p-4 sm:p-5 rounded-2xl flex items-center justify-between">
+          <div>
+            <div className="text-[11px] text-amber-300 font-bold uppercase tracking-wider">Pending Leads</div>
+            <div className="text-xl sm:text-2xl font-black text-amber-400 font-price mt-1">{pendingLeadsCount}</div>
+          </div>
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-black text-xs sm:text-sm">
             {pendingLeadsCount}
           </div>
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-2xl flex items-center justify-between">
+        <div className="bg-neutral-900 border border-green-900/40 bg-green-950/10 p-4 sm:p-5 rounded-2xl flex items-center justify-between">
           <div>
-            <div className="text-xs text-neutral-400 font-bold uppercase tracking-wider">My Calls Logged</div>
-            <div className="text-2xl font-black text-white font-price mt-1">{myCallsCount}</div>
+            <div className="text-[11px] text-green-300 font-bold uppercase tracking-wider">Converted Orders</div>
+            <div className="text-xl sm:text-2xl font-black text-green-400 font-price mt-1">{orderedCount}</div>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-green-500/20 border border-green-500/30 flex items-center justify-center text-green-400 font-black text-xs sm:text-sm">
+            {orderedCount}
+          </div>
+        </div>
+
+        <div className="bg-neutral-900 border border-neutral-800 p-4 sm:p-5 rounded-2xl flex items-center justify-between">
+          <div>
+            <div className="text-[11px] text-neutral-400 font-bold uppercase tracking-wider">My Calls Logged</div>
+            <div className="text-xl sm:text-2xl font-black text-white font-price mt-1">{myCallsCount}</div>
+          </div>
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-neutral-800 border border-neutral-700 flex items-center justify-center text-neutral-300 font-black text-xs sm:text-sm">
             {myCallsCount}
           </div>
         </div>
-
-        <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-2xl flex items-center justify-between">
-          <div>
-            <div className="text-xs text-neutral-400 font-bold uppercase tracking-wider">Official Support Help Desk</div>
-            <a href="mailto:support@cashall.in" className="text-xs font-extrabold text-yellow-400 underline hover:text-yellow-300 mt-1 block">
-              support@cashall.in
-            </a>
-          </div>
-          <a href="mailto:support@cashall.in" className="w-10 h-10 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center text-yellow-400 hover:scale-105 transition">
-            <Mail className="w-4 h-4" />
-          </a>
-        </div>
       </div>
 
-      {/* UNCOMPLETED LEADS & CALL LOGGING SECTION */}
-      <div className="bg-neutral-900 border border-neutral-800 p-4 rounded-3xl shadow-xl space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-neutral-800 pb-4">
+      {/* ALL QUOTES & FOLLOW-UP CONSOLE */}
+      <div className="bg-neutral-900 border border-neutral-800 p-4 sm:p-6 rounded-3xl shadow-xl space-y-4">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-neutral-800 pb-4">
           <div>
             <h2 className="text-base font-extrabold text-white flex items-center gap-2">
               <PhoneCall className="w-5 h-5 text-yellow-400" />
-              <span>Customer Quote Leads & Follow-Up Console</span>
+              <span>Customer Quotes &amp; Direct Dial Console</span>
             </h2>
             <p className="text-xs text-neutral-400 mt-0.5">
-              Connect with customers regarding saved quote IDs and log call results for salary & incentive records.
+              Browse all customer saved quotes, initiate 1-tap customer follow-up calls, and convert quotes to orders.
             </p>
           </div>
 
-          <div className="relative w-full sm:w-72">
-            <Search className="w-4 h-4 text-neutral-500 absolute left-3.5 top-3" />
-            <input
-              type="text"
-              placeholder="Search leads by name, phone, or Quote ID..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-neutral-950 border border-neutral-800 text-white text-xs rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:border-yellow-400 transition"
-            />
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            {/* SEARCH BAR */}
+            <div className="relative w-full sm:w-72">
+              <Search className="w-4 h-4 text-neutral-500 absolute left-3.5 top-3" />
+              <input
+                type="text"
+                placeholder="Search by quote, phone, customer..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-neutral-950 border border-neutral-800 text-white text-xs rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:border-yellow-400 transition"
+              />
+            </div>
           </div>
+        </div>
+
+        {/* QUOTE STATUS FILTER TABS */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+          {[
+            { id: "ALL", label: `All Quotes (${totalQuotesCount})` },
+            { id: "PENDING", label: `Pending Follow-Up (${pendingLeadsCount})` },
+            { id: "ORDERED", label: `Converted (${orderedCount})` },
+            { id: "COMPLETED", label: `Completed (${completedCount})` },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setQuoteStatusFilter(tab.id as any)}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition cursor-pointer ${
+                quoteStatusFilter === tab.id
+                  ? "bg-yellow-400 text-black shadow-md font-extrabold"
+                  : "bg-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-750 border border-neutral-700/60"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {loading ? (

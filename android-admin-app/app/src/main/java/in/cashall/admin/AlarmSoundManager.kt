@@ -26,8 +26,8 @@ object AlarmSoundManager {
     private val VIBRATION_PATTERN = longArrayOf(0, 700, 250, 700, 250, 1000)
     private var autoSilenceHandler: Handler? = null
 
-    // Exact 10-second alarm duration
-    private const val ALARM_DURATION_MS = 10_000L
+    // Exact 5-second alarm duration
+    private const val ALARM_DURATION_MS = 5_000L
 
     @Synchronized
     fun isAlarmActive(): Boolean = isAlarmPlaying
@@ -39,14 +39,14 @@ object AlarmSoundManager {
             return
         }
         isAlarmPlaying = true
-        Log.i(TAG, "🚨 Starting loud real-order alarm (STRICT 10.0s auto-silence active)...")
+        Log.i(TAG, "🚨 Starting loud real-order alarm (STRICT 5.0s auto-silence active)...")
 
-        // Strict 10-second auto-silence timer: stops ringing exactly after 10.0s
+        // Strict 5-second auto-silence timer: stops ringing exactly after 5.0s
         autoSilenceHandler?.removeCallbacksAndMessages(null)
         autoSilenceHandler = Handler(Looper.getMainLooper()).apply {
             postDelayed({
                 if (isAlarmPlaying) {
-                    Log.i(TAG, "⏰ Auto-silencing real-order alarm after exactly 10s.")
+                    Log.i(TAG, "⏰ Auto-silencing real-order alarm after exactly 5s.")
                     stopAlarm(context)
                 }
             }, ALARM_DURATION_MS)

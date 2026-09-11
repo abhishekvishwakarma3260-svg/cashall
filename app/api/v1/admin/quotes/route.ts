@@ -5,10 +5,11 @@ import { prisma } from "@/lib/db";
 export const dynamic = "force-dynamic";
 
 export const GET = apiWrapper(async (req: NextRequest) => {
-  const { searchParams } = new URL(req.url);
+  const searchParams = req.nextUrl?.searchParams || new URL(req.url).searchParams;
   const page = parseInt(searchParams.get("page") || "1", 10);
-  const limit = parseInt(searchParams.get("limit") || "200", 10);
-  const skip = (page - 1) * limit;
+  const limitParam = searchParams.get("limit");
+  const limit = limitParam ? parseInt(limitParam, 10) : 1000;
+  const skip = limit > 0 ? (page - 1) * limit : 0;
 
   const total = await prisma.quote.count({ where: { deletedAt: null } });
   const quotes = await prisma.quote.findMany({
@@ -29,8 +30,8 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       },
     },
     orderBy: { createdAt: "desc" },
-    skip,
-    take: limit,
+    ...(skip > 0 ? { skip } : {}),
+    ...(limit > 0 ? { take: limit } : {}),
   });
 
   const mapped = quotes.map((q) => {

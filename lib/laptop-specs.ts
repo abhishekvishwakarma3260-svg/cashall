@@ -244,11 +244,11 @@ const MODEL_SPEC_RULES: ModelSpecRule[] = [
     },
   },
   {
-    pattern: /macbook-pro-(2016|2017|2018|2019)/,
+    pattern: /macbook-pro-(2012|2013|2014|2015|2016|2017|2018|2019)/,
     spec: {
       processors: APPLE_INTEL_OLD,
-      rams: APPLE_RAM_INTEL,
-      storages: APPLE_SSD_OLD,
+      rams: APPLE_RAM_INTEL_OLD,
+      storages: ["500 GB HDD", "128 GB SSD", "256 GB SSD", "512 GB SSD", "1 TB SSD"],
       defaultProcessor: "Intel Core i5",
       defaultRam: "8 GB",
       defaultStorage: "256 GB SSD",

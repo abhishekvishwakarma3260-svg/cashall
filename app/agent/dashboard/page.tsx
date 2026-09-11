@@ -111,6 +111,7 @@ function getOrderDateBucket(
 
 class InHouseBuzzerAlarm {
   public isPlaying: boolean = false;
+  private autoSilenceTimer: any = null;
 
   start() {
     if (this.isPlaying) return;
@@ -123,10 +124,20 @@ class InHouseBuzzerAlarm {
         (window as any).CashAllAgentNative.startAlarm();
       }
     } catch (e) {}
+
+    // Strict 5.0-second auto-silence timer
+    if (this.autoSilenceTimer) clearTimeout(this.autoSilenceTimer);
+    this.autoSilenceTimer = setTimeout(() => {
+      this.stop();
+    }, 5000);
   }
 
   stop() {
     this.isPlaying = false;
+    if (this.autoSilenceTimer) {
+      clearTimeout(this.autoSilenceTimer);
+      this.autoSilenceTimer = null;
+    }
     // Native Android App bridge stop
     try {
       if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.stopAlarm) {
@@ -664,9 +675,9 @@ export default function AgentDashboardPage() {
       )}
 
       {/* MAIN CONTAINER */}
-      <main className="flex-grow p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full space-y-6">
+      <main className="flex-grow p-3 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full space-y-4 sm:space-y-6">
         {/* HEADER TOOLBAR */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-neutral-900 p-6 rounded-3xl border border-neutral-800 shadow-xl">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-neutral-900 p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-neutral-800 shadow-xl">
           <div>
             <h1 className="text-xl sm:text-2xl font-black text-yellow-400 tracking-wide font-price">
               Doorstep Pickup & Payment Console
@@ -865,7 +876,7 @@ export default function AgentDashboardPage() {
               return (
                 <div
                   key={ord.id}
-                  className="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 shadow-xl hover:border-neutral-700 transition space-y-5"
+                  className="bg-neutral-900 border border-neutral-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl hover:border-neutral-700 transition space-y-4 sm:space-y-5"
                 >
                   {/* TOP HEADER */}
                   <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-800 pb-4">

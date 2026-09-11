@@ -37,17 +37,17 @@ object AlarmSoundManager {
             return
         }
         isAlarmPlaying = true
-        Log.i(TAG, "Starting loud lead buzzer and phone vibration (30s auto-silence enabled)...")
+        Log.i(TAG, "Starting loud lead buzzer and phone vibration (5s auto-silence enabled)...")
 
-        // Auto-silence after 30 seconds so it never keeps buzzering for minutes if unattended
+        // Auto-silence after 5 seconds so it never keeps buzzering for minutes if unattended
         autoSilenceHandler?.removeCallbacksAndMessages(null)
         autoSilenceHandler = android.os.Handler(android.os.Looper.getMainLooper()).apply {
             postDelayed({
                 if (isAlarmPlaying) {
-                    Log.i(TAG, "⏰ Auto-silencing lead buzzer after 30s timeout.")
+                    Log.i(TAG, "⏰ Auto-silencing lead buzzer after 5s timeout.")
                     stopAlarm(context)
                 }
-            }, 30_000L)
+            }, 5_000L)
         }
 
         // 1. Play unique high-decibel emergency siren (R.raw.loud_buzzer) via USAGE_ALARM

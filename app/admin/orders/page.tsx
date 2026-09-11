@@ -914,16 +914,16 @@ export default function AdminOrdersPage() {
     <div className="min-h-screen bg-neutral-900 text-white flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden">
       <AdminSidebar />
 
-      <main className="flex-1 w-full max-w-full p-4 sm:p-6 lg:p-8 overflow-x-hidden space-y-6">
+      <main className="flex-1 w-full max-w-full p-3 sm:p-6 lg:p-8 overflow-x-hidden space-y-4 sm:space-y-6">
         {/* HEADER TOOLBAR */}
-        <div className="flex flex-wrap items-center justify-between gap-4 bg-neutral-800 p-6 rounded-3xl border border-neutral-700 shadow-xl print:hidden">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-neutral-800 p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-neutral-700 shadow-xl print:hidden">
           <div>
-            <h1 className="text-2xl font-black text-yellow-400 tracking-wide font-price">Order Operations Console</h1>
+            <h1 className="text-xl sm:text-2xl font-black text-yellow-400 tracking-wide font-price">Order Operations Console</h1>
             <p className="text-xs text-neutral-400 mt-1">
               Live Doorstep Selling Orders • Real-Time Supabase Synchronization
             </p>
           </div>
-          <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap w-full sm:w-auto">
             <button
               onClick={handleDownloadAdminDataCSV}
               disabled={orders.length === 0}
@@ -1343,15 +1343,17 @@ export default function AdminOrdersPage() {
                     )}
 
                     {/* AGENT CALL CONFIRMATION & TIMESTAMP */}
-                    <div className="pt-2">
-                      {ord.agentCalled ? (
+                    {ord.agentCalled ? (
+                      <div className="pt-2">
                         <div className="bg-emerald-950/60 border border-emerald-500/50 p-2.5 rounded-2xl flex items-center justify-between text-xs text-emerald-300 shadow-sm">
                           <div className="flex items-center gap-2">
                             <span className="p-1.5 rounded-xl bg-emerald-500/20 text-emerald-400">
                               <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
                             </span>
                             <div>
-                              <div className="font-extrabold text-emerald-400 text-xs">Agent Called Customer</div>
+                              <div className="font-extrabold text-emerald-400 text-xs">
+                                Agent Called Customer {ord.agentCalledBy ? `(${ord.agentCalledBy})` : ""}
+                              </div>
                               <div className="text-[10px] text-emerald-200/90 font-mono mt-0.5">
                                 🕒 {ord.agentCalledAt}
                               </div>
@@ -1361,13 +1363,15 @@ export default function AdminOrdersPage() {
                             CALLED
                           </span>
                         </div>
-                      ) : (
+                      </div>
+                    ) : ord.agentName ? (
+                      <div className="pt-2">
                         <div className="bg-neutral-900/60 border border-neutral-800 p-2 rounded-xl flex items-center gap-2 text-xs text-neutral-400">
                           <span className="w-2 h-2 rounded-full bg-neutral-600"></span>
                           <span className="text-[11px]">Agent has not called customer</span>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    ) : null}
                   </div>
 
                   {(() => {

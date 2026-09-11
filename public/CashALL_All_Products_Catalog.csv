@@ -1,4 +1,4 @@
-﻿"Category","Brand Name","Brand Slug","Model Name","Model Slug","Variant Storage","Variant RAM","Base Buyout Price (INR)","Popular","Active","Image Link"
+"Category","Brand Name","Brand Slug","Model Name","Model Slug","Variant Storage","Variant RAM","Base Buyout Price (INR)","Popular","Active","Image Link"
 "LAPTOP","Acer","acer","Acer Chromebook Series","acer-chromebook-series","Standard","","3899","NO","YES","https://www.cashall.in/api/v1/catalog/image/acer-chromebook-series"
 "LAPTOP","Acer","acer","Aspire 3 Series","aspire-3-series","Standard","","8403","NO","YES","https://www.cashall.in/api/v1/catalog/image/aspire-3-series"
 "LAPTOP","Acer","acer","Aspire 5 Series","aspire-5-series","Standard","","13877","NO","YES","https://www.cashall.in/api/v1/catalog/image/aspire-5-series"
@@ -73,6 +73,7 @@
 "LAPTOP","Apple","apple","MacBook Pro 2023","macbook-pro-2023","Standard","","70700","NO","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-2023"
 "LAPTOP","Apple","apple","MacBook Pro 2024","macbook-pro-2024","Standard","","65650","NO","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-2024"
 "LAPTOP","Apple","apple","MacBook Pro 2025","macbook-pro-2025","Standard","","95950","NO","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-2025"
+"LAPTOP","Apple","apple","MacBook Pro 2012","macbook-pro-2012","Standard","","11850","YES","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-2012"
 "LAPTOP","Apple","apple","MacBook Pro Retina Early 2013","macbook-pro-retina-early-2013","Standard","","14069","NO","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-retina-early-2013"
 "LAPTOP","Apple","apple","MacBook Pro Retina Early 2015","macbook-pro-retina-early-2015","Standard","","15150","YES","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-retina-early-2015"
 "LAPTOP","Apple","apple","MacBook Pro Retina Late 2013","macbook-pro-retina-late-2013","Standard","","14655","NO","YES","https://www.cashall.in/api/v1/catalog/image/macbook-pro-retina-late-2013"
