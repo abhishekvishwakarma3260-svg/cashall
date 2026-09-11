@@ -33,6 +33,7 @@ import {
   Filter,
   Search,
   Navigation,
+  PhoneCall,
 } from "lucide-react";
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { ReQuotationModal } from "@/components/admin/ReQuotationModal";
@@ -71,6 +72,9 @@ interface Order {
   breakdownJson?: string | null;
   priceDifferenceReason?: string | null;
   cancellationReason?: string | null;
+  agentCalled?: boolean;
+  agentCalledAt?: string | null;
+  agentCalledBy?: string | null;
 }
 
 function getOrderBoxStatus(ord: Order | any): "BOX" | "NO BOX" {
@@ -315,6 +319,9 @@ export default function AdminOrdersPage() {
             deviceStatus: ["DEVICE_RECEIVED", "BILL_GENERATED", "COMPLETED"].includes(status) ? "RECEIVED" : "NOT RECEIVED",
             agentId: ord.agentId || ord.agent?.id,
             agentName: ord.agent?.name || assignedPartnerName,
+            agentCalled: Boolean(ord.agentCalled),
+            agentCalledAt: ord.agentCalledAt || null,
+            agentCalledBy: ord.agentCalledBy || null,
             utr: transactionRef,
             createdAt: ord.createdAt,
             updatedAt: ord.updatedAt,
@@ -1334,6 +1341,33 @@ export default function AdminOrdersPage() {
                     ) : (
                       <div className="text-[11px] text-neutral-500 italic">No agent assigned yet.</div>
                     )}
+
+                    {/* AGENT CALL CONFIRMATION & TIMESTAMP */}
+                    <div className="pt-2">
+                      {ord.agentCalled ? (
+                        <div className="bg-emerald-950/60 border border-emerald-500/50 p-2.5 rounded-2xl flex items-center justify-between text-xs text-emerald-300 shadow-sm">
+                          <div className="flex items-center gap-2">
+                            <span className="p-1.5 rounded-xl bg-emerald-500/20 text-emerald-400">
+                              <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
+                            </span>
+                            <div>
+                              <div className="font-extrabold text-emerald-400 text-xs">Agent Called Customer</div>
+                              <div className="text-[10px] text-emerald-200/90 font-mono mt-0.5">
+                                🕒 {ord.agentCalledAt}
+                              </div>
+                            </div>
+                          </div>
+                          <span className="text-[9px] bg-emerald-900/80 text-emerald-200 font-black px-2 py-0.5 rounded uppercase">
+                            CALLED
+                          </span>
+                        </div>
+                      ) : (
+                        <div className="bg-neutral-900/60 border border-neutral-800 p-2 rounded-xl flex items-center gap-2 text-xs text-neutral-400">
+                          <span className="w-2 h-2 rounded-full bg-neutral-600"></span>
+                          <span className="text-[11px]">Agent has not called customer</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {(() => {

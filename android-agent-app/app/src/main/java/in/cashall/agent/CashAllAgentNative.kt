@@ -117,6 +117,6 @@ class CashAllAgentNative(
 
     @JavascriptInterface
     fun getAppVersion(): String {
-        return "1.0.3-CALL-RECORD-PROD"
+        return "1.0.6-PROD"
     }
 }

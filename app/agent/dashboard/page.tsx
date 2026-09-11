@@ -373,16 +373,6 @@ export default function AgentDashboardPage() {
     router.replace("/agent/login");
   };
 
-  const handleOpenDialerSettings = () => {
-    if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.openDialerCallSettings) {
-      (window as any).CashAllAgentNative.openDialerCallSettings();
-    } else {
-      alert(
-        "🎙️ Auto Call Recording Setup:\n\n1. Open your Phone Dialer\n2. Tap Settings (3 dots) ➔ Call Recording\n3. Turn ON 'Auto-record calls' / 'Record all calls'.\n\n🛡️ 100% Privacy: Only customer calls initiated inside CashALL are recorded. Personal calls are NEVER recorded or uploaded."
-      );
-    }
-  };
-
   // OCR Extraction with Tesseract.js & Upload Handler
   const handleFileUpload = async (ord: AgentOrder, e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -638,16 +628,6 @@ export default function AgentDashboardPage() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <button
-            onClick={handleOpenDialerSettings}
-            className="flex items-center gap-1.5 text-xs font-black text-yellow-400 bg-neutral-800 hover:bg-neutral-700 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-yellow-400/30 transition shadow-sm cursor-pointer"
-            title="Open phone dialer settings to configure auto call recording"
-          >
-            <span>🎙️</span>
-            <span className="hidden sm:inline">Auto-Record Settings</span>
-            <span className="sm:hidden">Settings</span>
-          </button>
-
           <div className="hidden md:flex items-center gap-2 bg-neutral-800 border border-neutral-700 px-3 py-1.5 rounded-xl text-xs">
             <UserCheck className="w-4 h-4 text-yellow-400" />
             <span className="font-bold text-white">{agentSession?.name || "Agent"}</span>
@@ -697,15 +677,6 @@ export default function AgentDashboardPage() {
           </div>
 
           <div className="flex items-center gap-2.5 flex-wrap">
-            <button
-              onClick={handleOpenDialerSettings}
-              className="flex items-center gap-2 text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-yellow-400 px-3.5 py-2.5 rounded-xl transition border border-yellow-400/30 shadow-md cursor-pointer"
-              title="Open phone dialer settings to verify auto call recording"
-            >
-              <span>🎙️</span>
-              <span>Auto-Record Settings</span>
-            </button>
-
             <button
               onClick={() => fetchOrders(false)}
               disabled={loading}
@@ -948,6 +919,7 @@ export default function AgentDashboardPage() {
                         <button
                           type="button"
                           onClick={() => {
+                            // 1. Launch native dialer / phone call
                             if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
                               (window as any).CashAllAgentNative.callCustomer(
                                 ord.customerPhone,
@@ -958,12 +930,32 @@ export default function AgentDashboardPage() {
                             } else {
                               window.location.href = `tel:${ord.customerPhone}`;
                             }
+
+                            // 2. Immediately register call timestamp in backend
+                            try {
+                              fetch("/api/v1/support/recordings", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                  role: "AGENT",
+                                  actorRole: "AGENT",
+                                  callType: "AGENT_PICKUP_CALL",
+                                  supportPersonName: agentSession?.name || "Field Agent",
+                                  supportPersonPhone: agentSession?.phone || "",
+                                  customerPhone: ord.customerPhone,
+                                  customerName: ord.customerName || "Customer",
+                                  deviceName: ord.deviceName || "Mobile Device",
+                                  quoteId: ord.orderNumber || ord.id,
+                                  callNotes: "Agent called customer via CashALL Agent App",
+                                }),
+                              }).catch(() => {});
+                            } catch (e) {}
                           }}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-sm transition active:scale-95 cursor-pointer"
-                          title="Call customer & automatically log call with audio recording"
+                          title="Call customer and log call date & time"
                         >
                           <PhoneCall className="w-3.5 h-3.5" />
-                          <span>Call &amp; Log</span>
+                          <span>Call Customer</span>
                         </button>
                         <a
                           href={`tel:${ord.customerPhone}`}
@@ -1276,6 +1268,7 @@ export default function AgentDashboardPage() {
                       if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.stopAlarm) {
                         (window as any).CashAllAgentNative.stopAlarm();
                       }
+                      // 1. Launch native dialer / phone call
                       if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
                         (window as any).CashAllAgentNative.callCustomer(
                           activeAlertLead.customerPhone,
@@ -1286,12 +1279,32 @@ export default function AgentDashboardPage() {
                       } else {
                         window.location.href = `tel:${activeAlertLead.customerPhone}`;
                       }
+
+                      // 2. Immediately register call timestamp in backend
+                      try {
+                        fetch("/api/v1/support/recordings", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            role: "AGENT",
+                            actorRole: "AGENT",
+                            callType: "AGENT_PICKUP_CALL",
+                            supportPersonName: agentSession?.name || "Field Agent",
+                            supportPersonPhone: agentSession?.phone || "",
+                            customerPhone: activeAlertLead.customerPhone,
+                            customerName: activeAlertLead.customerName || "Customer",
+                            deviceName: activeAlertLead.deviceName || "Mobile Device",
+                            quoteId: activeAlertLead.orderNumber || activeAlertLead.id,
+                            callNotes: "Agent called customer via CashALL Agent App",
+                          }),
+                        }).catch(() => {});
+                      } catch (e) {}
                     }}
                     className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] cursor-pointer shadow-sm active:scale-95 transition"
-                    title="Call customer & automatically log call"
+                    title="Call customer and log call date & time"
                   >
                     <PhoneCall className="w-3 h-3" />
-                    <span>Call &amp; Log</span>
+                    <span>Call Customer</span>
                   </button>
                   <a href={`tel:${activeAlertLead.customerPhone}`} className="font-bold text-yellow-400 hover:underline">
                     {activeAlertLead.customerPhone}

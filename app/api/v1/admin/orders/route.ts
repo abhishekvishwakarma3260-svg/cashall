@@ -124,7 +124,54 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     }
   }
 
+  // Fetch recent agent call logs to match against orders
+  let agentCalls: any[] = [];
+  try {
+    const rawAgentLogs = await prisma.auditLog.findMany({
+      where: {
+        action: { in: ["AGENT_CALL_LOGGED", "AGENT_CALL_RECORDING"] },
+      },
+      select: {
+        id: true,
+        action: true,
+        newValuesJson: true,
+        createdAt: true,
+      },
+      orderBy: { createdAt: "desc" },
+      take: 200,
+    });
+
+    agentCalls = rawAgentLogs.map((log) => {
+      let data: any = {};
+      try {
+        data = JSON.parse(log.newValuesJson || "{}");
+      } catch {}
+      return {
+        orderNumber: (data.quoteId || data.orderNumber || "").toUpperCase().trim(),
+        customerPhone: (data.customerPhone || "").replace(/\D/g, "").slice(-10),
+        agentName: data.supportPersonName || data.agentName || null,
+        calledAt: data.callTimeIST || new Date(log.createdAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+      };
+    });
+  } catch (logErr) {
+    console.warn("Could not fetch agent call logs for orders:", logErr);
+  }
+
   const formattedOrders = orders.map((ord: any) => {
+    const orderNumClean = (ord.orderNumber || "").toUpperCase().trim();
+    const customerPhoneDigits = (ord.user?.phone || ord.customerPhone || ord.address?.phone || "").replace(/\D/g, "").slice(-10);
+    const quoteNumClean = (ord.quote?.quoteNumber || "").toUpperCase().trim();
+
+    const matchedCall = agentCalls.find(
+      (c) =>
+        (orderNumClean && c.orderNumber === orderNumClean) ||
+        (quoteNumClean && c.orderNumber === quoteNumClean) ||
+        (customerPhoneDigits && c.customerPhone && c.customerPhone === customerPhoneDigits)
+    );
+
+    const agentCalled = Boolean(matchedCall);
+    const agentCalledAt = matchedCall ? matchedCall.calledAt : null;
+    const agentCalledBy = matchedCall ? matchedCall.agentName : null;
     // Resolve deviceName: breakdownJson → variant→model chain → fallback
     let deviceName = "Mobile Device";
     if (ord.quote?.breakdownJson) {
@@ -206,6 +253,9 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       assignedPartnerName: agentName,
       agentName,
       agentId: ord.agentId || null,
+      agentCalled,
+      agentCalledAt,
+      agentCalledBy,
       imeiNumber,
       urn: paymentRef,
       utr: paymentRef,

@@ -417,7 +417,7 @@ export default function AdminAgentsPage() {
                   </div>
                   <div>
                     <h2 className="text-lg font-black text-white flex items-center gap-2">
-                      <span>Agent Call Log &amp; Audio Recordings</span>
+                      <span>Agent Customer Call Activity Logs</span>
                       <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-yellow-400/20 text-yellow-400 border border-yellow-400/30">
                         {callLogs.filter((c) => {
                           if (selectedAgentFilter !== "ALL") {

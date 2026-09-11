@@ -376,7 +376,7 @@ export async function POST(req: NextRequest) {
         supportPersonPhone.includes("8981191734"));
 
     const finalActorRole: "AGENT" | "SUPPORT" = isAgent ? "AGENT" : "SUPPORT";
-    const finalAction = isAgent ? "AGENT_CALL_RECORDING" : "SUPPORT_CALL_RECORDING";
+    const finalAction = isAgent ? "AGENT_CALL_LOGGED" : "SUPPORT_CALL_RECORDING";
 
     // Deduplication check within last 45 seconds
     const fortyFiveSecondsAgo = new Date(Date.now() - 45000);

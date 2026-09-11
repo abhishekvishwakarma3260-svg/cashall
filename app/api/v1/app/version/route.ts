@@ -7,12 +7,12 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       agent: {
-        versionCode: 5,
-        versionName: "1.0.5",
+        versionCode: 6,
+        versionName: "1.0.6",
         downloadUrl: "https://cashall.in/api/v1/download/agent",
-        forceUpdate: false,
-        title: "CashALL Agent Update Available (v1.0.5)",
-        releaseNotes: "Enhanced in-app 2-way call audio recording with auto-speakerphone capture and auto-record phone settings integration.",
+        forceUpdate: true,
+        title: "CashALL Agent Update Available (v1.0.6)",
+        releaseNotes: "Optimized 1-tap customer call verification and status updates. Removed audio recording requirement.",
       },
       caller: {
         versionCode: 3,

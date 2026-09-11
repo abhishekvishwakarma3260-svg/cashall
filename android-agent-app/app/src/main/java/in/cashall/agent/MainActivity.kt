@@ -349,12 +349,10 @@ class MainActivity : AppCompatActivity() {
             Manifest.permission.CAMERA,
             Manifest.permission.CALL_PHONE,
             Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.READ_CALL_LOG,
-            Manifest.permission.RECORD_AUDIO
+            Manifest.permission.READ_CALL_LOG
         )
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             list.add(Manifest.permission.POST_NOTIFICATIONS)
-            list.add(Manifest.permission.READ_MEDIA_AUDIO)
             list.add(Manifest.permission.READ_MEDIA_IMAGES)
         } else {
             list.add(Manifest.permission.READ_EXTERNAL_STORAGE)
