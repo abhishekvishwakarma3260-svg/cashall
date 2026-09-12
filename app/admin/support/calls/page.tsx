@@ -272,12 +272,12 @@ export default function AdminSupportCallLogsPage() {
   // Fetch call logs from API with cache and SWR
   const fetchLogs = useCallback(async () => {
     try {
-      const res = await fetch(`/api/v1/support/calls?role=SUPPORT`);
+      const res = await fetch(`/api/v1/support/calls?role=SUPPORT&nocache=true&_t=${Date.now()}`);
       const json = await res.json();
       let list = json.calls || json.recordings || json.data || [];
 
       if (!json.success || !Array.isArray(list)) {
-        const fallbackRes = await fetch(`/api/v1/support/recordings?role=SUPPORT`);
+        const fallbackRes = await fetch(`/api/v1/support/recordings?role=SUPPORT&nocache=true&_t=${Date.now()}`);
         const fallbackJson = await fallbackRes.json();
         list = fallbackJson.calls || fallbackJson.recordings || fallbackJson.data || [];
       }

@@ -119,19 +119,9 @@ export default function CustomerAccountPage() {
           .then((res) => res.json())
           .then((data) => {
             if (data.success && Array.isArray(data.quotes)) {
-              const quoteMap = new Map<string, QuoteData>();
-              data.quotes.forEach((q: any) => {
-                const key = q.quoteNumber || q.id;
-                quoteMap.set(key, q);
-              });
-              localQuotes.forEach((q: any) => {
-                const key = q.quoteNumber || q.id;
-                if (!quoteMap.has(key)) quoteMap.set(key, q);
-              });
-              const finalQuotes = Array.from(quoteMap.values());
-              setQuotes(finalQuotes);
+              setQuotes(data.quotes);
               if (typeof window !== "undefined") {
-                localStorage.setItem("cashall_quotes", JSON.stringify(finalQuotes));
+                localStorage.setItem("cashall_quotes", JSON.stringify(data.quotes));
               }
             }
           })
@@ -414,7 +404,7 @@ export default function CustomerAccountPage() {
                   let deviceName = "Mobile Device";
                   try {
                     const parsed = JSON.parse(q.breakdownJson || "{}");
-                    if (parsed?.deviceName) deviceName = parsed.deviceName;
+                    if (parsed?.deviceName) deviceName = cleanDeviceName(parsed.deviceName);
                   } catch {}
 
                   return (

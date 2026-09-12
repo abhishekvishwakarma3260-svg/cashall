@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
+import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 
 export const dynamic = "force-dynamic";
 
@@ -48,21 +49,26 @@ export const GET = apiWrapper(async (
   }
 
   let deviceName = quote.variant
-    ? `${quote.variant.model.brand.name} ${quote.variant.model.name}${quote.variant.storage ? ` (${quote.variant.storage})` : ""}`
+    ? formatDeviceName(
+        quote.variant.model?.brand?.name || "",
+        quote.variant.model?.name || "",
+        quote.variant.storage
+      )
     : "Mobile Device";
 
   if (quote.breakdownJson) {
     try {
       const bd = JSON.parse(quote.breakdownJson);
-      if (bd.deviceName) deviceName = bd.deviceName;
+      if (bd.deviceName) deviceName = cleanDeviceName(bd.deviceName);
     } catch (e) {}
   }
   if (deviceName === "Mobile Device" && quote.selectedAnswersJson) {
     try {
       const sa = JSON.parse(quote.selectedAnswersJson);
-      if (sa?.device && sa.device !== "Customer Mobile Device") deviceName = sa.device;
+      if (sa?.device && sa.device !== "Customer Mobile Device") deviceName = cleanDeviceName(sa.device);
     } catch (e) {}
   }
+  deviceName = cleanDeviceName(deviceName);
 
   let estimatedPrice = quote.estimatedPrice;
   if (quote.breakdownJson) {

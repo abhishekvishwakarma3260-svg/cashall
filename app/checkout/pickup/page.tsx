@@ -11,6 +11,7 @@ import { INITIAL_SERVICE_AREAS, OrderData, QuoteData, INITIAL_VARIANTS, INITIAL_
 import { removeQuoteFromCart } from "@/lib/cart";
 import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails } from "@/lib/serviceability";
 import { trackMetaStandardEvent, trackMetaCustomEvent } from "@/lib/analytics/meta";
+import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import {
   MapPin,
   Calendar,
@@ -108,66 +109,97 @@ function PickupCheckoutContent() {
       }
 
       let foundQuote: QuoteData | null = null;
-      const storedQuote = localStorage.getItem(`cashall_quote_${quoteId}`) || localStorage.getItem("cashall_active_quote") || localStorage.getItem("cashall_latest_quote");
-      if (storedQuote) {
-        try {
-          foundQuote = JSON.parse(storedQuote);
-        } catch (e) {
-          console.error(e);
-        }
-      }
+      const isSpecificQuote = quoteId && quoteId !== "quote-demo";
 
-      if (!foundQuote) {
-        try {
-          const cart = JSON.parse(localStorage.getItem("cashall_cart_quotes") || "[]");
-          const item = cart.find((c: any) => c.quoteNumber === quoteId || c.quoteId === quoteId);
-          if (item) {
-            foundQuote = {
-              id: item.quoteId,
-              quoteNumber: item.quoteNumber,
-              variantId: item.variantId || "",
-              estimatedPrice: item.estimatedPrice,
-              basePrice: item.basePrice || item.estimatedPrice,
-              totalDeductions: (item.basePrice || item.estimatedPrice) - item.estimatedPrice,
-              breakdownJson: item.breakdownJson || JSON.stringify({ deviceName: `${item.brandName} ${item.modelName}` }),
-              selectedAnswersJson: item.selectedAnswersJson || "{}",
-              expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
-              status: "ACTIVE",
-              createdAt: item.createdAt,
-            };
-            if (item.brandName && item.modelName) {
-              setResolvedDeviceName(`${item.brandName} ${item.modelName}${item.storage ? " (" + item.storage + ")" : ""}`);
+      if (isSpecificQuote) {
+        // 1. Check if specific quote is cached locally
+        const specificKey = `cashall_quote_${quoteId}`;
+        const storedSpecific = localStorage.getItem(specificKey);
+        if (storedSpecific) {
+          try {
+            const parsed = JSON.parse(storedSpecific);
+            if (parsed && (parsed.id === quoteId || parsed.quoteNumber === quoteId)) {
+              foundQuote = parsed;
             }
+          } catch (e) {
+            console.error(e);
           }
-        } catch (e) {}
-      }
+        }
 
-      if (foundQuote) {
-        setQuote(foundQuote);
-      } else if (quoteId) {
+        // 2. Check cart quotes for matching quote
+        if (!foundQuote) {
+          try {
+            const cart = JSON.parse(localStorage.getItem("cashall_cart_quotes") || "[]");
+            const item = cart.find((c: any) => c.quoteNumber === quoteId || c.quoteId === quoteId);
+            if (item) {
+              const dName = item.deviceName || formatDeviceName(item.brandName, item.modelName, item.storage);
+              foundQuote = {
+                id: item.quoteId,
+                quoteNumber: item.quoteNumber,
+                variantId: item.variantId || "",
+                estimatedPrice: item.estimatedPrice,
+                basePrice: item.basePrice || item.estimatedPrice,
+                totalDeductions: (item.basePrice || item.estimatedPrice) - item.estimatedPrice,
+                breakdownJson: item.breakdownJson || JSON.stringify({ deviceName: cleanDeviceName(dName) }),
+                selectedAnswersJson: item.selectedAnswersJson || "{}",
+                expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+                status: "ACTIVE",
+                createdAt: item.createdAt,
+              };
+              setResolvedDeviceName(cleanDeviceName(dName));
+            }
+          } catch (e) {}
+        }
+
+        // 3. If found locally, set immediate state
+        if (foundQuote) {
+          setQuote(foundQuote);
+          let dName = "";
+          if (foundQuote.breakdownJson) {
+            try {
+              const bd = JSON.parse(foundQuote.breakdownJson);
+              if (bd.deviceName) dName = bd.deviceName;
+            } catch {}
+          }
+          if (dName) {
+            setResolvedDeviceName(cleanDeviceName(dName));
+          }
+        }
+
+        // 4. ALWAYS fetch server quote to ensure authentic database details (fresh price, device name)
         fetch(`/api/v1/quotes/${encodeURIComponent(quoteId)}`)
           .then((res) => res.json())
           .then((data) => {
             if (data.success && data.quote) {
               setQuote(data.quote);
-              if (data.quote.deviceName) {
-                setResolvedDeviceName(data.quote.deviceName);
-              }
+              const dName = data.quote.deviceName || formatDeviceName(data.quote.brandName, data.quote.modelName, data.quote.storage);
+              const cleanedName = cleanDeviceName(dName);
+              setResolvedDeviceName(cleanedName);
+              try {
+                localStorage.setItem(`cashall_quote_${quoteId}`, JSON.stringify(data.quote));
+              } catch {}
             }
           })
           .catch((err) => console.warn("Error fetching quote from server:", err));
-      }
-
-      // Pre-load current variant for device name resolution
-      const storedVariant = localStorage.getItem("cashall_current_variant");
-      if (storedVariant) {
-        try {
-          const sv = JSON.parse(storedVariant);
-          if (sv?.modelName && sv?.brandName) {
-            const varName = sv.storage ? `${sv.brandName} ${sv.modelName} (${sv.storage})` : `${sv.brandName} ${sv.modelName}`;
-            setResolvedDeviceName(varName);
-          }
-        } catch (e) {}
+      } else {
+        // Fallback only if no quoteId specified
+        const storedQuote = localStorage.getItem("cashall_active_quote") || localStorage.getItem("cashall_latest_quote");
+        if (storedQuote) {
+          try {
+            foundQuote = JSON.parse(storedQuote);
+            if (foundQuote) {
+              setQuote(foundQuote);
+              let dName = "";
+              if (foundQuote.breakdownJson) {
+                try {
+                  const bd = JSON.parse(foundQuote.breakdownJson);
+                  if (bd.deviceName) dName = bd.deviceName;
+                } catch {}
+              }
+              if (dName) setResolvedDeviceName(cleanDeviceName(dName));
+            }
+          } catch (e) {}
+        }
       }
     }
   }, [quoteId]);
@@ -397,26 +429,33 @@ function PickupCheckoutContent() {
 
   // Resolve display device name for sidebar - read from stored data, never fall back to INITIAL_VARIANTS[0]
   const sidebarDeviceName = (() => {
-    if (resolvedDeviceName) return resolvedDeviceName;
-    if (quote?.breakdownJson) {
+    let name = "";
+    if (resolvedDeviceName) name = resolvedDeviceName;
+    else if (quote?.breakdownJson) {
       try {
         const bd = JSON.parse(quote.breakdownJson);
-        if (bd.deviceName) return bd.deviceName;
+        if (bd.deviceName) name = bd.deviceName;
       } catch {}
     }
-    // Only use INITIAL_VARIANTS if variantId actually matches
-    const matchedVariant = INITIAL_VARIANTS.find((v) => v.id === quote?.variantId);
-    if (matchedVariant) {
-      const matchedModel = INITIAL_MODELS.find((m) => m.id === matchedVariant.modelId);
-      const matchedBrand = matchedModel ? INITIAL_BRANDS.find((b) => b.id === matchedModel.brandId) : null;
-      if (matchedModel && matchedBrand) return `${matchedBrand.name} ${matchedModel.name} (${matchedVariant.storage})`;
+    if (!name) {
+      // Only use INITIAL_VARIANTS if variantId actually matches
+      const matchedVariant = INITIAL_VARIANTS.find((v) => v.id === quote?.variantId);
+      if (matchedVariant) {
+        const matchedModel = INITIAL_MODELS.find((m) => m.id === matchedVariant.modelId);
+        const matchedBrand = matchedModel ? INITIAL_BRANDS.find((b) => b.id === matchedModel.brandId) : null;
+        if (matchedModel && matchedBrand) {
+          name = formatDeviceName(matchedBrand.name, matchedModel.name, matchedVariant.storage);
+        }
+      }
     }
-    return "Your Device";
+    return cleanDeviceName(name || "Your Device");
   })();
   const sidebarStorage = (() => {
-    if (resolvedDeviceName) return "";
+    if (sidebarDeviceName && (sidebarDeviceName.includes("GB") || sidebarDeviceName.includes("TB"))) {
+      return "";
+    }
     const matchedVariant = INITIAL_VARIANTS.find((v) => v.id === quote?.variantId);
-    return matchedVariant?.storage || "128 GB";
+    return matchedVariant?.storage || "";
   })();
   const sidebarImageUrl = (() => {
     const matchedVariant = INITIAL_VARIANTS.find((v) => v.id === quote?.variantId);
