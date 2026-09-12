@@ -228,6 +228,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
+      announcement: "IMPORTANT UPDATE: Agent audio recording is permanently disabled. Doorstep customer calls only verify call placement and completion status.",
       orders: mapped,
     });
   } catch (error: any) {

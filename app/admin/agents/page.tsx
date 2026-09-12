@@ -440,7 +440,7 @@ export default function AdminAgentsPage() {
                       </span>
                     </h2>
                     <p className="text-xs text-neutral-400 mt-0.5">
-                      Verified customer doorstep coordination calls logged &amp; recorded via CashALL Agent App
+                      Verified customer doorstep coordination calls (Audio recording disabled — call verification &amp; status tracking only)
                     </p>
                   </div>
                 </div>
@@ -525,7 +525,7 @@ export default function AdminAgentsPage() {
                           <Volume2 className="w-10 h-10 text-neutral-600 mx-auto mb-2" />
                           <p className="text-sm font-bold text-neutral-300">No Call Logs Found</p>
                           <p className="text-xs text-neutral-500 max-w-sm mx-auto">
-                            Calls made by field agents to customers via the CashALL App will automatically appear here with audio playback.
+                            Doorstep coordination calls made by field agents will automatically appear here with verified duration and status (audio recording disabled).
                           </p>
                         </div>
                       );
@@ -569,7 +569,7 @@ export default function AdminAgentsPage() {
                           </div>
                         </div>
 
-                        {/* DURATION & AUDIO CONTROLS */}
+                        {/* DURATION & STATUS CONTROLS */}
                         <div className="flex items-center gap-3 flex-wrap md:flex-nowrap shrink-0">
                           <div className="flex flex-col items-end">
                             <span className="bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 text-xs font-mono font-black px-2.5 py-1 rounded-lg">
@@ -595,8 +595,9 @@ export default function AdminAgentsPage() {
                               </a>
                             </div>
                           ) : (
-                            <span className="text-xs italic text-neutral-500 bg-neutral-900/60 px-3 py-1.5 rounded-xl border border-neutral-800">
-                              Logged (No Audio File)
+                            <span className="text-xs font-medium text-emerald-400/90 bg-emerald-950/30 px-3 py-1.5 rounded-xl border border-emerald-500/20 flex items-center gap-1.5">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                              <span>Call Verified</span>
                             </span>
                           )}
                         </div>

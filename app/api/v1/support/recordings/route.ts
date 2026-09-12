@@ -53,7 +53,9 @@ export async function GET(req: NextRequest) {
       const lower = name.toLowerCase();
       return (
         lower.includes("harshita") ||
-        phoneNum.includes("8981191734")
+        lower.includes("sangeet") ||
+        phoneNum.includes("8981191734") ||
+        phoneNum.includes("6289477287")
       );
     };
 
@@ -61,7 +63,6 @@ export async function GET(req: NextRequest) {
       const lower = name.toLowerCase();
       const lowerNotes = notes.toLowerCase();
       return (
-        lower.includes("sangeet") ||
         lower.includes("arshad") ||
         lower.includes("aman") ||
         lower.includes("hyder") ||
@@ -313,10 +314,30 @@ export async function POST(req: NextRequest) {
     if (!deviceName) deviceName = "Mobile Device";
     if (!quoteId) quoteId = "N/A";
 
+    const roleInput = ((formData.get("role") as string) || (formData.get("actorRole") as string) || "").toUpperCase();
+
+    const isAgent =
+      roleInput === "AGENT" ||
+      formData.get("callType") === "AGENT_PICKUP_CALL" ||
+      callNotes.toLowerCase().includes("field agent") ||
+      callNotes.toLowerCase().includes("agent app") ||
+      supportPersonName.toLowerCase().includes("arshad") ||
+      supportPersonName.toLowerCase().includes("aman") ||
+      supportPersonName.toLowerCase().includes("hyder") ||
+      supportPersonName.toLowerCase().includes("ankit");
+
+    const isSupport =
+      !isAgent &&
+      (supportPersonName.toLowerCase().includes("harshita") ||
+        supportPersonName.toLowerCase().includes("sangeet") ||
+        supportPersonPhone.includes("8981191734") ||
+        supportPersonPhone.includes("6289477287"));
+
     let audioUrl = "";
     let storageType = "none";
 
-    if (audioFile && typeof audioFile.arrayBuffer === "function") {
+    // ONLY process and upload audio for Support Staff desk. For Field Agents, audio recording is strictly disabled.
+    if (!isAgent && audioFile && typeof audioFile.arrayBuffer === "function") {
       try {
         const arrayBuffer = await audioFile.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
@@ -356,24 +377,6 @@ export async function POST(req: NextRequest) {
 
     const durationFormatted = formatDuration(durationSeconds);
     const callTimeIST = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
-
-    const roleInput = ((formData.get("role") as string) || (formData.get("actorRole") as string) || "").toUpperCase();
-
-    const isAgent =
-      roleInput === "AGENT" ||
-      formData.get("callType") === "AGENT_PICKUP_CALL" ||
-      callNotes.toLowerCase().includes("field agent") ||
-      callNotes.toLowerCase().includes("agent app") ||
-      supportPersonPhone === "6289477287" ||
-      supportPersonName.toLowerCase().includes("arshad") ||
-      supportPersonName.toLowerCase().includes("aman") ||
-      supportPersonName.toLowerCase().includes("hyder") ||
-      supportPersonName.toLowerCase().includes("ankit");
-
-    const isSupport =
-      !isAgent &&
-      (supportPersonName.toLowerCase().includes("harshita") ||
-        supportPersonPhone.includes("8981191734"));
 
     const finalActorRole: "AGENT" | "SUPPORT" = isAgent ? "AGENT" : "SUPPORT";
     const finalAction = isAgent ? "AGENT_CALL_LOGGED" : "SUPPORT_CALL_RECORDING";
