@@ -353,11 +353,13 @@ export default function CustomerAccountPage() {
                             <ClipboardList className="w-4 h-4 text-yellow-600" />
                             <span>Condition Answers</span>
                           </Button>
-                          <Link href={`/order/${ord.orderNumber}/bill`}>
-                            <Button variant="outline" size="sm" className="font-extrabold gap-1.5">
-                              <span>View Bill</span>
-                            </Button>
-                          </Link>
+                          {isCompleted && (
+                            <Link href={`/order/${ord.orderNumber}/bill`}>
+                              <Button variant="outline" size="sm" className="font-extrabold gap-1.5">
+                                <span>View Bill</span>
+                              </Button>
+                            </Link>
+                          )}
                           {!isCompleted && !isCancelled && (
                             <Button
                               onClick={() => setOrderToCancel(ord.orderNumber)}
@@ -560,6 +562,7 @@ export default function CustomerAccountPage() {
         isOpen={!!selectedOrderForAnswers}
         onClose={() => setSelectedOrderForAnswers(null)}
         orderOrQuote={selectedOrderForAnswers}
+        isCustomerView={true}
       />
 
       <Footer />

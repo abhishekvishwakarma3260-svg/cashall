@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { CheckCircle2, Printer, Download, Shield, ArrowLeft } from "lucide-react";
+import { CheckCircle2, Printer, Download, Shield, ArrowLeft, Clock } from "lucide-react";
 import { cleanDeviceName } from "@/lib/device";
 
 interface BillData {
@@ -39,6 +39,7 @@ export default function CustomerBillPage() {
   const billRef = useRef<HTMLDivElement>(null);
 
   const [bill, setBill] = useState<BillData | null>(null);
+  const [pendingOrder, setPendingOrder] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [downloadingPdf, setDownloadingPdf] = useState(false);
@@ -75,11 +76,34 @@ export default function CustomerBillPage() {
           }
         }
 
+        // Guard: check if deal is completed
+        if (ord) {
+          const isCompleted =
+            ord.status === "COMPLETED" ||
+            ord.status === "PAID" ||
+            ord.paymentStatus?.toUpperCase() === "PAID" ||
+            ord.payments?.some((p: any) => p.status === "PAID");
+
+          if (!isCompleted) {
+            setPendingOrder(ord);
+            setLoading(false);
+            return;
+          }
+        }
+
         if (!ord) {
           // Fallback to generate-bill API
           const genRes = await fetch(`/api/v1/orders/${orderId}/generate-bill`);
           if (genRes.ok) {
             const genJson = await genRes.json();
+            if (genJson.data?.isCompleted === false) {
+              setPendingOrder({
+                orderNumber: genJson.data.orderNumber || orderId,
+                status: genJson.data.status || "IN_PROGRESS",
+              });
+              setLoading(false);
+              return;
+            }
             const bd = genJson.data?.billData;
             if (bd) {
               const currentYear = new Date().getFullYear();
@@ -269,6 +293,45 @@ export default function CustomerBillPage() {
       <div className="text-sm text-gray-500 font-semibold">Loading official purchase receipt...</div>
     </div>
   );
+
+  if (pendingOrder) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+        <div className="max-w-md w-full bg-white rounded-3xl p-8 text-center shadow-lg border border-gray-100">
+          <div className="w-16 h-16 mx-auto mb-4 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center">
+            <Clock className="w-8 h-8" />
+          </div>
+          <h2 className="text-xl font-black text-neutral-900 mb-2">Deal Still in Progress</h2>
+          <p className="text-xs text-neutral-500 mb-4 leading-relaxed">
+            Order <strong className="text-neutral-800">#{pendingOrder.orderNumber || orderId}</strong> is currently in status{" "}
+            <span className="inline-block px-2 py-0.5 bg-yellow-100 text-yellow-900 font-bold rounded text-[11px] uppercase tracking-wide">
+              {(pendingOrder.status || "IN_PROGRESS").replace(/_/g, " ")}
+            </span>.
+          </p>
+          <div className="bg-yellow-50/70 border border-yellow-200 rounded-2xl p-4 text-xs text-yellow-900 text-left mb-6 space-y-1.5">
+            <p className="font-bold">When will the bill be available?</p>
+            <p className="text-[11px] text-yellow-800 leading-normal">
+              Your official purchase bill is generated automatically right after our executive completes the doorstep inspection and issues your instant payment.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2.5">
+            <Link
+              href={`/track/${pendingOrder.orderNumber || orderId}`}
+              className="w-full py-3 px-4 bg-yellow-400 hover:bg-yellow-300 text-neutral-900 font-black rounded-2xl transition shadow-sm text-xs text-center"
+            >
+              Track Live Order Status
+            </Link>
+            <Link
+              href="/account"
+              className="w-full py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-neutral-700 font-bold rounded-2xl transition text-xs text-center"
+            >
+              Return to My Account
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (error || !bill) return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4 space-y-4">

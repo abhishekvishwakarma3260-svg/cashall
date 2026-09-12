@@ -23,6 +23,7 @@ interface CustomerAnswersModalProps {
   isOpen: boolean;
   onClose: () => void;
   orderOrQuote: any;
+  isCustomerView?: boolean;
 }
 
 interface QuestionItem {
@@ -39,6 +40,7 @@ export function CustomerAnswersModal({
   isOpen,
   onClose,
   orderOrQuote,
+  isCustomerView = false,
 }: CustomerAnswersModalProps) {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"all" | "basic" | "screen_body" | "functional" | "accessories">("all");
@@ -127,7 +129,7 @@ export function CustomerAnswersModal({
 
   // ── Basic booleans (read both formats, no wrong default) ──
   const powerWorking = parseBool(
-    rawAnswers.powerWorking ?? rawAnswers.power,
+    rawAnswers.powerWorking ?? rawAnswers.power ?? rawAnswers.turnsOn ?? rawAnswers.switchesOn,
     true
   );
 
@@ -270,8 +272,8 @@ export function CustomerAnswersModal({
       isAnswered: isExplicitlyProvided(rawAnswers.underWarranty),
       isPositive: underWarranty,
       customerAnswer: underWarranty
-        ? "Declared: Under Active Brand Warranty (<11 Months)"
-        : "Declared: Out of Brand Warranty (Expired)",
+        ? `Declared: Under Active Brand Warranty (${rawAnswers.mobileAge || rawAnswers.laptopAge || rawAnswers.tabletAge || "<11 Months"})`
+        : `Declared: Out of Brand Warranty (${rawAnswers.mobileAge || rawAnswers.laptopAge || rawAnswers.tabletAge || "Expired / >11 Months"})`,
       deductionNote: !underWarranty ? "Standard out-of-warranty adjustment" : undefined,
     },
     {
@@ -461,6 +463,75 @@ export function CustomerAnswersModal({
         : "Customer Declared Missing Box",
       deductionNote: !accessories.includes("box") ? "Original box deduction applied" : undefined,
     },
+    // 5. LAPTOP & TABLET SPECIFIC QUESTIONS (if applicable)
+    ...(rawAnswers.laptopAge || rawAnswers.screenScratches !== undefined || rawAnswers.panelCondition !== undefined || rawAnswers.looseHinges !== undefined
+      ? [
+          ...(rawAnswers.laptopAge
+            ? [
+                {
+                  id: "laptop_age",
+                  category: "basic" as const,
+                  title: "Laptop Age / Usage Duration",
+                  isAnswered: true,
+                  isPositive: true,
+                  customerAnswer: `Declared: ${rawAnswers.laptopAge}`,
+                },
+              ]
+            : []),
+          ...(rawAnswers.screenScratches !== undefined
+            ? [
+                {
+                  id: "laptop_screen_scratches",
+                  category: "screen_body" as const,
+                  title: "Laptop Screen Scratches",
+                  isAnswered: true,
+                  isPositive: rawAnswers.screenScratches === "none" || rawAnswers.screenScratches === "no_scratches",
+                  customerAnswer: `Declared: ${String(rawAnswers.screenScratches).replace(/_/g, " ")}`,
+                },
+              ]
+            : []),
+          ...(rawAnswers.panelCondition !== undefined
+            ? [
+                {
+                  id: "laptop_panel_condition",
+                  category: "screen_body" as const,
+                  title: "Laptop Panel & Body Condition",
+                  isAnswered: true,
+                  isPositive: rawAnswers.panelCondition === "pristine" || rawAnswers.panelCondition === "good",
+                  customerAnswer: `Declared: ${String(rawAnswers.panelCondition).replace(/_/g, " ")}`,
+                },
+              ]
+            : []),
+          ...(rawAnswers.looseHinges !== undefined
+            ? [
+                {
+                  id: "laptop_loose_hinges",
+                  category: "screen_body" as const,
+                  title: "Laptop Screen Hinges",
+                  isAnswered: true,
+                  isPositive: !parseBool(rawAnswers.looseHinges, false),
+                  customerAnswer: parseBool(rawAnswers.looseHinges, false)
+                    ? "Declared: Loose / Damaged Screen Hinges"
+                    : "Declared: Hinges Tight & Smooth",
+                },
+              ]
+            : []),
+          ...(rawAnswers.hasStylus !== undefined
+            ? [
+                {
+                  id: "laptop_stylus",
+                  category: "accessories" as const,
+                  title: "Stylus / Digital Pen",
+                  isAnswered: true,
+                  isPositive: parseBool(rawAnswers.hasStylus, false),
+                  customerAnswer: parseBool(rawAnswers.hasStylus, false)
+                    ? "Stylus / S-Pen Available"
+                    : "Stylus Missing / Not Included",
+                },
+              ]
+            : []),
+        ]
+      : []),
   ];
 
   // Filtering by active tab
@@ -507,11 +578,13 @@ ${priceDifferenceReason ? `📌 Agent Settlement Reason: ${priceDifferenceReason
                 #{orderNumber}
               </span>
               <h2 className="text-lg sm:text-xl font-black text-white tracking-wide">
-                Customer Questionnaire & Condition Audit
+                {isCustomerView ? "Your Submitted Condition Answers" : "Customer Questionnaire & Condition Audit"}
               </h2>
             </div>
             <p className="text-xs text-neutral-400">
-              Complete log of what the customer answered vs left blank during online price calculation. Use this to negotiate with exact proof.
+              {isCustomerView
+                ? "Here is the exact record of device condition and specification answers you submitted for your price valuation."
+                : "Complete log of what the customer answered vs left blank during online price calculation. Use this to negotiate with exact proof."}
             </p>
           </div>
 
@@ -576,13 +649,15 @@ ${priceDifferenceReason ? `📌 Agent Settlement Reason: ${priceDifferenceReason
             ))}
           </div>
 
-          <button
-            onClick={handleCopyBargainScript}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-black bg-emerald-400 hover:bg-emerald-300 px-3.5 py-1.5 rounded-xl transition shadow-md shrink-0"
-          >
-            {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-            <span>{copied ? "Copied Audit Script!" : "Copy Bargaining Script"}</span>
-          </button>
+          {!isCustomerView && (
+            <button
+              onClick={handleCopyBargainScript}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-black bg-emerald-400 hover:bg-emerald-300 px-3.5 py-1.5 rounded-xl transition shadow-md shrink-0"
+            >
+              {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? "Copied Audit Script!" : "Copy Bargaining Script"}</span>
+            </button>
+          )}
         </div>
 
         {/* QUESTIONS & ANSWERS LIST */}
@@ -657,20 +732,22 @@ ${priceDifferenceReason ? `📌 Agent Settlement Reason: ${priceDifferenceReason
             </div>
           )}
 
-          {/* BARGAINING CHEAT-SHEET BOX */}
-          <div className="mt-4 p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2">
-            <div className="flex items-center gap-2 text-yellow-400 text-xs font-black uppercase">
-              <TrendingDown className="w-4 h-4" />
-              <span>Doorstep Negotiation & Bargaining Tip for Agents & Admins</span>
+          {/* BARGAINING CHEAT-SHEET BOX (HIDDEN FROM CUSTOMER VIEW) */}
+          {!isCustomerView && (
+            <div className="mt-4 p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2">
+              <div className="flex items-center gap-2 text-yellow-400 text-xs font-black uppercase">
+                <TrendingDown className="w-4 h-4" />
+                <span>Doorstep Negotiation & Bargaining Tip for Agents & Admins</span>
+              </div>
+              <p className="text-xs text-neutral-300 leading-relaxed">
+                If the customer disputes the physical inspection price offer, remind them:
+                <br />
+                <strong className="text-white">
+                  &ldquo;Sir/Ma&apos;am, your online valuation of ₹{estimatedPrice.toLocaleString("en-IN")} was calculated based on 100% flawless condition, original charger, and zero scratches as selected in the app. During our physical 15-point check, we detected minor discrepancies which automatically calibrated our standard offer to our best settled payout.&rdquo;
+                </strong>
+              </p>
             </div>
-            <p className="text-xs text-neutral-300 leading-relaxed">
-              If the customer disputes the physical inspection price offer, remind them:
-              <br />
-              <strong className="text-white">
-                &ldquo;Sir/Ma&apos;am, your online valuation of ₹{estimatedPrice.toLocaleString("en-IN")} was calculated based on 100% flawless condition, original charger, and zero scratches as selected in the app. During our physical 15-point check, we detected minor discrepancies which automatically calibrated our standard offer to our best settled payout.&rdquo;
-              </strong>
-            </p>
-          </div>
+          )}
         </div>
 
         {/* FOOTER */}

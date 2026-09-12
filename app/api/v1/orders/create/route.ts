@@ -111,8 +111,29 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    const rawIncomingAnswers = data.selectedAnswersJson || body.selectedAnswersJson || null;
+    const incomingAnswersJson = typeof rawIncomingAnswers === "object" && rawIncomingAnswers !== null
+      ? JSON.stringify(rawIncomingAnswers)
+      : (typeof rawIncomingAnswers === "string" && rawIncomingAnswers.trim() && rawIncomingAnswers !== "{}" ? rawIncomingAnswers : null);
+
+    const rawIncomingBreakdown = data.breakdownJson || body.breakdownJson || null;
+    const incomingBreakdownJson = typeof rawIncomingBreakdown === "object" && rawIncomingBreakdown !== null
+      ? JSON.stringify(rawIncomingBreakdown)
+      : (typeof rawIncomingBreakdown === "string" && rawIncomingBreakdown.trim() && rawIncomingBreakdown !== "{}" ? rawIncomingBreakdown : null);
+
     // DEDUPLICATION CHECK 1: If an active order already exists for this quote, return it immediately
     if (quote) {
+      if (incomingAnswersJson && incomingAnswersJson !== "{}" && (!quote.selectedAnswersJson || quote.selectedAnswersJson === "{}" || quote.selectedAnswersJson.length < incomingAnswersJson.length)) {
+        try {
+          quote = await prisma.quote.update({
+            where: { id: quote.id },
+            data: {
+              selectedAnswersJson: incomingAnswersJson,
+              ...(incomingBreakdownJson && incomingBreakdownJson !== "{}" ? { breakdownJson: incomingBreakdownJson } : {}),
+            },
+          });
+        } catch (e) {}
+      }
       const existingOrderForQuote = await prisma.order.findFirst({
         where: {
           quoteId: quote.id,
@@ -147,6 +168,8 @@ export async function POST(req: NextRequest) {
             pickupTimeSlot: existingOrderForQuote.pickupTimeSlot || pickupTimeSlot,
             estimatedPrice: existingOrderForQuote.finalPrice || estimatedPrice,
             status: existingOrderForQuote.status,
+            selectedAnswersJson: existingOrderForQuote.quote?.selectedAnswersJson || quote.selectedAnswersJson || null,
+            breakdownJson: existingOrderForQuote.quote?.breakdownJson || quote.breakdownJson || null,
             createdAt: existingOrderForQuote.createdAt.toISOString(),
           },
         });
@@ -240,16 +263,6 @@ export async function POST(req: NextRequest) {
         },
       });
     }
-
-    const rawIncomingAnswers = data.selectedAnswersJson || body.selectedAnswersJson || null;
-    const incomingAnswersJson = typeof rawIncomingAnswers === "object" && rawIncomingAnswers !== null
-      ? JSON.stringify(rawIncomingAnswers)
-      : (typeof rawIncomingAnswers === "string" && rawIncomingAnswers.trim() && rawIncomingAnswers !== "{}" ? rawIncomingAnswers : null);
-
-    const rawIncomingBreakdown = data.breakdownJson || body.breakdownJson || null;
-    const incomingBreakdownJson = typeof rawIncomingBreakdown === "object" && rawIncomingBreakdown !== null
-      ? JSON.stringify(rawIncomingBreakdown)
-      : (typeof rawIncomingBreakdown === "string" && rawIncomingBreakdown.trim() && rawIncomingBreakdown !== "{}" ? rawIncomingBreakdown : null);
 
     // Fallback if quote is not found
     if (!quote) {
@@ -450,6 +463,8 @@ export async function POST(req: NextRequest) {
         pickupTimeSlot: pickupTimeSlot,
         estimatedPrice: estimatedPrice,
         status: order.status,
+        selectedAnswersJson: quote?.selectedAnswersJson || incomingAnswersJson || null,
+        breakdownJson: quote?.breakdownJson || incomingBreakdownJson || null,
         createdAt: order.createdAt.toISOString(),
       },
     });

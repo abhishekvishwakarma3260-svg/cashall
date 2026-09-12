@@ -129,6 +129,9 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
       revisedPrice: requotedPrice,
       finalPrice,
       amount: finalPrice,
+      selectedAnswersJson: order.quote?.selectedAnswersJson || (order as any).selectedAnswersJson || null,
+      breakdownJson: order.quote?.breakdownJson || (order as any).breakdownJson || null,
+      quote: order.quote || null,
     },
   });
 });

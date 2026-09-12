@@ -138,6 +138,18 @@ export async function POST(req: NextRequest) {
 
     let savedQuote;
     if (existingQuote) {
+      // Intelligently merge selectedAnswersJson so existing answers are NEVER lost or overwritten with empty
+      let mergedSaObj = { ...saObj };
+      if (existingQuote.selectedAnswersJson && existingQuote.selectedAnswersJson !== "{}" && existingQuote.selectedAnswersJson !== "[]") {
+        try {
+          const prevSa = JSON.parse(existingQuote.selectedAnswersJson);
+          if (typeof prevSa === "object" && !Array.isArray(prevSa)) {
+            // Keep previous detailed condition answers if incoming is minimal/empty
+            mergedSaObj = { ...prevSa, ...saObj };
+          }
+        } catch {}
+      }
+
       savedQuote = await prisma.quote.update({
         where: { id: existingQuote.id },
         data: {
@@ -145,7 +157,7 @@ export async function POST(req: NextRequest) {
           totalDeductions: finalDeductions,
           estimatedPrice: finalEstPrice,
           breakdownJson: JSON.stringify(bdObj),
-          selectedAnswersJson: JSON.stringify(saObj),
+          selectedAnswersJson: JSON.stringify(mergedSaObj),
           customerPhone: cleanCustomerPhone || existingQuote.customerPhone,
           customerName: cleanCustomerName || existingQuote.customerName,
           ...(matchedUserId ? { userId: matchedUserId } : {}),

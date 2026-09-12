@@ -377,7 +377,7 @@ function PickupCheckoutContent() {
 
     const fullAddress = `${finalHouse}, ${finalStreet}, ${finalArea}${landmark ? ", " + landmark.trim() : ""}, ${finalCity}, ${selectedState} - ${pincode}`;
 
-    const newOrder: OrderData = {
+    const newOrder: any = {
       id: `ord-${Date.now()}`,
       orderNumber: createdOrderNum,
       quoteId: quote?.id || quoteId,
@@ -394,6 +394,9 @@ function PickupCheckoutContent() {
       revisedPrice: quote?.estimatedPrice,
       estimatedPrice: quote?.estimatedPrice,
       declaredConditionSummary: fullDeviceName,
+      selectedAnswersJson: quote?.selectedAnswersJson || "{}",
+      breakdownJson: quote?.breakdownJson || "{}",
+      quote: quote || null,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };

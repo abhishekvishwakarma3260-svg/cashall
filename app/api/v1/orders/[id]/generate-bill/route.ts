@@ -37,6 +37,19 @@ async function getOrderBillData(orderIdentifier: string) {
 
   if (!order) return null;
 
+  const isCompleted =
+    order.status === "COMPLETED" ||
+    order.status === "PAID" ||
+    order.payments?.some((p) => p.status === "PAID");
+
+  if (!isCompleted) {
+    return {
+      isCompleted: false,
+      orderNumber: order.orderNumber,
+      status: order.status,
+    } as any;
+  }
+
   let explicitDeviceName = "";
   if (order.quote?.breakdownJson) {
     try {
@@ -139,11 +152,21 @@ async function getOrderBillData(orderIdentifier: string) {
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const billData = await getOrderBillData(params.id);
-    if (!billData) {
+    const result = await getOrderBillData(params.id);
+    if (!result) {
       return NextResponse.json({ success: false, error: "Order not found" }, { status: 404 });
     }
-    return NextResponse.json({ success: true, data: { billData } });
+    if ((result as any).isCompleted === false) {
+      return NextResponse.json({
+        success: true,
+        data: {
+          isCompleted: false,
+          orderNumber: (result as any).orderNumber,
+          status: (result as any).status,
+        },
+      });
+    }
+    return NextResponse.json({ success: true, data: { isCompleted: true, billData: result } });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
@@ -151,11 +174,21 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const billData = await getOrderBillData(params.id);
-    if (!billData) {
+    const result = await getOrderBillData(params.id);
+    if (!result) {
       return NextResponse.json({ success: false, error: "Order not found" }, { status: 404 });
     }
-    return NextResponse.json({ success: true, data: { billData } });
+    if ((result as any).isCompleted === false) {
+      return NextResponse.json({
+        success: true,
+        data: {
+          isCompleted: false,
+          orderNumber: (result as any).orderNumber,
+          status: (result as any).status,
+        },
+      });
+    }
+    return NextResponse.json({ success: true, data: { isCompleted: true, billData: result } });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }

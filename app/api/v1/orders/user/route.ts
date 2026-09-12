@@ -61,6 +61,12 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         include: { partner: true },
         orderBy: { createdAt: "desc" },
       },
+      qcReports: {
+        orderBy: { inspectedAt: "desc" },
+      },
+      payments: {
+        orderBy: { createdAt: "desc" },
+      },
     },
     orderBy: {
       createdAt: "desc",
@@ -138,6 +144,19 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       estimatedPrice,
       finalPrice: ord.finalPrice || estimatedPrice,
       revisedPrice: ord.finalPrice || estimatedPrice,
+      paymentStatus: ord.payments?.find((p: any) => p.status === "PAID")?.status || (ord.status === "COMPLETED" ? "PAID" : "PENDING"),
+      selectedAnswersJson: ord.quote?.selectedAnswersJson || (ord as any).selectedAnswersJson || null,
+      breakdownJson: ord.quote?.breakdownJson || (ord as any).breakdownJson || null,
+      quote: ord.quote ? {
+        id: ord.quote.id,
+        quoteNumber: ord.quote.quoteNumber,
+        selectedAnswersJson: ord.quote.selectedAnswersJson,
+        breakdownJson: ord.quote.breakdownJson,
+        estimatedPrice: ord.quote.estimatedPrice,
+        basePrice: ord.quote.basePrice,
+      } : null,
+      quoteNumber: ord.quote?.quoteNumber || null,
+      qcReports: ord.qcReports || [],
       declaredConditionSummary: `${deviceName} - ₹${estimatedPrice.toLocaleString("en-IN")}`,
       createdAt: ord.createdAt.toISOString(),
       updatedAt: ord.updatedAt.toISOString(),

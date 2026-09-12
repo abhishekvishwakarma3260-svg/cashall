@@ -67,7 +67,8 @@ export default function OrderTrackingPage() {
             const activePayment = ord.payments?.find((p: any) => p.status === "PAID") || ord.payments?.[0];
             const isPaid = activePayment?.status === "PAID" || ord.status === "COMPLETED";
 
-            const mapped: OrderData = {
+            const mapped: any = {
+              ...ord,
               id: ord.id,
               orderNumber: ord.orderNumber,
               quoteId: ord.quoteId || "",
@@ -90,6 +91,9 @@ export default function OrderTrackingPage() {
               paymentTxRef: ord.utr || activePayment?.transactionRef || "",
               createdAt: ord.createdAt || new Date().toISOString(),
               updatedAt: ord.updatedAt || new Date().toISOString(),
+              selectedAnswersJson: ord.selectedAnswersJson || ord.quote?.selectedAnswersJson || null,
+              breakdownJson: ord.breakdownJson || ord.quote?.breakdownJson || null,
+              quote: ord.quote || null,
             };
             setOrder(mapped);
             if (isPaid || ord.status === "ACCEPTED") {
@@ -244,7 +248,8 @@ export default function OrderTrackingPage() {
 
   const isRevised = order.priceDifferenceReason && order.declaredConditionSummary;
   const isCancelled = order.status === "CANCELLED" || order.status === "REJECTED" || customerDecision === "DECLINED";
-  const isPaid = order.paymentStatus === "PAID" || order.status === "COMPLETED" || customerDecision === "ACCEPTED";
+  const isPaid = order.paymentStatus === "PAID" || order.status === "COMPLETED";
+  const isDealCompleted = order.status === "COMPLETED" || order.status === "PAID" || order.paymentStatus === "PAID";
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-bg text-brand-black">
@@ -287,11 +292,13 @@ export default function OrderTrackingPage() {
                   <ClipboardList className="w-4 h-4 text-yellow-600" />
                   <span>Condition Answers</span>
                 </Button>
-                <Link href={`/order/${order.orderNumber}/bill`}>
-                  <Button variant="outline" size="sm" className="font-extrabold text-xs">
-                    <span>View Official Bill</span>
-                  </Button>
-                </Link>
+                {isDealCompleted && (
+                  <Link href={`/order/${order.orderNumber}/bill`}>
+                    <Button variant="outline" size="sm" className="font-extrabold text-xs">
+                      <span>View Official Bill</span>
+                    </Button>
+                  </Link>
+                )}
                 {!isPaid && !isCancelled && (
                   <Button
                     onClick={() => setCancelModalOpen(true)}
@@ -668,6 +675,7 @@ export default function OrderTrackingPage() {
         isOpen={showAnswersModal}
         onClose={() => setShowAnswersModal(false)}
         orderOrQuote={order}
+        isCustomerView={true}
       />
 
       <Footer />

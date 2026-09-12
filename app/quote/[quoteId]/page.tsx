@@ -147,16 +147,18 @@ export default function QuoteResultPage() {
         if (u?.phone) cPhone = u.phone;
       } catch (e) {}
 
-      // Persist quote to Supabase PostgreSQL database
-      fetch("/api/v1/quotes/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...activeQuote,
-          customerName: cName,
-          customerPhone: cPhone,
-        }),
-      }).catch((err) => console.error("Error syncing quote to DB:", err));
+      // Persist quote to Supabase PostgreSQL database only if authentic stored quote exists
+      if (stored && activeQuote && activeQuote.quoteNumber !== "CAQ-984210") {
+        fetch("/api/v1/quotes/save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...activeQuote,
+            customerName: cName,
+            customerPhone: cPhone,
+          }),
+        }).catch((err) => console.error("Error syncing quote to DB:", err));
+      }
     }
   }, [quoteId]);
 
