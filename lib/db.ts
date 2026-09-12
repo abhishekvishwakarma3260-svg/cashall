@@ -27,7 +27,13 @@ if (dbUrl.includes(":5432/")) {
   dbUrl = dbUrl.replace(":5432/", ":6543/");
 }
 
-if (!dbUrl || dbUrl.includes("db.jqysknhobtpcbyyltnfc.supabase.co") || dbUrl.includes("db.ipzvutzhvmtnybelwspw.supabase.co") || dbUrl.includes("localhost")) {
+// CRITICAL: Ensure we ALWAYS use the NEW Supabase project (ipzvutzhvmtnybelwspw) and NEVER the old project (jqysknhobtpcbyyltnfc)
+if (
+  !dbUrl ||
+  dbUrl.includes("jqysknhobtpcbyyltnfc") ||
+  !dbUrl.includes("ipzvutzhvmtnybelwspw") ||
+  dbUrl.includes("localhost")
+) {
   dbUrl = SUPABASE_IPV4_POOLER_URL;
 }
 
