@@ -144,6 +144,18 @@ function PickupCheckoutContent() {
 
       if (foundQuote) {
         setQuote(foundQuote);
+      } else if (quoteId) {
+        fetch(`/api/v1/quotes/${encodeURIComponent(quoteId)}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success && data.quote) {
+              setQuote(data.quote);
+              if (data.quote.deviceName) {
+                setResolvedDeviceName(data.quote.deviceName);
+              }
+            }
+          })
+          .catch((err) => console.warn("Error fetching quote from server:", err));
       }
 
       // Pre-load current variant for device name resolution

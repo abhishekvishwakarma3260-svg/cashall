@@ -124,6 +124,20 @@ export default function QuoteResultPage() {
 
       setQuote(activeQuote);
 
+      if (quoteId) {
+        fetch(`/api/v1/quotes/${encodeURIComponent(quoteId)}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success && data.quote) {
+              setQuote(data.quote);
+              if (typeof window !== "undefined") {
+                localStorage.setItem(`cashall_quote_${quoteId}`, JSON.stringify(data.quote));
+              }
+            }
+          })
+          .catch(() => {});
+      }
+
       // Get logged-in user details if available
       let cName = "";
       let cPhone = "";

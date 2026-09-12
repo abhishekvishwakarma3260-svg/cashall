@@ -57,3 +57,4 @@ android-caller-app/app/build/
 android-caller-app/.gradle/
 hs_err*.log
 /CashALL-Caller.apk
+database_backups/

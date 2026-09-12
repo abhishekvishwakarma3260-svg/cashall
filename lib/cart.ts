@@ -25,7 +25,26 @@ export function getCartQuotes(): CartQuoteItem[] {
     const raw = localStorage.getItem(CART_STORAGE_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
+    if (!Array.isArray(parsed)) return [];
+
+    // Check if customer is logged in
+    const userRaw = localStorage.getItem("cashall_user");
+    let currentPhone = "";
+    if (userRaw) {
+      try {
+        const u = JSON.parse(userRaw);
+        if (u.phone) currentPhone = u.phone.replace(/\D/g, "").slice(-10);
+      } catch (e) {}
+    }
+
+    if (currentPhone) {
+      return parsed.filter((item) => {
+        const itemPhone = (item.customerPhone || "").replace(/\D/g, "").slice(-10);
+        return !itemPhone || itemPhone === currentPhone;
+      });
+    }
+
+    return parsed;
   } catch (e) {
     return [];
   }
@@ -68,4 +87,41 @@ export function clearCart(): void {
     localStorage.removeItem(CART_STORAGE_KEY);
     window.dispatchEvent(new Event(CART_UPDATED_EVENT));
   } catch (e) {}
+}
+
+export async function syncCartWithUser(phone: string): Promise<CartQuoteItem[]> {
+  if (typeof window === "undefined" || !phone) return [];
+  const cleanPhone = phone.replace(/\D/g, "").slice(-10);
+  if (!cleanPhone) return [];
+
+  try {
+    const res = await fetch(`/api/v1/quotes/user?phone=${encodeURIComponent(cleanPhone)}`);
+    const json = await res.json();
+    if (json.success && Array.isArray(json.quotes)) {
+      const activeQuotes: CartQuoteItem[] = json.quotes
+        .filter((q: any) => q.status === "ACTIVE")
+        .map((q: any) => ({
+          quoteId: q.id,
+          quoteNumber: q.quoteNumber,
+          variantId: q.variantId,
+          brandName: q.brandName,
+          modelName: q.modelName,
+          storage: q.storage,
+          imageUrl: q.imageUrl,
+          category: q.category,
+          estimatedPrice: q.estimatedPrice,
+          basePrice: q.basePrice,
+          customerName: q.customerName,
+          customerPhone: q.customerPhone,
+          selectedAnswersJson: q.selectedAnswersJson,
+          breakdownJson: q.breakdownJson,
+          createdAt: q.createdAt,
+        }));
+
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(activeQuotes));
+      window.dispatchEvent(new Event(CART_UPDATED_EVENT));
+      return activeQuotes;
+    }
+  } catch (e) {}
+  return getCartQuotes();
 }

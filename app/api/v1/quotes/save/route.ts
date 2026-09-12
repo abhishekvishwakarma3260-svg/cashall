@@ -110,6 +110,27 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // Extract clean customer phone and name
+    const cleanCustomerPhone = (customerPhone || bdObj.customerPhone || saObj.customerPhone || "").replace(/\D/g, "").slice(-10) || null;
+    const cleanCustomerName = (customerName || bdObj.customerName || saObj.customerName || "").trim() || null;
+
+    let matchedUserId: string | null = null;
+    if (cleanCustomerPhone) {
+      try {
+        const u = await prisma.user.findFirst({
+          where: {
+            OR: [
+              { phone: cleanCustomerPhone },
+              { phone: `91${cleanCustomerPhone}` },
+              { phone: { contains: cleanCustomerPhone } },
+            ],
+          },
+          select: { id: true },
+        });
+        if (u) matchedUserId = u.id;
+      } catch (e) {}
+    }
+
     // Check if quote with quoteNumber exists
     const existingQuote = await prisma.quote.findFirst({
       where: { quoteNumber: cleanQuoteNumber },
@@ -125,6 +146,9 @@ export async function POST(req: NextRequest) {
           estimatedPrice: finalEstPrice,
           breakdownJson: JSON.stringify(bdObj),
           selectedAnswersJson: JSON.stringify(saObj),
+          customerPhone: cleanCustomerPhone || existingQuote.customerPhone,
+          customerName: cleanCustomerName || existingQuote.customerName,
+          ...(matchedUserId ? { userId: matchedUserId } : {}),
           status: status || existingQuote.status || "ACTIVE",
           updatedAt: new Date(),
         },
@@ -139,6 +163,9 @@ export async function POST(req: NextRequest) {
           estimatedPrice: finalEstPrice,
           breakdownJson: JSON.stringify(bdObj),
           selectedAnswersJson: JSON.stringify(saObj),
+          customerPhone: cleanCustomerPhone,
+          customerName: cleanCustomerName,
+          ...(matchedUserId ? { userId: matchedUserId } : {}),
           status: status || "ACTIVE",
           expiresAt: new Date(Date.now() + 48 * 60 * 60 * 1000),
         },

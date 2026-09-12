@@ -73,6 +73,17 @@ export function CustomerAuthModal({
     };
 
     if (typeof window !== "undefined") {
+      const prevUser = localStorage.getItem("cashall_user");
+      let prevPhone = "";
+      if (prevUser) {
+        try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+      }
+      if (prevPhone && prevPhone.replace(/\D/g, "").slice(-10) !== cleanPhone) {
+        localStorage.removeItem("cashall_quotes");
+        localStorage.removeItem("cashall_cart_quotes");
+        localStorage.removeItem("cashall_all_orders");
+        localStorage.removeItem("cashall_latest_quote");
+      }
       localStorage.setItem("cashall_user", JSON.stringify(userObj));
       document.cookie = `cashall_user_phone=${cleanPhone}; path=/; max-age=31536000`;
     }
@@ -111,6 +122,17 @@ export function CustomerAuthModal({
     };
 
     if (typeof window !== "undefined") {
+      const prevUser = localStorage.getItem("cashall_user");
+      let prevPhone = "";
+      if (prevUser) {
+        try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+      }
+      if (prevPhone && prevPhone.replace(/\D/g, "").slice(-10) !== cleanPhone) {
+        localStorage.removeItem("cashall_quotes");
+        localStorage.removeItem("cashall_cart_quotes");
+        localStorage.removeItem("cashall_all_orders");
+        localStorage.removeItem("cashall_latest_quote");
+      }
       localStorage.setItem("cashall_user", JSON.stringify(userObj));
       document.cookie = `cashall_user_phone=${cleanPhone}; path=/; max-age=31536000`;
     }

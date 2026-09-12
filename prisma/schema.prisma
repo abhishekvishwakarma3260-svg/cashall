@@ -25,6 +25,7 @@ model User {
   OfferCalculation   OfferCalculation[]
   orders             Order[]
   assignedOrders     Order[]                 @relation("AgentOrders")
+  quotes             Quote[]
   tickets            SupportTicket[]
   notificationTokens UserNotificationToken[]
 
@@ -232,14 +233,20 @@ model Quote {
   breakdownJson       String
   expiresAt           DateTime
   status              String        @default("ACTIVE")
+  customerPhone       String?
+  customerName        String?
+  userId              String?       @db.Uuid
   createdAt           DateTime      @default(now())
   updatedAt           DateTime      @updatedAt
   deletedAt           DateTime?
   orders              Order[]
+  user                User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
   variant             DeviceVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
 
   @@index([quoteNumber])
   @@index([variantId])
+  @@index([customerPhone])
+  @@index([userId])
 }
 
 model Order {

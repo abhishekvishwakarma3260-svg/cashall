@@ -102,6 +102,12 @@ export function Header() {
   const handleLogout = () => {
     if (typeof window !== "undefined") {
       localStorage.removeItem("cashall_user");
+      localStorage.removeItem("cashall_quotes");
+      localStorage.removeItem("cashall_cart_quotes");
+      localStorage.removeItem("cashall_all_orders");
+      localStorage.removeItem("cashall_latest_quote");
+      document.cookie = "cashall_user_phone=; path=/; max-age=0";
+      window.dispatchEvent(new Event("cashall_cart_updated"));
     }
     setUser(null);
   };

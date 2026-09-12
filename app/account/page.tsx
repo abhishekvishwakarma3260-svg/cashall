@@ -42,7 +42,9 @@ export default function CustomerAccountPage() {
         }
       }
 
-      // 1. Load local storage orders
+      const cleanCurrentPhone = phoneNum.replace(/\D/g, "").slice(-10);
+
+      // 1. Load local storage orders (strictly filtered by logged-in phone)
       let localOrders: OrderData[] = [];
       const all = localStorage.getItem("cashall_all_orders");
       if (all) {
@@ -50,10 +52,9 @@ export default function CustomerAccountPage() {
           const parsed = JSON.parse(all);
           if (Array.isArray(parsed)) {
             localOrders = parsed.filter((o: OrderData) => {
-              if (!phoneNum) return true;
+              if (!cleanCurrentPhone) return false;
               const cleanStored = (o.customerPhone || "").replace(/\D/g, "").slice(-10);
-              const cleanCurrent = phoneNum.replace(/\D/g, "").slice(-10);
-              return !cleanStored || cleanStored === cleanCurrent;
+              return cleanStored === cleanCurrentPhone;
             });
           }
         } catch (e) {
@@ -61,19 +62,44 @@ export default function CustomerAccountPage() {
         }
       }
 
-      // 2. Load saved quotes
+      // 2. Load saved quotes (strictly filtered by logged-in phone, purge stale quotes)
       let localQuotes: QuoteData[] = [];
       const savedQ = localStorage.getItem("cashall_quotes");
       const latestQ = localStorage.getItem("cashall_latest_quote");
       if (savedQ) {
         try {
           const parsed = JSON.parse(savedQ);
-          if (Array.isArray(parsed)) localQuotes = parsed;
+          if (Array.isArray(parsed)) {
+            localQuotes = parsed.filter((q: any) => {
+              if (!cleanCurrentPhone) return false;
+              let qPhone = q.customerPhone || "";
+              if (!qPhone && q.breakdownJson) {
+                try { qPhone = JSON.parse(q.breakdownJson).customerPhone || ""; } catch (e) {}
+              }
+              if (!qPhone && q.selectedAnswersJson) {
+                try { qPhone = JSON.parse(q.selectedAnswersJson).customerPhone || ""; } catch (e) {}
+              }
+              const cleanQPhone = (qPhone || "").replace(/\D/g, "").slice(-10);
+              return cleanQPhone === cleanCurrentPhone;
+            });
+          }
         } catch (e) {}
       } else if (latestQ) {
         try {
           const parsed = JSON.parse(latestQ);
-          if (parsed) localQuotes = [parsed];
+          if (parsed) {
+            let qPhone = parsed.customerPhone || "";
+            if (!qPhone && parsed.breakdownJson) {
+              try { qPhone = JSON.parse(parsed.breakdownJson).customerPhone || ""; } catch (e) {}
+            }
+            if (!qPhone && parsed.selectedAnswersJson) {
+              try { qPhone = JSON.parse(parsed.selectedAnswersJson).customerPhone || ""; } catch (e) {}
+            }
+            const cleanQPhone = (qPhone || "").replace(/\D/g, "").slice(-10);
+            if (cleanQPhone === cleanCurrentPhone) {
+              localQuotes = [parsed];
+            }
+          }
         } catch (e) {}
       }
       setQuotes(localQuotes);
@@ -87,9 +113,34 @@ export default function CustomerAccountPage() {
         }).catch((err) => console.warn("Auto-sync error:", err));
       }
 
-      // 4. Fetch central PostgreSQL database orders for this user's phone
-      if (phoneNum) {
-        fetch(`/api/v1/orders/user?phone=${encodeURIComponent(phoneNum)}`)
+      // 4. Fetch central PostgreSQL database quotes for this user's phone
+      if (cleanCurrentPhone) {
+        fetch(`/api/v1/quotes/user?phone=${encodeURIComponent(cleanCurrentPhone)}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success && Array.isArray(data.quotes)) {
+              const quoteMap = new Map<string, QuoteData>();
+              data.quotes.forEach((q: any) => {
+                const key = q.quoteNumber || q.id;
+                quoteMap.set(key, q);
+              });
+              localQuotes.forEach((q: any) => {
+                const key = q.quoteNumber || q.id;
+                if (!quoteMap.has(key)) quoteMap.set(key, q);
+              });
+              const finalQuotes = Array.from(quoteMap.values());
+              setQuotes(finalQuotes);
+              if (typeof window !== "undefined") {
+                localStorage.setItem("cashall_quotes", JSON.stringify(finalQuotes));
+              }
+            }
+          })
+          .catch((err) => console.warn("Error fetching DB quotes:", err));
+      }
+
+      // 5. Fetch central PostgreSQL database orders for this user's phone
+      if (cleanCurrentPhone) {
+        fetch(`/api/v1/orders/user?phone=${encodeURIComponent(cleanCurrentPhone)}`)
           .then((res) => res.json())
           .then((data) => {
             if (data.success && Array.isArray(data.orders) && data.orders.length > 0) {
@@ -98,7 +149,11 @@ export default function CustomerAccountPage() {
               localOrders.forEach((o: OrderData) => {
                 if (!map.has(o.orderNumber)) map.set(o.orderNumber, o);
               });
-              setOrders(Array.from(map.values()));
+              const finalOrders = Array.from(map.values());
+              setOrders(finalOrders);
+              if (typeof window !== "undefined") {
+                localStorage.setItem("cashall_all_orders", JSON.stringify(finalOrders));
+              }
             } else if (localOrders.length > 0) {
               setOrders(localOrders);
             } else {
@@ -395,7 +450,7 @@ export default function CustomerAccountPage() {
                         <div className="flex items-center gap-2">
                           {!isCancelled ? (
                             <>
-                              <Link href={`/quote/${q.id}`}>
+                              <Link href={`/quote/${q.quoteNumber || q.id}`}>
                                 <Button variant="primary" size="sm" className="font-extrabold text-xs shadow-yellowGlow gap-1">
                                   <span>View & Book</span>
                                   <ArrowRight className="w-3.5 h-3.5" />

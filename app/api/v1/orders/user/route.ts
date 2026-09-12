@@ -17,17 +17,30 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   const cleanPhone10 = rawClean.slice(-10); // last 10 digits only
   const cleanPhone12 = rawClean.length === 10 ? `91${rawClean}` : rawClean; // with country code
 
-  // Try both: last-10-digit match (e.g. "6289477287") and full with code (e.g. "916289477287")
+  // Try both: user.phone and address.phone matching last 10 digits
   const orders = await prisma.order.findMany({
     where: {
       deletedAt: null,
-      user: {
-        OR: [
-          { phone: { contains: cleanPhone10 } },
-          { phone: { equals: cleanPhone12 } },
-          { phone: { equals: cleanPhone10 } },
-        ],
-      },
+      OR: [
+        {
+          user: {
+            OR: [
+              { phone: { contains: cleanPhone10 } },
+              { phone: { equals: cleanPhone12 } },
+              { phone: { equals: cleanPhone10 } },
+            ],
+          },
+        },
+        {
+          address: {
+            OR: [
+              { phone: { contains: cleanPhone10 } },
+              { phone: { equals: cleanPhone12 } },
+              { phone: { equals: cleanPhone10 } },
+            ],
+          },
+        },
+      ],
     },
     include: {
       user: true,
@@ -52,6 +65,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     orderBy: {
       createdAt: "desc",
     },
+    take: 50,
   });
 
   const formattedOrders = orders.map((ord) => {

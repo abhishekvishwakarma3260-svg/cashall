@@ -36,11 +36,11 @@ export const BARRACKPORE_PINCODES: string[] = Array.from({ length: 15 }, (_, i) 
   return code;
 }).filter((code) => !barrackporeExcluded.has(code));
 
-// 5. Hooghly, West Bengal (16 PIN codes)
+// 5. Hooghly, West Bengal (17 PIN codes)
 export const HOOGHLY_PINCODES: string[] = [
   "712101", "712103", "712104", "712105", "712123", "712124", "712125",
   "712136", "712137", "712201", "712202", "712203", "712204", "712221",
-  "712223", "712224"
+  "712222", "712223", "712224"
 ];
 
 // 6. Howrah, West Bengal (15 PIN codes)
@@ -55,6 +55,11 @@ export const RANCHI_PINCODES: string[] = [
   "834001",
   "834002",
   "834003"
+];
+
+// 8. Patna, Bihar (1 PIN code)
+export const PATNA_PINCODES: string[] = [
+  "800003"
 ];
 
 export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
@@ -106,6 +111,13 @@ export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
     state: "Jharkhand",
     count: RANCHI_PINCODES.length,
     pincodes: RANCHI_PINCODES,
+  },
+  {
+    id: "dist-patna",
+    name: "Patna",
+    state: "Bihar",
+    count: PATNA_PINCODES.length,
+    pincodes: PATNA_PINCODES,
   },
 ];
 

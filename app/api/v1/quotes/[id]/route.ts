@@ -1,0 +1,111 @@
+import { NextRequest, NextResponse } from "next/server";
+import { apiWrapper } from "@/lib/utils/api-wrapper";
+import { prisma } from "@/lib/db";
+
+export const dynamic = "force-dynamic";
+
+export const GET = apiWrapper(async (
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) => {
+  const quoteIdentifier = params.id;
+  if (!quoteIdentifier) {
+    return NextResponse.json({ success: false, error: "Quote identifier required" }, { status: 400 });
+  }
+
+  const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(quoteIdentifier);
+
+  const quote = await prisma.quote.findFirst({
+    where: {
+      deletedAt: null,
+      OR: [
+        ...(isUuid ? [{ id: quoteIdentifier }] : []),
+        { quoteNumber: quoteIdentifier },
+      ],
+    },
+    include: {
+      orders: {
+        take: 1,
+        orderBy: { createdAt: "desc" },
+        select: {
+          id: true,
+          orderNumber: true,
+          status: true,
+        },
+      },
+      variant: {
+        include: {
+          model: {
+            include: { brand: true },
+          },
+        },
+      },
+    },
+  });
+
+  if (!quote) {
+    return NextResponse.json({ success: false, error: "Quote not found" }, { status: 404 });
+  }
+
+  let deviceName = quote.variant
+    ? `${quote.variant.model.brand.name} ${quote.variant.model.name}${quote.variant.storage ? ` (${quote.variant.storage})` : ""}`
+    : "Mobile Device";
+
+  if (quote.breakdownJson) {
+    try {
+      const bd = JSON.parse(quote.breakdownJson);
+      if (bd.deviceName) deviceName = bd.deviceName;
+    } catch (e) {}
+  }
+  if (deviceName === "Mobile Device" && quote.selectedAnswersJson) {
+    try {
+      const sa = JSON.parse(quote.selectedAnswersJson);
+      if (sa?.device && sa.device !== "Customer Mobile Device") deviceName = sa.device;
+    } catch (e) {}
+  }
+
+  let estimatedPrice = quote.estimatedPrice;
+  if (quote.breakdownJson) {
+    try {
+      const bd = JSON.parse(quote.breakdownJson);
+      if (typeof bd?.estimatedPrice === "number" && bd.estimatedPrice > 0) {
+        estimatedPrice = bd.estimatedPrice;
+      }
+    } catch (e) {}
+  }
+
+  const relatedOrder = quote.orders?.[0];
+  let displayStatus = quote.status;
+  if (relatedOrder?.status === "COMPLETED") {
+    displayStatus = "COMPLETED";
+  } else if (relatedOrder) {
+    displayStatus = "ORDERED";
+  }
+
+  return NextResponse.json({
+    success: true,
+    quote: {
+      id: quote.id,
+      quoteNumber: quote.quoteNumber,
+      variantId: quote.variantId,
+      deviceName,
+      brandName: quote.variant?.model?.brand?.name || "",
+      modelName: quote.variant?.model?.name || "",
+      imageUrl: quote.variant?.model?.imageUrl || null,
+      category: quote.variant?.model?.category || "MOBILE",
+      storage: quote.variant?.storage || "",
+      basePrice: quote.basePrice,
+      totalDeductions: quote.totalDeductions,
+      estimatedPrice,
+      status: displayStatus,
+      orderNumber: relatedOrder?.orderNumber || null,
+      orderStatus: relatedOrder?.status || null,
+      createdAt: quote.createdAt.toISOString(),
+      expiresAt: quote.expiresAt.toISOString(),
+      customerName: quote.customerName || "",
+      customerPhone: quote.customerPhone || "",
+      breakdownJson: quote.breakdownJson,
+      selectedAnswersJson: quote.selectedAnswersJson,
+    },
+  });
+});

@@ -23,6 +23,7 @@ import {
   removeQuoteFromCart,
   clearCart,
   CART_UPDATED_EVENT,
+  syncCartWithUser,
 } from "@/lib/cart";
 import { formatDeviceName } from "@/lib/device";
 
@@ -50,6 +51,23 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
       };
     }
   }, []);
+
+  useEffect(() => {
+    if (isOpen && typeof window !== "undefined") {
+      refreshCart();
+      const userRaw = localStorage.getItem("cashall_user");
+      if (userRaw) {
+        try {
+          const u = JSON.parse(userRaw);
+          if (u.phone) {
+            syncCartWithUser(u.phone).then((synced) => {
+              if (Array.isArray(synced)) setItems(synced);
+            });
+          }
+        } catch (e) {}
+      }
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
