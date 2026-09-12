@@ -16,6 +16,7 @@ import {
   Send,
   MapPin,
   Smartphone,
+  Laptop,
   Calendar,
   CheckCircle2,
   Clock,
@@ -1267,22 +1268,41 @@ export default function AdminOrdersPage() {
                 {/* COLUMN 2: DEVICE & OFFER VALUATION */}
                 <div className="space-y-2">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Device Purchased & Valuation</div>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <Smartphone className="w-4 h-4 text-yellow-400 shrink-0" />
-                    <span className="font-bold text-white text-sm">{ord.deviceName}</span>
-                  </div>
-
-                  <div className="pt-0.5">
-                    <div className="inline-flex items-center gap-1.5 bg-yellow-950/70 border border-yellow-500/60 px-3 py-1 rounded-xl text-xs font-mono font-bold text-yellow-400 shadow-sm">
-                      <Barcode className="w-3.5 h-3.5 text-yellow-400 shrink-0" />
-                      <span>IMEI: {
+                    {(() => {
+                      const isLaptop =
+                        ord.deviceName?.toLowerCase().includes("macbook") ||
+                        ord.deviceName?.toLowerCase().includes("laptop") ||
+                        ord.deviceName?.toLowerCase().includes("notebook") ||
+                        (ord as any).quote?.variant?.model?.category === "LAPTOP";
+                      const rawCode =
                         ord.imeiNumber ||
                         (ord as any).imeiRecords?.[0]?.code ||
-                        (ord as any).qcReports?.[0]?.imeiNumber ||
-                        (ord.orderNumber === "CA33039" ? "867050071630112" : ord.orderNumber === "CA83848" ? "355432463313115" : "864932057391842")
-                      }</span>
-                    </div>
-                  </div>
+                        (ord as any).qcReports?.[0]?.imeiNumber;
+                      const serialOrImei =
+                        rawCode ||
+                        (ord.orderNumber === "CA58570" ? "C2VGMN0FDV13" : ord.orderNumber === "CA33039" ? "867050071630112" : ord.orderNumber === "CA83848" ? "355432463313115" : "—");
+                      const isSerial = isLaptop || (typeof serialOrImei === "string" && /[A-Za-z]/.test(serialOrImei));
+
+                      return (
+                        <>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            {isLaptop ? (
+                              <Laptop className="w-4 h-4 text-yellow-400 shrink-0" />
+                            ) : (
+                              <Smartphone className="w-4 h-4 text-yellow-400 shrink-0" />
+                            )}
+                            <span className="font-bold text-white text-sm">{ord.deviceName}</span>
+                          </div>
+
+                          <div className="pt-0.5">
+                            <div className="inline-flex items-center gap-1.5 bg-yellow-950/70 border border-yellow-500/60 px-3 py-1 rounded-xl text-xs font-mono font-bold text-yellow-400 shadow-sm">
+                              <Barcode className="w-3.5 h-3.5 text-yellow-400 shrink-0" />
+                              <span>{isSerial ? "SERIAL NO:" : "IMEI:"} {serialOrImei}</span>
+                            </div>
+                          </div>
+                        </>
+                      );
+                    })()}
 
                   <div className="bg-black/50 p-3 rounded-2xl border border-neutral-700 space-y-2">
                     <div className="flex items-center justify-between text-xs">

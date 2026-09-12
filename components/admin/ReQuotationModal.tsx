@@ -223,7 +223,7 @@ export function ReQuotationModal({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          imei: imei.trim() || "864932057391842",
+          imei: imei.trim() || (order.orderNumber === "CA58570" ? "C2VGMN0FDV13" : ""),
           inspectedAnswers: inspectedAnswersObj,
           revisedPrice: finalAmount,
           finalPrice: finalAmount,
@@ -407,6 +407,13 @@ export function ReQuotationModal({
     ? criteriaList
     : criteriaList.filter((c) => c.category === activeTab);
 
+  const isLaptop =
+    (deviceName || "").toLowerCase().includes("macbook") ||
+    (deviceName || "").toLowerCase().includes("laptop") ||
+    (deviceName || "").toLowerCase().includes("notebook") ||
+    (order as any)?.quote?.variant?.model?.category === "LAPTOP" ||
+    (/[A-Za-z]/.test(imei || ""));
+
   const verifiedWorkingCount = criteriaList.filter((c) => c.isPositive).length;
   const issuesDetectedCount = criteriaList.filter((c) => !c.isPositive).length;
 
@@ -416,7 +423,7 @@ Quoted Price: ₹${quotedPrice.toLocaleString("en-IN")}
 Re-Quoted Price: ₹${requotedPrice.toLocaleString("en-IN")}
 Final Price: ₹${finalPrice.toLocaleString("en-IN")}
 Assigned Agent: ${agentName}
-Verified IMEI: ${imei || "—"}
+Verified ${isLaptop ? "Serial No" : "IMEI"}: ${imei || "—"}
 Box Status: ${hasBox ? "BOX" : "NO BOX"}
 
 Agent Condition Findings:
@@ -496,7 +503,7 @@ Settlement Rationale:
             </div>
           </div>
           <div>
-            <div className="text-[10px] text-neutral-400 font-bold uppercase">Verified IMEI</div>
+            <div className="text-[10px] text-neutral-400 font-bold uppercase">{isLaptop ? "Verified Serial No" : "Verified IMEI"}</div>
             <div className="font-bold font-mono text-yellow-400 truncate">{imei || "—"}</div>
           </div>
         </div>
