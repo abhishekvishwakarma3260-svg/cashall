@@ -18,7 +18,9 @@ import {
   IndianRupee,
   Sparkles,
   AlertCircle,
+  ListChecks,
 } from "lucide-react";
+import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 
 export default function AgentOrderInspectionPage() {
   const params = useParams();
@@ -28,6 +30,7 @@ export default function AgentOrderInspectionPage() {
   const [order, setOrder] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [showAnswersModal, setShowAnswersModal] = useState(false);
   const [agentSession, setAgentSession] = useState<any>(null);
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -97,22 +100,36 @@ export default function AgentOrderInspectionPage() {
 
             // Pre-populate agent state with customer answers
             const pUnderWarranty = answers.underWarranty === true;
-            const pValidBill = answers.validBill === true;
-            const pPower = answers.powerWorking !== false && answers.power !== "no";
-            const pCalls = answers.callsWorking !== false && answers.calls !== "no";
-            const pTouch = answers.touchWorking !== false && answers.touch !== "no";
-            const pScreenOrig = answers.screenOriginal !== false;
+            const pValidBill = answers.validBill === true || answers.hasGstBill === true;
+            const pPower = answers.powerWorking !== false && answers.power !== "no" && answers.turnsOn !== false && answers.switchesOn !== false;
+            const pCalls = (answers.canMakeCalls ?? answers.callsWorking) !== false && answers.calls !== "no";
+            const pTouch = (answers.touchScreenWorking ?? answers.touchWorking) !== false && answers.touch !== "no";
+            const pScreenOrig = (answers.isScreenOriginal ?? answers.screenOriginal) !== false;
 
+            const pDefects = Array.isArray(answers.selectedDefects) ? answers.selectedDefects : [];
             const pMajorDefects = Array.isArray(answers.selectedMajorDefects)
               ? answers.selectedMajorDefects
               : (Array.isArray(answers.majorDefects) ? answers.majorDefects : []);
             
-            const pScratch = answers.scratchLevel || "no_scratches";
-            const pDent = answers.dentLevel || "no_dents";
+            const mergedDefects = [...pDefects, ...pMajorDefects];
+            if (pDefects.includes("broken_screen") && !mergedDefects.includes("screen_broken")) mergedDefects.push("screen_broken");
+            if (pDefects.includes("dead_spot_lines") && !mergedDefects.includes("screen_lines")) mergedDefects.push("screen_lines");
+            if (pDefects.includes("body_dent_scratch") && !mergedDefects.includes("body_dents")) mergedDefects.push("body_dents");
+            if (pDefects.includes("panel_missing") && !mergedDefects.includes("panel_missing")) mergedDefects.push("panel_missing");
 
+            const hasBodyDefects = mergedDefects.includes("body_dent_scratch") || mergedDefects.includes("body_dents");
+            const pScratch = answers.scratchLevel || (hasBodyDefects ? "1_2_scratches" : "no_scratches");
+            const pDent = answers.dentLevel || (hasBodyDefects ? "1_2_dents" : "no_dents");
+
+            const pProblems = Array.isArray(answers.selectedProblems) ? answers.selectedProblems : [];
             const pFunctional = Array.isArray(answers.selectedFunctionalIssues)
               ? answers.selectedFunctionalIssues
               : (Array.isArray(answers.functionalIssues) ? answers.functionalIssues : []);
+
+            const mergedFunctional = [...pProblems, ...pFunctional];
+            if (pProblems.includes("battery_service") && !mergedFunctional.includes("battery")) mergedFunctional.push("battery");
+            if (pProblems.includes("finger_touch") && !mergedFunctional.includes("fingerprint")) mergedFunctional.push("fingerprint");
+            if (pProblems.includes("face_sensor") && !mergedFunctional.includes("face_id")) mergedFunctional.push("face_id");
 
             const pAccessories = Array.isArray(answers.selectedAccessories)
               ? answers.selectedAccessories
@@ -124,10 +141,10 @@ export default function AgentOrderInspectionPage() {
             setCallsWorking(pCalls);
             setTouchWorking(pTouch);
             setScreenOriginal(pScreenOrig);
-            setSelectedMajorDefects(pMajorDefects);
+            setSelectedMajorDefects(mergedDefects);
             setScratchLevel(pScratch);
             setDentLevel(pDent);
-            setSelectedFunctionalIssues(pFunctional);
+            setSelectedFunctionalIssues(mergedFunctional);
             setSelectedAccessories(pAccessories);
 
             let initialQuoted = match.quotedPrice || match.estimatedPrice || 0;
@@ -441,9 +458,17 @@ export default function AgentOrderInspectionPage() {
                 Physical QC &amp; Live Re-Quote Checklist
               </h2>
             </div>
-            <span className="text-[11px] text-neutral-400">
-              Customer choices pre-filled • Tap any item to change
-            </span>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setShowAnswersModal(true)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-950/80 hover:bg-cyan-900 text-cyan-300 border border-cyan-700 text-xs font-bold rounded-xl transition shadow-sm cursor-pointer"
+                title="View customer declared answers to negotiate with proof"
+              >
+                <ListChecks className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Customer Declared Answers</span>
+              </button>
+            </div>
           </div>
 
           {/* 1. MANDATORY IMEI NUMBER */}
@@ -855,6 +880,13 @@ export default function AgentOrderInspectionPage() {
             )}
           </button>
         </form>
+
+        {/* CUSTOMER DECLARED ANSWERS AUDIT MODAL */}
+        <CustomerAnswersModal
+          isOpen={showAnswersModal}
+          onClose={() => setShowAnswersModal(false)}
+          orderOrQuote={order}
+        />
       </main>
     </div>
   );

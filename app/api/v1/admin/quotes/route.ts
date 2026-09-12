@@ -107,6 +107,8 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       orderNumber: relatedOrder?.orderNumber || null,
       pickupDate: relatedOrder?.pickupDate || null,
       pickupTimeSlot: relatedOrder?.pickupTimeSlot || null,
+      selectedAnswersJson: q.selectedAnswersJson,
+      breakdownJson: q.breakdownJson,
     };
   });
 
