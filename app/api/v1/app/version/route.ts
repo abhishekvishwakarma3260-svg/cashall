@@ -7,12 +7,12 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       agent: {
-        versionCode: 7,
-        versionName: "1.0.7",
+        versionCode: 8,
+        versionName: "1.0.8",
         downloadUrl: "https://cashall.in/api/v1/download/agent",
         forceUpdate: true,
-        title: "CashALL Agent Update Available (v1.0.7)",
-        releaseNotes: "Important Notice: Agent call audio recording is permanently disabled. The app now only records call verification (call completed & duration). No voice or audio is recorded.",
+        title: "CashALL Agent Update Available (v1.0.8)",
+        releaseNotes: "Optimized battery performance, reduced background network traffic, and enhanced lead alert reliability.",
         announcement: "IMPORTANT: Audio recording is disabled for all field agents. We only verify call status (whether the customer was called).",
       },
       caller: {

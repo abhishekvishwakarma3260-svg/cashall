@@ -68,25 +68,29 @@ export function Header() {
         setLocationModalOpen(true);
       }
 
-      // Auto-sync any local storage orders to PostgreSQL database automatically
+      // Auto-sync any local storage orders to PostgreSQL database automatically (throttled)
       try {
-        const localAll = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
-        const latestOrder = localStorage.getItem("cashall_latest_order");
-        let ordersToSync = Array.isArray(localAll) ? [...localAll] : [];
-        if (latestOrder) {
-          try {
-            const lo = JSON.parse(latestOrder);
-            if (lo?.orderNumber && !ordersToSync.some((o: any) => o.orderNumber === lo.orderNumber)) {
-              ordersToSync.push(lo);
-            }
-          } catch (e) {}
-        }
-        if (ordersToSync.length > 0) {
-          fetch("/api/v1/orders/sync-local", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ orders: ordersToSync }),
-          }).catch((err) => console.warn("Global background auto-sync error:", err));
+        const lastSync = sessionStorage.getItem("cashall_orders_synced_at");
+        if (!lastSync || Date.now() - Number(lastSync) > 600000) { // Throttle to max once per 10 minutes
+          const localAll = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
+          const latestOrder = localStorage.getItem("cashall_latest_order");
+          let ordersToSync = Array.isArray(localAll) ? [...localAll] : [];
+          if (latestOrder) {
+            try {
+              const lo = JSON.parse(latestOrder);
+              if (lo?.orderNumber && !ordersToSync.some((o: any) => o.orderNumber === lo.orderNumber)) {
+                ordersToSync.push(lo);
+              }
+            } catch (e) {}
+          }
+          if (ordersToSync.length > 0) {
+            sessionStorage.setItem("cashall_orders_synced_at", String(Date.now()));
+            fetch("/api/v1/orders/sync-local", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ orders: ordersToSync }),
+            }).catch((err) => console.warn("Global background auto-sync error:", err));
+          }
         }
       } catch (e) {}
     }

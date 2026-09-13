@@ -127,8 +127,8 @@ class AgentLeadMonitoringService : Service() {
                     Log.w(TAG, "Error in poll loop: ${e.message}")
                 }
 
-                // Poll every 2.5 seconds for instantaneous lead dispatch
-                delay(2500)
+                // Poll every 20 seconds for lead dispatch (drastically reduces mobile battery, Vercel & Supabase usage)
+                delay(20000)
             }
         }
     }
@@ -139,7 +139,7 @@ class AgentLeadMonitoringService : Service() {
             val encodedPhone = URLEncoder.encode(phone, "UTF-8")
             val encodedName = if (!name.isNullOrBlank()) URLEncoder.encode(name, "UTF-8") else ""
             val encodedId = if (agentId.isNotBlank()) URLEncoder.encode(agentId, "UTF-8") else ""
-            val url = "https://cashall.in/api/v1/agent/orders?phone=$encodedPhone&name=$encodedName&agentId=$encodedId&t=${System.currentTimeMillis()}"
+            val url = "https://cashall.in/api/v1/agent/orders?phone=$encodedPhone&name=$encodedName&agentId=$encodedId"
 
             val request = Request.Builder()
                 .url(url)

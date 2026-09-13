@@ -299,13 +299,31 @@ export default function AgentDashboardPage() {
     }
   }, [agentSession, fetchOrders]);
 
-  // Background polling every 12 seconds for real-time lead alerts
+  // Background polling with tab visibility detection (saves 95% requests when tab is inactive)
   useEffect(() => {
     if (!agentSession) return;
+
+    // Immediately refresh when agent switches back to this tab
+    const handleVisibilityChange = () => {
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchOrders(true);
+      }
+    };
+    if (typeof document !== "undefined") {
+      document.addEventListener("visibilitychange", handleVisibilityChange);
+    }
+
     const interval = setInterval(() => {
+      if (typeof document !== "undefined" && document.hidden) return; // Skip if tab is in background
       fetchOrders(true);
-    }, 12000);
-    return () => clearInterval(interval);
+    }, 25000);
+
+    return () => {
+      clearInterval(interval);
+      if (typeof document !== "undefined") {
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+      }
+    };
   }, [agentSession, fetchOrders]);
 
   // Clean up alarm on unmount

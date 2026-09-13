@@ -29,7 +29,10 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       },
     });
 
-    return NextResponse.json({ success: true, data: brand });
+    return NextResponse.json(
+      { success: true, data: brand },
+      { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } }
+    );
   }
 
   const brands = await prisma.brand.findMany({
@@ -61,11 +64,14 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     include: { brand: true },
   });
 
-  return NextResponse.json({
-    success: true,
-    data: {
-      brands,
-      popularModels,
+  return NextResponse.json(
+    {
+      success: true,
+      data: {
+        brands,
+        popularModels,
+      },
     },
-  });
+    { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } }
+  );
 });
