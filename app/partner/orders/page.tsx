@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import {
@@ -14,7 +14,9 @@ import {
   AlertTriangle,
   Loader2,
   Search,
+  Calendar,
 } from "lucide-react";
+import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 interface PartnerOrder {
   id: string;
@@ -45,8 +47,9 @@ export default function PartnerOrdersPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [partnerUser, setPartnerUser] = useState<any>(null);
+  const [rescheduleOrder, setRescheduleOrder] = useState<PartnerOrder | null>(null);
 
-  useEffect(() => {
+  const fetchOrders = useCallback(async () => {
     let partnerPhone = "";
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("cashall_partner_session");
@@ -61,24 +64,25 @@ export default function PartnerOrdersPage() {
       }
     }
 
-    const fetchOrders = async () => {
-      try {
-        const queryUrl = partnerPhone
-          ? `/api/v1/partner/orders?phone=${encodeURIComponent(partnerPhone)}`
-          : "/api/v1/partner/orders";
-        const res = await fetch(queryUrl);
-        if (res.ok) {
-          const data = await res.json();
-          setOrders(data.orders || []);
-        }
-      } catch (err) {
-        console.error("Failed to load partner orders:", err);
-      } finally {
-        setLoading(false);
+    try {
+      const queryUrl = partnerPhone
+        ? `/api/v1/partner/orders?phone=${encodeURIComponent(partnerPhone)}`
+        : "/api/v1/partner/orders";
+      const res = await fetch(queryUrl);
+      if (res.ok) {
+        const data = await res.json();
+        setOrders(data.orders || []);
       }
-    };
-    fetchOrders();
+    } catch (err) {
+      console.error("Failed to load partner orders:", err);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchOrders();
+  }, [fetchOrders]);
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -192,6 +196,26 @@ export default function PartnerOrdersPage() {
                 </div>
               </div>
 
+              {/* Pickup Slot & Reschedule action */}
+              <div className="flex items-center justify-between bg-neutral-950 px-3.5 py-2.5 rounded-2xl border border-neutral-800">
+                <div className="flex items-center gap-2 text-xs">
+                  <Calendar className="w-4 h-4 text-brand-yellow shrink-0" />
+                  <div>
+                    <span className="font-extrabold text-white">{ord.pickupDate || "Today"}</span>
+                    <span className="text-gray-500 mx-1.5">•</span>
+                    <span className="text-gray-400 font-medium">{ord.pickupTimeSlot || "1 PM - 4 PM"}</span>
+                  </div>
+                </div>
+                {!["COMPLETED", "CANCELLED", "REJECTED"].includes(ord.status) && (
+                  <button
+                    onClick={() => setRescheduleOrder(ord)}
+                    className="text-[11px] font-black text-brand-yellow hover:text-white bg-brand-yellow/10 hover:bg-brand-yellow/20 border border-brand-yellow/30 px-3 py-1 rounded-xl transition cursor-pointer"
+                  >
+                    Reschedule
+                  </button>
+                )}
+              </div>
+
               {/* Price & Status Tags */}
               <div className="bg-neutral-950 rounded-2xl p-3 border border-neutral-850 space-y-1.5">
                 <div className="flex items-center justify-between text-xs">
@@ -302,6 +326,23 @@ export default function PartnerOrdersPage() {
           ))
         )}
       </div>
+
+      {/* RESCHEDULE MODAL */}
+      {rescheduleOrder && (
+        <RescheduleModal
+          isOpen={!!rescheduleOrder}
+          onClose={() => setRescheduleOrder(null)}
+          orderId={rescheduleOrder.id}
+          orderNumber={rescheduleOrder.orderNumber}
+          currentDate={rescheduleOrder.pickupDate}
+          currentTimeSlot={rescheduleOrder.pickupTimeSlot}
+          actorRole="PARTNER"
+          actorName={partnerUser?.name || "Field Partner"}
+          onSuccess={() => {
+            fetchOrders();
+          }}
+        />
+      )}
     </div>
   );
 }

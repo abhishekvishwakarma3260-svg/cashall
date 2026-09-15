@@ -38,6 +38,7 @@ import {
 } from "lucide-react";
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { ReQuotationModal } from "@/components/admin/ReQuotationModal";
+import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 interface Order {
   id: string;
@@ -195,6 +196,7 @@ export default function AdminOrdersPage() {
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [selectedOrderForAnswers, setSelectedOrderForAnswers] = useState<any | null>(null);
   const [selectedOrderForReQuote, setSelectedOrderForReQuote] = useState<any | null>(null);
+  const [selectedOrderForReschedule, setSelectedOrderForReschedule] = useState<Order | null>(null);
 
   // Operational Filters State
   const [selectedFilter, setSelectedFilter] = useState<OrderFilterType>("ALL");
@@ -1415,7 +1417,7 @@ export default function AdminOrdersPage() {
                   const isCancelled = ["CANCELLED", "REJECTED"].includes(ord.status);
                   const isCompleted = ["COMPLETED", "BILL_GENERATED"].includes(ord.status);
 
-                  // CASE 1: CANCELLED ORDER -> ONLY Customer Answers & Re-Quotation
+                  // CASE 1: CANCELLED ORDER -> Customer Answers, Re-Quotation, Reschedule
                   if (isCancelled) {
                     return (
                       <div className="flex items-center gap-2 flex-wrap">
@@ -1435,6 +1437,15 @@ export default function AdminOrdersPage() {
                         >
                           <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                           <span>Re-Quotation</span>
+                        </button>
+
+                        <button
+                          onClick={() => setSelectedOrderForReschedule(ord)}
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 bg-amber-950/80 hover:bg-amber-900 border border-amber-700 px-3.5 py-2 rounded-xl transition shadow-md"
+                          title="Reschedule & Reactivate Pickup Date"
+                        >
+                          <Calendar className="w-3.5 h-3.5 text-amber-400" />
+                          <span>Reschedule</span>
                         </button>
                       </div>
                     );
@@ -1548,6 +1559,15 @@ export default function AdminOrdersPage() {
                           <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                           <span>Re-Quotation</span>
                         </button>
+
+                        <button
+                          onClick={() => setSelectedOrderForReschedule(ord)}
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 bg-amber-950/80 hover:bg-amber-900 border border-amber-700 px-3.5 py-2 rounded-xl transition shadow-md"
+                          title="Reschedule Pickup Date & Slot"
+                        >
+                          <Calendar className="w-3.5 h-3.5 text-amber-400" />
+                          <span>Reschedule</span>
+                        </button>
                       </div>
 
                       <div className="flex items-center gap-2 flex-wrap">
@@ -1593,6 +1613,23 @@ export default function AdminOrdersPage() {
         order={selectedOrderForReQuote}
         onUpdated={() => fetchOrders()}
       />
+
+      {/* ORDER RESCHEDULE MODAL */}
+      {selectedOrderForReschedule && (
+        <RescheduleModal
+          isOpen={!!selectedOrderForReschedule}
+          onClose={() => setSelectedOrderForReschedule(null)}
+          orderId={selectedOrderForReschedule.id}
+          orderNumber={selectedOrderForReschedule.orderNumber}
+          currentDate={selectedOrderForReschedule.pickupDate}
+          currentTimeSlot={selectedOrderForReschedule.pickupTimeSlot}
+          actorRole="ADMIN"
+          actorName="CashALL Admin"
+          onSuccess={() => {
+            fetchOrders();
+          }}
+        />
+      )}
     </div>
   );
 }

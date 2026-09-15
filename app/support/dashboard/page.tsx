@@ -23,6 +23,7 @@ import {
   Mail,
   Send,
 } from "lucide-react";
+import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 interface QuoteLead {
   id: string;
@@ -59,6 +60,15 @@ export default function SupportDashboardPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [callFilter, setCallFilter] = useState<"MY_CALLS" | "ALL_CALLS">("MY_CALLS");
   const [quoteStatusFilter, setQuoteStatusFilter] = useState<"ALL" | "PENDING" | "ORDERED" | "COMPLETED">("ALL");
+
+  // Modal State for Order Reschedule
+  const [rescheduleModalOpen, setRescheduleModalOpen] = useState(false);
+  const [orderToReschedule, setOrderToReschedule] = useState<{
+    orderId?: string;
+    orderNumber?: string;
+    pickupDate?: string;
+    pickupTimeSlot?: string;
+  } | null>(null);
 
   // Modal State for Call Logging
   const [selectedQuote, setSelectedQuote] = useState<QuoteLead | null>(null);
@@ -340,6 +350,23 @@ export default function SupportDashboardPage() {
           </div>
 
           <button
+            onClick={() => {
+              setOrderToReschedule({
+                orderId: "",
+                orderNumber: "",
+                pickupDate: "Tomorrow",
+                pickupTimeSlot: "10 AM - 1 PM",
+              });
+              setRescheduleModalOpen(true);
+            }}
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition cursor-pointer shadow-sm"
+            title="Reschedule Any Customer Order"
+          >
+            <Calendar className="w-3.5 h-3.5 text-amber-400" />
+            <span className="hidden sm:inline">Reschedule Order</span>
+          </button>
+
+          <button
             onClick={fetchData}
             disabled={loading}
             className="p-2.5 bg-neutral-800 hover:bg-neutral-750 text-yellow-400 border border-neutral-700 rounded-xl transition cursor-pointer"
@@ -585,20 +612,41 @@ export default function SupportDashboardPage() {
                     <PhoneCall className="w-4 h-4 text-yellow-400" />
                     <span>Log Call</span>
                   </button>
-                  <button
-                    onClick={() => {
-                      setQuoteToConvert(q);
-                      setConvertForm((prev) => ({
-                        ...prev,
-                        customerName: q.customerName || "",
-                        customerPhone: q.customerPhone || "",
-                      }));
-                    }}
-                    className="flex-1 flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-black font-extrabold text-xs py-3 rounded-xl transition"
-                  >
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Convert to Order</span>
-                  </button>
+                  {q.status === "ORDERED" || q.status === "CONVERTED" ? (
+                    <button
+                      onClick={() => {
+                        const ordNum = q.quoteNumber.startsWith("CA") && !q.quoteNumber.startsWith("CAQ")
+                          ? q.quoteNumber
+                          : `CA${q.quoteNumber.replace(/^(CAQ|Q)-?/i, "").replace(/[^0-9]/g, "")}`;
+                        setOrderToReschedule({
+                          orderId: ordNum,
+                          orderNumber: ordNum,
+                          pickupDate: q.pickupDate || "Tomorrow",
+                          pickupTimeSlot: q.pickupTimeSlot || "10 AM - 1 PM",
+                        });
+                        setRescheduleModalOpen(true);
+                      }}
+                      className="flex-1 flex items-center justify-center gap-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-extrabold text-xs py-3 rounded-xl transition shadow-sm"
+                    >
+                      <Calendar className="w-4 h-4 text-amber-400" />
+                      <span>Reschedule</span>
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        setQuoteToConvert(q);
+                        setConvertForm((prev) => ({
+                          ...prev,
+                          customerName: q.customerName || "",
+                          customerPhone: q.customerPhone || "",
+                        }));
+                      }}
+                      className="flex-1 flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-black font-extrabold text-xs py-3 rounded-xl transition"
+                    >
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>Convert to Order</span>
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -983,6 +1031,26 @@ export default function SupportDashboardPage() {
           </div>
         </div>
       )}
+
+      {/* RESCHEDULE MODAL */}
+      <RescheduleModal
+        isOpen={rescheduleModalOpen}
+        onClose={() => {
+          setRescheduleModalOpen(false);
+          setOrderToReschedule(null);
+        }}
+        orderId={orderToReschedule?.orderId || ""}
+        orderNumber={orderToReschedule?.orderNumber || ""}
+        currentDate={orderToReschedule?.pickupDate || "Tomorrow"}
+        currentTimeSlot={orderToReschedule?.pickupTimeSlot || "10 AM - 1 PM"}
+        actorRole="SUPPORT"
+        actorName={supportSession?.name || "Support Executive"}
+        allowInputOrder={!orderToReschedule?.orderNumber}
+        onSuccess={(newDate) => {
+          setSuccessToast(`✅ Pickup date successfully updated to ${newDate}!`);
+          fetchData();
+        }}
+      />
     </div>
   );
 }

@@ -49,6 +49,8 @@ function PickupCheckoutContent() {
 
   // Pickup slot
   const [pickupDate, setPickupDate] = useState("Tomorrow");
+  const [isCustomDate, setIsCustomDate] = useState(false);
+  const [customDateInput, setCustomDateInput] = useState("");
   const [pickupSlot, setPickupSlot] = useState("10 AM - 1 PM");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const isSubmittingRef = useRef(false);
@@ -767,23 +769,73 @@ function PickupCheckoutContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-brand-black mb-2">Select Date</label>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-xs font-bold text-brand-black">Select Date</label>
+                    <span className="text-xs font-bold text-brand-blue bg-brand-blue/10 px-2.5 py-0.5 rounded-full">
+                      {pickupDate}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {["Today", "Tomorrow", "Day After"].map((d) => (
                       <button
                         type="button"
                         key={d}
-                        onClick={() => setPickupDate(d)}
+                        onClick={() => {
+                          setPickupDate(d);
+                          setIsCustomDate(false);
+                        }}
                         className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
-                          pickupDate === d
-                            ? "border-brand-yellow bg-brand-yellow/15 text-brand-black"
+                          !isCustomDate && pickupDate === d
+                            ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm"
                             : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
                         }`}
                       >
                         {d}
                       </button>
                     ))}
+                    <button
+                      type="button"
+                      onClick={() => setIsCustomDate(true)}
+                      className={`p-3 rounded-xl border text-xs font-bold text-center transition-all flex items-center justify-center gap-1 ${
+                        isCustomDate
+                          ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm"
+                          : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
+                      }`}
+                    >
+                      <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
+                      <span>Custom Date</span>
+                    </button>
                   </div>
+
+                  {isCustomDate && (
+                    <div className="mt-3 p-3 bg-brand-bg rounded-2xl border border-brand-border animate-in fade-in duration-200">
+                      <label className="block text-[11px] font-bold text-gray-600 mb-1.5">
+                        Pick Any Upcoming Preferred Date:
+                      </label>
+                      <input
+                        type="date"
+                        min={new Date().toISOString().split("T")[0]}
+                        value={customDateInput}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setCustomDateInput(val);
+                          if (val) {
+                            const d = new Date(val);
+                            if (!isNaN(d.getTime())) {
+                              const formatted = d.toLocaleDateString("en-IN", {
+                                weekday: "short",
+                                day: "numeric",
+                                month: "short",
+                                year: "numeric",
+                              });
+                              setPickupDate(formatted);
+                            }
+                          }
+                        }}
+                        className="w-full px-3.5 py-2.5 bg-white border border-brand-border rounded-xl text-xs font-bold text-brand-black focus:outline-none focus:border-brand-yellow shadow-sm cursor-pointer"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <div>

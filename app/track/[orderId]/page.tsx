@@ -31,7 +31,9 @@ import {
   XCircle,
   Ban,
   ClipboardList,
+  Calendar,
 } from "lucide-react";
+import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 export default function OrderTrackingPage() {
   const params = useParams();
@@ -41,6 +43,7 @@ export default function OrderTrackingPage() {
   const [customerDecision, setCustomerDecision] = useState<"NONE" | "ACCEPTED" | "DECLINED">("NONE");
   const [handoverModalOpen, setHandoverModalOpen] = useState(false);
   const [showAnswersModal, setShowAnswersModal] = useState(false);
+  const [rescheduleModalOpen, setRescheduleModalOpen] = useState(false);
   const [cancelModalOpen, setCancelModalOpen] = useState(false);
   const [isCancelling, setIsCancelling] = useState(false);
 
@@ -377,9 +380,19 @@ export default function OrderTrackingPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-300 pt-1">
-                <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700">
-                  <span className="text-[10px] font-bold uppercase text-gray-400 block">Scheduled Window</span>
-                  <span className="font-extrabold text-white text-sm">{order.pickupDate} ({order.pickupTimeSlot})</span>
+                <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase text-gray-400 block">Scheduled Window</span>
+                    <span className="font-extrabold text-white text-sm">{order.pickupDate} ({order.pickupTimeSlot})</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setRescheduleModalOpen(true)}
+                    className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-brand-yellow hover:underline self-start bg-brand-yellow/10 px-2.5 py-1 rounded-lg border border-brand-yellow/30"
+                  >
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>Change / Reschedule</span>
+                  </button>
                 </div>
                 <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700">
                   <span className="text-[10px] font-bold uppercase text-gray-400 block">Pickup Address</span>
@@ -388,16 +401,26 @@ export default function OrderTrackingPage() {
               </div>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard flex items-center gap-4">
-              <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
-                <Clock className="w-5 h-5 animate-pulse" />
+            <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
+                  <Clock className="w-5 h-5 animate-pulse" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-extrabold text-brand-black">Assigning Local Pickup Agent...</h3>
+                  <p className="text-xs text-brand-muted mt-0.5">
+                    Scheduled for <strong className="text-black font-extrabold">{order.pickupDate} ({order.pickupTimeSlot})</strong> in PIN <strong className="text-black">{order.pincode}</strong>.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-sm font-extrabold text-brand-black">Assigning Local Pickup Agent...</h3>
-                <p className="text-xs text-brand-muted mt-0.5">
-                  Our local logistics team is assigning a CashALL executive for pincode <strong className="text-black">{order.pincode}</strong>. Executive details will appear here as soon as dispatched.
-                </p>
-              </div>
+              <button
+                type="button"
+                onClick={() => setRescheduleModalOpen(true)}
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-black bg-brand-yellow px-3.5 py-2 rounded-xl shadow-sm hover:brightness-95 transition-all shrink-0"
+              >
+                <Calendar className="w-3.5 h-3.5" />
+                <span>Reschedule Date</span>
+              </button>
             </div>
           )}
 
@@ -669,6 +692,23 @@ export default function OrderTrackingPage() {
           </div>
         </div>
       </Modal>
+
+      {/* RESCHEDULE MODAL */}
+      {order && (
+        <RescheduleModal
+          isOpen={rescheduleModalOpen}
+          onClose={() => setRescheduleModalOpen(false)}
+          orderId={order.id}
+          orderNumber={order.orderNumber}
+          currentDate={order.pickupDate}
+          currentTimeSlot={order.pickupTimeSlot}
+          actorRole="CUSTOMER"
+          actorName={order.customerName}
+          onSuccess={(newDate, newSlot) => {
+            setOrder((prev) => (prev ? { ...prev, pickupDate: newDate, pickupTimeSlot: newSlot } : null));
+          }}
+        />
+      )}
 
       {/* CONDITION ANSWERS MODAL */}
       <CustomerAnswersModal
