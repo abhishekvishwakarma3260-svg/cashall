@@ -12302,6 +12302,45 @@ const MOBILE_MODELS_PART_4: DeviceModelData[] = [
     "category": "MOBILE"
   },
   {
+    "id": "m-xiaomi-17-ultra",
+    "brandId": "b-xiaomi",
+    "brandSlug": "xiaomi",
+    "name": "17 Ultra",
+    "slug": "xiaomi-17-ultra",
+    "imageUrl": "https://s3no.cashify.in/cashify/product/img/xhdpi/xiaomi-17-ultra-green-16-gb-512-gb.png",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
+  {
+    "id": "m-xiaomi-xiaomi-17",
+    "brandId": "b-xiaomi",
+    "brandSlug": "xiaomi",
+    "name": "Xiaomi 17",
+    "slug": "xiaomi-17",
+    "imageUrl": "https://s3no.cashify.in/cashify/product/img/xhdpi/xiaomi-17-blue-12-gb-256-gb.png",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
+  {
+    "id": "m-xiaomi-xiaomi-17t",
+    "brandId": "b-xiaomi",
+    "brandSlug": "xiaomi",
+    "name": "Xiaomi 17T",
+    "slug": "xiaomi-17t",
+    "imageUrl": "https://s3no.cashify.in/cashify/product/img/xhdpi/xiaomi-17t-silver-12-gb-256-gb.png",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
+  {
     "id": "m-xiaomi-xiaomi-14",
     "brandId": "b-xiaomi",
     "brandSlug": "xiaomi",
@@ -57309,6 +57348,46 @@ const MOBILE_VARIANTS_PART_12: DeviceVariantData[] = [
     "basePrice": 8504,
     "active": true,
     "ram": "8 GB"
+  },
+  {
+    "id": "v-m-xiaomi-17-ultra-512-gb-16-gb",
+    "modelId": "m-xiaomi-17-ultra",
+    "storage": "512 GB",
+    "basePrice": 76130,
+    "active": true,
+    "ram": "16 GB"
+  },
+  {
+    "id": "v-m-xiaomi-xiaomi-17-256-gb-12-gb",
+    "modelId": "m-xiaomi-xiaomi-17",
+    "storage": "256 GB",
+    "basePrice": 54270,
+    "active": true,
+    "ram": "12 GB"
+  },
+  {
+    "id": "v-m-xiaomi-xiaomi-17-512-gb-12-gb",
+    "modelId": "m-xiaomi-xiaomi-17",
+    "storage": "512 GB",
+    "basePrice": 57650,
+    "active": true,
+    "ram": "12 GB"
+  },
+  {
+    "id": "v-m-xiaomi-xiaomi-17t-256-gb-12-gb",
+    "modelId": "m-xiaomi-xiaomi-17t",
+    "storage": "256 GB",
+    "basePrice": 36280,
+    "active": true,
+    "ram": "12 GB"
+  },
+  {
+    "id": "v-m-xiaomi-xiaomi-17t-512-gb-12-gb",
+    "modelId": "m-xiaomi-xiaomi-17t",
+    "storage": "512 GB",
+    "basePrice": 39760,
+    "active": true,
+    "ram": "12 GB"
   },
   {
     "id": "v-m-xiaomi-xiaomi-14-128-gb-8-gb",
