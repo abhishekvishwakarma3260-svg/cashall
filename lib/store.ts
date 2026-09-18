@@ -31879,889 +31879,889 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-6-16-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "16 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-32-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "32 GB",
-    "basePrice": 1838,
+    "basePrice": 1770,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-64-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "64 GB",
-    "basePrice": 2060,
+    "basePrice": 2000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-128-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "128 GB",
-    "basePrice": 2262,
+    "basePrice": 2200,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-16-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "16 GB",
-    "basePrice": 2141,
+    "basePrice": 2080,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-64-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "64 GB",
-    "basePrice": 2444,
+    "basePrice": 2380,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-128-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "128 GB",
-    "basePrice": 2717,
+    "basePrice": 2640,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-16-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "16 GB",
-    "basePrice": 2060,
+    "basePrice": 2010,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-32-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "32 GB",
-    "basePrice": 2333,
+    "basePrice": 2270,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-64-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "64 GB",
-    "basePrice": 2636,
+    "basePrice": 2570,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-128-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "128 GB",
-    "basePrice": 2788,
+    "basePrice": 2720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-16-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "16 GB",
-    "basePrice": 2333,
+    "basePrice": 2270,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-32-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "32 GB",
-    "basePrice": 2909,
+    "basePrice": 2830,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-64-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "64 GB",
-    "basePrice": 3323,
+    "basePrice": 3240,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-128-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "128 GB",
-    "basePrice": 3747,
+    "basePrice": 3650,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-16-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "16 GB",
-    "basePrice": 1717,
+    "basePrice": 1670,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-32-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "32 GB",
-    "basePrice": 1990,
+    "basePrice": 1930,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-64-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "64 GB",
-    "basePrice": 2141,
+    "basePrice": 2040,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-128-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "128 GB",
-    "basePrice": 2222,
+    "basePrice": 2160,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-32-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "32 GB",
-    "basePrice": 4432,
+    "basePrice": 4050,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-128-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "128 GB",
-    "basePrice": 4736,
+    "basePrice": 4380,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-256-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "256 GB",
-    "basePrice": 5239,
+    "basePrice": 4660,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-32-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "32 GB",
-    "basePrice": 5377,
+    "basePrice": 4840,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-128-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "128 GB",
-    "basePrice": 5771,
+    "basePrice": 5370,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-256-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "256 GB",
-    "basePrice": 6180,
+    "basePrice": 5810,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-64-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "64 GB",
-    "basePrice": 5738,
+    "basePrice": 5290,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-128-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "128 GB",
-    "basePrice": 6246,
+    "basePrice": 5850,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-256-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "256 GB",
-    "basePrice": 6531,
+    "basePrice": 6150,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-64-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "64 GB",
-    "basePrice": 7476,
+    "basePrice": 6650,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-128-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "128 GB",
-    "basePrice": 7762,
+    "basePrice": 6920,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-256-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "256 GB",
-    "basePrice": 8218,
+    "basePrice": 7440,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-x-64-gb",
     "modelId": "m-apple-apple-iphone-x",
     "storage": "64 GB",
-    "basePrice": 9837,
+    "basePrice": 9370,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-x-256-gb",
     "modelId": "m-apple-apple-iphone-x",
     "storage": "256 GB",
-    "basePrice": 10402,
+    "basePrice": 9930,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-64-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "64 GB",
-    "basePrice": 10022,
+    "basePrice": 9800,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-128-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "128 GB",
-    "basePrice": 10790,
+    "basePrice": 10600,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-256-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "256 GB",
-    "basePrice": 11120,
+    "basePrice": 10920,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-64-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "64 GB",
-    "basePrice": 10858,
+    "basePrice": 10300,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-256-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "256 GB",
-    "basePrice": 12117,
+    "basePrice": 11610,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-512-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "512 GB",
-    "basePrice": 12274,
+    "basePrice": 11730,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-64-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "64 GB",
-    "basePrice": 12383,
+    "basePrice": 11590,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-256-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "256 GB",
-    "basePrice": 12970,
+    "basePrice": 12510,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-512-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "512 GB",
-    "basePrice": 13495,
+    "basePrice": 13180,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-64-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "64 GB",
-    "basePrice": 14663,
+    "basePrice": 12360,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-128-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "128 GB",
-    "basePrice": 15708,
+    "basePrice": 14030,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-256-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "256 GB",
-    "basePrice": 16236,
+    "basePrice": 14430,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-64-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "64 GB",
-    "basePrice": 17532,
+    "basePrice": 14990,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-256-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "256 GB",
-    "basePrice": 18962,
+    "basePrice": 17180,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-512-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "512 GB",
-    "basePrice": 20064,
+    "basePrice": 17580,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-64-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "64 GB",
-    "basePrice": 19057,
+    "basePrice": 16810,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "256 GB",
-    "basePrice": 20738,
+    "basePrice": 18570,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "512 GB",
-    "basePrice": 21518,
+    "basePrice": 19100,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-64-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "64 GB",
-    "basePrice": 9595,
+    "basePrice": 7450,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-128-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 7850,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-256-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "256 GB",
-    "basePrice": 10100,
+    "basePrice": 8100,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-64-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "64 GB",
-    "basePrice": 18202,
+    "basePrice": 16200,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-128-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "128 GB",
-    "basePrice": 19674,
+    "basePrice": 17260,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-256-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "256 GB",
-    "basePrice": 20919,
+    "basePrice": 18470,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-64-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "64 GB",
-    "basePrice": 14868,
+    "basePrice": 14150,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-128-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "128 GB",
-    "basePrice": 16150,
+    "basePrice": 15850,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-256-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "256 GB",
-    "basePrice": 16682,
+    "basePrice": 16330,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-128-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "128 GB",
-    "basePrice": 26016,
+    "basePrice": 22600,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-256-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "256 GB",
-    "basePrice": 27716,
+    "basePrice": 24220,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-512-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "512 GB",
-    "basePrice": 29170,
+    "basePrice": 25560,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "128 GB",
-    "basePrice": 28001,
+    "basePrice": 24060,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "256 GB",
-    "basePrice": 29402,
+    "basePrice": 25430,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "512 GB",
-    "basePrice": 30580,
+    "basePrice": 26910,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-128-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "128 GB",
-    "basePrice": 25280,
+    "basePrice": 23710,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-256-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "256 GB",
-    "basePrice": 26610,
+    "basePrice": 25090,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-512-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "512 GB",
-    "basePrice": 27184,
+    "basePrice": 25740,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-128-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "128 GB",
-    "basePrice": 22111,
+    "basePrice": 20980,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-256-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "256 GB",
-    "basePrice": 22643,
+    "basePrice": 21790,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-512-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "512 GB",
-    "basePrice": 23009,
+    "basePrice": 22060,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-128-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "128 GB",
-    "basePrice": 33882,
+    "basePrice": 32540,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-256-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "256 GB",
-    "basePrice": 34993,
+    "basePrice": 34560,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-512-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "512 GB",
-    "basePrice": 36789,
+    "basePrice": 35780,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-1-tb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "1 TB",
-    "basePrice": 37724,
+    "basePrice": 36590,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "128 GB",
-    "basePrice": 35639,
+    "basePrice": 34350,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "256 GB",
-    "basePrice": 36651,
+    "basePrice": 35160,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "512 GB",
-    "basePrice": 38741,
+    "basePrice": 38000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "1 TB",
-    "basePrice": 40399,
+    "basePrice": 39620,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-64-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "64 GB",
-    "basePrice": 14645,
+    "basePrice": 12000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-128-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "128 GB",
-    "basePrice": 15352,
+    "basePrice": 12400,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-256-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "256 GB",
-    "basePrice": 16362,
+    "basePrice": 13210,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-128-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "128 GB",
-    "basePrice": 28761,
+    "basePrice": 27220,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-256-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "256 GB",
-    "basePrice": 29744,
+    "basePrice": 28030,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-512-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "512 GB",
-    "basePrice": 30490,
+    "basePrice": 28430,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-128-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "128 GB",
-    "basePrice": 44584,
+    "basePrice": 41640,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-256-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "256 GB",
-    "basePrice": 46274,
+    "basePrice": 43670,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-512-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "512 GB",
-    "basePrice": 48217,
+    "basePrice": 45290,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-1-tb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "1 TB",
-    "basePrice": 49177,
+    "basePrice": 46100,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "128 GB",
-    "basePrice": 46151,
+    "basePrice": 43460,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "256 GB",
-    "basePrice": 48654,
+    "basePrice": 45080,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "512 GB",
-    "basePrice": 51822,
+    "basePrice": 47100,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "1 TB",
-    "basePrice": 52283,
+    "basePrice": 48720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-128-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "128 GB",
-    "basePrice": 30595,
+    "basePrice": 28430,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-256-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "256 GB",
-    "basePrice": 32390,
+    "basePrice": 29650,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-512-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "512 GB",
-    "basePrice": 32994,
+    "basePrice": 30860,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-128-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "128 GB",
-    "basePrice": 39660,
+    "basePrice": 40890,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-256-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "256 GB",
-    "basePrice": 42790,
+    "basePrice": 43270,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-512-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "512 GB",
-    "basePrice": 45770,
+    "basePrice": 45570,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-128-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "128 GB",
-    "basePrice": 59000,
+    "basePrice": 61920,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-256-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "256 GB",
-    "basePrice": 61000,
+    "basePrice": 64800,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-512-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "512 GB",
-    "basePrice": 64900,
+    "basePrice": 67680,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-1-tb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "1 TB",
-    "basePrice": 67980,
+    "basePrice": 70080,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "256 GB",
-    "basePrice": 68656,
+    "basePrice": 70560,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "512 GB",
-    "basePrice": 72366,
+    "basePrice": 72000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "1 TB",
-    "basePrice": 77090,
+    "basePrice": 77760,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-128-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "128 GB",
-    "basePrice": 43890,
+    "basePrice": 43980,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-256-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "256 GB",
-    "basePrice": 45170,
+    "basePrice": 45650,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-512-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "512 GB",
-    "basePrice": 48030,
+    "basePrice": 48500,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-128-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "128 GB",
-    "basePrice": 47520,
+    "basePrice": 51360,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-256-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "256 GB",
-    "basePrice": 51890,
+    "basePrice": 53760,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-512-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "512 GB",
-    "basePrice": 52320,
+    "basePrice": 54720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-128-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "128 GB",
-    "basePrice": 51170,
+    "basePrice": 53280,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-256-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "256 GB",
-    "basePrice": 51460,
+    "basePrice": 53760,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-512-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "512 GB",
-    "basePrice": 52420,
+    "basePrice": 54720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-128-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "128 GB",
-    "basePrice": 72650,
+    "basePrice": 73720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "256 GB",
-    "basePrice": 76450,
+    "basePrice": 76920,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "512 GB",
-    "basePrice": 78090,
+    "basePrice": 78860,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "1 TB",
-    "basePrice": 79060,
+    "basePrice": 80220,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "256 GB",
-    "basePrice": 84680,
+    "basePrice": 85650,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "512 GB",
-    "basePrice": 86820,
+    "basePrice": 87590,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "1 TB",
-    "basePrice": 90350,
+    "basePrice": 90500,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-128-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "128 GB",
-    "basePrice": 35269,
+    "basePrice": 36380,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-256-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "256 GB",
-    "basePrice": 36835,
+    "basePrice": 38320,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-512-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "512 GB",
-    "basePrice": 39976,
+    "basePrice": 40740,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-512-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "512 GB",
-    "basePrice": 39976,
+    "basePrice": 40740,
     "active": true,
     "ram": "8 GB"
   },
@@ -32769,7 +32769,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16e-256-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "256 GB",
-    "basePrice": 36835,
+    "basePrice": 38320,
     "active": true,
     "ram": "8 GB"
   },
@@ -32777,7 +32777,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16e-128-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "128 GB",
-    "basePrice": 35269,
+    "basePrice": 36380,
     "active": true,
     "ram": "8 GB"
   },
@@ -32785,42 +32785,44 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-256-gb",
     "modelId": "m-apple-apple-iphone-17",
     "storage": "256 GB",
-    "basePrice": 58300,
-    "active": true
+    "basePrice": 62700,
+    "active": true,
+    "ram": "8 GB"
   },
   {
     "id": "v-m-apple-apple-iphone-17-512-gb",
     "modelId": "m-apple-apple-iphone-17",
     "storage": "512 GB",
-    "basePrice": 64500,
-    "active": true
+    "basePrice": 66500,
+    "active": true,
+    "ram": "8 GB"
   },
   {
     "id": "v-m-apple-apple-iphone-air-256-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "256 GB",
-    "basePrice": 67771,
+    "basePrice": 69000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-512-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "512 GB",
-    "basePrice": 76760,
+    "basePrice": 76000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-1-tb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "1 TB",
-    "basePrice": 86860,
+    "basePrice": 87000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "1 TB",
-    "basePrice": 86860,
+    "basePrice": 87000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32828,7 +32830,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-air-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "512 GB",
-    "basePrice": 76760,
+    "basePrice": 76000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32836,7 +32838,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-air-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "256 GB",
-    "basePrice": 67771,
+    "basePrice": 69000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32844,28 +32846,28 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-256-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "256 GB",
-    "basePrice": 101000,
+    "basePrice": 102000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-512-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "512 GB",
-    "basePrice": 107060,
+    "basePrice": 108000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-1-tb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "1 TB",
-    "basePrice": 111100,
+    "basePrice": 110000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "1 TB",
-    "basePrice": 111100,
+    "basePrice": 110000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32873,7 +32875,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "512 GB",
-    "basePrice": 107060,
+    "basePrice": 108000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32881,7 +32883,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "256 GB",
-    "basePrice": 101000,
+    "basePrice": 102000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32889,35 +32891,35 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "256 GB",
-    "basePrice": 109080,
+    "basePrice": 110000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "512 GB",
-    "basePrice": 116655,
+    "basePrice": 117000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "1 TB",
-    "basePrice": 120695,
+    "basePrice": 119500,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-2-tb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "2 TB",
-    "basePrice": 126250,
+    "basePrice": 124000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-2-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "2 TB",
-    "basePrice": 126250,
+    "basePrice": 124000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32925,7 +32927,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "1 TB",
-    "basePrice": 120695,
+    "basePrice": 119500,
     "active": true,
     "ram": "12 GB"
   },
@@ -32933,7 +32935,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "512 GB",
-    "basePrice": 116655,
+    "basePrice": 117000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32941,7 +32943,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "256 GB",
-    "basePrice": 109080,
+    "basePrice": 110000,
     "active": true,
     "ram": "12 GB"
   },
@@ -32949,21 +32951,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17e-256-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "256 GB",
-    "basePrice": 43430,
+    "basePrice": 45000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17e-512-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "512 GB",
-    "basePrice": 52722,
+    "basePrice": 54000,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17e-512-gb-8-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "512 GB",
-    "basePrice": 52722,
+    "basePrice": 54000,
     "active": true,
     "ram": "8 GB"
   },
@@ -32971,7 +32973,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17e-256-gb-8-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "256 GB",
-    "basePrice": 43430,
+    "basePrice": 45000,
     "active": true,
     "ram": "8 GB"
   },
