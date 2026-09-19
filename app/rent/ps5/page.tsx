@@ -683,28 +683,75 @@ export default function Ps5RentalPage() {
                 </div>
               </div>
 
-              {/* Video Inspection & Repair Undertaking Checkbox */}
+              {/* Video Inspection & Repair/Replacement Undertaking Checkbox */}
               <div className="pt-4 border-t border-neutral-800 space-y-3">
-                <div className="rounded-2xl bg-neutral-950 p-3.5 border border-neutral-800 space-y-2">
-                  <div className="flex items-start gap-2.5">
+                <div
+                  onClick={() => {
+                    if (!termsAccepted) {
+                      setTermsModalOpen(true);
+                    }
+                  }}
+                  className={`rounded-2xl p-4 border transition-all cursor-pointer ${
+                    termsAccepted
+                      ? "bg-green-950/20 border-green-800/60"
+                      : "bg-neutral-950 border-brand-yellow/50 hover:border-brand-yellow hover:bg-neutral-900/60"
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
                     <input
                       type="checkbox"
                       id="termsCheckbox"
                       checked={termsAccepted}
-                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                      onChange={(e) => {
+                        if (!termsAccepted) {
+                          setTermsModalOpen(true);
+                        } else {
+                          setTermsAccepted(false);
+                        }
+                      }}
+                      onClick={(e) => {
+                        if (!termsAccepted) {
+                          e.preventDefault();
+                          setTermsModalOpen(true);
+                        }
+                      }}
                       className="mt-0.5 w-4 h-4 rounded text-brand-yellow focus:ring-brand-yellow bg-neutral-900 border-neutral-700 cursor-pointer"
                     />
-                    <label htmlFor="termsCheckbox" className="text-[11px] text-gray-300 leading-relaxed cursor-pointer">
-                      I agree to the{" "}
-                      <button
-                        type="button"
-                        onClick={() => setTermsModalOpen(true)}
-                        className="text-brand-yellow underline font-bold hover:text-white"
-                      >
-                        PS5 Video Inspection & Repair Liability Undertaking
-                      </button>
-                      . I understand our delivery agent will record a working setup video and I am liable for any physical/liquid damage during my rental.
-                    </label>
+                    <div className="text-[11px] leading-relaxed select-none">
+                      {termsAccepted ? (
+                        <div className="space-y-1">
+                          <span className="font-bold text-green-400 flex items-center gap-1">
+                            ✓ Terms & Undertaking Read and Accepted
+                          </span>
+                          <p className="text-gray-300 text-[11px]">
+                            You agreed to the Pre-Delivery Video Inspection, Controller Repair / Console Replacement Undertaking, and physical handover sign-off.
+                          </p>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setTermsModalOpen(true);
+                            }}
+                            className="text-brand-yellow underline font-bold hover:text-white text-[10px]"
+                          >
+                            Re-read Terms & Undertaking
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="space-y-1">
+                          <span className="font-bold text-brand-yellow flex items-center gap-1">
+                            ⚠️ Mandatory: Click to Read Terms & Conditions First
+                          </span>
+                          <p className="text-gray-300 text-[11px]">
+                            Click here to read and accept the{" "}
+                            <span className="text-brand-yellow underline font-bold">
+                              PS5 Video Inspection, Replacement & Controller Repair Undertaking
+                            </span>
+                            . You must review the terms before booking.
+                          </p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -761,7 +808,7 @@ export default function Ps5RentalPage() {
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-black text-white">PS5 Equipment Condition & Repair Liability</h3>
+                  <h3 className="text-base font-black text-white">PS5 Equipment Condition, Controller Repair & Console Replacement Liability</h3>
                   <p className="text-xs text-gray-400">Official Undertaking (CashALL / Aarna Enterprises)</p>
                 </div>
               </div>
@@ -777,7 +824,7 @@ export default function Ps5RentalPage() {
             <div className="p-6 overflow-y-auto space-y-5 text-xs text-gray-300 leading-relaxed">
               <div className="p-4 rounded-2xl bg-blue-950/40 border border-blue-800/40 text-blue-200">
                 <span className="font-bold">Summary: </span>
-                Our delivery executive will set up and test the PlayStation 5 in your presence. A brief video recording of the working console, ports, and controllers will be taken and saved with your digital receipt.
+                Our delivery executive will set up and test the PlayStation 5 in your presence. A brief video recording of the working console, ports, and controllers will be taken and saved with your receipt. You will sign the physical handover form upon verification.
               </div>
 
               <div className="space-y-4">
@@ -796,16 +843,16 @@ export default function Ps5RentalPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-white text-sm mb-1">3. Damage & Repair Expense Liability</h4>
+                  <h4 className="font-bold text-white text-sm mb-1">3. Equipment Damage, Controller Repair & Console Replacement Liability</h4>
                   <p className="mb-2">
-                    If any physical damage, body cracks, deep scratches, liquid spills, broken/sticky buttons, stick drift due to impact, port damage, or internal hardware/seal tampering is found upon return that does not match the original video recording:
+                    In case of any damage, cracks, liquid spills, tampering, or defects not present in the pre-delivery video recording:
                   </p>
-                  <ul className="list-disc pl-5 space-y-1.5 text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-300">
                     <li>
-                      <strong className="text-brand-yellow">100% Repair Cost:</strong> I undertake to pay ALL EXPENSES incurred for official inspection, spare parts replacement, and repair of the Console/Controller.
+                      <strong className="text-brand-yellow">PS5 Console (Non-Repairable — Full Replacement Value):</strong> The PlayStation 5 console cannot be repaired for internal hardware defects or board-level damage. If the console suffers major internal/external damage, liquid spillage, motherboard failure, body cracks, or warranty seal tampering, I agree and undertake to pay the <strong>Full Market Replacement Value</strong> of the PS5 console.
                     </li>
                     <li>
-                      <strong className="text-brand-yellow">Full Replacement Value:</strong> If the equipment is rendered unrepairable or if the hardware/serial numbers do not match the original video recording, I agree to pay the full market replacement value of the damaged equipment.
+                      <strong className="text-brand-yellow">DualSense Controller (Repairable — 100% Repair Cost):</strong> Unlike the console, controllers are repairable. For controller defects (such as stick drift from drops, broken triggers, stuck buttons, or casing damage), I undertake to pay <strong>100% of the Controller Repair and Genuine Parts Replacement Cost</strong> (or full replacement value if broken beyond repair or lost).
                     </li>
                   </ul>
                 </div>
@@ -813,14 +860,14 @@ export default function Ps5RentalPage() {
                 <div>
                   <h4 className="font-bold text-white text-sm mb-1">4. Pay & Use Handover</h4>
                   <p>
-                    The agreed rental fee must be paid in full to the delivery agent upon handover. The customer will sign the digital handover form alongside the agent on the spot.
+                    The agreed rental fee must be paid in full to the delivery agent upon handover. The customer will sign the <strong>physical handover form</strong> alongside the agent on the spot.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-white text-sm mb-1">5. Plan Extension</h4>
                   <p>
-                    Customers can extend their rental period directly from the CashALL tracking link at ₹500/day + game CD charges. Extension requests must be placed before the scheduled return pickup time.
+                    Customers can extend their rental period directly from the CashALL tracking link (Disc Edition: ₹500/day + game CD charges; Digital Edition: ₹600/day). Extension requests must be placed before the scheduled return pickup time.
                   </p>
                 </div>
               </div>
@@ -844,7 +891,7 @@ export default function Ps5RentalPage() {
                 }}
                 className="px-6 py-2.5 rounded-xl text-xs font-black bg-brand-yellow text-black hover:bg-yellow-400 shadow-yellowGlow flex items-center gap-1.5"
               >
-                <span>Accept Terms & Undertaking</span>
+                <span>I Have Read & Accept Terms & Undertaking</span>
                 <Check className="w-4 h-4" />
               </button>
             </div>
