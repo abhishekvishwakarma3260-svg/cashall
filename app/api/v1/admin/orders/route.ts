@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const GET = apiWrapper(async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page") || "1", 10);
-  const limit = parseInt(searchParams.get("limit") || "200", 10);
+  const limit = parseInt(searchParams.get("limit") || "60", 10);
   const status = searchParams.get("status");
   const query = searchParams.get("query");
 
@@ -32,56 +32,13 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   let total = 0;
 
   try {
-    total = await prisma.order.count({ where });
-    orders = await prisma.order.findMany({
-      where,
-      include: {
-        user: true,
-        agent: true,
-        address: true,
-        quote: {
-          include: {
-            variant: {
-              include: {
-                model: {
-                  include: {
-                    brand: true,
-                  },
-                },
-              },
-            },
-          },
-        },
-        pickups: {
-          take: 1,
-          orderBy: { createdAt: "desc" },
-          include: { partner: true },
-        },
-        payments: {
-          take: 1,
-          orderBy: { createdAt: "desc" },
-        },
-        qcReports: {
-          take: 1,
-          orderBy: { inspectedAt: "desc" },
-        },
-        imeiRecords: {
-          take: 1,
-          orderBy: { createdAt: "desc" },
-        },
-      },
-      orderBy: { createdAt: "desc" },
-      skip,
-      take: limit,
-    });
-  } catch (dbErr) {
-    console.warn("DB findMany with agent relation failed, falling back without agent relation:", dbErr);
-    try {
-      total = await prisma.order.count({ where });
-      orders = await prisma.order.findMany({
+    [total, orders] = await Promise.all([
+      prisma.order.count({ where }),
+      prisma.order.findMany({
         where,
         include: {
           user: true,
+          agent: true,
           address: true,
           quote: {
             include: {
@@ -117,7 +74,54 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         orderBy: { createdAt: "desc" },
         skip,
         take: limit,
-      });
+      }),
+    ]);
+  } catch (dbErr) {
+    console.warn("DB findMany with agent relation failed, falling back without agent relation:", dbErr);
+    try {
+      [total, orders] = await Promise.all([
+        prisma.order.count({ where }),
+        prisma.order.findMany({
+          where,
+          include: {
+            user: true,
+            address: true,
+            quote: {
+              include: {
+                variant: {
+                  include: {
+                    model: {
+                      include: {
+                        brand: true,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            pickups: {
+              take: 1,
+              orderBy: { createdAt: "desc" },
+              include: { partner: true },
+            },
+            payments: {
+              take: 1,
+              orderBy: { createdAt: "desc" },
+            },
+            qcReports: {
+              take: 1,
+              orderBy: { inspectedAt: "desc" },
+            },
+            imeiRecords: {
+              take: 1,
+              orderBy: { createdAt: "desc" },
+            },
+          },
+          orderBy: { createdAt: "desc" },
+          skip,
+          take: limit,
+        }),
+      ]);
     } catch (fallbackErr) {
       console.error("Orders query failed completely:", fallbackErr);
       throw fallbackErr;

@@ -8,71 +8,62 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   const searchParams = req.nextUrl?.searchParams || new URL(req.url).searchParams;
   const page = parseInt(searchParams.get("page") || "1", 10);
   const limitParam = searchParams.get("limit");
-  const limit = limitParam ? parseInt(limitParam, 10) : 1000;
+  const limit = limitParam ? parseInt(limitParam, 10) : 60;
   const skip = limit > 0 ? (page - 1) * limit : 0;
 
-  const total = await prisma.quote.count({ where: { deletedAt: null } });
-  const quotes = await prisma.quote.findMany({
-    where: { deletedAt: null },
-    include: {
-      orders: {
-        take: 1,
-        orderBy: { createdAt: "desc" },
-        include: {
-          user: true,
-          address: true,
+  const [total, quotes] = await Promise.all([
+    prisma.quote.count({ where: { deletedAt: null } }),
+    prisma.quote.findMany({
+      where: { deletedAt: null },
+      include: {
+        orders: {
+          take: 1,
+          orderBy: { createdAt: "desc" },
+          include: {
+            user: true,
+            address: true,
+          },
+        },
+        variant: {
+          include: {
+            model: { include: { brand: true } },
+          },
         },
       },
-      variant: {
-        include: {
-          model: { include: { brand: true } },
-        },
-      },
-    },
-    orderBy: { createdAt: "desc" },
-    ...(skip > 0 ? { skip } : {}),
-    ...(limit > 0 ? { take: limit } : {}),
-  });
+      orderBy: { createdAt: "desc" },
+      ...(skip > 0 ? { skip } : {}),
+      ...(limit > 0 ? { take: limit } : {}),
+    }),
+  ]);
 
   const mapped = quotes.map((q) => {
     let deviceName = q.variant
       ? `${q.variant.model.brand.name} ${q.variant.model.name} (${q.variant.storage})`
       : "Mobile Device";
 
+    let bd: any = null;
+    let sa: any = null;
+
     if (q.breakdownJson) {
       try {
-        const bd = JSON.parse(q.breakdownJson);
-        if (bd.deviceName) deviceName = bd.deviceName;
+        bd = typeof q.breakdownJson === "string" ? JSON.parse(q.breakdownJson) : q.breakdownJson;
       } catch (e) {}
     }
-    if (deviceName === "Mobile Device" && q.selectedAnswersJson) {
+    if (q.selectedAnswersJson) {
       try {
-        const sa = JSON.parse(q.selectedAnswersJson);
-        if (sa?.device && sa.device !== "Customer Mobile Device") deviceName = sa.device;
+        sa = typeof q.selectedAnswersJson === "string" ? JSON.parse(q.selectedAnswersJson) : q.selectedAnswersJson;
       } catch (e) {}
+    }
+
+    if (bd?.deviceName) {
+      deviceName = bd.deviceName;
+    } else if (deviceName === "Mobile Device" && sa?.device && sa.device !== "Customer Mobile Device") {
+      deviceName = sa.device;
     }
 
     const relatedOrder = q.orders?.[0];
-    let customerName = relatedOrder?.user?.name || "";
-    let customerPhone = relatedOrder?.user?.phone || relatedOrder?.address?.phone || "";
-
-    if (!customerName && q.breakdownJson) {
-      try {
-        const bd = JSON.parse(q.breakdownJson);
-        if (bd.customerName) customerName = bd.customerName;
-        if (bd.customerPhone && !customerPhone) customerPhone = bd.customerPhone;
-      } catch (e) {}
-    }
-    if (!customerName && q.selectedAnswersJson) {
-      try {
-        const sa = JSON.parse(q.selectedAnswersJson);
-        if (sa.customerName) customerName = sa.customerName;
-        if (sa.customerPhone && !customerPhone) customerPhone = sa.customerPhone;
-      } catch (e) {}
-    }
-
-    if (!customerName) customerName = "Customer Lead";
-    if (!customerPhone) customerPhone = "—";
+    let customerName = relatedOrder?.user?.name || bd?.customerName || sa?.customerName || "Customer Lead";
+    let customerPhone = relatedOrder?.user?.phone || relatedOrder?.address?.phone || bd?.customerPhone || sa?.customerPhone || "—";
 
     let status = "UNCOMPLETED (PENDING CALL)";
     if (relatedOrder?.status === "COMPLETED") {
@@ -84,13 +75,8 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     }
 
     let estimatedPrice = q.estimatedPrice;
-    if (q.breakdownJson) {
-      try {
-        const bd = JSON.parse(q.breakdownJson);
-        if (typeof bd?.estimatedPrice === "number" && bd.estimatedPrice > 0) {
-          estimatedPrice = bd.estimatedPrice;
-        }
-      } catch (e) {}
+    if (typeof bd?.estimatedPrice === "number" && bd.estimatedPrice > 0) {
+      estimatedPrice = bd.estimatedPrice;
     }
 
     return {
