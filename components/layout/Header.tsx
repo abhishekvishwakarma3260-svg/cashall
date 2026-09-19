@@ -68,14 +68,27 @@ export function Header() {
         setLocationModalOpen(true);
       }
 
+      const handleLocationUpdate = () => {
+        const loc = localStorage.getItem("cashall_location");
+        if (loc) {
+          try {
+            setSelectedLocation(JSON.parse(loc));
+          } catch (e) {}
+        }
+      };
+      window.addEventListener("cashall_location_updated", handleLocationUpdate);
+      return () => {
+        window.removeEventListener("cashall_location_updated", handleLocationUpdate);
+      };
+
       // Auto-sync any local storage orders to PostgreSQL database automatically (throttled)
       try {
         const lastSync = sessionStorage.getItem("cashall_orders_synced_at");
         if (!lastSync || Date.now() - Number(lastSync) > 600000) { // Throttle to max once per 10 minutes
           const localAll = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
-          const latestOrder = localStorage.getItem("cashall_latest_order");
+          const latestOrder: string = localStorage.getItem("cashall_latest_order") || "";
           let ordersToSync = Array.isArray(localAll) ? [...localAll] : [];
-          if (latestOrder) {
+          if (latestOrder.trim()) {
             try {
               const lo = JSON.parse(latestOrder);
               if (lo?.orderNumber && !ordersToSync.some((o: any) => o.orderNumber === lo.orderNumber)) {
@@ -100,8 +113,16 @@ export function Header() {
     setSelectedLocation(loc);
     if (typeof window !== "undefined") {
       localStorage.setItem("cashall_location", JSON.stringify(loc));
+      window.dispatchEvent(new Event("cashall_location_updated"));
     }
   };
+
+  const isWestBengal = Boolean(
+    selectedLocation?.state &&
+      (selectedLocation.state.toLowerCase().includes("west bengal") ||
+        selectedLocation.state.toLowerCase().includes("bengal") ||
+        selectedLocation.state.toLowerCase().trim() === "wb")
+  );
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -172,16 +193,15 @@ export function Header() {
               <Link href="/sell/tablet" className="hover:text-brand-yellow transition-colors">
                 Sell Tablet
               </Link>
-              <Link
-                href="/rent/ps5"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
-              >
-                <Gamepad2 className="w-3.5 h-3.5" />
-                <span>Rent PS5</span>
-                <span className="bg-brand-yellow text-black text-[9px] font-black px-1.5 py-0.2 rounded-full">
-                  ₹500/d
-                </span>
-              </Link>
+              {isWestBengal && (
+                <Link
+                  href="/rent/ps5"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
+                >
+                  <Gamepad2 className="w-3.5 h-3.5" />
+                  <span>Rent PS 5</span>
+                </Link>
+              )}
             </nav>
 
             {/* RIGHT ACTION BUTTONS */}
@@ -373,19 +393,16 @@ export function Header() {
             >
               Sell Tablet
             </Link>
-            <Link
-              href="/rent/ps5"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2.5 px-3 rounded-xl bg-blue-950/60 border border-blue-800/60 text-blue-300 font-bold text-sm flex items-center justify-between hover:text-white"
-            >
-              <div className="flex items-center gap-2">
+            {isWestBengal && (
+              <Link
+                href="/rent/ps5"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2.5 px-3 rounded-xl bg-blue-950/60 border border-blue-800/60 text-blue-300 font-bold text-sm flex items-center gap-2 hover:text-white"
+              >
                 <Gamepad2 className="w-4 h-4 text-brand-yellow" />
-                <span>Rent PlayStation 5</span>
-              </div>
-              <span className="bg-brand-yellow text-black text-[10px] font-black px-2 py-0.5 rounded-full">
-                ₹500 / Day
-              </span>
-            </Link>
+                <span>Rent PS 5</span>
+              </Link>
+            )}
           </div>
         )}
       </header>
