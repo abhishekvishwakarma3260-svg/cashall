@@ -140,8 +140,8 @@ export default function Ps5RentalPage() {
       return;
     }
 
-    if (!customerName || !customerPhone || !deliveryAddress || !pincode) {
-      setError("Please complete all required customer & delivery fields.");
+    if (!customerName || !customerPhone || !deliveryAddress || !pincode || !govtIdNumber) {
+      setError("Please complete all required customer, delivery & full Govt ID fields.");
       return;
     }
 
@@ -610,12 +610,15 @@ export default function Ps5RentalPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-300 mb-1.5">Govt ID Number (Last 4 digits or Full)</label>
+                  <label className="block text-xs font-bold text-gray-300 mb-1.5">
+                    Govt ID Number (Enter Full) <span className="text-red-400">*</span>
+                  </label>
                   <input
                     type="text"
+                    required
                     value={govtIdNumber}
                     onChange={(e) => setGovtIdNumber(e.target.value)}
-                    placeholder="e.g. XXXX-XXXX-1234"
+                    placeholder="Enter full 12-digit Aadhaar / DL / Voter ID Number"
                     className="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white text-xs font-medium focus:border-brand-yellow focus:outline-none"
                   />
                 </div>
