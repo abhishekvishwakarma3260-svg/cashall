@@ -115,15 +115,17 @@ export default function Ps5RentalPage() {
   const [error, setError] = useState("");
 
   // Calculation:
-  // Console: ₹500/day
-  // CDs: ₹100/day per CD
-  const consoleDailyRate = 500;
+  // PS5 Disc Edition: ₹500/day (supports game CDs at ₹100/day)
+  // PS5 Digital Edition: ₹600/day (all-digital, without CD)
+  const isDigital = consoleModel === "PS5 Digital Edition";
+  const consoleDailyRate = isDigital ? 600 : 500;
   const cdDailyRate = 100;
   const consoleTotal = days * consoleDailyRate;
-  const cdTotal = days * (selectedGames.length * cdDailyRate);
+  const cdTotal = isDigital ? 0 : days * (selectedGames.length * cdDailyRate);
   const totalAmount = consoleTotal + cdTotal;
 
   const toggleGame = (gameId: string) => {
+    if (isDigital) return;
     if (selectedGames.includes(gameId)) {
       setSelectedGames(selectedGames.filter((id) => id !== gameId));
     } else {
@@ -161,8 +163,8 @@ export default function Ps5RentalPage() {
           consoleModel,
           startDate: deliveryDate,
           totalDays: days,
-          cdCount: selectedGames.length,
-          selectedGames: selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id),
+          cdCount: isDigital ? 0 : selectedGames.length,
+          selectedGames: isDigital ? [] : selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id),
           extraControllers,
         }),
       });
@@ -205,7 +207,7 @@ export default function Ps5RentalPage() {
               Pay & Use on Delivery
             </span>
             <span className="px-2.5 py-1 rounded-full text-[11px] font-black bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30">
-              ₹500 / Day
+              From ₹500 / Day
             </span>
           </div>
         </div>
@@ -259,7 +261,7 @@ export default function Ps5RentalPage() {
                   </p>
                 </div>
                 <span className="text-xs font-bold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full">
-                  ₹500 / day
+                  Disc ₹500/d • Digital ₹600/d
                 </span>
               </div>
 
@@ -285,7 +287,10 @@ export default function Ps5RentalPage() {
 
                 <button
                   type="button"
-                  onClick={() => setConsoleModel("PS5 Digital Edition")}
+                  onClick={() => {
+                    setConsoleModel("PS5 Digital Edition");
+                    setSelectedGames([]);
+                  }}
                   className={`p-5 rounded-2xl border text-left transition-all ${
                     consoleModel === "PS5 Digital Edition"
                       ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30"
@@ -297,9 +302,9 @@ export default function Ps5RentalPage() {
                     <Gamepad2 className={`w-5 h-5 ${consoleModel === "PS5 Digital Edition" ? "text-brand-yellow" : "text-gray-500"}`} />
                   </div>
                   <p className="text-xs text-gray-400">
-                    Sleek disc-free design for digital library games and PlayStation Plus accounts.
+                    Sleek disc-free design for digital library games and PlayStation Plus accounts. All-digital (without CD).
                   </p>
-                  <div className="mt-4 text-xs font-bold text-brand-yellow">₹500 / day</div>
+                  <div className="mt-4 text-xs font-bold text-brand-yellow">₹600 / day • Without CD</div>
                 </button>
               </div>
 
@@ -409,56 +414,74 @@ export default function Ps5RentalPage() {
                     3. Add Game Discs (Optional)
                   </h2>
                   <p className="text-xs text-gray-400 mt-0.5">
-                    Select popular PS5 titles to play. Each CD costs only <span className="text-brand-yellow font-bold">₹100/day</span>.
+                    {isDigital
+                      ? "PS5 Digital Edition is all-digital and does not support physical game CDs."
+                      : "Select popular PS5 titles to play. Each CD costs only ₹100/day."}
                   </p>
                 </div>
-                <span className="text-xs font-bold text-brand-yellow bg-brand-yellow/10 px-2.5 py-1 rounded-full">
-                  {selectedGames.length} CD{selectedGames.length !== 1 ? "s" : ""} Selected (₹{selectedGames.length * cdDailyRate * days})
-                </span>
+                {!isDigital && (
+                  <span className="text-xs font-bold text-brand-yellow bg-brand-yellow/10 px-2.5 py-1 rounded-full">
+                    {selectedGames.length} CD{selectedGames.length !== 1 ? "s" : ""} Selected (₹{selectedGames.length * cdDailyRate * days})
+                  </span>
+                )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {AVAILABLE_GAMES.map((game) => {
-                  const isSelected = selectedGames.includes(game.id);
-                  return (
-                    <div
-                      key={game.id}
-                      onClick={() => toggleGame(game.id)}
-                      className={`cursor-pointer rounded-2xl p-4 border transition-all relative overflow-hidden flex flex-col justify-between ${
-                        isSelected
-                          ? "border-brand-yellow bg-brand-yellow/10 ring-1 ring-brand-yellow/40 shadow-md"
-                          : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700 hover:bg-neutral-950"
-                      }`}
-                    >
-                      <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <div className="text-xs font-black text-white leading-tight">{game.title}</div>
-                          <div className="text-[10px] text-gray-400 mt-0.5">{game.genre}</div>
-                        </div>
+              {isDigital ? (
+                <div className="p-5 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-bold text-blue-400">
+                    <Info className="w-4 h-4" />
+                    <span>PS5 Digital Edition is 100% Disc-Free</span>
+                  </div>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Physical game CDs are not supported on the Digital Edition. You can log into your PlayStation Network (PSN) / PS Plus account on the console to download and play games directly!
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    {AVAILABLE_GAMES.map((game) => {
+                      const isSelected = selectedGames.includes(game.id);
+                      return (
                         <div
-                          className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-xs ${
-                            isSelected ? "bg-brand-yellow text-black font-bold" : "border border-neutral-700 text-transparent"
+                          key={game.id}
+                          onClick={() => toggleGame(game.id)}
+                          className={`cursor-pointer rounded-2xl p-4 border transition-all relative overflow-hidden flex flex-col justify-between ${
+                            isSelected
+                              ? "border-brand-yellow bg-brand-yellow/10 ring-1 ring-brand-yellow/40 shadow-md"
+                              : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700 hover:bg-neutral-950"
                           }`}
                         >
-                          ✓
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <div className="text-xs font-black text-white leading-tight">{game.title}</div>
+                              <div className="text-[10px] text-gray-400 mt-0.5">{game.genre}</div>
+                            </div>
+                            <div
+                              className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-xs ${
+                                isSelected ? "bg-brand-yellow text-black font-bold" : "border border-neutral-700 text-transparent"
+                              }`}
+                            >
+                              ✓
+                            </div>
+                          </div>
+
+                          <div className="mt-4 flex items-center justify-between text-[11px] pt-2 border-t border-neutral-800/60">
+                            <span className="text-gray-400">Rating: {game.rating}</span>
+                            <span className="font-bold text-brand-yellow">+₹100/day</span>
+                          </div>
                         </div>
-                      </div>
+                      );
+                    })}
+                  </div>
 
-                      <div className="mt-4 flex items-center justify-between text-[11px] pt-2 border-t border-neutral-800/60">
-                        <span className="text-gray-400">Rating: {game.rating}</span>
-                        <span className="font-bold text-brand-yellow">+₹100/day</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="text-[11px] text-gray-400 bg-neutral-950 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
-                <Info className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>
-                  Game discs are verified scratch-free prior to delivery. You will inspect each CD along with the delivery agent.
-                </span>
-              </div>
+                  <div className="text-[11px] text-gray-400 bg-neutral-950 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
+                    <Info className="w-4 h-4 text-blue-400 shrink-0" />
+                    <span>
+                      Game discs are verified scratch-free prior to delivery. You will inspect each CD along with the delivery agent.
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* 4. DOORSTEP DELIVERY & CUSTOMER DETAILS */}
@@ -616,18 +639,25 @@ export default function Ps5RentalPage() {
               <div className="space-y-3 text-xs">
                 <div className="flex items-center justify-between text-gray-300">
                   <span>
-                    {consoleModel} ({days} Day{days > 1 ? "s" : ""} × ₹500)
+                    {consoleModel} ({days} Day{days > 1 ? "s" : ""} × ₹{consoleDailyRate})
                   </span>
                   <span className="font-bold text-white">₹{consoleTotal.toLocaleString("en-IN")}</span>
                 </div>
 
-                {selectedGames.length > 0 && (
-                  <div className="flex items-center justify-between text-gray-300">
-                    <span>
-                      Game Discs ({selectedGames.length} CD{selectedGames.length > 1 ? "s" : ""} × {days}d × ₹100)
-                    </span>
-                    <span className="font-bold text-white">₹{cdTotal.toLocaleString("en-IN")}</span>
+                {isDigital ? (
+                  <div className="flex items-center justify-between text-gray-400">
+                    <span>Game Discs</span>
+                    <span className="font-semibold text-gray-400">Without CD (Digital Edition)</span>
                   </div>
+                ) : (
+                  selectedGames.length > 0 && (
+                    <div className="flex items-center justify-between text-gray-300">
+                      <span>
+                        Game Discs ({selectedGames.length} CD{selectedGames.length > 1 ? "s" : ""} × {days}d × ₹100)
+                      </span>
+                      <span className="font-bold text-white">₹{cdTotal.toLocaleString("en-IN")}</span>
+                    </div>
+                  )
                 )}
 
                 {extraControllers && (

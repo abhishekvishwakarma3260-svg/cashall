@@ -70,7 +70,6 @@ export async function POST(req: NextRequest) {
     }
 
     const days = Math.max(1, parseInt(String(totalDays), 10) || 1);
-    const cds = Math.max(0, parseInt(String(cdCount), 10) || 0);
 
     // Calculate end date based on start date + totalDays
     const start = new Date(startDate);
@@ -79,10 +78,14 @@ export async function POST(req: NextRequest) {
     const endDate = end.toISOString().split("T")[0];
 
     // Pricing Rule:
-    // PS5 = ₹500 per day
-    // Game CD = ₹100 per day per CD
-    const dailyRate = 500;
+    // PS5 Disc Edition = ₹500 per day
+    // PS5 Digital Edition = ₹600 per day (without CD)
+    // Game CD = ₹100 per day per CD (Disc Edition only)
+    const isDigital = consoleModel === "PS5 Digital Edition";
+    const dailyRate = isDigital ? 600 : 500;
     const cdRate = 100;
+    const cds = isDigital ? 0 : Math.max(0, parseInt(String(cdCount), 10) || 0);
+    const games = isDigital ? [] : selectedGames;
     const totalAmount = days * (dailyRate + cds * cdRate);
 
     // Generate unique Rental Number: e.g. PS5-R10482
@@ -106,7 +109,7 @@ export async function POST(req: NextRequest) {
       dailyRate,
       cdCount: cds,
       cdRate,
-      selectedGames,
+      selectedGames: games,
       extraControllers: Boolean(extraControllers),
       totalAmount,
       paymentStatus: "PENDING_ON_DELIVERY",
