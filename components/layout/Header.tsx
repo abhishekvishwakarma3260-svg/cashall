@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Menu, X, User, ChevronDown, HelpCircle, LogIn, LogOut, ShoppingBag, ShoppingCart, Smartphone } from "lucide-react";
+import { MapPin, Menu, X, User, ChevronDown, HelpCircle, LogIn, LogOut, ShoppingBag, ShoppingCart, Smartphone, Gamepad2 } from "lucide-react";
 import { DeviceChoiceModal } from "@/components/common/DeviceChoiceModal";
 import { CustomerAuthModal } from "@/components/common/CustomerAuthModal";
 import { LocationModal } from "@/components/common/LocationModal";
@@ -171,6 +171,16 @@ export function Header() {
               </Link>
               <Link href="/sell/tablet" className="hover:text-brand-yellow transition-colors">
                 Sell Tablet
+              </Link>
+              <Link
+                href="/rent/ps5"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
+              >
+                <Gamepad2 className="w-3.5 h-3.5" />
+                <span>Rent PS5</span>
+                <span className="bg-brand-yellow text-black text-[9px] font-black px-1.5 py-0.2 rounded-full">
+                  ₹500/d
+                </span>
               </Link>
             </nav>
 
@@ -362,6 +372,19 @@ export function Header() {
               className="block py-2 text-base font-semibold text-gray-200 hover:text-brand-yellow"
             >
               Sell Tablet
+            </Link>
+            <Link
+              href="/rent/ps5"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2.5 px-3 rounded-xl bg-blue-950/60 border border-blue-800/60 text-blue-300 font-bold text-sm flex items-center justify-between hover:text-white"
+            >
+              <div className="flex items-center gap-2">
+                <Gamepad2 className="w-4 h-4 text-brand-yellow" />
+                <span>Rent PlayStation 5</span>
+              </div>
+              <span className="bg-brand-yellow text-black text-[10px] font-black px-2 py-0.5 rounded-full">
+                ₹500 / Day
+              </span>
             </Link>
           </div>
         )}

@@ -21,6 +21,7 @@ import {
   Receipt,
   Menu,
   X,
+  Gamepad2,
 } from "lucide-react";
 
 export function AdminSidebar() {
@@ -52,10 +53,11 @@ export function AdminSidebar() {
 
   const navItems = [
     { label: "Dashboard Overview", href: "/admin", icon: LayoutDashboard },
+    { label: "PS5 Rentals Console", href: "/admin/rentals", icon: Gamepad2, badge: "NEW" },
+    { label: "Order Management", href: "/admin/orders", icon: ShoppingBag },
     { label: "Device Catalog", href: "/admin/catalog", icon: Smartphone },
     { label: "Pricing Rules Matrix", href: "/admin/pricing", icon: Calculator },
     { label: "Quotes Repository", href: "/admin/quotes", icon: FileText },
-    { label: "Order Management", href: "/admin/orders", icon: ShoppingBag },
     { label: "Agent Management", href: "/admin/agents", icon: UserCheck },
     { label: "Support Team Management", href: "/admin/support", icon: Headset },
     { label: "Transaction Audit Ledger", href: "/admin/ledger", icon: Receipt },
@@ -200,7 +202,12 @@ export function AdminSidebar() {
                   }`}
                 >
                   <Icon className={`w-4 h-4 ${isActive ? "text-brand-black" : "text-gray-400"}`} />
-                  <span>{item.label}</span>
+                  <span className="flex-1">{item.label}</span>
+                  {item.badge && (
+                    <span className={`px-1.5 py-0.5 text-[9px] font-black rounded ${isActive ? "bg-black text-brand-yellow" : "bg-brand-yellow/20 text-brand-yellow"}`}>
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}
