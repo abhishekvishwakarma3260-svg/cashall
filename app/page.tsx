@@ -5,6 +5,7 @@ import { CategoryCards } from "@/components/home/CategoryCards";
 import { PopularBrands } from "@/components/home/PopularBrands";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { WhyCashALL } from "@/components/home/WhyCashALL";
+import { CustomerReviewsSection } from "@/components/reviews/CustomerReviewsSection";
 import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
@@ -26,7 +27,14 @@ export default function HomePage() {
         },
         "image": "https://www.cashall.in/photos/CashALL_favicon.png",
         "description":
-          "CashALL helps you sell your old phones and laptops for the best value with transparent pricing, fast pickup and secure payment."
+          "CashALL helps you sell your old phones and laptops for the best value with transparent pricing, fast pickup and secure payment.",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "14850",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       },
       {
         "@type": "WebSite",
@@ -56,6 +64,7 @@ export default function HomePage() {
         <PopularBrands />
         <HowItWorks />
         <WhyCashALL />
+        <CustomerReviewsSection />
         <FAQAccordion />
         <FinalCTA />
       </main>
@@ -63,3 +72,4 @@ export default function HomePage() {
     </div>
   );
 }
+
