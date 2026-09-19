@@ -42605,7 +42605,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-fe",
     "storage": "128 GB",
-    "basePrice": 23917,
+    "basePrice": 23533,
     "active": true,
     "ram": "8 GB"
   },
@@ -42613,7 +42613,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-fe",
     "storage": "256 GB",
-    "basePrice": 25563,
+    "basePrice": 25159,
     "active": true,
     "ram": "8 GB"
   },
@@ -42637,7 +42637,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-plus-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-plus",
     "storage": "128 GB",
-    "basePrice": 13938,
+    "basePrice": 9969,
     "active": true,
     "ram": "8 GB"
   },
@@ -42645,7 +42645,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20",
     "storage": "128 GB",
-    "basePrice": 12827,
+    "basePrice": 8646,
     "active": true,
     "ram": "8 GB"
   },
@@ -42781,7 +42781,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "1 TB",
-    "basePrice": 15554,
+    "basePrice": 30684,
     "active": true,
     "ram": "12 GB"
   },
@@ -42789,7 +42789,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "512 GB",
-    "basePrice": 14342,
+    "basePrice": 27745,
     "active": true,
     "ram": "8 GB"
   },
@@ -42797,7 +42797,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "128 GB",
-    "basePrice": 12221,
+    "basePrice": 24048,
     "active": true,
     "ram": "8 GB"
   },
@@ -42909,7 +42909,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-5g",
     "storage": "256 GB",
-    "basePrice": 18483,
+    "basePrice": 41996,
     "active": true,
     "ram": "8 GB"
   },
@@ -42917,7 +42917,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-5g",
     "storage": "128 GB",
-    "basePrice": 17372,
+    "basePrice": 35279,
     "active": true,
     "ram": "8 GB"
   },
@@ -43192,7 +43192,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe",
     "storage": "256 GB",
-    "basePrice": 11009,
+    "basePrice": 16978,
     "active": true,
     "ram": "8 GB"
   },
@@ -43200,7 +43200,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 16059,
     "active": true,
     "ram": "8 GB"
   },
@@ -43264,7 +43264,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-256-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "256 GB",
-    "basePrice": 7373,
+    "basePrice": 4969,
     "active": true,
     "ram": "6 GB"
   },
@@ -43272,7 +43272,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "128 GB",
-    "basePrice": 7070,
+    "basePrice": 4858,
     "active": true,
     "ram": "6 GB"
   },
@@ -43280,7 +43280,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "64 GB",
-    "basePrice": 6767,
+    "basePrice": 4404,
     "active": true,
     "ram": "6 GB"
   },
@@ -43288,7 +43288,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-256-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "256 GB",
-    "basePrice": 7272,
+    "basePrice": 13443,
     "active": true,
     "ram": "4 GB"
   },
@@ -43296,7 +43296,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "128 GB",
-    "basePrice": 6969,
+    "basePrice": 12261,
     "active": true,
     "ram": "4 GB"
   },
@@ -43304,7 +43304,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "64 GB",
-    "basePrice": 6666,
+    "basePrice": 11009,
     "active": true,
     "ram": "4 GB"
   },
@@ -44504,7 +44504,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10",
     "storage": "512 GB",
-    "basePrice": 10908,
+    "basePrice": 24361,
     "active": true,
     "ram": "8 GB"
   },
@@ -44512,7 +44512,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10",
     "storage": "128 GB",
-    "basePrice": 10605,
+    "basePrice": 22250,
     "active": true,
     "ram": "8 GB"
   },
@@ -44520,7 +44520,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-lite-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-lite",
     "storage": "512 GB",
-    "basePrice": 10504,
+    "basePrice": 20301,
     "active": true,
     "ram": "8 GB"
   },
@@ -44528,7 +44528,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-lite-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-lite",
     "storage": "128 GB",
-    "basePrice": 10201,
+    "basePrice": 17311,
     "active": true,
     "ram": "8 GB"
   },
@@ -44536,7 +44536,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe-5g",
     "storage": "128 GB",
-    "basePrice": 12726,
+    "basePrice": 16059,
     "active": true,
     "ram": "8 GB"
   },
@@ -44544,7 +44544,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-ultra-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-ultra-5g",
     "storage": "128 GB",
-    "basePrice": 18685,
+    "basePrice": 13908,
     "active": true,
     "ram": "12 GB"
   },
@@ -44552,7 +44552,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 19190,
+    "basePrice": 14918,
     "active": true,
     "ram": "12 GB"
   },
@@ -44560,7 +44560,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-fe-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-fe-5g",
     "storage": "256 GB",
-    "basePrice": 16160,
+    "basePrice": 12352,
     "active": true,
     "ram": "8 GB"
   },
@@ -44568,7 +44568,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-fe-5g",
     "storage": "128 GB",
-    "basePrice": 15150,
+    "basePrice": 11544,
     "active": true,
     "ram": "8 GB"
   },
@@ -44576,7 +44576,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-plus-5g",
     "storage": "256 GB",
-    "basePrice": 16665,
+    "basePrice": 44329,
     "active": true,
     "ram": "8 GB"
   },
@@ -44584,7 +44584,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-plus-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-plus-5g",
     "storage": "128 GB",
-    "basePrice": 16160,
+    "basePrice": 43602,
     "active": true,
     "ram": "8 GB"
   },
@@ -44592,7 +44592,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-ultra-5g-512-gb-16-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 29290,
+    "basePrice": 56812,
     "active": true,
     "ram": "16 GB"
   },
@@ -44600,7 +44600,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 27270,
+    "basePrice": 56206,
     "active": true,
     "ram": "12 GB"
   },
@@ -44608,7 +44608,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-5g",
     "storage": "256 GB",
-    "basePrice": 22725,
+    "basePrice": 16645,
     "active": true,
     "ram": "8 GB"
   },
@@ -44616,7 +44616,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-5g",
     "storage": "128 GB",
-    "basePrice": 21210,
+    "basePrice": 15726,
     "active": true,
     "ram": "8 GB"
   },
@@ -44624,7 +44624,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-plus-5g",
     "storage": "256 GB",
-    "basePrice": 23735,
+    "basePrice": 18099,
     "active": true,
     "ram": "8 GB"
   },
@@ -44632,7 +44632,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-plus-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-plus-5g",
     "storage": "128 GB",
-    "basePrice": 22624,
+    "basePrice": 16726,
     "active": true,
     "ram": "8 GB"
   },
@@ -44640,7 +44640,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 39390,
+    "basePrice": 28017,
     "active": true,
     "ram": "12 GB"
   },
@@ -44648,7 +44648,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 36865,
+    "basePrice": 27290,
     "active": true,
     "ram": "12 GB"
   },
@@ -44656,7 +44656,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 35350,
+    "basePrice": 24715,
     "active": true,
     "ram": "12 GB"
   },
@@ -44664,7 +44664,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-5g",
     "storage": "256 GB",
-    "basePrice": 28785,
+    "basePrice": 24099,
     "active": true,
     "ram": "8 GB"
   },
@@ -44672,7 +44672,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-5g",
     "storage": "128 GB",
-    "basePrice": 27775,
+    "basePrice": 22725,
     "active": true,
     "ram": "8 GB"
   },
@@ -44680,7 +44680,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-fe-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-fe-5g",
     "storage": "256 GB",
-    "basePrice": 22220,
+    "basePrice": 18544,
     "active": true,
     "ram": "8 GB"
   },
@@ -44688,7 +44688,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-fe-5g",
     "storage": "128 GB",
-    "basePrice": 20200,
+    "basePrice": 18059,
     "active": true,
     "ram": "8 GB"
   },
@@ -44696,7 +44696,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-plus-5g-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-plus-5g",
     "storage": "512 GB",
-    "basePrice": 34845,
+    "basePrice": 26967,
     "active": true,
     "ram": "8 GB"
   },
@@ -44704,7 +44704,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-plus-5g",
     "storage": "256 GB",
-    "basePrice": 33633,
+    "basePrice": 25472,
     "active": true,
     "ram": "8 GB"
   },
@@ -44712,7 +44712,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 48480,
+    "basePrice": 39097,
     "active": true,
     "ram": "12 GB"
   },
@@ -44720,7 +44720,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 46460,
+    "basePrice": 35794,
     "active": true,
     "ram": "12 GB"
   },
@@ -44728,7 +44728,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 43430,
+    "basePrice": 34552,
     "active": true,
     "ram": "12 GB"
   },
@@ -44736,7 +44736,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "512 GB",
-    "basePrice": 36693,
+    "basePrice": 36108,
     "active": true,
     "ram": "8 GB"
   },
@@ -44744,7 +44744,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "128 GB",
-    "basePrice": 32805,
+    "basePrice": 32280,
     "active": true,
     "ram": "8 GB"
   },
@@ -44752,7 +44752,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "256 GB",
-    "basePrice": 35259,
+    "basePrice": 35057,
     "active": true,
     "ram": "8 GB"
   },
@@ -44760,7 +44760,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-plus-5g",
     "storage": "512 GB",
-    "basePrice": 39380,
+    "basePrice": 38754,
     "active": true,
     "ram": "12 GB"
   },
@@ -44768,7 +44768,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-plus-5g",
     "storage": "256 GB",
-    "basePrice": 39198,
+    "basePrice": 38572,
     "active": true,
     "ram": "12 GB"
   },
@@ -44776,7 +44776,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-1021-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 64357,
+    "basePrice": 63327,
     "active": true,
     "ram": "12 GB"
   },
@@ -44784,7 +44784,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 63872,
+    "basePrice": 62852,
     "active": true,
     "ram": "12 GB"
   },
@@ -44792,7 +44792,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 63398,
+    "basePrice": 62378,
     "active": true,
     "ram": "12 GB"
   },
@@ -44800,7 +44800,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "512 GB",
-    "basePrice": 44662,
+    "basePrice": 43945,
     "active": true,
     "ram": "12 GB"
   },
@@ -44808,7 +44808,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "256 GB",
-    "basePrice": 42935,
+    "basePrice": 42248,
     "active": true,
     "ram": "12 GB"
   },
@@ -44816,7 +44816,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "128 GB",
-    "basePrice": 41774,
+    "basePrice": 41299,
     "active": true,
     "ram": "12 GB"
   },
@@ -44824,7 +44824,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "512 GB",
-    "basePrice": 52348,
+    "basePrice": 51510,
     "active": true,
     "ram": "12 GB"
   },
@@ -44832,7 +44832,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "256 GB",
-    "basePrice": 49490,
+    "basePrice": 48702,
     "active": true,
     "ram": "12 GB"
   },
@@ -44840,7 +44840,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 73478,
+    "basePrice": 72306,
     "active": true,
     "ram": "12 GB"
   },
@@ -44848,7 +44848,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 70599,
+    "basePrice": 69468,
     "active": true,
     "ram": "12 GB"
   },
@@ -44856,7 +44856,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 65660,
+    "basePrice": 64610,
     "active": true,
     "ram": "12 GB"
   },
@@ -44864,7 +44864,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-edge-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-edge",
     "storage": "512 GB",
-    "basePrice": 50500,
+    "basePrice": 49338,
     "active": true,
     "ram": "12 GB"
   },
@@ -44872,7 +44872,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-edge-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-edge",
     "storage": "256 GB",
-    "basePrice": 47470,
+    "basePrice": 42905,
     "active": true,
     "ram": "12 GB"
   },
@@ -44880,7 +44880,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "512 GB",
-    "basePrice": 32320,
+    "basePrice": 38764,
     "active": true,
     "ram": "8 GB"
   },
@@ -44888,7 +44888,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "256 GB",
-    "basePrice": 30300,
+    "basePrice": 35279,
     "active": true,
     "ram": "8 GB"
   },
@@ -44896,7 +44896,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "128 GB",
-    "basePrice": 28280,
+    "basePrice": 31310,
     "active": true,
     "ram": "8 GB"
   },
@@ -44904,7 +44904,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s8-plus-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s8-plus",
     "storage": "128 GB",
-    "basePrice": 6363,
+    "basePrice": 12888,
     "active": true,
     "ram": "6 GB"
   },
@@ -44912,7 +44912,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s8-plus-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s8-plus",
     "storage": "64 GB",
-    "basePrice": 6262,
+    "basePrice": 11383,
     "active": true,
     "ram": "4 GB"
   },
@@ -69774,7 +69774,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b35b65bb-374f-48fd-a54f-4ced39cb9f85",
     "modelId": "a4ee6c9a-a6ae-4135-902b-bd6041434a49",
     "storage": "512 GB",
-    "basePrice": 60640,
+    "basePrice": 60873,
     "active": true,
     "ram": "12 GB"
   },
@@ -69782,7 +69782,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "194c09c7-82b3-48eb-aa2b-29ae86951123",
     "modelId": "a4ee6c9a-a6ae-4135-902b-bd6041434a49",
     "storage": "256 GB",
-    "basePrice": 60640,
+    "basePrice": 50904,
     "active": true,
     "ram": "12 GB"
   },
@@ -71226,7 +71226,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "05687101-74e8-455c-a3c8-f9c5db2d969b",
     "modelId": "085aee0d-e91e-487f-baed-cde878bb3f6e",
     "storage": "512 GB",
-    "basePrice": 70790,
+    "basePrice": 71064,
     "active": true,
     "ram": "12 GB"
   },
@@ -71234,7 +71234,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a43dd0fe-4187-42fd-b780-979af50cc9b2",
     "modelId": "085aee0d-e91e-487f-baed-cde878bb3f6e",
     "storage": "256 GB",
-    "basePrice": 70790,
+    "basePrice": 62115,
     "active": true,
     "ram": "12 GB"
   },
@@ -71504,7 +71504,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b99b6a70-25d7-4a0e-8870-70a43f89d1ed",
     "modelId": "9a9dc048-2fe4-4b63-8c47-18d0da845927",
     "storage": "128 GB",
-    "basePrice": 5640,
+    "basePrice": 5666,
     "active": true,
     "ram": "6 GB"
   },
@@ -72150,7 +72150,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "626ff33c-1387-4d78-afa4-78bff626b4a3",
     "modelId": "9f4afceb-f9c1-4321-a1eb-45f429828e7e",
     "storage": "256 GB",
-    "basePrice": 78060,
+    "basePrice": 82487,
     "active": true,
     "ram": "12 GB"
   },
@@ -72158,7 +72158,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "28e9a3a2-5d17-4dc1-8e10-e51924b5c0ed",
     "modelId": "9f4afceb-f9c1-4321-a1eb-45f429828e7e",
     "storage": "512 GB",
-    "basePrice": 82760,
+    "basePrice": 87456,
     "active": true,
     "ram": "12 GB"
   },
@@ -72166,7 +72166,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9045aeba-00d8-4bcc-9218-597175e39466",
     "modelId": "9f4afceb-f9c1-4321-a1eb-45f429828e7e",
     "storage": "1 TB",
-    "basePrice": 97810,
+    "basePrice": 103363,
     "active": true,
     "ram": "16 GB"
   },
@@ -74524,7 +74524,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "55003a00-4934-463b-85d7-bfbdd1a9ad12",
     "modelId": "8c7c0ac9-545b-485d-bc63-e6c413c18ff9",
     "storage": "64 GB",
-    "basePrice": 3370,
+    "basePrice": 3384,
     "active": true,
     "ram": "4 GB"
   },
