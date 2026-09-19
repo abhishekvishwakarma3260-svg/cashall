@@ -26,7 +26,7 @@ export function ReviewStatsBar() {
     {
       icon: ThumbsUp,
       title: `${satisfactionRate}% Seller Love`,
-      subtitle: "Over 14,000+ happy sellers",
+      subtitle: `${totalReviews} happy verified sellers`,
     },
   ];
 
@@ -57,7 +57,7 @@ export function ReviewStatsBar() {
           </div>
 
           <p className="text-sm text-brand-muted font-medium leading-relaxed">
-            Based on <span className="font-extrabold text-brand-black">{totalReviews.toLocaleString("en-IN")}+ verified device sales</span> across India.
+            Based on <span className="font-extrabold text-brand-black">{totalReviews} verified device sales</span> across West Bengal & India.
           </p>
         </div>
 

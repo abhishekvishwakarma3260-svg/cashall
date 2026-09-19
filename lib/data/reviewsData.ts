@@ -52,15 +52,15 @@ export interface ReviewStats {
 }
 
 export const REVIEW_STATS: ReviewStats = {
-  averageRating: 4.9,
-  totalReviews: 14850,
-  satisfactionRate: 98.4,
+  averageRating: 4.7,
+  totalReviews: 26,
+  satisfactionRate: 100,
   ratingBreakdown: {
-    5: 92,
-    4: 6,
-    3: 1,
-    2: 0.7,
-    1: 0.3,
+    5: 73,
+    4: 27,
+    3: 0,
+    2: 0,
+    1: 0,
   },
 };
 

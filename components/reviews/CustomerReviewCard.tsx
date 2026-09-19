@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { CustomerReview, VIDEO_REVIEWS, VideoReview } from "@/lib/data/reviewsData";
+import { CustomerReview } from "@/lib/data/reviewsData";
 import {
   Star,
   CheckCircle2,
   ThumbsUp,
-  Play,
   Smartphone,
   Laptop,
   Tablet,
@@ -14,10 +13,9 @@ import {
 
 interface CustomerReviewCardProps {
   review: CustomerReview;
-  onOpenVideo?: (videoReview: VideoReview) => void;
 }
 
-export function CustomerReviewCard({ review, onOpenVideo }: CustomerReviewCardProps) {
+export function CustomerReviewCard({ review }: CustomerReviewCardProps) {
   const [helpfulCount, setHelpfulCount] = useState(review.helpfulCount);
   const [hasVoted, setHasVoted] = useState(false);
 
@@ -30,10 +28,6 @@ export function CustomerReviewCard({ review, onOpenVideo }: CustomerReviewCardPr
       setHasVoted(true);
     }
   };
-
-  const matchedVideo = review.videoReviewId
-    ? VIDEO_REVIEWS.find((v) => v.id === review.videoReviewId)
-    : null;
 
   const getDeviceIcon = (category: CustomerReview["deviceCategory"]) => {
     if (category === "LAPTOP") return <Laptop className="w-3.5 h-3.5" />;
@@ -99,16 +93,6 @@ export function CustomerReviewCard({ review, onOpenVideo }: CustomerReviewCardPr
           <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-xl">
             ⚡ {review.payoutSpeed}
           </span>
-
-          {review.hasVideo && matchedVideo && (
-            <button
-              onClick={() => onOpenVideo && onOpenVideo(matchedVideo)}
-              className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-black bg-brand-yellow hover:bg-yellow-400 px-2.5 py-0.5 rounded-xl transition-all shadow-sm"
-            >
-              <Play className="w-2.5 h-2.5 fill-brand-black" />
-              <span>Watch Video</span>
-            </button>
-          )}
         </div>
 
         {/* REVIEW TITLE & CONTENT */}

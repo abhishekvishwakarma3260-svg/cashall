@@ -30,8 +30,8 @@ export default function HomePage() {
           "CashALL helps you sell your old phones and laptops for the best value with transparent pricing, fast pickup and secure payment.",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "14850",
+          "ratingValue": "4.7",
+          "reviewCount": "26",
           "bestRating": "5",
           "worstRating": "1"
         }

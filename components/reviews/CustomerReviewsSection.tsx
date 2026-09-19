@@ -1,26 +1,19 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import {
-  CUSTOMER_REVIEWS,
-  VideoReview,
-} from "@/lib/data/reviewsData";
+import { CUSTOMER_REVIEWS } from "@/lib/data/reviewsData";
 import { ReviewStatsBar } from "./ReviewStatsBar";
-import { CustomerVideoCarousel } from "./CustomerVideoCarousel";
 import { CustomerReviewCard } from "./CustomerReviewCard";
-import { VideoPlayerModal } from "./VideoPlayerModal";
 import { Sparkles, MessageSquare } from "lucide-react";
 
-type FilterCategory = "ALL" | "VIDEO" | "MOBILE_APPLE" | "MOBILE_ANDROID" | "LAPTOP";
+type FilterCategory = "ALL" | "MOBILE_APPLE" | "MOBILE_ANDROID" | "LAPTOP";
 
 export function CustomerReviewsSection() {
-  const [selectedVideo, setSelectedVideo] = useState<VideoReview | null>(null);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("ALL");
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const filterTabs: { id: FilterCategory; label: string; count?: number }[] = [
-    { id: "ALL", label: "All Reviews" },
-    { id: "VIDEO", label: "🎥 Video Stories" },
+  const filterTabs: { id: FilterCategory; label: string }[] = [
+    { id: "ALL", label: `All Reviews (${CUSTOMER_REVIEWS.length})` },
     { id: "MOBILE_APPLE", label: "Apple iPhone" },
     { id: "MOBILE_ANDROID", label: "Android Phones" },
     { id: "LAPTOP", label: "Laptops & MacBooks" },
@@ -29,7 +22,6 @@ export function CustomerReviewsSection() {
   const filteredReviews = useMemo(() => {
     return CUSTOMER_REVIEWS.filter((item) => {
       if (activeFilter === "ALL") return true;
-      if (activeFilter === "VIDEO") return !!item.hasVideo;
       if (activeFilter === "MOBILE_APPLE") {
         return item.deviceCategory === "MOBILE" && item.deviceSold.toLowerCase().includes("iphone");
       }
@@ -56,21 +48,18 @@ export function CustomerReviewsSection() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-brand-black tracking-tight">
-            Loved By Over <span className="text-brand-yellow bg-brand-black px-2 py-0.5 rounded-xl">14,000+</span> Device Sellers
+            Loved By <span className="text-brand-yellow bg-brand-black px-2 py-0.5 rounded-xl">26</span> Verified Device Sellers
           </h2>
 
           <p className="text-sm sm:text-base text-brand-muted max-w-xl mx-auto leading-relaxed">
-            See genuine video stories and read experiences from customers across India who got instant UPI payments right at their doorstep.
+            Read authentic doorstep payout reviews and ratings from our completed customer orders.
           </p>
         </div>
 
         {/* 1. AGGREGATE STATS & TRUST SEALS */}
         <ReviewStatsBar />
 
-        {/* 2. REELS-STYLE VIDEO CAROUSEL */}
-        <CustomerVideoCarousel onSelectVideo={(video) => setSelectedVideo(video)} />
-
-        {/* 3. WRITTEN REVIEWS SHOWCASE WITH FILTERS */}
+        {/* 2. WRITTEN REVIEWS SHOWCASE WITH FILTERS */}
         <div className="space-y-6 pt-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-border pb-4">
             <div className="flex items-center gap-2">
@@ -107,11 +96,7 @@ export function CustomerReviewsSection() {
           {/* REVIEWS GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedReviews.map((review) => (
-              <CustomerReviewCard
-                key={review.id}
-                review={review}
-                onOpenVideo={(video) => setSelectedVideo(video)}
-              />
+              <CustomerReviewCard key={review.id} review={review} />
             ))}
           </div>
 
@@ -128,13 +113,6 @@ export function CustomerReviewsSection() {
           )}
         </div>
       </div>
-
-      {/* POPUP VIDEO MODAL */}
-      <VideoPlayerModal
-        review={selectedVideo}
-        isOpen={!!selectedVideo}
-        onClose={() => setSelectedVideo(null)}
-      />
     </section>
   );
 }
