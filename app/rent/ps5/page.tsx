@@ -112,6 +112,19 @@ export default function Ps5RentalPage() {
   const [rentalPackage, setRentalPackage] = useState<RentalPackage>("CONSOLE_ONLY");
   const [extraControllers, setExtraControllers] = useState(false);
 
+  // Dates: Start Date (Delivery) and End Date (Return Pickup)
+  const [startDate, setStartDate] = useState(() => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().split("T")[0];
+  });
+
+  const [endDate, setEndDate] = useState(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 3); // 2 days default
+    return d.toISOString().split("T")[0];
+  });
+
   // Rental Duration: Minimum 1 day, up to N days
   const [days, setDays] = useState<number>(2);
 
@@ -124,14 +137,10 @@ export default function Ps5RentalPage() {
   const [customerEmail, setCustomerEmail] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState("");
   const [pincode, setPincode] = useState("");
-  const [deliveryDate, setDeliveryDate] = useState(() => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    return tomorrow.toISOString().split("T")[0];
-  });
   const [timeSlot, setTimeSlot] = useState("10:00 AM - 01:00 PM");
   const [govtIdType, setGovtIdType] = useState("Aadhaar Card");
   const [govtIdNumber, setGovtIdNumber] = useState("");
+  const [isPrefilled, setIsPrefilled] = useState(false);
 
   // Terms & Liability Modal
   const [termsModalOpen, setTermsModalOpen] = useState(false);
@@ -140,6 +149,132 @@ export default function Ps5RentalPage() {
   // Submission State
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  // PRE-FILL CUSTOMER & ADDRESS DETAILS FROM PREVIOUS ORDERS/RENTALS
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedRental = localStorage.getItem("cashall_latest_rental");
+      const storedAddress = localStorage.getItem("cashall_saved_address");
+      const storedOrder = localStorage.getItem("cashall_latest_order");
+      const storedUser = localStorage.getItem("cashall_user");
+
+      let didPrefill = false;
+
+      if (storedRental) {
+        try {
+          const r = JSON.parse(storedRental);
+          if (r.customerName) setCustomerName(r.customerName);
+          if (r.customerPhone) setCustomerPhone(r.customerPhone);
+          if (r.customerEmail) setCustomerEmail(r.customerEmail);
+          if (r.deliveryAddress) setDeliveryAddress(r.deliveryAddress);
+          if (r.pincode) setPincode(r.pincode);
+          if (r.govtIdType) setGovtIdType(r.govtIdType);
+          if (r.govtIdNumber) setGovtIdNumber(r.govtIdNumber);
+          didPrefill = true;
+        } catch (e) {}
+      }
+
+      if (!didPrefill && storedAddress) {
+        try {
+          const sa = JSON.parse(storedAddress);
+          const fullAddr = [sa.house, sa.street, sa.area, sa.landmark, sa.city, sa.state].filter(Boolean).join(", ");
+          if (fullAddr) setDeliveryAddress(fullAddr);
+          if (sa.pincode) setPincode(sa.pincode);
+          didPrefill = true;
+        } catch (e) {}
+      }
+
+      if (!didPrefill && storedOrder) {
+        try {
+          const o = JSON.parse(storedOrder);
+          if (o.customerName && !customerName) setCustomerName(o.customerName);
+          if (o.customerPhone && !customerPhone) setCustomerPhone(o.customerPhone);
+          if (o.customerEmail && !customerEmail) setCustomerEmail(o.customerEmail);
+          if (o.addressSummary && !deliveryAddress) setDeliveryAddress(o.addressSummary);
+          if (o.pincode && !pincode) setPincode(o.pincode);
+          didPrefill = true;
+        } catch (e) {}
+      }
+
+      if (storedUser) {
+        try {
+          const u = JSON.parse(storedUser);
+          if (u.name && !customerName) setCustomerName(u.name);
+          if (u.phone && !customerPhone) setCustomerPhone(u.phone);
+          if (u.email && !customerEmail) setCustomerEmail(u.email);
+        } catch (e) {}
+      }
+
+      if (didPrefill) {
+        setIsPrefilled(true);
+      }
+    }
+  }, []);
+
+  // Handlers for Calendar Dates
+  const handleStartDateChange = (newStart: string) => {
+    setStartDate(newStart);
+    if (!newStart) return;
+    const start = new Date(newStart);
+    const end = new Date(endDate);
+    if (isNaN(start.getTime())) return;
+
+    if (isNaN(end.getTime()) || end <= start) {
+      const nextEnd = new Date(start);
+      nextEnd.setDate(nextEnd.getDate() + days);
+      setEndDate(nextEnd.toISOString().split("T")[0]);
+    } else {
+      const diffTime = end.getTime() - start.getTime();
+      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
+      setDays(diffDays);
+    }
+  };
+
+  const handleEndDateChange = (newEnd: string) => {
+    setEndDate(newEnd);
+    if (!newEnd) return;
+    const start = new Date(startDate);
+    const end = new Date(newEnd);
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) return;
+
+    if (end <= start) {
+      const nextEnd = new Date(start);
+      nextEnd.setDate(nextEnd.getDate() + 1);
+      setEndDate(nextEnd.toISOString().split("T")[0]);
+      setDays(1);
+    } else {
+      const diffTime = end.getTime() - start.getTime();
+      const diffDays = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
+      setDays(diffDays);
+    }
+  };
+
+  const handleDaysPreset = (count: number) => {
+    const validDays = Math.max(1, count);
+    setDays(validDays);
+    const start = new Date(startDate);
+    if (!isNaN(start.getTime())) {
+      const nextEnd = new Date(start);
+      nextEnd.setDate(nextEnd.getDate() + validDays);
+      setEndDate(nextEnd.toISOString().split("T")[0]);
+    }
+  };
+
+  // Helper date formatter
+  const formatDateDisplay = (dateStr: string) => {
+    if (!dateStr) return "";
+    try {
+      const d = new Date(dateStr + "T00:00:00");
+      if (isNaN(d.getTime())) return dateStr;
+      return d.toLocaleDateString("en-IN", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+      });
+    } catch {
+      return dateStr;
+    }
+  };
 
   // Dynamic Pricing Calculation:
   // CONSOLE_ONLY: ₹399/day
@@ -188,7 +323,8 @@ export default function Ps5RentalPage() {
           govtIdNumber,
           consoleModel: rentalPackage === "CONSOLE_CD" ? "PS5 Disc Edition" : "PS5 Console",
           rentalPackage,
-          startDate: deliveryDate,
+          startDate,
+          endDate,
           totalDays: days,
           cdCount: rentalPackage === "CONSOLE_CD" ? selectedGames.length : 0,
           selectedGames: rentalPackage === "CONSOLE_CD" ? selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id) : [],
@@ -198,6 +334,24 @@ export default function Ps5RentalPage() {
 
       const data = await res.json();
       if (data.success && data.rental) {
+        // Save for auto-prefill on future rental or selling visits
+        try {
+          localStorage.setItem("cashall_latest_rental", JSON.stringify({
+            customerName,
+            customerPhone,
+            customerEmail,
+            deliveryAddress,
+            pincode,
+            govtIdType,
+            govtIdNumber,
+          }));
+          localStorage.setItem("cashall_user", JSON.stringify({
+            name: customerName,
+            phone: customerPhone,
+            email: customerEmail,
+          }));
+        } catch (e) {}
+
         router.push(`/rent/track/${data.rental.rentalNumber}`);
       } else {
         setError(data.error || "Failed to create rental booking. Please try again.");
@@ -422,80 +576,140 @@ export default function Ps5RentalPage() {
               </div>
             </div>
 
-            {/* 2. RENTAL DURATION SELECTOR */}
-            <div className="bg-neutral-900/90 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-lg">
-              <div className="flex items-center justify-between">
+            {/* 2. RENTAL DURATION & CALENDAR SELECTOR */}
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800/80 pb-4">
                 <div>
                   <h2 className="text-lg font-black text-white flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-brand-yellow" />
-                    2. Select Rental Duration
+                    2. Select Rental Dates & Duration
                   </h2>
                   <p className="text-xs text-gray-400 mt-0.5">
-                    Minimum 1 day. You can easily extend your plan online anytime!
+                    Pick your starting & ending calendar dates or choose custom days. Extend anytime!
                   </p>
                 </div>
-                <div className="text-right">
-                  <span className="text-xs text-gray-400">Total Days: </span>
-                  <span className="text-base font-black text-brand-yellow">{days} Days</span>
+                <div className="flex items-center gap-2 self-start sm:self-auto bg-brand-yellow/10 border border-brand-yellow/30 px-3.5 py-1.5 rounded-2xl">
+                  <span className="text-xs text-gray-400">Total Duration:</span>
+                  <span className="text-sm font-black text-brand-yellow">{days} {days === 1 ? "Day" : "Days"}</span>
                 </div>
               </div>
 
-              {/* Interactive Day Counter */}
-              <div className="flex items-center justify-between p-4 rounded-2xl bg-neutral-950 border border-neutral-800">
-                <div className="space-y-1">
-                  <div className="text-xs font-bold text-gray-300">How many days do you want the PS5?</div>
-                  <div className="text-[11px] text-gray-500">Starts from delivery date, return pickup scheduled after {days} days</div>
+              {/* Interactive Calendar Date Range Picker */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2 hover:border-neutral-700 transition-colors">
+                  <label className="block text-xs font-bold text-gray-300 flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
+                    Starting Date (Delivery & Setup) <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    type="date"
+                    required
+                    min={new Date().toISOString().split("T")[0]}
+                    value={startDate}
+                    onChange={(e) => handleStartDateChange(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-white text-xs font-semibold focus:border-brand-yellow focus:outline-none cursor-pointer"
+                  />
+                  <span className="text-[11px] text-gray-400 block">
+                    Our agent delivers & sets up PS5 on <span className="text-brand-yellow font-medium">{formatDateDisplay(startDate) || "selected date"}</span>
+                  </span>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <button
-                    type="button"
-                    disabled={days <= 1}
-                    onClick={() => setDays(Math.max(1, days - 1))}
-                    className="w-10 h-10 rounded-xl bg-neutral-800 hover:bg-neutral-700 disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center text-white font-bold transition-colors"
-                  >
-                    <Minus className="w-4 h-4" />
-                  </button>
+                <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2 hover:border-neutral-700 transition-colors">
+                  <label className="block text-xs font-bold text-gray-300 flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
+                    Ending Date (Return Pickup) <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    type="date"
+                    required
+                    min={startDate || new Date().toISOString().split("T")[0]}
+                    value={endDate}
+                    onChange={(e) => handleEndDateChange(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-white text-xs font-semibold focus:border-brand-yellow focus:outline-none cursor-pointer"
+                  />
+                  <span className="text-[11px] text-gray-400 block">
+                    Doorstep return inspection on <span className="text-brand-yellow font-medium">{formatDateDisplay(endDate) || "selected date"}</span>
+                  </span>
+                </div>
+              </div>
 
-                  <div className="w-16 text-center">
-                    <span className="text-2xl font-black text-white">{days}</span>
-                    <span className="block text-[10px] text-gray-400">DAY{days > 1 ? "S" : ""}</span>
+              {/* Visual Schedule Timeline Banner */}
+              <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <div className="text-center bg-neutral-900 border border-neutral-800 px-3 py-2 rounded-xl shrink-0">
+                    <span className="block text-[10px] text-gray-400 font-bold uppercase">Delivery</span>
+                    <span className="text-xs font-black text-white">{formatDateDisplay(startDate)}</span>
                   </div>
+                  <div className="flex-1 sm:flex-none flex items-center justify-center text-gray-500">
+                    <div className="h-0.5 w-6 sm:w-12 bg-neutral-800 relative flex items-center justify-center">
+                      <ArrowRight className="w-3.5 h-3.5 text-brand-yellow absolute" />
+                    </div>
+                  </div>
+                  <div className="text-center bg-neutral-900 border border-neutral-800 px-3 py-2 rounded-xl shrink-0">
+                    <span className="block text-[10px] text-gray-400 font-bold uppercase">Return</span>
+                    <span className="text-xs font-black text-white">{formatDateDisplay(endDate)}</span>
+                  </div>
+                </div>
 
-                  <button
-                    type="button"
-                    onClick={() => setDays(days + 1)}
-                    className="w-10 h-10 rounded-xl bg-neutral-800 hover:bg-neutral-700 flex items-center justify-center text-white font-bold transition-colors"
-                  >
-                    <Plus className="w-4 h-4" />
-                  </button>
+                {/* Day Stepper Control */}
+                <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto">
+                  <span className="text-xs font-semibold text-gray-400">Adjust Days:</span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      disabled={days <= 1}
+                      onClick={() => handleDaysPreset(days - 1)}
+                      className="w-9 h-9 rounded-xl bg-neutral-800 hover:bg-neutral-700 disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center text-white font-bold transition-colors"
+                      title="Decrease days"
+                    >
+                      <Minus className="w-3.5 h-3.5" />
+                    </button>
+                    <div className="w-14 text-center">
+                      <span className="text-lg font-black text-white">{days}</span>
+                      <span className="block text-[9px] text-gray-400 uppercase font-bold">Days</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleDaysPreset(days + 1)}
+                      className="w-9 h-9 rounded-xl bg-neutral-800 hover:bg-neutral-700 flex items-center justify-center text-white font-bold transition-colors"
+                      title="Increase days"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              {/* Quick Select Preset Pills */}
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="text-xs font-semibold text-gray-400 self-center mr-1">Quick Select:</span>
-                {[
-                  { label: "1 Day (Trial)", count: 1 },
-                  { label: "2 Days (Weekend)", count: 2 },
-                  { label: "3 Days (Long Weekend)", count: 3 },
-                  { label: "5 Days (Workweek)", count: 5 },
-                  { label: "7 Days (1 Week)", count: 7 },
-                  { label: "14 Days (2 Weeks)", count: 14 },
-                ].map((preset) => (
-                  <button
-                    key={preset.count}
-                    type="button"
-                    onClick={() => setDays(preset.count)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                      days === preset.count
-                        ? "bg-brand-yellow text-black shadow-yellowGlow"
-                        : "bg-neutral-950 border border-neutral-800 text-gray-300 hover:border-neutral-700"
-                    }`}
-                  >
-                    {preset.label}
-                  </button>
-                ))}
+              {/* Quick Select Preset Duration Pills */}
+              <div className="space-y-2">
+                <div className="text-xs font-bold text-gray-300 flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-brand-yellow" />
+                  Quick Select Duration:
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "1 Day (Trial)", count: 1 },
+                    { label: "2 Days (Weekend)", count: 2 },
+                    { label: "3 Days (Long Weekend)", count: 3 },
+                    { label: "5 Days (Workweek)", count: 5 },
+                    { label: "7 Days (1 Week)", count: 7 },
+                    { label: "14 Days (2 Weeks)", count: 14 },
+                    { label: "30 Days (1 Month)", count: 30 },
+                  ].map((preset) => (
+                    <button
+                      key={preset.count}
+                      type="button"
+                      onClick={() => handleDaysPreset(preset.count)}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                        days === preset.count
+                          ? "bg-brand-yellow text-black shadow-yellowGlow font-black"
+                          : "bg-neutral-950 border border-neutral-800 text-gray-300 hover:border-neutral-700"
+                      }`}
+                    >
+                      {preset.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -618,6 +832,15 @@ export default function Ps5RentalPage() {
                 </p>
               </div>
 
+              {isPrefilled && (
+                <div className="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <div className="text-xs text-emerald-200">
+                    <span className="font-bold text-emerald-300">Welcome back!</span> Your delivery address, contact details, and Govt ID have been auto-filled from your previous order. You can edit them anytime.
+                  </div>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold text-gray-300 mb-1.5">
@@ -697,10 +920,13 @@ export default function Ps5RentalPage() {
                     type="date"
                     required
                     min={new Date().toISOString().split("T")[0]}
-                    value={deliveryDate}
-                    onChange={(e) => setDeliveryDate(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white text-xs font-medium focus:border-brand-yellow focus:outline-none"
+                    value={startDate}
+                    onChange={(e) => handleStartDateChange(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white text-xs font-medium focus:border-brand-yellow focus:outline-none cursor-pointer"
                   />
+                  <span className="text-[10px] text-gray-500 mt-1 block">
+                    Return pickup scheduled for {formatDateDisplay(endDate)} ({days} days)
+                  </span>
                 </div>
 
                 <div>

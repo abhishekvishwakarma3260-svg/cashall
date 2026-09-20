@@ -46,6 +46,7 @@ function PickupCheckoutContent() {
   const [street, setStreet] = useState("");
   const [area, setArea] = useState("");
   const [landmark, setLandmark] = useState("");
+  const [hasPrefilledAddress, setHasPrefilledAddress] = useState(false);
 
   // Pickup slot
   const [pickupDate, setPickupDate] = useState("Tomorrow");
@@ -102,12 +103,83 @@ function PickupCheckoutContent() {
       if (storedUser) {
         try {
           const u = JSON.parse(storedUser);
-          setFullName(u.name || "");
-          setPhone(u.phone || "");
-          setEmail(u.email || "");
+          if (u.name) setFullName(u.name);
+          if (u.phone) setPhone(u.phone);
+          if (u.email) setEmail(u.email);
         } catch (e) {
           console.error(e);
         }
+      }
+
+      // PREFILL CUSTOMER & ADDRESS DETAILS FOR RETURNING SELLERS
+      const storedAddressStr = localStorage.getItem("cashall_saved_address");
+      const storedOrderStr = localStorage.getItem("cashall_latest_order");
+      const storedRentalStr = localStorage.getItem("cashall_latest_rental");
+
+      let prefilledPin = "";
+      let didPrefill = false;
+
+      if (storedAddressStr) {
+        try {
+          const sa = JSON.parse(storedAddressStr);
+          if (sa.house) setHouse(sa.house);
+          if (sa.street) setStreet(sa.street);
+          if (sa.area) setArea(sa.area);
+          if (sa.landmark) setLandmark(sa.landmark);
+          if (sa.city) setCity(sa.city);
+          if (sa.state) setSelectedState(sa.state);
+          if (sa.pincode) {
+            setPincode(sa.pincode);
+            prefilledPin = sa.pincode;
+          }
+          didPrefill = true;
+        } catch (e) {}
+      } else if (storedOrderStr) {
+        try {
+          const lo = JSON.parse(storedOrderStr);
+          if (lo.pincode) {
+            setPincode(lo.pincode);
+            prefilledPin = lo.pincode;
+          }
+          if (lo.customerName) setFullName(lo.customerName);
+          if (lo.customerPhone) setPhone(lo.customerPhone);
+          if (lo.customerEmail) setEmail(lo.customerEmail);
+
+          if (lo.addressSummary) {
+            const parts = lo.addressSummary.split(",").map((s: string) => s.trim());
+            if (parts.length >= 1 && parts[0]) setHouse(parts[0]);
+            if (parts.length >= 2 && parts[1]) setStreet(parts[1]);
+            if (parts.length >= 3 && parts[2]) setArea(parts[2]);
+            if (parts.length >= 4 && parts[3]) setLandmark(parts[3]);
+            didPrefill = true;
+          }
+        } catch (e) {}
+      } else if (storedRentalStr) {
+        try {
+          const r = JSON.parse(storedRentalStr);
+          if (r.customerName) setFullName(r.customerName);
+          if (r.customerPhone) setPhone(r.customerPhone);
+          if (r.customerEmail) setEmail(r.customerEmail);
+          if (r.pincode) {
+            setPincode(r.pincode);
+            prefilledPin = r.pincode;
+          }
+          if (r.deliveryAddress) {
+            const parts = r.deliveryAddress.split(",").map((s: string) => s.trim());
+            if (parts.length >= 1 && parts[0]) setHouse(parts[0]);
+            if (parts.length >= 2 && parts[1]) setStreet(parts[1]);
+            if (parts.length >= 3 && parts[2]) setArea(parts[2]);
+            didPrefill = true;
+          }
+        } catch (e) {}
+      }
+
+      if (didPrefill) {
+        setHasPrefilledAddress(true);
+      }
+
+      if (prefilledPin && prefilledPin.length === 6) {
+        checkPincode(prefilledPin);
       }
 
       let foundQuote: QuoteData | null = null;
@@ -410,12 +482,22 @@ function PickupCheckoutContent() {
       const existing = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
       localStorage.setItem("cashall_all_orders", JSON.stringify([newOrder, ...existing]));
 
-      // Save user session details
+      // Save user session details and address for auto-prefilling future orders
       localStorage.setItem("cashall_user", JSON.stringify({
         id: newOrder.userId,
         name: finalName,
         phone: finalPhone,
         email: finalEmail,
+      }));
+
+      localStorage.setItem("cashall_saved_address", JSON.stringify({
+        house: finalHouse,
+        street: finalStreet,
+        area: finalArea,
+        landmark: landmark ? landmark.trim() : "",
+        city: finalCity,
+        state: selectedState,
+        pincode: pincode,
       }));
 
       // Remove converted quote from customer Cart
@@ -624,10 +706,24 @@ function PickupCheckoutContent() {
 
               {/* STEP 2: ADDRESS DETAILS */}
               <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard space-y-4">
-                <div className="flex items-center gap-2 border-b border-gray-100 pb-3">
-                  <Building className="w-5 h-5 text-brand-yellow shrink-0" />
-                  <h2 className="text-base font-bold text-brand-black">2. Pickup Address</h2>
+                <div className="flex items-center justify-between border-b border-gray-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <Building className="w-5 h-5 text-brand-yellow shrink-0" />
+                    <h2 className="text-base font-bold text-brand-black">2. Pickup Address</h2>
+                  </div>
+                  {hasPrefilledAddress && (
+                    <span className="text-[11px] font-bold text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <CheckCircle2 className="w-3.5 h-3.5" /> Auto-Prefilled
+                    </span>
+                  )}
                 </div>
+
+                {hasPrefilledAddress && (
+                  <div className="p-3 rounded-2xl bg-green-50 border border-green-200 text-green-800 text-xs flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 text-green-600" />
+                    <span>Your pickup address and contact details have been automatically pre-filled from your previous order! You can edit any field below.</span>
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
