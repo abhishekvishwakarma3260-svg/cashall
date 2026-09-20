@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
 
     // Pricing Rules (3 Tiers):
     // 1. CONSOLE_ONLY: ₹399/day (No CD, No Digital ID)
-    // 2. CONSOLE_CD: ₹499/day (Game CD included at no extra cost, No Digital ID)
+    // 2. CONSOLE_CD: ₹499/day (1st Game CD included free, extra CDs at ₹100/day each)
     // 3. CONSOLE_DIGITAL_ID: ₹599/day (100+ Games Digital Library Access with login credentials)
     let dailyRate = 399;
     let effectivePackage = rentalPackage;
@@ -90,10 +90,11 @@ export async function POST(req: NextRequest) {
 
     if (rentalPackage === "CONSOLE_CD" || (!rentalPackage && selectedGames.length > 0)) {
       effectivePackage = "CONSOLE_CD";
-      dailyRate = 499;
       cds = Math.max(1, selectedGames.length || parseInt(String(cdCount), 10) || 1);
       games = selectedGames;
-      cdRate = 0; // Included in the ₹499 plan!
+      const extraCDs = Math.max(0, cds - 1);
+      cdRate = extraCDs > 0 ? 100 : 0;
+      dailyRate = 499 + (extraCDs * 100);
     } else if (rentalPackage === "CONSOLE_DIGITAL_ID") {
       effectivePackage = "CONSOLE_DIGITAL_ID";
       dailyRate = 599;

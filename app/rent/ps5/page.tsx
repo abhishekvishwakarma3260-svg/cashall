@@ -278,10 +278,13 @@ export default function Ps5RentalPage() {
 
   // Dynamic Pricing Calculation:
   // CONSOLE_ONLY: ₹399/day
-  // CONSOLE_CD: ₹499/day (CD included!)
+  // CONSOLE_CD: ₹499/day (1st Game CD included free! Extra CDs: ₹100/day each)
   // CONSOLE_DIGITAL_ID: ₹599/day (100+ Games Access)
-  const dailyRate = rentalPackage === "CONSOLE_ONLY" ? 399 : rentalPackage === "CONSOLE_CD" ? 499 : 599;
-  const totalAmount = days * dailyRate;
+  const baseDailyRate = rentalPackage === "CONSOLE_ONLY" ? 399 : rentalPackage === "CONSOLE_CD" ? 499 : 599;
+  const extraCDs = rentalPackage === "CONSOLE_CD" ? Math.max(0, selectedGames.length - 1) : 0;
+  const extraCDCostPerDay = extraCDs * 100;
+  const effectiveDailyRate = baseDailyRate + extraCDCostPerDay;
+  const totalAmount = days * effectiveDailyRate;
 
   const toggleGame = (gameId: string) => {
     if (rentalPackage !== "CONSOLE_CD") return;
@@ -327,6 +330,7 @@ export default function Ps5RentalPage() {
           endDate,
           totalDays: days,
           cdCount: rentalPackage === "CONSOLE_CD" ? selectedGames.length : 0,
+          cdRate: extraCDs > 0 ? 100 : 0,
           selectedGames: rentalPackage === "CONSOLE_CD" ? selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id) : [],
           extraControllers,
         }),
@@ -723,15 +727,21 @@ export default function Ps5RentalPage() {
                   </h2>
                   <p className="text-xs text-gray-400 mt-0.5">
                     {rentalPackage === "CONSOLE_CD"
-                      ? "Choose your game CD(s). Included in your ₹499/day plan with ₹0 extra charge!"
+                      ? "1 Game CD included FREE in your ₹499/day plan. Extra CDs available at ₹100/day each."
                       : rentalPackage === "CONSOLE_DIGITAL_ID"
                       ? "Digital ID with 100+ blockbuster titles access included with login credentials."
                       : "Console Only plan selected. No CD or Digital ID included."}
                   </p>
                 </div>
                 {rentalPackage === "CONSOLE_CD" && (
-                  <span className="text-xs font-bold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/30">
-                    {selectedGames.length} CD{selectedGames.length !== 1 ? "s" : ""} Included (₹0 Extra)
+                  <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${
+                    extraCDs > 0
+                      ? "text-brand-yellow bg-brand-yellow/10 border-brand-yellow/30"
+                      : "text-green-400 bg-green-500/10 border-green-500/30"
+                  }`}>
+                    {extraCDs > 0
+                      ? `1 CD Free + ${extraCDs} Extra (+₹${extraCDCostPerDay}/day)`
+                      : "1 CD Included (₹0 Extra)"}
                   </span>
                 )}
               </div>
@@ -743,7 +753,7 @@ export default function Ps5RentalPage() {
                     <span>Console Only Plan (₹399 / day)</span>
                   </div>
                   <p className="text-xs text-gray-400 leading-relaxed">
-                    This plan includes the PS5 console and DualSense controller without any CD or Digital ID. If you want physical game discs included at ₹0 extra, choose the{" "}
+                    This plan includes the PS5 console and DualSense controller without any CD or Digital ID. If you want physical game discs included, choose the{" "}
                     <button
                       type="button"
                       onClick={() => {
@@ -777,12 +787,17 @@ export default function Ps5RentalPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                     {AVAILABLE_GAMES.map((game) => {
                       const isSelected = selectedGames.includes(game.id);
+                      const isFirstSelected = selectedGames[0] === game.id;
+                      const isExtraSelected = isSelected && !isFirstSelected;
+
                       return (
                         <div
                           key={game.id}
                           onClick={() => toggleGame(game.id)}
                           className={`cursor-pointer rounded-2xl p-4 border transition-all relative overflow-hidden flex flex-col justify-between ${
-                            isSelected
+                            isFirstSelected
+                              ? "border-green-500/80 bg-green-950/20 ring-1 ring-green-500/40 shadow-md"
+                              : isExtraSelected
                               ? "border-brand-yellow bg-brand-yellow/10 ring-1 ring-brand-yellow/40 shadow-md"
                               : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700 hover:bg-neutral-950"
                           }`}
@@ -794,7 +809,11 @@ export default function Ps5RentalPage() {
                             </div>
                             <div
                               className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-xs ${
-                                isSelected ? "bg-brand-yellow text-black font-bold" : "border border-neutral-700 text-transparent"
+                                isFirstSelected
+                                  ? "bg-green-500 text-black font-black"
+                                  : isExtraSelected
+                                  ? "bg-brand-yellow text-black font-black"
+                                  : "border border-neutral-700 text-transparent"
                               }`}
                             >
                               ✓
@@ -803,7 +822,15 @@ export default function Ps5RentalPage() {
 
                           <div className="mt-4 flex items-center justify-between text-[11px] pt-2 border-t border-neutral-800/60">
                             <span className="text-gray-400">Rating: {game.rating}</span>
-                            <span className="font-bold text-green-400">INCLUDED FREE</span>
+                            {isFirstSelected ? (
+                              <span className="font-black text-green-400">1ST CD (FREE)</span>
+                            ) : isExtraSelected ? (
+                              <span className="font-black text-brand-yellow">+₹100 / DAY</span>
+                            ) : selectedGames.length >= 1 ? (
+                              <span className="font-semibold text-gray-400">+₹100 / Day</span>
+                            ) : (
+                              <span className="font-bold text-green-400">INCLUDED FREE</span>
+                            )}
                           </div>
                         </div>
                       );
@@ -813,7 +840,7 @@ export default function Ps5RentalPage() {
                   <div className="text-[11px] text-gray-400 bg-neutral-950 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
                     <Info className="w-4 h-4 text-blue-400 shrink-0" />
                     <span>
-                      Game discs are verified scratch-free prior to delivery. You will inspect each CD along with the delivery agent.
+                      1st Game CD is 100% free with the ₹499 plan. Each additional CD is ₹100/day. All game discs are verified scratch-free prior to delivery.
                     </span>
                   </div>
                 </>
@@ -997,17 +1024,32 @@ export default function Ps5RentalPage() {
                     {rentalPackage === "CONSOLE_ONLY"
                       ? `Console Only (${days}d × ₹399)`
                       : rentalPackage === "CONSOLE_CD"
-                      ? `Console + Game CD (${days}d × ₹499)`
+                      ? `Console + 1st Game CD (${days}d × ₹499)`
                       : `Console + Digital ID 100+ Games (${days}d × ₹599)`}
                   </span>
-                  <span className="font-bold text-white">₹{totalAmount.toLocaleString("en-IN")}</span>
+                  <span className="font-bold text-white">
+                    ₹{(days * baseDailyRate).toLocaleString("en-IN")}
+                  </span>
                 </div>
 
                 {rentalPackage === "CONSOLE_CD" && (
-                  <div className="flex items-center justify-between text-gray-300">
-                    <span>Game Discs ({selectedGames.length} CD{selectedGames.length > 1 ? "s" : ""})</span>
-                    <span className="font-bold text-green-400">INCLUDED (₹0)</span>
-                  </div>
+                  <>
+                    <div className="flex items-center justify-between text-gray-300">
+                      <span>1st Game CD ({AVAILABLE_GAMES.find((g) => g.id === selectedGames[0])?.title || "1 CD"})</span>
+                      <span className="font-bold text-green-400">INCLUDED (₹0)</span>
+                    </div>
+
+                    {extraCDs > 0 && (
+                      <div className="flex items-center justify-between text-gray-300">
+                        <span>
+                          Extra Game CDs ({extraCDs} CD{extraCDs > 1 ? "s" : ""} × ₹100/d × {days}d)
+                        </span>
+                        <span className="font-bold text-brand-yellow">
+                          +₹{(extraCDCostPerDay * days).toLocaleString("en-IN")}
+                        </span>
+                      </div>
+                    )}
+                  </>
                 )}
 
                 {rentalPackage === "CONSOLE_DIGITAL_ID" && (
@@ -1039,7 +1081,11 @@ export default function Ps5RentalPage() {
                 <div className="pt-3 border-t border-neutral-800 flex items-center justify-between">
                   <div>
                     <span className="text-sm font-black text-white block">Total Payable on Handover</span>
-                    <span className="text-[10px] text-gray-400">Pay directly to delivery agent (Cash / UPI)</span>
+                    <span className="text-[10px] text-gray-400">
+                      {extraCDs > 0
+                        ? `₹${effectiveDailyRate}/day × ${days} days (includes ₹${extraCDCostPerDay}/day for ${extraCDs} extra CD${extraCDs > 1 ? "s" : ""})`
+                        : "Pay directly to delivery agent (Cash / UPI)"}
+                    </span>
                   </div>
                   <div className="text-right">
                     <span className="text-2xl font-black text-brand-yellow">₹{totalAmount.toLocaleString("en-IN")}</span>

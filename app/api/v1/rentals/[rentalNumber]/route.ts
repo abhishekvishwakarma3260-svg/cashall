@@ -49,8 +49,12 @@ export async function PATCH(
       end.setDate(end.getDate() + combinedDays);
       const newEndDate = end.toISOString().split("T")[0];
 
-      // Add to total amount: additionalDays * (dailyRate + cdCount * cdRate)
-      const addedCost = additionalDays * (rental.dailyRate + (rental.cdCount || 0) * rental.cdRate);
+      // Add to total amount: additionalDays * effectiveDailyCost
+      const extraCDs = rental.rentalPackage === "CONSOLE_CD" ? Math.max(0, (rental.cdCount || 0) - 1) : 0;
+      const effectiveDailyCost = rental.rentalPackage === "CONSOLE_CD"
+        ? (499 + extraCDs * 100)
+        : (rental.rentalPackage === "CONSOLE_DIGITAL_ID" ? 599 : (rental.dailyRate || 399));
+      const addedCost = additionalDays * effectiveDailyCost;
       const newTotal = rental.totalAmount + addedCost;
 
       const updated = await updateRental(rentalNumber, {

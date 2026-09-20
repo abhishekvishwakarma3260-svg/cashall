@@ -151,7 +151,12 @@ export default function Ps5RentalTrackPage() {
 
   const currentStep = getStepIndex(rental.rentalStatus);
   const totalDaysCombined = rental.totalDays + (rental.extendedDays || 0);
-  const extensionCostPerDay = rental.dailyRate + (rental.cdCount || 0) * rental.cdRate;
+  const extraCDs = rental.rentalPackage === "CONSOLE_CD" ? Math.max(0, (rental.cdCount || 0) - 1) : 0;
+  const extensionCostPerDay = rental.rentalPackage === "CONSOLE_CD"
+    ? (499 + extraCDs * 100)
+    : rental.rentalPackage === "CONSOLE_DIGITAL_ID"
+    ? 599
+    : (rental.dailyRate || 399);
   const addedCost = additionalDays * extensionCostPerDay;
 
   return (
@@ -437,7 +442,7 @@ export default function Ps5RentalTrackPage() {
               <div>
                 <span className="text-xs font-bold text-white block">Additional Days</span>
                 <span className="text-[10px] text-gray-400">
-                  Rate: ₹{extensionCostPerDay}/day (Console ₹500 + {rental.cdCount || 0} CDs)
+                  Rate: ₹{extensionCostPerDay}/day {rental.rentalPackage === "CONSOLE_CD" ? `(Console + 1st CD ₹499${extraCDs > 0 ? ` + ${extraCDs} extra CD ₹${extraCDs * 100}` : ""})` : ""}
                 </span>
               </div>
 
