@@ -55,6 +55,7 @@ export async function POST(req: NextRequest) {
       govtIdType,
       govtIdNumber,
       consoleModel = "PS5 Disc Edition",
+      rentalPackage = "CONSOLE_ONLY",
       startDate,
       totalDays = 1,
       cdCount = 0,
@@ -77,16 +78,37 @@ export async function POST(req: NextRequest) {
     end.setDate(end.getDate() + days);
     const endDate = end.toISOString().split("T")[0];
 
-    // Pricing Rule:
-    // PS5 Disc Edition = ₹500 per day
-    // PS5 Digital Edition = ₹600 per day (without CD)
-    // Game CD = ₹100 per day per CD (Disc Edition only)
-    const isDigital = consoleModel === "PS5 Digital Edition";
-    const dailyRate = isDigital ? 600 : 500;
-    const cdRate = 100;
-    const cds = isDigital ? 0 : Math.max(0, parseInt(String(cdCount), 10) || 0);
-    const games = isDigital ? [] : selectedGames;
-    const totalAmount = days * (dailyRate + cds * cdRate);
+    // Pricing Rules (3 Tiers):
+    // 1. CONSOLE_ONLY: ₹399/day (No CD, No Digital ID)
+    // 2. CONSOLE_CD: ₹499/day (Game CD included at no extra cost, No Digital ID)
+    // 3. CONSOLE_DIGITAL_ID: ₹599/day (100+ Games Digital Library Access with login credentials)
+    let dailyRate = 399;
+    let effectivePackage = rentalPackage;
+    let cds = 0;
+    let games: string[] = [];
+    let cdRate = 0;
+
+    if (rentalPackage === "CONSOLE_CD" || (!rentalPackage && selectedGames.length > 0)) {
+      effectivePackage = "CONSOLE_CD";
+      dailyRate = 499;
+      cds = Math.max(1, selectedGames.length || parseInt(String(cdCount), 10) || 1);
+      games = selectedGames;
+      cdRate = 0; // Included in the ₹499 plan!
+    } else if (rentalPackage === "CONSOLE_DIGITAL_ID") {
+      effectivePackage = "CONSOLE_DIGITAL_ID";
+      dailyRate = 599;
+      cds = 0;
+      games = [];
+      cdRate = 0;
+    } else {
+      effectivePackage = "CONSOLE_ONLY";
+      dailyRate = 399;
+      cds = 0;
+      games = [];
+      cdRate = 0;
+    }
+
+    const totalAmount = days * dailyRate;
 
     // Generate unique Rental Number: e.g. PS5-R10482
     const randomNum = Math.floor(10000 + Math.random() * 90000);
@@ -102,6 +124,7 @@ export async function POST(req: NextRequest) {
       govtIdType: govtIdType || "Aadhaar Card",
       govtIdNumber: govtIdNumber?.trim() || "",
       consoleModel,
+      rentalPackage: effectivePackage as any,
       startDate,
       endDate,
       totalDays: days,

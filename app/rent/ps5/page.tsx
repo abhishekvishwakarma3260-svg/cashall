@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   Gamepad2,
@@ -53,43 +54,69 @@ const AVAILABLE_GAMES: GameCD[] = [
     title: "EA Sports FC 24",
     genre: "Sports / Football",
     rating: "3+",
-    imageUrl: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&auto=format&fit=crop&q=60",
+    imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&auto=format&fit=crop&q=60",
   },
   {
     id: "gow_ragnarok",
     title: "God of War Ragnarök",
-    genre: "Action / Adventure",
+    genre: "Action / Mythology",
     rating: "18+",
-    imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop&q=60",
+    imageUrl: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&auto=format&fit=crop&q=60",
   },
   {
     id: "cricket24",
-    title: "Cricket 24: Official Game",
+    title: "Cricket 24",
     genre: "Sports / Cricket",
     rating: "3+",
     imageUrl: "https://images.unsplash.com/photo-1531415074868-036b1c57e329?w=400&auto=format&fit=crop&q=60",
   },
   {
-    id: "mortal_kombat1",
+    id: "tekken8",
+    title: "Tekken 8",
+    genre: "Fighting / Arcade",
+    rating: "16+",
+    imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&auto=format&fit=crop&q=60",
+  },
+  {
+    id: "mortal_kombat_1",
     title: "Mortal Kombat 1",
-    genre: "Fighting / Multiplayer",
+    genre: "Fighting / Action",
     rating: "18+",
-    imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&auto=format&fit=crop&q=60",
+    imageUrl: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&auto=format&fit=crop&q=60",
+  },
+  {
+    id: "hogwarts_legacy",
+    title: "Hogwarts Legacy",
+    genre: "RPG / Fantasy",
+    rating: "12+",
+    imageUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&auto=format&fit=crop&q=60",
+  },
+  {
+    id: "call_of_duty_mw3",
+    title: "Call of Duty: Modern Warfare III",
+    genre: "Shooter / Military",
+    rating: "18+",
+    imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&auto=format&fit=crop&q=60",
   },
 ];
+
+type RentalPackage = "CONSOLE_ONLY" | "CONSOLE_CD" | "CONSOLE_DIGITAL_ID";
 
 export default function Ps5RentalPage() {
   const router = useRouter();
 
-  // Console Selection
-  const [consoleModel, setConsoleModel] = useState<"PS5 Disc Edition" | "PS5 Digital Edition">("PS5 Disc Edition");
+  // 3-Tier Rental Package Selection:
+  // 1. CONSOLE_ONLY: ₹399/day (No CD, No Digital ID)
+  // 2. CONSOLE_CD: ₹499/day (PS5 Disc Edition with Game CD included at ₹0 extra)
+  // 3. CONSOLE_DIGITAL_ID: ₹599/day (PS5 with Digital ID 100+ games access with login ID/pass)
+  const [rentalPackage, setRentalPackage] = useState<RentalPackage>("CONSOLE_ONLY");
   const [extraControllers, setExtraControllers] = useState(false);
 
   // Rental Duration: Minimum 1 day, up to N days
   const [days, setDays] = useState<number>(2);
 
-  // Game CDs Selection: ₹100 per day per CD
-  const [selectedGames, setSelectedGames] = useState<string[]>(["gta5", "fc24"]);
+  // Game CDs Selection (Included in ₹499 plan)
+  const [selectedGames, setSelectedGames] = useState<string[]>(["gta5"]);
 
   // Customer & Delivery Info
   const [customerName, setCustomerName] = useState("");
@@ -114,20 +141,19 @@ export default function Ps5RentalPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  // Calculation:
-  // PS5 Disc Edition: ₹500/day (supports game CDs at ₹100/day)
-  // PS5 Digital Edition: ₹600/day (all-digital, without CD)
-  const isDigital = consoleModel === "PS5 Digital Edition";
-  const consoleDailyRate = isDigital ? 600 : 500;
-  const cdDailyRate = 100;
-  const consoleTotal = days * consoleDailyRate;
-  const cdTotal = isDigital ? 0 : days * (selectedGames.length * cdDailyRate);
-  const totalAmount = consoleTotal + cdTotal;
+  // Dynamic Pricing Calculation:
+  // CONSOLE_ONLY: ₹399/day
+  // CONSOLE_CD: ₹499/day (CD included!)
+  // CONSOLE_DIGITAL_ID: ₹599/day (100+ Games Access)
+  const dailyRate = rentalPackage === "CONSOLE_ONLY" ? 399 : rentalPackage === "CONSOLE_CD" ? 499 : 599;
+  const totalAmount = days * dailyRate;
 
   const toggleGame = (gameId: string) => {
-    if (isDigital) return;
+    if (rentalPackage !== "CONSOLE_CD") return;
     if (selectedGames.includes(gameId)) {
-      setSelectedGames(selectedGames.filter((id) => id !== gameId));
+      if (selectedGames.length > 1) {
+        setSelectedGames(selectedGames.filter((id) => id !== gameId));
+      }
     } else {
       setSelectedGames([...selectedGames, gameId]);
     }
@@ -160,11 +186,12 @@ export default function Ps5RentalPage() {
           pincode,
           govtIdType,
           govtIdNumber,
-          consoleModel,
+          consoleModel: rentalPackage === "CONSOLE_CD" ? "PS5 Disc Edition" : "PS5 Console",
+          rentalPackage,
           startDate: deliveryDate,
           totalDays: days,
-          cdCount: isDigital ? 0 : selectedGames.length,
-          selectedGames: isDigital ? [] : selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id),
+          cdCount: rentalPackage === "CONSOLE_CD" ? selectedGames.length : 0,
+          selectedGames: rentalPackage === "CONSOLE_CD" ? selectedGames.map((id) => AVAILABLE_GAMES.find((g) => g.id === id)?.title || id) : [],
           extraControllers,
         }),
       });
@@ -188,14 +215,23 @@ export default function Ps5RentalPage() {
       <div className="fixed top-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="fixed top-1/3 left-10 w-80 h-80 bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
 
-      {/* HEADER BREADCRUMB */}
+      {/* HEADER BREADCRUMB WITH CASHALL LOGO */}
       <div className="border-b border-neutral-800/80 bg-neutral-950/60 backdrop-blur-md sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href="/" className="text-gray-400 hover:text-white text-xs font-semibold">
-              CashALL
+          <div className="flex items-center gap-3 sm:gap-4">
+            <Link href="/" className="flex items-center group shrink-0" title="Go to CashALL Home">
+              <div className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-start">
+                <Image
+                  src="/logo.png"
+                  alt="CashALL Logo"
+                  width={140}
+                  height={40}
+                  className="object-contain object-left h-7 sm:h-8 w-auto transition-transform group-hover:scale-105"
+                  priority
+                />
+              </div>
             </Link>
-            <span className="text-gray-600 text-xs">/</span>
+            <span className="text-gray-700 text-xs">/</span>
             <span className="text-brand-yellow text-xs font-bold flex items-center gap-1.5">
               <Gamepad2 className="w-3.5 h-3.5" />
               PS5 Rental Service
@@ -207,7 +243,7 @@ export default function Ps5RentalPage() {
               Pay & Use on Delivery
             </span>
             <span className="px-2.5 py-1 rounded-full text-[11px] font-black bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30">
-              From ₹500 / Day
+              From ₹399 / Day
             </span>
           </div>
         </div>
@@ -222,10 +258,10 @@ export default function Ps5RentalPage() {
             </div>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
               Rent Sony PlayStation 5 <br />
-              <span className="text-brand-yellow">Just ₹500/Day. Pay on Handover.</span>
+              <span className="text-brand-yellow">Starting Just ₹399/Day. Pay on Handover.</span>
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Experience ultra-high-speed 4K HDR gaming at home. Book for as little as 1 day or extend anytime. Complete with DualSense wireless controller, ultra-high-speed HDMI 2.1 cable, and optional top-rated game CDs at only ₹100/day.
+              Experience ultra-high-speed 4K HDR gaming at home. Choose from Console Only (₹399/day), Console with Game CD included (₹499/day), or Console with Digital ID granting 100+ top games access (₹599/day). Complete with DualSense wireless controller, HDMI 2.1 cable, and doorstep delivery.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-gray-300">
@@ -248,63 +284,121 @@ export default function Ps5RentalPage() {
         <form onSubmit={handleBooking} className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* LEFT COLUMN: CUSTOMIZATION & DETAILS */}
           <div className="lg:col-span-8 space-y-8">
-            {/* 1. SELECT CONSOLE MODEL */}
+            {/* 1. SELECT PS5 RENTAL PACKAGE (3 TIERS) */}
             <div className="bg-neutral-900/90 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-lg font-black text-white flex items-center gap-2">
                     <Tv className="w-5 h-5 text-brand-yellow" />
-                    1. Choose Your PS5 Edition
+                    1. Choose Your PS5 Rental Package
                   </h2>
                   <p className="text-xs text-gray-400 mt-0.5">
-                    Both options include DualSense controller, power cable, and HDMI 2.1 cable.
+                    All options include DualSense controller, power cable, and ultra-high-speed HDMI 2.1 cable.
                   </p>
                 </div>
-                <span className="text-xs font-bold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full">
-                  Disc ₹500/d • Digital ₹600/d
+                <span className="text-xs font-bold text-brand-yellow bg-brand-yellow/10 px-2.5 py-1 rounded-full border border-brand-yellow/30">
+                  3 Options Available
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <button
-                  type="button"
-                  onClick={() => setConsoleModel("PS5 Disc Edition")}
-                  className={`p-5 rounded-2xl border text-left transition-all ${
-                    consoleModel === "PS5 Disc Edition"
-                      ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30"
-                      : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-black text-white">PS5 Disc Edition</span>
-                    <Disc className={`w-5 h-5 ${consoleModel === "PS5 Disc Edition" ? "text-brand-yellow" : "text-gray-500"}`} />
-                  </div>
-                  <p className="text-xs text-gray-400">
-                    Supports 4K Blu-ray Game Discs and digital downloads. Recommended if renting game CDs!
-                  </p>
-                  <div className="mt-4 text-xs font-bold text-brand-yellow">₹500 / day</div>
-                </button>
-
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* TIER 1: CONSOLE ONLY (₹399/day) */}
                 <button
                   type="button"
                   onClick={() => {
-                    setConsoleModel("PS5 Digital Edition");
+                    setRentalPackage("CONSOLE_ONLY");
                     setSelectedGames([]);
                   }}
-                  className={`p-5 rounded-2xl border text-left transition-all ${
-                    consoleModel === "PS5 Digital Edition"
-                      ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30"
+                  className={`p-5 rounded-2xl border text-left transition-all flex flex-col justify-between ${
+                    rentalPackage === "CONSOLE_ONLY"
+                      ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30 shadow-lg"
                       : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-black text-white">PS5 Digital Edition</span>
-                    <Gamepad2 className={`w-5 h-5 ${consoleModel === "PS5 Digital Edition" ? "text-brand-yellow" : "text-gray-500"}`} />
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-black text-white">Console Only</span>
+                      <Gamepad2 className={`w-5 h-5 ${rentalPackage === "CONSOLE_ONLY" ? "text-brand-yellow" : "text-gray-500"}`} />
+                    </div>
+                    <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-2">
+                      No CD • No Digital ID
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      Only PlayStation 5 without any CD or Digital ID. Ideal if you already have your own games or PSN account.
+                    </p>
                   </div>
-                  <p className="text-xs text-gray-400">
-                    Sleek disc-free design for digital library games and PlayStation Plus accounts. All-digital (without CD).
-                  </p>
-                  <div className="mt-4 text-xs font-bold text-brand-yellow">₹600 / day • Without CD</div>
+                  <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between">
+                    <span className="text-base font-black text-brand-yellow">₹399 / day</span>
+                    {rentalPackage === "CONSOLE_ONLY" && (
+                      <span className="text-[10px] font-black text-brand-yellow bg-brand-yellow/20 px-2 py-0.5 rounded">SELECTED</span>
+                    )}
+                  </div>
+                </button>
+
+                {/* TIER 2: CONSOLE + GAME CD (₹499/day) */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRentalPackage("CONSOLE_CD");
+                    if (selectedGames.length === 0) setSelectedGames(["gta5"]);
+                  }}
+                  className={`p-5 rounded-2xl border text-left transition-all flex flex-col justify-between ${
+                    rentalPackage === "CONSOLE_CD"
+                      ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30 shadow-lg"
+                      : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700"
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-black text-white">Console + Game CD</span>
+                      <Disc className={`w-5 h-5 ${rentalPackage === "CONSOLE_CD" ? "text-brand-yellow" : "text-gray-500"}`} />
+                    </div>
+                    <div className="text-[10px] uppercase font-bold text-green-400 tracking-wider mb-2">
+                      Game CD Included (₹0 Extra)
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      PlayStation 5 Disc Edition with physical game CD included at no extra cost. Pick your favorite game disc below!
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between">
+                    <span className="text-base font-black text-brand-yellow">₹499 / day</span>
+                    {rentalPackage === "CONSOLE_CD" && (
+                      <span className="text-[10px] font-black text-brand-yellow bg-brand-yellow/20 px-2 py-0.5 rounded">SELECTED</span>
+                    )}
+                  </div>
+                </button>
+
+                {/* TIER 3: CONSOLE + DIGITAL ID (₹599/day) */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRentalPackage("CONSOLE_DIGITAL_ID");
+                    setSelectedGames([]);
+                  }}
+                  className={`p-5 rounded-2xl border text-left transition-all flex flex-col justify-between ${
+                    rentalPackage === "CONSOLE_DIGITAL_ID"
+                      ? "border-brand-yellow bg-brand-yellow/10 ring-2 ring-brand-yellow/30 shadow-lg"
+                      : "border-neutral-800 bg-neutral-950/60 hover:border-neutral-700"
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-black text-white">Console + Digital ID</span>
+                      <Sparkles className={`w-5 h-5 ${rentalPackage === "CONSOLE_DIGITAL_ID" ? "text-brand-yellow" : "text-gray-500"}`} />
+                    </div>
+                    <div className="text-[10px] uppercase font-bold text-blue-400 tracking-wider mb-2">
+                      100+ Games Access
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      PlayStation with pre-loaded Digital ID giving instant access to 100+ games. We provide login ID & password on delivery!
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between">
+                    <span className="text-base font-black text-brand-yellow">₹599 / day</span>
+                    {rentalPackage === "CONSOLE_DIGITAL_ID" && (
+                      <span className="text-[10px] font-black text-brand-yellow bg-brand-yellow/20 px-2 py-0.5 rounded">SELECTED</span>
+                    )}
+                  </div>
                 </button>
               </div>
 
@@ -405,36 +499,64 @@ export default function Ps5RentalPage() {
               </div>
             </div>
 
-            {/* 3. OPTIONAL GAME CDS ADD-ON */}
+            {/* 3. GAME DISCS / DIGITAL ACCESS */}
             <div className="bg-neutral-900/90 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-lg font-black text-white flex items-center gap-2">
                     <Disc className="w-5 h-5 text-brand-yellow" />
-                    3. Add Game Discs (Optional)
+                    3. Game Discs / Library Access
                   </h2>
                   <p className="text-xs text-gray-400 mt-0.5">
-                    {isDigital
-                      ? "PS5 Digital Edition is all-digital and does not support physical game CDs."
-                      : "Select popular PS5 titles to play. Each CD costs only ₹100/day."}
+                    {rentalPackage === "CONSOLE_CD"
+                      ? "Choose your game CD(s). Included in your ₹499/day plan with ₹0 extra charge!"
+                      : rentalPackage === "CONSOLE_DIGITAL_ID"
+                      ? "Digital ID with 100+ blockbuster titles access included with login credentials."
+                      : "Console Only plan selected. No CD or Digital ID included."}
                   </p>
                 </div>
-                {!isDigital && (
-                  <span className="text-xs font-bold text-brand-yellow bg-brand-yellow/10 px-2.5 py-1 rounded-full">
-                    {selectedGames.length} CD{selectedGames.length !== 1 ? "s" : ""} Selected (₹{selectedGames.length * cdDailyRate * days})
+                {rentalPackage === "CONSOLE_CD" && (
+                  <span className="text-xs font-bold text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/30">
+                    {selectedGames.length} CD{selectedGames.length !== 1 ? "s" : ""} Included (₹0 Extra)
                   </span>
                 )}
               </div>
 
-              {isDigital ? (
+              {rentalPackage === "CONSOLE_ONLY" ? (
                 <div className="p-5 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-blue-400">
-                    <Info className="w-4 h-4" />
-                    <span>PS5 Digital Edition is 100% Disc-Free</span>
+                  <div className="flex items-center gap-2 text-xs font-bold text-gray-400">
+                    <Info className="w-4 h-4 text-brand-yellow" />
+                    <span>Console Only Plan (₹399 / day)</span>
                   </div>
                   <p className="text-xs text-gray-400 leading-relaxed">
-                    Physical game CDs are not supported on the Digital Edition. You can log into your PlayStation Network (PSN) / PS Plus account on the console to download and play games directly!
+                    This plan includes the PS5 console and DualSense controller without any CD or Digital ID. If you want physical game discs included at ₹0 extra, choose the{" "}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setRentalPackage("CONSOLE_CD");
+                        if (selectedGames.length === 0) setSelectedGames(["gta5"]);
+                      }}
+                      className="text-brand-yellow font-bold underline hover:text-white"
+                    >
+                      Console + Game CD plan (₹499/day)
+                    </button>
+                    !
                   </p>
+                </div>
+              ) : rentalPackage === "CONSOLE_DIGITAL_ID" ? (
+                <div className="p-5 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold text-brand-yellow">
+                    <Sparkles className="w-4 h-4 text-brand-yellow" />
+                    <span>100+ Games Digital Library Access Included (₹599 / day)</span>
+                  </div>
+                  <p className="text-xs text-gray-300 leading-relaxed">
+                    You will receive official PlayStation Network (PSN) login credentials (ID & Password) upon delivery. This gives you instant digital access to over 100+ blockbuster titles (Spider-Man, GTA V, God of War, FIFA/FC, Assassin's Creed, and more) with no physical discs required!
+                  </p>
+                  <div className="flex flex-wrap gap-2 text-[10px] font-bold">
+                    <span className="px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300 border border-blue-500/30">✓ 100+ Blockbuster Games</span>
+                    <span className="px-2.5 py-1 rounded-lg bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30">✓ Login ID & Password Provided</span>
+                    <span className="px-2.5 py-1 rounded-lg bg-green-500/20 text-green-300 border border-green-500/30">✓ Instant Play — No Discs Needed</span>
+                  </div>
                 </div>
               ) : (
                 <>
@@ -467,7 +589,7 @@ export default function Ps5RentalPage() {
 
                           <div className="mt-4 flex items-center justify-between text-[11px] pt-2 border-t border-neutral-800/60">
                             <span className="text-gray-400">Rating: {game.rating}</span>
-                            <span className="font-bold text-brand-yellow">+₹100/day</span>
+                            <span className="font-bold text-green-400">INCLUDED FREE</span>
                           </div>
                         </div>
                       );
@@ -621,6 +743,10 @@ export default function Ps5RentalPage() {
                     placeholder="Enter full 12-digit Aadhaar / DL / Voter ID Number"
                     className="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white text-xs font-medium focus:border-brand-yellow focus:outline-none"
                   />
+                  <p className="text-[11px] text-brand-yellow/90 mt-1.5 flex items-center gap-1.5">
+                    <Info className="w-3.5 h-3.5 shrink-0 text-brand-yellow" />
+                    Please enter your authentic official document number. Our delivery executive will physically verify the original document during doorstep handover.
+                  </p>
                 </div>
               </div>
             </div>
@@ -642,25 +768,34 @@ export default function Ps5RentalPage() {
               <div className="space-y-3 text-xs">
                 <div className="flex items-center justify-between text-gray-300">
                   <span>
-                    {consoleModel} ({days} Day{days > 1 ? "s" : ""} × ₹{consoleDailyRate})
+                    {rentalPackage === "CONSOLE_ONLY"
+                      ? `Console Only (${days}d × ₹399)`
+                      : rentalPackage === "CONSOLE_CD"
+                      ? `Console + Game CD (${days}d × ₹499)`
+                      : `Console + Digital ID 100+ Games (${days}d × ₹599)`}
                   </span>
-                  <span className="font-bold text-white">₹{consoleTotal.toLocaleString("en-IN")}</span>
+                  <span className="font-bold text-white">₹{totalAmount.toLocaleString("en-IN")}</span>
                 </div>
 
-                {isDigital ? (
-                  <div className="flex items-center justify-between text-gray-400">
-                    <span>Game Discs</span>
-                    <span className="font-semibold text-gray-400">Without CD (Digital Edition)</span>
+                {rentalPackage === "CONSOLE_CD" && (
+                  <div className="flex items-center justify-between text-gray-300">
+                    <span>Game Discs ({selectedGames.length} CD{selectedGames.length > 1 ? "s" : ""})</span>
+                    <span className="font-bold text-green-400">INCLUDED (₹0)</span>
                   </div>
-                ) : (
-                  selectedGames.length > 0 && (
-                    <div className="flex items-center justify-between text-gray-300">
-                      <span>
-                        Game Discs ({selectedGames.length} CD{selectedGames.length > 1 ? "s" : ""} × {days}d × ₹100)
-                      </span>
-                      <span className="font-bold text-white">₹{cdTotal.toLocaleString("en-IN")}</span>
-                    </div>
-                  )
+                )}
+
+                {rentalPackage === "CONSOLE_DIGITAL_ID" && (
+                  <div className="flex items-center justify-between text-gray-300">
+                    <span>100+ Games PSN Access</span>
+                    <span className="font-bold text-blue-400">ID & Password Provided</span>
+                  </div>
+                )}
+
+                {rentalPackage === "CONSOLE_ONLY" && (
+                  <div className="flex items-center justify-between text-gray-400">
+                    <span>Game Discs / Digital ID</span>
+                    <span className="font-semibold text-gray-400">Not Included (Console Only)</span>
+                  </div>
                 )}
 
                 {extraControllers && (
@@ -868,9 +1003,16 @@ export default function Ps5RentalPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-white text-sm mb-1">5. Plan Extension</h4>
+                  <h4 className="font-bold text-white text-sm mb-1">5. Original Govt ID Physical Verification & Customer Cooperation</h4>
                   <p>
-                    Customers can extend their rental period directly from the CashALL tracking link (Disc Edition: ₹500/day + game CD charges; Digital Edition: ₹600/day). Extension requests must be placed before the scheduled return pickup time.
+                    The customer undertakes to present their authentic, original physical Govt ID (Aadhaar Card, Driving License, Voter ID, or Passport) corresponding to the number provided during booking to our delivery executive upon arrival. When our delivery agent asks for the customer's physical ID for verification, the customer agrees to fully cooperate with them.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-white text-sm mb-1">6. Plan Extension</h4>
+                  <p>
+                    Customers can extend their rental period directly from the CashALL tracking link at their plan's daily rate (₹399/day for Console Only, ₹499/day for Console + Game CD, ₹599/day for Console + Digital ID). Extension requests must be placed before the scheduled return pickup time.
                   </p>
                 </div>
               </div>

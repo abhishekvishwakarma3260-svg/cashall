@@ -12,14 +12,15 @@ export interface Ps5Rental {
   pincode: string;
   govtIdType?: string;
   govtIdNumber?: string;
-  consoleModel: "PS5 Disc Edition" | "PS5 Digital Edition";
+  consoleModel: "PS5 Disc Edition" | "PS5 Digital Edition" | string;
+  rentalPackage?: "CONSOLE_ONLY" | "CONSOLE_CD" | "CONSOLE_DIGITAL_ID";
   startDate: string;
   endDate: string;
   totalDays: number;
   extendedDays: number;
-  dailyRate: number; // 500
+  dailyRate: number; // 399, 499, or 599
   cdCount: number;
-  cdRate: number; // 100 per day per CD
+  cdRate: number; // 0 (included in 499) or 100
   selectedGames: string[];
   extraControllers: boolean;
   totalAmount: number;
