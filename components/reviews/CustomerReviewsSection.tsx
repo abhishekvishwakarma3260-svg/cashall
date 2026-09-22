@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { CUSTOMER_REVIEWS } from "@/lib/data/reviewsData";
+import { CUSTOMER_REVIEWS, REVIEW_STATS } from "@/lib/data/reviewsData";
 import { ReviewStatsBar } from "./ReviewStatsBar";
 import { CustomerReviewCard } from "./CustomerReviewCard";
 import { Sparkles, MessageSquare } from "lucide-react";
 
-type FilterCategory = "ALL" | "MOBILE_APPLE" | "MOBILE_ANDROID" | "LAPTOP";
+type FilterCategory = "ALL" | "MOBILE_APPLE" | "MOBILE_ANDROID" | "LAPTOP" | "TABLET";
 
 export function CustomerReviewsSection() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("ALL");
@@ -17,6 +17,7 @@ export function CustomerReviewsSection() {
     { id: "MOBILE_APPLE", label: "Apple iPhone" },
     { id: "MOBILE_ANDROID", label: "Android Phones" },
     { id: "LAPTOP", label: "Laptops & MacBooks" },
+    { id: "TABLET", label: "Tablets" },
   ];
 
   const filteredReviews = useMemo(() => {
@@ -31,6 +32,7 @@ export function CustomerReviewsSection() {
         );
       }
       if (activeFilter === "LAPTOP") return item.deviceCategory === "LAPTOP";
+      if (activeFilter === "TABLET") return item.deviceCategory === "TABLET";
       return true;
     });
   }, [activeFilter]);
@@ -44,15 +46,15 @@ export function CustomerReviewsSection() {
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-black text-xs font-extrabold shadow-sm">
             <Sparkles className="w-4 h-4 text-brand-black" />
-            <span>Real Sellers • Verified Payouts</span>
+            <span>{REVIEW_STATS.totalOrders} Completed Orders • Real Sellers • Verified Payouts</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-brand-black tracking-tight">
-            Loved By <span className="text-brand-yellow bg-brand-black px-2 py-0.5 rounded-xl">26</span> Verified Device Sellers
+            Loved By <span className="text-brand-yellow bg-brand-black px-2 py-0.5 rounded-xl">{REVIEW_STATS.uniqueSellers}</span> Verified Device Sellers
           </h2>
 
           <p className="text-sm sm:text-base text-brand-muted max-w-xl mx-auto leading-relaxed">
-            Read authentic doorstep payout reviews and ratings from our completed customer orders.
+            Read authentic doorstep payout reviews and ratings from our <span className="font-extrabold text-brand-black">{REVIEW_STATS.totalOrders} completed customer orders</span> (including trusted repeat sellers) across West Bengal & India.
           </p>
         </div>
 

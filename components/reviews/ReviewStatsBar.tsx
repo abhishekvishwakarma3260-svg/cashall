@@ -5,7 +5,7 @@ import { REVIEW_STATS } from "@/lib/data/reviewsData";
 import { Star, ShieldCheck, Zap, Lock, ThumbsUp } from "lucide-react";
 
 export function ReviewStatsBar() {
-  const { averageRating, totalReviews, satisfactionRate, ratingBreakdown } = REVIEW_STATS;
+  const { averageRating, satisfactionRate, ratingBreakdown, totalOrders = 33, uniqueSellers = 26 } = REVIEW_STATS;
 
   const trustHighlights = [
     {
@@ -26,7 +26,7 @@ export function ReviewStatsBar() {
     {
       icon: ThumbsUp,
       title: `${satisfactionRate}% Seller Love`,
-      subtitle: `${totalReviews} happy verified sellers`,
+      subtitle: `${uniqueSellers} happy sellers (${totalOrders} orders)`,
     },
   ];
 
@@ -57,7 +57,7 @@ export function ReviewStatsBar() {
           </div>
 
           <p className="text-sm text-brand-muted font-medium leading-relaxed">
-            Based on <span className="font-extrabold text-brand-black">{totalReviews} verified device sales</span> across West Bengal & India.
+            Based on <span className="font-extrabold text-brand-black">{totalOrders} verified device sales</span> across West Bengal & India.
           </p>
         </div>
 
