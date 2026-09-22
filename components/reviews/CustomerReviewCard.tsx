@@ -55,11 +55,6 @@ export function CustomerReviewCard({ review }: CustomerReviewCardProps) {
                     <span>Verified Seller</span>
                   </span>
                 )}
-                {review.isRepeatCustomer && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded-full border border-amber-200">
-                    <span>🔁 Repeat Seller {review.repeatOrderNumber ? `(${review.repeatOrderNumber === 2 ? "2nd" : review.repeatOrderNumber === 3 ? "3rd" : "4th"} Sale)` : ""}</span>
-                  </span>
-                )}
               </div>
               <div className="text-[11px] text-brand-muted flex flex-wrap items-center gap-x-2 gap-y-0.5">
                 <span>{review.location}</span>

@@ -33,8 +33,6 @@ export interface CustomerReview {
   verified: boolean;
   payoutSpeed: string;
   deviceCategory: "MOBILE" | "LAPTOP" | "TABLET";
-  isRepeatCustomer?: boolean;
-  repeatOrderNumber?: number;
   hasVideo?: boolean;
   videoReviewId?: string;
   helpfulCount: number;
@@ -45,7 +43,6 @@ export interface ReviewStats {
   totalReviews: number;
   totalOrders: number;
   uniqueSellers: number;
-  repeatOrdersCount: number;
   satisfactionRate: number; // e.g. 100%
   ratingBreakdown: {
     5: number;
@@ -61,7 +58,6 @@ export const REVIEW_STATS: ReviewStats = {
   totalReviews: 33,
   totalOrders: 33,
   uniqueSellers: 26,
-  repeatOrdersCount: 7,
   satisfactionRate: 100,
   ratingBreakdown: {
     5: 76,
@@ -161,7 +157,7 @@ export const VIDEO_REVIEWS: VideoReview[] = [
   },
 ];
 
-// Verified Written Reviews from 33 COMPLETED ORDERS across 26 UNIQUE SELLERS
+// Verified Written Reviews from 33 COMPLETED ORDERS
 export const CUSTOMER_REVIEWS: CustomerReview[] = [
   {
     id: "order-rev-CA21165",
@@ -179,7 +175,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 14,
   },
   {
@@ -192,14 +187,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 800,
     payoutMethod: "Instant UPI",
     rating: 5,
-    reviewTitle: "Sold my second phone in the same visit — highly trusted!",
-    reviewText: "I had two older Samsung phones lying unused at home. After seeing how quickly and fairly the executive evaluated my M30s, I handed over my Galaxy J8 right then. Another instant ₹800 received without any arguments.",
+    reviewTitle: "Quick and honest doorstep evaluation for Galaxy J8",
+    reviewText: "Sold my Samsung Galaxy J8 through CashALL. The executive inspected the phone, checked the screen and cameras in 3 minutes, and transferred ₹800 directly to my UPI without any arguments.",
     date: "Yesterday",
     verified: true,
     payoutSpeed: "Paid in 3 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 2,
     helpfulCount: 19,
   },
   {
@@ -218,7 +211,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 6 mins",
     deviceCategory: "LAPTOP",
-    isRepeatCustomer: false,
     helpfulCount: 21,
   },
   {
@@ -237,7 +229,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 16,
   },
   {
@@ -256,7 +247,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 28,
   },
   {
@@ -275,7 +265,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 12,
   },
   {
@@ -294,7 +283,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 7 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 15,
   },
   {
@@ -313,7 +301,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 6 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 17,
   },
   {
@@ -326,14 +313,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 528,
     payoutMethod: "Instant UPI",
     rating: 5,
-    reviewTitle: "Second phone sold back-to-back — super convenient",
-    reviewText: "Cleared out my drawer of old phones. Sold my Nokia C12 and Galaxy J7 Nxt in one go with CashALL. Transparent inspection for both phones and immediate payment confirmations.",
+    reviewTitle: "Completely hassle-free doorstep buyback in Kolkata",
+    reviewText: "Sold my old Samsung Galaxy J7 Nxt with CashALL. Transparent inspection, no haggling, and immediate payment confirmation right at my address.",
     date: "5 days ago",
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 2,
     helpfulCount: 14,
   },
   {
@@ -352,7 +337,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 22,
   },
   {
@@ -371,7 +355,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 3 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 27,
   },
   {
@@ -390,7 +373,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 7 mins",
     deviceCategory: "LAPTOP",
-    isRepeatCustomer: false,
     helpfulCount: 32,
   },
   {
@@ -409,7 +391,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 37,
   },
   {
@@ -428,7 +409,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 8 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 42,
   },
   {
@@ -441,14 +421,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 7300,
     payoutMethod: "Instant UPI (PhonePe)",
     rating: 5,
-    reviewTitle: "Sold another phone with CashALL — repeat customer satisfaction",
-    reviewText: "This is my second time booking with CashALL. Sold my Vivo Y39 5G from Sil Para. The agent recognized me, was polite, completed checks fast, and transferred ₹7,300 on the spot.",
+    reviewTitle: "Smooth doorstep pickup and on-the-spot UPI transfer",
+    reviewText: "Sold my Vivo Y39 5G from Sil Para. The agent was polite, completed all checks fast, and transferred ₹7,300 on the spot.",
     date: "2 weeks ago",
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 2,
     helpfulCount: 29,
   },
   {
@@ -467,7 +445,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 6 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 17,
   },
   {
@@ -486,7 +463,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 22,
   },
   {
@@ -499,14 +475,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 6500,
     payoutMethod: "Instant UPI (PhonePe)",
     rating: 5,
-    reviewTitle: "Third device sold — CashALL is my go-to buyback partner",
-    reviewText: "Helped my family upgrade their phones. Sold an OPPO A59 5G as my 3rd order with CashALL. Always punctual, professional, and reliable with ₹6,500 instant payment.",
+    reviewTitle: "Punctual, professional and reliable doorstep service",
+    reviewText: "Booked doorstep pickup for my OPPO A59 5G. The executive arrived on time, was courteous, and transferred ₹6,500 instantly to my UPI.",
     date: "2 weeks ago",
     verified: true,
     payoutSpeed: "Paid in 3 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 3,
     helpfulCount: 27,
   },
   {
@@ -525,7 +499,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 7 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 32,
   },
   {
@@ -538,14 +511,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 1700,
     payoutMethod: "Instant UPI (GPay)",
     rating: 5,
-    reviewTitle: "4th order completed! Best buyback experience in West Bengal",
-    reviewText: "Sold 4 devices through CashALL so far. Never faced any delays or payment trouble. ₹1,700 for the Redmi 10 Power credited right at my doorstep. 10/10 service!",
+    reviewTitle: "Prompt verification and quick payment confirmation",
+    reviewText: "Sold my Xiaomi Redmi 10 Power through CashALL. Smooth inspection and ₹1,700 credited right at my doorstep. Great service!",
     date: "2 weeks ago",
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 4,
     helpfulCount: 37,
   },
   {
@@ -558,14 +529,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 7000,
     payoutMethod: "Instant UPI (PhonePe)",
     rating: 4,
-    reviewTitle: "Second order with CashALL — got ₹7,000 for my OnePlus",
+    reviewTitle: "Got ₹7,000 for my OnePlus Nord with zero hassle",
     reviewText: "Booked a pickup for my OnePlus Nord. Agent was fast, inspected screen and body neatly, and sent payment confirmation immediately.",
     date: "3 weeks ago",
     verified: true,
     payoutSpeed: "Paid in 8 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 2,
     helpfulCount: 42,
   },
   {
@@ -584,7 +553,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 12,
   },
   {
@@ -603,7 +571,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 6 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 17,
   },
   {
@@ -622,7 +589,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 22,
   },
   {
@@ -641,7 +607,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 3 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 27,
   },
   {
@@ -654,14 +619,12 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     payoutAmount: 1800,
     payoutMethod: "Instant UPI (GPay)",
     rating: 4,
-    reviewTitle: "Sold second device from home — very reliable",
-    reviewText: "Sold my Redmi 8A alongside my other device. Doorstep partner reached Sahid Nagar as scheduled. Received ₹1,800 via GPay seamlessly.",
+    reviewTitle: "Honest evaluation and instant UPI credit",
+    reviewText: "Sold my Redmi 8A through CashALL. Doorstep partner reached Sahid Nagar as scheduled and transferred ₹1,800 via GPay seamlessly.",
     date: "3 weeks ago",
     verified: true,
     payoutSpeed: "Paid in 7 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: true,
-    repeatOrderNumber: 2,
     helpfulCount: 32,
   },
   {
@@ -680,7 +643,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 37,
   },
   {
@@ -699,7 +661,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 8 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 42,
   },
   {
@@ -718,7 +679,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 4 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 12,
   },
   {
@@ -737,7 +697,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 6 mins",
     deviceCategory: "TABLET",
-    isRepeatCustomer: false,
     helpfulCount: 17,
   },
   {
@@ -756,7 +715,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 5 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 22,
   },
   {
@@ -775,7 +733,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 3 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 27,
   },
   {
@@ -794,7 +751,6 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
     verified: true,
     payoutSpeed: "Paid in 7 mins",
     deviceCategory: "MOBILE",
-    isRepeatCustomer: false,
     helpfulCount: 32,
   },
 ];

@@ -26,7 +26,7 @@ export function ReviewStatsBar() {
     {
       icon: ThumbsUp,
       title: `${satisfactionRate}% Seller Love`,
-      subtitle: `${uniqueSellers} happy sellers (${totalOrders} orders)`,
+      subtitle: `${totalOrders} happy verified sellers`,
     },
   ];
 

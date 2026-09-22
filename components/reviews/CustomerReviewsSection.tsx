@@ -54,7 +54,7 @@ export function CustomerReviewsSection() {
           </h2>
 
           <p className="text-sm sm:text-base text-brand-muted max-w-xl mx-auto leading-relaxed">
-            Read authentic doorstep payout reviews and ratings from our <span className="font-extrabold text-brand-black">{REVIEW_STATS.totalOrders} completed customer orders</span> (including trusted repeat sellers) across West Bengal & India.
+            Read authentic doorstep payout reviews and ratings from our <span className="font-extrabold text-brand-black">{REVIEW_STATS.totalOrders} completed customer orders</span> across West Bengal & India.
           </p>
         </div>
 
