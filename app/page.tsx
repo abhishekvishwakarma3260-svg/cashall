@@ -116,6 +116,22 @@ export default function HomePage() {
               "@type": "Answer",
               "text": "Yes. Our verified executive assists you with performing a factory data reset and complete data wipe on-site, ensuring zero residual photos, contacts, or accounts remain."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Why choose CashALL over Cashify, Cashkr, Mobisell, or CashKaro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CashALL offers up to 5% higher payouts than Cashify and other resale platforms, instant on-the-spot UPI/bank payout during doorstep evaluation, zero hidden deductions, and fast free pickup across Kolkata, Howrah, and West Bengal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I rent or sell a PlayStation 5 (PS5) on CashALL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! CashALL provides PlayStation 5 (PS5) console rentals with 2 DualSense wireless controllers, top 4K games (GTA V, Spider-Man 2, FC 24, God of War Ragnarok), and free doorstep delivery and setup. You can also sell your used gaming consoles for instant cash."
+            }
           }
         ]
       }

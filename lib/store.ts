@@ -83086,6 +83086,18 @@ export const INITIAL_FAQS: FAQData[] = [
     question: "What happens to the personal data on my device?",
     answer: "Our pickup partner helps you perform a factory data reset in your presence during pickup. CashALL ensures complete data wiping protocols before devices enter processing for resale.",
     category: "SECURITY",
+  },
+  {
+    id: "faq-6",
+    question: "Why choose CashALL over Cashify, Cashkr, Mobisell, or CashKaro?",
+    answer: "CashALL provides up to 5% higher payouts than Cashify and other platforms, instant on-the-spot UPI bank transfers without delays, 100% transparent diagnostics with no unfair last-minute price cuts, and free doorstep pickup across Kolkata, Howrah, and West Bengal.",
+    category: "COMPARISON",
+  },
+  {
+    id: "faq-7",
+    question: "Can I rent or sell a PlayStation 5 (PS5) on CashALL?",
+    answer: "Yes! CashALL provides PlayStation 5 (PS5) console rentals with 2 DualSense wireless controllers, top 4K games (GTA V, Spider-Man 2, FC 24, God of War Ragnarok), and free doorstep delivery and setup. You can also sell your used gaming consoles for instant cash.",
+    category: "GAMING",
   }];
 
 const ENABLE_SAMPLE_DATA = process.env.NEXT_PUBLIC_ENABLE_SAMPLE_DATA === "true";

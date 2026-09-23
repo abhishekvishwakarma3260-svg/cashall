@@ -140,6 +140,11 @@ export function Footer() {
                   Sell Tablet / iPad
                 </Link>
               </li>
+              <li>
+                <Link href="/rent/ps5" className="hover:text-brand-yellow transition-colors text-blue-400 font-semibold">
+                  Rent PS5 Console
+                </Link>
+              </li>
             </ul>
           </div>
 
