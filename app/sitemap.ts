@@ -2,67 +2,132 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.cashall.in";
+  const now = new Date();
 
-  return [
+  // Core Static Pages
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/sell`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/sell/mobile`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      lastModified: now,
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/sell/laptop`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      lastModified: now,
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/sell/tablet`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
-      priority: 0.4,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "yearly",
-      priority: 0.4,
+      priority: 0.3,
     },
+  ];
+
+  // Mobile Brand Pages
+  const mobileBrands = [
+    "apple",
+    "samsung",
+    "oneplus",
+    "xiaomi",
+    "vivo",
+    "oppo",
+    "realme",
+    "poco",
+    "motorola",
+    "google",
+    "iqoo",
+    "nothing",
+  ];
+
+  const mobileBrandPages: MetadataRoute.Sitemap = mobileBrands.map((brand) => ({
+    url: `${baseUrl}/sell/mobile/${brand}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  // Laptop Brand Pages
+  const laptopBrands = [
+    "apple",
+    "dell",
+    "hp",
+    "lenovo",
+    "asus",
+    "acer",
+    "msi",
+  ];
+
+  const laptopBrandPages: MetadataRoute.Sitemap = laptopBrands.map((brand) => ({
+    url: `${baseUrl}/sell/laptop/${brand}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  // Tablet Brand Pages
+  const tabletBrands = [
+    "apple",
+    "samsung",
+    "lenovo",
+    "xiaomi",
+  ];
+
+  const tabletBrandPages: MetadataRoute.Sitemap = tabletBrands.map((brand) => ({
+    url: `${baseUrl}/sell/tablet/${brand}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  return [
+    ...staticPages,
+    ...mobileBrandPages,
+    ...laptopBrandPages,
+    ...tabletBrandPages,
   ];
 }

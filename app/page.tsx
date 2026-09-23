@@ -27,11 +27,16 @@ export default function HomePage() {
         },
         "image": "https://www.cashall.in/photos/CashALL_favicon.png",
         "description":
-          "CashALL helps you sell your old phones and laptops for the best value with transparent pricing, fast pickup and secure payment.",
+          "CashALL helps you sell old mobile phones, used laptops and tablets online for the highest value with instant doorstep evaluation, fast UPI cash payout, and certified data wiping.",
+        "areaServed": [
+          { "@type": "City", "name": "Kolkata" },
+          { "@type": "AdministrativeArea", "name": "West Bengal" },
+          { "@type": "Country", "name": "India" }
+        ],
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "26",
+          "ratingValue": "4.8",
+          "reviewCount": "33",
           "bestRating": "5",
           "worstRating": "1"
         }
@@ -42,11 +47,77 @@ export default function HomePage() {
         "url": "https://www.cashall.in/",
         "name": "CashALL",
         "alternateName": ["CashALL India", "cashall.in"],
-        "description": "Best Value for Your Old Devices",
+        "description": "Sell Old Phone, Used Laptop & Tablet for Instant Cash",
         "publisher": {
           "@id": "https://www.cashall.in/#organization"
         },
         "inLanguage": "en-IN"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.cashall.in/#service",
+        "name": "Doorstep Old Device Selling & Cash Buyback",
+        "serviceType": "Used Mobile Phone, Laptop & Tablet Buyback",
+        "provider": {
+          "@id": "https://www.cashall.in/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "description": "Free doorstep evaluation and instant bank or UPI payout for used smartphones, laptops, and tablets.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": "0",
+          "description": "Free doorstep pickup & instant payment"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.cashall.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I sell my old phone or laptop on CashALL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select your device brand and model, answer a few quick diagnostic questions about screen and body condition, get an instant transparent quote, and book a free doorstep pickup at your preferred time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When and how do I receive payment for my old device?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Payment is transferred instantly on the spot during doorstep inspection via UPI, Google Pay, PhonePe, Paytm, or direct IMPS bank transfer before the agent leaves."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I sell a phone with a broken screen or without a bill or box?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! CashALL accepts devices in all conditions including broken screens, minor dents, and phones without original bill or box. Valid government ID proof is verified for security."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is doorstep device evaluation and pickup really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, CashALL provides 100% free doorstep evaluation and pickup. There are no hidden fees, service charges, or deductions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my personal data safe when I sell my device to CashALL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our verified executive assists you with performing a factory data reset and complete data wipe on-site, ensuring zero residual photos, contacts, or accounts remain."
+            }
+          }
+        ]
       }
     ]
   };

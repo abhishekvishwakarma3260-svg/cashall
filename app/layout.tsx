@@ -9,25 +9,47 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.cashall.in"),
 
   title: {
-    default: "CashALL | Best Value for Your Old Devices",
+    default: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
     template: "%s | CashALL",
   },
 
   description:
-    "CashALL helps you sell your old phones and laptops for the best value. Get a transparent price, fast pickup and secure payment for your old devices.",
+    "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep evaluation, instant UPI/bank cash payout, and 100% safe certified data wipe.",
 
   keywords: [
     "CashALL",
     "CashALL India",
-    "sell old phone",
-    "sell old mobile",
-    "sell old laptop",
-    "sell used phone",
-    "sell used laptop",
-    "old device resale",
-    "sell electronics",
-    "phone resale",
-    "laptop resale",
+    "sell old phone online",
+    "sell used phone online",
+    "sell old mobile for cash",
+    "sell old phone instant cash",
+    "best place to sell old phone",
+    "sell old laptop online",
+    "sell used laptop for cash",
+    "sell old tablet online",
+    "sell used iPad online",
+    "sell old iPhone online",
+    "sell used iPhone for cash",
+    "sell old Samsung phone",
+    "sell old OnePlus phone",
+    "sell old Xiaomi phone",
+    "sell old Vivo phone",
+    "sell old Oppo phone",
+    "sell old Realme phone",
+    "sell used MacBook online",
+    "sell old Dell laptop",
+    "sell old HP laptop",
+    "sell old Lenovo laptop",
+    "doorstep old phone pickup",
+    "sell old phone Kolkata",
+    "sell used mobile in Kolkata",
+    "sell old laptop Kolkata",
+    "sell old phone West Bengal",
+    "sell phone with broken screen",
+    "sell phone without bill or box",
+    "instant cash for old phones",
+    "cashify alternative best price",
+    "old device resale India"
   ],
 
   authors: [
@@ -60,24 +82,24 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.cashall.in/",
     siteName: "CashALL",
-    title: "CashALL | Best Value for Your Old Devices",
+    title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
     description:
-      "Sell your old phones and laptops with CashALL. Get the best value, fast pickup and secure payment.",
+      "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep pickup, instant bank transfer, and certified data wiping.",
     images: [
       {
         url: "/photos/CashALL_logo.png",
         width: 1200,
         height: 630,
-        alt: "CashALL - Best Value for Your Old Devices",
+        alt: "CashALL - Sell Old Devices for Instant Cash",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "CashALL | Best Value for Your Old Devices",
+    title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
     description:
-      "Sell your old phones and laptops with CashALL. Get the best value, fast pickup and secure payment.",
+      "Sell your old mobile phones, used laptops and tablets online at CashALL. Best price, doorstep evaluation, and instant UPI payout.",
     images: ["/photos/CashALL_logo.png"],
   },
 
