@@ -107,6 +107,19 @@ async function getSearchAnalytics(siteUrl, days = 28) {
   return await res.json();
 }
 
+async function inspectUrl(siteUrl, inspectionUrl) {
+  const token = await getAccessToken();
+  const res = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ siteUrl, inspectionUrl }),
+  });
+  return await res.json();
+}
+
 // CLI Command Handler
 const command = process.argv[2] || 'list';
 
@@ -127,8 +140,14 @@ async function run() {
       console.log(`Fetching 28-day organic search analytics for ${site}...`);
       const analytics = await getSearchAnalytics(site);
       console.log('Organic Search Performance:', JSON.stringify(analytics, null, 2));
+    } else if (command === 'inspect') {
+      const site = process.argv[3] || 'https://www.cashall.in/';
+      const urlToInspect = process.argv[4] || site;
+      console.log(`Inspecting URL ${urlToInspect} for site ${site}...`);
+      const res = await inspectUrl(site, urlToInspect);
+      console.log('Inspection Result:', JSON.stringify(res, null, 2));
     } else {
-      console.log(`Unknown command: ${command}. Use 'list', 'submit-sitemap', or 'analytics'.`);
+      console.log(`Unknown command: ${command}. Use 'list', 'submit-sitemap', 'analytics', or 'inspect'.`);
     }
   } catch (err) {
     console.error('Error:', err.message);

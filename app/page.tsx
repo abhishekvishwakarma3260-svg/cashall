@@ -33,7 +33,8 @@ export default function HomePage() {
         "@type": "Organization",
         "@id": "https://www.cashall.in/#organization",
         "name": "CashALL",
-        "alternateName": ["CashALL India", "cashall.in"],
+        "legalName": "Aarna Enterprise",
+        "alternateName": ["CashALL India", "cashall.in", "Aarna Enterprise CashALL"],
         "url": "https://www.cashall.in/",
         "logo": {
           "@type": "ImageObject",
@@ -44,6 +45,26 @@ export default function HomePage() {
         "image": "https://www.cashall.in/photos/CashALL_favicon.png",
         "description":
           "CashALL helps you sell old mobile phones, used laptops and tablets online for the highest value with instant doorstep evaluation, fast UPI cash payout, and certified data wiping.",
+        "sameAs": [
+          "https://www.instagram.com/cashall_26/",
+          "https://www.facebook.com/profile.php?id=61592749535143",
+          "https://www.youtube.com/channel/UCymYHMF8-grP7txUbqIt6sQ"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@cashall.in",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi", "bn"]
+        },
+        "knowsAbout": [
+          "Recommerce",
+          "Sell Old Mobile Phones",
+          "Sell Used Laptops",
+          "Sell Old Tablets",
+          "Consumer Electronics Buyback",
+          "Instant Doorstep Cash Payout"
+        ],
         "areaServed": [
           { "@type": "City", "name": "Kolkata" },
           { "@type": "AdministrativeArea", "name": "West Bengal" },
