@@ -145,6 +145,11 @@ export function Footer() {
                   Rent PS5 Console
                 </Link>
               </li>
+              <li>
+                <Link href="/sell-phone-in-kolkata" className="hover:text-brand-yellow transition-colors text-brand-yellow/90 font-semibold">
+                  Sell Phone in Kolkata
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -155,6 +160,11 @@ export function Footer() {
               <li>
                 <Link href="/about" className="hover:text-brand-yellow transition-colors">
                   About CashALL
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/cashify-vs-cashall" className="hover:text-brand-yellow transition-colors">
+                  Cashify vs CashALL
                 </Link>
               </li>
               <li>
