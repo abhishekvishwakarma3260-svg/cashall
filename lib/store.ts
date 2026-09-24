@@ -2,6 +2,7 @@
 // Mobiles, Laptops, and Tablets (+5% Increased Final Prices)
 
 import { SERVICEABLE_DISTRICTS } from "./serviceability";
+import { MASTER_FAQS } from "./faqs";
 
 export interface BrandData {
   id: string;
@@ -83056,49 +83057,7 @@ export const INITIAL_SERVICE_AREAS: ServiceAreaData[] = SERVICEABLE_DISTRICTS.fl
   }))
 );
 
-export const INITIAL_FAQS: FAQData[] = [
-  {
-    id: "faq-1",
-    question: "How does CashALL calculate my phone's value?",
-    answer: "CashALL uses a transparent, rule-based pricing engine that combines your phone's real market base value with deductions or bonuses based on your screen condition, physical body wear, functional status, and original accessories.",
-    category: "PRICING",
-  },
-  {
-    id: "faq-2",
-    question: "How fast is doorstep pickup?",
-    answer: "CashALL provides express fast doorstep pickup. Our pickup agent arrives at your preferred date and time window to verify your device.",
-    category: "PICKUP",
-  },
-  {
-    id: "faq-3",
-    question: "Can my final price change during physical inspection?",
-    answer: "Your online price is an estimate based on the condition answers you provide. During physical inspection, our pickup agent verifies the device. If the physical condition matches your selection, the price remains identical. If any physical discrepancy is found (e.g. deeper screen scratches), a revised price with clear reasons is presented for your approval before proceeding.",
-    category: "INSPECTION",
-  },
-  {
-    id: "faq-4",
-    question: "When and how will I receive my payment?",
-    answer: "Payment is transferred instantly via UPI or IMPS Bank Transfer to your account immediately after physical inspection verification and your final approval.",
-    category: "PAYMENT",
-  },
-  {
-    id: "faq-5",
-    question: "What happens to the personal data on my device?",
-    answer: "Our pickup partner helps you perform a factory data reset in your presence during pickup. CashALL ensures complete data wiping protocols before devices enter processing for resale.",
-    category: "SECURITY",
-  },
-  {
-    id: "faq-6",
-    question: "Why choose CashALL over Cashify, Cashkr, Mobisell, or CashKaro?",
-    answer: "CashALL provides up to 5% higher payouts than Cashify and other platforms, instant on-the-spot UPI bank transfers without delays, 100% transparent diagnostics with no unfair last-minute price cuts, and free doorstep pickup across Kolkata, Howrah, and West Bengal.",
-    category: "COMPARISON",
-  },
-  {
-    id: "faq-7",
-    question: "Can I rent or sell a PlayStation 5 (PS5) on CashALL?",
-    answer: "Yes! CashALL provides PlayStation 5 (PS5) console rentals with 2 DualSense wireless controllers, top 4K games (GTA V, Spider-Man 2, FC 24, God of War Ragnarok), and free doorstep delivery and setup. You can also sell your used gaming consoles for instant cash.",
-    category: "GAMING",
-  }];
+export const INITIAL_FAQS: FAQData[] = MASTER_FAQS;
 
 const ENABLE_SAMPLE_DATA = process.env.NEXT_PUBLIC_ENABLE_SAMPLE_DATA === "true";
 

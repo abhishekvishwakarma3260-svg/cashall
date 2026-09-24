@@ -26,14 +26,24 @@ export const metadata: Metadata = {
     "sell used phone kolkata",
     "best place to sell old phone in kolkata",
     "cashify alternative kolkata",
-    "doorstep phone selling kolkata",
+    "cashify store kolkata vs cashall",
+    "mobisell kolkata",
+    "mobisell vs cashall kolkata",
+    "sell phone chandni chowk kolkata",
     "sell second hand phone kolkata",
+    "doorstep phone selling kolkata",
     "sell broken phone kolkata",
     "instant cash for phone kolkata",
     "sell old iphone kolkata",
     "sell used samsung phone kolkata",
     "sell phone salt lake kolkata",
-    "sell phone new town kolkata"
+    "sell phone new town kolkata",
+    "sell old phone howrah",
+    "sell old phone behala",
+    "sell old phone jadavpur",
+    "sell old laptop in kolkata",
+    "ps5 rental kolkata",
+    "old phone buyback kolkata west bengal"
   ],
   alternates: {
     canonical: "https://www.cashall.in/sell-phone-in-kolkata",
@@ -64,6 +74,10 @@ const LOCAL_FAQS = [
     a: "CashALL provides same-day doorstep pickup across Kolkata. In major hubs like Salt Lake, New Town, Park Street, and Ballygunge, verified pickup agents can reach your doorstep within 2 to 4 hours of quote confirmation.",
   },
   {
+    q: "Why choose CashALL doorstep pickup over selling at Chandni Chowk or local mobile shops in Kolkata?",
+    a: "Selling at offline markets like Chandni Chowk or local second-hand shops requires traveling in traffic, enduring aggressive haggling, risk of unverified cash, and questionable data handling. CashALL brings transparent automated valuation, 100% free doorstep pickup, on-the-spot UPI payment, and certified data wiping directly to your home.",
+  },
+  {
     q: "How do I receive payment when selling my phone in Kolkata?",
     a: "Payment is transferred 100% on the spot during doorstep inspection via UPI (Google Pay, PhonePe, Paytm) or direct IMPS bank transfer before our pickup executive leaves your address.",
   },
@@ -72,12 +86,16 @@ const LOCAL_FAQS = [
     a: "Yes. CashALL accepts smartphones without original bills or boxes across Kolkata. You only need to verify your identity with a valid Government ID proof (Aadhaar or Voter ID) and sign a simple electronic ownership undertaking.",
   },
   {
-    q: "Why is CashALL rated better than Cashify in Kolkata?",
-    a: "CashALL offers up to 5% higher payouts, charges zero doorstep pickup fees (saving you ₹100–₹199 charged by other portals), performs transparent diagnostics without unfair price cuts, and delivers local Kolkata customer support over WhatsApp and phone.",
+    q: "Why is CashALL rated better than Cashify and Mobisell in Kolkata?",
+    a: "CashALL offers up to 5% higher payouts, charges zero doorstep pickup fees (saving you the ₹100–₹199 convenience fee charged by Cashify), performs transparent diagnostics without unfair price cuts, and delivers local Kolkata customer support over WhatsApp and phone.",
   },
   {
     q: "Is my personal data completely erased before selling?",
     a: "Yes. Our executive assists you in performing an on-site factory data reset in your presence, ensuring all Google/Apple accounts, photos, and personal documents are permanently wiped before handover.",
+  },
+  {
+    q: "Which Kolkata pin codes are serviceable for same-day pickup?",
+    a: "We service over 100 pin codes across Kolkata, Salt Lake, New Town, Howrah, Barrackpore, and South 24 Parganas including 700001 to 700108.",
   },
 ];
 

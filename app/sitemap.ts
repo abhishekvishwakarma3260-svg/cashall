@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { INITIAL_MODELS, INITIAL_BRANDS } from "@/lib/store";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.cashall.in";
@@ -142,10 +143,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Brand ID to slug lookup map
+  const brandSlugMap = new Map<string, string>();
+  for (const b of INITIAL_BRANDS) {
+    brandSlugMap.set(b.id, b.slug.toLowerCase());
+  }
+
+  // Model Pages (Index popular models and active devices)
+  const popularModels = INITIAL_MODELS.filter((m) => m.active && m.slug);
+  const modelPages: MetadataRoute.Sitemap = popularModels.slice(0, 1000).map((m) => {
+    const brandSlug = m.brandSlug?.toLowerCase() || brandSlugMap.get(m.brandId) || "apple";
+    const category = (m.category || "MOBILE").toLowerCase();
+    const catPath = category === "laptop" ? "laptop" : category === "tablet" ? "tablet" : "mobile";
+    
+    return {
+      url: `${baseUrl}/sell/${catPath}/${brandSlug}/${m.slug.toLowerCase()}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: m.popular ? 0.8 : 0.7,
+    };
+  });
+
   return [
     ...staticPages,
     ...mobileBrandPages,
     ...laptopBrandPages,
     ...tabletBrandPages,
+    ...modelPages,
   ];
 }

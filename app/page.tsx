@@ -10,6 +10,8 @@ import { CustomerReviewsSection } from "@/components/reviews/CustomerReviewsSect
 import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
+import { INITIAL_FAQS } from "@/lib/store";
+
 export const metadata: Metadata = {
   title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
   description:
@@ -34,7 +36,14 @@ export default function HomePage() {
         "@id": "https://www.cashall.in/#organization",
         "name": "CashALL",
         "legalName": "Aarna Enterprise",
-        "alternateName": ["CashALL India", "cashall.in", "Aarna Enterprise CashALL"],
+        "alternateName": [
+          "CashALL India",
+          "cashall.in",
+          "Aarna Enterprise CashALL",
+          "Cashify Alternative Kolkata",
+          "Cashkr Alternative",
+          "Mobisell Alternative"
+        ],
         "url": "https://www.cashall.in/",
         "logo": {
           "@type": "ImageObject",
@@ -44,7 +53,7 @@ export default function HomePage() {
         },
         "image": "https://www.cashall.in/photos/CashALL_favicon.png",
         "description":
-          "CashALL helps you sell old mobile phones, used laptops and tablets online for the highest value with instant doorstep evaluation, fast UPI cash payout, and certified data wiping.",
+          "CashALL is India's premier recommerce platform for selling used smartphones, laptops, and tablets with up to 5% higher payouts than Cashify, Cashkr, and Mobisell, zero convenience charges, free doorstep inspection, and instant UPI cash payouts.",
         "sameAs": [
           "https://www.instagram.com/cashall_26/",
           "https://www.facebook.com/profile.php?id=61592749535143",
@@ -53,6 +62,7 @@ export default function HomePage() {
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
+          "telephone": "+917604092333",
           "email": "support@cashall.in",
           "areaServed": "IN",
           "availableLanguage": ["en", "hi", "bn"]
@@ -63,10 +73,17 @@ export default function HomePage() {
           "Sell Used Laptops",
           "Sell Old Tablets",
           "Consumer Electronics Buyback",
-          "Instant Doorstep Cash Payout"
+          "Instant Doorstep Cash Payout",
+          "Cashify Alternative Best Price",
+          "Cashkr Alternative",
+          "Mobisell Alternative Kolkata",
+          "CashKaro Mobile Exchange",
+          "CashOn Buyback",
+          "PlayStation 5 Console Rental"
         ],
         "areaServed": [
           { "@type": "City", "name": "Kolkata" },
+          { "@type": "City", "name": "Howrah" },
           { "@type": "AdministrativeArea", "name": "West Bengal" },
           { "@type": "Country", "name": "India" }
         ],
@@ -91,6 +108,55 @@ export default function HomePage() {
         "inLanguage": "en-IN"
       },
       {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.cashall.in/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cashall.in"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://www.cashall.in/#howto",
+        "name": "How to Sell Old Phone Online for Instant Cash on CashALL",
+        "description": "Follow 4 simple steps to sell your old smartphone, used laptop, or tablet for the highest price with free doorstep evaluation and instant payment.",
+        "totalTime": "PT15M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Select Brand & Model",
+            "text": "Choose your device category (Mobile, Laptop, Tablet) and select your specific brand and model from our catalog of 1,000+ devices.",
+            "url": "https://www.cashall.in/sell"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Answer Condition Questions",
+            "text": "Answer a few straightforward diagnostic questions about your screen condition, physical body, working components, and original accessories.",
+            "url": "https://www.cashall.in/sell"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Get Instant Quote & Schedule Free Pickup",
+            "text": "Receive a transparent valuation with guaranteed up to 5% higher payout than Cashify. Pick your convenient date and time window for doorstep pickup.",
+            "url": "https://www.cashall.in/sell"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Doorstep Verification & Instant Cash Transfer",
+            "text": "Our verified technician inspects your device, assists with on-site factory data reset, and transfers payment instantly via UPI or IMPS bank transfer on the spot.",
+            "url": "https://www.cashall.in/sell"
+          }
+        ]
+      },
+      {
         "@type": "Service",
         "@id": "https://www.cashall.in/#service",
         "name": "Doorstep Old Device Selling & Cash Buyback",
@@ -102,7 +168,7 @@ export default function HomePage() {
           "@type": "Country",
           "name": "India"
         },
-        "description": "Free doorstep evaluation and instant bank or UPI payout for used smartphones, laptops, and tablets.",
+        "description": "Free doorstep evaluation and instant bank or UPI payout for used smartphones, laptops, and tablets with zero hidden convenience fees.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -113,64 +179,14 @@ export default function HomePage() {
       {
         "@type": "FAQPage",
         "@id": "https://www.cashall.in/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do I sell my old phone or laptop on CashALL?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Select your device brand and model, answer a few quick diagnostic questions about screen and body condition, get an instant transparent quote, and book a free doorstep pickup at your preferred time."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "When and how do I receive payment for my old device?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Payment is transferred instantly on the spot during doorstep inspection via UPI, Google Pay, PhonePe, Paytm, or direct IMPS bank transfer before the agent leaves."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I sell a phone with a broken screen or without a bill or box?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! CashALL accepts devices in all conditions including broken screens, minor dents, and phones without original bill or box. Valid government ID proof is verified for security."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is doorstep device evaluation and pickup really free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, CashALL provides 100% free doorstep evaluation and pickup. There are no hidden fees, service charges, or deductions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my personal data safe when I sell my device to CashALL?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Our verified executive assists you with performing a factory data reset and complete data wipe on-site, ensuring zero residual photos, contacts, or accounts remain."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why choose CashALL over Cashify, Cashkr, Mobisell, or CashKaro?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "CashALL offers up to 5% higher payouts than Cashify and other resale platforms, instant on-the-spot UPI/bank payout during doorstep evaluation, zero hidden deductions, and fast free pickup across Kolkata, Howrah, and West Bengal."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I rent or sell a PlayStation 5 (PS5) on CashALL?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! CashALL provides PlayStation 5 (PS5) console rentals with 2 DualSense wireless controllers, top 4K games (GTA V, Spider-Man 2, FC 24, God of War Ragnarok), and free doorstep delivery and setup. You can also sell your used gaming consoles for instant cash."
-            }
+        "mainEntity": INITIAL_FAQS.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
           }
-        ]
+        }))
       }
     ]
   };

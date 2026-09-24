@@ -30,6 +30,18 @@ export const metadata: Metadata = {
     "sell phone cashify alternative",
     "sell used mobile instant cash",
     "cashkr vs cashall",
+    "cashkr alternative",
+    "cashkr vs cashify",
+    "cashkr review",
+    "mobisell vs cashall",
+    "mobisell alternative",
+    "mobisell sell old phone",
+    "cashkaro vs cashall",
+    "cashkro sell old phone",
+    "cashon vs cashall",
+    "cashon alternative",
+    "recycledevice alternative",
+    "instacash alternative",
     "cashify price drop issue"
   ],
   alternates: {
@@ -38,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cashify vs CashALL: Unbiased Comparison & Price Difference | CashALL",
     description:
-      "Looking for a better alternative to Cashify? See how CashALL offers higher payouts, ₹0 pickup charges, and on-the-spot UPI transfers without unexpected deductions.",
+      "Looking for a better alternative to Cashify, Cashkr, Mobisell, or CashKaro? See how CashALL offers higher payouts, ₹0 pickup charges, and on-the-spot UPI transfers without unexpected deductions.",
     url: "https://www.cashall.in/compare/cashify-vs-cashall",
     images: ["/photos/CashALL_logo.png"],
   },
@@ -97,12 +109,20 @@ const COMPARISON_ROWS = [
 
 const COMPARISON_FAQS = [
   {
-    q: "Why does CashALL offer higher prices than Cashify?",
-    a: "CashALL operates with hyper-efficient localized logistics and direct refurbishment channels in West Bengal and major hubs. By eliminating corporate overhead and third-party aggregator markups, we pass up to 5% higher payouts directly back to the customer.",
+    q: "Why does CashALL offer higher prices than Cashify, Cashkr, and Mobisell?",
+    a: "CashALL operates with hyper-efficient localized logistics and direct refurbishment channels in West Bengal and major hubs. By eliminating multi-tier corporate overhead and third-party aggregator margins, we pass up to 5% higher payouts directly back to the customer.",
   },
   {
     q: "Does Cashify charge a doorstep pickup fee?",
     a: "Yes. In many locations, Cashify charges a convenience fee ranging from ₹100 to ₹199, which is deducted from your final payout. CashALL never charges any convenience, doorstep inspection, or cancellation fees.",
+  },
+  {
+    q: "How does CashALL compare to Cashkr and Mobisell?",
+    a: "While Cashkr and Mobisell also operate device buybacks, CashALL provides faster doorstep execution (within 2-4 hours in Kolkata), broader device catalog coverage (1,000+ smartphones, laptops, and tablets), certified on-site data wiping, and immediate UPI settlement before the technician leaves your doorstep.",
+  },
+  {
+    q: "What about CashKaro or CashOn?",
+    a: "CashKaro acts primarily as an affiliate coupon/cashback intermediary directing you to third parties like Cashify rather than managing direct doorstep inspections. CashOn operates in select pin codes with varying turnaround times. CashALL is a direct buyback provider with our own dedicated, background-verified pickup executives.",
   },
   {
     q: "What happens if I don't agree with the doorstep valuation on CashALL?",
@@ -111,6 +131,10 @@ const COMPARISON_FAQS = [
   {
     q: "Can I sell broken screen or dead phones on CashALL?",
     a: "Yes. CashALL buys devices in all functional and cosmetic states, including broken displays, battery faults, and dented bodies, provided valid Government ID proof is presented for ownership verification.",
+  },
+  {
+    q: "Why do some platforms drop quotes heavily at doorstep and how does CashALL handle this?",
+    a: "Many platforms intentionally over-quote online to capture leads, then use strict algorithms on arrival to slash payouts for normal cosmetic wear. CashALL uses a realistic diagnostic rubric where micro-wear is considered expected. If an undisclosed hardware fault is found, the exact deduction is explained transparently with full customer right of refusal.",
   },
 ];
 
