@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
@@ -8,6 +9,21 @@ import { WhyCashALL } from "@/components/home/WhyCashALL";
 import { CustomerReviewsSection } from "@/components/reviews/CustomerReviewsSection";
 import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { FinalCTA } from "@/components/home/FinalCTA";
+
+export const metadata: Metadata = {
+  title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
+  description:
+    "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep evaluation, instant UPI/bank cash payout, and 100% safe certified data wipe.",
+  alternates: {
+    canonical: "https://www.cashall.in",
+  },
+  openGraph: {
+    title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
+    description:
+      "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep pickup, instant bank transfer, and certified data wiping.",
+    url: "https://www.cashall.in",
+  },
+};
 
 export default function HomePage() {
   const jsonLd = {

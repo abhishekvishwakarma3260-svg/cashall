@@ -47,6 +47,7 @@ async function main() {
 
     const payoutAmount = o.finalPrice || o.payments?.[0]?.amount || o.quote?.estimatedPrice || 0;
     const paymentMethod = o.payments?.[0]?.paymentMethod || "Instant UPI";
+    const utr = o.urn || o.payments?.[0]?.transactionRef || "—";
 
     return {
       index: idx + 1,
@@ -60,6 +61,7 @@ async function main() {
       deviceSold: deviceName,
       payoutAmount,
       paymentMethod,
+      utr,
       createdAt: o.createdAt
     };
   });

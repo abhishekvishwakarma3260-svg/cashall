@@ -77,10 +77,6 @@ export const metadata: Metadata = {
   creator: "CashALL",
   publisher: "CashALL",
 
-  alternates: {
-    canonical: "https://www.cashall.in/",
-  },
-
   robots: {
     index: true,
     follow: true,

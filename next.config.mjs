@@ -35,6 +35,17 @@ const nextConfig = {
         destination: 'https://www.cashall.in/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'cashall.in',
+          },
+        ],
+        destination: 'https://www.cashall.in/:path*',
+        permanent: true,
+      },
     ];
   },
 };

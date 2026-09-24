@@ -1,6 +1,22 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | CashALL",
+  description:
+    "Terms and conditions for selling used mobile phones, laptops, tablets, and renting PlayStation 5 consoles on CashALL.",
+  alternates: {
+    canonical: "https://www.cashall.in/terms",
+  },
+  openGraph: {
+    title: "Terms & Conditions | CashALL",
+    description:
+      "Terms and conditions for selling used mobile phones, laptops, tablets, and renting PlayStation 5 consoles on CashALL.",
+    url: "https://www.cashall.in/terms",
+  },
+};
 
 export default function TermsPage() {
   return (

@@ -1,6 +1,22 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | CashALL",
+  description:
+    "CashALL's privacy policy explaining data collection, device data erasure, customer information protection, and compliance standards.",
+  alternates: {
+    canonical: "https://www.cashall.in/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | CashALL",
+    description:
+      "CashALL's privacy policy explaining data collection, device data erasure, customer information protection, and compliance standards.",
+    url: "https://www.cashall.in/privacy",
+  },
+};
 
 export default function PrivacyPage() {
   return (

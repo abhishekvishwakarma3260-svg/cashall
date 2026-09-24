@@ -1,7 +1,23 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ShieldCheck, Sparkles, HeartHandshake, FileSearch } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Us | CashALL - India's Trusted Device Buyback & Rental Platform",
+  description:
+    "Learn about CashALL's mission to provide honest device valuations, certified data wiping, instant UPI payouts, and reliable doorstep service across India.",
+  alternates: {
+    canonical: "https://www.cashall.in/about",
+  },
+  openGraph: {
+    title: "About Us | CashALL",
+    description:
+      "Learn about CashALL's mission to provide honest device valuations, certified data wiping, instant UPI payouts, and reliable doorstep service across India.",
+    url: "https://www.cashall.in/about",
+  },
+};
 
 export default function AboutPage() {
   return (
