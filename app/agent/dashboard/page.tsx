@@ -39,6 +39,9 @@ import {
   PhoneCall,
 } from "lucide-react";
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
+import { playMelodiousChime } from "@/lib/utils/sound";
+import { SoundControlBadge } from "@/components/common/SoundControlBadge";
+import { LiveUpdateToast, LiveUpdateNotification } from "@/components/common/LiveUpdateToast";
 
 type DateFilterType = "ALL" | "TODAY" | "TOMORROW" | "DAY_AFTER_TOMORROW";
 type StatusFilterType = "ALL" | "PENDING" | "COMPLETED" | "CANCELLED";
@@ -117,7 +120,11 @@ class InHouseBuzzerAlarm {
     if (this.isPlaying) return;
     this.isPlaying = true;
 
-    // Web browser is completely silent (no Web Audio oscillators).
+    // Web Audio Synthesizer: Play soothing, melodious 3-tone harmonic chime
+    try {
+      playMelodiousChime("new_order");
+    } catch (e) {}
+
     // Native Android App bridge only (sounds alarm in the native app)
     try {
       if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.startAlarm) {
@@ -194,7 +201,22 @@ export default function AgentDashboardPage() {
   const [activeAlertLead, setActiveAlertLead] = useState<AgentOrder | null>(null);
   const [isAlarmSounding, setIsAlarmSounding] = useState(false);
   const knownOrderIdsRef = useRef<Set<string>>(new Set());
+  const knownOrdersMapRef = useRef<Map<string, { status: string; pickupDate: string; pickupTimeSlot: string; price?: number }>>(new Map());
   const initialLoadDoneRef = useRef(false);
+
+  // Live Update Notifications
+  const [liveNotifications, setLiveNotifications] = useState<LiveUpdateNotification[]>([]);
+
+  const addLiveNotification = useCallback((notif: LiveUpdateNotification) => {
+    setLiveNotifications((prev) => [notif, ...prev.filter((n) => n.id !== notif.id).slice(0, 4)]);
+    setTimeout(() => {
+      setLiveNotifications((prev) => prev.filter((n) => n.id !== notif.id));
+    }, 9000);
+  }, []);
+
+  const handleDismissNotification = useCallback((id: string) => {
+    setLiveNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
 
   const dateStrings = useMemo(() => getISTDateStrings(), []);
 
@@ -256,34 +278,77 @@ export default function AgentDashboardPage() {
       const agentId = agentSession?.id || "";
       const phone = agentSession?.phone || "";
       const name = encodeURIComponent(agentSession?.name || "");
-      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}&t=${Date.now()}`);
+      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}&force=true&t=${Date.now()}`);
       const json = await res.json();
       if (json.success && Array.isArray(json.orders)) {
         const fetchedOrders: AgentOrder[] = json.orders;
         setOrders(fetchedOrders);
 
-        // Check for new incoming lead alert
+        // Check for new incoming lead alert or updates
         if (initialLoadDoneRef.current) {
           const newUnseenLead = fetchedOrders.find(
             (o) =>
-              !knownOrderIdsRef.current.has(o.id) &&
-              !knownOrderIdsRef.current.has(o.orderNumber) &&
+              !knownOrdersMapRef.current.has(o.orderNumber) &&
               o.status !== "COMPLETED" &&
               o.status !== "CANCELLED"
           );
 
           if (newUnseenLead) {
             handleTriggerAlarm(newUnseenLead);
+            addLiveNotification({
+              id: `lead-${newUnseenLead.orderNumber}-${Date.now()}`,
+              type: "assignment",
+              orderNumber: newUnseenLead.orderNumber,
+              title: "New Pickup Lead Assigned",
+              subtitle: `${newUnseenLead.deviceName} • ₹${(newUnseenLead.revisedPrice || newUnseenLead.estimatedPrice || newUnseenLead.amount || 0).toLocaleString("en-IN")}`,
+              details: `${newUnseenLead.customerName} (${newUnseenLead.customerPhone}) • ${newUnseenLead.address}`,
+              timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+              onView: () => setSearchQuery(newUnseenLead.orderNumber),
+            });
+          } else {
+            // Check for updates on existing leads (e.g. rescheduled time, price revised, admin instructions)
+            for (const ord of fetchedOrders) {
+              const prev = knownOrdersMapRef.current.get(ord.orderNumber);
+              const currentPrice = ord.revisedPrice || ord.finalPrice || ord.estimatedPrice || ord.amount;
+              if (
+                prev &&
+                (prev.status !== ord.status ||
+                  prev.pickupDate !== ord.pickupDate ||
+                  prev.pickupTimeSlot !== ord.pickupTimeSlot ||
+                  prev.price !== currentPrice)
+              ) {
+                playMelodiousChime("update");
+                addLiveNotification({
+                  id: `upd-${ord.orderNumber}-${Date.now()}`,
+                  type: "update",
+                  orderNumber: ord.orderNumber,
+                  title: "Lead Status / Slot Updated",
+                  subtitle: `Status: ${ord.status.replace(/_/g, " ")} • Slot: ${ord.pickupDate} (${ord.pickupTimeSlot})`,
+                  details: `Customer: ${ord.customerName} • ${ord.deviceName}`,
+                  timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+                  onView: () => setSearchQuery(ord.orderNumber),
+                });
+                break;
+              }
+            }
           }
         }
 
-        // Update known order IDs
+        // Update known order IDs and state snapshot
+        const updatedMap = new Map<string, { status: string; pickupDate: string; pickupTimeSlot: string; price?: number }>();
         const updatedSet = new Set<string>();
         for (const o of fetchedOrders) {
           updatedSet.add(o.id);
           updatedSet.add(o.orderNumber);
+          updatedMap.set(o.orderNumber, {
+            status: o.status,
+            pickupDate: o.pickupDate,
+            pickupTimeSlot: o.pickupTimeSlot,
+            price: o.revisedPrice || o.finalPrice || o.estimatedPrice || o.amount,
+          });
         }
         knownOrderIdsRef.current = updatedSet;
+        knownOrdersMapRef.current = updatedMap;
         initialLoadDoneRef.current = true;
       }
     } catch (err: any) {
@@ -291,7 +356,7 @@ export default function AgentDashboardPage() {
     } finally {
       if (!isSilent) setLoading(false);
     }
-  }, [agentSession, handleTriggerAlarm]);
+  }, [agentSession, handleTriggerAlarm, addLiveNotification]);
 
   useEffect(() => {
     if (agentSession) {
@@ -299,11 +364,10 @@ export default function AgentDashboardPage() {
     }
   }, [agentSession, fetchOrders]);
 
-  // Background polling with tab visibility detection (saves 95% requests when tab is inactive)
+  // 10-second background polling for live assigned leads and real-time updates
   useEffect(() => {
     if (!agentSession) return;
 
-    // Immediately refresh when agent switches back to this tab
     const handleVisibilityChange = () => {
       if (typeof document !== "undefined" && document.visibilityState === "visible") {
         fetchOrders(true);
@@ -314,9 +378,8 @@ export default function AgentDashboardPage() {
     }
 
     const interval = setInterval(() => {
-      if (typeof document !== "undefined" && document.hidden) return; // Skip if tab is in background
       fetchOrders(true);
-    }, 25000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
@@ -638,6 +701,8 @@ export default function AgentDashboardPage() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white flex flex-col">
+      <LiveUpdateToast notifications={liveNotifications} onDismiss={handleDismissNotification} />
+
       {/* NAVBAR */}
       <header className="bg-neutral-900 border-b border-neutral-800 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-2 sm:gap-3">
@@ -657,6 +722,8 @@ export default function AgentDashboardPage() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
+          <SoundControlBadge compact />
+
           <div className="hidden md:flex items-center gap-2 bg-neutral-800 border border-neutral-700 px-3 py-1.5 rounded-xl text-xs">
             <UserCheck className="w-4 h-4 text-yellow-400" />
             <span className="font-bold text-white">{agentSession?.name || "Agent"}</span>

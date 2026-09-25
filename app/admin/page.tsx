@@ -1,8 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
+import { playMelodiousChime } from "@/lib/utils/sound";
+import { SoundControlBadge } from "@/components/common/SoundControlBadge";
+import { LiveUpdateToast, LiveUpdateNotification } from "@/components/common/LiveUpdateToast";
 import {
   FileText,
   ShoppingBag,
@@ -67,67 +71,138 @@ const DEFAULT_RECENT_ORDERS: RecentOrder[] = [
 ];
 
 export default function AdminDashboardPage() {
+  const router = useRouter();
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [recentOrders, setRecentOrders] = useState<RecentOrder[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const fetchDashboard = async () => {
-      try {
-        const session =
-          typeof window !== "undefined"
-            ? JSON.parse(localStorage.getItem("cashall_admin_session") || "{}")
-            : {};
-        const token = session?.token || "";
+  // Real-time live update notifications & soothing sound alert state
+  const [liveNotifications, setLiveNotifications] = useState<LiveUpdateNotification[]>([]);
+  const knownOrdersMapRef = useRef<Map<string, { status: string; price?: number }>>(new Map());
+  const initialLoadDoneRef = useRef(false);
 
-        const res = await fetch("/api/v1/admin/dashboard", {
-          headers: {
-            "Content-Type": "application/json",
-            ...(token ? { Authorization: `Bearer ${token}` } : {}),
-          },
-        });
-        if (res.ok) {
-          const data = await res.json();
-          const dbOrders: RecentOrder[] = data.recentOrders || [];
-          setRecentOrders(dbOrders.length > 0 ? dbOrders : DEFAULT_RECENT_ORDERS);
+  const addLiveNotification = useCallback((notif: LiveUpdateNotification) => {
+    setLiveNotifications((prev) => [notif, ...prev.filter((n) => n.id !== notif.id).slice(0, 4)]);
+    setTimeout(() => {
+      setLiveNotifications((prev) => prev.filter((n) => n.id !== notif.id));
+    }, 9000);
+  }, []);
 
-          const dbStats = data.stats || {};
-          setStats({
-            todayQuotes: dbStats.todayQuotes || 0,
-            todayOrders: dbStats.todayOrders || 0,
-            pickupsToday: dbStats.pickupsToday || 0,
-            pendingInspections: dbStats.pendingInspections || 0,
-            pendingPayments: dbStats.pendingPayments || 0,
-            completedSales: dbStats.completedSales || 0,
-          });
-        } else {
-          setRecentOrders(DEFAULT_RECENT_ORDERS);
-          setStats({
-            todayQuotes: 2,
-            todayOrders: 2,
-            pickupsToday: 2,
-            pendingInspections: 1,
-            pendingPayments: 1,
-            completedSales: 1,
-          });
+  const handleDismissNotification = useCallback((id: string) => {
+    setLiveNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
+
+  const fetchDashboard = useCallback(async (isSilent = false) => {
+    if (!isSilent) setLoading(true);
+    try {
+      const session =
+        typeof window !== "undefined"
+          ? JSON.parse(localStorage.getItem("cashall_admin_session") || "{}")
+          : {};
+      const token = session?.token || "";
+
+      const res = await fetch(`/api/v1/admin/dashboard?t=${Date.now()}`, {
+        headers: {
+          "Content-Type": "application/json",
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const dbOrders: RecentOrder[] = data.recentOrders || [];
+        setRecentOrders(dbOrders.length > 0 ? dbOrders : DEFAULT_RECENT_ORDERS);
+
+        // Check for real-time incoming orders and updates
+        if (initialLoadDoneRef.current && Array.isArray(dbOrders)) {
+          for (const ord of dbOrders) {
+            const cleanNum = ord.orderNumber.replace(/^[#\s]+/, "");
+            const prev = knownOrdersMapRef.current.get(cleanNum);
+            if (!prev) {
+              // Brand new order!
+              playMelodiousChime("new_order");
+              addLiveNotification({
+                id: `dash-new-${cleanNum}-${Date.now()}`,
+                type: "new_order",
+                orderNumber: cleanNum,
+                title: "New Buyback Order Received",
+                subtitle: `${ord.deviceName || "Mobile Device"} • ₹${(ord.estimatedPrice || 0).toLocaleString("en-IN")}`,
+                details: `Customer: ${ord.customerName} (${ord.customerPhone}) • Slot: ${ord.pickupDate} ${ord.pickupTimeSlot}`,
+                timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+                onView: () => router.push(`/admin/orders`),
+              });
+              break;
+            } else if (prev.status !== ord.status) {
+              // Status update!
+              playMelodiousChime("update");
+              addLiveNotification({
+                id: `dash-upd-${cleanNum}-${Date.now()}`,
+                type: "update",
+                orderNumber: cleanNum,
+                title: "Order Status Updated",
+                subtitle: `Status changed to ${ord.status.replace(/_/g, " ")}`,
+                details: `${ord.customerName} • ${ord.deviceName || ""}`,
+                timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+                onView: () => router.push(`/admin/orders`),
+              });
+              break;
+            }
+          }
         }
-      } catch (err: any) {
+
+        const nextMap = new Map<string, { status: string; price?: number }>();
+        for (const ord of dbOrders) {
+          const cleanNum = ord.orderNumber.replace(/^[#\s]+/, "");
+          nextMap.set(cleanNum, { status: ord.status, price: ord.revisedPrice || ord.estimatedPrice });
+        }
+        knownOrdersMapRef.current = nextMap;
+        initialLoadDoneRef.current = true;
+
+        const dbStats = data.stats || {};
+        setStats({
+          todayQuotes: dbStats.todayQuotes || 0,
+          todayOrders: dbStats.todayOrders || 0,
+          pickupsToday: dbStats.pickupsToday || 0,
+          pendingInspections: dbStats.pendingInspections || 0,
+          pendingPayments: dbStats.pendingPayments || 0,
+          completedSales: dbStats.completedSales || 0,
+        });
+      } else {
         setRecentOrders(DEFAULT_RECENT_ORDERS);
         setStats({
-          todayQuotes: 0,
-          todayOrders: 0,
-          pickupsToday: 0,
-          pendingInspections: 0,
-          pendingPayments: 0,
-          completedSales: 0,
+          todayQuotes: 2,
+          todayOrders: 2,
+          pickupsToday: 2,
+          pendingInspections: 1,
+          pendingPayments: 1,
+          completedSales: 1,
         });
-      } finally {
-        setLoading(false);
       }
-    };
-    fetchDashboard();
-  }, []);
+    } catch (err: any) {
+      setRecentOrders(DEFAULT_RECENT_ORDERS);
+      setStats({
+        todayQuotes: 0,
+        todayOrders: 0,
+        pickupsToday: 0,
+        pendingInspections: 0,
+        pendingPayments: 0,
+        completedSales: 0,
+      });
+    } finally {
+      if (!isSilent) setLoading(false);
+    }
+  }, [addLiveNotification, router]);
+
+  useEffect(() => {
+    fetchDashboard(false);
+
+    // 12-second periodic polling for live operational metrics & orders
+    const interval = setInterval(() => {
+      fetchDashboard(true);
+    }, 12000);
+
+    return () => clearInterval(interval);
+  }, [fetchDashboard]);
 
   const statCards = stats
     ? [
@@ -142,6 +217,7 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden">
+      <LiveUpdateToast notifications={liveNotifications} onDismiss={handleDismissNotification} />
       <AdminSidebar />
 
       <main className="flex-1 w-full max-w-full p-4 sm:p-6 lg:p-8 overflow-x-hidden space-y-6">
@@ -155,13 +231,16 @@ export default function AdminDashboardPage() {
               Live business metrics, quote conversions, doorstep pickup dispatch, and final valuations
             </p>
           </div>
-          <Link
-            href="/admin/pricing"
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-yellow-400 hover:bg-yellow-300 text-black text-xs font-black rounded-xl shadow-yellowGlow transition self-start sm:self-auto"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Manage Pricing Rules</span>
-          </Link>
+          <div className="flex items-center gap-3 flex-wrap">
+            <SoundControlBadge />
+            <Link
+              href="/admin/pricing"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-yellow-400 hover:bg-yellow-300 text-black text-xs font-black rounded-xl shadow-yellowGlow transition self-start sm:self-auto"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Manage Pricing Rules</span>
+            </Link>
+          </div>
         </div>
 
         {loading && (

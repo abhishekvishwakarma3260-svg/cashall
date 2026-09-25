@@ -50,34 +50,39 @@ object AlarmSoundManager {
             }, 5_000L)
         }
 
-        // 1. Play soothing melodic chime (R.raw.loud_buzzer) at comfortable volume
+        // 1. Play soothing melodic notification chime at gentle, comfortable volume (non-looping, non-irritating)
         try {
             val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
             audioManager?.let { am ->
-                val maxVol = am.getStreamMaxVolume(AudioManager.STREAM_ALARM)
-                val comfortableVol = (maxVol * 0.70f).toInt().coerceAtLeast(1)
-                am.setStreamVolume(AudioManager.STREAM_ALARM, comfortableVol, 0)
+                val maxVol = am.getStreamMaxVolume(AudioManager.STREAM_NOTIFICATION)
+                val comfortableVol = (maxVol * 0.65f).toInt().coerceAtLeast(1)
+                am.setStreamVolume(AudioManager.STREAM_NOTIFICATION, comfortableVol, 0)
             }
 
             mediaPlayer?.release()
-            val afd = context.resources.openRawResourceFd(R.raw.loud_buzzer)
+            // Try pleasant system notification ringtone first, fallback to raw resource
+            val notificationUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
             mediaPlayer = MediaPlayer().apply {
-                setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
-                afd.close()
+                try {
+                    setDataSource(context, notificationUri)
+                } catch (e: Exception) {
+                    val afd = context.resources.openRawResourceFd(R.raw.loud_buzzer)
+                    setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+                    afd.close()
+                }
                 setAudioAttributes(
                     AudioAttributes.Builder()
-                        .setUsage(AudioAttributes.USAGE_ALARM)
+                        .setUsage(AudioAttributes.USAGE_NOTIFICATION)
                         .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
                         .build()
                 )
-                isLooping = true
+                isLooping = false
                 prepare()
                 start()
             }
-            Log.i(TAG, "Unique loud buzzer playing at max ALARM stream volume.")
+            Log.i(TAG, "Soothing notification chime playing comfortably.")
         } catch (e: Exception) {
-            Log.e(TAG, "Error initializing MediaPlayer for loud_buzzer: ${e.message}", e)
+            Log.e(TAG, "Error initializing MediaPlayer for chime: ${e.message}", e)
         }
 
         // 2. Continuous high-intensity haptic vibration

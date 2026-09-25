@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { Badge } from "@/components/ui/Badge";
+import { playMelodiousChime } from "@/lib/utils/sound";
+import { SoundControlBadge } from "@/components/common/SoundControlBadge";
+import { LiveUpdateToast, LiveUpdateNotification } from "@/components/common/LiveUpdateToast";
 import {
   ShoppingBag,
   Eye,
@@ -206,6 +209,22 @@ export default function AdminOrdersPage() {
   const [selectedFilter, setSelectedFilter] = useState<OrderFilterType>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
 
+  // Real-time live update notifications & soothing sound alert state
+  const [liveNotifications, setLiveNotifications] = useState<LiveUpdateNotification[]>([]);
+  const knownOrdersMapRef = useRef<Map<string, { status: string; agentName?: string | null; revisedPrice?: number | null }>>(new Map());
+  const initialLoadDoneRef = useRef(false);
+
+  const addLiveNotification = useCallback((notif: LiveUpdateNotification) => {
+    setLiveNotifications((prev) => [notif, ...prev.filter((n) => n.id !== notif.id).slice(0, 4)]);
+    setTimeout(() => {
+      setLiveNotifications((prev) => prev.filter((n) => n.id !== notif.id));
+    }, 9000);
+  }, []);
+
+  const handleDismissNotification = useCallback((id: string) => {
+    setLiveNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
+
   const counts = useMemo(() => {
     let pending = 0;
     let assigned = 0;
@@ -256,8 +275,8 @@ export default function AdminOrdersPage() {
     });
   }, [orders, selectedFilter, searchQuery]);
 
-  const fetchOrders = useCallback(async () => {
-    setLoading(true);
+  const fetchOrders = useCallback(async (isSilent = false) => {
+    if (!isSilent) setLoading(true);
     setError("");
 
     let combinedOrders: Order[] = [];
@@ -310,7 +329,7 @@ export default function AdminOrdersPage() {
             location: formatAddress(ord.address, ord.addressSummary || "—"),
             deviceName: ord.deviceName ||
               (ord.quote?.variant?.model
-                ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()
+                 ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()
                 : "Mobile Device"),
             pickupDate: ord.pickupDate || "—",
             pickupTimeSlot: ord.pickupTimeSlot || "—",
@@ -391,9 +410,67 @@ export default function AdminOrdersPage() {
       }
     }
 
+    // 3. Real-Time Detection: Check for new incoming orders and live updates
+    if (initialLoadDoneRef.current) {
+      for (const ord of combinedOrders) {
+        const cleanNum = ord.orderNumber ? ord.orderNumber.replace(/^[#\s]+/, "") : "";
+        if (!cleanNum) continue;
+
+        const prev = knownOrdersMapRef.current.get(cleanNum);
+        if (!prev) {
+          // Brand New Order Received!
+          playMelodiousChime("new_order");
+          addLiveNotification({
+            id: `new-${cleanNum}-${Date.now()}`,
+            type: "new_order",
+            orderNumber: cleanNum,
+            title: "New Buyback Order Received",
+            subtitle: `${ord.deviceName} • ₹${(ord.estimatedPrice || 0).toLocaleString("en-IN")}`,
+            details: `Customer: ${ord.customerName} (${ord.customerPhone}) • ${ord.location} • Slot: ${ord.pickupDate} ${ord.pickupTimeSlot}`,
+            timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+            onView: () => setSearchQuery(cleanNum),
+          });
+          break; // Avoid playing multiple chimes if a batch syncs
+        } else if (
+          prev.status !== ord.status ||
+          prev.agentName !== ord.agentName ||
+          prev.revisedPrice !== ord.revisedPrice
+        ) {
+          // Order Status or Assignment Updated!
+          playMelodiousChime("update");
+          addLiveNotification({
+            id: `upd-${cleanNum}-${Date.now()}`,
+            type: "update",
+            orderNumber: cleanNum,
+            title: "Order Status / Assignment Updated",
+            subtitle: `Status: ${ord.status.replace(/_/g, " ")} • ₹${(ord.revisedPrice || ord.estimatedPrice || 0).toLocaleString("en-IN")}`,
+            details: `Agent: ${ord.agentName || "Unassigned"} • ${ord.deviceName}`,
+            timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+            onView: () => setSearchQuery(cleanNum),
+          });
+          break;
+        }
+      }
+    }
+
+    // Save current snapshot
+    const newMap = new Map<string, { status: string; agentName?: string | null; revisedPrice?: number | null }>();
+    for (const ord of combinedOrders) {
+      const cleanNum = ord.orderNumber ? ord.orderNumber.replace(/^[#\s]+/, "") : "";
+      if (cleanNum) {
+        newMap.set(cleanNum, {
+          status: ord.status,
+          agentName: ord.agentName,
+          revisedPrice: ord.revisedPrice,
+        });
+      }
+    }
+    knownOrdersMapRef.current = newMap;
+    initialLoadDoneRef.current = true;
+
     setOrders(combinedOrders);
-    setLoading(false);
-  }, []);
+    if (!isSilent) setLoading(false);
+  }, [addLiveNotification]);
 
   const fetchAvailableAgents = useCallback(async () => {
     try {
@@ -414,8 +491,15 @@ export default function AdminOrdersPage() {
   }, []);
 
   useEffect(() => {
-    fetchOrders();
+    fetchOrders(false);
     fetchAvailableAgents();
+
+    // 10-second automatic polling for live orders and real-time updates
+    const pollInterval = setInterval(() => {
+      fetchOrders(true);
+    }, 10000);
+
+    return () => clearInterval(pollInterval);
   }, [fetchOrders, fetchAvailableAgents]);
 
   const handleSelectAgent = async (ord: Order, selectedAgentId: string) => {
@@ -1006,6 +1090,7 @@ export default function AdminOrdersPage() {
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden">
+      <LiveUpdateToast notifications={liveNotifications} onDismiss={handleDismissNotification} />
       <AdminSidebar />
 
       <main className="flex-1 w-full max-w-full p-3 sm:p-6 lg:p-8 overflow-x-hidden space-y-4 sm:space-y-6">
@@ -1018,6 +1103,8 @@ export default function AdminOrdersPage() {
             </p>
           </div>
           <div className="flex items-center gap-2 sm:gap-3 flex-wrap w-full sm:w-auto">
+            <SoundControlBadge />
+
             <button
               onClick={handleDownloadAdminDataCSV}
               disabled={orders.length === 0}
@@ -1048,7 +1135,7 @@ export default function AdminOrdersPage() {
             </button>
 
             <button
-              onClick={fetchOrders}
+              onClick={() => fetchOrders(false)}
               className="flex items-center gap-2 text-xs font-bold text-black bg-yellow-400 hover:bg-yellow-300 px-4 py-2 rounded-xl transition shadow-lg"
             >
               <Clock className="w-4 h-4" />
