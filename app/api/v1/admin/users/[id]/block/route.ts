@@ -14,7 +14,7 @@ const blockSchema = z.object({
 export const POST = apiWrapper(
   async (req: NextRequest, { params }: { params: { id: string } }) => {
     const admin = await verifyAuthToken(req);
-    if (admin.role !== "ADMIN") throw new AppError("Forbidden: Admin access required.", 403);
+    if (admin.role !== "ADMIN" && admin.role !== "SUPER_ADMIN") throw new AppError("Forbidden: Admin access required.", 403);
 
     const body = await req.json();
     const validation = blockSchema.safeParse(body);
@@ -23,15 +23,28 @@ export const POST = apiWrapper(
     }
 
     const { action, reason } = validation.data;
-    const targetUser = await prisma.user.findUnique({ where: { id: params.id } });
+    const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(params.id);
+    const cleanPhone = params.id.replace(/\D/g, "").slice(-10);
+
+    const targetUser = isUuid
+      ? await prisma.user.findUnique({ where: { id: params.id } })
+      : await prisma.user.findFirst({
+          where: {
+            OR: [
+              { id: params.id },
+              ...(cleanPhone ? [{ phone: cleanPhone }] : []),
+            ],
+          },
+        });
+
     if (!targetUser) throw new AppError("User not found.", 404);
-    if (targetUser.role === "ADMIN") throw new AppError("Admin accounts cannot be blocked.", 400);
+    if (targetUser.role === "ADMIN" || targetUser.role === "SUPER_ADMIN") throw new AppError("Admin accounts cannot be blocked.", 400);
 
     if (action === "block") {
       if (!reason || reason.trim().length < 3) throw new AppError("A block reason is required.", 400);
 
       const updated = await prisma.user.update({
-        where: { id: params.id },
+        where: { id: targetUser.id },
         data: { isBlocked: true, blockedAt: new Date(), blockReason: reason.trim(), blockedByAdminId: admin.uid },
         select: { id: true, phone: true, name: true, isBlocked: true, blockedAt: true, blockReason: true },
       });
@@ -46,7 +59,7 @@ export const POST = apiWrapper(
     }
 
     const updated = await prisma.user.update({
-      where: { id: params.id },
+      where: { id: targetUser.id },
       data: { isBlocked: false, blockedAt: null, blockReason: null, blockedByAdminId: null },
       select: { id: true, phone: true, name: true, isBlocked: true },
     });
