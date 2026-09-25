@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { DEFAULT_PARTNERS, OrderData } from "@/lib/store";
+import { formatAddress } from "@/lib/address";
 import { Truck, CheckCircle2, UserCheck, Phone, Building2, Loader2, ArrowRight, Smartphone, MapPin, Navigation, Calendar } from "lucide-react";
 
 function getAdminToken() {
@@ -65,9 +66,7 @@ export default function AdminPickupsPage() {
               customerName: ord.user?.name || ord.customerName || "Customer",
               customerPhone: ord.user?.phone || ord.customerPhone || "—",
               deviceName: ord.deviceName || "Mobile Device",
-              addressSummary: ord.address
-                ? `${ord.address.house || ""}, ${ord.address.city || ""}, ${ord.address.state || ""} - ${ord.address.pincode || ""}`
-                : ord.addressSummary || "—",
+              addressSummary: formatAddress(ord.address, ord.addressSummary || "—"),
               pincode: ord.address?.pincode || ord.pincode || "700001",
               pickupDate: ord.pickupDate || "Scheduled",
               pickupTimeSlot: ord.pickupTimeSlot || "Standard Slot",

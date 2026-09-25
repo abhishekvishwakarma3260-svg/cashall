@@ -5,6 +5,8 @@ import { EmailService } from "@/lib/services/email.service";
 import { logger } from "@/lib/utils/logger";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 
+import { formatAddress } from "@/lib/address";
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -13,6 +15,8 @@ export async function POST(req: NextRequest) {
       customerName,
       customerPhone,
       customerEmail,
+      line1: rawLine1,
+      line2: rawLine2,
       house,
       street,
       area,
@@ -24,6 +28,9 @@ export async function POST(req: NextRequest) {
       pickupTimeSlot = "10 AM - 1 PM",
       agentNotes,
     } = body;
+
+    const line1 = (rawLine1 || house || "").trim() || "Address Line 1";
+    const line2 = rawLine2 !== undefined ? (rawLine2 ? String(rawLine2).trim() : null) : (street || area || null);
 
     if (!quoteNumber) {
       return NextResponse.json(
@@ -118,10 +125,12 @@ export async function POST(req: NextRequest) {
         userId: user.id,
         fullName: name,
         phone,
-        house: house || "Address House/Flat",
-        street: street || "Street / Locality",
-        area: area || city,
-        landmark: landmark || null,
+        line1: line1,
+        line2: line2,
+        house: line1,
+        street: line2 || "",
+        area: line2 || "",
+        landmark: null,
         city: city || "Howrah",
         state: state || "West Bengal",
         pincode: pincode || "711203",
@@ -163,7 +172,7 @@ export async function POST(req: NextRequest) {
       ? formatDeviceName(quote.variant.model.brand.name, quote.variant.model.name, quote.variant.storage)
       : "Assessed Device";
 
-    const fullAddress = `${house || ""}, ${street || ""}, ${area || city}, ${state} - ${pincode}`;
+    const fullAddress = formatAddress(address, `${line1}${line2 ? `, ${line2}` : ""}, ${state} - ${pincode}`);
 
     // WhatsApp Notification
     WhatsAppService.notifyNewOrder({

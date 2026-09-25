@@ -12,6 +12,7 @@ import { removeQuoteFromCart } from "@/lib/cart";
 import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails } from "@/lib/serviceability";
 import { trackMetaStandardEvent, trackMetaCustomEvent } from "@/lib/analytics/meta";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
+import { formatAddress } from "@/lib/address";
 import {
   MapPin,
   Calendar,
@@ -38,14 +39,12 @@ function PickupCheckoutContent() {
   const [selectedState, setSelectedState] = useState("West Bengal");
   const [resolvedDeviceName, setResolvedDeviceName] = useState("");
 
-  // Address fields
+  // Standardized Address fields: Line 1, Line 2 (optional), State, PIN Code
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [house, setHouse] = useState("");
-  const [street, setStreet] = useState("");
-  const [area, setArea] = useState("");
-  const [landmark, setLandmark] = useState("");
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
   const [hasPrefilledAddress, setHasPrefilledAddress] = useState(false);
 
   // Pickup slot
@@ -122,10 +121,10 @@ function PickupCheckoutContent() {
       if (storedAddressStr) {
         try {
           const sa = JSON.parse(storedAddressStr);
-          if (sa.house) setHouse(sa.house);
-          if (sa.street) setStreet(sa.street);
-          if (sa.area) setArea(sa.area);
-          if (sa.landmark) setLandmark(sa.landmark);
+          if (sa.line1) setLine1(sa.line1);
+          else if (sa.house) setLine1([sa.house, sa.street].filter(Boolean).join(", "));
+          if (sa.line2 !== undefined && sa.line2 !== null) setLine2(sa.line2);
+          else if (sa.area) setLine2([sa.area, sa.landmark].filter(Boolean).join(", "));
           if (sa.city) setCity(sa.city);
           if (sa.state) setSelectedState(sa.state);
           if (sa.pincode) {
@@ -147,10 +146,8 @@ function PickupCheckoutContent() {
 
           if (lo.addressSummary) {
             const parts = lo.addressSummary.split(",").map((s: string) => s.trim());
-            if (parts.length >= 1 && parts[0]) setHouse(parts[0]);
-            if (parts.length >= 2 && parts[1]) setStreet(parts[1]);
-            if (parts.length >= 3 && parts[2]) setArea(parts[2]);
-            if (parts.length >= 4 && parts[3]) setLandmark(parts[3]);
+            if (parts.length >= 1 && parts[0]) setLine1(parts[0]);
+            if (parts.length >= 2 && parts[1]) setLine2(parts.slice(1).join(", "));
             didPrefill = true;
           }
         } catch (e) {}
@@ -166,9 +163,8 @@ function PickupCheckoutContent() {
           }
           if (r.deliveryAddress) {
             const parts = r.deliveryAddress.split(",").map((s: string) => s.trim());
-            if (parts.length >= 1 && parts[0]) setHouse(parts[0]);
-            if (parts.length >= 2 && parts[1]) setStreet(parts[1]);
-            if (parts.length >= 3 && parts[2]) setArea(parts[2]);
+            if (parts.length >= 1 && parts[0]) setLine1(parts[0]);
+            if (parts.length >= 2 && parts[1]) setLine2(parts.slice(1).join(", "));
             didPrefill = true;
           }
         } catch (e) {}
@@ -324,6 +320,11 @@ function PickupCheckoutContent() {
       return;
     }
 
+    if (!line1.trim()) {
+      alert("Please enter Address Line 1 for doorstep pickup.");
+      return;
+    }
+
     // Lock submission immediately to prevent duplicate requests
     isSubmittingRef.current = true;
     setIsSubmitting(true);
@@ -331,15 +332,14 @@ function PickupCheckoutContent() {
     const finalName = fullName.trim() || "Customer";
     const finalPhone = cleanPhone;
     const finalEmail = email.trim();
-    const finalHouse = house.trim() || "Customer Address";
-    const finalStreet = street.trim() || "Doorstep Location";
-    const finalArea = area.trim() || selectedState;
-    const finalCity = city.trim() || "Kolkata";
+    const finalLine1 = line1.trim();
+    const finalLine2 = line2.trim();
     const fullDeviceName = resolvedDeviceName || quote?.breakdownJson ? (JSON.parse(quote?.breakdownJson || "{}").deviceName || "Mobile Device") : "Mobile Device";
 
-    // Update user profile in local storage with email
+    // Update user profile and address in local storage
     if (typeof window !== "undefined") {
       localStorage.setItem("cashall_user", JSON.stringify({ name: finalName, phone: finalPhone, email: finalEmail }));
+      localStorage.setItem("cashall_saved_address", JSON.stringify({ line1: finalLine1, line2: finalLine2, state: selectedState, pincode: cleanPin }));
     }
 
     let createdOrderNum = "";
@@ -359,13 +359,12 @@ function PickupCheckoutContent() {
           fullName: finalName,
           phone: finalPhone,
           email: finalEmail,
-          house: finalHouse,
-          street: finalStreet,
-          area: finalArea,
-          landmark,
-          city: finalCity,
+          line1: finalLine1,
+          line2: finalLine2,
+          house: finalLine1,
+          street: finalLine2,
           state: selectedState,
-          pincode,
+          pincode: cleanPin,
           pickupDate,
           pickupTimeSlot: pickupSlot,
           deviceName: fullDeviceName,
@@ -438,7 +437,7 @@ function PickupCheckoutContent() {
       value: orderValue,
       currency: "INR",
       pincode: pincode,
-      city: finalCity,
+      city: city,
       pickup_date: pickupDate,
       pickup_time_slot: pickupSlot,
     }, { eventId: `pickup_${createdOrderNum}` });
@@ -449,7 +448,7 @@ function PickupCheckoutContent() {
       } catch {}
     }
 
-    const fullAddress = `${finalHouse}, ${finalStreet}, ${finalArea}${landmark ? ", " + landmark.trim() : ""}, ${finalCity}, ${selectedState} - ${pincode}`;
+    const fullAddress = formatAddress({ line1: finalLine1, line2: finalLine2, state: selectedState, pincode });
 
     const newOrder: any = {
       id: `ord-${Date.now()}`,
@@ -491,11 +490,8 @@ function PickupCheckoutContent() {
       }));
 
       localStorage.setItem("cashall_saved_address", JSON.stringify({
-        house: finalHouse,
-        street: finalStreet,
-        area: finalArea,
-        landmark: landmark ? landmark.trim() : "",
-        city: finalCity,
+        line1: finalLine1,
+        line2: finalLine2,
         state: selectedState,
         pincode: pincode,
       }));
@@ -768,59 +764,30 @@ function PickupCheckoutContent() {
                     />
                   </div>
 
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-xs font-bold text-brand-black mb-1">
-                      House / Flat / Building <span className="text-red-500">*</span>
+                      Address Line 1 <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
-                      value={house}
-                      onChange={(e) => setHouse(e.target.value)}
-                      placeholder="e.g. Flat 402, Sunshine Heights"
+                      value={line1}
+                      onChange={(e) => setLine1(e.target.value)}
+                      placeholder="e.g. Flat 402, Sunshine Heights, MG Road"
                       required
-                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow"
+                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow font-medium"
                     />
                   </div>
 
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className="block text-xs font-bold text-brand-black mb-1">
-                      Street / Road <span className="text-red-500">*</span>
+                      Address Line 2 <span className="text-gray-400 font-normal">(Optional)</span>
                     </label>
                     <input
                       type="text"
-                      value={street}
-                      onChange={(e) => setStreet(e.target.value)}
-                      placeholder="e.g. MG Road, Sector 15"
-                      required
-                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-brand-black mb-1">
-                      Area / Locality <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      value={area}
-                      onChange={(e) => setArea(e.target.value)}
-                      placeholder="e.g. Shibpur / Kings Road"
-                      required
-                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-brand-black mb-1">
-                      City / District <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
-                      placeholder="e.g. Ahmedabad, Kolkata, Howrah"
-                      required
-                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow font-bold text-brand-black"
+                      value={line2}
+                      onChange={(e) => setLine2(e.target.value)}
+                      placeholder="e.g. Near Liluah Station / Shibpur Bazaar"
+                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow font-medium"
                     />
                   </div>
 
@@ -844,15 +811,19 @@ function PickupCheckoutContent() {
 
                   <div>
                     <label className="block text-xs font-bold text-brand-black mb-1">
-                      Landmark <span className="text-gray-400 font-normal">(Optional)</span>
+                      PIN Code <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text"
-                      value={landmark}
-                      onChange={(e) => setLandmark(e.target.value)}
-                      placeholder="e.g. Near Metro Station"
-                      className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow"
-                    />
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="text"
+                        value={pincode}
+                        readOnly
+                        className="w-full px-3 py-2 text-xs bg-gray-50 rounded-xl border border-brand-border text-brand-black font-mono font-bold cursor-not-allowed"
+                      />
+                      <span className="text-[10px] font-bold text-green-700 bg-green-100 px-2 py-1 rounded-lg shrink-0">
+                        Serviced ✓
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

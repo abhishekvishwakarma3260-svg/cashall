@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 import { prisma } from "@/lib/db";
+import { formatAddress } from "@/lib/address";
 
 export const GET = apiWrapper(async (req: NextRequest) => {
   const decodedUser = await verifyAuthToken(req);
@@ -49,9 +50,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     orderNumber: p.order.orderNumber,
     customerName: p.order.user.name || p.order.address?.fullName || "CashALL Customer",
     customerPhone: p.order.address?.phone || p.order.user.phone,
-    addressText: p.order.address
-      ? `${p.order.address.house}, ${p.order.address.street}, ${p.order.address.area}, ${p.order.address.city} - ${p.order.address.pincode}`
-      : "—",
+    addressText: formatAddress(p.order.address),
     pickupDate: p.order.pickupDate,
     pickupTimeSlot: p.order.pickupTimeSlot,
     deviceName: `${p.order.quote.variant.model.brand.name} ${p.order.quote.variant.model.name}`,

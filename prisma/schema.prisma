@@ -39,11 +39,13 @@ model Address {
   userId    String    @db.Uuid
   fullName  String
   phone     String
-  house     String
-  street    String
-  area      String
+  line1     String?
+  line2     String?
+  house     String?
+  street    String?
+  area      String?
   landmark  String?
-  city      String
+  city      String?
   state     String
   pincode   String
   latitude  Float?
@@ -789,4 +791,23 @@ enum TicketStatus {
 enum DiscountType {
   FIXED
   PERCENTAGE
+}
+
+model Review {
+  id           String   @id @default(uuid()) @db.Uuid
+  name         String
+  phone        String?
+  rating       Int      @default(5)
+  headline     String?
+  comment      String
+  deviceModel  String?
+  location     String?
+  payout       Float?
+  verified     Boolean  @default(false)
+  helpfulCount Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([rating])
+  @@index([createdAt])
 }

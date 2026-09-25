@@ -82,11 +82,8 @@ export default function SupportDashboardPage() {
   const [convertForm, setConvertForm] = useState({
     customerName: "",
     customerPhone: "",
-    house: "158, Ghughupara Road",
-    street: "Bhattanagar, Liluah",
-    area: "Howrah",
-    landmark: "Near Railway Station",
-    city: "Howrah",
+    line1: "158, Ghughupara Road, Bhattanagar",
+    line2: "Near Liluah Railway Station",
     state: "West Bengal",
     pincode: "711203",
     pickupDate: "Tomorrow",
@@ -278,11 +275,8 @@ export default function SupportDashboardPage() {
           quoteNumber: quoteToConvert.quoteNumber,
           customerName: convertForm.customerName || quoteToConvert.customerName,
           customerPhone: convertForm.customerPhone || quoteToConvert.customerPhone,
-          house: convertForm.house,
-          street: convertForm.street,
-          area: convertForm.area,
-          landmark: convertForm.landmark,
-          city: convertForm.city,
+          line1: convertForm.line1,
+          line2: convertForm.line2,
           state: convertForm.state,
           pincode: convertForm.pincode,
           pickupDate: convertForm.pickupDate,
@@ -822,42 +816,37 @@ export default function SupportDashboardPage() {
 
               <div className="space-y-3 pt-2 border-t border-neutral-800">
                 <span className="text-neutral-400 font-extrabold uppercase text-[10px] block">Doorstep Pickup Address</span>
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-neutral-400 text-[11px] mb-1">Flat / House No.</label>
-                    <input
-                      type="text"
-                      required
-                      value={convertForm.house}
-                      onChange={(e) => setConvertForm({ ...convertForm, house: e.target.value })}
-                      className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-neutral-400 text-[11px] mb-1">Street / Locality</label>
-                    <input
-                      type="text"
-                      required
-                      value={convertForm.street}
-                      onChange={(e) => setConvertForm({ ...convertForm, street: e.target.value })}
-                      className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-neutral-400 text-[11px] mb-1">
+                    Address Line 1 <span className="text-yellow-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Flat/House No., Building, Street / Road"
+                    value={convertForm.line1}
+                    onChange={(e) => setConvertForm({ ...convertForm, line1: e.target.value })}
+                    className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-neutral-400 text-[11px] mb-1">
+                    Address Line 2 <span className="text-neutral-500">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Area, Landmark, Colony"
+                    value={convertForm.line2}
+                    onChange={(e) => setConvertForm({ ...convertForm, line2: e.target.value })}
+                    className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
+                  />
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-neutral-400 text-[11px] mb-1">City</label>
-                    <input
-                      type="text"
-                      required
-                      value={convertForm.city}
-                      onChange={(e) => setConvertForm({ ...convertForm, city: e.target.value })}
-                      className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-neutral-400 text-[11px] mb-1">State</label>
+                    <label className="block text-neutral-400 text-[11px] mb-1">
+                      State <span className="text-yellow-400">*</span>
+                    </label>
                     <input
                       type="text"
                       required
@@ -867,12 +856,15 @@ export default function SupportDashboardPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-neutral-400 text-[11px] mb-1">Pincode</label>
+                    <label className="block text-neutral-400 text-[11px] mb-1">
+                      PIN Code <span className="text-yellow-400">*</span>
+                    </label>
                     <input
                       type="text"
                       required
+                      maxLength={6}
                       value={convertForm.pincode}
-                      onChange={(e) => setConvertForm({ ...convertForm, pincode: e.target.value })}
+                      onChange={(e) => setConvertForm({ ...convertForm, pincode: e.target.value.replace(/\D/g, "") })}
                       className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none font-mono"
                     />
                   </div>

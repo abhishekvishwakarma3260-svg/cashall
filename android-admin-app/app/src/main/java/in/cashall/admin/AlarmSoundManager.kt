@@ -22,8 +22,8 @@ object AlarmSoundManager {
     private var vibrator: Vibrator? = null
     private var isAlarmPlaying = false
 
-    // Vibration pattern: wait 0ms, vibrate 700ms, pause 250ms, vibrate 700ms, pause 250ms, vibrate 1000ms
-    private val VIBRATION_PATTERN = longArrayOf(0, 700, 250, 700, 250, 1000)
+    // Pleasant haptic notification pulse (gentle and reassuring)
+    private val VIBRATION_PATTERN = longArrayOf(0, 250, 150, 250, 500)
     private var autoSilenceHandler: Handler? = null
 
     // Exact 5-second alarm duration
@@ -39,25 +39,26 @@ object AlarmSoundManager {
             return
         }
         isAlarmPlaying = true
-        Log.i(TAG, "🚨 Starting loud real-order alarm (STRICT 5.0s auto-silence active)...")
+        Log.i(TAG, "🔔 Playing soothing notification chime for new order (5s auto-silence)...")
 
         // Strict 5-second auto-silence timer: stops ringing exactly after 5.0s
         autoSilenceHandler?.removeCallbacksAndMessages(null)
         autoSilenceHandler = Handler(Looper.getMainLooper()).apply {
             postDelayed({
                 if (isAlarmPlaying) {
-                    Log.i(TAG, "⏰ Auto-silencing real-order alarm after exactly 5s.")
+                    Log.i(TAG, "⏰ Auto-silencing notification chime after 5s.")
                     stopAlarm(context)
                 }
             }, ALARM_DURATION_MS)
         }
 
-        // 1. Play high-decibel emergency siren (R.raw.loud_buzzer) via USAGE_ALARM
+        // 1. Play soothing melodic chime (R.raw.loud_buzzer) at comfortable volume
         try {
             val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
             audioManager?.let { am ->
                 val maxVol = am.getStreamMaxVolume(AudioManager.STREAM_ALARM)
-                am.setStreamVolume(AudioManager.STREAM_ALARM, maxVol, 0)
+                val comfortableVol = (maxVol * 0.70f).toInt().coerceAtLeast(1)
+                am.setStreamVolume(AudioManager.STREAM_ALARM, comfortableVol, 0)
             }
 
             mediaPlayer?.release()

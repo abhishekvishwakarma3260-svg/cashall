@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
+import { formatAddress } from "@/lib/address";
 
 export const dynamic = "force-dynamic";
 
@@ -157,17 +158,7 @@ export async function GET(req: NextRequest) {
     });
 
     const mapped = orders.map((ord: any) => {
-      let fullAddress = "Doorstep Location";
-      if (ord.address) {
-        const parts = [
-          ord.address.house,
-          ord.address.street,
-          ord.address.area,
-          ord.address.city,
-          ord.address.state ? `${ord.address.state} - ${ord.address.pincode}` : ord.address.pincode,
-        ].filter(Boolean);
-        fullAddress = parts.join(", ");
-      }
+      const fullAddress = formatAddress(ord.address, "Doorstep Location");
 
       // Resolve accurate clean device name (priority on evaluated breakdownJson/selectedAnswersJson)
       let explicitDeviceName = "";

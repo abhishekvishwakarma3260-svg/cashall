@@ -10,6 +10,7 @@ import {
   sendServerScheduleEvent,
   sendServerPickupBookedEvent,
 } from "@/lib/analytics/meta-server";
+import { formatAddress } from "@/lib/address";
 import { z } from "zod";
 
 const createOrderSchema = z.object({
@@ -17,6 +18,8 @@ const createOrderSchema = z.object({
   fullName: z.any().optional(),
   phone: z.any().optional(),
   email: z.any().optional(),
+  line1: z.any().optional(),
+  line2: z.any().optional(),
   house: z.any().optional(),
   street: z.any().optional(),
   area: z.any().optional(),
@@ -40,9 +43,17 @@ export async function POST(req: NextRequest) {
     const rawPhone = data.phone ? String(data.phone) : "7604092333";
     const cleanPhone = rawPhone.replace(/\D/g, "").slice(-10) || "7604092333";
     const fullName = data.fullName ? String(data.fullName).trim() : "Customer";
-    const house = data.house ? String(data.house).trim() : "Customer Address";
-    const street = data.street ? String(data.street).trim() : "Doorstep Location";
-    const area = data.area ? String(data.area).trim() : "West Bengal";
+    
+    // Standardized address structure: line 1, line 2 (optional), state, pincode
+    const line1 = (data.line1 || body.line1)
+      ? String(data.line1 || body.line1).trim()
+      : (data.house ? [data.house, data.street].filter(Boolean).join(", ") : "Customer Address");
+    const line2 = (data.line2 !== undefined || body.line2 !== undefined)
+      ? ((data.line2 || body.line2) ? String(data.line2 || body.line2).trim() : null)
+      : (data.area ? [data.area, data.landmark].filter(Boolean).join(", ") : null);
+    const house = line1;
+    const street = line2 || "";
+    const area = line2 || "West Bengal";
     const pincode = data.pincode ? String(data.pincode).trim() : "";
 
     // Strictly lock serviceability to the designated districts
@@ -150,9 +161,7 @@ export async function POST(req: NextRequest) {
 
       if (existingOrderForQuote) {
         logger.info(`[ORDER CREATE IDEMPOTENCY] Order #${existingOrderForQuote.orderNumber} already exists for quote ${quote.quoteNumber || quote.id}. Returning existing order.`);
-        const fullAddr = existingOrderForQuote.address
-          ? `${existingOrderForQuote.address.house || ""}, ${existingOrderForQuote.address.street || ""}, ${existingOrderForQuote.address.area || ""}, ${existingOrderForQuote.address.city || ""}, ${existingOrderForQuote.address.state || ""} - ${existingOrderForQuote.address.pincode || ""}`
-          : `${house}, ${street}, ${area}, ${city}, ${state} - ${pincode}`;
+        const fullAddr = formatAddress(existingOrderForQuote.address, `${line1}${line2 ? `, ${line2}` : ""}, ${state} - ${pincode}`);
 
         return NextResponse.json({
           success: true,
@@ -198,9 +207,7 @@ export async function POST(req: NextRequest) {
 
       if (existingOrderByNum) {
         logger.info(`[ORDER CREATE IDEMPOTENCY] Order #${targetOrderNumber} already exists. Returning existing order.`);
-        const fullAddr = existingOrderByNum.address
-          ? `${existingOrderByNum.address.house || ""}, ${existingOrderByNum.address.street || ""}, ${existingOrderByNum.address.area || ""}, ${existingOrderByNum.address.city || ""}, ${existingOrderByNum.address.state || ""} - ${existingOrderByNum.address.pincode || ""}`
-          : `${house}, ${street}, ${area}, ${city}, ${state} - ${pincode}`;
+        const fullAddr = formatAddress(existingOrderByNum.address, `${line1}${line2 ? `, ${line2}` : ""}, ${state} - ${pincode}`);
 
         return NextResponse.json({
           success: true,
@@ -241,9 +248,7 @@ export async function POST(req: NextRequest) {
 
     if (recentDuplicate) {
       logger.info(`[ORDER CREATE IDEMPOTENCY] Duplicate placement detected for user ${cleanPhone} (#${recentDuplicate.orderNumber}) within 5 min. Returning existing order.`);
-      const fullAddr = recentDuplicate.address
-        ? `${recentDuplicate.address.house || ""}, ${recentDuplicate.address.street || ""}, ${recentDuplicate.address.area || ""}, ${recentDuplicate.address.city || ""}, ${recentDuplicate.address.state || ""} - ${recentDuplicate.address.pincode || ""}`
-        : `${house}, ${street}, ${area}, ${city}, ${state} - ${pincode}`;
+      const fullAddr = formatAddress(recentDuplicate.address, `${line1}${line2 ? `, ${line2}` : ""}, ${state} - ${pincode}`);
 
       return NextResponse.json({
         success: true,
@@ -327,10 +332,12 @@ export async function POST(req: NextRequest) {
         userId: user.id,
         fullName: fullName,
         phone: cleanPhone,
-        house: house,
-        street: street,
-        area: area,
-        landmark: data.landmark ? String(data.landmark).trim() : null,
+        line1: line1,
+        line2: line2,
+        house: line1,
+        street: line2 || "",
+        area: line2 || "",
+        landmark: null,
         city: city,
         state: state,
         pincode: pincode,
@@ -375,7 +382,7 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const fullAddress = `${house}, ${street}, ${area}${data.landmark ? ", " + data.landmark : ""}, ${state} - ${pincode}`;
+    const fullAddress = formatAddress(address, `${line1}${line2 ? `, ${line2}` : ""}, ${state} - ${pincode}`);
 
     // 4. Detached asynchronous tasks (Never block or delay the customer HTTP response)
     const quoteIdToConvert = quote.id;

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { formatAddress } from "@/lib/address";
 import {
   Gamepad2,
   Disc,
@@ -177,8 +178,8 @@ export default function Ps5RentalPage() {
       if (!didPrefill && storedAddress) {
         try {
           const sa = JSON.parse(storedAddress);
-          const fullAddr = [sa.house, sa.street, sa.area, sa.landmark, sa.city, sa.state].filter(Boolean).join(", ");
-          if (fullAddr) setDeliveryAddress(fullAddr);
+          const fullAddr = formatAddress(sa);
+          if (fullAddr && fullAddr !== "—") setDeliveryAddress(fullAddr);
           if (sa.pincode) setPincode(sa.pincode);
           didPrefill = true;
         } catch (e) {}

@@ -39,6 +39,7 @@ import {
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { ReQuotationModal } from "@/components/admin/ReQuotationModal";
 import { RescheduleModal } from "@/components/common/RescheduleModal";
+import { formatAddress } from "@/lib/address";
 
 interface Order {
   id: string;
@@ -303,9 +304,7 @@ export default function AdminOrdersPage() {
             customerEmail: ord.user?.email || ord.customerEmail || "",
             imeiNumber: ord.imeiRecords?.[0]?.code || ord.qcReports?.[0]?.imeiNumber || (ord as any).imeiNumber || "",
             pincode: ord.pincode || ord.address?.pincode || getOrderPincode(ord),
-            location: ord.address
-              ? `${ord.address.house || ""}, ${ord.address.city || ""}, ${ord.address.state || ""} - ${ord.address.pincode || ""}`
-              : ord.addressSummary || "—",
+            location: formatAddress(ord.address, ord.addressSummary || "—"),
             deviceName: ord.deviceName ||
               (ord.quote?.variant?.model
                 ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()

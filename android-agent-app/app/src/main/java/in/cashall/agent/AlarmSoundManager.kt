@@ -23,8 +23,8 @@ object AlarmSoundManager {
     private var vibrator: Vibrator? = null
     private var isAlarmPlaying = false
 
-    // Vibration pattern: wait 0ms, vibrate 800ms, pause 300ms, vibrate 800ms, pause 300ms, vibrate 1000ms
-    private val VIBRATION_PATTERN = longArrayOf(0, 800, 300, 800, 300, 1000)
+    // Pleasant haptic notification pulse (gentle and reassuring)
+    private val VIBRATION_PATTERN = longArrayOf(0, 250, 150, 250, 500)
     private var autoSilenceHandler: android.os.Handler? = null
 
     @Synchronized
@@ -37,27 +37,26 @@ object AlarmSoundManager {
             return
         }
         isAlarmPlaying = true
-        Log.i(TAG, "Starting loud lead buzzer and phone vibration (5s auto-silence enabled)...")
+        Log.i(TAG, "🔔 Playing soothing notification chime for assigned lead (5s auto-silence enabled)...")
 
-        // Auto-silence after 5 seconds so it never keeps buzzering for minutes if unattended
+        // Auto-silence after 5 seconds so it never keeps chiming for minutes if unattended
         autoSilenceHandler?.removeCallbacksAndMessages(null)
         autoSilenceHandler = android.os.Handler(android.os.Looper.getMainLooper()).apply {
             postDelayed({
                 if (isAlarmPlaying) {
-                    Log.i(TAG, "⏰ Auto-silencing lead buzzer after 5s timeout.")
+                    Log.i(TAG, "⏰ Auto-silencing notification chime after 5s timeout.")
                     stopAlarm(context)
                 }
             }, 5_000L)
         }
 
-        // 1. Play unique high-decibel emergency siren (R.raw.loud_buzzer) via USAGE_ALARM
-        // NOTE: Never use RingtoneManager.TYPE_ALARM so user's morning alarm never plays or mixes!
+        // 1. Play soothing melodic chime (R.raw.loud_buzzer) at comfortable volume
         try {
-            // Maximize alarm stream volume
             val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
             audioManager?.let { am ->
                 val maxVol = am.getStreamMaxVolume(AudioManager.STREAM_ALARM)
-                am.setStreamVolume(AudioManager.STREAM_ALARM, maxVol, 0)
+                val comfortableVol = (maxVol * 0.70f).toInt().coerceAtLeast(1)
+                am.setStreamVolume(AudioManager.STREAM_ALARM, comfortableVol, 0)
             }
 
             mediaPlayer?.release()

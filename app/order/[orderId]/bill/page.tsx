@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, Printer, Download, Shield, ArrowLeft, Clock } from "lucide-react";
 import { cleanDeviceName } from "@/lib/device";
+import { formatAddress } from "@/lib/address";
 
 interface BillData {
   orderNumber: string;
@@ -208,9 +209,7 @@ export default function CustomerBillPage() {
           billNumber: generatedBillNum,
           customerName: ord.user?.name || ord.customerName || "Customer",
           customerPhone: ord.user?.phone || ord.customerPhone || ord.address?.phone || "—",
-          pickupAddress: ord.addressSummary || (ord.address
-            ? `${ord.address.house || ""}, ${ord.address.street || ""}, ${ord.address.area || ""}, ${ord.address.city || ""}, ${ord.address.state || ""} - ${ord.address.pincode || ""}`
-            : "—"),
+          pickupAddress: formatAddress(ord.address, ord.addressSummary || "—"),
           buyerName: "AARNA ENTERPRISE",
           buyerGstin: "19AVPPG9800JIZ3",
           buyerAddress: "Howrah, West Bengal",
