@@ -135,7 +135,7 @@ export default function AboutUsPage() {
                 Every year in India, millions of functional smartphones sit gathering dust in drawers. Why? Because the existing options to sell them were fundamentally broken.
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed">
-                Take your phone to a local offline shop in Chandni Chowk or neighborhood market, and the dealer lowballs you by 35% without any verifiable rationale. Try selling on classifieds like OLX, and you are inundated with scammers sending fake UPI QR codes or strangers demanding to meet in isolated locations. Try legacy online aggregators, and they quote you ₹20,000 online only to send an agent who slashes it to ₹11,000 on arrival for microscopic scuffs.
+                Take your phone to a local offline shop in Chandni Chowk or neighborhood market, and the dealer lowballs you by 35% without any verifiable rationale. Try selling on peer-to-peer classified websites, and you are inundated with scammers sending fake UPI QR codes or strangers demanding to meet in isolated locations. Try legacy online aggregators, and they quote you ₹20,000 online only to send an agent who slashes it to ₹11,000 on arrival for microscopic scuffs.
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed font-semibold">
                 CashALL was born to eliminate this exploitation. We engineered an objective, line-item valuation algorithm. We eliminated convenience fees. And we built a customer-first policy where you get paid in full via instant bank UPI before our technician steps out of your door.
@@ -220,18 +220,18 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* 6. DEEP DATA CLEANING GUARANTEE CERTIFICATE */}
+          {/* 6. ON-SITE DATA PROTECTION & INSTANT PAYOUT */}
           <div className="bg-neutral-950 text-white rounded-3xl p-8 sm:p-12 border border-neutral-800 shadow-premium flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-3 max-w-xl text-center md:text-left">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-yellow text-xs font-black">
                 <ShieldCheck className="w-4 h-4" />
-                <span>Certified Data Destruction Protocol</span>
+                <span>On-Site Assisted Data Protection</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black tracking-tight">
-                Our Deep Data Cleaning Guarantee
+                Complete Privacy &amp; Data Safety
               </h2>
               <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
-                Your personal security is non-negotiable. Every phone and laptop purchased by CashALL undergoes an assisted on-site factory reset followed by NIST 800-88 compliant cryptographic sanitization. We ensure that no photo, chat, bank account token, or biometric template can ever be recovered.
+                Your personal security is our top priority. Every phone, tablet, and laptop purchased by CashALL undergoes an assisted on-site factory reset before the device leaves your possession. We ensure that no photo, chat, or personal account token remains on your device.
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function AboutUsPage() {
               <div className="w-12 h-12 rounded-full bg-brand-yellow text-brand-black font-black flex items-center justify-center mx-auto text-lg shadow-md">
                 ✓
               </div>
-              <div className="text-sm font-black text-white">100% Zero Data Leakage</div>
+              <div className="text-sm font-black text-white">100% Assisted Reset</div>
               <div className="text-[11px] text-neutral-400">Legal Bill of Sale Provided</div>
             </div>
           </div>

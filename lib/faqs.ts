@@ -179,14 +179,14 @@ export const MASTER_FAQS: MasterFAQ[] = [
   },
 
   // ==========================================
-  // 5. SCAMS & SAFETY ("OLX VS BUYBACK")
+  // 5. SCAMS & SAFETY (CLASSIFIEDS VS DIRECT BUYBACK)
   // ==========================================
   {
     id: "faq-avoid-phone-scams",
     question: "What are common online phone selling scams and how do I avoid them?",
-    answer: "Common scams on P2P marketplaces like OLX and Quikr include: 1) Fake payment screenshots showing bogus transfer receipts, 2) Reverse UPI QR code scams where the buyer asks you to scan a QR code to 'receive' money (which actually debits your account), 3) Meeting dangerous strangers in secluded areas, and 4) Bounced cheques. With CashALL, you deal directly with a verified corporate company with instant on-the-spot UPI credit before handover.",
+    answer: "Common scams on unverified peer-to-peer marketplaces and classified apps include: 1) Fake payment screenshots showing bogus transfer receipts, 2) Reverse UPI QR code scams where the buyer asks you to scan a QR code to 'receive' money (which actually debits your account), 3) Meeting strangers in unsafe areas, and 4) Bounced cheques. With CashALL, you deal directly with a verified corporate company with instant on-the-spot UPI credit before handover.",
     category: "SAFETY_SCAMS",
-    tags: ["scams", "olx scam", "fake upi screenshot", "qr code scam", "safety"],
+    tags: ["scams", "classified scam", "fake upi screenshot", "qr code scam", "safety"],
   },
   {
     id: "faq-imei-verification",
@@ -197,28 +197,28 @@ export const MASTER_FAQS: MasterFAQ[] = [
   },
 
   // ==========================================
-  // 6. COMPETITOR COMPARISONS
+  // 6. SELLING & PLATFORM COMPARISONS
   // ==========================================
   {
-    id: "faq-cashall-vs-cashify",
-    question: "Why choose CashALL over Cashify?",
-    answer: "CashALL offers 4 distinct advantages over Cashify: 1) Up to 5% higher valuation payouts, 2) Zero doorstep pickup fees (Cashify often deducts ₹100–₹199 convenience charges), 3) Transparent diagnostics without aggressive last-minute reductions for micro-scratches, and 4) Direct human phone & WhatsApp customer support (+91 7604092333) instead of automated bots.",
+    id: "faq-cashall-vs-competitors",
+    question: "Why choose CashALL over other online buyback portals?",
+    answer: "CashALL offers 4 distinct advantages: 1) Up to 5% higher valuation payouts, 2) Zero doorstep pickup fees (other portals often deduct ₹100–₹199 convenience charges), 3) Transparent diagnostics without aggressive last-minute reductions for micro-scratches, and 4) Direct human phone & WhatsApp customer support (+91 7604092333) instead of automated bots.",
     category: "COMPETITORS",
-    tags: ["cashify vs cashall", "better than cashify", "cashify alternative", "cashify price drop"],
+    tags: ["platform comparison", "why choose cashall", "best buyback portal", "higher price"],
   },
   {
-    id: "faq-cashall-vs-cashkr-mobisell",
-    question: "How does CashALL compare to Cashkr and Mobisell?",
-    answer: "While Cashkr and Mobisell operate in select markets, CashALL provides faster doorstep execution (2 to 4 hours in Kolkata), broader catalog coverage (1,000+ smartphones, laptops, and tablets), certified on-site data wiping assistance, and instant UPI settlement before the technician leaves your doorstep.",
+    id: "faq-cashall-vs-regional",
+    question: "How does CashALL compare to other regional buyback services?",
+    answer: "Unlike other regional aggregators that operate with limited logistics, CashALL provides rapid doorstep execution (2 to 4 hours in Kolkata), broader catalog coverage (1,000+ smartphones, laptops, and tablets), certified on-site data wiping assistance, and instant UPI settlement before the technician leaves your doorstep.",
     category: "COMPETITORS",
-    tags: ["cashkr vs cashall", "mobisell vs cashall", "mobisell kolkata", "cashkr alternative"],
+    tags: ["regional buyback", "fast doorstep pickup", "kolkata recommerce"],
   },
   {
-    id: "faq-cashall-vs-cashkaro-cashon",
-    question: "What is the difference between CashALL, CashKaro, and CashOn?",
-    answer: "CashKaro is an affiliate cashback and coupon website that redirects users to third parties like Cashify rather than conducting evaluations. CashOn operates in limited pin codes with third-party logistics. CashALL is a direct recommerce platform operating its own fleet of verified evaluation executives.",
+    id: "faq-cashall-vs-affiliates",
+    question: "What is the difference between direct buyback and affiliate coupon sites?",
+    answer: "Affiliate websites redirect users to third parties rather than conducting evaluations directly. CashALL is a direct recommerce platform operating its own fleet of verified evaluation executives, ensuring guaranteed pricing, instant on-the-spot UPI payment, and zero middleman delays.",
     category: "COMPETITORS",
-    tags: ["cashkaro", "cashon", "cashonpick", "difference", "affiliate vs direct"],
+    tags: ["direct buyback", "affiliate vs direct", "verified executives"],
   },
   {
     id: "faq-cashall-vs-offline-shops",

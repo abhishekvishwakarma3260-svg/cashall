@@ -42,7 +42,7 @@ export function RecommerceSeoBlock() {
               Sell Your Old Phone Online for Best Cash with CashALL
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-              Every month, thousands of smartphone users across Kolkata, Howrah, and West Bengal trade in their older devices on CashALL. Instead of haggling with offline dealers or risking classified scams on OLX, CashALL provides an instant algorithmic valuation, 100% free doorstep inspection, and immediate UPI bank transfer before handover.
+              Every month, thousands of smartphone users across Kolkata, Howrah, and West Bengal trade in their older devices on CashALL. Instead of haggling with offline dealers or risking scams on open classified marketplaces, CashALL provides an instant algorithmic valuation, 100% free doorstep inspection, and immediate UPI bank transfer before handover.
             </p>
           </div>
 

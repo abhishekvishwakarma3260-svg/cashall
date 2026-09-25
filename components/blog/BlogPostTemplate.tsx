@@ -290,7 +290,7 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                 Ready to Sell Your Device Today?
               </h3>
               <p className="text-xs sm:text-sm text-neutral-300 max-w-md">
-                Get up to 5% higher price than Cashify, enjoy free 15-minute doorstep dispatch in Kolkata & Howrah, and receive instant UPI cash on the spot!
+                Get up to 5% higher price than other online platforms, enjoy free 15-minute doorstep dispatch in Kolkata &amp; Howrah, and receive instant UPI cash on the spot!
               </p>
             </div>
 

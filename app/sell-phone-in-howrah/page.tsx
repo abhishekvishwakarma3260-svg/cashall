@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "sell old phone in howrah",
     "sell used phone howrah",
     "best place to sell old phone in howrah",
-    "cashify alternative howrah",
+    "best phone selling platform howrah",
     "sell phone bally howrah",
     "sell phone liluah howrah",
     "sell phone shibpur howrah",

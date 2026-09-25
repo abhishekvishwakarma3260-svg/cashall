@@ -48,28 +48,28 @@ export default function ArticlesPage() {
       title: "How to Safely Wipe All Data from an Android Phone Before Selling",
       category: "Security & Data",
       readTime: "4 min read",
-      summary: "Step-by-step instructions to unlink Google Accounts, disable Factory Reset Protection (FRP), encrypt storage, and trigger certified NIST 800-88 factory resets.",
+      summary: "Step-by-step instructions to unlink your Google Account, remove screen locks, and reset your Android phone safely before selling.",
       link: "/steps-to-ensure-your-digital-sim-doesnt-go-with-sold-phones"
     },
     {
       title: "Does a Cracked Screen Ruin Your Phone's Buyback Value?",
       category: "Hardware & Battery",
       readTime: "5 min read",
-      summary: "Understand the difference between glass-only scratches, touch digitizer failure, and black OLED bleed. See how CashALL values broken and damaged devices fairly.",
+      summary: "Understand the difference between glass scratches and broken touch displays. See how CashALL values damaged devices fairly.",
       link: "/faq"
     },
     {
       title: "How Battery Health Percentage Affects iPhone Buyback Rates",
       category: "Hardware & Battery",
       readTime: "4 min read",
-      summary: "Why iPhones with battery health above 80% command top market price, and what transparent deductions apply if your battery requires servicing.",
+      summary: "Why iPhones with battery health above 80% get top cash, and what fair pricing applies if your battery needs service.",
       link: "/why-iphones-hold-more-resale-value-than-android-in-india"
     },
     {
       title: "CashALL vs Other Platforms & Local Dealers: The Complete 2026 Selling Comparison",
       category: "Comparisons",
       readTime: "6 min read",
-      summary: "Detailed breakdown comparing CashALL against online aggregators, local mobile shops, and classified marketplaces on price, doorstep convenience, and safety.",
+      summary: "Detailed breakdown comparing CashALL against other online portals, local mobile shops, and classified marketplaces on price, convenience, and safety.",
       link: "/compare/cashall-vs-other-platforms"
     }
   ];

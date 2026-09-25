@@ -23,15 +23,14 @@ import {
 export const metadata: Metadata = {
   title: "CashALL vs Other Platforms & Local Sellers | Used Device Comparison",
   description:
-    "Compare CashALL against online aggregators (Cashify, Cashkr), local offline mobile shop dealers, and classifieds (OLX). Discover why CashALL guarantees higher prices, ₹0 pickup fees, and certified data wiping.",
+    "Compare CashALL against typical online buyback platforms, local offline mobile shop dealers, and classified sites. Discover why CashALL guarantees higher prices, ₹0 pickup fees, and verified on-site data safety.",
   keywords: [
     "cashall vs other platforms",
     "cashall vs local sellers",
     "cashall vs local mobile shops",
-    "cashify vs cashall",
     "best place to sell old phone india",
     "sell phone kolkata best price",
-    "cashall vs olx",
+    "cashall vs classified sites",
     "avoid phone selling scams",
     "highest buyback price old phone"
   ],
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "CashALL vs Other Platforms & Local Sellers: Unbiased Comparison",
-    description: "See how CashALL compares to Cashify, local offline phone shops, and OLX.",
+    description: "See how CashALL compares to other online portals, local offline phone shops, and classified marketplaces.",
     url: "https://www.cashall.in/compare/cashall-vs-other-platforms",
     images: ["/photos/CashALL_logo.png"],
   },
@@ -70,8 +69,8 @@ const COMPARISON_MATRIX = [
   },
   {
     feature: "Personal Data Safety Protocol",
-    cashall: "Certified on-site data wiping assisted by technician before phone leaves your hands",
-    aggregators: "Basic factory reset; devices often transported off-site for deep erasure",
+    cashall: "Assisted on-site factory reset before phone leaves your hands",
+    aggregators: "Basic factory reset; devices often transported off-site for processing",
     localShops: "Zero data safety. High risk of technicians snooping private photos, chats, or cloud syncs",
     classifieds: "Zero assistance. If you forget to delete eSIM or unlink Google/iCloud, buyer inherits your data",
   },
@@ -108,15 +107,15 @@ const COMPARISON_MATRIX = [
 const COMPARISON_FAQS = [
   {
     question: "Why should I sell to CashALL instead of local mobile shops in Kolkata?",
-    answer: "Local mobile shops in areas like Chandni Chowk, Fancy Market, or neighborhood dealers operate with high overheads and cut your payout by 20% to 35% to protect their own retail profit margin. They rarely provide certified data wiping or formal legal purchase undertakings. With CashALL, you receive a transparent algorithmic quote, 100% free doorstep pickup, on-site certified data wiping, and instant UPI payment directly into your bank account before our agent leaves."
+    answer: "Local mobile shops in areas like Chandni Chowk, Fancy Market, or neighborhood dealers operate with high overheads and cut your payout by 20% to 35% to protect their own retail profit margin. They rarely assist with complete data wiping or formal legal purchase undertakings. With CashALL, you receive a transparent algorithmic quote, 100% free doorstep pickup, on-site assisted data wipe, and instant UPI payment directly into your bank account before our agent leaves."
   },
   {
-    question: "How is CashALL different from other online aggregators like Cashify or Cashkr?",
-    answer: "While traditional aggregators often bait sellers with inflated online quotes and then aggressively slash the price by 30-50% at the doorstep while charging ₹100-₹199 convenience fees, CashALL uses a transparent diagnostic rubric. Normal micro-wear is never penalized as screen damage, doorstep pickup is always 100% free, and our payment is credited instantly on the spot via UPI."
+    question: "How is CashALL different from other online buyback platforms?",
+    answer: "While typical online aggregators often quote high prices online only to slash them by 30-50% at your doorstep while deducting ₹100-₹199 convenience fees, CashALL uses transparent diagnostic pricing. Normal minor wear is never penalized as screen damage, doorstep pickup is always 100% free, and our payment is credited instantly on the spot via UPI."
   },
   {
-    question: "Is selling on OLX or Facebook Marketplace dangerous?",
-    answer: "Yes, peer-to-peer marketplaces carry significant security risks. Scammers frequently use fake UPI payment apps (like spoofed PhonePe or Paytm screens) to trick sellers into thinking money was sent. Furthermore, meeting unknown strangers or having them visit your home poses personal safety risks. Most crucially, selling on P2P platforms does not provide a legal transfer of IMEI liability—if the buyer subsequently uses your phone for fraudulent activities, law enforcement traces the original IMEI back to you."
+    question: "Is selling on unverified classified websites dangerous?",
+    answer: "Yes, peer-to-peer marketplaces carry significant security risks. Scammers frequently use fake UPI payment apps (like spoofed PhonePe or Paytm screens) to trick sellers into thinking money was sent. Furthermore, meeting unknown strangers or having them visit your home poses personal safety risks. Most crucially, selling on unverified P2P platforms does not provide a legal transfer of IMEI liability—if the buyer subsequently uses your phone for fraudulent activities, law enforcement traces the original IMEI back to you."
   },
   {
     question: "What happens if I reject the revised doorstep offer from CashALL?",
@@ -228,9 +227,9 @@ export default function CompareAllPlatformsPage() {
                 <span className="text-[10px] font-bold text-neutral-600 bg-neutral-100 px-2.5 py-1 rounded-full uppercase">
                   Online Aggregators
                 </span>
-                <h3 className="text-lg font-black text-brand-black">Cashify / Cashkr</h3>
+                <h3 className="text-lg font-black text-brand-black">Other Online Portals</h3>
                 <p className="text-xs text-brand-muted leading-relaxed">
-                  Large national portals with high initial online quotes that often suffer steep 30-50% deductions at the doorstep, plus ₹100-₹199 convenience charges.
+                  National buyback portals that quote high online prices but frequently apply 30-50% deductions at the doorstep, plus ₹100-₹199 convenience charges.
                 </p>
               </div>
               <div className="text-xs font-semibold text-amber-700 flex items-center gap-1.5">
@@ -260,7 +259,7 @@ export default function CompareAllPlatformsPage() {
                 <span className="text-[10px] font-bold text-neutral-600 bg-neutral-100 px-2.5 py-1 rounded-full uppercase">
                   P2P Marketplaces
                 </span>
-                <h3 className="text-lg font-black text-brand-black">OLX / Classifieds</h3>
+                <h3 className="text-lg font-black text-brand-black">Classifieds &amp; P2P Sites</h3>
                 <p className="text-xs text-brand-muted leading-relaxed">
                   High risk of scams, fake UPI screenshots, and personal safety risks meeting unverified strangers. Zero transfer of legal IMEI liability.
                 </p>
@@ -291,7 +290,7 @@ export default function CompareAllPlatformsPage() {
                     <th className="p-4 w-1/4 bg-brand-yellow text-brand-black font-black">
                       ⚡ CashALL
                     </th>
-                    <th className="p-4 w-1/4">Online Aggregators (Cashify, etc.)</th>
+                    <th className="p-4 w-1/4">Other Online Portals</th>
                     <th className="p-4 w-1/4">Local Mobile Shops & Dealers</th>
                   </tr>
                 </thead>
@@ -320,7 +319,7 @@ export default function CompareAllPlatformsPage() {
             </div>
           </div>
 
-          {/* DEEP DIVE: THE DANGERS OF LOCAL DEALERS & OLX SCAMS */}
+          {/* DEEP DIVE: THE DANGERS OF LOCAL DEALERS & CLASSIFIED SCAMS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-3xl border border-brand-border p-6 sm:p-8 shadow-subtleCard space-y-4">
               <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center">
@@ -333,7 +332,7 @@ export default function CompareAllPlatformsPage() {
                 When you visit an offline mobile shop in Kolkata or any Indian city, the dealer's business model relies on buying low from you and reselling high to another customer. Because there are no standard evaluation tools, dealers deliberately exaggerate minor blemishes, claiming 'screen replacement cost' or 'motherboard risk' to slash your payout by ₹3,000 to ₹8,000.
               </p>
               <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-                Worse yet, local dealers rarely perform certified data sanitization. Your old device may be handed over to a buyer with recoverable residual data, putting your personal privacy at grave risk.
+                Worse yet, local dealers rarely assist with certified data sanitization. Your old device may be handed over to a buyer with recoverable residual data, putting your personal privacy at grave risk.
               </p>
             </div>
 
@@ -345,7 +344,7 @@ export default function CompareAllPlatformsPage() {
                 The Serious Legal & Scam Risks of P2P Marketplaces
               </h3>
               <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-                Classified platforms like OLX and Quickr expose you to fraudsters using sophisticated fake UPI payment apps that produce believable payment screens without transferring funds. 
+                Unverified classified platforms and open peer-to-peer portals expose you to fraudsters using sophisticated fake UPI payment apps that produce believable payment screens without transferring funds. 
               </p>
               <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
                 Most dangerously, selling to an unknown stranger transfers NO legal liability. If that individual uses the phone's IMEI in a SIM swap scam, financial fraud, or harassment case, law enforcement traces the handset back to YOUR purchase invoice. CashALL provides a legally binding digital Bill of Sale that completely indemnifies you upon sale.

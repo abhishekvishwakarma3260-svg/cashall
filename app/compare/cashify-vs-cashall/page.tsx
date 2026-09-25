@@ -1,3 +1,5 @@
-import CompareAllPlatformsPage from "../cashall-vs-other-platforms/page";
-export { metadata } from "../cashall-vs-other-platforms/page";
-export default CompareAllPlatformsPage;
+import { redirect } from "next/navigation";
+
+export default function LegacyCompareRedirectPage() {
+  redirect("/compare/cashall-vs-other-platforms");
+}

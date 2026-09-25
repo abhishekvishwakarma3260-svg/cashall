@@ -25,10 +25,9 @@ export const metadata: Metadata = {
     "sell old phone in kolkata",
     "sell used phone kolkata",
     "best place to sell old phone in kolkata",
-    "cashify alternative kolkata",
-    "cashify store kolkata vs cashall",
-    "mobisell kolkata",
-    "mobisell vs cashall kolkata",
+    "best used phone buyer kolkata",
+    "online phone selling kolkata",
+    "doorstep mobile buyer kolkata",
     "sell phone chandni chowk kolkata",
     "sell second hand phone kolkata",
     "doorstep phone selling kolkata",
@@ -86,8 +85,8 @@ const LOCAL_FAQS = [
     a: "Yes. CashALL accepts smartphones without original bills or boxes across Kolkata. You only need to verify your identity with a valid Government ID proof (Aadhaar or Voter ID) and sign a simple electronic ownership undertaking.",
   },
   {
-    q: "Why is CashALL rated better than Cashify and Mobisell in Kolkata?",
-    a: "CashALL offers up to 5% higher payouts, charges zero doorstep pickup fees (saving you the ₹100–₹199 convenience fee charged by Cashify), performs transparent diagnostics without unfair price cuts, and delivers local Kolkata customer support over WhatsApp and phone.",
+    q: "Why is CashALL rated better than other online platforms in Kolkata?",
+    a: "CashALL offers up to 5% higher payouts, charges zero doorstep pickup fees (saving you the ₹100–₹199 convenience fee charged by other platforms), performs transparent diagnostics without unfair price cuts, and delivers local Kolkata customer support over WhatsApp and phone.",
   },
   {
     q: "Is my personal data completely erased before selling?",
@@ -191,7 +190,7 @@ export default function SellPhoneInKolkataPage() {
               </h1>
 
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
-                Get up to 5% higher valuation than Cashify with free same-day pickup across Kolkata, Salt Lake, New Town, and Howrah. Free diagnostics, 100% safe factory data wipe, and instant on-the-spot UPI payout.
+                Get up to 5% higher valuation than other online platforms with free same-day pickup across Kolkata, Salt Lake, New Town, and Howrah. Free diagnostics, 100% safe factory data wipe, and instant on-the-spot UPI payout.
               </p>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -323,7 +322,7 @@ export default function SellPhoneInKolkataPage() {
                   <tr className="border-b border-brand-border text-brand-muted uppercase text-[11px]">
                     <th className="pb-3 font-bold">Feature</th>
                     <th className="pb-3 font-extrabold text-black">CashALL</th>
-                    <th className="pb-3 font-bold">Cashify / Others</th>
+                    <th className="pb-3 font-bold">Other Online Portals</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-brand-border/60">

@@ -8,14 +8,14 @@ import { FAQClientHub } from "./FAQClientHub";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions (FAQ) | Sell Old Phone, Laptop & Tablet | CashALL",
   description:
-    "Get instant answers to all questions about selling old phones, broken screens, dead laptops, pricing calculations, Cashify comparisons, data wiping, and doorstep pickup.",
+    "Get instant answers to all questions about selling old phones, broken screens, dead laptops, pricing calculations, platform comparisons, data wiping, and doorstep pickup.",
   keywords: [
     "cashall faq",
     "sell old phone faq",
     "can I sell broken phone",
     "can I sell dead phone",
     "sell phone without bill or box",
-    "cashify vs cashall faq",
+    "platform comparison faq",
     "how to wipe phone before selling",
     "phone resale value calculator",
     "phone selling scams",

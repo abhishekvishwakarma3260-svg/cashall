@@ -15,7 +15,7 @@ const CATEGORIES = [
   { id: "CONDITIONS", label: "Broken & Damaged Phones" },
   { id: "DEAD_DEVICES", label: "Dead Devices" },
   { id: "DATA_PRIVACY", label: "Data Safety & Reset" },
-  { id: "COMPETITORS", label: "Cashify & Alternatives" },
+  { id: "COMPETITORS", label: "Selling Comparisons" },
   { id: "LAPTOPS", label: "Laptops & MacBooks" },
   { id: "TABLETS", label: "Tablets & iPads" },
   { id: "SAFETY_SCAMS", label: "Scam Prevention" },
@@ -69,7 +69,7 @@ export function FAQClientHub({ faqs }: FAQClientHubProps) {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search questions (e.g., broken screen, Cashify, data wipe, dead laptop, no bill)..."
+            placeholder="Search questions (e.g., broken screen, data wipe, dead laptop, no bill)..."
             className="w-full pl-11 pr-4 py-3.5 bg-white border-2 border-brand-border rounded-2xl text-sm sm:text-base font-medium placeholder-gray-400 focus:outline-none focus:border-brand-black focus:ring-1 focus:ring-brand-black shadow-sm transition-all"
           />
           {searchQuery && (

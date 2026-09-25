@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "sell old phone in gorakhpur",
     "sell used phone gorakhpur",
     "best place to sell old phone in gorakhpur",
-    "cashify alternative gorakhpur",
+    "best phone selling platform gorakhpur",
     "sell phone golghar gorakhpur",
     "sell phone betiahata gorakhpur",
     "sell phone medical college gorakhpur",

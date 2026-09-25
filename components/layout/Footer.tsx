@@ -198,11 +198,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/download" className="hover:text-brand-yellow transition-colors">
-                  Download App
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="hover:text-brand-yellow transition-colors">
                   Contact Us
                 </Link>
@@ -242,7 +237,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pickup-policy" className="hover:text-brand-yellow transition-colors">
+                <Link href="/doorstep-pickup-policy" className="hover:text-brand-yellow transition-colors">
                   Doorstep Pickup Policy
                 </Link>
               </li>
@@ -256,36 +251,19 @@ export function Footer() {
 
         </div>
 
-        {/* DEEP DATA CLEANING GUARANTEE & TRUST SEALS */}
-        <div className="pt-8 border-t border-neutral-800 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          <div className="md:col-span-2 text-xs text-neutral-400 space-y-1">
-            <p className="font-semibold text-neutral-300">
-              CashALL • Operating under Aarna Enterprise | Headquartered in Kolkata, West Bengal, India.
-            </p>
-            <p className="text-[11px] text-neutral-500 leading-relaxed">
-              Official Email Support: <span className="text-brand-yellow font-bold">support@cashall.in</span> • Customer Helpline: <span className="text-white font-bold">+91 7604092333</span>. All brand names, logos, and trademarks (Apple, Samsung, OnePlus, Sony PlayStation, etc.) are the property of their respective owners and used solely for identification purposes.
-            </p>
-          </div>
-
-          <div className="bg-neutral-900 border border-neutral-700/80 rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-brand-yellow/15 border border-brand-yellow/30 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-6 h-6 text-brand-yellow" />
-            </div>
-            <div className="space-y-0.5">
-              <div className="text-xs font-black text-white flex items-center gap-1.5">
-                <span>Deep Data Cleaning Guarantee</span>
-              </div>
-              <p className="text-[11px] text-neutral-400 leading-tight">
-                All purchased devices undergo certified NIST 800-88 sanitization, guaranteeing irreversible destruction of all private data.
-              </p>
-            </div>
-          </div>
+        {/* COMPANY LEGAL INFORMATION */}
+        <div className="pt-8 border-t border-neutral-800 text-xs text-neutral-400 space-y-1.5">
+          <p className="font-semibold text-neutral-300">
+            CashALL • Operating under Aarna Enterprise | Headquartered in Kolkata, West Bengal, India.
+          </p>
+          <p className="text-[11px] text-neutral-500 leading-relaxed">
+            Official Email Support: <span className="text-brand-yellow font-bold">support@cashall.in</span> • Customer Helpline: <span className="text-white font-bold">+91 7604092333</span>. All brand names, logos, and trademarks (Apple, Samsung, OnePlus, Sony PlayStation, etc.) are the property of their respective owners and used solely for identification purposes.
+          </p>
         </div>
 
         {/* BOTTOM COPYRIGHT */}
         <div className="pt-6 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p className="font-medium text-gray-300">© 2026 Aarna Enterprise (CashALL). All Rights Reserved</p>
-          <p className="text-[11px] text-gray-400">Kolkata • Howrah • Salt Lake • New Town • Pan-India Logistics</p>
         </div>
 
       </div>

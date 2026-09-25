@@ -80,12 +80,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/compare/cashify-vs-cashall`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/about-us`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -153,6 +147,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/pickup-policy`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/doorstep-pickup-policy`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,

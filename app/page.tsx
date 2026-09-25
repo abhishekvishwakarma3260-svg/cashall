@@ -42,9 +42,9 @@ export default function HomePage() {
           "CashALL India",
           "cashall.in",
           "Aarna Enterprise CashALL",
-          "Cashify Alternative Kolkata",
-          "Cashkr Alternative",
-          "Mobisell Alternative"
+          "Sell Old Mobile Kolkata",
+          "Instant Cash For Used Phones",
+          "Used Phone Buyback Kolkata"
         ],
         "url": "https://www.cashall.in/",
         "logo": {
@@ -76,11 +76,11 @@ export default function HomePage() {
           "Sell Old Tablets",
           "Consumer Electronics Buyback",
           "Instant Doorstep Cash Payout",
-          "Cashify Alternative Best Price",
-          "Cashkr Alternative",
-          "Mobisell Alternative Kolkata",
-          "CashKaro Mobile Exchange",
-          "CashOn Buyback",
+          "Highest Used Phone Valuation",
+          "Best Mobile Selling Platform",
+          "Sell Phone Near Me Kolkata",
+          "Mobile Phone Trade In",
+          "Gadget Exchange Kolkata",
           "PlayStation 5 Console Rental"
         ],
         "areaServed": [
@@ -139,7 +139,7 @@ export default function HomePage() {
             "@type": "HowToStep",
             "position": 3,
             "name": "Get Instant Quote & Schedule Free Pickup",
-            "text": "Receive a transparent valuation with guaranteed up to 5% higher payout than Cashify. Pick your convenient date and time window for doorstep pickup.",
+            "text": "Receive a transparent valuation with guaranteed up to 5% higher payout than other online platforms. Pick your convenient date and time window for doorstep pickup.",
             "url": "https://www.cashall.in/sell"
           },
           {
