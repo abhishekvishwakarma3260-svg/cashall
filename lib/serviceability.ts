@@ -6,55 +6,87 @@ export interface ServiceableDistrict {
   pincodes: string[];
 }
 
-// 1. Ballia, Uttar Pradesh (2 PIN codes)
-export const BALLIA_PINCODES: string[] = [
-  "277001",
-  "277506"
+// ==============================================================================
+// CashALL VERIFIED MASTER SERVICEABLE PIN CODES
+// Source: CashALL_VERIFIED_PIN_MASTER_Kolkata_Howrah_Hooghly_Barrackpore.xlsx
+// Total Verified Coverage: 319 Unique West Bengal PIN Codes across 4 Regions
+// ==============================================================================
+
+// 1. Kolkata + Neighbouring 700xxx Belt (160 PIN codes: 700001 to 700160)
+export const KOLKATA_PINCODES: string[] = [
+  "700001", "700002", "700003", "700004", "700005", "700006", "700007", "700008",
+  "700009", "700010", "700011", "700012", "700013", "700014", "700015", "700016",
+  "700017", "700018", "700019", "700020", "700021", "700022", "700023", "700024",
+  "700025", "700026", "700027", "700028", "700029", "700030", "700031", "700032",
+  "700033", "700034", "700035", "700036", "700037", "700038", "700039", "700040",
+  "700041", "700042", "700043", "700044", "700045", "700046", "700047", "700048",
+  "700049", "700050", "700051", "700052", "700053", "700054", "700055", "700056",
+  "700057", "700058", "700059", "700060", "700061", "700062", "700063", "700064",
+  "700065", "700066", "700067", "700068", "700069", "700070", "700071", "700072",
+  "700073", "700074", "700075", "700076", "700077", "700078", "700079", "700080",
+  "700081", "700082", "700083", "700084", "700085", "700086", "700087", "700088",
+  "700089", "700090", "700091", "700092", "700093", "700094", "700095", "700096",
+  "700097", "700098", "700099", "700100", "700101", "700102", "700103", "700104",
+  "700105", "700106", "700107", "700108", "700109", "700110", "700111", "700112",
+  "700113", "700114", "700115", "700116", "700117", "700118", "700119", "700120",
+  "700121", "700122", "700123", "700124", "700125", "700126", "700127", "700128",
+  "700129", "700130", "700131", "700132", "700133", "700134", "700135", "700136",
+  "700137", "700138", "700139", "700140", "700141", "700142", "700143", "700144",
+  "700145", "700146", "700147", "700148", "700149", "700150", "700151", "700152",
+  "700153", "700154", "700155", "700156", "700157", "700158", "700159", "700160"
 ];
 
-// 2. Gorakhpur, Uttar Pradesh (16 PIN codes: 273001 to 273017, excluding 273011)
+// 2. Howrah District (55 PIN codes)
+export const HOWRAH_PINCODES: string[] = [
+  "711101", "711102", "711103", "711104", "711105", "711106", "711107", "711108",
+  "711109", "711110", "711111", "711112", "711113", "711114", "711115", "711201",
+  "711202", "711203", "711204", "711205", "711206", "711225", "711226", "711227",
+  "711301", "711302", "711303", "711304", "711305", "711306", "711307", "711308",
+  "711309", "711310", "711312", "711313", "711314", "711315", "711316", "711317",
+  "711322", "711331", "711401", "711403", "711404", "711405", "711408", "711409",
+  "711410", "711411", "711412", "711413", "711414", "712401", "712408"
+];
+
+// 3. Hooghly District (85 PIN codes)
+export const HOOGHLY_PINCODES: string[] = [
+  "712101", "712102", "712103", "712104", "712105", "712121", "712122", "712123",
+  "712124", "712125", "712134", "712135", "712136", "712137", "712138", "712139",
+  "712146", "712147", "712148", "712149", "712152", "712201", "712202", "712203",
+  "712204", "712221", "712222", "712223", "712232", "712233", "712234", "712235",
+  "712245", "712246", "712248", "712249", "712250", "712258", "712301", "712302",
+  "712303", "712304", "712305", "712306", "712308", "712310", "712311", "712401",
+  "712402", "712403", "712404", "712405", "712406", "712407", "712408", "712409",
+  "712410", "712412", "712413", "712414", "712415", "712416", "712417", "712501",
+  "712502", "712503", "712504", "712512", "712513", "712514", "712515", "712601",
+  "712602", "712611", "712612", "712613", "712614", "712615", "712616", "712617",
+  "712701", "712702", "712706", "713427", "721212"
+];
+
+// 4. Barrackpore Subdivision (49 PIN codes)
+export const BARRACKPORE_PINCODES: string[] = [
+  "700035", "700049", "700051", "700056", "700057", "700058", "700065", "700076",
+  "700077", "700083", "700090", "700108", "700109", "700110", "700111", "700112",
+  "700113", "700114", "700115", "700116", "700117", "700118", "700119", "700120",
+  "700121", "700122", "700123", "700131", "743122", "743123", "743124", "743125",
+  "743126", "743127", "743128", "743129", "743130", "743133", "743134", "743135",
+  "743136", "743144", "743145", "743165", "743166", "743178", "743193", "743194",
+  "743195"
+];
+
+// 5. Gorakhpur, Uttar Pradesh (16 PIN codes)
 export const GORAKHPUR_PINCODES: string[] = [
   "273001", "273002", "273003", "273004", "273005", "273006", "273007", "273008",
   "273009", "273010", "273012", "273013", "273014", "273015", "273016", "273017"
 ];
 
-// 3. Kolkata, West Bengal (100 PIN codes: 700001 to 700108, excluding 700018, 700023, 700044, 700066, 700083, 700096, 700103, 700104)
-const kolkataExcluded = new Set([
-  "700018", "700023", "700044", "700066", "700083", "700096", "700103", "700104"
-]);
-export const KOLKATA_PINCODES: string[] = Array.from({ length: 108 }, (_, i) => {
-  const code = `700${String(i + 1).padStart(3, "0")}`;
-  return code;
-}).filter((code) => !kolkataExcluded.has(code));
-
-// 4. Barrackpore, West Bengal (9 PIN codes: 700109 to 700123, excluding 700111, 700112, 700113, 700118, 700121, 700122)
-const barrackporeExcluded = new Set([
-  "700111", "700112", "700113", "700118", "700121", "700122"
-]);
-export const BARRACKPORE_PINCODES: string[] = Array.from({ length: 15 }, (_, i) => {
-  const code = `700${String(109 + i).padStart(3, "0")}`;
-  return code;
-}).filter((code) => !barrackporeExcluded.has(code));
-
-// 5. Hooghly, West Bengal (17 PIN codes)
-export const HOOGHLY_PINCODES: string[] = [
-  "712101", "712103", "712104", "712105", "712123", "712124", "712125",
-  "712136", "712137", "712201", "712202", "712203", "712204", "712221",
-  "712222", "712223", "712224"
-];
-
-// 6. Howrah, West Bengal (15 PIN codes)
-export const HOWRAH_PINCODES: string[] = [
-  "711101", "711102", "711104", "711105", "711106", "711107", "711108",
-  "711109", "711110", "711111", "711112", "711113", "711183", "711302",
-  "711403"
+// 6. Ballia, Uttar Pradesh (2 PIN codes)
+export const BALLIA_PINCODES: string[] = [
+  "277001", "277506"
 ];
 
 // 7. Ranchi, Jharkhand (3 PIN codes)
 export const RANCHI_PINCODES: string[] = [
-  "834001",
-  "834002",
-  "834003"
+  "834001", "834002", "834003"
 ];
 
 // 8. Patna, Bihar (1 PIN code)
@@ -121,16 +153,49 @@ export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
   },
 ];
 
-// Fast lookup map for all serviceable pincodes
-const PINCODE_MAP: Record<string, { city: string; state: string; district: string }> = {};
+// Specific locality metadata for corridor stations / hubs
+export const NAMED_LOCALITIES: Record<string, string> = {
+  "711201": "Bally",
+  "711202": "Belur",
+  "711203": "Bhattanagar",
+  "711204": "Liluah",
+  "712101": "Chinsurah",
+  "712102": "Chinsurah",
+  "712103": "Chinsurah",
+  "712123": "Bandel",
+  "712124": "Bhadreswar",
+  "712136": "Chandannagar",
+  "712139": "Mankundu",
+  "712201": "Serampore",
+  "712222": "Baidyabati",
+  "712223": "Sheoraphuli",
+  "712233": "Hindmotor",
+  "712235": "Konnagar",
+  "712248": "Rishra",
+  "712258": "Uttarpara",
+};
 
+// Fast lookup map for all serviceable pincodes (O(1) lookups)
+export interface PincodeDetails {
+  city: string;
+  state: string;
+  district: string;
+  locality?: string;
+}
+
+const PINCODE_MAP: Record<string, PincodeDetails> = {};
+
+// Populate district records
 SERVICEABLE_DISTRICTS.forEach((dist) => {
   dist.pincodes.forEach((pin) => {
-    PINCODE_MAP[pin] = {
-      city: dist.name,
-      state: dist.state,
-      district: dist.name,
-    };
+    if (!PINCODE_MAP[pin]) {
+      PINCODE_MAP[pin] = {
+        city: dist.name,
+        state: dist.state,
+        district: dist.name,
+        locality: NAMED_LOCALITIES[pin] || undefined,
+      };
+    }
   });
 });
 
@@ -140,7 +205,7 @@ export function isPincodeServiced(pincode: string): boolean {
   return Boolean(PINCODE_MAP[cleanPin]);
 }
 
-export function getPincodeDetails(pincode: string): { city: string; state: string; district: string } | null {
+export function getPincodeDetails(pincode: string): PincodeDetails | null {
   if (!pincode) return null;
   const cleanPin = pincode.trim();
   return PINCODE_MAP[cleanPin] || null;

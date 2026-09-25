@@ -83044,8 +83044,10 @@ export const INITIAL_SERVICE_STATES: string[] = [
   "West Bengal",
   "Uttar Pradesh",
   "Jharkhand",
+  "Bihar",
 ];
 
+const seenServicePins = new Set<string>();
 export const INITIAL_SERVICE_AREAS: ServiceAreaData[] = SERVICEABLE_DISTRICTS.flatMap((dist) =>
   dist.pincodes.map((pin) => ({
     id: `sa-${dist.id}-${pin}`,
@@ -83055,7 +83057,11 @@ export const INITIAL_SERVICE_AREAS: ServiceAreaData[] = SERVICEABLE_DISTRICTS.fl
     active: true,
     pickupAvailable: true,
   }))
-);
+).filter((area) => {
+  if (seenServicePins.has(area.pincode)) return false;
+  seenServicePins.add(area.pincode);
+  return true;
+});
 
 export const INITIAL_FAQS: FAQData[] = MASTER_FAQS;
 

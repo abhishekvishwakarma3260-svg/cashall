@@ -98,7 +98,9 @@ export function LocationModal({
             <div className="bg-green-500/10 border border-green-500/40 rounded-2xl p-3.5 flex items-center justify-between animate-fadeIn">
               <div>
                 <div className="text-xs font-bold text-green-400">PIN Code {query} Matched!</div>
-                <div className="text-sm font-extrabold text-white">{pinMatch.city}, {pinMatch.state}</div>
+                <div className="text-sm font-extrabold text-white">
+                  {pinMatch.city}{pinMatch.locality ? ` (${pinMatch.locality})` : ""}, {pinMatch.state}
+                </div>
               </div>
               <button
                 type="button"
