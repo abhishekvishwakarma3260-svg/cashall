@@ -7,13 +7,22 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       success: true,
       agent: {
-        versionCode: 8,
-        versionName: "1.0.8",
+        versionCode: 9,
+        versionName: "1.0.9",
         downloadUrl: "https://cashall.in/api/v1/download/agent",
-        forceUpdate: true,
-        title: "CashALL Agent Update Available (v1.0.8)",
-        releaseNotes: "Optimized battery performance, reduced background network traffic, and enhanced lead alert reliability.",
-        announcement: "IMPORTANT: Audio recording is disabled for all field agents. We only verify call status (whether the customer was called).",
+        forceUpdate: false,
+        title: "CashALL Agent Update Available (v1.0.9)",
+        releaseNotes: "Soothing melodious notification chime (replaces harsh siren) and standardized address layout.",
+        announcement: "Updated with soothing chime notifications and simplified address entry.",
+      },
+      admin: {
+        versionCode: 2,
+        versionName: "1.0.1",
+        downloadUrl: "https://cashall.in/api/v1/download/admin",
+        forceUpdate: false,
+        title: "CashALL Admin Update Available (v1.0.1)",
+        releaseNotes: "Soothing melodious order chime (replaces harsh siren), simplified address handling, and in-app updater.",
+        announcement: "Updated with soothing order alerts and simplified address format.",
       },
       caller: {
         versionCode: 3,

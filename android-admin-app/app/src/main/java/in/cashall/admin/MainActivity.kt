@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         setupAlarmControls()
         requestSystemPermissions()
         startAdminMonitoringService()
+        AutoUpdateManager.checkAndPromptUpdate(this)
     }
 
     override fun onResume() {
