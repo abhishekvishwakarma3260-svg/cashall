@@ -82,7 +82,7 @@ export const POST = apiWrapper(async (req: NextRequest) => {
 
   const slugifiedId = `admin_${matchedAdmin.toLowerCase().replace(/\s+/g, "_")}`;
 
-  return NextResponse.json({
+  const response = NextResponse.json({
     success: true,
     data: {
       user: {
@@ -95,4 +95,13 @@ export const POST = apiWrapper(async (req: NextRequest) => {
       token: "tok_admin_master_session",
     },
   });
+
+  response.cookies.set("cashall_admin_token", "tok_admin_master_session", {
+    path: "/",
+    httpOnly: true,
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 7,
+  });
+
+  return response;
 });

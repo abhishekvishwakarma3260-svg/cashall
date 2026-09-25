@@ -78,6 +78,9 @@ interface Order {
   agentCalled?: boolean;
   agentCalledAt?: string | null;
   agentCalledBy?: string | null;
+  userId?: string | null;
+  isUserBlocked?: boolean;
+  userBlockedReason?: string | null;
 }
 
 function getOrderBoxStatus(ord: Order | any): "BOX" | "NO BOX" {
@@ -799,6 +802,95 @@ export default function AdminOrdersPage() {
     }
   };
 
+  // Block Dealer / User permanently
+  const handleBlockUserAdmin = async (ord: Order) => {
+    const userId = ord.userId;
+    if (!userId) {
+      alert("⚠️ Unable to identify user ID for this customer. Please check the user database.");
+      return;
+    }
+
+    const defaultReason = "Customer is a commercial shop dealer / reseller attempting multiple device liquidations";
+    const reason = prompt(
+      `🚫 PERMANENTLY BLOCK DEALER / USER?\nPhone: ${ord.customerPhone} (${ord.customerName})\n\nOnce blocked, this phone number CAN NEVER place any buyback orders on CashALL again.\n\nEnter block reason:`,
+      defaultReason
+    );
+
+    if (reason === null) return;
+    if (!reason.trim()) {
+      alert("⚠️ Block reason is required! Dealer was NOT blocked.");
+      return;
+    }
+
+    setActionLoading(ord.id + "-block");
+    try {
+      const res = await fetch(`/api/v1/admin/users/${userId}/block`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "block", reason: reason.trim() }),
+      });
+
+      const json = await res.json();
+      if (!res.ok || !json.success) {
+        alert(json.error || "Failed to block user.");
+        return;
+      }
+
+      // If this order is not cancelled or completed, offer to cancel it immediately
+      if (!["CANCELLED", "REJECTED", "COMPLETED", "BILL_GENERATED"].includes(ord.status)) {
+        if (confirm(`User ${ord.customerPhone} is now BLOCKED.\n\nDo you also want to cancel their active Order #${ord.orderNumber}?`)) {
+          await fetch(`/api/v1/orders/${ord.orderNumber}/cancel`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ reason: `Commercial Dealer Blocked: ${reason.trim()}` }),
+          });
+        }
+      }
+
+      await fetchOrders();
+      alert(`🛑 Dealer ${ord.customerPhone} (${ord.customerName}) has been PERMANENTLY BLOCKED!\n\nThey are now blacklisted from placing any sell orders.`);
+    } catch (err: any) {
+      alert(`Error blocking dealer: ${err.message}`);
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  // Unblock Dealer / User
+  const handleUnblockUserAdmin = async (ord: Order) => {
+    const userId = ord.userId;
+    if (!userId) {
+      alert("⚠️ Unable to identify user ID for this customer.");
+      return;
+    }
+
+    if (!confirm(`Are you sure you want to UNBLOCK ${ord.customerPhone} (${ord.customerName})? They will be allowed to place orders again.`)) {
+      return;
+    }
+
+    setActionLoading(ord.id + "-unblock");
+    try {
+      const res = await fetch(`/api/v1/admin/users/${userId}/block`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "unblock" }),
+      });
+
+      const json = await res.json();
+      if (!res.ok || !json.success) {
+        alert(json.error || "Failed to unblock user.");
+        return;
+      }
+
+      await fetchOrders();
+      alert(`✅ User ${ord.customerPhone} has been unblocked.`);
+    } catch (err: any) {
+      alert(`Error unblocking user: ${err.message}`);
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
   // 1. Export Admin Data CSV (Complete raw operational dataset)
   const handleDownloadAdminDataCSV = () => {
     const targetOrders = filteredOrders.length > 0 || selectedFilter !== "ALL" || searchQuery.trim() ? filteredOrders : orders;
@@ -1222,9 +1314,22 @@ export default function AdminOrdersPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* COLUMN 1: CUSTOMER & LOCATION */}
                 <div className="space-y-2">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Customer & Location</div>
-                  <div className="font-bold text-white text-base">{ord.customerName}</div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <div className="font-bold text-white text-base">{ord.customerName}</div>
+                    {ord.isUserBlocked && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-950 text-red-300 border border-red-700 text-[10px] font-black uppercase tracking-wider shadow-sm">
+                        <Ban className="w-3 h-3 text-red-400" />
+                        DEALER BLOCKED
+                      </span>
+                    )}
+                  </div>
                   <div className="text-xs text-neutral-300 font-medium">📞 {ord.customerPhone}</div>
+                  {ord.isUserBlocked && ord.userBlockedReason && (
+                    <div className="text-[11px] text-red-300 bg-red-950/70 border border-red-800/80 rounded-lg px-2.5 py-1.5 font-medium leading-tight">
+                      <span className="font-bold text-red-400">Block Reason: </span>
+                      {ord.userBlockedReason}
+                    </div>
+                  )}
                   
                   <div className="flex flex-wrap items-center gap-2 max-w-full">
                     {ord.customerEmail ? (
@@ -1446,6 +1551,28 @@ export default function AdminOrdersPage() {
                           <Calendar className="w-3.5 h-3.5 text-amber-400" />
                           <span>Reschedule</span>
                         </button>
+
+                        {ord.isUserBlocked ? (
+                          <button
+                            onClick={() => handleUnblockUserAdmin(ord)}
+                            disabled={actionLoading === ord.id + "-unblock"}
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 px-3.5 py-2 rounded-xl transition shadow-md disabled:opacity-60"
+                            title="Unblock this customer"
+                          >
+                            {actionLoading === ord.id + "-unblock" ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />}
+                            <span>Unblock Seller</span>
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => handleBlockUserAdmin(ord)}
+                            disabled={actionLoading === ord.id + "-block"}
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-red-300 bg-red-950/80 hover:bg-red-900 border border-red-800 px-3.5 py-2 rounded-xl transition shadow-md disabled:opacity-60"
+                            title="Permanently block this dealer/user"
+                          >
+                            {actionLoading === ord.id + "-block" ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Ban className="w-3.5 h-3.5 text-red-400" />}
+                            <span>Block Dealer</span>
+                          </button>
+                        )}
                       </div>
                     );
                   }
@@ -1588,6 +1715,28 @@ export default function AdminOrdersPage() {
                           {actionLoading === ord.id + "-cancel" ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Ban className="w-3.5 h-3.5 text-red-400" />}
                           <span>Cancel Order</span>
                         </button>
+
+                        {ord.isUserBlocked ? (
+                          <button
+                            onClick={() => handleUnblockUserAdmin(ord)}
+                            disabled={actionLoading === ord.id + "-unblock"}
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800 px-3.5 py-2 rounded-xl transition shadow-md disabled:opacity-60"
+                            title="Unblock this customer"
+                          >
+                            {actionLoading === ord.id + "-unblock" ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />}
+                            <span>Unblock Seller</span>
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => handleBlockUserAdmin(ord)}
+                            disabled={actionLoading === ord.id + "-block"}
+                            className="inline-flex items-center gap-1.5 text-xs font-black text-white bg-red-800 hover:bg-red-700 border border-red-600 px-3.5 py-2 rounded-xl transition shadow-md disabled:opacity-60"
+                            title="Permanently block this dealer/user from placing orders"
+                          >
+                            {actionLoading === ord.id + "-block" ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Ban className="w-3.5 h-3.5 text-red-300" />}
+                            <span>Block Dealer</span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   );

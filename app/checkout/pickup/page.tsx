@@ -55,6 +55,11 @@ function PickupCheckoutContent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const isSubmittingRef = useRef(false);
 
+  // Legal declarations & consent states (strictly non-prechecked)
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [marketingAccepted, setMarketingAccepted] = useState(false);
+  const [showAgreementModal, setShowAgreementModal] = useState(false);
+
   const ALL_INDIAN_STATES = [
     "West Bengal",
     "Uttar Pradesh",
@@ -325,6 +330,12 @@ function PickupCheckoutContent() {
       return;
     }
 
+    // Strictly validate non-prechecked legal declaration & terms
+    if (!termsAccepted) {
+      alert("Please confirm the Seller Legal Declaration and accept the Purchase Agreement (v1.0) to schedule your pickup.");
+      return;
+    }
+
     // Lock submission immediately to prevent duplicate requests
     isSubmittingRef.current = true;
     setIsSubmitting(true);
@@ -371,6 +382,9 @@ function PickupCheckoutContent() {
           estimatedPrice: quote?.estimatedPrice || 32500,
           selectedAnswersJson: quote?.selectedAnswersJson || "{}",
           breakdownJson: quote?.breakdownJson || "{}",
+          termsAccepted: true,
+          marketingConsent: marketingAccepted,
+          agreementVersion: "1.0",
         }),
         signal: controller.signal,
       });
@@ -923,6 +937,83 @@ function PickupCheckoutContent() {
                       </button>
                     ))}
                   </div>
+                </div>
+              </div>
+
+              {/* STEP 4: SELLER LEGAL DECLARATION & TERMS ACCEPTANCE */}
+              <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard space-y-4">
+                <div className="flex items-center justify-between border-b border-gray-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-brand-yellow shrink-0" />
+                    <h2 className="text-base font-bold text-brand-black">4. Seller Legal Declaration &amp; Terms <span className="text-red-500">*</span></h2>
+                  </div>
+                  <span className="text-[11px] font-mono font-bold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">
+                    Agreement v1.0
+                  </span>
+                </div>
+
+                <div className="space-y-3.5">
+                  {/* Statutory Affirmation Box */}
+                  <div className="bg-neutral-50 rounded-2xl p-4 border border-brand-border text-xs text-brand-muted space-y-2 leading-relaxed">
+                    <p className="font-bold text-brand-black">
+                      Pursuant to the Indian Contract Act, 1872 and recommerce regulations, CashALL (operated by Aarna Enterprise) purchases pre-owned devices directly from lawful owners.
+                    </p>
+                    <ul className="list-disc pl-4 space-y-1 text-[11px]">
+                      <li>You declare you are the lawful, authorized owner with unrestricted right to sell.</li>
+                      <li>The device is not stolen, lost, or subject to EMI financing claims, liens, or telecommunication blacklisting.</li>
+                      <li>The online quote is an automated estimate; final purchase price is confirmed after physical inspection.</li>
+                      <li>You retain full right to decline any revised valuation at doorstep with <strong className="text-brand-black font-bold">₹0 cancellation fee</strong>.</li>
+                    </ul>
+                    <button
+                      type="button"
+                      onClick={() => setShowAgreementModal(true)}
+                      className="text-[11px] font-bold text-brand-blue underline hover:text-blue-800 pt-1 block"
+                    >
+                      Read Complete Used Device Purchase Agreement (v1.0) &rarr;
+                    </button>
+                  </div>
+
+                  {/* Mandatory Affirmative Consent Checkbox (Strictly Unchecked by Default) */}
+                  <label className="flex items-start gap-3 p-3.5 bg-brand-bg rounded-2xl border border-brand-border cursor-pointer hover:border-brand-yellow transition-all">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={termsAccepted}
+                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                      className="w-4 h-4 mt-0.5 accent-brand-yellow rounded shrink-0 cursor-pointer"
+                    />
+                    <span className="text-xs text-brand-black leading-snug">
+                      <strong className="font-bold text-brand-black">Mandatory:</strong> I confirm that I am the lawful owner with authority to sell this device and agree to the{" "}
+                      <Link href="/seller-terms" target="_blank" className="font-bold underline text-brand-black hover:text-brand-blue">
+                        Seller Terms
+                      </Link>
+                      {" "}and{" "}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setShowAgreementModal(true);
+                        }}
+                        className="font-bold underline text-brand-black hover:text-brand-blue"
+                      >
+                        Used Device Purchase Agreement (v1.0)
+                      </button>
+                      .
+                    </span>
+                  </label>
+
+                  {/* Optional Separate Marketing Consent Checkbox */}
+                  <label className="flex items-start gap-3 p-3 rounded-2xl border border-gray-100 cursor-pointer hover:bg-gray-50 transition-all">
+                    <input
+                      type="checkbox"
+                      checked={marketingAccepted}
+                      onChange={(e) => setMarketingAccepted(e.target.checked)}
+                      className="w-4 h-4 mt-0.5 accent-brand-yellow rounded shrink-0 cursor-pointer"
+                    />
+                    <span className="text-[11px] text-gray-500 leading-snug">
+                      (Optional) Send me high-value buyback offers, price drop alerts, and order updates via WhatsApp &amp; SMS.
+                    </span>
+                  </label>
                 </div>
               </div>
 

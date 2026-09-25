@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { verifyAuthToken } from "@/lib/middlewares/auth";
+import { rateLimiter } from "@/lib/middlewares/security";
 import { PricingService } from "@/lib/services/pricing.service";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/utils/AppError";
@@ -22,6 +23,8 @@ const calculateQuoteSchema = z.object({
 });
 
 export const POST = apiWrapper(async (req: NextRequest) => {
+  rateLimiter(req, 40, 60000);
+
   const body = await req.json();
   const validation = calculateQuoteSchema.safeParse(body);
 

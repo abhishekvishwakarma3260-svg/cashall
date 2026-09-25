@@ -6,6 +6,7 @@ import { AppError } from "@/lib/utils/AppError";
 import { ESignService } from "@/lib/services/esign.service";
 import { OrderStateMachine } from "@/lib/services/order-state";
 import { AuditService } from "@/lib/services/audit.service";
+import { LegalDocumentService } from "@/lib/services/legal-document.service";
 import { z } from "zod";
 
 const esignSchema = z.object({
@@ -13,6 +14,9 @@ const esignSchema = z.object({
   signerPhone: z.string().min(10, "Signer phone required"),
   signatureDataUrl: z.string().optional(),
   sellerDeclaration: z.string().min(10, "Seller declaration required"),
+  termsAccepted: z.boolean().optional(),
+  marketingConsent: z.boolean().optional(),
+  agreementVersion: z.string().optional(),
 });
 
 export const POST = apiWrapper(async (req: NextRequest, { params }: { params: { id: string } }) => {
@@ -37,6 +41,54 @@ export const POST = apiWrapper(async (req: NextRequest, { params }: { params: { 
     signatureDataUrl: validation.data.signatureDataUrl,
     sellerDeclaration: validation.data.sellerDeclaration,
   });
+
+  // Persist SellerAgreementAcceptance record for full traceability
+  try {
+    const purchaseDoc = await LegalDocumentService.getPublishedDocument("SELLER_PURCHASE_AGREEMENT");
+    const sellerTermsDoc = await LegalDocumentService.getPublishedDocument("SELLER_TERMS");
+    const privacyDoc = await LegalDocumentService.getPublishedDocument("PRIVACY_POLICY");
+
+    const clientIp = req.headers.get("x-forwarded-for") ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
+    const userAgent = req.headers.get("user-agent") || "unknown";
+
+    const declarationsJson = JSON.stringify({
+      sellerDeclaration: validation.data.sellerDeclaration,
+      termsAccepted: validation.data.termsAccepted ?? true,
+      marketingConsent: validation.data.marketingConsent ?? false,
+      sellerTermsVersion: sellerTermsDoc.version,
+      privacyPolicyVersion: privacyDoc.version,
+    });
+
+    const deviceSnapshot = JSON.stringify({
+      orderId: order.id,
+      orderNumber: (order as any).orderNumber,
+      deviceName: (order as any).deviceName,
+      finalPrice: (order as any).finalPrice || (order as any).quotedPrice || 0,
+    });
+
+    await prisma.sellerAgreementAcceptance.create({
+      data: {
+        orderId: order.id,
+        documentId: purchaseDoc.id,
+        documentVersion: purchaseDoc.version,
+        documentHash: purchaseDoc.contentHash,
+        acceptedAt: new Date(),
+        clientIpAddress: clientIp,
+        clientUserAgent: userAgent,
+        sellerName: validation.data.signerName,
+        sellerPhone: validation.data.signerPhone,
+        acceptedDeclarationsJson: declarationsJson,
+        deviceSnapshotJson: deviceSnapshot,
+        agreedFinalPrice: (order as any).finalPrice || (order as any).quotedPrice || 0,
+        signatureDataUrl: validation.data.signatureDataUrl,
+      },
+    });
+  } catch (acceptanceErr: any) {
+    // Non-fatal: log but don't fail the esign transaction
+    console.error("[COMPLIANCE] SellerAgreementAcceptance creation failed:", acceptanceErr?.message);
+  }
 
   await AuditService.log({
     actorId: decodedUser.uid,

@@ -1,11 +1,15 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { cleanDeviceName } from "@/lib/device";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
     const [orders, loginLogs, callLogs] = await Promise.all([
       prisma.order.findMany({
         where: { deletedAt: null },
@@ -227,9 +231,10 @@ export async function GET() {
     });
   } catch (error: any) {
     console.error("Error generating admin report data:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to generate report data" },
-      { status: 500 }
+      { status }
     );
   }
 }

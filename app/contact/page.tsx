@@ -9,6 +9,9 @@ import { trackMetaStandardEvent } from "@/lib/analytics/meta";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [ticketId, setTicketId] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -18,13 +21,35 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    trackMetaStandardEvent("Contact", {
-      content_name: "Contact Form",
-      issue_type: formData.issueType,
-    }, { eventId: `contact_form_${formData.phone || Date.now()}` });
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/v1/support/tickets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to submit support request.");
+      }
+
+      setTicketId(data.data?.ticketId ? data.data.ticketId.slice(0, 8).toUpperCase() : `TK-${Date.now().toString().slice(-6)}`);
+      setSubmitted(true);
+
+      trackMetaStandardEvent("Contact", {
+        content_name: "Contact Form",
+        issue_type: formData.issueType,
+      }, { eventId: `contact_form_${formData.phone || Date.now()}` });
+    } catch (err: any) {
+      setErrorMsg(err.message || "Failed to submit. Please try calling us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -127,8 +152,21 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" variant="primary" size="lg" fullWidth className="font-extrabold shadow-yellowGlow">
-                    SUBMIT SUPPORT TICKET
+                  {errorMsg && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl font-medium">
+                      {errorMsg}
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    size="lg"
+                    fullWidth
+                    disabled={submitting}
+                    className="font-extrabold shadow-yellowGlow disabled:opacity-60"
+                  >
+                    {submitting ? "SUBMITTING TICKET..." : "SUBMIT SUPPORT TICKET"}
                   </Button>
                 </form>
               ) : (
@@ -138,7 +176,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold text-brand-black">Support Ticket Created!</h3>
                   <p className="text-xs text-brand-muted max-w-sm mx-auto">
-                    Ticket #TK-{Math.floor(10000 + Math.random() * 90000)} has been logged. Our customer team will call or SMS you at {formData.phone} shortly.
+                    Ticket <span className="font-mono font-bold text-brand-black">#{ticketId}</span> has been logged. Our customer team will call or SMS you at {formData.phone} shortly.
                   </p>
                 </div>
               )}

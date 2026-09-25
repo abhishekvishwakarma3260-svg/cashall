@@ -150,6 +150,16 @@ export function Footer() {
                   Sell Phone in Kolkata
                 </Link>
               </li>
+              <li>
+                <Link href="/sell-phone-in-howrah" className="hover:text-brand-yellow transition-colors">
+                  Sell Phone in Howrah
+                </Link>
+              </li>
+              <li>
+                <Link href="/sell-phone-in-gorakhpur" className="hover:text-brand-yellow transition-colors">
+                  Sell Phone in Gorakhpur
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -158,13 +168,38 @@ export function Footer() {
             <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/about" className="hover:text-brand-yellow transition-colors">
+                <Link href="/about-us" className="hover:text-brand-yellow transition-colors">
                   About CashALL
                 </Link>
               </li>
               <li>
-                <Link href="/compare/cashify-vs-cashall" className="hover:text-brand-yellow transition-colors">
-                  Cashify vs CashALL
+                <Link href="/reviews" className="hover:text-brand-yellow transition-colors">
+                  Customer Reviews
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-brand-yellow transition-colors">
+                  Be Smart, Sell Smart (Blog)
+                </Link>
+              </li>
+              <li>
+                <Link href="/news" className="hover:text-brand-yellow transition-colors">
+                  Tech News
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles" className="hover:text-brand-yellow transition-colors">
+                  Articles &amp; Guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/cashall-vs-other-platforms" className="hover:text-brand-yellow transition-colors">
+                  CashALL vs Other Platforms
+                </Link>
+              </li>
+              <li>
+                <Link href="/download" className="hover:text-brand-yellow transition-colors">
+                  Download App
                 </Link>
               </li>
               <li>
@@ -197,8 +232,23 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/cookie-policy" className="hover:text-brand-yellow transition-colors">
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms" className="hover:text-brand-yellow transition-colors">
                   Terms &amp; Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/pickup-policy" className="hover:text-brand-yellow transition-colors">
+                  Doorstep Pickup Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/cancellation-policy" className="hover:text-brand-yellow transition-colors">
+                  Cancellation Policy
                 </Link>
               </li>
             </ul>
@@ -206,9 +256,36 @@ export function Footer() {
 
         </div>
 
+        {/* DEEP DATA CLEANING GUARANTEE & TRUST SEALS */}
+        <div className="pt-8 border-t border-neutral-800 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-2 text-xs text-neutral-400 space-y-1">
+            <p className="font-semibold text-neutral-300">
+              CashALL • Operating under Aarna Enterprise | Headquartered in Kolkata, West Bengal, India.
+            </p>
+            <p className="text-[11px] text-neutral-500 leading-relaxed">
+              Official Email Support: <span className="text-brand-yellow font-bold">support@cashall.in</span> • Customer Helpline: <span className="text-white font-bold">+91 7604092333</span>. All brand names, logos, and trademarks (Apple, Samsung, OnePlus, Sony PlayStation, etc.) are the property of their respective owners and used solely for identification purposes.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-neutral-700/80 rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-brand-yellow/15 border border-brand-yellow/30 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-6 h-6 text-brand-yellow" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="text-xs font-black text-white flex items-center gap-1.5">
+                <span>Deep Data Cleaning Guarantee</span>
+              </div>
+              <p className="text-[11px] text-neutral-400 leading-tight">
+                All purchased devices undergo certified NIST 800-88 sanitization, guaranteeing irreversible destruction of all private data.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* BOTTOM COPYRIGHT */}
-        <div className="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p className="font-medium text-gray-300">@ 2026 Aarna Enterprise (CashALL). All Rights Reserved</p>
+        <div className="pt-6 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+          <p className="font-medium text-gray-300">© 2026 Aarna Enterprise (CashALL). All Rights Reserved</p>
+          <p className="text-[11px] text-gray-400">Kolkata • Howrah • Salt Lake • New Town • Pan-India Logistics</p>
         </div>
 
       </div>

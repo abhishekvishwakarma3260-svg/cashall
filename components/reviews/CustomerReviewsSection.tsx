@@ -1,19 +1,30 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import Link from "next/link";
 import { CUSTOMER_REVIEWS, REVIEW_STATS } from "@/lib/data/reviewsData";
 import { ReviewStatsBar } from "./ReviewStatsBar";
 import { CustomerReviewCard } from "./CustomerReviewCard";
-import { Sparkles, MessageSquare, ArrowRight, PenSquare, Star } from "lucide-react";
+import { Sparkles, MessageSquare, ArrowRight, PenSquare, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function CustomerReviewsSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   // Select the 4 best reviews: 5-star rating, verified, highest payout/feedback quality
   const fourBestReviews = useMemo(() => {
     return CUSTOMER_REVIEWS.filter((r) => r.rating === 5 && r.verified)
       .sort((a, b) => (b.helpfulCount || 0) - (a.helpfulCount || 0))
       .slice(0, 4);
   }, []);
+
+  const handleScroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 340;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section className="py-20 bg-brand-bg border-t border-brand-border" id="reviews">
@@ -40,7 +51,7 @@ export function CustomerReviewsSection() {
         {/* 2. TOP 4 BEST REVIEWS SHOWCASE */}
         <div className="space-y-6 pt-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-border pb-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <MessageSquare className="w-5 h-5 text-brand-black" />
               <h3 className="text-xl font-extrabold text-brand-black">
                 Top Rated Customer Reviews
@@ -51,12 +62,30 @@ export function CustomerReviewsSection() {
             </div>
 
             <div className="flex items-center gap-2">
+              {/* Carousel navigation buttons */}
+              <div className="flex items-center gap-1 mr-2">
+                <button
+                  onClick={() => handleScroll("left")}
+                  aria-label="Previous review"
+                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => handleScroll("right")}
+                  aria-label="Next review"
+                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
               <Link
                 href="/reviews?action=write"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white hover:bg-neutral-50 border border-brand-border text-xs font-bold text-brand-black shadow-xs transition hover:border-brand-black"
               >
                 <PenSquare className="w-3.5 h-3.5 text-brand-yellow fill-brand-black" />
-                <span>Write Review</span>
+                <span className="hidden sm:inline">Write Review</span>
               </Link>
               <Link
                 href="/reviews"
@@ -68,10 +97,21 @@ export function CustomerReviewsSection() {
             </div>
           </div>
 
-          {/* 4 BEST REVIEWS GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 REVIEWS SCROLL VIEW / RESPONSIVE GRID */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 pb-2 no-scrollbar md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible"
+            tabIndex={0}
+            role="region"
+            aria-label="Top Customer Reviews carousel"
+          >
             {fourBestReviews.map((review) => (
-              <CustomerReviewCard key={review.id} review={review} />
+              <div
+                key={review.id}
+                className="w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+              >
+                <CustomerReviewCard review={review} />
+              </div>
             ))}
           </div>
 
@@ -98,7 +138,7 @@ export function CustomerReviewsSection() {
                 href="/reviews"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-brand-black hover:bg-brand-dark text-white font-extrabold text-xs shadow-md transition hover:scale-[1.02] active:scale-95"
               >
-                <span>View More Reviews ({CUSTOMER_REVIEWS.length - 4}+ more)</span>
+                <span>View All Reviews ({CUSTOMER_REVIEWS.length}+ reviews)</span>
                 <ArrowRight className="w-4 h-4 text-brand-yellow" />
               </Link>
             </div>

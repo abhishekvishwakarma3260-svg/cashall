@@ -3,11 +3,15 @@ import { prisma } from "@/lib/db";
 import { EmailService } from "@/lib/services/email.service";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import { logger } from "@/lib/utils/logger";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
     const orderIdentifier = params.id;
     const body = await req.json().catch(() => ({}));
 

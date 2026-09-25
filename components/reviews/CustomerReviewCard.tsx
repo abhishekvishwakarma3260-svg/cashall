@@ -36,49 +36,56 @@ export function CustomerReviewCard({ review }: CustomerReviewCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-brand-border p-6 shadow-subtleCard hover:shadow-premium hover:border-brand-yellow/80 transition-all duration-200 flex flex-col justify-between space-y-4">
-      <div className="space-y-3">
-        {/* HEADER: USER INFO, STARS & VERIFIED */}
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-neutral-900 text-brand-yellow font-black flex items-center justify-center text-sm shadow-sm border border-brand-border">
-              {review.customerName.charAt(0)}
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-brand-black text-sm">
-                  {review.customerName}
-                </span>
-                {review.verified && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                    <span>Verified Seller</span>
-                  </span>
-                )}
-              </div>
-              <div className="text-[11px] text-brand-muted flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                <span>{review.location}</span>
-                {review.phone && (
-                  <>
-                    <span>•</span>
-                    <span className="font-mono text-neutral-700 font-bold">{review.phone}</span>
-                  </>
-                )}
-                <span>•</span>
-                <span>{review.date}</span>
-              </div>
-            </div>
+    <div className="bg-white rounded-3xl border border-brand-border p-5 sm:p-6 shadow-subtleCard hover:shadow-premium hover:border-brand-yellow/80 transition-all duration-200 flex flex-col justify-between space-y-4 overflow-hidden relative">
+      <div className="space-y-3.5">
+        {/* HEADER: USER INFO & VERIFIED BADGE */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-2xl bg-neutral-950 text-brand-yellow font-black flex items-center justify-center text-sm shadow-sm border border-neutral-800 shrink-0">
+            {review.customerName.charAt(0)}
           </div>
-
-          <div className="flex items-center gap-0.5">
-            {[...Array(review.rating)].map((_, i) => (
-              <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-            ))}
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="font-extrabold text-brand-black text-sm truncate">
+                {review.customerName}
+              </span>
+              {review.verified && (
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 shrink-0">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                  <span>Verified Seller</span>
+                </span>
+              )}
+            </div>
+            <div className="text-[11px] text-brand-muted flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-0.5">
+              <span>{review.location}</span>
+              {review.phone && (
+                <>
+                  <span>•</span>
+                  <span className="font-mono text-neutral-700 font-bold">{review.phone}</span>
+                </>
+              )}
+              <span>•</span>
+              <span>{review.date}</span>
+            </div>
           </div>
         </div>
 
+        {/* STARS & RATING PILL ROW (NEAT & CONTAINED) */}
+        <div className="flex items-center justify-between gap-2 bg-amber-50/70 border border-amber-200/80 rounded-xl px-3 py-1.5">
+          <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5 shrink-0">
+              {[...Array(review.rating)].map((_, i) => (
+                <Star key={i} className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />
+              ))}
+            </div>
+            <span className="text-xs font-black text-amber-950 ml-1.5">5.0 Star</span>
+          </div>
+          <span className="text-[10px] font-bold text-neutral-600 bg-white/90 border border-amber-200/80 px-2 py-0.5 rounded-md shrink-0">
+            Verified Sale
+          </span>
+        </div>
+
         {/* DEVICE SOLD, ORDER NUMBER & PAYOUT SPEED TAGS */}
-        <div className="flex flex-wrap items-center gap-2 pt-1">
+        <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
           {review.orderNumber && (
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-neutral-900 text-brand-yellow text-xs font-mono font-bold shadow-sm">
               Order #{review.orderNumber}

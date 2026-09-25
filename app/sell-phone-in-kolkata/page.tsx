@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Sell Old Phone in Kolkata | Instant Cash & Free Doorstep Pickup | CashALL",
   description:
-    "Sell your used smartphone online in Kolkata for the highest price. Free 2-hour doorstep pickup across Salt Lake, New Town, South Kolkata, North Kolkata & Howrah. Instant UPI cash payout & certified data wipe.",
+    "Sell your used smartphone online in Kolkata for fair market value. Free 2-hour doorstep pickup across Salt Lake, New Town, South Kolkata, North Kolkata & Howrah. Instant UPI cash payout & certified data wipe.",
   keywords: [
     "sell old phone in kolkata",
     "sell used phone kolkata",
@@ -138,12 +138,6 @@ export default function SellPhoneInKolkataPage() {
           "Dum Dum",
           "Barasat"
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "33",
-          "bestRating": "5"
-        },
         "priceRange": "₹1,000 - ₹1,20,000"
       },
       {

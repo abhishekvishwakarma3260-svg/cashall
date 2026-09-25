@@ -9,20 +9,22 @@ import { WhyCashALL } from "@/components/home/WhyCashALL";
 import { CustomerReviewsSection } from "@/components/reviews/CustomerReviewsSection";
 import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { BeSmartSellSmartSection } from "@/components/home/BeSmartSellSmartSection";
+import { RecommerceSeoBlock } from "@/components/home/RecommerceSeoBlock";
 
 import { INITIAL_FAQS } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
   description:
-    "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep evaluation, instant UPI/bank cash payout, and 100% safe certified data wipe.",
+    "Sell your old mobile phones, used laptops and tablets online at CashALL for fair market value. Free doorstep evaluation, instant UPI/bank cash payout, and 100% safe certified data wipe.",
   alternates: {
     canonical: "https://www.cashall.in",
   },
   openGraph: {
     title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
     description:
-      "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep pickup, instant bank transfer, and certified data wiping.",
+      "Sell your old mobile phones, used laptops and tablets online at CashALL for fair market value with convenient doorstep pickup, instant bank transfer, and certified data wiping.",
     url: "https://www.cashall.in",
   },
 };
@@ -53,7 +55,7 @@ export default function HomePage() {
         },
         "image": "https://www.cashall.in/photos/CashALL_favicon.png",
         "description":
-          "CashALL is India's premier recommerce platform for selling used smartphones, laptops, and tablets with up to 5% higher payouts than Cashify, Cashkr, and Mobisell, zero convenience charges, free doorstep inspection, and instant UPI cash payouts.",
+          "CashALL is India's premier recommerce platform for selling used smartphones, laptops, and tablets with honest fair value pricing, zero convenience charges, free doorstep inspection, and instant UPI cash payouts.",
         "sameAs": [
           "https://www.instagram.com/cashall_26/",
           "https://www.facebook.com/profile.php?id=61592749535143",
@@ -86,14 +88,7 @@ export default function HomePage() {
           { "@type": "City", "name": "Howrah" },
           { "@type": "AdministrativeArea", "name": "West Bengal" },
           { "@type": "Country", "name": "India" }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "33",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        ]
       },
       {
         "@type": "WebSite",
@@ -123,7 +118,7 @@ export default function HomePage() {
         "@type": "HowTo",
         "@id": "https://www.cashall.in/#howto",
         "name": "How to Sell Old Phone Online for Instant Cash on CashALL",
-        "description": "Follow 4 simple steps to sell your old smartphone, used laptop, or tablet for the highest price with free doorstep evaluation and instant payment.",
+        "description": "Follow 4 simple steps to sell your old smartphone, used laptop, or tablet for honest fair value with free doorstep evaluation and instant payment.",
         "totalTime": "PT15M",
         "step": [
           {
@@ -204,6 +199,8 @@ export default function HomePage() {
         <PopularBrands />
         <HowItWorks />
         <WhyCashALL />
+        <BeSmartSellSmartSection />
+        <RecommerceSeoBlock />
         <CustomerReviewsSection />
         <FAQAccordion />
         <FinalCTA />

@@ -5,7 +5,20 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin/", "/partner/"],
+      disallow: [
+        "/admin/",
+        "/partner/",
+        "/agent/",
+        "/support/",
+        "/api/",
+        "/checkout/",
+        "/track/",
+        "/order/",
+        "/orders/",
+        "/receipt/",
+        "/sale-receipt/",
+        "/dashboard/",
+      ],
     },
     sitemap: "https://www.cashall.in/sitemap.xml",
   };

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const brandName = BRAND_NAMES[brandSlug] || params.brand.toUpperCase();
 
   const title = `Sell Old ${brandName} Phone Online | Best Resale Price & Instant Cash`;
-  const description = `Sell your old ${brandName} smartphone online for the highest price on CashALL. Free doorstep pickup, instant UPI cash transfer, and safe data wiping across India.`;
+  const description = `Sell your old ${brandName} smartphone online for fair market value on CashALL. Free doorstep pickup, instant UPI cash transfer, and safe data wiping across India.`;
 
   return {
     title,

@@ -63,9 +63,6 @@ export function Header() {
         } catch (e) {
           console.error(e);
         }
-      } else {
-        // Auto-open Location Modal for new visitors so they fix their location first
-        setLocationModalOpen(true);
       }
 
       const handleLocationUpdate = () => {

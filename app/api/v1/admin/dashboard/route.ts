@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -8,6 +9,9 @@ const MAIN_ORDERS = ["CA33039", "CA83848", "CA36738"];
 const MAIN_QUOTES = ["Q569571-6808", "Q593558-6690", "CAQ-367384"];
 
 export const GET = apiWrapper(async (req: NextRequest) => {
+  const user = await verifyAuthToken(req);
+  requireRole(["ADMIN", "SUPER_ADMIN"], user.role);
+
   const [
     todayQuotes,
     totalOrders,

@@ -6,6 +6,18 @@ import { AppError } from "@/lib/utils/AppError";
 import { prisma } from "@/lib/db";
 import { v4 as uuidv4 } from "uuid";
 
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+
+const ALLOWED_MIME_TYPES = new Set([
+  "image/jpeg",
+  "image/jpg",
+  "image/png",
+  "image/webp",
+  "image/heic",
+  "image/heif",
+  "application/pdf",
+]);
+
 export const POST = apiWrapper(async (req: NextRequest) => {
   // Validate authorization
   const decodedUser = await verifyAuthToken(req);
@@ -22,11 +34,20 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     throw new AppError("Storage bucket name is required.", 400);
   }
 
+  if (file.size > MAX_FILE_SIZE) {
+    throw new AppError("File size exceeds the 10MB limit.", 400);
+  }
+
+  const mimeType = (file.type || "").toLowerCase();
+  if (!ALLOWED_MIME_TYPES.has(mimeType)) {
+    throw new AppError("Invalid file type. Only JPEG, PNG, WebP, HEIC, and PDF documents are allowed.", 400);
+  }
+
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
-  const mimeType = file.type;
 
-  const fileExt = file.name.split(".").pop();
+  const rawExt = file.name.split(".").pop() || "bin";
+  const fileExt = rawExt.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   const uniqueId = uuidv4();
   const fileName = `${uniqueId}.${fileExt}`;
   const filePath = `${decodedUser.uid}/${fileName}`;

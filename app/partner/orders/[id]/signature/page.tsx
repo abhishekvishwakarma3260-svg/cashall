@@ -17,7 +17,7 @@ export default function PartnerSignaturePage({ params }: { params: { id: string 
   const [signerName, setSignerName] = useState("");
   const [signerPhone, setSignerPhone] = useState("");
   const [deviceReceivedConfirmed, setDeviceReceivedConfirmed] = useState(false);
-  const [declarationAccepted, setDeclarationAccepted] = useState(true);
+  const [declarationAccepted, setDeclarationAccepted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

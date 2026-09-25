@@ -1,10 +1,14 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
     const agents = await prisma.user.findMany({
       where: {
         role: "AGENT",
@@ -31,15 +35,19 @@ export async function GET() {
     return NextResponse.json({ success: true, agents });
   } catch (error: any) {
     console.error("Error fetching agents:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to fetch agents" },
-      { status: 500 }
+      { status }
     );
   }
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN"], user.role);
+
     const body = await req.json();
     const { name, username, phone, password } = body;
 
@@ -106,10 +114,10 @@ export async function POST(req: Request) {
       agent,
     });
   } catch (error: any) {
-    console.error("Error creating agent:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to create agent" },
-      { status: 500 }
+      { status }
     );
   }
 }

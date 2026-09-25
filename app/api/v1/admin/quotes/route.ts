@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
 export const GET = apiWrapper(async (req: NextRequest) => {
+  const user = await verifyAuthToken(req);
+  requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
   const searchParams = req.nextUrl?.searchParams || new URL(req.url).searchParams;
   const page = parseInt(searchParams.get("page") || "1", 10);
   const limitParam = searchParams.get("limit");

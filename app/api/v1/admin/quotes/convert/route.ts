@@ -4,11 +4,14 @@ import { WhatsAppService } from "@/lib/services/whatsapp.service";
 import { EmailService } from "@/lib/services/email.service";
 import { logger } from "@/lib/utils/logger";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
-
 import { formatAddress } from "@/lib/address";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export async function POST(req: NextRequest) {
   try {
+    const authUser = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER", "EMPLOYEE", "AGENT"], authUser.role);
+
     const body = await req.json();
     const {
       quoteNumber,
@@ -203,9 +206,10 @@ export async function POST(req: NextRequest) {
     });
   } catch (error: any) {
     logger.error("Quote conversion error:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to convert quote to order." },
-      { status: 500 }
+      { status }
     );
   }
 }

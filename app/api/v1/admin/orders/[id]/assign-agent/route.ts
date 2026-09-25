@@ -2,10 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/utils/AppError";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
 export const POST = apiWrapper(async (req: NextRequest, { params }: { params: { id: string } }) => {
+  const user = await verifyAuthToken(req);
+  requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
   const rawId = params.id ? decodeURIComponent(params.id).trim() : "";
   const body = await req.json().catch(() => ({}));
 

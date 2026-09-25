@@ -11,6 +11,7 @@ import {
   sendServerPickupBookedEvent,
 } from "@/lib/analytics/meta-server";
 import { formatAddress } from "@/lib/address";
+import { rateLimiter } from "@/lib/middlewares/security";
 import { z } from "zod";
 
 const createOrderSchema = z.object({
@@ -35,6 +36,8 @@ const createOrderSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
+    rateLimiter(req, 20, 60000);
+
     const body = await req.json().catch(() => ({}));
     const validation = createOrderSchema.safeParse(body);
 
@@ -104,7 +107,20 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const quoteConditions = [];
+    // ── BLOCK CHECK: Dealers or flagged users are permanently blocked ──
+    if (user.isBlocked) {
+      logger.warn(`[ORDER CREATE] Blocked user attempted order — phone: ${cleanPhone}, reason: ${user.blockReason}`);
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Your account has been restricted from placing sell orders on CashALL. For assistance, contact support@cashall.in or call +91 7604092333.",
+        },
+        { status: 403 }
+      );
+    }
+    // ─────────────────────────────────────────────────────────────────────
+
+    const quoteConditions: any[] = [];
     if (incomingQuoteNum) quoteConditions.push({ quoteNumber: incomingQuoteNum });
     if (incomingQuoteId) {
       if (isQuoteUuid) quoteConditions.push({ id: incomingQuoteId });

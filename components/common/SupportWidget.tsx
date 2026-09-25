@@ -28,6 +28,7 @@ export function SupportWidget() {
           
           <button
             onClick={() => setIsOpen(false)}
+            aria-label="Close support dialog"
             className="absolute top-4 right-4 p-1.5 rounded-full text-gray-400 hover:text-brand-black hover:bg-gray-100 transition-colors"
           >
             <X className="w-4 h-4" />
@@ -123,6 +124,7 @@ export function SupportWidget() {
       {/* FLOATING TRIGGER BUTTON */}
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Open support options"
         className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-3.5 rounded-full bg-brand-black text-white border-2 border-brand-yellow shadow-2xl hover:bg-brand-dark transition-all duration-300 group"
       >
         <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-brand-yellow text-black flex items-center justify-center font-bold">

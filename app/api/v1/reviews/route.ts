@@ -22,14 +22,14 @@ export async function GET(req: NextRequest) {
       phone: r.phone ? `${r.phone.slice(0, 5)}*****` : undefined,
       location: r.location || "West Bengal",
       deviceSold: r.deviceModel || "Mobile Device",
-      payoutAmount: r.payout || 15000,
-      payoutMethod: "Instant UPI",
+      payoutAmount: r.payout || 0,
+      payoutMethod: r.payout ? "Instant UPI" : "UPI / Bank Transfer",
       rating: r.rating || 5,
       reviewTitle: r.headline || "Great Selling Experience",
       reviewText: r.comment,
-      date: "Just now",
-      verified: r.verified !== undefined ? r.verified : true,
-      payoutSpeed: "Paid in 5 mins",
+      date: "Recent",
+      verified: Boolean(r.verified),
+      payoutSpeed: r.verified ? "Verified Customer" : "Customer Review",
       deviceCategory: (r.deviceModel || "").toLowerCase().includes("laptop") || (r.deviceModel || "").toLowerCase().includes("macbook")
         ? "LAPTOP"
         : (r.deviceModel || "").toLowerCase().includes("ipad") || (r.deviceModel || "").toLowerCase().includes("tablet")
@@ -87,6 +87,26 @@ export async function POST(req: NextRequest) {
     const cleanRating = Math.max(1, Math.min(5, Number(rating) || 5));
     const cleanPhone = phone ? String(phone).replace(/\D/g, "").slice(-10) : null;
 
+    // Check if reviewer has a completed order to mark verified
+    let isVerified = false;
+    let verifiedPayout: number | null = null;
+    if (cleanPhone) {
+      try {
+        const order = await prisma.order.findFirst({
+          where: {
+            user: { phone: { contains: cleanPhone } },
+            status: "COMPLETED",
+            deletedAt: null,
+          },
+          select: { finalPrice: true },
+        });
+        if (order) {
+          isVerified = true;
+          verifiedPayout = order.finalPrice || null;
+        }
+      } catch {}
+    }
+
     const newReview = await prisma.review.create({
       data: {
         name,
@@ -96,30 +116,31 @@ export async function POST(req: NextRequest) {
         comment,
         deviceModel: deviceSold ? String(deviceSold).trim() : "Mobile Device",
         location: location ? String(location).trim() : "West Bengal",
-        verified: true,
-        helpfulCount: 1,
+        verified: isVerified,
+        payout: verifiedPayout,
+        helpfulCount: 0,
       },
     });
 
     return NextResponse.json({
       success: true,
-      message: "Thank you! Your review has been published.",
+      message: "Thank you! Your review has been submitted.",
       review: {
         id: newReview.id,
         customerName: newReview.name,
         phone: newReview.phone ? `${newReview.phone.slice(0, 5)}*****` : undefined,
         location: newReview.location || "West Bengal",
         deviceSold: newReview.deviceModel || "Mobile Device",
-        payoutAmount: 15000,
-        payoutMethod: "Instant UPI",
+        payoutAmount: verifiedPayout || undefined,
+        payoutMethod: verifiedPayout ? "Instant UPI" : undefined,
         rating: newReview.rating,
-        reviewTitle: newReview.headline || "Great Selling Experience",
+        reviewTitle: newReview.headline || "Customer Review",
         reviewText: newReview.comment,
         date: "Just now",
-        verified: true,
-        payoutSpeed: "Paid in 5 mins",
+        verified: isVerified,
+        payoutSpeed: isVerified ? "Verified Customer" : "Customer Review",
         deviceCategory: "MOBILE",
-        helpfulCount: 1,
+        helpfulCount: 0,
       },
     });
   } catch (error: any) {

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,9 @@ function checkIsRealOrder(customerPhone: string, customerName: string, orderNumb
 
 export async function GET(req: NextRequest) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
     const latestOrder = await prisma.order.findFirst({
       where: {
         deletedAt: null,
@@ -132,9 +136,10 @@ export async function GET(req: NextRequest) {
     });
   } catch (error: any) {
     console.error("Latest order check error:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
-      { success: false, error: "Failed to fetch latest order" },
-      { status: 500 }
+      { success: false, error: error.message || "Failed to fetch latest order" },
+      { status }
     );
   }
 }

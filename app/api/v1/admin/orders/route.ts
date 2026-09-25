@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 export const dynamic = "force-dynamic";
 
 export const GET = apiWrapper(async (req: NextRequest) => {
+  const user = await verifyAuthToken(req);
+  requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page") || "1", 10);
   const limit = parseInt(searchParams.get("limit") || "60", 10);
@@ -314,6 +318,9 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       requotedPrice,
       revisedPrice: requotedPrice,
       finalPrice,
+      userId: ord.userId || ord.user?.id || null,
+      isUserBlocked: ord.user?.isBlocked || false,
+      userBlockedReason: ord.user?.blockReason || null,
     };
   });
 

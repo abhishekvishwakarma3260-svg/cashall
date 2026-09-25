@@ -59,11 +59,28 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
     throw new AppError("Order not found.", 404);
   }
 
+  // Authenticate user to determine privilege level for PII masking
+  let isPrivileged = false;
+  try {
+    const authUser = await verifyAuthToken(req);
+    if (["ADMIN", "SUPER_ADMIN", "MANAGER", "EMPLOYEE", "AGENT"].includes(authUser.role)) {
+      isPrivileged = true;
+    } else if (authUser.uid === order.userId || (authUser.phone && order.user?.phone && authUser.phone.slice(-10) === order.user.phone.slice(-10))) {
+      isPrivileged = true;
+    }
+  } catch {
+    isPrivileged = false;
+  }
+
   // Resolve device name & location summary
   const addr = order.address;
-  const addressSummary = addr
-    ? [addr.house, addr.street, addr.area, addr.landmark, addr.city, addr.state].filter(Boolean).join(", ") + (addr.pincode ? ` - ${addr.pincode}` : "")
-    : "Doorstep Location";
+  const addressSummary = isPrivileged
+    ? (addr
+        ? [addr.house, addr.street, addr.area, addr.landmark, addr.city, addr.state].filter(Boolean).join(", ") + (addr.pincode ? ` - ${addr.pincode}` : "")
+        : "Doorstep Location")
+    : (addr
+        ? [addr.area || addr.city, addr.city, addr.pincode].filter(Boolean).join(", ")
+        : "Doorstep Location");
 
   let deviceName = "Mobile Device";
   if (order.quote?.breakdownJson) {
@@ -107,15 +124,36 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
   // 3. Resolve final agreed deal payout to seller
   const finalPrice = order.finalPrice ?? activePayment?.amount ?? requotedPrice ?? quotedPrice;
 
+  // Mask PII if caller is unauthenticated public visitor
+  const rawPhone = order.user?.phone || "";
+  const maskedPhone = rawPhone.length >= 10
+    ? `${rawPhone.slice(0, 2)}******${rawPhone.slice(-2)}`
+    : (rawPhone ? "******" : "—");
+
+  const rawEmail = order.user?.email || "";
+  const maskedEmail = rawEmail.includes("@")
+    ? `${rawEmail.slice(0, 2)}***@${rawEmail.split("@")[1]}`
+    : null;
+
+  const sanitizedUser = isPrivileged
+    ? order.user
+    : (order.user ? { name: order.user.name, phone: maskedPhone } : null);
+
+  const sanitizedAddress = isPrivileged
+    ? order.address
+    : (order.address ? { city: order.address.city, state: order.address.state, pincode: order.address.pincode } : null);
+
   return NextResponse.json({
     success: true,
     data: {
       ...order,
+      user: sanitizedUser,
+      address: sanitizedAddress,
       deviceName,
       addressSummary,
       customerName: order.user?.name || "Customer",
-      customerPhone: order.user?.phone || "—",
-      customerEmail: order.user?.email || null,
+      customerPhone: isPrivileged ? (order.user?.phone || "—") : maskedPhone,
+      customerEmail: isPrivileged ? (order.user?.email || null) : maskedEmail,
       assignedPartnerName: assignedAgentName,
       assignedPartnerPhone: assignedAgentPhone,
       agentName: assignedAgentName,

@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model User {
@@ -19,6 +20,14 @@ model User {
   createdAt          DateTime                @default(now())
   updatedAt          DateTime                @updatedAt
   deletedAt          DateTime?
+
+  // ── DEALER / SPAM BLOCK ──────────────────────────────────────────────
+  isBlocked          Boolean                 @default(false)
+  blockedAt          DateTime?
+  blockReason        String?
+  blockedByAdminId   String?                 // Admin User.id who triggered the block
+  // ─────────────────────────────────────────────────────────────────────
+
   logs               ActivityLog[]
   addresses          Address[]
   customerDevices    CustomerDevice[]
@@ -28,10 +37,13 @@ model User {
   quotes             Quote[]
   tickets            SupportTicket[]
   notificationTokens UserNotificationToken[]
+  privacyRequests    DataPrivacyRequest[]
+  agentAppointment   AgentAppointmentRecord?
 
   @@index([phone])
   @@index([email])
   @@index([role])
+  @@index([isBlocked])
 }
 
 model Address {
@@ -277,8 +289,11 @@ model Order {
   user                 User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   agent                User?            @relation("AgentOrders", fields: [agentId], references: [id])
   payments             Payment[]
-  pickups        Pickup[]
-  qcReports      QcReport[]
+  pickups              Pickup[]
+  qcReports            QcReport[]
+  legalAcceptance      SellerAgreementAcceptance?
+  kycVerification      KycVerificationRecord?
+  priceRevisions       PriceRevisionRecord[]
 
   @@index([orderNumber])
   @@index([userId])
@@ -811,3 +826,218 @@ model Review {
   @@index([rating])
   @@index([createdAt])
 }
+
+// ==========================================
+// LEGAL & COMPLIANCE INFRASTRUCTURE
+// ==========================================
+
+enum LegalDocumentType {
+  SELLER_PURCHASE_AGREEMENT
+  SELLER_TERMS
+  WEBSITE_TERMS
+  PRIVACY_POLICY
+  COOKIE_POLICY
+  INSPECTION_REVISION_POLICY
+  PICKUP_POLICY
+  CANCELLATION_POLICY
+  GRIEVANCE_POLICY
+  AGENT_ENGAGEMENT_AGREEMENT
+  AGENT_PICKUP_SOP
+}
+
+enum DocumentApprovalStatus {
+  DRAFT
+  INTERNAL_REVIEW
+  LAWYER_REVIEW
+  APPROVED
+  PUBLISHED
+  SUPERSEDED
+}
+
+model LegalDocument {
+  id                   String                 @id @default(uuid()) @db.Uuid
+  documentType         LegalDocumentType
+  title                String
+  version              String                 // e.g. "1.0", "1.1"
+  status               DocumentApprovalStatus @default(DRAFT)
+  content              String                 @db.Text
+  summaryOfChanges     String?                @db.Text
+  contentHash          String                 // SHA-256 of content
+  effectiveDate        DateTime               @default(now())
+  publishedAt          DateTime?
+  approvedByLawyerAt   DateTime?
+  lawyerReferenceNotes String?                @db.Text
+  createdById          String?
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
+
+  acceptances          SellerAgreementAcceptance[]
+
+  @@unique([documentType, version])
+  @@index([documentType, status])
+}
+
+enum AcceptanceMethod {
+  CHECKBOX_AFFIRMATIVE
+  OTP_VERIFIED
+  E_SIGN_CANVAS
+  PHYSICAL_PAPER
+}
+
+model SellerAgreementAcceptance {
+  id                       String           @id @default(uuid()) @db.Uuid
+  orderId                  String           @unique @db.Uuid
+  quoteId                  String?          @db.Uuid
+  documentId               String           @db.Uuid
+  documentVersion          String
+  documentHash             String           // SHA-256 of agreement snapshot
+  sellerName               String
+  sellerPhone              String
+  sellerEmail              String?
+  acceptanceMethod         AcceptanceMethod @default(CHECKBOX_AFFIRMATIVE)
+  otpReference             String?
+  otpVerifiedAt            DateTime?
+  signatureDataUrl         String?          @db.Text
+  clientIpAddress          String?
+  clientUserAgent          String?
+  acceptedDeclarationsJson String           @db.Text
+  deviceSnapshotJson       String           @db.Text
+  agreedFinalPrice         Float
+  pdfDocumentUrl           String?
+  acceptedAt               DateTime         @default(now())
+
+  order                    Order            @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  document                 LegalDocument    @relation(fields: [documentId], references: [id])
+
+  @@index([orderId])
+  @@index([sellerPhone])
+}
+
+enum KycIdType {
+  AADHAAR
+  PAN
+  VOTER_ID
+  DRIVING_LICENSE
+  PASSPORT
+}
+
+enum KycStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+  EXPIRED
+}
+
+model KycVerificationRecord {
+  id                   String      @id @default(uuid()) @db.Uuid
+  orderId              String      @unique @db.Uuid
+  idType               KycIdType
+  maskedIdNumber       String
+  idHash               String      // SHA-256(salt + rawId) for duplicate check
+  fullNameOnId         String
+  verificationStatus   KycStatus   @default(PENDING)
+  verificationProvider String
+  providerReferenceId  String?
+  agentId              String?     @db.Uuid
+  consentObtained      Boolean     @default(false)
+  consentTimestamp     DateTime?
+  verifiedAt           DateTime    @default(now())
+
+  order                Order       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+}
+
+enum CustomerRevisionDecision {
+  PENDING
+  ACCEPTED
+  DECLINED
+  EXPIRED
+}
+
+model PriceRevisionRecord {
+  id                     String                   @id @default(uuid()) @db.Uuid
+  orderId                String                   @db.Uuid
+  originalQuotePrice     Float
+  revisedPrice           Float
+  priceDifference        Float
+  reasonCode             String
+  detailedReason         String                   @db.Text
+  inspectionFindingsJson String                   @db.Text
+  revisedByAgentId       String?                  @db.Uuid
+  customerNotifiedAt     DateTime?
+  customerDecision       CustomerRevisionDecision @default(PENDING)
+  customerRespondedAt    DateTime?
+  customerResponseMethod String?
+  createdAt              DateTime                 @default(now())
+
+  order                  Order                    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+}
+
+enum PrivacyRequestType {
+  ACCESS_SUMMARY
+  CORRECTION
+  ERASURE_DELETION
+  NOMINATION
+  GRIEVANCE
+}
+
+enum PrivacyRequestStatus {
+  RECEIVED
+  UNDER_VERIFICATION
+  IN_REVIEW
+  FULFILLED
+  REJECTED
+  EXEMPTION_APPLIED
+}
+
+model DataPrivacyRequest {
+  id                   String               @id @default(uuid()) @db.Uuid
+  requestType          PrivacyRequestType
+  userId               String?              @db.Uuid
+  dataPrincipalName    String
+  dataPrincipalPhone   String
+  dataPrincipalEmail   String
+  identityVerified     Boolean              @default(false)
+  verificationMethod   String?
+  requestDetails       String               @db.Text
+  status               PrivacyRequestStatus @default(RECEIVED)
+  adminRemarks         String?              @db.Text
+  legalExemptionReason String?              @db.Text
+  completedAt          DateTime?
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime             @updatedAt
+
+  user                 User?                @relation(fields: [userId], references: [id])
+
+  @@index([dataPrincipalPhone])
+  @@index([status])
+}
+
+enum AgentEngagementStatus {
+  ACTIVE
+  SUSPENDED
+  TERMINATED
+}
+
+model AgentAppointmentRecord {
+  id                      String                @id @default(uuid()) @db.Uuid
+  agentId                 String                @unique @db.Uuid
+  agreementVersion        String
+  agreementContentHash    String
+  acceptedAt              DateTime
+  backgroundCheckStatus   String                @default("PENDING")
+  policeVerificationRef   String?
+  ndaSigned               Boolean               @default(true)
+  sopVersionAcknowledged  String
+  status                  AgentEngagementStatus @default(ACTIVE)
+  createdAt               DateTime              @default(now())
+  updatedAt               DateTime              @updatedAt
+
+  agent                   User                  @relation(fields: [agentId], references: [id])
+
+  @@index([agentId])
+}
+

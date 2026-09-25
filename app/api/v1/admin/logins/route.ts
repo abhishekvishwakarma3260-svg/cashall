@@ -1,10 +1,14 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const user = await verifyAuthToken(req);
+    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
     const logs = await prisma.auditLog.findMany({
       where: {
         action: "ADMIN_LOGIN",
@@ -42,9 +46,10 @@ export async function GET() {
     });
   } catch (error: any) {
     console.error("Error fetching admin login logs:", error);
+    const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to fetch login logs" },
-      { status: 500 }
+      { status }
     );
   }
 }

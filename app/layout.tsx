@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SupportWidget } from "@/components/common/SupportWidget";
+import { CookieConsentBanner } from "@/components/common/CookieConsentBanner";
 import Script from "next/script";
 import { Suspense } from "react";
 import { MetaPageViewTracker } from "@/components/analytics/MetaPageViewTracker";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep evaluation, instant UPI/bank cash payout, and 100% safe certified data wipe.",
+    "Sell your old mobile phones, used laptops and tablets online at CashALL for fair market value with convenient doorstep pickup, instant UPI/bank cash payout, and 100% safe data wipe.",
 
   keywords: [
     "CashALL",
@@ -242,7 +243,7 @@ export const metadata: Metadata = {
     siteName: "CashALL",
     title: "CashALL | Sell Old Phone, Used Laptop & Tablet for Instant Cash",
     description:
-      "Sell your old mobile phones, used laptops and tablets online at CashALL for the highest price. Free doorstep pickup, instant bank transfer, and certified data wiping.",
+      "Sell your old mobile phones, used laptops and tablets online at CashALL for fair market value with convenient doorstep pickup, instant bank transfer, and certified data wiping.",
     images: [
       {
         url: "/photos/CashALL_logo.png",
@@ -278,6 +279,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Knowledge Base" />
+      </head>
       <body className="bg-brand-bg text-brand-black min-h-screen font-sans antialiased">
         <Script
           id="meta-pixel"
@@ -311,6 +315,7 @@ export default function RootLayout({
         </Suspense>
         {children}
         <SupportWidget />
+        <CookieConsentBanner />
       </body>
     </html>
   );

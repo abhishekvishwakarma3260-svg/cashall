@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
 import { INITIAL_FAQS } from "@/lib/store";
 
 export function FAQAccordion() {
   const [openId, setOpenId] = useState<string | null>("faq-1");
+  const topFaqs = INITIAL_FAQS.slice(0, 3);
 
   return (
     <section className="py-20 bg-white border-t border-brand-border">
@@ -25,7 +27,7 @@ export function FAQAccordion() {
         </div>
 
         <div className="space-y-3">
-          {INITIAL_FAQS.map((faq) => {
+          {topFaqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
               <div
@@ -52,6 +54,16 @@ export function FAQAccordion() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-brand-black hover:bg-neutral-800 text-white text-xs sm:text-sm font-extrabold shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <span>View All Frequently Asked Questions</span>
+            <ArrowRight className="w-4 h-4 text-brand-yellow" />
+          </Link>
         </div>
 
       </div>
