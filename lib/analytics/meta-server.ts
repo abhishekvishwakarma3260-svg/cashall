@@ -7,13 +7,13 @@ import crypto from "crypto";
  * Uses SHA-256 for all PII hashing according to Meta's strict privacy rules.
  *
  * Environment variables:
- * - META_PIXEL_ID (default: 1037780558881291)
+ * - META_PIXEL_ID (default: 1249229847363732)
  * - META_CONVERSIONS_API_ACCESS_TOKEN (server-side secret)
  * - META_TEST_EVENT_CODE (optional for Meta Events Manager test console)
  */
 
 const META_GRAPH_API_VERSION = process.env.META_GRAPH_API_VERSION || "v26.0";
-const DEFAULT_PIXEL_ID = "1037780558881291";
+const DEFAULT_PIXEL_ID = "1249229847363732";
 
 export interface ServerUserData {
   email?: string | null;

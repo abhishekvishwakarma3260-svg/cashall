@@ -1,6 +1,6 @@
 # CashALL Meta Pixel & Conversions API (CAPI) Registry
 
-**Pixel ID**: `1037780558881291`  
+**Pixel ID**: `1249229847363732`  
 **Production Domain**: `https://www.cashall.in`  
 **API Version**: Meta Graph API `v20.0`  
 **Architecture**: Dual Client-Side (Meta Pixel Browser SDK) + Server-Side (Meta Conversions API) with strict event deduplication.
@@ -109,7 +109,7 @@ When creating ad campaigns in Meta Ads Manager for CashALL:
 ### Step 1: Create a Custom Conversion for `PickupBooked`
 1. Go to **Meta Events Manager** -> **Custom Conversions** -> **Create Custom Conversion**.
 2. Name: `CashALL Doorstep Pickup Booked`.
-3. Data Source: Select Pixel `1037780558881291`.
+3. Data Source: Select Pixel `1249229847363732`.
 4. Event: Select `PickupBooked`.
 5. Rules: (Leave rule empty to match all `PickupBooked` events, or filter by `currency: INR`).
 

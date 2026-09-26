@@ -4,7 +4,7 @@
  * Provides SSR-safe, browser-safe, and deduplicated event tracking
  * using the official Meta Pixel JavaScript interface (`window.fbq`).
  *
- * Pixel ID: 1037780558881291 (Initialized globally in app/layout.tsx)
+ * Pixel ID: 1249229847363732 (Initialized globally in app/layout.tsx)
  */
 
 declare global {
