@@ -55,13 +55,23 @@ export function Header() {
         setUser(null);
       }
 
-      // Restore location session
+      // Restore location session or auto-prompt on first visit
       const storedLoc = localStorage.getItem("cashall_location");
       if (storedLoc) {
         try {
           setSelectedLocation(JSON.parse(storedLoc));
         } catch (e) {
           console.error(e);
+        }
+      } else {
+        // First visit: Prompt customer to select their State & City
+        const alreadyPrompted = sessionStorage.getItem("cashall_location_prompted");
+        if (!alreadyPrompted) {
+          sessionStorage.setItem("cashall_location_prompted", "true");
+          const timer = setTimeout(() => {
+            setLocationModalOpen(true);
+          }, 450);
+          return () => clearTimeout(timer);
         }
       }
 
