@@ -243,10 +243,10 @@ CashALL is a corporate recommerce enterprise. You interact with background-verif
   - Howrah: Shibpur, Salkia, Bally, Liluah, Mandirtala, Kona Expressway.
   - Extended Urban Districts: Barrackpore, Hooghly, Barasat, Madhyamgram across 100+ PIN codes (700001–700108).
 - **Northern & Eastern Regional Hubs:**
-  - Jharkhand: Ranchi.
-  - Bihar: Patna.
-  - Uttar Pradesh: Gorakhpur, Ballia.
-- **Pan-India Coverage:** Online instant valuation, customer support, and scheduled device buyback across major metropolitan tier-1 and tier-2 Indian cities.
+  - Jharkhand: Ranchi, Jamshedpur, Dhanbad.
+  - Bihar: Patna, Gaya, Muzaffarpur.
+  - Uttar Pradesh: Gorakhpur, Ballia, Varanasi.
+- **Service Area Commitment:** Doorstep pickup services are strictly focused on our dedicated operational clusters in West Bengal, Uttar Pradesh, Bihar, and Jharkhand to ensure guaranteed 24-hour pickup timelines and zero service delays.
 
 ---
 

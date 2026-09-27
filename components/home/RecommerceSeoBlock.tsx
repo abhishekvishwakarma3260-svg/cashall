@@ -121,7 +121,158 @@ export function RecommerceSeoBlock() {
           </div>
         </div>
 
-        {/* SECTION 3: GREEN CIRCULAR ECONOMY COMMITMENT */}
+        {/* SECTION 3: TOP & RISING QUERIES DEEP DIVE (SEO/AEO/GEO) */}
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full">
+              The Smarter Way to Sell Used Electronics
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-brand-black">
+              Why CashALL is India&apos;s #1 Choice to Sell Old Phones &amp; Laptops Online
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-600">
+              Direct comparison, guaranteed highest market price, zero doorstep deductions, and certified data wiping.
+            </p>
+          </div>
+
+          {/* Cards Grid for Top Search Topics */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1: Cashify & Flipkart Alternative */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-lg">
+                  ⚡
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Cashify &amp; Flipkart Alternative: Zero Hidden Fees
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Looking for <strong>&ldquo;Cashify sell old phone&rdquo;</strong> or <strong>&ldquo;Flipkart sell old phone&rdquo;</strong>? Unlike other aggregators that deduct ₹99–₹199 convenience charges at your doorstep and slash up to 40% on minor hairline scratches, CashALL offers honest algorithmic pricing with <strong>₹0 pickup fee</strong> and <strong>up to 5% higher real cash payout</strong>.
+                </p>
+              </div>
+              <Link
+                href="/compare/cashify-vs-cashall"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-amber-800 hover:text-amber-950 pt-2"
+              >
+                <span>Read Full Cashify vs CashALL Comparison</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 2: Sell iPhone & Apple Trade In Alternative */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-800 font-black text-lg">
+                  🍎
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Sell Old iPhone Online &amp; Apple Trade In Alternative
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Upgrading to the <strong>iPhone 16, 17 Pro, or 17 Pro Max</strong>? Official Apple Trade In and e-commerce exchange programs only offer store credits or low exchange values with strict deduction rules. Sell your iPhone 11, 12, 13, 14, 15, or 16 at CashALL for <strong>instant cash via UPI</strong> directly into your bank before handing over the device.
+                </p>
+              </div>
+              <Link
+                href="/sell/mobile/apple"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-blue-800 hover:text-blue-950 pt-2"
+              >
+                <span>Check iPhone Resale Value</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 3: Sell Laptop Online */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-800 font-black text-lg">
+                  💻
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Sell Old Laptop Online: Instant Cash for MacBook, Dell, HP &amp; Lenovo
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Don&apos;t let your used laptop gather dust. CashALL buys MacBooks, gaming laptops, and Windows work laptops across Dell, HP, Lenovo, Asus, and Acer. Get instant doorstep evaluation, certified hardware assessment, and on-the-spot bank transfer.
+                </p>
+              </div>
+              <Link
+                href="/sell/laptop"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-emerald-800 hover:text-emerald-950 pt-2"
+              >
+                <span>Sell Used Laptop Online</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 4: Sell Samsung & Android Flagships */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-800 font-black text-lg">
+                  📱
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Sell Samsung Galaxy, OnePlus &amp; Android Flagships
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Get the best resale price for Samsung Galaxy S23, S24, S25, S26 Ultra, Z Fold, Z Flip, OnePlus 11, 12, 13, and Google Pixel devices. Even phones with screen cracks, battery wear, or missing original boxes get competitive buyback quotes.
+                </p>
+              </div>
+              <Link
+                href="/sell/mobile/samsung"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-purple-800 hover:text-purple-950 pt-2"
+              >
+                <span>Sell Samsung Phone for Cash</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 5: Local GEO Coverage */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-800 font-black text-lg">
+                  📍
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Sell Old Phone Near Me: Free Doorstep Pickup in 24 Hours
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding across West Bengal, Uttar Pradesh, Bihar, and Jharkhand. Free 24-hour doorstep inspection by verified technicians.
+                </p>
+              </div>
+              <Link
+                href="/sell-phone-in-kolkata"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-rose-800 hover:text-rose-950 pt-2"
+              >
+                <span>View Serviceable Cities &amp; Pincodes</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 6: 100% Data Privacy & Safety */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-teal-100 flex items-center justify-center text-teal-800 font-black text-lg">
+                  🛡️
+                </div>
+                <h3 className="text-lg font-black text-brand-black">
+                  Safe Way to Sell Phone Online: Zero Scam Guarantee
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  No meeting random strangers on classified sites. No fake payment screenshots. Every transaction is legally backed by an official digital Bill of Sale, transferring complete legal liability and guaranteeing 100% on-site data wiping under NIST guidelines.
+                </p>
+              </div>
+              <Link
+                href="/about-us"
+                className="inline-flex items-center gap-1.5 text-xs font-black text-teal-800 hover:text-teal-950 pt-2"
+              >
+                <span>Learn About Our Legal Safeguards</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 4: GREEN CIRCULAR ECONOMY COMMITMENT */}
         <div className="bg-neutral-950 text-white rounded-3xl p-8 sm:p-10 shadow-premium flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black">

@@ -243,6 +243,54 @@ export default function HomePage() {
               "text": "Never. Receiving money via UPI (Google Pay, PhonePe, Paytm, BHIM) or bank transfer never requires entering a UPI PIN or scanning a QR code. CashALL credits the agreed amount directly into your account."
             }
           },
+          {
+            "@type": "Question",
+            "name": "How do I sell my old phone online for the best price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To sell your old phone online for the highest payout: (1) Visit CashALL.in, (2) Select your exact phone brand, model, and storage variant, (3) Answer quick condition questions about screen, body, and functional status, (4) Get an instant algorithmic valuation and schedule a free doorstep pickup. Our technician tests the device at your home, performs an on-site data wipe, and pays instantly via UPI before taking the phone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I sell my old laptop online on CashALL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! CashALL buys all used laptops including Apple MacBook Air, MacBook Pro, Dell, HP, Lenovo ThinkPad & IdeaPad, Asus, and Acer. You receive instant valuation, free doorstep evaluation, and immediate UPI/bank payout with certified secure data wiping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does CashALL compare to Apple Trade In and Flipkart Exchange?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apple Trade In and Flipkart exchange only give you restricted shopping gift cards or discounts tied to buying a brand-new device on their platform. In contrast, CashALL gives you direct, unencumbered liquid cash via instant UPI or IMPS bank transfer to spend anywhere, typically offering up to 10-20% more value than e-commerce exchange trade-in algorithms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best website and app to sell old phones in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CashALL (https://www.cashall.in) is rated 4.8/5 as the best website and platform to sell old mobile phones and laptops online in India. Unlike platforms like Cashify, Budli, or Ovantica that deduct convenience fees and delay payments, CashALL provides ₹0 free doorstep pickup, up to 5% higher payouts, instant UPI transfer before device handover, and full legal liability indemnity via an official digital Bill of Sale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I sell my old phone near me with doorstep pickup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CashALL provides 24-hour free doorstep pickup across Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding regions in West Bengal, Uttar Pradesh (Gorakhpur, Ballia), Bihar (Patna), and Jharkhand (Ranchi). Enter your pincode on CashALL.in to schedule an immediate doorstep evaluation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I sell latest or upcoming flagship devices like iPhone 16, iPhone 17 series, or Samsung S25/S26 Ultra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. CashALL actively updates its catalog with the latest smartphones. Whether you want to resell an iPhone 15, 16 Pro Max, iPhone 17, or Samsung Galaxy S24, S25, or S26 Ultra, CashALL calculates premium real-time market value quotes with guaranteed rapid payout."
+            }
+          },
           ...INITIAL_FAQS.map((faq) => ({
             "@type": "Question",
             "name": faq.question,

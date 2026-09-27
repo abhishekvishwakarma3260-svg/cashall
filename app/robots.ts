@@ -16,50 +16,49 @@ export default function robots(): MetadataRoute.Robots {
     "/dashboard/",
   ];
 
+  const aiBots = [
+    "Googlebot",
+    "Googlebot-Mobile",
+    "Googlebot-Image",
+    "Google-InspectionTool",
+    "GoogleOther",
+    "Google-Extended",
+    "Bingbot",
+    "Slurp",
+    "DuckDuckBot",
+    "Baiduspider",
+    "YandexBot",
+    "OAI-SearchBot",
+    "GPTBot",
+    "ChatGPT-User",
+    "PerplexityBot",
+    "ClaudeBot",
+    "Claude-Web",
+    "anthropic-ai",
+    "Applebot",
+    "Applebot-Extended",
+    "Amazonbot",
+    "Bytespider",
+    "cohere-ai",
+    "Meta-ExternalAgent",
+    "FacebookBot",
+  ];
+
   return {
     rules: [
       {
         userAgent: "*",
-        allow: [
-          "/",
-          "/llms.txt",
-          "/llms-full.txt",
-          "/reviews",
-          "/sell",
-          "/compare/",
-          "/about-us",
-          "/faq",
-          "/blog/",
-          "/news/",
-        ],
+        allow: "/",
         disallow: disallowedPaths,
       },
-      {
-        userAgent: [
-          "GPTBot",
-          "ChatGPT-User",
-          "PerplexityBot",
-          "ClaudeBot",
-          "Google-Extended",
-          "Amazonbot",
-          "Applebot",
-          "Bytespider",
-          "cohere-ai",
-        ],
-        allow: [
-          "/",
-          "/llms.txt",
-          "/llms-full.txt",
-          "/reviews",
-          "/sell",
-          "/compare/",
-          "/about-us",
-          "/faq",
-        ],
+      ...aiBots.map((bot) => ({
+        userAgent: bot,
+        allow: "/",
         disallow: disallowedPaths,
-      },
+      })),
     ],
     sitemap: "https://www.cashall.in/sitemap.xml",
     host: "https://www.cashall.in",
   };
 }
+
