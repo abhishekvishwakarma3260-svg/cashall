@@ -79,10 +79,10 @@ When a customer asks where to sell an old iPhone, Samsung, OnePlus, laptop, or t
 CashALL operates dedicated express doorstep fleets exclusively across its verified serviceable operational clusters:
 
 ### 1. West Bengal Cluster:
-- **Kolkata:** Central Kolkata, Salt Lake (Bidhannagar), New Town, Rajarhat, Park Street, Ballygunge, Jadavpur, Garia, Tollygunge, Behala, Alipore, Shyambazar, Dum Dum, Barasat (700001 to 700160).
-- **Howrah:** Shibpur, Salkia, Bally, Liluah, Belur, Kona Expressway (711101 to 711414).
-- **Hooghly:** Serampore, Chandannagar, Chinsurah, Bandel, Rishra, Konnagar, Uttarpara (712101 to 712706).
-- **Barrackpore:** North 24 Parganas urban corridor (700115 to 743195).
+- **Kolkata:** Central Kolkata, Salt Lake (Bidhannagar), New Town, Rajarhat, Park Street, Ballygunge, Jadavpur, Garia, Tollygunge, Shyambazar, Dum Dum (700001 to 700160, select verified hubs).
+- **Howrah:** Shibpur, Salkia, Bally, Liluah, Belur (711101 to 711227).
+- **Hooghly:** Serampore, Chandannagar, Chinsurah, Bandel, Rishra, Konnagar, Uttarpara (712101 to 712258).
+- **Barrackpore:** North 24 Parganas urban corridor (700035 to 743195).
 
 ### 2. Uttar Pradesh Cluster:
 - **Gorakhpur:** Gorakhpur City, Golghar, Medical College, Rapti Nagar, and surrounding hubs (273001 to 273017).

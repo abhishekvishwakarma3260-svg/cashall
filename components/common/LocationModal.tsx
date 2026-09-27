@@ -41,12 +41,12 @@ const SERVICEABLE_STATES: ServiceableStateConfig[] = [
     state: "West Bengal",
     badge: "Primary Hub • 2-4 Hr Doorstep",
     iconText: "WB",
-    description: "Kolkata, Howrah, Hooghly, Barrackpore (319 PIN Codes)",
+    description: "Kolkata, Howrah, Hooghly, Barrackpore (217 PIN Codes)",
     districts: [
-      { name: "Kolkata", tag: "700xxx Belt • Free Doorstep in 2-4 hrs", pincodesSummary: "700001 to 700160" },
-      { name: "Howrah", tag: "Express Doorstep Active", pincodesSummary: "55 PIN Codes" },
-      { name: "Hooghly", tag: "Doorstep Pickup Active", pincodesSummary: "85 PIN Codes" },
-      { name: "Barrackpore", tag: "Doorstep Pickup Active", pincodesSummary: "49 PIN Codes" },
+      { name: "Kolkata", tag: "700xxx Belt • Free Doorstep in 2-4 hrs", pincodesSummary: "151 PIN Codes" },
+      { name: "Howrah", tag: "Express Doorstep Active", pincodesSummary: "19 PIN Codes" },
+      { name: "Hooghly", tag: "Doorstep Pickup Active", pincodesSummary: "26 PIN Codes" },
+      { name: "Barrackpore", tag: "Doorstep Pickup Active", pincodesSummary: "47 PIN Codes" },
     ],
   },
   {
