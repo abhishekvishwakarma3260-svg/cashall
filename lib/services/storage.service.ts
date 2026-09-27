@@ -2,11 +2,11 @@ import { createClient } from "@supabase/supabase-js";
 import { AppError } from "../utils/AppError";
 import { logger } from "../utils/logger";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "https://ipzvutzhvmtnybelwspw.supabase.co";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "https://vvivimdwycuseteduoqv.supabase.co";
 const rawServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const effectiveKey = (rawServiceKey && !rawServiceKey.includes("mock"))
   ? rawServiceKey
-  : (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlwenZ1dHpodm10bnliZWx3c3B3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkxMzE5ODIsImV4cCI6MjEwNDcwNzk4Mn0.q8pZFFC5iqQ6pGIoToYCTJN9CMU20a6TbuyvQuxeEZ8");
+  : (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ2aXZpbWR3eWN1c2V0ZWR1b3F2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA0OTgwNDYsImV4cCI6MjEwNjA3NDA0Nn0.mmnTcKmKDVWI_1bkdaibw6zcaeiLSKLU9OhnYPJRJeg");
 
 export const supabaseAdmin = createClient(supabaseUrl, effectiveKey, {
   auth: {

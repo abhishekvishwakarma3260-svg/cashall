@@ -12,7 +12,7 @@ const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 // Supabase IPv4 Transaction Pooler URL (Port 6543 handles high concurrent traffic via transaction pooling)
 const SUPABASE_IPV4_POOLER_URL =
-  "postgresql://postgres.ipzvutzhvmtnybelwspw:lleQ5bYxoaDiDm4T@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=5&pool_timeout=30&sslmode=require";
+  "postgresql://postgres.vvivimdwycuseteduoqv:AdigWdfW1rqDuaWf@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=5&pool_timeout=30&sslmode=require";
 
 // STRICT: NEVER use POSTGRES_URL_NON_POOLING (port 5432 session mode, max 15 clients).
 // Always prioritize pooled connection URLs (port 6543).
@@ -27,11 +27,12 @@ if (dbUrl.includes(":5432/")) {
   dbUrl = dbUrl.replace(":5432/", ":6543/");
 }
 
-// CRITICAL: Ensure we ALWAYS use the NEW Supabase project (ipzvutzhvmtnybelwspw) and NEVER the old project (jqysknhobtpcbyyltnfc)
+// CRITICAL: Ensure we ALWAYS use the NEW Supabase project (vvivimdwycuseteduoqv) and NEVER the old project
 if (
   !dbUrl ||
   dbUrl.includes("jqysknhobtpcbyyltnfc") ||
-  !dbUrl.includes("ipzvutzhvmtnybelwspw") ||
+  dbUrl.includes("ipzvutzhvmtnybelwspw") ||
+  !dbUrl.includes("vvivimdwycuseteduoqv") ||
   dbUrl.includes("localhost")
 ) {
   dbUrl = SUPABASE_IPV4_POOLER_URL;
