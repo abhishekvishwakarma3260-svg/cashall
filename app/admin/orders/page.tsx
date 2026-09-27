@@ -349,7 +349,9 @@ export default function AdminOrdersPage() {
             utr: transactionRef,
             createdAt: ord.createdAt,
             updatedAt: ord.updatedAt,
-            completedAt: ["COMPLETED", "PAID", "BILL_GENERATED"].includes(status) ? (ord.updatedAt || activePayment?.createdAt) : undefined,
+            completedAt: ["COMPLETED", "PAID", "BILL_GENERATED"].includes(status)
+              ? (activePayment?.createdAt || ord.qcReports?.[0]?.inspectedAt || ord.updatedAt)
+              : undefined,
             // ⬇ CRITICAL: pass through the actual customer assessment answers for QC modal
             selectedAnswersJson: ord.selectedAnswersJson || ord.quote?.selectedAnswersJson || null,
             breakdownJson: ord.breakdownJson || ord.quote?.breakdownJson || null,
