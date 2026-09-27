@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/sell-used-phone`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/sell-old-phone`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/sell/mobile`,
       lastModified: now,
       changeFrequency: "daily",

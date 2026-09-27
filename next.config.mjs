@@ -46,6 +46,26 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sell-my-phone',
+        destination: '/sell-used-phone',
+      },
+      {
+        source: '/sell-my-old-phone',
+        destination: '/sell-used-phone',
+      },
+      {
+        source: '/sell-old-mobile',
+        destination: '/sell-used-phone',
+      },
+      {
+        source: '/old-phone-sell',
+        destination: '/sell-used-phone',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
