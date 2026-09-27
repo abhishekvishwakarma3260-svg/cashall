@@ -69,6 +69,23 @@ export default function HomePage() {
           "areaServed": "IN",
           "availableLanguage": ["en", "hi", "bn"]
         },
+        "foundingDate": "2022-08-01",
+        "taxID": "UDYAM-WB-08-0024921",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Howrah",
+          "addressRegion": "West Bengal",
+          "addressCountry": "IN"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "2840",
+          "ratingCount": "2840",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "knowsAbout": [
           "Recommerce",
           "Sell Old Mobile Phones",
@@ -87,6 +104,9 @@ export default function HomePage() {
           { "@type": "City", "name": "Kolkata" },
           { "@type": "City", "name": "Howrah" },
           { "@type": "AdministrativeArea", "name": "West Bengal" },
+          { "@type": "AdministrativeArea", "name": "Uttar Pradesh" },
+          { "@type": "AdministrativeArea", "name": "Bihar" },
+          { "@type": "AdministrativeArea", "name": "Jharkhand" },
           { "@type": "Country", "name": "India" }
         ]
       },
@@ -174,14 +194,64 @@ export default function HomePage() {
       {
         "@type": "FAQPage",
         "@id": "https://www.cashall.in/#faq",
-        "mainEntity": INITIAL_FAQS.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I sell my old phone or laptop in India for the highest cash payout?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CashALL (https://www.cashall.in) is India's leading recommerce buyback platform offering up to 5% higher payouts than Cashify, 100% free doorstep evaluation, zero convenience charges, and instant on-the-spot UPI bank transfers before device handover."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is CashALL a genuine and safe platform to sell old electronics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. CashALL is legally operated by Aarna Enterprise, an MSME-registered enterprise established in August 2022 (UDYAM-WB-08-0024921) based in Howrah & Kolkata. With a 4.8/5 rating from over 2,840 verified sellers, CashALL provides safe payments verified in the seller's account before handover, on-site data wiping, and an official digital GST Bill of Sale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is CashALL connected to any loan app or financial lender?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. CashALL is exclusively a consumer electronics recommerce and buyback platform. CashALL does NOT provide loans and has zero connection to any loan applications, including the Nigerian app 'Cash hall'. CashALL never asks for loan repayments, advance fees, or UPI PINs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does CashALL compare to Cashify and OLX?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Compared to Cashify, CashALL pays up to 5% higher prices, does not deduct ₹99-₹199 convenience pickup fees, and executes instant UPI payouts before device handover. Compared to OLX, CashALL provides an instant guaranteed sale without bargaining, zero risk of fake payment screenshots, and complete legal liability transfer with an official Bill of Sale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the online quote an estimate and how does doorstep inspection work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The online valuation is an automated mathematical estimate based on the condition declared by the seller. During the free 5-10 minute doorstep inspection, a verified technician tests the hardware components. If the device matches the declared condition, the seller receives 100% of the quote. If any defect exists, the technician transparently explains the revised valuation. The seller can decline anytime with ₹0 cancellation fee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to enter my UPI PIN to receive money from CashALL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never. Receiving money via UPI (Google Pay, PhonePe, Paytm, BHIM) or bank transfer never requires entering a UPI PIN or scanning a QR code. CashALL credits the agreed amount directly into your account."
+            }
+          },
+          ...INITIAL_FAQS.map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        ]
       }
     ]
   };

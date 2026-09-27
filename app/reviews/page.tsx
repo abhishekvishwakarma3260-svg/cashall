@@ -461,6 +461,22 @@ function ReviewsPageContent() {
         </div>
       )}
 
+      {/* CRAWLER ACCESSIBLE VERIFIED REVIEWS ARCHIVE */}
+      <section className="max-w-7xl mx-auto px-4 py-8 border-t border-brand-border/40 text-xs text-gray-500">
+        <h2 className="text-sm font-bold text-brand-black mb-3">
+          CashALL Customer Feedback & Device Resale Highlights (Audited Ground Truth)
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {CUSTOMER_REVIEWS.slice(0, 9).map((rev) => (
+            <div key={rev.id} className="p-3 bg-white rounded-xl border border-gray-200">
+              <div className="font-bold text-brand-black">{rev.customerName} — {rev.deviceSold}</div>
+              <div className="text-[11px] text-gray-600 my-1">&quot;{rev.reviewText}&quot;</div>
+              <div className="text-[10px] text-gray-400 font-semibold">{rev.location} • ₹{rev.payoutAmount.toLocaleString("en-IN")} via {rev.payoutMethod} • {rev.rating}★ Verified</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

@@ -13,6 +13,8 @@ import {
   Globe2,
   ArrowRight,
   ShieldCheck,
+  Truck,
+  ArrowLeft,
 } from "lucide-react";
 import {
   SERVICEABLE_DISTRICTS,
@@ -26,79 +28,90 @@ interface LocationModalProps {
   onSelectLocation: (loc: { city: string; state: string; isServiceable?: boolean }) => void;
 }
 
-// Top Tier Serviceable States with their districts
+// Top Tier Serviceable States with direct field fleets
 interface ServiceableStateConfig {
   state: string;
   badge: string;
   districts: { name: string; tag: string }[];
   description: string;
   iconText: string;
+  popularPincodes: string;
 }
 
 const PRIMARY_STATES: ServiceableStateConfig[] = [
   {
     state: "West Bengal",
-    badge: "Primary Hub • Instant Doorstep",
+    badge: "Primary Hub • 2-4 Hr Doorstep",
     iconText: "WB",
     description: "Kolkata, Howrah, Hooghly, Barrackpore (319 PIN Codes)",
+    popularPincodes: "700001, 700091, 711101, 712201",
     districts: [
-      { name: "Kolkata", tag: "700xxx Belt • Free Doorstep" },
-      { name: "Howrah", tag: "Express Pickup Active" },
-      { name: "Hooghly", tag: "Doorstep Pickup Active" },
+      { name: "Kolkata", tag: "700xxx Belt • Free Doorstep in 2-4 hrs" },
+      { name: "Howrah", tag: "Express Doorstep Fleet Active" },
+      { name: "Hooghly", tag: "Doorstep Pickup Across District" },
       { name: "Barrackpore", tag: "Doorstep Pickup Active" },
     ],
   },
   {
     state: "Uttar Pradesh",
-    badge: "Doorstep Pickup Active",
+    badge: "Express Doorstep Hub",
     iconText: "UP",
     description: "Gorakhpur & Ballia Express Pickup Hubs",
+    popularPincodes: "273001, 273015, 277001",
     districts: [
-      { name: "Gorakhpur", tag: "Express Doorstep" },
-      { name: "Ballia", tag: "Doorstep Service" },
+      { name: "Gorakhpur", tag: "Express Doorstep (16 PIN Codes)" },
+      { name: "Ballia", tag: "Doorstep Pickup Hub" },
     ],
   },
   {
     state: "Bihar",
-    badge: "Doorstep Pickup Active",
+    badge: "Doorstep Service Active",
     iconText: "BR",
-    description: "Patna Central & Surrounding Districts",
+    description: "Patna Central & Surrounding Zones",
+    popularPincodes: "800001, 800003",
     districts: [
-      { name: "Patna", tag: "Express Doorstep" },
+      { name: "Patna", tag: "Express Doorstep Service" },
     ],
   },
   {
     state: "Jharkhand",
-    badge: "Doorstep Pickup Active",
+    badge: "Doorstep Service Active",
     iconText: "JH",
     description: "Ranchi City Express Pickup Hub",
+    popularPincodes: "834001, 834002, 834003",
     districts: [
-      { name: "Ranchi", tag: "Express Doorstep" },
+      { name: "Ranchi", tag: "Express Doorstep Service" },
     ],
   },
 ];
 
-const OTHER_INDIAN_STATES = [
-  "Delhi NCR",
-  "Maharashtra",
-  "Karnataka",
-  "Tamil Nadu",
-  "Telangana",
-  "Rajasthan",
-  "Gujarat",
-  "Punjab",
-  "Haryana",
-  "Madhya Pradesh",
-  "Kerala",
-  "Odisha",
-  "Assam",
-  "Andhra Pradesh",
-  "Chhattisgarh",
-  "Uttarakhand",
-  "Himachal Pradesh",
-  "Goa",
-  "Jammu & Kashmir",
-  "Other State / UT",
+const ALL_INDIAN_STATES = [
+  { name: "Delhi NCR", region: "North", majorCities: "New Delhi, Noida, Gurgaon" },
+  { name: "Maharashtra", region: "West", majorCities: "Mumbai, Pune, Nagpur" },
+  { name: "Karnataka", region: "South", majorCities: "Bengaluru, Mysuru, Mangalore" },
+  { name: "Tamil Nadu", region: "South", majorCities: "Chennai, Coimbatore, Madurai" },
+  { name: "Telangana", region: "South", majorCities: "Hyderabad, Warangal" },
+  { name: "Gujarat", region: "West", majorCities: "Ahmedabad, Surat, Vadodara" },
+  { name: "Rajasthan", region: "North", majorCities: "Jaipur, Jodhpur, Udaipur" },
+  { name: "Punjab", region: "North", majorCities: "Ludhiana, Amritsar, Chandigarh" },
+  { name: "Haryana", region: "North", majorCities: "Faridabad, Panipat, Ambala" },
+  { name: "Madhya Pradesh", region: "Central", majorCities: "Bhopal, Indore, Gwalior" },
+  { name: "Kerala", region: "South", majorCities: "Kochi, Thiruvananthapuram, Kozhikode" },
+  { name: "Odisha", region: "East", majorCities: "Bhubaneswar, Cuttack, Rourkela" },
+  { name: "Assam", region: "Northeast", majorCities: "Guwahati, Silchar, Dibrugarh" },
+  { name: "Andhra Pradesh", region: "South", majorCities: "Visakhapatnam, Vijayawada" },
+  { name: "Chhattisgarh", region: "Central", majorCities: "Raipur, Bilaspur, Bhilai" },
+  { name: "Uttarakhand", region: "North", majorCities: "Dehradun, Haridwar, Haldwani" },
+  { name: "Himachal Pradesh", region: "North", majorCities: "Shimla, Dharamshala, Solan" },
+  { name: "Goa", region: "West", majorCities: "Panaji, Margao, Vasco" },
+  { name: "Jammu & Kashmir", region: "North", majorCities: "Srinagar, Jammu" },
+  { name: "Tripura", region: "Northeast", majorCities: "Agartala" },
+  { name: "Meghalaya", region: "Northeast", majorCities: "Shillong" },
+  { name: "Manipur", region: "Northeast", majorCities: "Imphal" },
+  { name: "Nagaland", region: "Northeast", majorCities: "Kohima, Dimapur" },
+  { name: "Puducherry", region: "South", majorCities: "Puducherry" },
+  { name: "Chandigarh", region: "North", majorCities: "Chandigarh" },
+  { name: "Other State / UT", region: "All India", majorCities: "Pan India Courier" },
 ];
 
 export function LocationModal({
@@ -108,20 +121,16 @@ export function LocationModal({
   onSelectLocation,
 }: LocationModalProps) {
   const [search, setSearch] = useState("");
-  const [activeTab, setActiveTab] = useState<"serviceable" | "other">("serviceable");
-  const [expandedState, setExpandedState] = useState<string | null>("West Bengal");
+  const [selectedStateForDistricts, setSelectedStateForDistricts] = useState<ServiceableStateConfig | null>(null);
 
-  // Keep expanded state synced if user has a selection
+  // Sync state if already selected
   useEffect(() => {
     if (selectedLocation?.state) {
       const match = PRIMARY_STATES.find(
         (s) => s.state.toLowerCase() === selectedLocation.state.toLowerCase()
       );
-      if (match) {
-        setExpandedState(match.state);
-        setActiveTab("serviceable");
-      } else {
-        setActiveTab("other");
+      if (match && !selectedLocation.city) {
+        setSelectedStateForDistricts(match);
       }
     }
   }, [selectedLocation]);
@@ -145,14 +154,18 @@ export function LocationModal({
     return false;
   });
 
-  const filteredOther = OTHER_INDIAN_STATES.filter((st) => {
+  const filteredAllStates = ALL_INDIAN_STATES.filter((st) => {
     if (!query) return true;
-    return st.toLowerCase().includes(query);
+    return (
+      st.name.toLowerCase().includes(query) ||
+      st.majorCities.toLowerCase().includes(query) ||
+      st.region.toLowerCase().includes(query)
+    );
   });
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-3 sm:p-4 animate-fadeIn">
-      <div className="bg-[#111111] border-2 border-brand-yellow/30 rounded-3xl w-full max-w-xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] text-white">
+      <div className="bg-[#111111] border-2 border-brand-yellow/40 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] text-white">
         
         {/* MODAL HEADER */}
         <div className="p-5 sm:p-6 border-b border-neutral-800 bg-neutral-900/95 flex items-start justify-between relative">
@@ -161,16 +174,20 @@ export function LocationModal({
               <MapPin className="w-6 h-6 animate-pulse" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <h3 className="text-lg sm:text-xl font-black text-white leading-tight">
-                  Select Your State & City
+                  {selectedStateForDistricts
+                    ? `Select Your City in ${selectedStateForDistricts.state}`
+                    : "Select Your State / अपना राज्य चुनें"}
                 </h3>
-                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-brand-yellow text-brand-black px-2 py-0.5 rounded-full font-mono">
-                  Doorstep Pickup
+                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-brand-yellow text-brand-black px-2.5 py-0.5 rounded-full font-mono">
+                  Instant Cash Doorstep
                 </span>
               </div>
-              <p className="text-xs text-gray-400 mt-1">
-                Choose your location to check doorstep service & get accurate instant valuation
+              <p className="text-xs text-gray-300 mt-1">
+                {selectedStateForDistricts
+                  ? `Choose your city for free 2-4 hour doorstep pickup & instant payment.`
+                  : "Please choose your state to view live cash valuations & free doorstep pickup in your area."}
               </p>
             </div>
           </div>
@@ -184,31 +201,51 @@ export function LocationModal({
           </button>
         </div>
 
-        {/* PIN CODE / LOCATION QUICK SEARCH BAR */}
-        <div className="p-4 border-b border-neutral-800 bg-[#161616]">
-          <div className="relative">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-yellow" />
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Enter 6-digit PIN code (e.g. 700001) or state / city..."
-              className="w-full pl-10 pr-4 py-3 text-xs sm:text-sm font-semibold bg-neutral-900 border border-neutral-700 text-white rounded-xl focus:outline-none focus:border-brand-yellow transition-all placeholder:text-gray-500"
-              autoFocus
-            />
-            {search && (
-              <button
-                onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xs"
-              >
-                Clear
-              </button>
-            )}
+        {/* BACK BUTTON IF IN DISTRICT SELECTION */}
+        {selectedStateForDistricts && (
+          <div className="px-5 py-2.5 bg-neutral-900/60 border-b border-neutral-800 flex items-center justify-between">
+            <button
+              onClick={() => setSelectedStateForDistricts(null)}
+              className="flex items-center gap-1.5 text-xs font-bold text-brand-yellow hover:text-brand-yellowHover transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" /> &larr; Back to All States
+            </button>
+            <button
+              onClick={() => handleSelect(selectedStateForDistricts.districts[0].name, selectedStateForDistricts.state, true)}
+              className="text-xs font-bold text-gray-300 hover:text-white underline"
+            >
+              Continue with {selectedStateForDistricts.state}
+            </button>
           </div>
-        </div>
+        )}
+
+        {/* SEARCH BAR (PIN CODE OR STATE / CITY) */}
+        {!selectedStateForDistricts && (
+          <div className="p-4 border-b border-neutral-800 bg-[#161616]">
+            <div className="relative">
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-yellow" />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search State, City or enter 6-digit PIN code (e.g. 700001, 273001, 834001, 110001)..."
+                className="w-full pl-10 pr-16 py-3 text-xs sm:text-sm font-semibold bg-neutral-900 border border-neutral-700 text-white rounded-xl focus:outline-none focus:border-brand-yellow transition-all placeholder:text-gray-500"
+                autoFocus
+              />
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xs font-bold px-2 py-1 bg-neutral-800 rounded-md"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* PINCODE MATCH BANNER */}
-        {isPinQuery && (
+        {isPinQuery && !selectedStateForDistricts && (
           <div className="px-5 pt-3">
             {pinMatch ? (
               <div className="bg-emerald-500/10 border-2 border-emerald-500/50 rounded-2xl p-4 flex items-center justify-between animate-fadeIn">
@@ -219,7 +256,7 @@ export function LocationModal({
                   <div className="text-sm font-black text-white mt-0.5">
                     {pinMatch.city}{pinMatch.locality ? ` (${pinMatch.locality})` : ""}, {pinMatch.state}
                   </div>
-                  <div className="text-[11px] text-gray-400 mt-0.5">Free doorstep pickup available within 24 hours</div>
+                  <div className="text-[11px] text-gray-400 mt-0.5">Free doorstep pickup available within 2-4 hours</div>
                 </div>
                 <button
                   type="button"
@@ -234,197 +271,186 @@ export function LocationModal({
                 <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block font-bold">PIN Code {query} is outside our direct pickup hubs</strong>
-                  <span>Please choose from our active serviceable states below or select your state to check courier service.</span>
+                  <span>You can still get an instant online price and schedule insured courier pickup across India. Please select your State below.</span>
                 </div>
               </div>
             )}
           </div>
         )}
 
-        {/* TABS: SERVICEABLE STATES vs OTHER STATES */}
-        <div className="flex items-center px-5 pt-3 border-b border-neutral-800 gap-2 bg-[#111111]">
-          <button
-            type="button"
-            onClick={() => setActiveTab("serviceable")}
-            className={`pb-3 text-xs sm:text-sm font-black transition-all border-b-2 flex items-center gap-2 ${
-              activeTab === "serviceable"
-                ? "border-brand-yellow text-brand-yellow"
-                : "border-transparent text-gray-400 hover:text-white"
-            }`}
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>Active Doorstep States ({PRIMARY_STATES.length})</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab("other")}
-            className={`pb-3 text-xs sm:text-sm font-black transition-all border-b-2 flex items-center gap-2 ${
-              activeTab === "other"
-                ? "border-brand-yellow text-brand-yellow"
-                : "border-transparent text-gray-400 hover:text-white"
-            }`}
-          >
-            <Globe2 className="w-4 h-4" />
-            <span>All Other States</span>
-          </button>
-        </div>
-
         {/* CONTENT LIST */}
-        <div className="p-4 sm:p-5 flex-grow overflow-y-auto space-y-3.5 custom-scrollbar">
-          
-          {activeTab === "serviceable" ? (
-            <div className="space-y-3">
-              <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-1 flex items-center justify-between">
-                <span>Select Your State & City</span>
-                <span className="text-brand-yellow text-[10px] font-extrabold flex items-center gap-1">
-                  <ShieldCheck className="w-3 h-3" /> Free Doorstep Inspection
+        <div className="p-4 sm:p-5 flex-grow overflow-y-auto space-y-4 custom-scrollbar">
+
+          {/* IF STATE SELECTED: DISTRICT DRILL-DOWN */}
+          {selectedStateForDistricts ? (
+            <div className="space-y-3 animate-fadeIn">
+              <div className="text-xs font-bold text-gray-400 uppercase tracking-wider px-1 flex items-center justify-between">
+                <span>Select Your District / City in {selectedStateForDistricts.state}</span>
+                <span className="text-brand-yellow text-[11px] font-extrabold flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5" /> 100% Free Doorstep Inspection
                 </span>
               </div>
 
-              {filteredPrimary.map((stConfig) => {
-                const isStateSelected = selectedLocation?.state?.toLowerCase() === stConfig.state.toLowerCase();
-                const isExpanded = expandedState === stConfig.state;
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {selectedStateForDistricts.districts.map((dist) => {
+                  const isDistSelected =
+                    selectedLocation?.city?.toLowerCase() === dist.name.toLowerCase() &&
+                    selectedLocation?.state?.toLowerCase() === selectedStateForDistricts.state.toLowerCase();
 
-                return (
-                  <div
-                    key={stConfig.state}
-                    className={`rounded-2xl border transition-all overflow-hidden ${
-                      isStateSelected
-                        ? "bg-neutral-900/90 border-brand-yellow shadow-yellowGlow/20"
-                        : "bg-neutral-900/60 border-neutral-800 hover:border-neutral-700"
-                    }`}
-                  >
-                    {/* STATE CARD HEADER */}
-                    <div
-                      onClick={() => setExpandedState(isExpanded ? null : stConfig.state)}
-                      className="p-4 flex items-center justify-between cursor-pointer hover:bg-neutral-800/40 transition-colors"
-                    >
-                      <div className="flex items-center gap-3.5">
-                        <div
-                          className={`w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm border shrink-0 transition-colors ${
-                            isStateSelected
-                              ? "bg-brand-yellow text-brand-black border-brand-yellow shadow-sm"
-                              : "bg-neutral-800 text-brand-yellow border-neutral-700"
-                          }`}
-                        >
-                          {stConfig.iconText}
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-base font-black text-white">{stConfig.state}</span>
-                            <span className="text-[10px] font-extrabold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">
-                              Active
-                            </span>
-                          </div>
-                          <div className="text-xs text-gray-400 font-medium mt-0.5">
-                            {stConfig.description}
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            // Quick select primary city
-                            handleSelect(stConfig.districts[0].name, stConfig.state, true);
-                          }}
-                          className="hidden sm:inline-flex px-3 py-1.5 bg-neutral-800 hover:bg-brand-yellow hover:text-brand-black text-xs font-bold text-gray-200 rounded-xl transition-all border border-neutral-700"
-                        >
-                          Select {stConfig.districts[0].name}
-                        </button>
-                        <ChevronRight
-                          className={`w-5 h-5 text-gray-400 transition-transform ${
-                            isExpanded ? "rotate-90 text-brand-yellow" : ""
-                          }`}
-                        />
-                      </div>
-                    </div>
-
-                    {/* EXPANDABLE DISTRICT / CITY LIST */}
-                    {isExpanded && (
-                      <div className="p-3 bg-black/40 border-t border-neutral-800 grid grid-cols-1 sm:grid-cols-2 gap-2 animate-fadeIn">
-                        {stConfig.districts.map((dist) => {
-                          const isDistSelected =
-                            selectedLocation?.city?.toLowerCase() === dist.name.toLowerCase() &&
-                            selectedLocation?.state?.toLowerCase() === stConfig.state.toLowerCase();
-
-                          return (
-                            <button
-                              key={dist.name}
-                              type="button"
-                              onClick={() => handleSelect(dist.name, stConfig.state, true)}
-                              className={`p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
-                                isDistSelected
-                                  ? "bg-brand-yellow text-brand-black border-brand-yellow font-black shadow-sm"
-                                  : "bg-neutral-850 hover:bg-neutral-800 border-neutral-800 text-gray-200 hover:border-brand-yellow/50"
-                              }`}
-                            >
-                              <div>
-                                <div className={`text-xs font-extrabold ${isDistSelected ? "text-brand-black" : "text-white"}`}>
-                                  {dist.name}
-                                </div>
-                                <div className={`text-[10px] ${isDistSelected ? "text-neutral-800" : "text-gray-400"}`}>
-                                  {dist.tag}
-                                </div>
-                              </div>
-                              {isDistSelected ? (
-                                <Check className="w-4 h-4 text-brand-black shrink-0" />
-                              ) : (
-                                <ArrowRight className="w-3.5 h-3.5 text-gray-500 shrink-0" />
-                              )}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            /* ALL OTHER STATES */
-            <div className="space-y-3">
-              <div className="p-3.5 bg-blue-500/10 border border-blue-500/30 rounded-2xl text-xs text-blue-300 flex items-start gap-2.5">
-                <Globe2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white block font-bold">Outside Primary Hubs</strong>
-                  <span>You can still get instant valuations & prices! Doorstep pickup is expanding rapidly across India.</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {filteredOther.map((st) => {
-                  const isSelected = selectedLocation?.state?.toLowerCase() === st.toLowerCase();
                   return (
                     <button
-                      key={st}
+                      key={dist.name}
                       type="button"
-                      onClick={() => handleSelect(st, st, false)}
-                      className={`p-3 rounded-xl border text-left transition-all flex items-center justify-between ${
-                        isSelected
-                          ? "bg-brand-yellow text-brand-black border-brand-yellow font-black shadow-sm"
-                          : "bg-neutral-900 border-neutral-800 text-gray-300 hover:bg-neutral-850 hover:border-neutral-700 hover:text-white"
+                      onClick={() => handleSelect(dist.name, selectedStateForDistricts.state, true)}
+                      className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all ${
+                        isDistSelected
+                          ? "bg-brand-yellow text-brand-black border-brand-yellow font-black shadow-lg"
+                          : "bg-neutral-900 hover:bg-neutral-800 border-neutral-800 text-gray-200 hover:border-brand-yellow/60"
                       }`}
                     >
-                      <span className="text-xs font-bold truncate">{st}</span>
-                      {isSelected ? (
-                        <Check className="w-3.5 h-3.5 text-brand-black shrink-0" />
-                      ) : null}
+                      <div>
+                        <div className={`text-sm font-extrabold ${isDistSelected ? "text-brand-black" : "text-white"}`}>
+                          {dist.name}
+                        </div>
+                        <div className={`text-xs mt-0.5 ${isDistSelected ? "text-neutral-800" : "text-gray-400"}`}>
+                          {dist.tag}
+                        </div>
+                      </div>
+                      {isDistSelected ? (
+                        <Check className="w-5 h-5 text-brand-black shrink-0" />
+                      ) : (
+                        <div className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center shrink-0 text-brand-yellow">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      )}
                     </button>
                   );
                 })}
               </div>
+
+              {/* OPTION TO SELECT WHOLE STATE */}
+              <div className="pt-2">
+                <button
+                  type="button"
+                  onClick={() => handleSelect(selectedStateForDistricts.districts[0].name, selectedStateForDistricts.state, true)}
+                  className="w-full py-3 px-4 rounded-xl border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-bold text-gray-300 hover:text-white flex items-center justify-center gap-2"
+                >
+                  <MapPin className="w-4 h-4 text-brand-yellow" />
+                  Select &quot;{selectedStateForDistricts.state} (General)&quot;
+                </button>
+              </div>
             </div>
+          ) : (
+            /* STATE SELECTION FLOW */
+            <>
+              {/* SECTION 1: PRIMARY DOORSTEP PICKUP STATES */}
+              <div className="space-y-2.5">
+                <div className="text-xs font-black text-brand-yellow uppercase tracking-wider px-1 flex items-center justify-between">
+                  <span className="flex items-center gap-1.5">
+                    <Truck className="w-3.5 h-3.5" /> Top Doorstep Pickup States (Instant 2-4 Hr Fleets)
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                    Live Fleets Active
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {filteredPrimary.map((stConfig) => {
+                    const isStateSelected = selectedLocation?.state?.toLowerCase() === stConfig.state.toLowerCase();
+
+                    return (
+                      <div
+                        key={stConfig.state}
+                        onClick={() => setSelectedStateForDistricts(stConfig)}
+                        className={`p-3.5 sm:p-4 rounded-2xl border transition-all cursor-pointer flex items-center justify-between ${
+                          isStateSelected
+                            ? "bg-brand-yellow/10 border-brand-yellow shadow-yellowGlow/20"
+                            : "bg-neutral-900 hover:bg-neutral-850 border-neutral-800 hover:border-brand-yellow/50"
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm border shrink-0 ${
+                              isStateSelected
+                                ? "bg-brand-yellow text-brand-black border-brand-yellow"
+                                : "bg-neutral-800 text-brand-yellow border-neutral-700"
+                            }`}
+                          >
+                            {stConfig.iconText}
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-black text-white">{stConfig.state}</span>
+                              <span className="text-[9px] font-black bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">
+                                Active
+                              </span>
+                            </div>
+                            <div className="text-[11px] text-gray-400 line-clamp-1 mt-0.5">
+                              {stConfig.description}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-1 text-brand-yellow shrink-0">
+                          <ChevronRight className="w-5 h-5" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* SECTION 2: ALL OTHER INDIAN STATES */}
+              <div className="space-y-2.5 pt-2">
+                <div className="text-xs font-bold text-gray-400 uppercase tracking-wider px-1 flex items-center justify-between">
+                  <span className="flex items-center gap-1.5">
+                    <Globe2 className="w-3.5 h-3.5 text-blue-400" /> All Other Indian States & UTs (Pan-India Valuation)
+                  </span>
+                  <span className="text-[10px] text-gray-500">
+                    Instant Online Price Guaranteed
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {filteredAllStates.map((st) => {
+                    const isSelected = selectedLocation?.state?.toLowerCase() === st.name.toLowerCase();
+
+                    return (
+                      <button
+                        key={st.name}
+                        type="button"
+                        onClick={() => handleSelect(st.majorCities.split(",")[0].trim(), st.name, false)}
+                        className={`p-3 rounded-xl border text-left transition-all flex items-center justify-between ${
+                          isSelected
+                            ? "bg-brand-yellow text-brand-black border-brand-yellow font-black shadow-sm"
+                            : "bg-neutral-900 border-neutral-800 text-gray-300 hover:bg-neutral-850 hover:border-neutral-700 hover:text-white"
+                        }`}
+                      >
+                        <div className="truncate pr-1">
+                          <div className="text-xs font-bold truncate">{st.name}</div>
+                          <div className={`text-[10px] truncate ${isSelected ? "text-neutral-800" : "text-gray-500"}`}>
+                            {st.majorCities.split(",")[0]}
+                          </div>
+                        </div>
+                        {isSelected ? (
+                          <Check className="w-4 h-4 text-brand-black shrink-0" />
+                        ) : (
+                          <ChevronRight className="w-3.5 h-3.5 text-gray-500 shrink-0" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
           )}
 
         </div>
 
         {/* MODAL FOOTER */}
-        <div className="p-4 border-t border-neutral-800 bg-neutral-900/90 flex items-center justify-between text-xs text-gray-400">
+        <div className="p-4 border-t border-neutral-800 bg-neutral-900/95 flex items-center justify-between text-xs text-gray-400">
           <div className="flex items-center gap-1.5">
-            <span className="text-gray-500">Selected:</span>
+            <span className="text-gray-500">Current Location:</span>
             <strong className="text-brand-yellow">
               {selectedLocation
                 ? `${selectedLocation.city}, ${selectedLocation.state}`

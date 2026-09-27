@@ -5,6 +5,8 @@ import { DeviceSearch } from "./DeviceSearch";
 import { AdCarousel } from "./AdCarousel";
 import { ShieldCheck, Truck, Zap, Lock } from "lucide-react";
 
+import { HeroLocationBar } from "./HeroLocationBar";
+
 export function Hero() {
   return (
     <section className="relative bg-brand-black text-white overflow-hidden pt-10 pb-20 md:py-24 border-b border-neutral-900">
@@ -27,6 +29,9 @@ export function Hero() {
           <p className="text-xs sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
             Get an instant estimated price for your mobile phone, laptop, or tablet with CashALL. Enjoy fast doorstep pickup and secure payment.
           </p>
+
+          {/* STATE SELECTION BAR */}
+          <HeroLocationBar />
 
           {/* FULLY VISIBLE ADVERTISEMENT AUTO SIDE-SCROLL CAROUSEL RIGHT AFTER HEADING & SUBTITLE */}
           <div className="pt-2">

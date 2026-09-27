@@ -276,6 +276,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Knowledge Base" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Knowledge Reference" />
       </head>
       <body className="bg-brand-bg text-brand-black min-h-screen font-sans antialiased">
         <Script
