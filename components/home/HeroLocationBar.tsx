@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MapPin, ChevronDown, Check, Sparkles } from "lucide-react";
+import { MapPin, ChevronDown, Check } from "lucide-react";
 import { LocationModal } from "@/components/common/LocationModal";
 
-const TOP_STATES = [
+const SERVICEABLE_STATES = [
   { state: "West Bengal", city: "Kolkata", tag: "2-4 Hr Doorstep" },
   { state: "Uttar Pradesh", city: "Gorakhpur", tag: "Doorstep Hub" },
   { state: "Bihar", city: "Patna", tag: "Doorstep Hub" },
   { state: "Jharkhand", city: "Ranchi", tag: "Doorstep Hub" },
-  { state: "Delhi NCR", city: "New Delhi", tag: "Pan-India" },
-  { state: "Maharashtra", city: "Mumbai", tag: "Pan-India" },
 ];
 
 export function HeroLocationBar() {
@@ -65,9 +63,9 @@ export function HeroLocationBar() {
             </div>
           </div>
 
-          {/* QUICK STATE PILLS */}
+          {/* SERVICEABLE STATE PILLS */}
           <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-end w-full sm:w-auto">
-            {TOP_STATES.slice(0, 4).map((item) => {
+            {SERVICEABLE_STATES.map((item) => {
               const isSelected = selectedLoc?.state?.toLowerCase() === item.state.toLowerCase();
               return (
                 <button
@@ -76,7 +74,7 @@ export function HeroLocationBar() {
                   onClick={() => handleSelectQuickState(item)}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
                     isSelected
-                      ? "bg-brand-yellow text-brand-black shadow-sm"
+                      ? "bg-brand-yellow text-brand-black shadow-sm font-black"
                       : "bg-neutral-800 text-gray-300 hover:bg-neutral-750 hover:text-white border border-neutral-700/60"
                   }`}
                 >
@@ -91,7 +89,7 @@ export function HeroLocationBar() {
               onClick={() => setModalOpen(true)}
               className="px-2.5 py-1 rounded-lg text-xs font-bold bg-neutral-800 hover:bg-brand-yellow hover:text-brand-black text-brand-yellow border border-brand-yellow/40 transition-all flex items-center gap-1"
             >
-              <span>{selectedLoc ? "Change" : "All States"}</span>
+              <span>{selectedLoc ? "Change" : "Select City"}</span>
               <ChevronDown className="w-3 h-3" />
             </button>
           </div>
