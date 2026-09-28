@@ -41,11 +41,14 @@ export async function GET(req: NextRequest) {
     // Merge new DB reviews at the top, followed by existing verified reviews
     const allReviews = [...mappedDbReviews, ...CUSTOMER_REVIEWS];
 
-    return NextResponse.json({
-      success: true,
-      reviews: allReviews,
-      totalCount: allReviews.length,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        reviews: allReviews,
+        totalCount: allReviews.length,
+      },
+      { headers: { "Cache-Control": "public, s-maxage=600, stale-while-revalidate=3600" } }
+    );
   } catch (error: any) {
     return NextResponse.json(
       { success: false, error: error.message || "Failed to load reviews" },

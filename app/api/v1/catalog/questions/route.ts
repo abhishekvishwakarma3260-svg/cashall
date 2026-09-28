@@ -16,8 +16,11 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     orderBy: { sortOrder: "asc" },
   });
 
-  return NextResponse.json({
-    success: true,
-    data: questions,
-  });
+  return NextResponse.json(
+    {
+      success: true,
+      data: questions,
+    },
+    { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
+  );
 });

@@ -27,13 +27,16 @@ export const GET = apiWrapper(async (_req: NextRequest) => {
       cities: statesMap[stateName],
     }));
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        states,
-        rawAreas: areas,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          states,
+          rawAreas: areas,
+        },
       },
-    });
+      { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
+    );
   } catch (error) {
     // Store fallback
     const statesMap: Record<string, { city: string; pincode: string }[]> = {};
@@ -50,12 +53,15 @@ export const GET = apiWrapper(async (_req: NextRequest) => {
       cities: statesMap[stateName],
     }));
 
-    return NextResponse.json({
-      success: true,
-      data: {
-        states,
-        rawAreas: INITIAL_SERVICE_AREAS,
+    return NextResponse.json(
+      {
+        success: true,
+        data: {
+          states,
+          rawAreas: INITIAL_SERVICE_AREAS,
+        },
       },
-    });
+      { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
+    );
   }
 });

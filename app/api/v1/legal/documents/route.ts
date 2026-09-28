@@ -19,7 +19,10 @@ export async function GET(req: NextRequest) {
       types.map((t) => LegalDocumentService.getPublishedDocument(t))
     );
 
-    return NextResponse.json({ success: true, documents });
+    return NextResponse.json(
+      { success: true, documents },
+      { headers: { "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=604800" } }
+    );
   } catch (err: any) {
     // Fallback to static definitions if DB fails
     const types = Object.keys(DEFAULT_LEGAL_DOCUMENTS) as LegalDocType[];

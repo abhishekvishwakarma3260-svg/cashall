@@ -31,7 +31,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
 
     return NextResponse.json(
       { success: true, data: brand },
-      { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } }
+      { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } }
     );
   }
 
@@ -72,6 +72,6 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         popularModels,
       },
     },
-    { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } }
+    { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } }
   );
 });

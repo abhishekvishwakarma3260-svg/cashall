@@ -12,13 +12,29 @@ const nextConfig = {
     POSTGRES_PRISMA_URL: resolvedDbUrl,
     POSTGRES_URL: resolvedDbUrl,
   },
+  compress: true,
+  poweredByHeader: false,
   images: {
+    minimumCacheTTL: 2592000,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico|woff|woff2|ttf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [
