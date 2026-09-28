@@ -195,9 +195,33 @@ function getOrderCategory(ord: Order): "COMPLETED" | "CANCELLED" | "ASSIGNED" | 
   return "PENDING_TO_ASSIGN";
 }
 
+const FALLBACK_AGENTS: { id: string; name: string; phone: string }[] = [
+  { id: "7e4de44f-78b5-4b9f-a584-b59905612a96", name: "Hyder Ali", phone: "9874063573" },
+  { id: "480c9f9b-6d95-4633-b520-00d004b36cfd", name: "Md. Arshad", phone: "9062775880" },
+  { id: "dd64cc10-b026-4dcf-b94e-296936e1da04", name: "Gulrez Naushad", phone: "9361433238" },
+  { id: "89ea97e8-b93a-46ac-a0cc-3d7c12a0d36e", name: "Md. Imroz", phone: "7980347683" },
+  { id: "8cb7f7e4-e6eb-485c-b808-7574990054ea", name: "Shakti Thakur", phone: "9118770223" },
+  { id: "677e290a-65f3-4d48-b68a-cf6e5df5a009", name: "Sk. Wasim", phone: "8981436450" },
+  { id: "7ab7cdc4-b48b-420f-8ac0-e0576ef973aa", name: "Wasim Shirazi", phone: "8336856710" },
+  { id: "44db112c-788c-4d32-bab2-14b3f944d96b", name: "Ankit Gupta", phone: "8181908220" },
+  { id: "8398201a-73a3-49b1-a046-408d6b14c2e5", name: "Sadiq Sayyed", phone: "9942231841" },
+  { id: "31322342-16b9-472e-a828-b200f642f9c5", name: "Aryan Jaiswal", phone: "9214699841" },
+  { id: "900524b2-76c9-4140-985c-e2a31407e368", name: "Aman Mishra", phone: "9330933661" },
+  { id: "dabca36c-016b-44b2-b950-0c17b8d2b32f", name: "Rahul Roy", phone: "9804433201" },
+  { id: "d5eade25-1d7a-4ecc-8a55-8f9ae3511a09", name: "Kaushal Chaudhary", phone: "8100508720" },
+  { id: "5f29038c-c961-4d48-ae24-533ef5231c4d", name: "Ajeet Chauhan", phone: "8563911392" },
+  { id: "a694b920-f033-43f3-8392-df6b74c74ec9", name: "Yash Jaiswal", phone: "7897554443" },
+  { id: "b5d81725-9a35-442a-be78-74dd256105f1", name: "Md. Samim Beg", phone: "8335937697" },
+  { id: "8d98d308-dd26-4467-9869-8badbb06323f", name: "Asgar Hossain", phone: "6289627356" },
+  { id: "a7dbf769-5fd7-44ec-9da4-00cbaa56c6c7", name: "Banti Das", phone: "9903049346" },
+  { id: "e669a2bf-29c0-4605-90b8-79f2e4a953a8", name: "Aayush", phone: "9368157367" },
+  { id: "09d07459-591e-476d-8215-49e210adc50f", name: "sangeet shaw", phone: "6289477287" },
+  { id: "72bd6930-dd72-4b49-8720-93f6deddca5f", name: "Vickey Kumar", phone: "9681139883" },
+];
+
 export default function AdminOrdersPage() {
   const [orders, setOrders] = useState<Order[]>([]);
-  const [availableAgents, setAvailableAgents] = useState<{ id: string; name: string; phone: string }[]>([]);
+  const [availableAgents, setAvailableAgents] = useState<{ id: string; name: string; phone: string }[]>(FALLBACK_AGENTS);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [actionLoading, setActionLoading] = useState<string | null>(null);
@@ -332,9 +356,11 @@ export default function AdminOrdersPage() {
                  ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()
                 : "Mobile Device"),
             pickupDate: ord.pickupDate || "—",
-            pickupTimeSlot: ord.pickupTimeSlot || "—",
-            estimatedPrice: ord.quote?.estimatedPrice ?? 0,
-            revisedPrice: ord.finalPrice ?? ord.qcReports?.[0]?.revisedPrice ?? ord.revisedPrice ?? null,
+            quotedPrice: ord.quotedPrice ?? ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0,
+            estimatedPrice: ord.quotedPrice ?? ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0,
+            requotedPrice: ord.requotedPrice ?? ord.qcReports?.[0]?.revisedPrice ?? ord.revisedPrice ?? ord.quotedPrice ?? 0,
+            revisedPrice: ord.requotedPrice ?? ord.qcReports?.[0]?.revisedPrice ?? ord.revisedPrice ?? ord.quotedPrice ?? 0,
+            finalPrice: ord.finalPrice ?? ord.payments?.[0]?.amount ?? ord.requotedPrice ?? ord.revisedPrice ?? ord.quotedPrice ?? 0,
             status,
             identityStatus: ord.identityVerifications?.[0]?.status || "PENDING",
             imeiStatus: ord.imeiRecords?.length ? "VERIFIED" : (ord.imeiVerifications?.[0]?.status || "PENDING"),
@@ -476,9 +502,12 @@ export default function AdminOrdersPage() {
 
   const fetchAvailableAgents = useCallback(async () => {
     try {
-      const res = await fetch("/api/v1/admin/agents");
+      const token = getAdminToken();
+      const res = await fetch("/api/v1/admin/agents", {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      });
       const json = await res.json();
-      if (json.success && Array.isArray(json.agents)) {
+      if (json.success && Array.isArray(json.agents) && json.agents.length > 0) {
         setAvailableAgents(
           json.agents.map((a: any) => ({
             id: a.id,
@@ -486,9 +515,12 @@ export default function AdminOrdersPage() {
             phone: a.phone,
           }))
         );
+      } else {
+        setAvailableAgents(FALLBACK_AGENTS);
       }
     } catch (e) {
       console.error("Error loading agents dropdown list:", e);
+      setAvailableAgents(FALLBACK_AGENTS);
     }
   }, []);
 

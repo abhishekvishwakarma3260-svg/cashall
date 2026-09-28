@@ -139,9 +139,18 @@ export default function SupportDashboardPage() {
     setLoading(true);
     setError("");
     try {
+      let token = "";
+      if (typeof window !== "undefined") {
+        try {
+          const session = JSON.parse(localStorage.getItem("cashall_support_session") || "{}");
+          token = session?.token || "";
+        } catch {}
+      }
+      const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+
       const [quotesRes, callsRes] = await Promise.all([
-        fetch("/api/v1/admin/quotes?limit=1000"),
-        fetch("/api/v1/support/calls"),
+        fetch("/api/v1/admin/quotes?limit=1000", { headers }),
+        fetch("/api/v1/support/calls", { headers }),
       ]);
 
       const quotesJson = await quotesRes.json();
@@ -301,12 +310,15 @@ export default function SupportDashboardPage() {
   };
 
   const totalQuotesCount = quotes.length;
-  const pendingLeadsCount = quotes.filter((q) => q.status.includes("UNCOMPLETED")).length;
+  const isPendingLead = (q: QuoteLead) =>
+    q.status.includes("UNCOMPLETED") || q.status === "ACTIVE" || q.status === "PENDING";
+
+  const pendingLeadsCount = quotes.filter(isPendingLead).length;
   const orderedCount = quotes.filter((q) => q.status === "ORDERED" || q.status === "CONVERTED").length;
   const completedCount = quotes.filter((q) => q.status === "COMPLETED").length;
 
   const filteredQuotes = quotes.filter((q) => {
-    if (quoteStatusFilter === "PENDING" && !q.status.includes("UNCOMPLETED")) return false;
+    if (quoteStatusFilter === "PENDING" && !isPendingLead(q)) return false;
     if (quoteStatusFilter === "ORDERED" && q.status !== "ORDERED" && q.status !== "CONVERTED") return false;
     if (quoteStatusFilter === "COMPLETED" && q.status !== "COMPLETED") return false;
 

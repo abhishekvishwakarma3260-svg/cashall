@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 export const POST = apiWrapper(async (req: NextRequest, { params }: { params: { id: string } }) => {
   const user = await verifyAuthToken(req);
-  requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+  requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER", "SUPPORT", "CALLER", "STAFF", "OPERATOR"], user.role);
 
   const rawId = params.id ? decodeURIComponent(params.id).trim() : "";
   const body = await req.json().catch(() => ({}));
