@@ -67,3 +67,6 @@ cashall-*.json
 *serviceaccount*.json
 
 
+
+.vercel
+.env*

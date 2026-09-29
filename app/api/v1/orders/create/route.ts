@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db";
 import { WhatsAppService } from "@/lib/services/whatsapp.service";
 import { logger } from "@/lib/utils/logger";
 import { cleanDeviceName } from "@/lib/device";
-import { isPincodeServiced, getPincodeDetails, SERVICEABLE_DISTRICTS } from "@/lib/serviceability";
+import { isPincodeServiced, getPincodeDetails, SERVICEABLE_DISTRICTS, getStateFromPincode } from "@/lib/serviceability";
 import {
   extractClientMetadata,
   sendServerLeadEvent,
@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
 
     const pinDetails = getPincodeDetails(pincode);
     const city = data.city ? String(data.city).trim() : (pinDetails?.city || "Kolkata");
-    const state = data.state ? String(data.state).trim() : (pinDetails?.state || "West Bengal");
+    const state = data.state ? String(data.state).trim() : (pinDetails?.state || getStateFromPincode(pincode) || "West Bengal");
     const pickupDate = getRecordedPickupDate(data.pickupDate || "Tomorrow");
     const pickupTimeSlot = data.pickupTimeSlot ? String(data.pickupTimeSlot).trim() : "10 AM - 1 PM";
     const deviceName = cleanDeviceName(data.deviceName ? String(data.deviceName).trim() : "Customer Mobile Device");
