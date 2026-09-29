@@ -23,6 +23,7 @@ import {
   Mail,
   Send,
 } from "lucide-react";
+import { getRecordedPickupDate, getPickupDatePresets } from "@/lib/utils/pickup-date";
 import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 interface QuoteLead {
@@ -86,7 +87,7 @@ export default function SupportDashboardPage() {
     line2: "Near Liluah Railway Station",
     state: "West Bengal",
     pincode: "711203",
-    pickupDate: "Tomorrow",
+    pickupDate: getRecordedPickupDate("Tomorrow"),
     pickupTimeSlot: "10 AM - 1 PM",
     agentNotes: "Confirmed and booked by Support Agent over phone.",
   });
@@ -891,9 +892,11 @@ export default function SupportDashboardPage() {
                     onChange={(e) => setConvertForm({ ...convertForm, pickupDate: e.target.value })}
                     className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
                   >
-                    <option value="Today">Today</option>
-                    <option value="Tomorrow">Tomorrow</option>
-                    <option value="Day After Tomorrow">Day After Tomorrow</option>
+                    {getPickupDatePresets().map((p) => (
+                      <option key={p.key} value={p.value}>
+                        {p.value}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div>

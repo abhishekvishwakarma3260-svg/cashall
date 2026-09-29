@@ -11,6 +11,7 @@ import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { OrderData, QuoteData } from "@/lib/store";
 import { User, Smartphone, ArrowRight, Clock, UserCheck, Phone, XCircle, Ban, AlertTriangle, FileText, ClipboardList } from "lucide-react";
 import { cleanDeviceName } from "@/lib/device";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 export default function CustomerAccountPage() {
   const [user, setUser] = useState<{ name: string; phone: string } | null>(null);
@@ -305,7 +306,7 @@ export default function CustomerAccountPage() {
                         <div className="text-xs text-brand-muted flex flex-wrap items-center gap-3">
                           <span className="flex items-center gap-1">
                             <Clock className="w-3.5 h-3.5 text-gray-400" />
-                            <span>Pickup: {ord.pickupDate} ({ord.pickupTimeSlot})</span>
+                            <span>Pickup: {formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}</span>
                           </span>
                         </div>
 

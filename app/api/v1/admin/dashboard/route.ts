@@ -45,6 +45,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     customerPhone: ord.user?.phone || "—",
     pickupDate: ord.pickupDate,
     pickupTimeSlot: ord.pickupTimeSlot,
+    createdAt: ord.createdAt,
     estimatedPrice: ord.quote?.estimatedPrice ?? 0,
     revisedPrice: ord.finalPrice ?? null,
     status: ord.status,

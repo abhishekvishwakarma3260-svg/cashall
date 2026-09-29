@@ -12,6 +12,7 @@ import { Modal } from "@/components/ui/Modal";
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { OrderData, INITIAL_VARIANTS, INITIAL_MODELS, INITIAL_BRANDS, INITIAL_ORDERS } from "@/lib/store";
 import { trackMetaCustomEvent } from "@/lib/analytics/meta";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 import {
   CheckCircle2,
   Clock,
@@ -383,7 +384,7 @@ export default function OrderTrackingPage() {
                 <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700 flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-bold uppercase text-gray-400 block">Scheduled Window</span>
-                    <span className="font-extrabold text-white text-sm">{order.pickupDate} ({order.pickupTimeSlot})</span>
+                    <span className="font-extrabold text-white text-sm">{formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}</span>
                   </div>
                   <button
                     type="button"
@@ -409,7 +410,7 @@ export default function OrderTrackingPage() {
                 <div>
                   <h3 className="text-sm font-extrabold text-brand-black">Assigning Local Pickup Agent...</h3>
                   <p className="text-xs text-brand-muted mt-0.5">
-                    Scheduled for <strong className="text-black font-extrabold">{order.pickupDate} ({order.pickupTimeSlot})</strong> in PIN <strong className="text-black">{order.pincode}</strong>.
+                    Scheduled for <strong className="text-black font-extrabold">{formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}</strong> in PIN <strong className="text-black">{order.pincode}</strong>.
                   </p>
                 </div>
               </div>

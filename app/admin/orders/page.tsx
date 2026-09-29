@@ -43,6 +43,7 @@ import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { ReQuotationModal } from "@/components/admin/ReQuotationModal";
 import { RescheduleModal } from "@/components/common/RescheduleModal";
 import { formatAddress } from "@/lib/address";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 interface Order {
   id: string;
@@ -356,6 +357,7 @@ export default function AdminOrdersPage() {
                  ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()
                 : "Mobile Device"),
             pickupDate: ord.pickupDate || "—",
+            pickupTimeSlot: ord.pickupTimeSlot || ord.pickups?.[0]?.timeSlot || "10 AM - 1 PM",
             quotedPrice: ord.quotedPrice ?? ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0,
             estimatedPrice: ord.quotedPrice ?? ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0,
             requotedPrice: ord.requotedPrice ?? ord.qcReports?.[0]?.revisedPrice ?? ord.revisedPrice ?? ord.quotedPrice ?? 0,
@@ -418,7 +420,7 @@ export default function AdminOrdersPage() {
                 location: item.addressSummary || "Doorstep Address",
                 deviceName: item.deviceName || "Mobile Device",
                 pickupDate: item.pickupDate || "Scheduled",
-                pickupTimeSlot: item.pickupTimeSlot || "Standard Slot",
+                pickupTimeSlot: item.pickupTimeSlot || "10 AM - 1 PM",
                 estimatedPrice: item.revisedPrice || item.estimatedPrice || 0,
                 revisedPrice: item.revisedPrice || null,
                 status: item.status || "PICKUP_SCHEDULED",
@@ -454,7 +456,7 @@ export default function AdminOrdersPage() {
             orderNumber: cleanNum,
             title: "New Buyback Order Received",
             subtitle: `${ord.deviceName} • ₹${(ord.estimatedPrice || 0).toLocaleString("en-IN")}`,
-            details: `Customer: ${ord.customerName} (${ord.customerPhone}) • ${ord.location} • Slot: ${ord.pickupDate} ${ord.pickupTimeSlot}`,
+            details: `Customer: ${ord.customerName} (${ord.customerPhone}) • ${ord.location} • Slot: ${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}`,
             timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
             onView: () => setSearchQuery(cleanNum),
           });
@@ -1040,7 +1042,7 @@ export default function AdminOrdersPage() {
     const rows = targetOrders.map((ord) => [
       ord.orderNumber,
       ord.createdAt ? `"${new Date(ord.createdAt).toLocaleString("en-IN")}"` : "—",
-      `"${ord.pickupDate} (${ord.pickupTimeSlot})"`,
+      `"${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt).replace(/"/g, '""')}"`,
       ord.completedAt ? `"${new Date(ord.completedAt).toLocaleString("en-IN")}"` : "—",
       `"${(ord.customerName || "Customer").replace(/"/g, '""')}"`,
       ord.customerPhone || "—",
@@ -1386,7 +1388,7 @@ export default function AdminOrdersPage() {
 
                   <div className="flex items-center gap-1.5 text-xs font-semibold text-neutral-300">
                     <Calendar className="w-3.5 h-3.5 text-yellow-400" />
-                    <span>Pickup: {ord.pickupDate} ({ord.pickupTimeSlot})</span>
+                    <span>Pickup: {formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}</span>
                   </div>
 
                   {ord.completedAt && (

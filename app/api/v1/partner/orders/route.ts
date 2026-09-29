@@ -53,6 +53,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     addressText: formatAddress(p.order.address),
     pickupDate: p.order.pickupDate,
     pickupTimeSlot: p.order.pickupTimeSlot,
+    createdAt: p.order.createdAt,
     deviceName: `${p.order.quote.variant.model.brand.name} ${p.order.quote.variant.model.name}`,
     storage: p.order.quote.variant.storage,
     estimatedPrice: p.order.quote.estimatedPrice,

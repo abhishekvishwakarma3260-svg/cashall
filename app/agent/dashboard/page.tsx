@@ -42,6 +42,7 @@ import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
 import { playMelodiousChime } from "@/lib/utils/sound";
 import { SoundControlBadge } from "@/components/common/SoundControlBadge";
 import { LiveUpdateToast, LiveUpdateNotification } from "@/components/common/LiveUpdateToast";
+import { formatPickupDateTimeSlot, extractPickupTargetDate } from "@/lib/utils/pickup-date";
 
 type DateFilterType = "ALL" | "TODAY" | "TOMORROW" | "DAY_AFTER_TOMORROW";
 type StatusFilterType = "ALL" | "PENDING" | "COMPLETED" | "CANCELLED";
@@ -77,38 +78,17 @@ function getISTDateStrings() {
   };
 }
 
-function matchesPickupDate(orderDateStr: string | undefined, targetDateIso: string, isTodayCheck: boolean): boolean {
-  if (!orderDateStr) return false;
-  const raw = orderDateStr.trim().toLowerCase();
-
-  if (isTodayCheck && (raw === "today" || raw.includes("today"))) return true;
-  if (!isTodayCheck && raw.includes("tomorrow") && !raw.includes("day after")) return true;
-
-  if (raw.includes(targetDateIso)) return true;
-
-  try {
-    const parsed = new Date(orderDateStr);
-    if (!isNaN(parsed.getTime())) {
-      const parsedIso = new Intl.DateTimeFormat("en-CA", {
-        timeZone: "Asia/Kolkata",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      }).format(parsed);
-      if (parsedIso === targetDateIso) return true;
-    }
-  } catch {}
-
-  return false;
-}
-
 function getOrderDateBucket(
   ord: AgentOrder,
   dates: ReturnType<typeof getISTDateStrings>
 ): "TODAY" | "TOMORROW" | "DAY_AFTER_TOMORROW" | "OTHER" {
-  if (matchesPickupDate(ord.pickupDate, dates.today, true)) return "TODAY";
-  if (matchesPickupDate(ord.pickupDate, dates.tomorrow, false)) return "TOMORROW";
-  if (matchesPickupDate(ord.pickupDate, dates.dayAfterTomorrow, false)) return "DAY_AFTER_TOMORROW";
+  const target = extractPickupTargetDate(ord.pickupDate, ord.createdAt);
+  if (!target) return "OTHER";
+  const targetIso = `${target.year}-${String(target.month).padStart(2, "0")}-${String(target.day).padStart(2, "0")}`;
+
+  if (targetIso === dates.today) return "TODAY";
+  if (targetIso === dates.tomorrow) return "TOMORROW";
+  if (targetIso === dates.dayAfterTomorrow) return "DAY_AFTER_TOMORROW";
   return "OTHER";
 }
 
@@ -179,6 +159,7 @@ interface AgentOrder {
   urn?: string | null;
   paymentScreenshotUrl?: string | null;
   cancellationReason?: string | null;
+  createdAt?: string;
 }
 
 export default function AgentDashboardPage() {
@@ -323,7 +304,7 @@ export default function AgentDashboardPage() {
                   type: "update",
                   orderNumber: ord.orderNumber,
                   title: "Lead Status / Slot Updated",
-                  subtitle: `Status: ${ord.status.replace(/_/g, " ")} • Slot: ${ord.pickupDate} (${ord.pickupTimeSlot})`,
+                  subtitle: `Status: ${ord.status.replace(/_/g, " ")} • Slot: ${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}`,
                   details: `Customer: ${ord.customerName} • ${ord.deviceName}`,
                   timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
                   onView: () => setSearchQuery(ord.orderNumber),
@@ -971,7 +952,7 @@ export default function AgentDashboardPage() {
                       </div>
                       <div className="flex items-center gap-1.5 text-xs font-extrabold text-yellow-300 bg-yellow-950/50 border border-yellow-500/40 px-3 py-1.5 rounded-xl">
                         <Calendar className="w-4 h-4 text-yellow-400 shrink-0" />
-                        <span>Scheduled Visit: {ord.pickupDate} ({ord.pickupTimeSlot})</span>
+                        <span>Scheduled Visit: {formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}</span>
                       </div>
                     </div>
 
@@ -1346,7 +1327,7 @@ export default function AgentDashboardPage() {
               <div className="flex justify-between items-center text-xs">
                 <span className="text-neutral-400">Scheduled Visit:</span>
                 <span className="font-black text-yellow-400">
-                  {activeAlertLead.pickupDate} ({activeAlertLead.pickupTimeSlot})
+                  {formatPickupDateTimeSlot(activeAlertLead.pickupDate, activeAlertLead.pickupTimeSlot, activeAlertLead.createdAt)}
                 </span>
               </div>
               <div className="flex justify-between items-center text-xs">

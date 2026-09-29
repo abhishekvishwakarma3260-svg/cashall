@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
+import { formatPickupDateDisplay } from "@/lib/utils/pickup-date";
 
 export const dynamic = "force-dynamic";
 
@@ -122,8 +123,8 @@ export async function GET(req: NextRequest) {
         orderNumber: latestOrder.orderNumber,
         status: latestOrder.status,
         createdAt: latestOrder.createdAt,
-        pickupDate: latestOrder.pickupDate,
-        pickupTimeSlot: latestOrder.pickupTimeSlot,
+        pickupDate: formatPickupDateDisplay(latestOrder.pickupDate, latestOrder.createdAt),
+        pickupTimeSlot: latestOrder.pickupTimeSlot || "10 AM - 1 PM",
         quotedPrice: latestOrder.quote?.estimatedPrice || latestOrder.finalPrice || 0,
         customerName,
         customerPhone,

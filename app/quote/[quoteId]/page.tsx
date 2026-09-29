@@ -15,6 +15,7 @@ import {
   INITIAL_BRANDS,
 } from "@/lib/store";
 import { trackMetaStandardEvent } from "@/lib/analytics/meta";
+import { clearCrossUserDataOnSwitch } from "@/lib/utils/customer-storage";
 import {
   ShieldCheck,
   Truck,
@@ -238,6 +239,14 @@ export default function QuoteResultPage() {
     };
 
     if (typeof window !== "undefined") {
+      const prevUser = localStorage.getItem("cashall_user");
+      let prevPhone = "";
+      if (prevUser) {
+        try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+      }
+      if (!prevPhone || prevPhone.replace(/\D/g, "").slice(-10) !== clean) {
+        clearCrossUserDataOnSwitch(clean);
+      }
       localStorage.setItem("cashall_user", JSON.stringify(userObj));
       document.cookie = `cashall_user_phone=${clean}; path=/; max-age=31536000`;
     }

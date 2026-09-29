@@ -299,6 +299,8 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       deviceName,
       customerEmail,
       pincode,
+      pickupDate: ord.pickupDate || ord.pickups?.[0]?.date || "Scheduled",
+      pickupTimeSlot: ord.pickupTimeSlot || ord.pickups?.[0]?.timeSlot || "10 AM - 1 PM",
       assignedPartnerName: agentName,
       agentName,
       agentId: ord.agentId || null,

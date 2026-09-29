@@ -12,6 +12,7 @@ import {
 } from "@/lib/analytics/meta-server";
 import { formatAddress } from "@/lib/address";
 import { rateLimiter } from "@/lib/middlewares/security";
+import { getRecordedPickupDate } from "@/lib/utils/pickup-date";
 import { z } from "zod";
 
 const createOrderSchema = z.object({
@@ -74,7 +75,7 @@ export async function POST(req: NextRequest) {
     const pinDetails = getPincodeDetails(pincode);
     const city = data.city ? String(data.city).trim() : (pinDetails?.city || "Kolkata");
     const state = data.state ? String(data.state).trim() : (pinDetails?.state || "West Bengal");
-    const pickupDate = data.pickupDate ? String(data.pickupDate).trim() : "Tomorrow";
+    const pickupDate = getRecordedPickupDate(data.pickupDate || "Tomorrow");
     const pickupTimeSlot = data.pickupTimeSlot ? String(data.pickupTimeSlot).trim() : "10 AM - 1 PM";
     const deviceName = cleanDeviceName(data.deviceName ? String(data.deviceName).trim() : "Customer Mobile Device");
     

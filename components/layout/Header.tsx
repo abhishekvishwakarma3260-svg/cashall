@@ -10,6 +10,7 @@ import { LocationModal } from "@/components/common/LocationModal";
 import { NeedHelpModal } from "@/components/common/NeedHelpModal";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { getCartQuotes, CART_UPDATED_EVENT } from "@/lib/cart";
+import { clearCrossUserDataOnSwitch } from "@/lib/utils/customer-storage";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -130,11 +131,8 @@ export function Header() {
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
+      clearCrossUserDataOnSwitch();
       localStorage.removeItem("cashall_user");
-      localStorage.removeItem("cashall_quotes");
-      localStorage.removeItem("cashall_cart_quotes");
-      localStorage.removeItem("cashall_all_orders");
-      localStorage.removeItem("cashall_latest_quote");
       document.cookie = "cashall_user_phone=; path=/; max-age=0";
       window.dispatchEvent(new Event("cashall_cart_updated"));
     }

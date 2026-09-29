@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { DEFAULT_PARTNERS, OrderData } from "@/lib/store";
 import { formatAddress } from "@/lib/address";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 import { Truck, CheckCircle2, UserCheck, Phone, Building2, Loader2, ArrowRight, Smartphone, MapPin, Navigation, Calendar } from "lucide-react";
 
 function getAdminToken() {
@@ -195,7 +196,7 @@ export default function AdminPickupsPage() {
                         #{order.orderNumber}
                       </span>
                       <span className="text-[11px] text-neutral-400 font-semibold bg-neutral-800 px-2 py-0.5 rounded-md">
-                        {order.pickupDate} ({order.pickupTimeSlot})
+                        {formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}
                       </span>
                     </div>
 

@@ -13,6 +13,8 @@ import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails } from "@/l
 import { trackMetaStandardEvent, trackMetaCustomEvent } from "@/lib/analytics/meta";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import { formatAddress } from "@/lib/address";
+import { getRecordedPickupDate, getPickupDatePresets } from "@/lib/utils/pickup-date";
+import { cleanPhoneNumber, getSavedCustomerAddress, saveCustomerAddress } from "@/lib/utils/customer-storage";
 import {
   MapPin,
   Calendar,
@@ -48,7 +50,7 @@ function PickupCheckoutContent() {
   const [hasPrefilledAddress, setHasPrefilledAddress] = useState(false);
 
   // Pickup slot
-  const [pickupDate, setPickupDate] = useState("Tomorrow");
+  const [pickupDate, setPickupDate] = useState(() => getRecordedPickupDate("Tomorrow"));
   const [isCustomDate, setIsCustomDate] = useState(false);
   const [customDateInput, setCustomDateInput] = useState("");
   const [pickupSlot, setPickupSlot] = useState("10 AM - 1 PM");
@@ -104,75 +106,142 @@ function PickupCheckoutContent() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedUser = localStorage.getItem("cashall_user");
+      let currentCleanPhone = "";
+
       if (storedUser) {
         try {
           const u = JSON.parse(storedUser);
           if (u.name) setFullName(u.name);
-          if (u.phone) setPhone(u.phone);
+          if (u.phone) {
+            const clean = cleanPhoneNumber(u.phone);
+            currentCleanPhone = clean;
+            setPhone(clean || u.phone);
+          }
           if (u.email) setEmail(u.email);
         } catch (e) {
           console.error(e);
         }
       }
 
-      // PREFILL CUSTOMER & ADDRESS DETAILS FOR RETURNING SELLERS
-      const storedAddressStr = localStorage.getItem("cashall_saved_address");
-      const storedOrderStr = localStorage.getItem("cashall_latest_order");
-      const storedRentalStr = localStorage.getItem("cashall_latest_rental");
+      // Purge legacy un-scoped addresses to prevent cross-customer data leakage
+      localStorage.removeItem("cashall_saved_address");
 
       let prefilledPin = "";
       let didPrefill = false;
 
-      if (storedAddressStr) {
-        try {
-          const sa = JSON.parse(storedAddressStr);
-          if (sa.line1) setLine1(sa.line1);
-          else if (sa.house) setLine1([sa.house, sa.street].filter(Boolean).join(", "));
-          if (sa.line2 !== undefined && sa.line2 !== null) setLine2(sa.line2);
-          else if (sa.area) setLine2([sa.area, sa.landmark].filter(Boolean).join(", "));
-          if (sa.city) setCity(sa.city);
-          if (sa.state) setSelectedState(sa.state);
-          if (sa.pincode) {
-            setPincode(sa.pincode);
-            prefilledPin = sa.pincode;
+      // STRICT USER ISOLATION:
+      // Only prefill previous address if the customer is logged in with a valid phone number.
+      if (currentCleanPhone && currentCleanPhone.length === 10) {
+        // A. Check user-scoped address in localStorage
+        const savedAddr = getSavedCustomerAddress(currentCleanPhone);
+        if (savedAddr) {
+          if (savedAddr.fullName) setFullName(savedAddr.fullName);
+          if (savedAddr.email) setEmail(savedAddr.email);
+          if (savedAddr.line1) setLine1(savedAddr.line1);
+          if (savedAddr.line2 !== undefined) setLine2(savedAddr.line2);
+          if (savedAddr.city) setCity(savedAddr.city);
+          if (savedAddr.state) setSelectedState(savedAddr.state);
+          if (savedAddr.pincode) {
+            setPincode(savedAddr.pincode);
+            prefilledPin = savedAddr.pincode;
           }
           didPrefill = true;
-        } catch (e) {}
-      } else if (storedOrderStr) {
-        try {
-          const lo = JSON.parse(storedOrderStr);
-          if (lo.pincode) {
-            setPincode(lo.pincode);
-            prefilledPin = lo.pincode;
-          }
-          if (lo.customerName) setFullName(lo.customerName);
-          if (lo.customerPhone) setPhone(lo.customerPhone);
-          if (lo.customerEmail) setEmail(lo.customerEmail);
+        }
 
-          if (lo.addressSummary) {
-            const parts = lo.addressSummary.split(",").map((s: string) => s.trim());
-            if (parts.length >= 1 && parts[0]) setLine1(parts[0]);
-            if (parts.length >= 2 && parts[1]) setLine2(parts.slice(1).join(", "));
-            didPrefill = true;
+        // B. Check user-scoped latest order in localStorage
+        if (!didPrefill) {
+          const userScopedOrderStr = localStorage.getItem(`cashall_latest_order_${currentCleanPhone}`) || localStorage.getItem("cashall_latest_order");
+          if (userScopedOrderStr) {
+            try {
+              const lo = JSON.parse(userScopedOrderStr);
+              const orderPhone = cleanPhoneNumber(lo.customerPhone);
+              // Ensure order phone strictly matches the current logged in user
+              if (orderPhone === currentCleanPhone) {
+                if (lo.pincode) {
+                  setPincode(lo.pincode);
+                  prefilledPin = lo.pincode;
+                }
+                if (lo.customerName) setFullName(lo.customerName);
+                if (lo.customerEmail) setEmail(lo.customerEmail);
+
+                if (lo.addressSummary) {
+                  const parts = lo.addressSummary.split(",").map((s: string) => s.trim());
+                  if (parts.length >= 1 && parts[0]) setLine1(parts[0]);
+                  if (parts.length >= 2 && parts[1]) setLine2(parts.slice(1).join(", "));
+                  didPrefill = true;
+                }
+              }
+            } catch (e) {}
           }
-        } catch (e) {}
-      } else if (storedRentalStr) {
-        try {
-          const r = JSON.parse(storedRentalStr);
-          if (r.customerName) setFullName(r.customerName);
-          if (r.customerPhone) setPhone(r.customerPhone);
-          if (r.customerEmail) setEmail(r.customerEmail);
-          if (r.pincode) {
-            setPincode(r.pincode);
-            prefilledPin = r.pincode;
-          }
-          if (r.deliveryAddress) {
-            const parts = r.deliveryAddress.split(",").map((s: string) => s.trim());
-            if (parts.length >= 1 && parts[0]) setLine1(parts[0]);
-            if (parts.length >= 2 && parts[1]) setLine2(parts.slice(1).join(", "));
-            didPrefill = true;
-          }
-        } catch (e) {}
+        }
+
+        // C. Database Fallback: For returning customers across devices/cache clears
+        if (!didPrefill) {
+          fetch(`/api/v1/orders/user?phone=${encodeURIComponent(currentCleanPhone)}`)
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.success && Array.isArray(data.orders) && data.orders.length > 0) {
+                const latest = data.orders[0];
+                if (latest) {
+                  if (latest.customerName) setFullName(latest.customerName);
+                  if (latest.customerEmail) setEmail(latest.customerEmail);
+
+                  let pin = "";
+                  let l1 = "";
+                  let l2 = "";
+                  let cty = "";
+                  let st = "";
+
+                  if (latest.address) {
+                    l1 = latest.address.line1 || "";
+                    l2 = latest.address.line2 || "";
+                    cty = latest.address.city || "";
+                    st = latest.address.state || "";
+                    pin = latest.address.pincode || "";
+                  } else if (latest.addressSummary && latest.addressSummary !== "Address on file") {
+                    const parts = latest.addressSummary.split(",").map((s: string) => s.trim());
+                    if (parts.length >= 1) l1 = parts[0];
+                    if (parts.length >= 2) l2 = parts.slice(1).join(", ");
+                    pin = latest.pincode || "";
+                  }
+
+                  if (l1) setLine1(l1);
+                  if (l2) setLine2(l2);
+                  if (cty) setCity(cty);
+                  if (st) setSelectedState(st);
+                  if (pin) {
+                    setPincode(pin);
+                    checkPincode(pin);
+                  }
+
+                  if (l1 || pin) {
+                    setHasPrefilledAddress(true);
+                    saveCustomerAddress(currentCleanPhone, {
+                      fullName: latest.customerName,
+                      phone: currentCleanPhone,
+                      email: latest.customerEmail || "",
+                      line1: l1,
+                      line2: l2,
+                      city: cty,
+                      state: st || "West Bengal",
+                      pincode: pin,
+                    });
+                  }
+                }
+              }
+            })
+            .catch(() => {});
+        }
+      } else {
+        // GUEST / UNLOGGED USER: Ensure no residual address data from any previous user
+        setFullName("");
+        setPhone("");
+        setEmail("");
+        setLine1("");
+        setLine2("");
+        setPincode("");
+        setServiceStatus("IDLE");
+        setHasPrefilledAddress(false);
       }
 
       if (didPrefill) {
@@ -347,10 +416,20 @@ function PickupCheckoutContent() {
     const finalLine2 = line2.trim();
     const fullDeviceName = resolvedDeviceName || quote?.breakdownJson ? (JSON.parse(quote?.breakdownJson || "{}").deviceName || "Mobile Device") : "Mobile Device";
 
-    // Update user profile and address in local storage
+    // Update user profile and address in local storage (strictly user-scoped)
     if (typeof window !== "undefined") {
       localStorage.setItem("cashall_user", JSON.stringify({ name: finalName, phone: finalPhone, email: finalEmail }));
-      localStorage.setItem("cashall_saved_address", JSON.stringify({ line1: finalLine1, line2: finalLine2, state: selectedState, pincode: cleanPin }));
+      saveCustomerAddress(finalPhone, {
+        fullName: finalName,
+        phone: finalPhone,
+        email: finalEmail,
+        line1: finalLine1,
+        line2: finalLine2,
+        city,
+        state: selectedState,
+        pincode: cleanPin,
+      });
+      localStorage.removeItem("cashall_saved_address");
     }
 
     let createdOrderNum = "";
@@ -490,12 +569,13 @@ function PickupCheckoutContent() {
 
     if (typeof window !== "undefined") {
       localStorage.setItem(`cashall_order_${createdOrderNum}`, JSON.stringify(newOrder));
+      localStorage.setItem(`cashall_latest_order_${finalPhone}`, JSON.stringify(newOrder));
       localStorage.setItem("cashall_latest_order", JSON.stringify(newOrder));
 
       const existing = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
       localStorage.setItem("cashall_all_orders", JSON.stringify([newOrder, ...existing]));
 
-      // Save user session details and address for auto-prefilling future orders
+      // Save user session details and address for auto-prefilling future orders (strictly user-scoped)
       localStorage.setItem("cashall_user", JSON.stringify({
         id: newOrder.userId,
         name: finalName,
@@ -503,12 +583,17 @@ function PickupCheckoutContent() {
         email: finalEmail,
       }));
 
-      localStorage.setItem("cashall_saved_address", JSON.stringify({
+      saveCustomerAddress(finalPhone, {
+        fullName: finalName,
+        phone: finalPhone,
+        email: finalEmail,
         line1: finalLine1,
         line2: finalLine2,
+        city,
         state: selectedState,
         pincode: pincode,
-      }));
+      });
+      localStorage.removeItem("cashall_saved_address");
 
       // Remove converted quote from customer Cart
       if (quote?.quoteNumber) {
@@ -857,34 +942,45 @@ function PickupCheckoutContent() {
                     </span>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {["Today", "Tomorrow", "Day After"].map((d) => (
-                      <button
-                        type="button"
-                        key={d}
-                        onClick={() => {
-                          setPickupDate(d);
-                          setIsCustomDate(false);
-                        }}
-                        className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
-                          !isCustomDate && pickupDate === d
-                            ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm"
-                            : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
-                        }`}
-                      >
-                        {d}
-                      </button>
-                    ))}
+                    {getPickupDatePresets().map((preset) => {
+                      const isSelected = !isCustomDate && (pickupDate === preset.value || pickupDate.toLowerCase().includes(preset.key.toLowerCase()));
+                      return (
+                        <button
+                          type="button"
+                          key={preset.key}
+                          onClick={() => {
+                            setPickupDate(preset.value);
+                            setIsCustomDate(false);
+                          }}
+                          className={`p-2.5 sm:p-3 rounded-xl border text-xs font-bold text-center transition-all flex flex-col items-center justify-center gap-0.5 ${
+                            isSelected
+                              ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm ring-1 ring-brand-yellow/50"
+                              : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
+                          }`}
+                        >
+                          <span className="font-extrabold">{preset.label}</span>
+                          <span className={`text-[10px] ${isSelected ? "text-brand-black/80 font-semibold" : "text-gray-400"}`}>
+                            {preset.subLabel}
+                          </span>
+                        </button>
+                      );
+                    })}
                     <button
                       type="button"
                       onClick={() => setIsCustomDate(true)}
-                      className={`p-3 rounded-xl border text-xs font-bold text-center transition-all flex items-center justify-center gap-1 ${
+                      className={`p-2.5 sm:p-3 rounded-xl border text-xs font-bold text-center transition-all flex flex-col items-center justify-center gap-0.5 ${
                         isCustomDate
-                          ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm"
+                          ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm ring-1 ring-brand-yellow/50"
                           : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
                       }`}
                     >
-                      <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
-                      <span>Custom Date</span>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
+                        <span className="font-extrabold">Custom Date</span>
+                      </div>
+                      <span className={`text-[10px] ${isCustomDate ? "text-brand-black/80 font-semibold" : "text-gray-400"}`}>
+                        Choose Date
+                      </span>
                     </button>
                   </div>
 
@@ -903,13 +999,8 @@ function PickupCheckoutContent() {
                           if (val) {
                             const d = new Date(val);
                             if (!isNaN(d.getTime())) {
-                              const formatted = d.toLocaleDateString("en-IN", {
-                                weekday: "short",
-                                day: "numeric",
-                                month: "short",
-                                year: "numeric",
-                              });
-                              setPickupDate(formatted);
+                              const recorded = getRecordedPickupDate(d);
+                              setPickupDate(recorded);
                             }
                           }
                         }}

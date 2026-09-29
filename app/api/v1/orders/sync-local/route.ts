@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { WhatsAppService } from "@/lib/services/whatsapp.service";
+import { getRecordedPickupDate } from "@/lib/utils/pickup-date";
 import { z } from "zod";
 
 const syncOrderSchema = z.object({
@@ -56,7 +57,7 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     
     const deviceName = item.deviceName ? String(item.deviceName) : "Customer Mobile Device";
     const pincodeStr = item.pincode ? String(item.pincode) : "700001";
-    const pickupDateStr = item.pickupDate ? String(item.pickupDate) : "Tomorrow";
+    const pickupDateStr = getRecordedPickupDate(item.pickupDate ? String(item.pickupDate) : "Tomorrow");
     const pickupSlotStr = item.pickupTimeSlot ? String(item.pickupTimeSlot) : "10 AM - 1 PM";
     const addressStr = item.addressSummary ? String(item.addressSummary) : "Doorstep Address, Howrah, West Bengal";
 

@@ -1,6 +1,7 @@
 import { PushNotificationService } from "./firebase.service";
 import { prisma } from "../db";
 import { logger } from "../utils/logger";
+import { formatPickupDateTimeSlot } from "../utils/pickup-date";
 
 export class NotificationHelper {
   /**
@@ -36,7 +37,7 @@ export class NotificationHelper {
       switch (milestone) {
         case "PICKUP_SCHEDULED":
           title = "Pickup Scheduled! 🗓️";
-          body = `Your doorstep pickup for ${deviceName} is successfully scheduled for ${order.pickupDate} (${order.pickupTimeSlot}).`;
+          body = `Your doorstep pickup for ${deviceName} is successfully scheduled for ${formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}.`;
           break;
         case "PARTNER_ASSIGNED":
           title = "Agent Dispatched! 🚗";

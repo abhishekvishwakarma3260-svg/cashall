@@ -17,6 +17,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { RescheduleModal } from "@/components/common/RescheduleModal";
+import { formatPickupDateDisplay } from "@/lib/utils/pickup-date";
 
 interface PartnerOrder {
   id: string;
@@ -26,6 +27,7 @@ interface PartnerOrder {
   addressText: string;
   pickupDate: string;
   pickupTimeSlot: string;
+  createdAt?: string;
   deviceName: string;
   storage: string;
   estimatedPrice: number;
@@ -201,9 +203,9 @@ export default function PartnerOrdersPage() {
                 <div className="flex items-center gap-2 text-xs">
                   <Calendar className="w-4 h-4 text-brand-yellow shrink-0" />
                   <div>
-                    <span className="font-extrabold text-white">{ord.pickupDate || "Today"}</span>
+                    <span className="font-extrabold text-white">{formatPickupDateDisplay(ord.pickupDate, ord.createdAt)}</span>
                     <span className="text-gray-500 mx-1.5">•</span>
-                    <span className="text-gray-400 font-medium">{ord.pickupTimeSlot || "1 PM - 4 PM"}</span>
+                    <span className="text-gray-400 font-medium">{ord.pickupTimeSlot || "10 AM - 1 PM"}</span>
                   </div>
                 </div>
                 {!["COMPLETED", "CANCELLED", "REJECTED"].includes(ord.status) && (

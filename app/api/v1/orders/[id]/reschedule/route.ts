@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/utils/AppError";
+import { getRecordedPickupDate } from "@/lib/utils/pickup-date";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +15,7 @@ export const POST = apiWrapper(async (req: NextRequest, { params }: { params: { 
     throw new AppError("A valid pickupDate is required to reschedule.", 400);
   }
 
-  const cleanDate = pickupDate.trim();
+  const cleanDate = getRecordedPickupDate(pickupDate.trim());
   const cleanSlot = (pickupTimeSlot && typeof pickupTimeSlot === "string") ? pickupTimeSlot.trim() : null;
 
   const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(orderIdentifier);

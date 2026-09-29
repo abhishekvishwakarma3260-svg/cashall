@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { OrderData, INITIAL_VARIANTS, INITIAL_MODELS, INITIAL_BRANDS, INITIAL_ORDERS } from "@/lib/store";
 import { CheckCircle2, Calendar, MapPin, Smartphone, ArrowRight, ShieldCheck, Copy, Check, UserCheck, Phone } from "lucide-react";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 export default function OrderConfirmationPage() {
   const params = useParams();
@@ -110,7 +111,7 @@ export default function OrderConfirmationPage() {
                   <span>Scheduled Pickup Time</span>
                 </div>
                 <div className="text-sm font-black text-brand-black">
-                  {order.pickupDate} ({order.pickupTimeSlot})
+                  {formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}
                 </div>
               </div>
 

@@ -20,6 +20,7 @@ import {
   Calendar,
   Sparkles,
 } from "lucide-react";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 interface DashboardStats {
   todayQuotes: number;
@@ -38,6 +39,7 @@ interface RecentOrder {
   deviceName?: string;
   pickupDate: string;
   pickupTimeSlot: string;
+  createdAt?: string;
   estimatedPrice: number;
   revisedPrice: number | null;
   status: string;
@@ -127,7 +129,7 @@ export default function AdminDashboardPage() {
                 orderNumber: cleanNum,
                 title: "New Buyback Order Received",
                 subtitle: `${ord.deviceName || "Mobile Device"} • ₹${(ord.estimatedPrice || 0).toLocaleString("en-IN")}`,
-                details: `Customer: ${ord.customerName} (${ord.customerPhone}) • Slot: ${ord.pickupDate} ${ord.pickupTimeSlot}`,
+                details: `Customer: ${ord.customerName} (${ord.customerPhone}) • Slot: ${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}`,
                 timestamp: new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
                 onView: () => router.push(`/admin/orders`),
               });
@@ -321,7 +323,7 @@ export default function AdminDashboardPage() {
                           </span>
                           <span className="text-[11px] text-neutral-400 flex items-center gap-1 font-medium bg-neutral-800 px-2 py-0.5 rounded-md">
                             <Calendar className="w-3 h-3 text-yellow-400" />
-                            {ord.pickupDate} ({ord.pickupTimeSlot})
+                            {formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt)}
                           </span>
                         </div>
 

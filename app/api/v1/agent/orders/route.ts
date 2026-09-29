@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import { formatAddress } from "@/lib/address";
+import { formatPickupDateDisplay } from "@/lib/utils/pickup-date";
 
 export const dynamic = "force-dynamic";
 
@@ -224,8 +225,8 @@ export async function GET(req: NextRequest) {
         amount: finalPrice,
         address: fullAddress,
         addressSummary: fullAddress,
-        pickupDate: ord.pickupDate || activePickup?.date || "Scheduled",
-        pickupTimeSlot: ord.pickupTimeSlot || activePickup?.timeSlot || "Standard",
+        pickupDate: formatPickupDateDisplay(ord.pickupDate || activePickup?.date, ord.createdAt),
+        pickupTimeSlot: ord.pickupTimeSlot || activePickup?.timeSlot || "10 AM - 1 PM",
         pincode: ord.address?.pincode || "700001",
         status: ord.status,
         paymentStatus: activePayment?.status || (ord.status === "COMPLETED" ? "PAID" : "PENDING"),

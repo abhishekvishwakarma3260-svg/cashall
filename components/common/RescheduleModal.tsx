@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Calendar, Clock, X, CheckCircle2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { getRecordedPickupDate, getPickupDatePresets, formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 interface RescheduleModalProps {
   isOpen: boolean;
@@ -30,7 +31,7 @@ export function RescheduleModal({
   onSuccess,
 }: RescheduleModalProps) {
   const [inputOrderNumber, setInputOrderNumber] = useState(orderNumber || orderId || "");
-  const [selectedDate, setSelectedDate] = useState(currentDate);
+  const [selectedDate, setSelectedDate] = useState(() => getRecordedPickupDate(currentDate || "Tomorrow"));
   const [isCustomDate, setIsCustomDate] = useState(false);
   const [customDateInput, setCustomDateInput] = useState("");
   const [selectedSlot, setSelectedSlot] = useState(currentTimeSlot || "1 PM - 4 PM");
@@ -54,13 +55,7 @@ export function RescheduleModal({
     if (!val) return;
     const d = new Date(val);
     if (!isNaN(d.getTime())) {
-      const formatted = d.toLocaleDateString("en-IN", {
-        weekday: "short",
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      setSelectedDate(formatted);
+      setSelectedDate(getRecordedPickupDate(d));
     }
   };
 
@@ -133,7 +128,7 @@ export function RescheduleModal({
             </h3>
             <p className="text-xs text-brand-muted">
               {inputOrderNumber ? (
-                <>Order <strong className="text-black font-extrabold">#{inputOrderNumber}</strong> • Current: {currentDate} ({currentTimeSlot})</>
+                <>Order <strong className="text-black font-extrabold">#{inputOrderNumber}</strong> • Current: {formatPickupDateTimeSlot(currentDate, currentTimeSlot)}</>
               ) : (
                 <>Select new doorstep pickup date and time slot</>
               )}
@@ -183,34 +178,45 @@ export function RescheduleModal({
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {["Today", "Tomorrow", "Day After"].map((d) => (
-                <button
-                  type="button"
-                  key={d}
-                  onClick={() => {
-                    setSelectedDate(d);
-                    setIsCustomDate(false);
-                  }}
-                  className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
-                    !isCustomDate && selectedDate === d
-                      ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold"
-                      : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
-                  }`}
-                >
-                  {d}
-                </button>
-              ))}
+              {getPickupDatePresets().map((preset) => {
+                const isSelected = !isCustomDate && (selectedDate === preset.value || selectedDate.toLowerCase().includes(preset.key.toLowerCase()));
+                return (
+                  <button
+                    type="button"
+                    key={preset.key}
+                    onClick={() => {
+                      setSelectedDate(preset.value);
+                      setIsCustomDate(false);
+                    }}
+                    className={`p-2.5 sm:p-3 rounded-xl border text-xs font-bold text-center transition-all flex flex-col items-center justify-center gap-0.5 ${
+                      isSelected
+                        ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold ring-1 ring-brand-yellow/50"
+                        : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    <span className="font-extrabold">{preset.label}</span>
+                    <span className={`text-[10px] ${isSelected ? "text-brand-black/80 font-semibold" : "text-gray-400"}`}>
+                      {preset.subLabel}
+                    </span>
+                  </button>
+                );
+              })}
               <button
                 type="button"
                 onClick={() => setIsCustomDate(true)}
-                className={`p-3 rounded-xl border text-xs font-bold text-center transition-all flex items-center justify-center gap-1 ${
+                className={`p-2.5 sm:p-3 rounded-xl border text-xs font-bold text-center transition-all flex flex-col items-center justify-center gap-0.5 ${
                   isCustomDate
-                    ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold"
+                    ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold ring-1 ring-brand-yellow/50"
                     : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
                 }`}
               >
-                <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
-                <span>Custom Date</span>
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-3.5 h-3.5 text-brand-yellow" />
+                  <span className="font-extrabold">Custom Date</span>
+                </div>
+                <span className={`text-[10px] ${isCustomDate ? "text-brand-black/80 font-semibold" : "text-gray-400"}`}>
+                  Choose Date
+                </span>
               </button>
             </div>
 

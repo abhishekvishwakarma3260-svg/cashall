@@ -11,6 +11,7 @@ const ADMIN_PHONE = "917604092333"; // +91 7604092333
 const ADMIN_PHONE_DISPLAY = "7604092333";
 const CALLMEBOT_API_KEY = process.env.CALLMEBOT_API_KEY || "";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cashall.in";
+import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
 export class WhatsAppService {
   static async sendToAdmin(message: string): Promise<void> {
@@ -56,7 +57,7 @@ export class WhatsAppService {
       `📱 Phone: ${params.customerPhone}\n` +
       `📟 Device: *${params.deviceName}*\n` +
       `💰 Valuation: *₹${(params.estimatedPrice || 0).toLocaleString("en-IN")}*\n` +
-      `📅 Pickup: ${params.pickupDate || "Scheduled"} (${params.pickupTimeSlot || "TBD"})\n` +
+      `📅 Pickup: ${formatPickupDateTimeSlot(params.pickupDate, params.pickupTimeSlot)}\n` +
       `📍 Address: ${params.address}\n` +
       `━━━━━━━━━━━━━━━━━━\n` +
       `👉 View Order: ${adminLink}`;

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { formatAddress } from "@/lib/address";
+import { cleanPhoneNumber, getSavedCustomerAddress, saveCustomerAddress } from "@/lib/utils/customer-storage";
 import {
   Gamepad2,
   Disc,
@@ -154,56 +155,67 @@ export default function Ps5RentalPage() {
   // PRE-FILL CUSTOMER & ADDRESS DETAILS FROM PREVIOUS ORDERS/RENTALS
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedRental = localStorage.getItem("cashall_latest_rental");
-      const storedAddress = localStorage.getItem("cashall_saved_address");
-      const storedOrder = localStorage.getItem("cashall_latest_order");
       const storedUser = localStorage.getItem("cashall_user");
-
-      let didPrefill = false;
-
-      if (storedRental) {
-        try {
-          const r = JSON.parse(storedRental);
-          if (r.customerName) setCustomerName(r.customerName);
-          if (r.customerPhone) setCustomerPhone(r.customerPhone);
-          if (r.customerEmail) setCustomerEmail(r.customerEmail);
-          if (r.deliveryAddress) setDeliveryAddress(r.deliveryAddress);
-          if (r.pincode) setPincode(r.pincode);
-          if (r.govtIdType) setGovtIdType(r.govtIdType);
-          if (r.govtIdNumber) setGovtIdNumber(r.govtIdNumber);
-          didPrefill = true;
-        } catch (e) {}
-      }
-
-      if (!didPrefill && storedAddress) {
-        try {
-          const sa = JSON.parse(storedAddress);
-          const fullAddr = formatAddress(sa);
-          if (fullAddr && fullAddr !== "—") setDeliveryAddress(fullAddr);
-          if (sa.pincode) setPincode(sa.pincode);
-          didPrefill = true;
-        } catch (e) {}
-      }
-
-      if (!didPrefill && storedOrder) {
-        try {
-          const o = JSON.parse(storedOrder);
-          if (o.customerName && !customerName) setCustomerName(o.customerName);
-          if (o.customerPhone && !customerPhone) setCustomerPhone(o.customerPhone);
-          if (o.customerEmail && !customerEmail) setCustomerEmail(o.customerEmail);
-          if (o.addressSummary && !deliveryAddress) setDeliveryAddress(o.addressSummary);
-          if (o.pincode && !pincode) setPincode(o.pincode);
-          didPrefill = true;
-        } catch (e) {}
-      }
+      let currentCleanPhone = "";
 
       if (storedUser) {
         try {
           const u = JSON.parse(storedUser);
-          if (u.name && !customerName) setCustomerName(u.name);
-          if (u.phone && !customerPhone) setCustomerPhone(u.phone);
-          if (u.email && !customerEmail) setCustomerEmail(u.email);
+          if (u.name) setCustomerName(u.name);
+          if (u.phone) {
+            const clean = cleanPhoneNumber(u.phone);
+            currentCleanPhone = clean;
+            setCustomerPhone(clean || u.phone);
+          }
+          if (u.email) setCustomerEmail(u.email);
         } catch (e) {}
+      }
+
+      // Purge legacy un-scoped addresses to prevent cross-customer leakage
+      localStorage.removeItem("cashall_saved_address");
+
+      let didPrefill = false;
+
+      // Only prefill previous address/rental details if customer is logged in
+      if (currentCleanPhone && currentCleanPhone.length === 10) {
+        // 1. Check user-scoped address storage
+        const savedAddr = getSavedCustomerAddress(currentCleanPhone);
+        if (savedAddr) {
+          if (savedAddr.fullName) setCustomerName(savedAddr.fullName);
+          if (savedAddr.email) setCustomerEmail(savedAddr.email);
+          const fullAddr = [savedAddr.line1, savedAddr.line2, savedAddr.city, savedAddr.state].filter(Boolean).join(", ");
+          if (fullAddr) setDeliveryAddress(fullAddr);
+          if (savedAddr.pincode) setPincode(savedAddr.pincode);
+          didPrefill = true;
+        }
+
+        // 2. Check user-scoped rental storage
+        if (!didPrefill) {
+          const storedRental = localStorage.getItem(`cashall_latest_rental_${currentCleanPhone}`) || localStorage.getItem("cashall_latest_rental");
+          if (storedRental) {
+            try {
+              const r = JSON.parse(storedRental);
+              const rPhone = cleanPhoneNumber(r.customerPhone);
+              if (rPhone === currentCleanPhone) {
+                if (r.customerName) setCustomerName(r.customerName);
+                if (r.customerEmail) setCustomerEmail(r.customerEmail);
+                if (r.deliveryAddress) setDeliveryAddress(r.deliveryAddress);
+                if (r.pincode) setPincode(r.pincode);
+                if (r.govtIdType) setGovtIdType(r.govtIdType);
+                if (r.govtIdNumber) setGovtIdNumber(r.govtIdNumber);
+                didPrefill = true;
+              }
+            } catch (e) {}
+          }
+        }
+      } else {
+        // GUEST: ensure fields are completely clean
+        setCustomerName("");
+        setCustomerPhone("");
+        setCustomerEmail("");
+        setDeliveryAddress("");
+        setPincode("");
+        setIsPrefilled(false);
       }
 
       if (didPrefill) {
@@ -339,22 +351,35 @@ export default function Ps5RentalPage() {
 
       const data = await res.json();
       if (data.success && data.rental) {
-        // Save for auto-prefill on future rental or selling visits
+        // Save for auto-prefill on future rental or selling visits (strictly user-scoped)
         try {
-          localStorage.setItem("cashall_latest_rental", JSON.stringify({
+          const cleanPhone = cleanPhoneNumber(customerPhone);
+          const rentalObj = {
             customerName,
-            customerPhone,
+            customerPhone: cleanPhone || customerPhone,
             customerEmail,
             deliveryAddress,
             pincode,
             govtIdType,
             govtIdNumber,
-          }));
+          };
+          if (cleanPhone) {
+            localStorage.setItem(`cashall_latest_rental_${cleanPhone}`, JSON.stringify(rentalObj));
+            saveCustomerAddress(cleanPhone, {
+              fullName: customerName,
+              phone: cleanPhone,
+              email: customerEmail,
+              line1: deliveryAddress,
+              pincode,
+            });
+          }
+          localStorage.setItem("cashall_latest_rental", JSON.stringify(rentalObj));
           localStorage.setItem("cashall_user", JSON.stringify({
             name: customerName,
-            phone: customerPhone,
+            phone: cleanPhone || customerPhone,
             email: customerEmail,
           }));
+          localStorage.removeItem("cashall_saved_address");
         } catch (e) {}
 
         router.push(`/rent/track/${data.rental.rentalNumber}`);
