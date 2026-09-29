@@ -200,3 +200,79 @@ export function getPincodeDetails(pincode: string): PincodeDetails | null {
 export function getAllServiceablePincodes(): string[] {
   return Object.keys(PINCODE_MAP);
 }
+
+/**
+ * Resolves the Indian State / Union Territory from a 6-digit PIN code.
+ * Checks verified serviceable master database first, then standard postal prefixes.
+ */
+export function getStateFromPincode(pincode: string): string | null {
+  if (!pincode) return null;
+  const pin = pincode.trim().replace(/\D/g, "");
+  if (!pin || pin.length < 2) return null;
+
+  // 1. Direct match from verified master database
+  const details = PINCODE_MAP[pin];
+  if (details?.state) {
+    return details.state;
+  }
+
+  // 2. Exact Postal Prefix Mapping for Indian PIN codes
+  const prefix3 = pin.slice(0, 3);
+  const prefix2 = pin.slice(0, 2);
+  const p3 = parseInt(prefix3, 10);
+  const p2 = parseInt(prefix2, 10);
+
+  // Specific 3-digit prefix overrides
+  if (p3 === 737) return "Sikkim";
+  if (p3 === 744) return "Andaman & Nicobar Islands";
+  if (p3 === 605) return "Puducherry";
+  if (p3 === 682) return "Lakshadweep";
+  if (p3 === 403) return "Goa";
+  if (p3 === 160) return "Chandigarh";
+  if (p3 === 396) return "Dadra and Nagar Haveli and Daman and Diu";
+  if (p3 >= 790 && p3 <= 792) return "Arunachal Pradesh";
+  if (p3 >= 793 && p3 <= 794) return "Meghalaya";
+  if (p3 === 795) return "Manipur";
+  if (p3 === 796) return "Mizoram";
+  if (p3 === 797) return "Nagaland";
+  if (p3 === 799) return "Tripura";
+
+  // Uttarakhand vs Uttar Pradesh
+  if ((p3 >= 246 && p3 <= 249) || (p3 >= 262 && p3 <= 263)) return "Uttarakhand";
+
+  // Bihar vs Jharkhand (Zone 8)
+  if ((p3 >= 831 && p3 <= 835) || (p3 >= 825 && p3 <= 829) || (p3 >= 814 && p3 <= 816)) {
+    return "Jharkhand";
+  }
+  if ((p3 >= 800 && p3 <= 805) || (p3 >= 811 && p3 <= 813) || (p3 >= 821 && p3 <= 824) || (p3 >= 841 && p3 <= 855)) {
+    return "Bihar";
+  }
+
+  // Telangana vs Andhra Pradesh (Zone 5)
+  if (p3 >= 500 && p3 <= 509) return "Telangana";
+  if (p3 >= 515 && p3 <= 535) return "Andhra Pradesh";
+
+  // Standard 2-digit regional mappings
+  if (p2 === 11) return "Delhi";
+  if (p2 >= 12 && p2 <= 13) return "Haryana";
+  if (p2 >= 14 && p2 <= 15) return "Punjab";
+  if (p2 === 16) return "Chandigarh";
+  if (p2 === 17) return "Himachal Pradesh";
+  if (p2 >= 18 && p2 <= 19) return "Jammu & Kashmir";
+  if (p2 >= 20 && p2 <= 28) return "Uttar Pradesh";
+  if (p2 >= 30 && p2 <= 34) return "Rajasthan";
+  if (p2 >= 36 && p2 <= 39) return "Gujarat";
+  if (p2 >= 40 && p2 <= 44) return "Maharashtra";
+  if (p2 >= 45 && p2 <= 48) return "Madhya Pradesh";
+  if (p2 === 49) return "Chhattisgarh";
+  if (p2 >= 50 && p2 <= 53) return "Andhra Pradesh";
+  if (p2 >= 56 && p2 <= 59) return "Karnataka";
+  if (p2 >= 60 && p2 <= 64) return "Tamil Nadu";
+  if (p2 >= 67 && p2 <= 69) return "Kerala";
+  if (p2 >= 70 && p2 <= 74) return "West Bengal";
+  if (p2 >= 75 && p2 <= 76) return "Odisha";
+  if (p2 === 78) return "Assam";
+  if (p2 >= 80 && p2 <= 85) return "Bihar";
+
+  return null;
+}

@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { INITIAL_SERVICE_AREAS, OrderData, QuoteData, INITIAL_VARIANTS, INITIAL_MODELS, INITIAL_BRANDS } from "@/lib/store";
 import { removeQuoteFromCart } from "@/lib/cart";
-import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails } from "@/lib/serviceability";
+import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails, getStateFromPincode } from "@/lib/serviceability";
 import { trackMetaStandardEvent, trackMetaCustomEvent } from "@/lib/analytics/meta";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import { formatAddress } from "@/lib/address";
@@ -64,8 +64,41 @@ function PickupCheckoutContent() {
 
   const ALL_INDIAN_STATES = [
     "West Bengal",
+    "Bihar",
     "Uttar Pradesh",
     "Jharkhand",
+    "Delhi",
+    "Maharashtra",
+    "Karnataka",
+    "Tamil Nadu",
+    "Telangana",
+    "Gujarat",
+    "Rajasthan",
+    "Madhya Pradesh",
+    "Haryana",
+    "Punjab",
+    "Odisha",
+    "Assam",
+    "Kerala",
+    "Andhra Pradesh",
+    "Chhattisgarh",
+    "Uttarakhand",
+    "Goa",
+    "Himachal Pradesh",
+    "Jammu & Kashmir",
+    "Chandigarh",
+    "Tripura",
+    "Meghalaya",
+    "Manipur",
+    "Nagaland",
+    "Arunachal Pradesh",
+    "Mizoram",
+    "Sikkim",
+    "Puducherry",
+    "Andaman & Nicobar Islands",
+    "Ladakh",
+    "Dadra and Nagar Haveli and Daman and Diu",
+    "Lakshadweep",
   ];
 
   const checkPincode = (pinToCheck?: string) => {
@@ -75,11 +108,17 @@ function PickupCheckoutContent() {
       return;
     }
 
+    // Auto-detect and auto-select state as per PIN code
+    const detectedState = getStateFromPincode(pinStr);
+    if (detectedState) {
+      setSelectedState(detectedState);
+    }
+
     const isServiced = isPincodeServiced(pinStr);
     const details = isServiced ? getPincodeDetails(pinStr) : null;
     if (isServiced && details) {
       setCity(details.city);
-      setSelectedState(details.state);
+      if (details.state) setSelectedState(details.state);
       setServiceStatus("AVAILABLE");
     } else {
       setServiceStatus("UNAVAILABLE");
@@ -89,13 +128,22 @@ function PickupCheckoutContent() {
       pincode: pinStr,
       serviceable: isServiced,
       city: details?.city || city,
-      state: details?.state || selectedState,
+      state: details?.state || detectedState || selectedState,
     }, { eventId: `serviceability_${pinStr}` });
   };
 
   const handlePincodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value.replace(/\D/g, "");
+    const val = e.target.value.replace(/\D/g, "").slice(0, 6);
     setPincode(val);
+
+    // Auto-select state dynamically as customer types PIN code
+    if (val.length >= 2) {
+      const detectedState = getStateFromPincode(val);
+      if (detectedState) {
+        setSelectedState(detectedState);
+      }
+    }
+
     if (val.length === 6) {
       checkPincode(val);
     } else if (serviceStatus !== "IDLE") {
@@ -900,6 +948,9 @@ function PickupCheckoutContent() {
                       required
                       className="w-full px-3 py-2 text-xs bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow font-bold text-brand-black cursor-pointer"
                     >
+                      {selectedState && !ALL_INDIAN_STATES.includes(selectedState) && (
+                        <option value={selectedState}>{selectedState}</option>
+                      )}
                       {ALL_INDIAN_STATES.map((st) => (
                         <option key={st} value={st}>
                           {st}
