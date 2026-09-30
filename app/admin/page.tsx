@@ -198,12 +198,25 @@ export default function AdminDashboardPage() {
   useEffect(() => {
     fetchDashboard(false);
 
-    // 12-second periodic polling for live operational metrics & orders
+    // 40-second periodic polling ONLY when active/visible
     const interval = setInterval(() => {
-      fetchDashboard(true);
-    }, 12000);
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchDashboard(true);
+      }
+    }, 40000);
 
-    return () => clearInterval(interval);
+    const handleVisibilityChange = () => {
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchDashboard(true);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, [fetchDashboard]);
 
   const statCards = stats

@@ -309,7 +309,7 @@ export default function AdminOrdersPage() {
     // 1. Fetch from Database API (Bypass browser GET caching)
     try {
       const token = getAdminToken();
-      const res = await fetch(`/api/v1/admin/orders?limit=500&t=${Date.now()}`, {
+      const res = await fetch(`/api/v1/admin/orders?limit=100&t=${Date.now()}`, {
         cache: "no-store",
         headers: {
           "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -530,12 +530,25 @@ export default function AdminOrdersPage() {
     fetchOrders(false);
     fetchAvailableAgents();
 
-    // 10-second automatic polling for live orders and real-time updates
+    // 30-second polling ONLY when the tab is active/visible
     const pollInterval = setInterval(() => {
-      fetchOrders(true);
-    }, 10000);
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchOrders(true);
+      }
+    }, 30000);
 
-    return () => clearInterval(pollInterval);
+    const handleVisibilityChange = () => {
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchOrders(true);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      clearInterval(pollInterval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, [fetchOrders, fetchAvailableAgents]);
 
   const handleSelectAgent = async (ord: Order, selectedAgentId: string) => {

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { INITIAL_MODELS } from "@/lib/store";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 604800; // Cache on Edge for 7 days
 
 export async function GET(
   req: NextRequest,
@@ -22,29 +22,12 @@ export async function GET(
       ? model.imageUrl
       : fallbackUrl;
 
-  try {
-    const response = await fetch(targetUrl, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      },
-    });
-
-    if (!response.ok) {
-      return NextResponse.redirect(fallbackUrl, 307);
-    }
-
-    const contentType = response.headers.get("content-type") || "image/png";
-    const buffer = await response.arrayBuffer();
-
-    return new NextResponse(buffer, {
-      status: 200,
-      headers: {
-        "Content-Type": contentType,
-        "Cache-Control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400",
-      },
-    });
-  } catch (error) {
-    return NextResponse.redirect(fallbackUrl, 307);
-  }
+  // Immediate permanent redirect with aggressive CDN caching
+  // Bypasses Vercel compute buffer & eliminates Fast Origin Transfer egress
+  return NextResponse.redirect(targetUrl, {
+    status: 308,
+    headers: {
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    },
+  });
 }

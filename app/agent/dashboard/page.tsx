@@ -359,8 +359,10 @@ export default function AgentDashboardPage() {
     }
 
     const interval = setInterval(() => {
-      fetchOrders(true);
-    }, 10000);
+      if (typeof document !== "undefined" && document.visibilityState === "visible") {
+        fetchOrders(true);
+      }
+    }, 35000);
 
     return () => {
       clearInterval(interval);
