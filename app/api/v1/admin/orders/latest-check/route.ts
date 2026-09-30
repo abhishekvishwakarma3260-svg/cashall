@@ -5,6 +5,14 @@ import { formatPickupDateDisplay } from "@/lib/utils/pickup-date";
 
 export const dynamic = "force-dynamic";
 
+interface LatestCheckCache {
+  data: any;
+  timestamp: number;
+}
+
+let latestOrderCache: LatestCheckCache | null = null;
+const LATEST_CHECK_CACHE_TTL = 10000; // 10 seconds
+
 const TEST_PHONE_BLACKLIST = new Set([
   "7604092333",
   "6289477287",
@@ -39,6 +47,16 @@ export async function GET(req: NextRequest) {
   try {
     const user = await verifyAuthToken(req);
     requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+
+    // Fast in-memory cache check to eliminate Supabase egress on repeated admin polls
+    if (latestOrderCache && Date.now() - latestOrderCache.timestamp < LATEST_CHECK_CACHE_TTL) {
+      return NextResponse.json(latestOrderCache.data, {
+        headers: {
+          "Cache-Control": "public, s-maxage=10, stale-while-revalidate=20",
+          "X-Cache": "HIT",
+        },
+      });
+    }
 
     const latestOrder = await prisma.order.findFirst({
       where: {
@@ -96,7 +114,12 @@ export async function GET(req: NextRequest) {
     });
 
     if (!latestOrder) {
-      return NextResponse.json({ success: true, order: null });
+      const emptyRes = { success: true, order: null };
+      return NextResponse.json(emptyRes, {
+        headers: {
+          "Cache-Control": "public, s-maxage=10, stale-while-revalidate=20",
+        },
+      });
     }
 
     const customerPhone = latestOrder.user?.phone || "";
@@ -116,7 +139,7 @@ export async function GET(req: NextRequest) {
 
     const isRealOrder = checkIsRealOrder(customerPhone, customerName, latestOrder.orderNumber);
 
-    return NextResponse.json({
+    const responseData = {
       success: true,
       order: {
         id: latestOrder.id,
@@ -134,13 +157,31 @@ export async function GET(req: NextRequest) {
         pincode: latestOrder.address?.pincode || "",
         isRealOrder,
       },
+    };
+
+    latestOrderCache = {
+      data: responseData,
+      timestamp: Date.now(),
+    };
+
+    return NextResponse.json(responseData, {
+      headers: {
+        "Cache-Control": "public, s-maxage=10, stale-while-revalidate=20",
+        "X-Cache": "MISS",
+      },
     });
   } catch (error: any) {
     console.error("Latest order check error:", error);
     const status = error.statusCode || 500;
     return NextResponse.json(
       { success: false, error: error.message || "Failed to fetch latest order" },
-      { status }
+      {
+        status,
+        headers: {
+          // Block unauthenticated background loops at Edge CDN for 30 seconds
+          "Cache-Control": "public, s-maxage=30, max-age=30",
+        },
+      }
     );
   }
 }

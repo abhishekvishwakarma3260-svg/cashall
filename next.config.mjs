@@ -106,6 +106,33 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/api/v1/agent/orders',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=15, stale-while-revalidate=30',
+          },
+        ],
+      },
+      {
+        source: '/api/v1/admin/orders/latest-check',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=10, stale-while-revalidate=20',
+          },
+        ],
+      },
+      {
+        source: '/api/v1/partner/orders',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=15, stale-while-revalidate=30',
+          },
+        ],
+      },
     ];
   },
   async redirects() {

@@ -67,8 +67,15 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     isSigned: false,
   }));
 
-  return NextResponse.json({
-    success: true,
-    orders,
-  });
+  return NextResponse.json(
+    {
+      success: true,
+      orders,
+    },
+    {
+      headers: {
+        "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+      },
+    }
+  );
 });

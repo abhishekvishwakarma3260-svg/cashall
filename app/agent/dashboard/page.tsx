@@ -253,13 +253,19 @@ export default function AgentDashboardPage() {
     }
   }, []);
 
+  const agentSessionRef = useRef<any>(null);
+  agentSessionRef.current = agentSession;
+
   const fetchOrders = useCallback(async (isSilent = false) => {
+    const session = agentSessionRef.current;
+    const agentId = session?.id || "";
+    const phone = session?.phone || "";
+    const name = encodeURIComponent(session?.name || "");
+    if (!agentId && !phone && !session?.name) return;
+
     if (!isSilent) setLoading(true);
     try {
-      const agentId = agentSession?.id || "";
-      const phone = agentSession?.phone || "";
-      const name = encodeURIComponent(agentSession?.name || "");
-      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}&force=true&t=${Date.now()}`);
+      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}`);
       const json = await res.json();
       if (json.success && Array.isArray(json.orders)) {
         const fetchedOrders: AgentOrder[] = json.orders;
@@ -337,17 +343,18 @@ export default function AgentDashboardPage() {
     } finally {
       if (!isSilent) setLoading(false);
     }
-  }, [agentSession, handleTriggerAlarm, addLiveNotification]);
+  }, [handleTriggerAlarm, addLiveNotification]);
 
+  // Initial load when agent session is ready
   useEffect(() => {
-    if (agentSession) {
+    if (agentSession?.id || agentSession?.phone || agentSession?.name) {
       fetchOrders();
     }
-  }, [agentSession, fetchOrders]);
+  }, [agentSession?.id, agentSession?.phone, agentSession?.name, fetchOrders]);
 
-  // 10-second background polling for live assigned leads and real-time updates
+  // Background polling for live assigned leads (45s interval, only when tab is active/visible)
   useEffect(() => {
-    if (!agentSession) return;
+    if (!agentSession?.id && !agentSession?.phone && !agentSession?.name) return;
 
     const handleVisibilityChange = () => {
       if (typeof document !== "undefined" && document.visibilityState === "visible") {
@@ -362,7 +369,7 @@ export default function AgentDashboardPage() {
       if (typeof document !== "undefined" && document.visibilityState === "visible") {
         fetchOrders(true);
       }
-    }, 35000);
+    }, 45000);
 
     return () => {
       clearInterval(interval);
@@ -370,7 +377,7 @@ export default function AgentDashboardPage() {
         document.removeEventListener("visibilitychange", handleVisibilityChange);
       }
     };
-  }, [agentSession, fetchOrders]);
+  }, [agentSession?.id, agentSession?.phone, agentSession?.name, fetchOrders]);
 
   // Clean up alarm on unmount
   useEffect(() => {

@@ -21,20 +21,17 @@ export async function GET(req: NextRequest) {
     const agentId = searchParams.get("agentId");
     const phone = searchParams.get("phone");
     const name = searchParams.get("name");
-    const force = searchParams.get("force") === "true";
 
-    // Fast cache check (bypasses Supabase database queries and saves 99% CPU/Egress)
-    const cacheKey = `${agentId || ""}_${phone || ""}_${name || ""}`;
-    if (!force) {
-      const cached = agentOrdersCache.get(cacheKey);
-      if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
-        return NextResponse.json(cached.data, {
-          headers: {
-            "Cache-Control": "private, max-age=10, stale-while-revalidate=15",
-            "X-Cache": "HIT",
-          },
-        });
-      }
+    // Robust server-side cache (bypasses Supabase database queries and prevents edge/origin quota waste)
+    const cacheKey = `${agentId || ""}_${phone || ""}_${name || ""}`.toLowerCase().trim();
+    const cached = agentOrdersCache.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+      return NextResponse.json(cached.data, {
+        headers: {
+          "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+          "X-Cache": "HIT",
+        },
+      });
     }
 
     let targetAgentUser: any = null;
@@ -107,10 +104,17 @@ export async function GET(req: NextRequest) {
     // STRICT ISOLATION FILTERING:
     // If no agent identification criteria is provided or matched, return an empty array (0 orders).
     if (whereOrConditions.length === 0) {
-      return NextResponse.json({
-        success: true,
-        orders: [],
-      });
+      return NextResponse.json(
+        {
+          success: true,
+          orders: [],
+        },
+        {
+          headers: {
+            "Cache-Control": "public, s-maxage=30, max-age=30",
+          },
+        }
+      );
     }
 
     const where: any = {
@@ -258,7 +262,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        "Cache-Control": "private, max-age=10, stale-while-revalidate=15",
+        "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
         "X-Cache": "MISS",
       },
     });
