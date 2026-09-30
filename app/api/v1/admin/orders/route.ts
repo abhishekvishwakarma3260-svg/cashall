@@ -10,7 +10,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
 
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page") || "1", 10);
-  const limit = Math.min(parseInt(searchParams.get("limit") || "60", 10), 100);
+  const limit = Math.min(parseInt(searchParams.get("limit") || "250", 10), 1000);
   const status = searchParams.get("status");
   const query = searchParams.get("query");
 

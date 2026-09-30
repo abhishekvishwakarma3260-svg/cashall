@@ -309,7 +309,7 @@ export default function AdminOrdersPage() {
     // 1. Fetch from Database API (Bypass browser GET caching)
     try {
       const token = getAdminToken();
-      const res = await fetch(`/api/v1/admin/orders?limit=100&t=${Date.now()}`, {
+      const res = await fetch(`/api/v1/admin/orders?limit=500&t=${Date.now()}`, {
         cache: "no-store",
         headers: {
           "Cache-Control": "no-cache, no-store, must-revalidate",
