@@ -4,7 +4,10 @@ const token = "vcp_5anknGNMa7RyBhYHUyyCl7dfENDpWS5XZ0A2DjtOQDz6h9Kg7N0GgJ8R";
 const projectId = "prj_TwjxxPl7JfESsWNQ1qAVXBawZ0M2";
 const teamId = "team_dqUGL0KqFNWEzRNav2uBQmJN";
 
-const envContent = fs.readFileSync(".env", "utf8");
+const envFilePath = fs.existsSync(".env.local") ? ".env.local" : ".env";
+console.log(`Reading environment variables from ${envFilePath}...`);
+
+const envContent = fs.readFileSync(envFilePath, "utf8");
 const lines = envContent.split(/\r?\n/);
 const envVars = [];
 
@@ -23,32 +26,45 @@ for (const line of lines) {
   }
 }
 
-console.log(`Uploading ${envVars.length} environment variables to Vercel...`);
+// 1. Fetch current envs on Vercel
+const getRes = await fetch(`https://api.vercel.com/v9/projects/${projectId}/env?teamId=${teamId}`, {
+  headers: { Authorization: `Bearer ${token}` }
+});
+const currentData = await getRes.json();
+const currentEnvs = currentData.envs || [];
+console.log(`Found ${currentEnvs.length} existing envs on Vercel.`);
 
 for (const { key, value } of envVars) {
-  try {
-    const res = await fetch(`https://api.vercel.com/v10/projects/${projectId}/env?teamId=${teamId}`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        key,
-        value,
-        type: "encrypted",
-        target: ["production", "preview", "development"],
-      }),
+  const existing = currentEnvs.find(e => e.key === key);
+
+  if (existing) {
+    // Delete and recreate to ensure clean encryption & all targets
+    await fetch(`https://api.vercel.com/v9/projects/${projectId}/env/${existing.id}?teamId=${teamId}`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${token}` }
     });
-    const json = await res.json();
-    if (res.ok) {
-      console.log(`✓ Added ${key}`);
-    } else {
-      console.warn(`! ${key}:`, json.error?.message || json);
-    }
-  } catch (err) {
-    console.error(`Error uploading ${key}:`, err.message);
+  }
+
+  const res = await fetch(`https://api.vercel.com/v10/projects/${projectId}/env?teamId=${teamId}`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      key,
+      value,
+      type: "encrypted",
+      target: ["production", "preview", "development"],
+    }),
+  });
+
+  if (res.ok) {
+    console.log(`✓ Synced ${key}`);
+  } else {
+    const err = await res.json();
+    console.warn(`! Failed ${key}:`, err.error?.message || err);
   }
 }
 
-console.log("Environment variable upload complete!");
+console.log("Environment variable synchronization complete!");
