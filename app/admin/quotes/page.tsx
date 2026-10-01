@@ -150,17 +150,29 @@ export default function AdminQuotesPage() {
 
   const handleDownloadCSV = () => {
     if (filteredQuotes.length === 0) return;
-    const headers = ["Quote ID", "Customer Name", "Customer Phone", "Device Purchased", "Estimated Price (INR)", "Scheduled Visit", "Booking Status", "Generated Date & Time"];
-    const rows = filteredQuotes.map((q) => [
-      q.quoteNumber,
-      `"${(q.customerName || "Customer Lead").replace(/"/g, '""')}"`,
-      q.customerPhone || "—",
-      `"${q.deviceName.replace(/"/g, '""')}"`,
-      q.estimatedPrice,
-      q.pickupDate ? `"${q.pickupDate} (${q.pickupTimeSlot || "Standard"})"` : "Not Scheduled",
-      q.status,
-      `"${new Date(q.createdAt).toLocaleString("en-IN")}"`,
-    ]);
+    const headers = ["Quote ID", "Customer Name", "Customer Phone", "Device Purchased", "Estimated Price (INR)", "Scheduled Visit", "Booking Status", "Generated Date", "Generated Time"];
+    const rows = filteredQuotes.map((q) => {
+      let genDate = "—";
+      let genTime = "—";
+      try {
+        const d = new Date(q.createdAt);
+        if (!isNaN(d.getTime())) {
+          genDate = d.toLocaleDateString("en-IN", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Asia/Kolkata" });
+          genTime = d.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: true, timeZone: "Asia/Kolkata" });
+        }
+      } catch {}
+      return [
+        q.quoteNumber,
+        `"${(q.customerName || "Customer Lead").replace(/"/g, '""')}"`,
+        q.customerPhone || "—",
+        `"${q.deviceName.replace(/"/g, '""')}"`,
+        q.estimatedPrice,
+        q.pickupDate ? `"${q.pickupDate} (${q.pickupTimeSlot || "Standard"})"` : "Not Scheduled",
+        q.status,
+        `"${genDate}"`,
+        `"${genTime}"`,
+      ];
+    });
     const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map((e) => e.join(","))].join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");

@@ -151,10 +151,19 @@ export default function Ps5RentalPage() {
   // Submission State
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [userLocationState, setUserLocationState] = useState<string>("");
 
   // PRE-FILL CUSTOMER & ADDRESS DETAILS FROM PREVIOUS ORDERS/RENTALS
   React.useEffect(() => {
     if (typeof window !== "undefined") {
+      try {
+        const storedLoc = localStorage.getItem("cashall_location");
+        if (storedLoc) {
+          const parsed = JSON.parse(storedLoc);
+          if (parsed?.state) setUserLocationState(parsed.state);
+        }
+      } catch {}
+
       const storedUser = localStorage.getItem("cashall_user");
       let currentCleanPhone = "";
 
@@ -322,6 +331,11 @@ export default function Ps5RentalPage() {
       return;
     }
 
+    if (pincode && !/^(70|71|72|73|74)/.test(pincode.trim())) {
+      setError("⚠️ PS5 Console Rental is currently available exclusively across Kolkata & West Bengal pincodes (700001–749999). For device resale, all states are supported.");
+      return;
+    }
+
     setSubmitting(true);
     setError("");
 
@@ -464,6 +478,20 @@ export default function Ps5RentalPage() {
             </div>
           </div>
         </div>
+
+        {userLocationState && !userLocationState.toLowerCase().includes("west bengal") && !userLocationState.toLowerCase().includes("bengal") && (
+          <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-amber-200 flex items-start gap-3 shadow-lg">
+            <AlertTriangle className="w-5 h-5 text-brand-yellow shrink-0 mt-0.5" />
+            <div className="text-xs sm:text-sm">
+              <span className="font-black text-brand-yellow">Notice for {userLocationState} visitors:</span> PS5 Console Rental is currently available exclusively across <strong>Kolkata &amp; West Bengal</strong>. If you are looking to sell your old phone, laptop, or tablet, our doorstep buyback service is fully active in <strong>{userLocationState}</strong>!
+              <div className="mt-2">
+                <Link href="/sell" className="inline-flex items-center gap-1 font-black text-brand-yellow underline hover:text-yellow-400">
+                  Sell Your Device in {userLocationState} instead &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
 
         <form onSubmit={handleBooking} className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* LEFT COLUMN: CUSTOMIZATION & DETAILS */}

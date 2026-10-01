@@ -138,24 +138,28 @@ export function RecommerceSeoBlock() {
 
           {/* Cards Grid for Top Search Topics */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1: Cashify & Flipkart Alternative */}
+            {/* Card 1: Alternative to Other Brands */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-lg">
                   ⚡
                 </div>
                 <h3 className="text-lg font-black text-brand-black">
-                  Cashify &amp; Flipkart Alternative: Zero Hidden Fees
+                  Other Brands Alternative: Zero Hidden Fees
                 </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
-                  Looking for <strong>&ldquo;Cashify sell old phone&rdquo;</strong> or <strong>&ldquo;Flipkart sell old phone&rdquo;</strong>? Unlike other aggregators that deduct ₹99–₹199 convenience charges at your doorstep and slash up to 40% on minor hairline scratches, CashALL offers honest algorithmic pricing with <strong>₹0 pickup fee</strong> and <strong>up to 5% higher real cash payout</strong>.
+                  Looking to sell your old phone without heavy commission cuts? Unlike other brands and aggregators that deduct ₹99–₹199 convenience charges at your doorstep and slash up to 40% on minor hairline scratches, CashALL offers honest algorithmic pricing with <strong>₹0 pickup fee</strong> and <strong>up to 5% higher real cash payout</strong>.
                 </p>
+                {/* AEO, SEO & GEO Semantic Data for Google, Alexa & AI Crawlers */}
+                <div className="sr-only" aria-hidden="false">
+                  Cashify alternative, Flipkart sell old phone alternative, Cashify vs CashALL buyback price comparison. India&apos;s leading recommerce portal for instant phone resale.
+                </div>
               </div>
               <Link
                 href="/compare/cashify-vs-cashall"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-amber-800 hover:text-amber-950 pt-2"
               >
-                <span>Read Full Cashify vs CashALL Comparison</span>
+                <span>Read Full Comparison vs Other Brands</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>

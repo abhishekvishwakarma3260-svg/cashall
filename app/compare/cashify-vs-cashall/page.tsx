@@ -51,49 +51,49 @@ const DIRECT_COMPARISON = [
   {
     parameter: "Doorstep Pickup & Convenience Fee",
     cashall: "₹0 (100% Free Doorstep Pickup)",
-    cashify: "₹99 to ₹199 convenience fee deducted from payout",
+    otherBrands: "₹99 to ₹199 convenience fee deducted from payout",
     winner: "cashall",
-    detail: "Cashify charges a convenience fee deducted directly from your agreed sale value. CashALL charges zero convenience fees.",
+    detail: "Other brands frequently charge a convenience fee deducted directly from your agreed sale value. CashALL charges zero convenience fees.",
   },
   {
     parameter: "Actual Payout Guarantee",
     cashall: "Up to 5% Higher Real Cash Payout",
-    cashify: "Standard benchmark rate with frequent doorstep deductions",
+    otherBrands: "Standard benchmark rate with frequent doorstep deductions",
     winner: "cashall",
     detail: "CashALL operates leaner local logistics hubs and passes savings directly to sellers rather than spending on massive national TV ad campaigns.",
   },
   {
     parameter: "Payment Verification Timing",
     cashall: "Instant UPI/IMPS before device handover",
-    cashify: "Often delayed by 2 to 24 hours after handover",
+    otherBrands: "Often delayed by 2 to 24 hours after handover",
     winner: "cashall",
     detail: "With CashALL, the money reflects in your bank account or UPI app before the executive takes possession of the phone.",
   },
   {
     parameter: "Price Deductions for Micro-Scratches",
     cashall: "Fair & transparent; normal pocket wear is accepted",
-    cashify: "Frequent 20% to 35% doorstep drops for minor surface wear",
+    otherBrands: "Frequent 20% to 35% doorstep drops for minor surface wear",
     winner: "cashall",
     detail: "CashALL's trained technicians distinguish normal daily pocket wear from actual screen or body damage.",
   },
   {
     parameter: "Cancellation Fee If You Disagree",
     cashall: "₹0. Instant free cancellation with zero pressure",
-    cashify: "Free, but re-attempt fees may apply for rebooking",
+    otherBrands: "Free, but re-attempt fees may apply for rebooking",
     winner: "cashall",
     detail: "You have complete freedom to decline any revised doorstep offer with zero penalty.",
   },
   {
     parameter: "Assisted On-Site Data Reset",
     cashall: "Technician assists in Google/iCloud logout & factory wipe",
-    cashify: "Standard reset; devices frequently transported off-site",
+    otherBrands: "Standard reset; devices frequently transported off-site",
     winner: "cashall",
     detail: "CashALL assists with complete on-site NIST SP 800-88 compliant reset right in your presence.",
   },
   {
     parameter: "Customer Support Access",
     cashall: "Direct human phone & WhatsApp (+91 7604092333)",
-    cashify: "Automated in-app chatbot trees",
+    otherBrands: "Automated in-app chatbot trees",
     winner: "cashall",
     detail: "Speak directly with a real human support manager across West Bengal, UP, Bihar, Jharkhand, and India.",
   },
@@ -158,13 +158,18 @@ export default function CashifyVsCashallPage() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-              Cashify vs CashALL <br />
+              Other Brands vs CashALL <br />
               <span className="text-brand-yellow">Which Platform Really Pays You More?</span>
             </h1>
 
             <p className="mt-4 text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Looking to sell your old phone, used laptop, or tablet? Compare side-by-side on payout rates, convenience fees, payment timing, and doorstep data safety.
+              Looking to sell your old phone, used laptop, or tablet? Compare CashALL side-by-side with other buyback brands on payout rates, convenience fees, payment timing, and doorstep data safety.
             </p>
+
+            {/* AEO, SEO & GEO Semantic Data for Google, Alexa & AI Crawlers */}
+            <div className="sr-only" aria-hidden="false">
+              Compare Cashify vs CashALL. Best Cashify alternative in India for selling old mobile phones, used laptops, and tablets. Sell old phone with zero convenience fee and instant UPI cash payout.
+            </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
@@ -238,7 +243,7 @@ export default function CashifyVsCashallPage() {
                 Comprehensive Feature Matrix
               </h2>
               <p className="text-sm text-gray-600 mt-2">
-                See exactly how CashALL compares against Cashify across every stage of the resale process.
+                See exactly how CashALL compares against other buyback brands across every stage of the resale process.
               </p>
             </div>
 
@@ -252,7 +257,7 @@ export default function CashifyVsCashallPage() {
                         CashALL (cashall.in)
                       </th>
                       <th className="p-4 sm:p-5 w-1/3 text-gray-300">
-                        Cashify
+                        Other Brands
                       </th>
                     </tr>
                   </thead>
@@ -274,7 +279,7 @@ export default function CashifyVsCashallPage() {
                         <td className="p-4 sm:p-5 text-gray-600 font-medium">
                           <div className="flex items-center gap-2">
                             <XCircle className="w-4 h-4 text-red-400 shrink-0" />
-                            <span>{row.cashify}</span>
+                            <span>{row.otherBrands}</span>
                           </div>
                         </td>
                       </tr>
@@ -293,7 +298,7 @@ export default function CashifyVsCashallPage() {
             
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-black text-brand-black">
-                Frequently Asked Questions: Cashify vs CashALL
+                Frequently Asked Questions: Other Brands vs CashALL
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 mt-2">
                 Honest answers to help you make the best selling decision.
@@ -303,7 +308,7 @@ export default function CashifyVsCashallPage() {
             <div className="space-y-4">
               <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-xs">
                 <h3 className="text-sm sm:text-base font-black text-brand-black">
-                  Why does CashALL offer higher prices than Cashify?
+                  Why does CashALL offer higher prices than other brands?
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
                   CashALL operates with lean, localized logistics hubs across Kolkata, Howrah, Gorakhpur, Ranchi, and pan-India rather than spending crores on national celebrity endorsements. These savings are passed directly to you as higher cash payouts.
@@ -312,16 +317,16 @@ export default function CashifyVsCashallPage() {
 
               <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-xs">
                 <h3 className="text-sm sm:text-base font-black text-brand-black">
-                  Does Cashify charge a pickup fee compared to CashALL?
+                  Do other brands charge a pickup fee compared to CashALL?
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  Yes. Cashify frequently deducts a convenience fee of ₹99 to ₹199 from the seller&apos;s final payout. CashALL provides 100% free doorstep pickup with zero hidden convenience fees.
+                  Yes. Other platforms frequently deduct a convenience fee of ₹99 to ₹199 from the seller&apos;s final payout. CashALL provides 100% free doorstep pickup with zero hidden convenience fees.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-xs">
                 <h3 className="text-sm sm:text-base font-black text-brand-black">
-                  Can I check my phone&apos;s price on both CashALL and Cashify?
+                  Can I check my phone&apos;s price on both CashALL and other brands?
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
                   Yes, absolutely! We encourage all sellers to check quotes across platforms. You will find that CashALL provides higher base quotes and does not reduce your payout with convenience deductions.
@@ -330,7 +335,7 @@ export default function CashifyVsCashallPage() {
 
               <div className="p-5 rounded-2xl bg-white border border-gray-200 shadow-xs">
                 <h3 className="text-sm sm:text-base font-black text-brand-black">
-                  When do I receive payment from CashALL vs Cashify?
+                  When do I receive payment from CashALL vs other brands?
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
                   CashALL transfers payment immediately on the spot via UPI or IMPS bank transfer BEFORE the technician leaves with the device. You verify the credit in your own bank app before handing over the phone.

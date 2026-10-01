@@ -80,12 +80,34 @@ export default function AdminLedgerPage() {
     );
   });
 
+  const parseDateTimeParts = (str?: string | null) => {
+    if (!str || str === "—") return { date: "—", time: "—" };
+    try {
+      if (str.includes(",")) {
+        const [d, ...t] = str.split(",");
+        return { date: d.trim(), time: t.join(",").trim() };
+      }
+      const d = new Date(str);
+      if (!isNaN(d.getTime())) {
+        return {
+          date: d.toLocaleDateString("en-IN", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Asia/Kolkata" }),
+          time: d.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: true, timeZone: "Asia/Kolkata" }),
+        };
+      }
+      return { date: str, time: "—" };
+    } catch {
+      return { date: str, time: "—" };
+    }
+  };
+
   const handleDownloadCSV = () => {
     if (filteredEntries.length === 0) return;
     const headers = [
       "Order Number",
-      "Order Placed Date & Time",
-      "Payout Settled Date & Time",
+      "Order Date",
+      "Order Time",
+      "Settled Date",
+      "Settled Time",
       "Customer Name",
       "Customer Phone",
       "Pincode",
@@ -97,21 +119,27 @@ export default function AdminLedgerPage() {
       "Assigned Agent",
       "Order Status",
     ];
-    const rows = filteredEntries.map((item) => [
-      item.orderNumber,
-      `"${item.orderPlacedAt || item.date}"`,
-      `"${item.settledAt || "—"}"`,
-      `"${item.customerName.replace(/"/g, '""')}"`,
-      item.customerPhone,
-      item.pincode,
-      `"${item.address.replace(/"/g, '""')}"`,
-      `"${item.deviceName.replace(/"/g, '""')}"`,
-      item.amountPaid,
-      item.paymentStatus,
-      item.urn,
-      `"${item.agentName.replace(/"/g, '""')}"`,
-      item.status,
-    ]);
+    const rows = filteredEntries.map((item) => {
+      const placed = parseDateTimeParts(item.orderPlacedAt || item.date);
+      const settled = parseDateTimeParts(item.settledAt);
+      return [
+        item.orderNumber,
+        `"${placed.date}"`,
+        `"${placed.time}"`,
+        `"${settled.date}"`,
+        `"${settled.time}"`,
+        `"${item.customerName.replace(/"/g, '""')}"`,
+        item.customerPhone,
+        item.pincode,
+        `"${item.address.replace(/"/g, '""')}"`,
+        `"${item.deviceName.replace(/"/g, '""')}"`,
+        item.amountPaid,
+        item.paymentStatus,
+        item.urn,
+        `"${item.agentName.replace(/"/g, '""')}"`,
+        item.status,
+      ];
+    });
     const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map((e) => e.join(","))].join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");

@@ -81,8 +81,8 @@ const FAQS = [
     a: "Selling your used phone takes 3 simple steps: 1) Select your brand and model, 2) Answer a few quick condition questions to get an instant guaranteed quote, and 3) Schedule a free doorstep pickup. Our field executive inspects the phone at your home and transfers cash to your UPI or bank account before taking the device."
   },
   {
-    q: "Why should I choose CashALL over Cashify or Flipkart Exchange?",
-    a: "Unlike Cashify or Flipkart, CashALL charges ₹0 pickup fees (no ₹99–₹199 convenience charges), offers up to 5% higher base valuations, conducts transparent on-the-spot physical inspection without arbitrary quote-halving, and pays you full cash directly instead of delayed gift cards or exchange vouchers."
+    q: "Why should I choose CashALL over other brands or exchange programs?",
+    a: "Unlike other brands and aggregators, CashALL charges ₹0 pickup fees (no ₹99–₹199 convenience charges), offers up to 5% higher base valuations, conducts transparent on-the-spot physical inspection without arbitrary quote-halving, and pays you full cash directly instead of delayed gift cards or exchange vouchers."
   },
   {
     q: "Is CashALL safe? What happens to my private data?",
@@ -200,7 +200,7 @@ export default function SellUsedPhonePage() {
                     className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-all border border-white/20"
                   >
                     <Scale className="w-4 h-4 text-brand-yellow" />
-                    <span>Cashify vs CashALL</span>
+                    <span>Compare vs Other Brands</span>
                   </Link>
                 </div>
               </div>
@@ -339,7 +339,7 @@ export default function SellUsedPhonePage() {
               Why Sell to CashALL Instead of Others?
             </h2>
             <p className="text-sm text-brand-muted mt-2">
-              See how CashALL compares directly with Cashify, Flipkart, and local shops.
+              See how CashALL compares directly with other brands, e-commerce exchanges, and local shops.
             </p>
           </div>
 
@@ -349,8 +349,8 @@ export default function SellUsedPhonePage() {
                 <tr>
                   <th className="py-4 px-5 font-black">Feature</th>
                   <th className="py-4 px-5 font-black text-brand-yellow">CashALL</th>
-                  <th className="py-4 px-5 font-bold text-gray-300">Cashify</th>
-                  <th className="py-4 px-5 font-bold text-gray-300">Flipkart / Amazon</th>
+                  <th className="py-4 px-5 font-bold text-gray-300">Other Brands</th>
+                  <th className="py-4 px-5 font-bold text-gray-300">Other E-Commerce Platforms</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 font-medium">

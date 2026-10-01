@@ -1024,6 +1024,47 @@ export default function AdminOrdersPage() {
     }
   };
 
+  // Helper functions to cleanly separate Date and Time for CSV export
+  const formatCsvDate = (isoDate?: string | null) => {
+    if (!isoDate) return "—";
+    try {
+      const d = new Date(isoDate);
+      if (isNaN(d.getTime())) return "—";
+      return d.toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        timeZone: "Asia/Kolkata",
+      });
+    } catch {
+      return "—";
+    }
+  };
+
+  const formatCsvTime = (isoDate?: string | null) => {
+    if (!isoDate) return "—";
+    try {
+      const d = new Date(isoDate);
+      if (isNaN(d.getTime())) return "—";
+      return d.toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Kolkata",
+      });
+    } catch {
+      return "—";
+    }
+  };
+
+  const getOrderCompletionIso = (ord: Order) => {
+    if (ord.completedAt) return ord.completedAt;
+    if (["COMPLETED", "PAID", "BILL_GENERATED"].includes(ord.status)) {
+      return ord.updatedAt || ord.createdAt || null;
+    }
+    return null;
+  };
+
   // 1. Export Admin Data CSV (Complete raw operational dataset)
   const handleDownloadAdminDataCSV = () => {
     const targetOrders = filteredOrders.length > 0 || selectedFilter !== "ALL" || searchQuery.trim() ? filteredOrders : orders;
@@ -1033,9 +1074,11 @@ export default function AdminOrdersPage() {
     }
     const headers = [
       "Order Number",
-      "Order Placed Date & Time",
+      "Order Date",
+      "Order Time",
       "Pickup Date & Slot",
-      "Order Completed Date & Time",
+      "Completion Date",
+      "Completion Time",
       "Customer Name",
       "Phone",
       "Email",
@@ -1052,29 +1095,34 @@ export default function AdminOrdersPage() {
       "Cancellation Reason",
       "Payment Status",
     ];
-    const rows = targetOrders.map((ord) => [
-      ord.orderNumber,
-      ord.createdAt ? `"${new Date(ord.createdAt).toLocaleString("en-IN")}"` : "—",
-      `"${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt).replace(/"/g, '""')}"`,
-      ord.completedAt ? `"${new Date(ord.completedAt).toLocaleString("en-IN")}"` : "—",
-      `"${(ord.customerName || "Customer").replace(/"/g, '""')}"`,
-      ord.customerPhone || "—",
-      ord.customerEmail || "—",
-      `"${(ord.location || "—").replace(/"/g, '""')}"`,
-      `"${getOrderPincode(ord)}"`,
-      `"${ord.deviceName.replace(/"/g, '""')}"`,
-      getOrderBoxStatus(ord),
-      ord.imeiNumber || (ord as any).imeiRecords?.[0]?.code || "—",
-      ord.quotedPrice || ord.estimatedPrice || 0,
-      ord.finalPrice || ord.revisedPrice || ord.estimatedPrice || 0,
-      ord.utr && !ord.utr.startsWith("PAID-") && ord.utr !== "623480124575" ? ord.utr : "—",
-      `"${(ord.agentName || "Assigned Agent").replace(/"/g, '""')}"`,
-      ord.status,
-      ["CANCELLED", "REJECTED"].includes(ord.status)
-        ? `"${(ord.cancellationReason || "Order cancelled").replace(/"/g, '""')}"`
-        : "—",
-      ord.paymentStatus || "PAID",
-    ]);
+    const rows = targetOrders.map((ord) => {
+      const completionIso = getOrderCompletionIso(ord);
+      return [
+        ord.orderNumber,
+        `"${formatCsvDate(ord.createdAt)}"`,
+        `"${formatCsvTime(ord.createdAt)}"`,
+        `"${formatPickupDateTimeSlot(ord.pickupDate, ord.pickupTimeSlot, ord.createdAt).replace(/"/g, '""')}"`,
+        `"${formatCsvDate(completionIso)}"`,
+        `"${formatCsvTime(completionIso)}"`,
+        `"${(ord.customerName || "Customer").replace(/"/g, '""')}"`,
+        ord.customerPhone || "—",
+        ord.customerEmail || "—",
+        `"${(ord.location || "—").replace(/"/g, '""')}"`,
+        `"${getOrderPincode(ord)}"`,
+        `"${ord.deviceName.replace(/"/g, '""')}"`,
+        getOrderBoxStatus(ord),
+        ord.imeiNumber || (ord as any).imeiRecords?.[0]?.code || "—",
+        ord.quotedPrice || ord.estimatedPrice || 0,
+        ord.finalPrice || ord.revisedPrice || ord.estimatedPrice || 0,
+        ord.utr && !ord.utr.startsWith("PAID-") && ord.utr !== "623480124575" ? ord.utr : "—",
+        `"${(ord.agentName || "Assigned Agent").replace(/"/g, '""')}"`,
+        ord.status,
+        ["CANCELLED", "REJECTED"].includes(ord.status)
+          ? `"${(ord.cancellationReason || "Order cancelled").replace(/"/g, '""')}"`
+          : "—",
+        ord.paymentStatus || "PAID",
+      ];
+    });
     const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map((e) => e.join(","))].join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
@@ -1094,7 +1142,10 @@ export default function AdminOrdersPage() {
     }
     const headers = [
       "ORDER NUMBER",
-      "ORDER COMPLETED DATE & TIME",
+      "ORDER DATE",
+      "ORDER TIME",
+      "COMPLETION DATE",
+      "COMPLETION TIME",
       "PIN CODE",
       "DEVICE NAME",
       "BOX STATUS",
@@ -1105,21 +1156,27 @@ export default function AdminOrdersPage() {
       "ORDER STATUS",
       "CANCELLATION REASON",
     ];
-    const rows = targetOrders.map((ord) => [
-      ord.orderNumber,
-      ord.completedAt ? `"${new Date(ord.completedAt).toLocaleString("en-IN")}"` : (ord.status === "COMPLETED" && ord.createdAt ? `"${new Date(ord.createdAt).toLocaleString("en-IN")}"` : "—"),
-      `"${getOrderPincode(ord)}"`,
-      `"${(ord.deviceName || "Mobile Device").replace(/"/g, '""')}"`,
-      getOrderBoxStatus(ord),
-      ord.imeiNumber || (ord as any).imeiRecords?.[0]?.code || "—",
-      ord.quotedPrice || ord.estimatedPrice || 0,
-      ord.finalPrice || ord.revisedPrice || ord.estimatedPrice || 0,
-      `"${(ord.agentName && ord.agentName !== "CashALL Logistics" ? ord.agentName : "—").replace(/"/g, '""')}"`,
-      ord.status,
-      ["CANCELLED", "REJECTED"].includes(ord.status)
-        ? `"${(ord.cancellationReason || "Order cancelled").replace(/"/g, '""')}"`
-        : "—",
-    ]);
+    const rows = targetOrders.map((ord) => {
+      const completionIso = getOrderCompletionIso(ord);
+      return [
+        ord.orderNumber,
+        `"${formatCsvDate(ord.createdAt)}"`,
+        `"${formatCsvTime(ord.createdAt)}"`,
+        `"${formatCsvDate(completionIso)}"`,
+        `"${formatCsvTime(completionIso)}"`,
+        `"${getOrderPincode(ord)}"`,
+        `"${(ord.deviceName || "Mobile Device").replace(/"/g, '""')}"`,
+        getOrderBoxStatus(ord),
+        ord.imeiNumber || (ord as any).imeiRecords?.[0]?.code || "—",
+        ord.quotedPrice || ord.estimatedPrice || 0,
+        ord.finalPrice || ord.revisedPrice || ord.estimatedPrice || 0,
+        `"${(ord.agentName && ord.agentName !== "CashALL Logistics" ? ord.agentName : "—").replace(/"/g, '""')}"`,
+        ord.status,
+        ["CANCELLED", "REJECTED"].includes(ord.status)
+          ? `"${(ord.cancellationReason || "Order cancelled").replace(/"/g, '""')}"`
+          : "—",
+      ];
+    });
     const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map((e) => e.join(","))].join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
