@@ -159,6 +159,11 @@ const nextConfig = {
         destination: 'https://www.cashall.in/:path*',
         permanent: true,
       },
+      {
+        source: '/compare/cashify-vs-cashall',
+        destination: '/compare/cashall-vs-other-platforms',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

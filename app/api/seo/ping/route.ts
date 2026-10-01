@@ -13,7 +13,6 @@ export async function GET() {
     `https://${host}/sell/mobile`,
     `https://${host}/sell/laptop`,
     `https://${host}/sell/tablet`,
-    `https://${host}/compare/cashify-vs-cashall`,
     `https://${host}/compare/cashall-vs-other-platforms`,
     `https://${host}/sell-phone-in-kolkata`,
     `https://${host}/sell-phone-in-howrah`,

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "sell old mobile phone",
     "sell old phone near me",
     "where to sell old phone",
-    "cashify sell old phone",
+    "best place to sell old phone",
     "sell old iphone",
     "how to sell old phone"
   ],

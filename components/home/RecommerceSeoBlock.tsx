@@ -150,13 +150,13 @@ export function RecommerceSeoBlock() {
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   Looking to sell your old phone without heavy commission cuts? Unlike other brands and aggregators that deduct ₹99–₹199 convenience charges at your doorstep and slash up to 40% on minor hairline scratches, CashALL offers honest algorithmic pricing with <strong>₹0 pickup fee</strong> and <strong>up to 5% higher real cash payout</strong>.
                 </p>
-                {/* AEO, SEO & GEO Semantic Data for Google, Alexa & AI Crawlers */}
+                {/* AEO, SEO & GEO Semantic Data for Search & AI Crawlers */}
                 <div className="sr-only" aria-hidden="false">
-                  Cashify alternative, Flipkart sell old phone alternative, Cashify vs CashALL buyback price comparison. India&apos;s leading recommerce portal for instant phone resale.
+                  Top online recommerce buyback comparison, trade-in exchange alternative, and doorstep electronics valuation. Instant phone resale with ₹0 convenience fee.
                 </div>
               </div>
               <Link
-                href="/compare/cashify-vs-cashall"
+                href="/compare/cashall-vs-other-platforms"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-amber-800 hover:text-amber-950 pt-2"
               >
                 <span>Read Full Comparison vs Other Brands</span>

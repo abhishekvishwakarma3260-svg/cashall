@@ -34,10 +34,9 @@ export const metadata: Metadata = {
     "how to sell old phone",
     "where can i sell my old phone",
     "best website to sell old phone",
-    "best app to sell old phone",
-    "cashify sell old phone alternative",
+    "best buyback platform alternative",
     "apple trade in alternative",
-    "flipkart sell old phone alternative",
+    "online exchange alternative",
     "sell iphone online",
     "sell samsung phone online",
     "sell oneplus online",
@@ -194,7 +193,7 @@ export default function SellUsedPhonePage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
-                    href="/compare/cashify-vs-cashall"
+                    href="/compare/cashall-vs-other-platforms"
                     className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-all border border-white/20"
                   >
                     <Scale className="w-4 h-4 text-brand-yellow" />

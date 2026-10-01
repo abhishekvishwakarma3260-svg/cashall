@@ -11,7 +11,6 @@ const URLS = [
   `https://${HOST}/sell/mobile`,
   `https://${HOST}/sell/laptop`,
   `https://${HOST}/sell/tablet`,
-  `https://${HOST}/compare/cashify-vs-cashall`,
   `https://${HOST}/compare/cashall-vs-other-platforms`,
   `https://${HOST}/sell-phone-in-kolkata`,
   `https://${HOST}/sell-phone-in-howrah`,

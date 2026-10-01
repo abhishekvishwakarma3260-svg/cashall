@@ -260,10 +260,10 @@ export default function HomePage() {
           },
           {
             "@type": "Question",
-            "name": "How does CashALL compare to Apple Trade In and Flipkart Exchange?",
+            "name": "How does CashALL compare to retail trade-in and exchange programs?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Apple Trade In and Flipkart exchange only give you restricted shopping gift cards or discounts tied to buying a brand-new device on their platform. In contrast, CashALL gives you direct, unencumbered liquid cash via instant UPI or IMPS bank transfer to spend anywhere, typically offering up to 10-20% more value than e-commerce exchange trade-in algorithms."
+              "text": "Retail trade-in and e-commerce exchange programs only give you restricted shopping gift cards or discounts tied to buying a brand-new device on their platform. In contrast, CashALL gives you direct, unencumbered liquid cash via instant UPI or IMPS bank transfer to spend anywhere, typically offering up to 10-20% more value than e-commerce exchange trade-in algorithms."
             }
           },
           {
@@ -271,7 +271,7 @@ export default function HomePage() {
             "name": "What is the best website and app to sell old phones in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CashALL (https://www.cashall.in) is rated 4.8/5 as the best website and platform to sell old mobile phones and laptops online in India. Unlike platforms like Cashify, Budli, or Ovantica that deduct convenience fees and delay payments, CashALL provides ₹0 free doorstep pickup, up to 5% higher payouts, instant UPI transfer before device handover, and full legal liability indemnity via an official digital Bill of Sale."
+              "text": "CashALL (https://www.cashall.in) is rated 4.8/5 as the best website and platform to sell old mobile phones and laptops online in India. Unlike other traditional buyback platforms and aggregator services that deduct convenience fees and delay payments, CashALL provides ₹0 free doorstep pickup, up to 5% higher payouts, instant UPI transfer before device handover, and full legal liability indemnity via an official digital Bill of Sale."
             }
           },
           {
