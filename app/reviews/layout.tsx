@@ -4,7 +4,7 @@ import { CUSTOMER_REVIEWS, REVIEW_STATS } from "@/lib/data/reviewsData";
 export const metadata: Metadata = {
   title: "Customer Reviews & Real Selling Experiences | CashALL",
   description:
-    "Read 2,800+ verified customer reviews for CashALL (Aarna Enterprise). 4.8/5 average rating across Kolkata, Howrah, Gorakhpur, Ranchi, and India. Safe instant UPI payouts, free doorstep inspection, and 100% certified data wipe.",
+    "Read 2,800+ verified customer reviews for CashALL (Aarna Enterprise). 4.8/5 average rating across Kolkata, Howrah, Gorakhpur, Patna, and India. Safe instant UPI payouts, free doorstep inspection, and 100% certified data wipe.",
   alternates: {
     canonical: "https://www.cashall.in/reviews",
   },

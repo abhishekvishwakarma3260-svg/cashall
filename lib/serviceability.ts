@@ -71,12 +71,7 @@ export const BALLIA_PINCODES: string[] = [
   "277001", "277506"
 ];
 
-// 7. Ranchi, Jharkhand (3 PIN codes)
-export const RANCHI_PINCODES: string[] = [
-  "834001", "834002", "834003"
-];
-
-// 8. Patna, Bihar (1 PIN code)
+// 7. Patna, Bihar (1 PIN code)
 export const PATNA_PINCODES: string[] = [
   "800003"
 ];
@@ -123,13 +118,6 @@ export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
     state: "Uttar Pradesh",
     count: BALLIA_PINCODES.length,
     pincodes: BALLIA_PINCODES,
-  },
-  {
-    id: "dist-ranchi",
-    name: "Ranchi",
-    state: "Jharkhand",
-    count: RANCHI_PINCODES.length,
-    pincodes: RANCHI_PINCODES,
   },
   {
     id: "dist-patna",

@@ -72,7 +72,6 @@ const SERVICE_REGIONS = [
   { state: "West Bengal", cities: "Kolkata, Howrah, Hooghly, Barrackpore", eta: "Within 2 to 4 Hours" },
   { state: "Uttar Pradesh", cities: "Gorakhpur, Ballia", eta: "Same Day / 24 Hours" },
   { state: "Bihar", cities: "Patna", eta: "Same Day / 24 Hours" },
-  { state: "Jharkhand", cities: "Ranchi", eta: "Same Day / 24 Hours" },
 ];
 
 const FAQS = [
@@ -126,8 +125,7 @@ export default function SellUsedPhonePage() {
       { "@type": "City", "name": "Kolkata" },
       { "@type": "City", "name": "Howrah" },
       { "@type": "City", "name": "Gorakhpur" },
-      { "@type": "City", "name": "Patna" },
-      { "@type": "City", "name": "Ranchi" }
+      { "@type": "City", "name": "Patna" }
     ],
     "description": "Sell your used smartphone online for highest cash value with free 24h doorstep pickup."
   };

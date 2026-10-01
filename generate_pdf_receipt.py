@@ -136,7 +136,7 @@ elements.append(Spacer(1, 10))
 # --- SELLER, BUYER & ORDER INFO GRID (3-COLUMN) ---
 seller_info = Paragraph(
     "<b>Name:</b> Kundan Kumar Singh<br/>"
-    "<b>Address:</b> Main Road, Ranchi, Jharkhand - 834001<br/>"
+    "<b>Address:</b> Main Road, Patna, Bihar - 800003<br/>"
     "<b>Phone:</b> +91 9876543210<br/>"
     "<b>Paid To Account:</b> Kundan Kumar Singh<br/>"
     "<b>Payment Date:</b> 16 Aug 2026, 9:16 PM",

@@ -106,7 +106,6 @@ export default function HomePage() {
           { "@type": "AdministrativeArea", "name": "West Bengal" },
           { "@type": "AdministrativeArea", "name": "Uttar Pradesh" },
           { "@type": "AdministrativeArea", "name": "Bihar" },
-          { "@type": "AdministrativeArea", "name": "Jharkhand" },
           { "@type": "Country", "name": "India" }
         ]
       },
@@ -280,7 +279,7 @@ export default function HomePage() {
             "name": "Where can I sell my old phone near me with doorstep pickup?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CashALL provides 24-hour free doorstep pickup across Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding regions in West Bengal, Uttar Pradesh (Gorakhpur, Ballia), Bihar (Patna), and Jharkhand (Ranchi). Enter your pincode on CashALL.in to schedule an immediate doorstep evaluation."
+              "text": "CashALL provides 24-hour free doorstep pickup across Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding regions in West Bengal, Uttar Pradesh (Gorakhpur, Ballia), and Bihar (Patna). Enter your pincode on CashALL.in to schedule an immediate doorstep evaluation."
             }
           },
           {

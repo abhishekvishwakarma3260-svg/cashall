@@ -240,7 +240,7 @@ export function RecommerceSeoBlock() {
                   Sell Old Phone Near Me: Free Doorstep Pickup in 24 Hours
                 </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
-                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding across West Bengal, Uttar Pradesh, Bihar, and Jharkhand. Free 24-hour doorstep inspection by verified technicians.
+                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding across West Bengal, Uttar Pradesh, and Bihar. Free 24-hour doorstep inspection by verified technicians.
                 </p>
               </div>
               <Link

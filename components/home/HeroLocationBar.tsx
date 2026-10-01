@@ -8,7 +8,6 @@ const SERVICEABLE_STATES = [
   { state: "West Bengal", city: "Kolkata", tag: "2-4 Hr Doorstep" },
   { state: "Uttar Pradesh", city: "Gorakhpur", tag: "Doorstep Hub" },
   { state: "Bihar", city: "Patna", tag: "Doorstep Hub" },
-  { state: "Jharkhand", city: "Ranchi", tag: "Doorstep Hub" },
 ];
 
 export function HeroLocationBar() {

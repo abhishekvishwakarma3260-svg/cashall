@@ -95,7 +95,7 @@ const DIRECT_COMPARISON = [
     cashall: "Direct human phone & WhatsApp (+91 7604092333)",
     otherBrands: "Automated in-app chatbot trees",
     winner: "cashall",
-    detail: "Speak directly with a real human support manager across West Bengal, UP, Bihar, Jharkhand, and India.",
+    detail: "Speak directly with a real human support manager across West Bengal, UP, Bihar, and India.",
   },
 ];
 
@@ -311,7 +311,7 @@ export default function CashifyVsCashallPage() {
                   Why does CashALL offer higher prices than other brands?
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  CashALL operates with lean, localized logistics hubs across Kolkata, Howrah, Gorakhpur, Ranchi, and pan-India rather than spending crores on national celebrity endorsements. These savings are passed directly to you as higher cash payouts.
+                  CashALL operates with lean, localized logistics hubs across Kolkata, Howrah, Gorakhpur, Patna, and pan-India rather than spending crores on national celebrity endorsements. These savings are passed directly to you as higher cash payouts.
                 </p>
               </div>
 

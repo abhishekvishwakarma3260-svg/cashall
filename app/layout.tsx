@@ -225,7 +225,6 @@ export const metadata: Metadata = {
     "sell old phone Salt Lake",
     "sell old phone New Town",
     "sell old phone Dum Dum",
-    "sell old phone Ranchi",
     "sell old phone Patna",
     "sell old phone Gorakhpur",
     "sell old phone Ballia",

@@ -83043,7 +83043,6 @@ export const INITIAL_PRICING_RULES: PricingRuleData[] = [
 export const INITIAL_SERVICE_STATES: string[] = [
   "West Bengal",
   "Uttar Pradesh",
-  "Jharkhand",
   "Bihar",
 ];
 

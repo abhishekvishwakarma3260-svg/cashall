@@ -68,15 +68,6 @@ const SERVICEABLE_STATES: ServiceableStateConfig[] = [
       { name: "Patna", tag: "Express Doorstep", pincodesSummary: "Patna Central Hub" },
     ],
   },
-  {
-    state: "Jharkhand",
-    badge: "Doorstep Service Active",
-    iconText: "JH",
-    description: "Ranchi City Express Pickup Hub",
-    districts: [
-      { name: "Ranchi", tag: "Express Doorstep", pincodesSummary: "834001, 834002, 834003" },
-    ],
-  },
 ];
 
 export function LocationModal({
@@ -184,7 +175,7 @@ export function LocationModal({
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search state, city or enter 6-digit PIN code (e.g. 700001, 273001, 834001)..."
+                placeholder="Search state, city or enter 6-digit PIN code (e.g. 700001, 273001, 800003)..."
                 className="w-full pl-10 pr-16 py-3 text-xs sm:text-sm font-semibold bg-neutral-900 border border-neutral-700 text-white rounded-xl focus:outline-none focus:border-brand-yellow transition-all placeholder:text-gray-500"
                 autoFocus
               />
@@ -227,7 +218,7 @@ export function LocationModal({
                 <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block font-bold">PIN Code {query} is outside our direct pickup hubs</strong>
-                  <span>Doorstep pickup is currently active in West Bengal, Uttar Pradesh, Bihar, and Jharkhand. Please choose from our active service areas below.</span>
+                  <span>Doorstep pickup is currently active in West Bengal, Uttar Pradesh, and Bihar. Please choose from our active service areas below.</span>
                 </div>
               </div>
             )}
