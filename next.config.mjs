@@ -15,6 +15,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   images: {
+    unoptimized: true,
     minimumCacheTTL: 2592000,
     remotePatterns: [
       {
