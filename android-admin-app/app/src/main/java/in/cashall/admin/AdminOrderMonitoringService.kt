@@ -29,8 +29,8 @@ class AdminOrderMonitoringService : Service() {
         private const val TAG = "AdminOrderService"
         private const val FOREGROUND_NOTIF_ID = 9001
         private const val REAL_ORDER_NOTIF_ID = 9002
-        private const val POLL_INTERVAL_MS = 5000L
-        private const val BASE_URL = "https://cashall.in/api/v1/admin/orders/latest-check"
+        private const val POLL_INTERVAL_MS = 60000L // 60 seconds (prevents CDN flooding)
+        private const val BASE_URL = "https://www.cashall.in/api/v1/admin/orders/latest-check"
     }
 
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())

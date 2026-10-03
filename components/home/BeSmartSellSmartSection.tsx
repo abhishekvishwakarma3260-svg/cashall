@@ -35,37 +35,37 @@ export function BeSmartSellSmartSection() {
         </div>
 
         {/* 5 BLOGS RESPONSIVE GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {BLOG_POSTS.map((post, idx) => (
             <article
               key={post.slug}
-              className={`bg-brand-bg rounded-3xl border border-brand-border p-6 hover:bg-white hover:border-brand-yellow/80 hover:shadow-premium transition-all duration-200 flex flex-col justify-between space-y-4 ${
-                idx === 0 ? "md:col-span-2 lg:col-span-1 border-brand-yellow/50 bg-amber-50/20" : ""
+              className={`bg-white rounded-2xl border border-neutral-200/80 p-6 hover:border-brand-yellow/70 hover:shadow-[0_10px_30px_-5px_rgba(255,212,0,0.18)] transition-all duration-200 flex flex-col justify-between space-y-4 hover:-translate-y-0.5 ${
+                idx === 0 ? "md:col-span-2 lg:col-span-1 border-amber-300/60 bg-amber-50/20" : ""
               }`}
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-black uppercase tracking-wider text-brand-black bg-brand-yellow/30 border border-brand-yellow/60 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100/60 border border-amber-200/70 px-2.5 py-0.5 rounded-full">
                     {post.category}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-[11px] text-brand-muted font-medium">
+                  <span className="inline-flex items-center gap-1 text-[11px] text-neutral-400 font-medium">
                     <Clock className="w-3 h-3" />
                     {post.readTime}
                   </span>
                 </div>
 
                 <Link href={`/${post.slug}`} className="block group">
-                  <h3 className="text-base sm:text-lg font-black text-brand-black group-hover:text-amber-600 transition leading-snug">
+                  <h3 className="text-base font-bold text-neutral-900 group-hover:text-amber-600 transition leading-snug">
                     {post.title}
                   </h3>
                 </Link>
 
-                <p className="text-xs text-brand-muted line-clamp-2 leading-relaxed">
+                <p className="text-xs text-neutral-500 line-clamp-2 leading-relaxed font-normal">
                   {post.excerpt}
                 </p>
 
-                <div className="bg-white/80 border border-brand-border/80 rounded-xl p-2.5 text-[11px] text-neutral-800">
-                  <div className="font-extrabold text-[10px] text-amber-900 uppercase flex items-center gap-1 mb-0.5">
+                <div className="bg-neutral-50 border border-neutral-200/70 rounded-xl p-2.5 text-[11px] text-neutral-700">
+                  <div className="font-bold text-[10px] text-amber-900 uppercase flex items-center gap-1 mb-0.5">
                     <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
                     <span>Key Insight:</span>
                   </div>
@@ -73,15 +73,15 @@ export function BeSmartSellSmartSection() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-brand-border/60 flex items-center justify-between">
-                <span className="text-[11px] text-brand-muted">
+              <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">
+                <span className="text-[11px] text-neutral-400 font-medium">
                   {new Date(post.publishedAt).toLocaleDateString("en-IN", { month: "short", day: "numeric", year: "numeric" })}
                 </span>
                 <Link
                   href={`/${post.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-black text-brand-black hover:text-amber-600 transition"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-neutral-900 hover:text-amber-600 transition"
                 >
-                  <span>Read Post</span>
+                  <span>Read Guide</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

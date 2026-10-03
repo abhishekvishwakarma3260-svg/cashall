@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "AdminMainActivity"
-        private const val ADMIN_DASHBOARD_URL = "https://cashall.in/admin"
+        private const val ADMIN_DASHBOARD_URL = "https://www.cashall.in/admin"
     }
 
     private lateinit var binding: ActivityMainBinding

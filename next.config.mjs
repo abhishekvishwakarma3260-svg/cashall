@@ -112,7 +112,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=15, stale-while-revalidate=30',
+            value: 'public, s-maxage=60, stale-while-revalidate=120',
           },
         ],
       },
@@ -121,7 +121,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=10, stale-while-revalidate=20',
+            value: 'public, s-maxage=60, stale-while-revalidate=120',
           },
         ],
       },
@@ -130,7 +130,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=15, stale-while-revalidate=30',
+            value: 'public, s-maxage=60, stale-while-revalidate=120',
           },
         ],
       },

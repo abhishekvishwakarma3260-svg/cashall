@@ -24,8 +24,8 @@ import java.util.concurrent.TimeUnit
 
 object AutoUpdateManager {
     private const val TAG = "AutoUpdateManager"
-    private const val VERSION_URL = "https://cashall.in/api/v1/app/version"
-    private const val APK_DOWNLOAD_URL = "https://cashall.in/api/v1/download/agent"
+    private const val VERSION_URL = "https://www.cashall.in/api/v1/app/version"
+    private const val APK_DOWNLOAD_URL = "https://www.cashall.in/api/v1/download/agent"
 
     private val httpClient = OkHttpClient.Builder()
         .connectTimeout(15, TimeUnit.SECONDS)

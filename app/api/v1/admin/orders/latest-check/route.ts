@@ -11,7 +11,7 @@ interface LatestCheckCache {
 }
 
 let latestOrderCache: LatestCheckCache | null = null;
-const LATEST_CHECK_CACHE_TTL = 10000; // 10 seconds
+const LATEST_CHECK_CACHE_TTL = 60000; // 60 seconds
 
 const TEST_PHONE_BLACKLIST = new Set([
   "7604092333",
@@ -45,14 +45,30 @@ function checkIsRealOrder(customerPhone: string, customerName: string, orderNumb
 
 export async function GET(req: NextRequest) {
   try {
-    const user = await verifyAuthToken(req);
-    requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+    let isAuthenticatedAdmin = false;
+    try {
+      const user = await verifyAuthToken(req);
+      requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
+      isAuthenticatedAdmin = true;
+    } catch {
+      // If unauthenticated or token expired, return 200 with success: false
+      // so Vercel Edge CDN caches this response and completely eliminates 401 polling storms
+      return NextResponse.json(
+        { success: false, error: "Authentication required", order: null },
+        {
+          status: 200,
+          headers: {
+            "Cache-Control": "public, s-maxage=300, max-age=300, stale-while-revalidate=600",
+          },
+        }
+      );
+    }
 
     // Fast in-memory cache check to eliminate Supabase egress on repeated admin polls
     if (latestOrderCache && Date.now() - latestOrderCache.timestamp < LATEST_CHECK_CACHE_TTL) {
       return NextResponse.json(latestOrderCache.data, {
         headers: {
-          "Cache-Control": "public, s-maxage=10, stale-while-revalidate=20",
+          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
           "X-Cache": "HIT",
         },
       });
@@ -166,7 +182,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        "Cache-Control": "public, s-maxage=10, stale-while-revalidate=20",
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
         "X-Cache": "MISS",
       },
     });
@@ -178,8 +194,8 @@ export async function GET(req: NextRequest) {
       {
         status,
         headers: {
-          // Block unauthenticated background loops at Edge CDN for 30 seconds
-          "Cache-Control": "public, s-maxage=30, max-age=30",
+          // Block unauthenticated background loops at Edge CDN for 5 minutes
+          "Cache-Control": "public, s-maxage=300, max-age=300, stale-while-revalidate=600",
         },
       }
     );

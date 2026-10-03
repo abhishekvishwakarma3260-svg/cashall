@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "CashAllAgentApp"
-        const val AGENT_DASHBOARD_URL = "https://cashall.in/agent/dashboard"
+        const val AGENT_DASHBOARD_URL = "https://www.cashall.in/agent/dashboard"
         var instance: MainActivity? = null
     }
 

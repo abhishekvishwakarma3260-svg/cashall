@@ -40,22 +40,22 @@ export function HeroLocationBar() {
 
   return (
     <>
-      <div className="pt-3 max-w-3xl mx-auto">
-        <div className="p-3 sm:p-3.5 rounded-2xl bg-neutral-900/90 border border-neutral-800 backdrop-blur-sm shadow-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
+      <div className="pt-2 max-w-3xl mx-auto">
+        <div className="p-3 sm:px-4 sm:py-3 rounded-2xl bg-neutral-900/60 border border-neutral-800 backdrop-blur-md shadow-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
           
-          <div className="flex items-center gap-2.5 w-full sm:w-auto">
+          <div className="flex items-center gap-3 w-full sm:w-auto">
             <div className="w-8 h-8 rounded-xl bg-brand-yellow/15 flex items-center justify-center text-brand-yellow shrink-0 border border-brand-yellow/30">
-              <MapPin className="w-4 h-4 animate-bounce" />
+              <MapPin className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+              <div className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
                 Doorstep Resale Service Area
               </div>
-              <div className="text-xs sm:text-sm font-black text-white flex items-center gap-1.5">
+              <div className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
                 <span>{selectedLoc ? `${selectedLoc.state} (${selectedLoc.city})` : "Select Your State"}</span>
                 {selectedLoc && (
-                  <span className="text-[9px] bg-emerald-500/20 text-emerald-400 font-bold px-1.5 py-0.2 rounded border border-emerald-500/30">
-                    Active
+                  <span className="text-[10px] bg-emerald-500/15 text-emerald-400 font-semibold px-1.5 py-0.5 rounded-full border border-emerald-500/30">
+                    Live
                   </span>
                 )}
               </div>
@@ -71,13 +71,13 @@ export function HeroLocationBar() {
                   key={item.state}
                   type="button"
                   onClick={() => handleSelectQuickState(item)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                     isSelected
-                      ? "bg-brand-yellow text-brand-black shadow-sm font-black"
-                      : "bg-neutral-800 text-gray-300 hover:bg-neutral-750 hover:text-white border border-neutral-700/60"
+                      ? "bg-brand-yellow text-brand-black shadow-sm font-extrabold"
+                      : "bg-white/5 text-neutral-300 hover:bg-white/10 hover:text-white border border-white/10"
                   }`}
                 >
-                  {isSelected && <Check className="w-3 h-3 text-brand-black" />}
+                  {isSelected && <Check className="w-3.5 h-3.5 text-brand-black" />}
                   <span>{item.state}</span>
                 </button>
               );
@@ -86,7 +86,7 @@ export function HeroLocationBar() {
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="px-2.5 py-1 rounded-lg text-xs font-bold bg-neutral-800 hover:bg-brand-yellow hover:text-brand-black text-brand-yellow border border-brand-yellow/40 transition-all flex items-center gap-1"
+              className="px-3 py-1.5 rounded-xl text-xs font-bold bg-white/5 hover:bg-brand-yellow hover:text-brand-black text-brand-yellow border border-brand-yellow/30 transition-all flex items-center gap-1"
             >
               <span>{selectedLoc ? "Change" : "Select City"}</span>
               <ChevronDown className="w-3 h-3" />

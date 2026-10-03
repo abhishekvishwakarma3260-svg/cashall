@@ -30,52 +30,46 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-brand-black text-white relative">
+    <section id="how-it-works" className="py-16 sm:py-20 bg-brand-black text-white relative border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 text-brand-yellow text-[11px] font-bold uppercase tracking-wider mb-2.5">
             Simple 4-Step Process
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             How CashALL Works
           </h2>
-          <p className="text-sm text-gray-400 mt-3">
+          <p className="text-xs sm:text-sm text-neutral-400 mt-2 font-normal leading-relaxed">
             Selling your used smartphone shouldn&apos;t be complicated. Here is how we make it effortless.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
           {steps.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.step}
-                className="bg-neutral-900/80 rounded-2xl p-6 border border-neutral-800 hover:border-brand-yellow/60 transition-all duration-300 relative group flex flex-col justify-between"
+                className="bg-neutral-900/60 backdrop-blur-md rounded-2xl p-6 border border-neutral-800/80 hover:border-brand-yellow/50 transition-all duration-300 relative group flex flex-col justify-between hover:-translate-y-0.5"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-brand-yellow text-brand-black flex items-center justify-center font-extrabold shadow-yellowGlow group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-brand-yellow/15 border border-brand-yellow/30 text-brand-yellow flex items-center justify-center font-extrabold group-hover:scale-105 transition-transform">
+                      <Icon className="w-5 h-5 text-brand-yellow" />
                     </div>
-                    <span className="text-3xl font-black text-neutral-700 group-hover:text-brand-yellow/40 transition-colors">
+                    <span className="text-xl font-black text-neutral-700 group-hover:text-brand-yellow/50 transition-colors font-mono">
                       {item.step}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-base font-bold text-white mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">
+                  <p className="text-xs text-neutral-400 leading-relaxed font-normal">
                     {item.description}
                   </p>
                 </div>
-
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-20 text-neutral-700">
-                    →
-                  </div>
-                )}
               </div>
             );
           })}

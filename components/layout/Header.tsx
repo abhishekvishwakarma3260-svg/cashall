@@ -159,34 +159,34 @@ export function Header() {
           </div>
         </div>
       )}
-      <header className="sticky top-0 z-40 bg-brand-black text-white border-b border-brand-dark shadow-md">
+      <header className="sticky top-0 z-40 bg-brand-black/95 backdrop-blur-md text-white border-b border-neutral-800/80 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             
             {/* LEFT LOGO & LOCATION */}
-            <div className="flex items-center space-x-5 sm:space-x-8">
+            <div className="flex items-center space-x-4 sm:space-x-6">
               
-              {/* CASHALL LOGO (RESPONSIVE DYNAMIC SIZING) */}
+              {/* CASHALL LOGO */}
               <Link href="/" className="flex items-center gap-2 group shrink-0">
-                <div className="relative h-10 sm:h-16 md:h-20 w-28 sm:w-48 md:w-64 flex items-center justify-start py-0.5">
+                <div className="relative h-9 sm:h-12 w-28 sm:w-44 flex items-center justify-start py-0.5">
                   <Image
                     src="/logo.png"
                     alt="CashALL Logo"
-                    width={320}
-                    height={90}
-                    className="object-contain object-left h-8 sm:h-16 md:h-20 w-auto transition-transform group-hover:scale-105"
+                    width={240}
+                    height={60}
+                    className="object-contain object-left h-8 sm:h-10 w-auto transition-transform group-hover:scale-105"
                     priority
                   />
                 </div>
               </Link>
 
-              {/* LOCATION SELECTOR BUTTON (HIERARCHICAL FLOW TRIGGER) */}
+              {/* LOCATION SELECTOR BUTTON */}
               <div className="relative hidden md:block">
                 <button
                   onClick={() => setLocationModalOpen(true)}
-                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all shadow-sm ${
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition-all shadow-sm ${
                     selectedLocation
-                      ? "bg-brand-dark/90 border-neutral-800 text-gray-200 hover:text-white hover:border-brand-yellow/50"
+                      ? "bg-neutral-900/80 border-neutral-800 text-neutral-200 hover:text-white hover:border-brand-yellow/50"
                       : "bg-brand-yellow text-brand-black border-brand-yellow font-black animate-pulse"
                   }`}
                 >
@@ -196,14 +196,14 @@ export function Header() {
                       ? `${selectedLocation.state}${selectedLocation.city && selectedLocation.city !== selectedLocation.state ? ` (${selectedLocation.city})` : ""}`
                       : "Select State"}
                   </span>
-                  <ChevronDown className={`w-3 h-3 shrink-0 ${selectedLocation ? "text-gray-400" : "text-brand-black"}`} />
+                  <ChevronDown className={`w-3 h-3 shrink-0 ${selectedLocation ? "text-neutral-400" : "text-brand-black"}`} />
                 </button>
               </div>
 
             </div>
 
             {/* DESKTOP MAIN NAVIGATION */}
-            <nav className="hidden lg:flex items-center space-x-6 text-sm font-semibold text-gray-300">
+            <nav className="hidden lg:flex items-center space-x-6 text-xs sm:text-sm font-semibold text-neutral-300">
               <button
                 onClick={() => setDeviceChoiceOpen(true)}
                 className="hover:text-brand-yellow transition-colors font-bold text-white"
@@ -222,7 +222,7 @@ export function Header() {
               {isWestBengal && (
                 <Link
                   href="/rent/ps5"
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/25 text-blue-300 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
                 >
                   <Gamepad2 className="w-3.5 h-3.5" />
                   <span>Rent PS 5</span>
@@ -231,12 +231,12 @@ export function Header() {
             </nav>
 
             {/* RIGHT ACTION BUTTONS */}
-            <div className="hidden sm:flex items-center space-x-3">
+            <div className="hidden sm:flex items-center space-x-2.5">
               
               {/* SAVED QUOTES CART BUTTON */}
               <button
                 onClick={() => setCartDrawerOpen(true)}
-                className="relative flex items-center gap-2 text-xs font-bold text-gray-200 hover:text-brand-yellow px-3.5 py-2 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-brand-yellow/40 transition-all shadow-sm"
+                className="relative flex items-center gap-2 text-xs font-bold text-neutral-200 hover:text-brand-yellow px-3 py-2 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-brand-yellow/40 transition-all shadow-sm"
                 title="View Saved Quotes Cart"
               >
                 <ShoppingCart className="w-4 h-4 text-brand-yellow" />

@@ -53,48 +53,53 @@ export default function BrandSelectionPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* BREADCRUMB */}
-          <div className="flex items-center gap-2 text-xs font-semibold text-brand-muted mb-6">
+          <div className="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-6">
             <Link href="/" className="hover:text-brand-black">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-brand-black">Sell Mobile</span>
+            <span className="text-brand-black font-bold">Sell Mobile</span>
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-black">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2.5">
+              Select Manufacturer
+            </div>
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
               Choose Your Phone Brand
             </h1>
-            <p className="text-sm text-brand-muted mt-2">
-              Select the manufacturer of the phone you want to sell.
+            <p className="text-xs sm:text-sm text-neutral-500 mt-2 font-normal leading-relaxed">
+              Select the manufacturer of your smartphone to find your exact model.
             </p>
           </div>
 
           {/* SEARCH INPUT */}
           <div className="max-w-md mx-auto mb-10 relative">
-            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search className="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search brand (e.g. Apple, Samsung, OnePlus)"
-              className="w-full pl-12 pr-4 py-3 text-sm font-medium bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow shadow-subtleCard"
+              placeholder="Search brand (e.g. Apple, Samsung, OnePlus)..."
+              className="w-full pl-11 pr-4 py-3 text-sm font-medium bg-white rounded-2xl border border-neutral-200/90 focus:outline-none focus:border-brand-yellow/80 focus:ring-2 focus:ring-brand-yellow/20 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.03)] transition-all"
             />
           </div>
 
           {/* POPULAR BRANDS GRID */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
-                Popular Smartphone Manufacturers
+              <h2 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-4">
+                Supported Smartphone Manufacturers
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
                 {filteredBrands.map((brand) => (
                   <Link
                     key={brand.id}
                     href={`/sell/mobile/${brand.slug}`}
-                    className="bg-white rounded-2xl p-6 border border-brand-border hover:border-brand-yellow hover:shadow-premium transition-all duration-200 text-center group flex flex-col items-center justify-center space-y-3"
+                    className="bg-white rounded-2xl p-5 border border-neutral-200/80 hover:border-brand-yellow/80 hover:shadow-[0_10px_25px_-5px_rgba(255,212,0,0.2)] transition-all duration-200 text-center group flex flex-col items-center justify-center space-y-2.5 hover:-translate-y-0.5"
                   >
-                    <BrandIcon name={brand.name} logoUrl={brand.logoUrl} />
-                    <span className="text-base font-extrabold text-brand-black group-hover:text-black">
+                    <div className="transition-transform group-hover:scale-105">
+                      <BrandIcon name={brand.name} logoUrl={brand.logoUrl} />
+                    </div>
+                    <span className="text-sm font-bold text-neutral-900 group-hover:text-black">
                       {brand.name}
                     </span>
                   </Link>
@@ -103,11 +108,11 @@ export default function BrandSelectionPage() {
             </div>
 
             {filteredBrands.length === 0 && (
-              <div className="bg-white rounded-2xl p-12 text-center border border-brand-border">
+              <div className="bg-white rounded-2xl p-10 text-center border border-neutral-200">
                 <p className="text-sm font-bold text-brand-black">No brands matching &quot;{search}&quot;</p>
                 <button
                   onClick={() => setSearch("")}
-                  className="text-xs font-semibold text-brand-black underline mt-2"
+                  className="text-xs font-semibold text-amber-600 underline mt-2"
                 >
                   Clear search
                 </button>

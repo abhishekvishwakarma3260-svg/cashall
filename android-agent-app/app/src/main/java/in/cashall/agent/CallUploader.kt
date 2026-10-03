@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 object CallUploader {
     private const val TAG = "CashAllCallUploader"
-    private const val BACKEND_URL = "https://cashall.in/api/v1/support/recordings"
+    private const val BACKEND_URL = "https://www.cashall.in/api/v1/support/recordings"
 
     private val httpClient = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)

@@ -13,7 +13,7 @@ interface AgentOrdersCacheEntry {
 
 // In-memory server-side cache for high-frequency agent polling
 const agentOrdersCache = new Map<string, AgentOrdersCacheEntry>();
-const CACHE_TTL_MS = 15000; // 15 seconds cache
+const CACHE_TTL_MS = 60000; // 60 seconds cache
 
 export async function GET(req: NextRequest) {
   try {
@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
     if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
       return NextResponse.json(cached.data, {
         headers: {
-          "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
           "X-Cache": "HIT",
         },
       });
@@ -262,7 +262,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
         "X-Cache": "MISS",
       },
     });

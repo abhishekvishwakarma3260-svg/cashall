@@ -50,7 +50,7 @@ export default function ModelSelectionPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* BREADCRUMB */}
-          <div className="flex items-center gap-2 text-xs font-semibold text-brand-muted mb-6">
+          <div className="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-6">
             <Link href="/" className="hover:text-brand-black">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/sell/mobile" className="hover:text-brand-black">Sell Mobile</Link>
@@ -59,42 +59,42 @@ export default function ModelSelectionPage() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-bold mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2.5">
+              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
               <span>{brand.name} Smartphones</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-black">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
               Sell Your {brand.name} Phone
             </h1>
-            <p className="text-sm text-brand-muted mt-2">
-              Select your exact {brand.name} model to calculate estimated price.
+            <p className="text-xs sm:text-sm text-neutral-500 mt-2 font-normal leading-relaxed">
+              Select your exact {brand.name} model to calculate an instant guaranteed price quote.
             </p>
           </div>
 
           {/* SEARCH MODEL INPUT */}
-          <div className="max-w-md mx-auto mb-10 relative">
-            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+          <div className="max-w-md mx-auto mb-8 relative">
+            <Search className="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={`Search ${brand.name} model (e.g. ${brand.slug === 'apple' ? 'iPhone 15' : 'S24 Ultra'})...`}
-              className="w-full pl-12 pr-4 py-3 text-sm font-medium bg-white rounded-xl border border-brand-border focus:outline-none focus:border-brand-yellow shadow-subtleCard"
+              className="w-full pl-11 pr-4 py-3 text-sm font-medium bg-white rounded-2xl border border-neutral-200/90 focus:outline-none focus:border-brand-yellow/80 focus:ring-2 focus:ring-brand-yellow/20 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.03)] transition-all"
             />
           </div>
 
           {/* SELECT SERIES SECTION */}
           {availableSeries.length > 0 && (
-            <div className="mb-10 bg-white p-5 rounded-2xl border border-brand-border shadow-subtleCard">
+            <div className="mb-8 bg-white p-5 rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.03)]">
               <div className="flex items-center justify-between mb-3">
-                <h2 className="text-sm font-extrabold text-brand-black flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-brand-yellow" />
-                  <span>Select Series</span>
+                <h2 className="text-xs font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Filter by Series</span>
                 </h2>
                 {selectedSeriesId && (
                   <button
                     onClick={() => setSelectedSeriesId(null)}
-                    className="text-xs font-semibold text-brand-muted hover:text-brand-black underline"
+                    className="text-xs font-semibold text-amber-700 hover:text-amber-800 underline"
                   >
                     Clear Filter
                   </button>
@@ -103,10 +103,10 @@ export default function ModelSelectionPage() {
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => setSelectedSeriesId(null)}
-                  className={`px-4 py-2 text-xs font-bold rounded-xl transition-all border ${
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all border ${
                     selectedSeriesId === null
-                      ? "bg-brand-yellow text-brand-black border-brand-yellow shadow-sm"
-                      : "bg-brand-bg text-gray-700 border-gray-200 hover:border-brand-yellow hover:bg-white"
+                      ? "bg-brand-yellow text-brand-black border-brand-yellow shadow-sm font-extrabold"
+                      : "bg-[#FAFAF9] text-neutral-700 border-neutral-200/70 hover:border-brand-yellow/60 hover:bg-white"
                   }`}
                 >
                   All Series
@@ -115,10 +115,10 @@ export default function ModelSelectionPage() {
                   <button
                     key={s.id}
                     onClick={() => setSelectedSeriesId(selectedSeriesId === s.id ? null : s.id)}
-                    className={`px-4 py-2 text-xs font-bold rounded-xl transition-all border ${
+                    className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all border ${
                       selectedSeriesId === s.id
-                        ? "bg-brand-yellow text-brand-black border-brand-yellow shadow-sm"
-                        : "bg-brand-bg text-gray-700 border-gray-200 hover:border-brand-yellow hover:bg-white"
+                        ? "bg-brand-yellow text-brand-black border-brand-yellow shadow-sm font-extrabold"
+                        : "bg-[#FAFAF9] text-neutral-700 border-neutral-200/70 hover:border-brand-yellow/60 hover:bg-white"
                     }`}
                   >
                     {s.name}
@@ -129,7 +129,7 @@ export default function ModelSelectionPage() {
           )}
 
           {/* MODELS GRID */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
             {filteredModels.map((model) => (
               <Link
                 key={model.id}
@@ -144,9 +144,9 @@ export default function ModelSelectionPage() {
                     }, { eventId: `search_${brand.slug}_${search.trim().toLowerCase()}` });
                   }
                 }}
-                className="bg-white rounded-2xl p-4 border border-brand-border hover:border-brand-yellow hover:shadow-premium transition-all duration-200 text-center group flex flex-col justify-between"
+                className="bg-white rounded-2xl p-4 border border-neutral-200/80 hover:border-brand-yellow/80 hover:shadow-[0_10px_25px_-5px_rgba(255,212,0,0.2)] transition-all duration-200 text-center group flex flex-col justify-between hover:-translate-y-0.5"
               >
-                <div className="w-full aspect-square bg-gray-50 rounded-xl mb-3 flex items-center justify-center p-2 border border-gray-100 group-hover:border-brand-yellow/30 relative overflow-hidden">
+                <div className="w-full aspect-square bg-[#FAFAF9] rounded-xl mb-3 flex items-center justify-center p-2.5 border border-neutral-100 group-hover:border-amber-200/50 relative overflow-hidden">
                   <DeviceCardImage
                     src={model.imageUrl}
                     alt={model.name}
@@ -156,7 +156,7 @@ export default function ModelSelectionPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xs sm:text-sm font-extrabold text-brand-black group-hover:text-black leading-snug line-clamp-2 min-h-[2.5rem] flex items-center justify-center text-center">
+                  <h3 className="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-black leading-snug line-clamp-2 min-h-[2.5rem] flex items-center justify-center text-center">
                     {model.name}
                   </h3>
                 </div>
@@ -165,12 +165,12 @@ export default function ModelSelectionPage() {
           </div>
 
           {filteredModels.length === 0 && (
-            <div className="bg-white rounded-2xl p-12 text-center border border-brand-border mt-6">
-              <Smartphone className="w-10 h-10 text-gray-300 mx-auto mb-2" />
+            <div className="bg-white rounded-2xl p-10 text-center border border-neutral-200 mt-6">
+              <Smartphone className="w-8 h-8 text-neutral-300 mx-auto mb-2" />
               <p className="text-sm font-bold text-brand-black">No {brand.name} models matching &quot;{search}&quot;</p>
               <button
                 onClick={() => setSearch("")}
-                className="text-xs font-semibold text-brand-black underline mt-2"
+                className="text-xs font-semibold text-amber-600 underline mt-2"
               >
                 Clear search
               </button>

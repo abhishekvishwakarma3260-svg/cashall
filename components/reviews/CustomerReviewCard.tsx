@@ -36,7 +36,7 @@ export function CustomerReviewCard({ review }: CustomerReviewCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-brand-border p-5 sm:p-6 shadow-subtleCard hover:shadow-premium hover:border-brand-yellow/80 transition-all duration-200 flex flex-col justify-between space-y-4 overflow-hidden relative">
+    <div className="bg-white rounded-2xl border border-neutral-200/80 p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_30px_-6px_rgba(255,212,0,0.18)] hover:border-brand-yellow/70 transition-all duration-200 flex flex-col justify-between space-y-4 overflow-hidden relative">
       <div className="space-y-3.5">
         {/* HEADER: USER INFO & VERIFIED BADGE */}
         <div className="flex items-center gap-3">
