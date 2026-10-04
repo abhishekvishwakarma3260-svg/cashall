@@ -64,41 +64,8 @@ function PickupCheckoutContent() {
 
   const ALL_INDIAN_STATES = [
     "West Bengal",
-    "Bihar",
     "Uttar Pradesh",
-    "Jharkhand",
-    "Delhi",
-    "Maharashtra",
-    "Karnataka",
-    "Tamil Nadu",
-    "Telangana",
-    "Gujarat",
-    "Rajasthan",
-    "Madhya Pradesh",
-    "Haryana",
-    "Punjab",
-    "Odisha",
-    "Assam",
-    "Kerala",
-    "Andhra Pradesh",
-    "Chhattisgarh",
-    "Uttarakhand",
-    "Goa",
-    "Himachal Pradesh",
-    "Jammu & Kashmir",
-    "Chandigarh",
-    "Tripura",
-    "Meghalaya",
-    "Manipur",
-    "Nagaland",
-    "Arunachal Pradesh",
-    "Mizoram",
-    "Sikkim",
-    "Puducherry",
-    "Andaman & Nicobar Islands",
-    "Ladakh",
-    "Dadra and Nagar Haveli and Daman and Diu",
-    "Lakshadweep",
+    "Bihar",
   ];
 
   const checkPincode = (pinToCheck?: string) => {
@@ -782,6 +749,9 @@ function PickupCheckoutContent() {
                         <p className="text-xs text-red-700 mt-0.5 leading-relaxed">
                           Sorry! CashALL doorstep pickup is currently not available for PIN code <strong className="font-mono font-bold underline decoration-red-400">{pincode || "entered"}</strong>.
                         </p>
+                        <p className="text-[11px] text-red-600/90 mt-1 font-semibold">
+                          Notice: Doorstep operations in Ranchi &amp; Jharkhand are completely closed. We only service West Bengal, Bihar, and Gorakhpur/Ballia (UP).
+                        </p>
                       </div>
                     </div>
 
@@ -818,22 +788,16 @@ function PickupCheckoutContent() {
                               </div>
 
                               {isExpanded && (
-                                <div className="mt-2.5 pt-2.5 border-t border-gray-100 max-h-36 overflow-y-auto pr-1">
-                                  <p className="text-[10px] text-gray-400 font-semibold mb-1">Click a PIN code to test/select:</p>
+                                <div className="mt-2.5 pt-2.5 border-t border-gray-100 max-h-32 overflow-y-auto pr-1">
+                                  <p className="text-[10px] text-gray-500 font-medium mb-1.5">Serviceable PIN codes in {dist.name}:</p>
                                   <div className="flex flex-wrap gap-1">
                                     {dist.pincodes.map((pin) => (
-                                      <button
-                                        type="button"
+                                      <span
                                         key={pin}
-                                        onClick={() => {
-                                          setPincode(pin);
-                                          checkPincode(pin);
-                                        }}
-                                        className="px-1.5 py-0.5 text-[10px] font-mono font-bold bg-neutral-100 hover:bg-brand-yellow text-brand-black rounded transition-colors"
-                                        title={`Select ${dist.name} - ${pin}`}
+                                        className="px-1.5 py-0.5 text-[10px] font-mono font-medium bg-neutral-100 text-gray-600 rounded"
                                       >
                                         {pin}
-                                      </button>
+                                      </span>
                                     ))}
                                   </div>
                                 </div>
