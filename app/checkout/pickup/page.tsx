@@ -617,6 +617,44 @@ function PickupCheckoutContent() {
       if (quoteId) {
         removeQuoteFromCart(quoteId);
       }
+
+      // Purge converted quote from Saved Price Quotes in customer portal
+      try {
+        const storedQuotes = JSON.parse(localStorage.getItem("cashall_quotes") || "[]");
+        if (Array.isArray(storedQuotes)) {
+          const targetQId = (quote?.id || quoteId || "").toLowerCase();
+          const targetQNum = (quote?.quoteNumber || "").toUpperCase();
+          const targetQDigits = targetQNum.replace(/\D/g, "");
+          const ordDigits = (createdOrderNum || "").replace(/\D/g, "");
+
+          const cleanedQuotes = storedQuotes.filter((sq: any) => {
+            const sqId = (sq.id || "").toLowerCase();
+            const sqNum = (sq.quoteNumber || "").toUpperCase();
+            const sqDigits = sqNum.replace(/\D/g, "");
+
+            if (targetQId && sqId === targetQId) return false;
+            if (targetQNum && sqNum === targetQNum) return false;
+            if (targetQDigits && sqDigits && targetQDigits === sqDigits) return false;
+            if (ordDigits && sqDigits && (ordDigits === sqDigits || ordDigits.includes(sqDigits) || sqDigits.includes(ordDigits))) return false;
+            return true;
+          });
+          localStorage.setItem("cashall_quotes", JSON.stringify(cleanedQuotes));
+        }
+
+        const latQuote = localStorage.getItem("cashall_latest_quote");
+        if (latQuote) {
+          const parsed = JSON.parse(latQuote);
+          const latId = (parsed.id || "").toLowerCase();
+          const latNum = (parsed.quoteNumber || "").toUpperCase();
+          if (
+            (quote?.id && latId === quote.id.toLowerCase()) ||
+            (quoteId && latId === quoteId.toLowerCase()) ||
+            (quote?.quoteNumber && latNum === quote.quoteNumber.toUpperCase())
+          ) {
+            localStorage.removeItem("cashall_latest_quote");
+          }
+        }
+      } catch (e) {}
     }
 
     // Instant transition — zero artificial wait

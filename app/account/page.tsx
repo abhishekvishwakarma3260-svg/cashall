@@ -13,6 +13,42 @@ import { User, Smartphone, ArrowRight, Clock, UserCheck, Phone, XCircle, Ban, Al
 import { cleanDeviceName } from "@/lib/device";
 import { formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
 
+function isQuoteConvertedToOrder(q: QuoteData, allOrders: OrderData[]): boolean {
+  const qAny = q as any;
+  if (qAny.orderNumber) return true;
+  if (["CONVERTED", "ORDERED", "COMPLETED"].includes(q.status)) return true;
+
+  const qId = (q.id || "").toLowerCase();
+  const qNum = (q.quoteNumber || "").toUpperCase();
+  const qDigits = qNum.replace(/\D/g, "");
+
+  return allOrders.some((o) => {
+    const oAny = o as any;
+    // 1. Direct quoteId match
+    const oQuoteId = (o.quoteId || "").toLowerCase();
+    if (qId && oQuoteId && qId === oQuoteId) return true;
+    if (qNum && oQuoteId && qNum === oQuoteId.toUpperCase()) return true;
+
+    // 2. Order's embedded quote object match
+    if (oAny.quote) {
+      const oQId = (oAny.quote.id || "").toLowerCase();
+      const oQNum = (oAny.quote.quoteNumber || "").toUpperCase();
+      if (qId && oQId && qId === oQId) return true;
+      if (qNum && oQNum && qNum === oQNum) return true;
+    }
+
+    // 3. Match numeric suffix (e.g. CA48469 and CAQ48469 => 48469)
+    const oNum = (o.orderNumber || "").toUpperCase();
+    const oDigits = oNum.replace(/\D/g, "");
+    if (qDigits && oDigits && qDigits.length >= 4 && oDigits.length >= 4) {
+      if (qDigits === oDigits || qDigits.includes(oDigits) || oDigits.includes(qDigits)) {
+        return true;
+      }
+    }
+    return false;
+  });
+}
+
 export default function CustomerAccountPage() {
   const [user, setUser] = useState<{ name: string; phone: string } | null>(null);
   const [orders, setOrders] = useState<OrderData[]>([]);
@@ -103,7 +139,13 @@ export default function CustomerAccountPage() {
           }
         } catch (e) {}
       }
-      setQuotes(localQuotes);
+
+      // Filter out any quotes that already have orders placed in local storage
+      const initialUnbookedQuotes = localQuotes.filter((q) => !isQuoteConvertedToOrder(q, localOrders));
+      setQuotes(initialUnbookedQuotes);
+      if (typeof window !== "undefined" && initialUnbookedQuotes.length !== localQuotes.length) {
+        localStorage.setItem("cashall_quotes", JSON.stringify(initialUnbookedQuotes));
+      }
 
       // 3. Auto-sync local storage orders to PostgreSQL
       if (localOrders.length > 0) {
@@ -120,10 +162,15 @@ export default function CustomerAccountPage() {
           .then((res) => res.json())
           .then((data) => {
             if (data.success && Array.isArray(data.quotes)) {
-              setQuotes(data.quotes);
-              if (typeof window !== "undefined") {
-                localStorage.setItem("cashall_quotes", JSON.stringify(data.quotes));
-              }
+              setQuotes((prevQuotes) => {
+                // Filter against both local orders and any existing orders in state
+                const knownOrders = localOrders;
+                const filtered = data.quotes.filter((q: any) => !isQuoteConvertedToOrder(q, knownOrders));
+                if (typeof window !== "undefined") {
+                  localStorage.setItem("cashall_quotes", JSON.stringify(filtered));
+                }
+                return filtered;
+              });
             }
           })
           .catch((err) => console.warn("Error fetching DB quotes:", err));
@@ -145,6 +192,15 @@ export default function CustomerAccountPage() {
               if (typeof window !== "undefined") {
                 localStorage.setItem("cashall_all_orders", JSON.stringify(finalOrders));
               }
+
+              // Prune any quotes that have an order placed
+              setQuotes((prev) => {
+                const pruned = prev.filter((q) => !isQuoteConvertedToOrder(q, finalOrders));
+                if (typeof window !== "undefined") {
+                  localStorage.setItem("cashall_quotes", JSON.stringify(pruned));
+                }
+                return pruned;
+              });
             } else if (localOrders.length > 0) {
               setOrders(localOrders);
             } else {
@@ -238,6 +294,9 @@ export default function CustomerAccountPage() {
       setIsCancellingQuote(false);
     }
   };
+
+  // Strictly filter out any quotes that have an associated order placed
+  const visibleQuotes = quotes.filter((q) => !isQuoteConvertedToOrder(q, orders));
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-bg text-brand-black">
@@ -394,15 +453,15 @@ export default function CustomerAccountPage() {
             )}
           </div>
 
-          {/* SAVED QUOTES LIST */}
-          {quotes.length > 0 && (
+          {/* SAVED QUOTES LIST (Only unconverted / unbooked quotes) */}
+          {visibleQuotes.length > 0 && (
             <div className="space-y-4 pt-4 border-t border-gray-200">
               <h2 className="text-lg font-black text-brand-black">
-                My Saved Price Quotes ({quotes.length})
+                My Saved Price Quotes ({visibleQuotes.length})
               </h2>
 
               <div className="space-y-3">
-                {quotes.map((q) => {
+                {visibleQuotes.map((q) => {
                   const isCancelled = q.status === "CANCELLED";
                   let deviceName = "Mobile Device";
                   try {

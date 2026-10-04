@@ -20,10 +20,37 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     return NextResponse.json({ success: true, quotes: [] });
   }
 
+  // Also fetch any placed orders for this user to ensure quotes converted into orders are not shown
+  const userOrders = await prisma.order.findMany({
+    where: {
+      deletedAt: null,
+      OR: [
+        { user: { phone: { contains: cleanPhone10 } } },
+        { address: { phone: { contains: cleanPhone10 } } },
+      ],
+    },
+    select: {
+      id: true,
+      orderNumber: true,
+      quoteId: true,
+    },
+  });
+
+  const convertedQuoteIds = new Set<string>();
+  const convertedNumericDigits = new Set<string>();
+
+  userOrders.forEach((o) => {
+    if (o.quoteId) convertedQuoteIds.add(String(o.quoteId).toLowerCase());
+    const digits = (o.orderNumber || "").replace(/\D/g, "");
+    if (digits.length >= 4) convertedNumericDigits.add(digits);
+  });
+
   // Egress protection: take max 50 recent quotes, select specific relation fields
   const quotes = await prisma.quote.findMany({
     where: {
       deletedAt: null,
+      status: { notIn: ["CONVERTED", "ORDERED", "COMPLETED"] },
+      orders: { none: {} },
       OR: [
         { customerPhone: cleanPhone10 },
         { customerPhone: cleanPhone12 },
@@ -31,8 +58,6 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         { breakdownJson: { contains: cleanPhone10 } },
         { selectedAnswersJson: { contains: cleanPhone10 } },
         { user: { phone: { contains: cleanPhone10 } } },
-        { orders: { some: { user: { phone: { contains: cleanPhone10 } } } } },
-        { orders: { some: { address: { phone: { contains: cleanPhone10 } } } } },
       ],
     },
     include: {
@@ -67,7 +92,24 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     take: 50,
   });
 
-  const formattedQuotes = quotes.map((q) => {
+  // Additional filter: guarantee any quote matching a placed order by quoteId or orderNumber digits is excluded
+  const unbookedQuotes = quotes.filter((q) => {
+    if (q.orders && q.orders.length > 0) return false;
+    if (convertedQuoteIds.has(String(q.id).toLowerCase())) return false;
+    if (convertedQuoteIds.has(String(q.quoteNumber).toLowerCase())) return false;
+
+    const qDigits = (q.quoteNumber || "").replace(/\D/g, "");
+    if (qDigits.length >= 4) {
+      for (const ordDigits of convertedNumericDigits) {
+        if (qDigits === ordDigits || qDigits.includes(ordDigits) || ordDigits.includes(qDigits)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  });
+
+  const formattedQuotes = unbookedQuotes.map((q) => {
     let deviceName = q.variant
       ? `${q.variant.model.brand.name} ${q.variant.model.name}${q.variant.storage ? ` (${q.variant.storage})` : ""}`
       : "Mobile Device";
@@ -95,14 +137,6 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       } catch (e) {}
     }
 
-    const relatedOrder = q.orders?.[0];
-    let displayStatus = q.status;
-    if (relatedOrder?.status === "COMPLETED") {
-      displayStatus = "COMPLETED";
-    } else if (relatedOrder) {
-      displayStatus = "ORDERED";
-    }
-
     const brandName = q.variant?.model?.brand?.name || "";
     const modelName = q.variant?.model?.name || "";
     const imageUrl = q.variant?.model?.imageUrl || null;
@@ -121,9 +155,9 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       basePrice: q.basePrice,
       totalDeductions: q.totalDeductions,
       estimatedPrice,
-      status: displayStatus,
-      orderNumber: relatedOrder?.orderNumber || null,
-      orderStatus: relatedOrder?.status || null,
+      status: q.status,
+      orderNumber: null,
+      orderStatus: null,
       createdAt: q.createdAt.toISOString(),
       expiresAt: q.expiresAt.toISOString(),
       customerName: q.customerName || "",
