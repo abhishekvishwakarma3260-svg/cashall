@@ -51,8 +51,8 @@ export function CustomerAuthModal({
     }
   }, [isOpen]);
 
-  const handleSendOtp = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSendOtp = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     const cleanPhone = phoneNumber.replace(/\D/g, "");
     if (cleanPhone.length !== 10) {
       setError("Please enter a valid 10-digit mobile number.");
@@ -66,40 +66,26 @@ export function CustomerAuthModal({
     setLoading(true);
     setError("");
 
-    // DIRECT 1-CLICK INSTANT LOGIN (Until live SMS API key is attached in upcoming days)
-    const userObj = {
-      id: `usr-${cleanPhone}`,
-      name: customerName.trim(),
-      phone: cleanPhone,
-    };
-
-    if (typeof window !== "undefined") {
-      const prevUser = localStorage.getItem("cashall_user");
-      let prevPhone = "";
-      if (prevUser) {
-        try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+    try {
+      const res = await fetch("/api/v1/auth/otp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: cleanPhone, name: customerName.trim() }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        setError(data.message || "Failed to send SMS OTP. Please try again.");
+        setLoading(false);
+        return;
       }
-      if (!prevPhone || prevPhone.replace(/\D/g, "").slice(-10) !== cleanPhone) {
-        clearCrossUserDataOnSwitch(cleanPhone);
-      }
-      localStorage.setItem("cashall_user", JSON.stringify(userObj));
-      document.cookie = `cashall_user_phone=${cleanPhone}; path=/; max-age=31536000`;
-    }
 
-    trackMetaStandardEvent("CompleteRegistration", {
-      status: "success",
-      method: "phone_direct",
-    }, { eventId: `reg_${cleanPhone}` });
-
-    setTimeout(() => {
+      setOtpSent(true);
+      setCountdown(30);
+    } catch (err: any) {
+      setError(err.message || "Network error. Please try again.");
+    } finally {
       setLoading(false);
-      onClose();
-      if (onSuccess) {
-        onSuccess(cleanPhone);
-      } else {
-        router.push("/account");
-      }
-    }, 400);
+    }
   };
 
   const handleVerifyOtp = async (e: React.FormEvent) => {
@@ -109,40 +95,65 @@ export function CustomerAuthModal({
       setError("Please enter a valid 10-digit mobile number.");
       return;
     }
+    if (otpCode.length !== 6) {
+      setError("Please enter the 6-digit OTP code sent via SMS.");
+      return;
+    }
 
     setLoading(true);
     setError("");
 
-    const userObj = {
-      id: `usr-${cleanPhone}`,
-      name: customerName.trim() || "Customer",
-      phone: cleanPhone,
-    };
-
-    if (typeof window !== "undefined") {
-      const prevUser = localStorage.getItem("cashall_user");
-      let prevPhone = "";
-      if (prevUser) {
-        try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+    try {
+      const res = await fetch("/api/v1/auth/otp/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          phone: cleanPhone,
+          otp: otpCode,
+          name: customerName.trim(),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        setError(data.message || "Invalid OTP code. Please check SMS and try again.");
+        setLoading(false);
+        return;
       }
-      if (!prevPhone || prevPhone.replace(/\D/g, "").slice(-10) !== cleanPhone) {
-        clearCrossUserDataOnSwitch(cleanPhone);
+
+      const userObj = data.user || {
+        id: `usr-${cleanPhone}`,
+        name: customerName.trim() || "Customer",
+        phone: cleanPhone,
+      };
+
+      if (typeof window !== "undefined") {
+        const prevUser = localStorage.getItem("cashall_user");
+        let prevPhone = "";
+        if (prevUser) {
+          try { prevPhone = JSON.parse(prevUser).phone || ""; } catch(e) {}
+        }
+        if (!prevPhone || prevPhone.replace(/\D/g, "").slice(-10) !== cleanPhone) {
+          clearCrossUserDataOnSwitch(cleanPhone);
+        }
+        localStorage.setItem("cashall_user", JSON.stringify(userObj));
+        document.cookie = `cashall_user_phone=${cleanPhone}; path=/; max-age=31536000`;
       }
-      localStorage.setItem("cashall_user", JSON.stringify(userObj));
-      document.cookie = `cashall_user_phone=${cleanPhone}; path=/; max-age=31536000`;
-    }
 
-    trackMetaStandardEvent("CompleteRegistration", {
-      status: "success",
-      method: "phone_otp",
-    }, { eventId: `reg_${cleanPhone}` });
+      trackMetaStandardEvent("CompleteRegistration", {
+        status: "success",
+        method: "phone_otp",
+      }, { eventId: `reg_${cleanPhone}` });
 
-    setLoading(false);
-    onClose();
-    if (onSuccess) {
-      onSuccess(cleanPhone);
-    } else {
-      router.push("/account");
+      onClose();
+      if (onSuccess) {
+        onSuccess(cleanPhone);
+      } else {
+        router.push("/account");
+      }
+    } catch (err: any) {
+      setError(err.message || "Failed to verify OTP.");
+    } finally {
+      setLoading(false);
     }
   };
 
