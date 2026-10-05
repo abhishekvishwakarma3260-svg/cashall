@@ -64,6 +64,8 @@ hs_err*.log
 /CashALL-Customer.apk
 database_backups/
 backups/
+database_backup_active_system/
+home_screenshot.png
 cashall-*.json
 *serviceaccount*.json
 
