@@ -3,7 +3,14 @@
 import React, { useState } from "react";
 import { Calendar, Clock, X, CheckCircle2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { getRecordedPickupDate, getPickupDatePresets, formatPickupDateTimeSlot } from "@/lib/utils/pickup-date";
+import {
+  getRecordedPickupDate,
+  getPickupDatePresets,
+  formatPickupDateTimeSlot,
+  getAvailableTimeSlotsForDate,
+  getMinCalendarDateISO,
+  getDefaultPickupDate,
+} from "@/lib/utils/pickup-date";
 
 interface RescheduleModalProps {
   isOpen: boolean;
@@ -23,18 +30,22 @@ export function RescheduleModal({
   onClose,
   orderId = "",
   orderNumber = "",
-  currentDate = "Today",
-  currentTimeSlot = "1 PM - 4 PM",
+  currentDate,
+  currentTimeSlot,
   actorRole,
   actorName,
   allowInputOrder = false,
   onSuccess,
 }: RescheduleModalProps) {
   const [inputOrderNumber, setInputOrderNumber] = useState(orderNumber || orderId || "");
-  const [selectedDate, setSelectedDate] = useState(() => getRecordedPickupDate(currentDate || "Tomorrow"));
+  const [selectedDate, setSelectedDate] = useState(() => getRecordedPickupDate(currentDate || getDefaultPickupDate()));
   const [isCustomDate, setIsCustomDate] = useState(false);
   const [customDateInput, setCustomDateInput] = useState("");
-  const [selectedSlot, setSelectedSlot] = useState(currentTimeSlot || "1 PM - 4 PM");
+  const [selectedSlot, setSelectedSlot] = useState(() => {
+    const slots = getAvailableTimeSlotsForDate(currentDate || getDefaultPickupDate());
+    if (currentTimeSlot && slots.includes(currentTimeSlot)) return currentTimeSlot;
+    return slots[0] || "10 AM - 1 PM";
+  });
   const [reason, setReason] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -46,9 +57,17 @@ export function RescheduleModal({
     }
   }, [orderNumber, orderId]);
 
+  // Keep selected slot valid when date changes
+  React.useEffect(() => {
+    const valid = getAvailableTimeSlotsForDate(selectedDate);
+    if (valid.length > 0 && !valid.includes(selectedSlot)) {
+      setSelectedSlot(valid[0]);
+    }
+  }, [selectedDate, selectedSlot]);
+
   if (!isOpen) return null;
 
-  const todayISO = new Date().toISOString().split("T")[0];
+  const minDateISO = getMinCalendarDateISO();
 
   const handleCustomDateChange = (val: string) => {
     setCustomDateInput(val);
@@ -227,7 +246,7 @@ export function RescheduleModal({
                 </label>
                 <input
                   type="date"
-                  min={todayISO}
+                  min={minDateISO}
                   value={customDateInput}
                   onChange={(e) => handleCustomDateChange(e.target.value)}
                   className="w-full px-3.5 py-2.5 bg-white border border-brand-border rounded-xl text-xs font-bold text-brand-black focus:outline-none focus:border-brand-yellow shadow-sm cursor-pointer"
@@ -238,25 +257,44 @@ export function RescheduleModal({
 
           {/* TIME WINDOW */}
           <div>
-            <label className="block text-xs font-bold text-brand-black mb-2">
-              Select Time Window
-            </label>
-            <div className="grid grid-cols-3 gap-2">
-              {["10 AM - 1 PM", "1 PM - 4 PM", "4 PM - 7 PM"].map((slot) => (
-                <button
-                  type="button"
-                  key={slot}
-                  onClick={() => setSelectedSlot(slot)}
-                  className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
-                    selectedSlot === slot
-                      ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold"
-                      : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
-                  }`}
-                >
-                  {slot}
-                </button>
-              ))}
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-xs font-bold text-brand-black">
+                Select Time Window
+              </label>
+              {getAvailableTimeSlotsForDate(selectedDate).length > 0 && (
+                <span className="text-[11px] text-gray-500 font-semibold">
+                  {getAvailableTimeSlotsForDate(selectedDate).length} slot{getAvailableTimeSlotsForDate(selectedDate).length > 1 ? "s" : ""} available
+                </span>
+              )}
             </div>
+            {getAvailableTimeSlotsForDate(selectedDate).length > 0 ? (
+              <div className={`grid gap-2 ${
+                getAvailableTimeSlotsForDate(selectedDate).length === 1
+                  ? "grid-cols-1"
+                  : getAvailableTimeSlotsForDate(selectedDate).length === 2
+                  ? "grid-cols-2"
+                  : "grid-cols-3"
+              }`}>
+                {getAvailableTimeSlotsForDate(selectedDate).map((slot) => (
+                  <button
+                    type="button"
+                    key={slot}
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
+                      selectedSlot === slot
+                        ? "border-brand-yellow bg-brand-yellow/20 text-brand-black shadow-sm font-extrabold ring-1 ring-brand-yellow/50"
+                        : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    {slot}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-center text-xs text-amber-900 font-bold">
+                ⚠️ All doorstep pickup slots for today are closed. Please select Tomorrow or another upcoming date above.
+              </div>
+            )}
           </div>
 
           {/* REASON / NOTES */}

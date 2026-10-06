@@ -20,10 +20,13 @@ import {
   Search,
   MessageSquare,
   FileText,
-  Mail,
   Send,
 } from "lucide-react";
-import { getRecordedPickupDate, getPickupDatePresets } from "@/lib/utils/pickup-date";
+import {
+  getRecordedPickupDate,
+  getPickupDatePresets,
+  getAvailableTimeSlotsForDate,
+} from "@/lib/utils/pickup-date";
 import { RescheduleModal } from "@/components/common/RescheduleModal";
 
 interface QuoteLead {
@@ -906,9 +909,9 @@ export default function SupportDashboardPage() {
                     onChange={(e) => setConvertForm({ ...convertForm, pickupTimeSlot: e.target.value })}
                     className="w-full bg-neutral-950 border border-neutral-800 text-white rounded-xl p-2.5 focus:border-yellow-400 focus:outline-none"
                   >
-                    <option value="10 AM - 1 PM">10 AM - 1 PM</option>
-                    <option value="1 PM - 4 PM">1 PM - 4 PM</option>
-                    <option value="4 PM - 7 PM">4 PM - 7 PM</option>
+                    {getAvailableTimeSlotsForDate(convertForm.pickupDate).map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
                   </select>
                 </div>
               </div>

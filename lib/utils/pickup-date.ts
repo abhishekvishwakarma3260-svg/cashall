@@ -269,21 +269,193 @@ export function getRecordedPickupDate(selection: string | Date): string {
   return raw;
 }
 
+export const STANDARD_PICKUP_TIME_SLOTS = ["10 AM - 1 PM", "1 PM - 4 PM", "4 PM - 7 PM"] as const;
+
+export interface ISTTimeComponents {
+  hours: number;
+  minutes: number;
+}
+
 /**
- * Returns preset date options for selection UI (e.g. in Checkout or Reschedule modals)
+ * Returns current time in Asia/Kolkata (IST)
  */
-export function getPickupDatePresets(): { key: string; label: string; subLabel: string; value: string }[] {
+export function getNowISTTime(): ISTTimeComponents {
+  try {
+    const formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Kolkata",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: false,
+    });
+    const formatted = formatter.format(new Date());
+    const parts = formatted.split(":");
+    let hours = parseInt(parts[0], 10);
+    if (hours === 24) hours = 0;
+    const minutes = parseInt(parts[1], 10) || 0;
+    return { hours, minutes };
+  } catch {
+    const now = new Date();
+    return { hours: now.getHours(), minutes: now.getMinutes() };
+  }
+}
+
+/**
+ * Checks if a given pickup date string/Date/components represents TODAY in Asia/Kolkata
+ */
+export function isDateToday(d?: string | Date | ISTDateComponents | null): boolean {
+  if (!d) return false;
+  if (typeof d === "string") {
+    const lower = d.toLowerCase().trim();
+    if (lower === "today" || lower.startsWith("today,")) return true;
+  }
+  const target = d instanceof Date
+    ? parseDateToIST(d)
+    : (typeof d === "object" && "year" in d && "month" in d && "day" in d
+        ? (d as ISTDateComponents)
+        : extractPickupTargetDate(String(d)));
+  if (!target) return false;
+  const today = getNowIST();
+  return target.year === today.year && target.month === today.month && target.day === today.day;
+}
+
+/**
+ * Checks if a given pickup date string/Date/components represents a past date in Asia/Kolkata
+ */
+export function isDateInPast(d?: string | Date | ISTDateComponents | null): boolean {
+  if (!d) return false;
+  const target = d instanceof Date
+    ? parseDateToIST(d)
+    : (typeof d === "object" && "year" in d && "month" in d && "day" in d
+        ? (d as ISTDateComponents)
+        : extractPickupTargetDate(String(d)));
+  if (!target) return false;
+  const today = getNowIST();
+  const targetUtc = Date.UTC(target.year, target.month - 1, target.day);
+  const todayUtc = Date.UTC(today.year, today.month - 1, today.day);
+  return targetUtc < todayUtc;
+}
+
+/**
+ * Returns available time slots for a given date in real-time (IST).
+ * 
+ * Rules for TODAY:
+ * - "10 AM - 1 PM": Available before 11:30 AM (at 12:00 PM it is closed).
+ * - "1 PM - 4 PM": Available before 2:30 PM (14:30) (at 12:00 PM it is available).
+ * - "4 PM - 7 PM": Available before 5:00 PM (17:00) (at 6:16 PM it is closed).
+ * 
+ * For tomorrow / future dates:
+ * - All standard slots are available ("10 AM - 1 PM", "1 PM - 4 PM", "4 PM - 7 PM").
+ * 
+ * For past dates:
+ * - Returns empty array [].
+ */
+export function getAvailableTimeSlotsForDate(
+  dateSelection?: string | Date | ISTDateComponents | null,
+  overrideNowTime?: ISTTimeComponents
+): string[] {
+  if (!dateSelection) {
+    return [...STANDARD_PICKUP_TIME_SLOTS];
+  }
+
+  // If past date, no slots
+  if (isDateInPast(dateSelection)) {
+    return [];
+  }
+
+  // If not today, it's future -> all slots available
+  if (!isDateToday(dateSelection)) {
+    return [...STANDARD_PICKUP_TIME_SLOTS];
+  }
+
+  // It's TODAY: filter according to current IST time
+  const nowTime = overrideNowTime || getNowISTTime();
+  const currentMinutes = nowTime.hours * 60 + nowTime.minutes;
+
+  const slots: string[] = [];
+
+  // 10 AM - 1 PM: cutoff at 11:30 AM (690 minutes)
+  if (currentMinutes < 11 * 60 + 30) {
+    slots.push("10 AM - 1 PM");
+  }
+
+  // 1 PM - 4 PM: cutoff at 2:30 PM (14 * 60 + 30 = 870 minutes)
+  if (currentMinutes < 14 * 60 + 30) {
+    slots.push("1 PM - 4 PM");
+  }
+
+  // 4 PM - 7 PM: cutoff at 5:00 PM (17 * 60 = 1020 minutes)
+  if (currentMinutes < 17 * 60) {
+    slots.push("4 PM - 7 PM");
+  }
+
+  return slots;
+}
+
+/**
+ * Checks if "Today" is still bookable (i.e. has at least 1 open time slot).
+ */
+export function isTodayAvailable(overrideNowTime?: ISTTimeComponents): boolean {
+  return getAvailableTimeSlotsForDate("Today", overrideNowTime).length > 0;
+}
+
+/**
+ * Minimum selectable date for the calendar <input type="date" min="..." />
+ * Returns ISO format 'YYYY-MM-DD' in Asia/Kolkata.
+ * If today has no slots left, returns tomorrow's date to completely block today and previous dates.
+ */
+export function getMinCalendarDateISO(overrideNowTime?: ISTTimeComponents): string {
   const todayIST = getNowIST();
+  const base = isTodayAvailable(overrideNowTime) ? todayIST : addDaysIST(todayIST, 1);
+  const yyyy = String(base.year).padStart(4, "0");
+  const mm = String(base.month).padStart(2, "0");
+  const dd = String(base.day).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+/**
+ * Returns dynamic preset date options for selection UI.
+ * - If Today is available:
+ *   [Today, Tomorrow, Day After]
+ * - If Today has expired (e.g. after 5 PM):
+ *   [Tomorrow, Day After, Day 3]
+ */
+export function getPickupDatePresets(overrideNowTime?: ISTTimeComponents): { key: string; label: string; subLabel: string; value: string }[] {
+  const todayIST = getNowIST();
+  const todayHasSlots = isTodayAvailable(overrideNowTime);
+
+  if (todayHasSlots) {
+    const tomorrowIST = addDaysIST(todayIST, 1);
+    const dayAfterIST = addDaysIST(todayIST, 2);
+    return [
+      {
+        key: "Today",
+        label: "Today",
+        subLabel: `${todayIST.day} ${MONTH_NAMES[todayIST.month - 1]}`,
+        value: `Today, ${formatISTWithOrdinal(todayIST)}`,
+      },
+      {
+        key: "Tomorrow",
+        label: "Tomorrow",
+        subLabel: `${tomorrowIST.day} ${MONTH_NAMES[tomorrowIST.month - 1]}`,
+        value: `Tomorrow, ${formatISTWithOrdinal(tomorrowIST)}`,
+      },
+      {
+        key: "Day After",
+        label: "Day After",
+        subLabel: `${dayAfterIST.day} ${MONTH_NAMES[dayAfterIST.month - 1]}`,
+        value: formatISTWithOrdinal(dayAfterIST),
+      },
+    ];
+  }
+
+  // Today is closed: Presets start from Tomorrow, Day After, Day 3
   const tomorrowIST = addDaysIST(todayIST, 1);
   const dayAfterIST = addDaysIST(todayIST, 2);
+  const day3IST = addDaysIST(todayIST, 3);
+  const d3 = new Date(Date.UTC(day3IST.year, day3IST.month - 1, day3IST.day));
+  const d3Weekday = WEEKDAYS[d3.getUTCDay()];
 
   return [
-    {
-      key: "Today",
-      label: "Today",
-      subLabel: `${todayIST.day} ${MONTH_NAMES[todayIST.month - 1]}`,
-      value: `Today, ${formatISTWithOrdinal(todayIST)}`,
-    },
     {
       key: "Tomorrow",
       label: "Tomorrow",
@@ -296,7 +468,25 @@ export function getPickupDatePresets(): { key: string; label: string; subLabel: 
       subLabel: `${dayAfterIST.day} ${MONTH_NAMES[dayAfterIST.month - 1]}`,
       value: formatISTWithOrdinal(dayAfterIST),
     },
+    {
+      key: "Day 3",
+      label: d3Weekday,
+      subLabel: `${day3IST.day} ${MONTH_NAMES[day3IST.month - 1]}`,
+      value: formatISTWithOrdinal(day3IST),
+    },
   ];
+}
+
+/**
+ * Returns the sensible default pickup date string:
+ * - If Today is available, returns "Today, ..."
+ * - If Today is expired, returns "Tomorrow, ..."
+ */
+export function getDefaultPickupDate(overrideNowTime?: ISTTimeComponents): string {
+  if (isTodayAvailable(overrideNowTime)) {
+    return getRecordedPickupDate("Today");
+  }
+  return getRecordedPickupDate("Tomorrow");
 }
 
 /**

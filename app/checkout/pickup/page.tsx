@@ -13,8 +13,15 @@ import { SERVICEABLE_DISTRICTS, isPincodeServiced, getPincodeDetails, getStateFr
 import { trackMetaStandardEvent, trackMetaCustomEvent } from "@/lib/analytics/meta";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
 import { formatAddress } from "@/lib/address";
-import { getRecordedPickupDate, getPickupDatePresets } from "@/lib/utils/pickup-date";
 import { cleanPhoneNumber, getSavedCustomerAddress, saveCustomerAddress } from "@/lib/utils/customer-storage";
+import {
+  getRecordedPickupDate,
+  getPickupDatePresets,
+  getAvailableTimeSlotsForDate,
+  getMinCalendarDateISO,
+  getDefaultPickupDate,
+  isTodayAvailable,
+} from "@/lib/utils/pickup-date";
 import {
   MapPin,
   Calendar,
@@ -49,13 +56,25 @@ function PickupCheckoutContent() {
   const [line2, setLine2] = useState("");
   const [hasPrefilledAddress, setHasPrefilledAddress] = useState(false);
 
-  // Pickup slot
-  const [pickupDate, setPickupDate] = useState(() => getRecordedPickupDate("Tomorrow"));
+  // Pickup slot - initialized with real-time slot availability
+  const [pickupDate, setPickupDate] = useState(() => getDefaultPickupDate());
   const [isCustomDate, setIsCustomDate] = useState(false);
   const [customDateInput, setCustomDateInput] = useState("");
-  const [pickupSlot, setPickupSlot] = useState("10 AM - 1 PM");
+  const [pickupSlot, setPickupSlot] = useState(() => {
+    const initialDate = getDefaultPickupDate();
+    const available = getAvailableTimeSlotsForDate(initialDate);
+    return available[0] || "10 AM - 1 PM";
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const isSubmittingRef = useRef(false);
+
+  // Automatically keep selected slot valid when date changes
+  useEffect(() => {
+    const validSlots = getAvailableTimeSlotsForDate(pickupDate);
+    if (validSlots.length > 0 && !validSlots.includes(pickupSlot)) {
+      setPickupSlot(validSlots[0]);
+    }
+  }, [pickupDate, pickupSlot]);
 
   // Legal declarations & consent states (strictly non-prechecked)
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -1044,7 +1063,7 @@ function PickupCheckoutContent() {
                       </label>
                       <input
                         type="date"
-                        min={new Date().toISOString().split("T")[0]}
+                        min={getMinCalendarDateISO()}
                         value={customDateInput}
                         onChange={(e) => {
                           const val = e.target.value;
@@ -1064,23 +1083,43 @@ function PickupCheckoutContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-brand-black mb-2">Select Time Window</label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {["10 AM - 1 PM", "1 PM - 4 PM", "4 PM - 7 PM"].map((slot) => (
-                      <button
-                        type="button"
-                        key={slot}
-                        onClick={() => setPickupSlot(slot)}
-                        className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
-                          pickupSlot === slot
-                            ? "border-brand-yellow bg-brand-yellow/15 text-brand-black"
-                            : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
-                        }`}
-                      >
-                        {slot}
-                      </button>
-                    ))}
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-xs font-bold text-brand-black">Select Time Window</label>
+                    {getAvailableTimeSlotsForDate(pickupDate).length > 0 && (
+                      <span className="text-[11px] text-gray-500 font-semibold">
+                        {getAvailableTimeSlotsForDate(pickupDate).length} slot{getAvailableTimeSlotsForDate(pickupDate).length > 1 ? "s" : ""} available
+                      </span>
+                    )}
                   </div>
+                  {getAvailableTimeSlotsForDate(pickupDate).length > 0 ? (
+                    <div className={`grid gap-2.5 sm:gap-3 ${
+                      getAvailableTimeSlotsForDate(pickupDate).length === 1
+                        ? "grid-cols-1 sm:grid-cols-2"
+                        : getAvailableTimeSlotsForDate(pickupDate).length === 2
+                        ? "grid-cols-2"
+                        : "grid-cols-3"
+                    }`}>
+                      {getAvailableTimeSlotsForDate(pickupDate).map((slot) => (
+                        <button
+                          type="button"
+                          key={slot}
+                          onClick={() => setPickupSlot(slot)}
+                          className={`p-3 rounded-xl border text-xs font-bold text-center transition-all ${
+                            pickupSlot === slot
+                              ? "border-brand-yellow bg-brand-yellow/15 text-brand-black shadow-sm ring-1 ring-brand-yellow/50"
+                              : "border-brand-border bg-white text-gray-600 hover:border-gray-300"
+                          }`}
+                        >
+                          {slot}
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="p-3.5 bg-amber-50 border border-amber-200 rounded-2xl text-center text-xs text-amber-900 font-bold space-y-1">
+                      <p>⚠️ All doorstep pickup slots for today are closed.</p>
+                      <p className="text-[11px] text-amber-700 font-medium">Please select Tomorrow or a preferred upcoming date above.</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
