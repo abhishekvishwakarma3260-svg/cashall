@@ -104,6 +104,7 @@ export interface InvoicePdfProps {
   customerEmail?: string;
   customerAddress?: string;
   deviceName: string;
+  imei?: string;
   quotedPrice?: number;
   requotedPrice?: number;
   amountPaid: number;
@@ -121,6 +122,7 @@ export function InvoicePdfDocument({
   customerEmail,
   customerAddress,
   deviceName,
+  imei,
   quotedPrice,
   requotedPrice,
   amountPaid,
@@ -243,6 +245,13 @@ export function InvoicePdfDocument({
           <Text style={styles.rowLabel}>Device Model</Text>
           <Text style={styles.rowVal}>{deviceName}</Text>
         </View>
+
+        {imei ? (
+          <View style={styles.row}>
+            <Text style={styles.rowLabel}>Device IMEI / Serial</Text>
+            <Text style={[styles.rowVal, { fontFamily: "Courier", fontWeight: "bold", color: "#1D4ED8" }]}>{imei}</Text>
+          </View>
+        ) : null}
 
         <View style={styles.row}>
           <Text style={styles.rowLabel}>Verified Field Agent</Text>

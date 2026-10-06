@@ -417,11 +417,11 @@ export default function Ps5RentalPage() {
       <div className="border-b border-neutral-800/80 bg-neutral-950/60 backdrop-blur-md sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link href="/" className="flex items-center group shrink-0" title="Go to CashALL Home">
+            <Link href="/" className="flex items-center group shrink-0" title="Go to CashALL Home" aria-label="CashALL">
               <div className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-start">
                 <Image
                   src="/logo.png"
-                  alt="CashALL Logo"
+                  alt="CashALL"
                   width={140}
                   height={40}
                   className="object-contain object-left h-7 sm:h-8 w-auto transition-transform group-hover:scale-105"

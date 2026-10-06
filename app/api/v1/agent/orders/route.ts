@@ -13,7 +13,11 @@ interface AgentOrdersCacheEntry {
 
 // In-memory server-side cache for high-frequency agent polling
 const agentOrdersCache = new Map<string, AgentOrdersCacheEntry>();
-const CACHE_TTL_MS = 60000; // 60 seconds cache
+const CACHE_TTL_MS = 15000; // 15 seconds max cache
+
+export function invalidateAgentOrdersCache() {
+  agentOrdersCache.clear();
+}
 
 export async function GET(req: NextRequest) {
   try {
@@ -21,14 +25,15 @@ export async function GET(req: NextRequest) {
     const agentId = searchParams.get("agentId");
     const phone = searchParams.get("phone");
     const name = searchParams.get("name");
+    const isBypass = searchParams.has("_t") || searchParams.get("refresh") === "true" || req.headers.get("cache-control")?.includes("no-cache");
 
-    // Robust server-side cache (bypasses Supabase database queries and prevents edge/origin quota waste)
+    // Server-side cache (bypassed if refreshing or updating)
     const cacheKey = `${agentId || ""}_${phone || ""}_${name || ""}`.toLowerCase().trim();
     const cached = agentOrdersCache.get(cacheKey);
-    if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+    if (!isBypass && cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
       return NextResponse.json(cached.data, {
         headers: {
-          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+          "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
           "X-Cache": "HIT",
         },
       });
@@ -262,7 +267,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+        "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
         "X-Cache": "MISS",
       },
     });

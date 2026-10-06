@@ -57,7 +57,7 @@ export default function HomePage() {
         "description":
           "CashALL is India's premier recommerce platform for selling used smartphones, laptops, and tablets with honest fair value pricing, zero convenience charges, free doorstep inspection, and instant UPI cash payouts.",
         "sameAs": [
-          "https://www.instagram.com/cashall_26/",
+          "https://www.instagram.com/cashall_official",
           "https://www.facebook.com/profile.php?id=61592749535143",
           "https://www.youtube.com/channel/UCymYHMF8-grP7txUbqIt6sQ"
         ],

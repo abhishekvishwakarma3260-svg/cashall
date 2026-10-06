@@ -49,7 +49,7 @@ export default function AppDownloadHubPage() {
         {/* HEADER */}
         <div className="text-center space-y-3">
           <div className="w-16 h-16 bg-black border-2 border-yellow-500/40 rounded-2xl mx-auto flex items-center justify-center shadow-lg p-2">
-            <Image src="/logo.png" alt="CashALL Logo" width={52} height={52} className="object-contain" priority />
+            <Image src="/logo.png" alt="CashALL" width={52} height={52} className="object-contain" priority />
           </div>
           <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
             CashALL <span className="text-yellow-400">Mobile Applications</span>

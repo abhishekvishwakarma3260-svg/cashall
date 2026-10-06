@@ -292,7 +292,7 @@ export default function AdminBillPage() {
           <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <img src="/icon.png" alt="CashALL Logo" className="h-7 w-7 object-contain rounded-lg" onError={(e) => { (e.target as any).style.display = 'none'; }} />
+                <img src="/icon.png" alt="CashALL" className="h-7 w-7 object-contain rounded-lg" onError={(e) => { (e.target as any).style.display = 'none'; }} />
                 <span className="text-2xl font-black text-yellow-400 tracking-wide font-price">CashALL</span>
               </div>
               <p className="text-xs text-gray-400 mt-1">Best Value For Your Old Devices</p>

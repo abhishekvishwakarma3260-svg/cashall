@@ -70,7 +70,7 @@ export function Footer() {
             <div className="relative h-10 w-36">
               <Image
                 src="/logo.png"
-                alt="CashALL Logo"
+                alt="CashALL"
                 width={160}
                 height={45}
                 className="object-contain object-left h-full w-auto"
@@ -90,7 +90,7 @@ export function Footer() {
                 <Facebook className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
               <a
-                href="https://www.instagram.com/cashall_26/"
+                href="https://www.instagram.com/cashall_official"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-gray-400 hover:text-brand-yellow hover:border-brand-yellow/50 transition-all group"

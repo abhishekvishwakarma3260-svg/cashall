@@ -227,7 +227,7 @@ export default function CustomerBillPage() {
             (ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0)
           ),
           estimatedPrice: Number(ord.quotedPrice ?? ord.quote?.estimatedPrice ?? ord.estimatedPrice ?? 0),
-          finalPrice: Number(payment?.amount ?? ord.finalPrice ?? ord.requotedPrice ?? ord.revisedPrice ?? ord.estimatedPrice ?? 0),
+          finalPrice: Number(ord.finalPrice ?? payment?.amount ?? ord.requotedPrice ?? ord.revisedPrice ?? ord.estimatedPrice ?? 0),
           paymentMethod: payment?.method || "UPI",
           utrNumber: (() => {
             const raw = payment?.transactionRef || (payment as any)?.utrNumber || ord.payments?.[0]?.transactionRef || ord.urn || "";
@@ -382,7 +382,7 @@ export default function CustomerBillPage() {
           <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <img src="/icon.png" alt="CashALL Logo" className="h-7 w-7 object-contain rounded-lg" onError={(e) => { (e.target as any).style.display = 'none'; }} />
+                <img src="/icon.png" alt="CashALL" className="h-7 w-7 object-contain rounded-lg" onError={(e) => { (e.target as any).style.display = 'none'; }} />
                 <span className="text-2xl font-black text-yellow-400 tracking-wide font-price">CashALL</span>
               </div>
               <p className="text-xs text-gray-400 mt-1">Best Value For Your Old Devices</p>

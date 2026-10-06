@@ -25,7 +25,7 @@ export default function DownloadCallerPage() {
         {/* LOGO & TITLE */}
         <div className="space-y-3">
           <div className="w-20 h-20 bg-black border-2 border-yellow-500/40 rounded-2xl mx-auto flex items-center justify-center shadow-lg p-2">
-            <Image src="/logo.png" alt="CashALL Logo" width={64} height={64} className="object-contain" priority />
+            <Image src="/logo.png" alt="CashALL" width={64} height={64} className="object-contain" priority />
           </div>
           <div>
             <h1 className="text-2xl font-black text-white font-price tracking-wide">

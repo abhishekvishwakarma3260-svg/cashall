@@ -340,8 +340,8 @@ export default function SupportDashboardPage() {
       {/* HEADER */}
       <div className="flex flex-wrap items-center justify-between gap-4 bg-neutral-900 border border-neutral-800 p-4 sm:p-6 rounded-3xl shadow-xl">
         <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-          <Link href="/">
-            <Image src="/logo.png" alt="CashALL Logo" width={110} height={30} className="h-6 sm:h-8 w-auto object-contain" />
+          <Link href="/" aria-label="CashALL">
+            <Image src="/logo.png" alt="CashALL" width={110} height={30} className="h-6 sm:h-8 w-auto object-contain" />
           </Link>
           <div className="h-5 w-px bg-neutral-800 hidden sm:block" />
           <div className="flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase">

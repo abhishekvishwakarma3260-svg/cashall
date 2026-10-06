@@ -65,7 +65,7 @@ export default function AdminLoginPage() {
           <div className="flex justify-center items-center py-2">
             <Image
               src="/logo.png"
-              alt="CashALL Logo"
+              alt="CashALL"
               width={160}
               height={44}
               className="h-10 w-auto object-contain mx-auto"

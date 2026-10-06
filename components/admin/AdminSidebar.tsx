@@ -81,7 +81,7 @@ export function AdminSidebar() {
             <Menu className="w-5 h-5" />
           </button>
           <Link href="/admin" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="CashALL Logo" width={110} height={30} className="h-6 w-auto object-contain" priority />
+            <Image src="/logo.png" alt="CashALL" width={110} height={30} className="h-6 w-auto object-contain" priority />
             <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded">
               ADMIN
             </span>
@@ -116,7 +116,7 @@ export function AdminSidebar() {
               {/* DRAWER HEADER */}
               <div className="pb-4 mb-4 border-b border-neutral-800 flex items-center justify-between">
                 <Link href="/admin" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
-                  <Image src="/logo.png" alt="CashALL Logo" width={120} height={32} className="h-7 w-auto object-contain" priority />
+                  <Image src="/logo.png" alt="CashALL" width={120} height={32} className="h-7 w-auto object-contain" priority />
                   <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded">
                     ADMIN
                   </span>
@@ -179,7 +179,7 @@ export function AdminSidebar() {
           {/* LOGO */}
           <div className="p-4 border-b border-neutral-800 flex items-center justify-between gap-2">
             <Link href="/admin" className="flex items-center">
-              <Image src="/logo.png" alt="CashALL Logo" width={130} height={36} className="h-8 w-auto object-contain" priority />
+              <Image src="/logo.png" alt="CashALL" width={130} height={36} className="h-8 w-auto object-contain" priority />
             </Link>
             <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded shrink-0">
               ADMIN

@@ -167,11 +167,11 @@ export function Header() {
             <div className="flex items-center space-x-4 sm:space-x-6">
               
               {/* CASHALL LOGO */}
-              <Link href="/" className="flex items-center gap-2 group shrink-0">
+              <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="CashALL" title="CashALL">
                 <div className="relative h-9 sm:h-12 w-28 sm:w-44 flex items-center justify-start py-0.5">
                   <Image
                     src="/logo.png"
-                    alt="CashALL Logo"
+                    alt="CashALL"
                     width={240}
                     height={60}
                     className="object-contain object-left h-8 sm:h-10 w-auto transition-transform group-hover:scale-105"

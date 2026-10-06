@@ -33,22 +33,53 @@ export default function PurchaseReceiptPage() {
   const [order, setOrder] = useState<OrderData | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && rawOrderId) {
-      const stored = localStorage.getItem(`cashall_order_${rawOrderId}`) || localStorage.getItem("cashall_latest_order");
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored);
-          if (parsed && parsed.customerName !== "Ananya Roy" && parsed.orderNumber !== "CA10482") {
-            setOrder(parsed);
+    async function loadData() {
+      if (!rawOrderId) return;
+
+      // 1. Fetch live order from API
+      try {
+        const res = await fetch(`/api/v1/orders/${rawOrderId}`);
+        if (res.ok) {
+          const json = await res.json();
+          const ord = json.data || json.order;
+          if (ord) {
+            setOrder({
+              id: ord.id,
+              orderNumber: ord.orderNumber,
+              customerName: ord.user?.name || ord.customerName || "Customer",
+              customerPhone: ord.user?.phone || ord.customerPhone || "—",
+              deviceName: ord.deviceName || "Mobile Device",
+              imeiNumber: ord.imeiRecords?.[0]?.code || ord.qcReports?.[0]?.imeiNumber || ord.imeiNumber || "",
+              quotedPrice: ord.quotedPrice || ord.quote?.estimatedPrice || 0,
+              revisedPrice: ord.finalPrice || ord.qcReports?.[0]?.revisedPrice || ord.payments?.[0]?.amount || 0,
+              createdAt: ord.createdAt,
+              addressSummary: ord.address ? `${ord.address.house || ''} ${ord.address.street || ''}, ${ord.address.city || ''}` : "Doorstep Address",
+              ...ord,
+            });
             return;
           }
-        } catch (e) {
-          console.error(e);
+        }
+      } catch (e) {}
+
+      // 2. Fallback to localStorage
+      if (typeof window !== "undefined") {
+        const stored = localStorage.getItem(`cashall_order_${rawOrderId}`) || localStorage.getItem("cashall_latest_order");
+        if (stored) {
+          try {
+            const parsed = JSON.parse(stored);
+            if (parsed && parsed.customerName !== "Ananya Roy" && parsed.orderNumber !== "CA10482") {
+              setOrder(parsed);
+              return;
+            }
+          } catch (e) {
+            console.error(e);
+          }
         }
       }
 
       setOrder(null);
     }
+    loadData();
   }, [rawOrderId]);
 
   if (!order) {

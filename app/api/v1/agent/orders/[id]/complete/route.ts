@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { EmailService } from "@/lib/services/email.service";
 import { logger } from "@/lib/utils/logger";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
+import { invalidateAgentOrdersCache } from "../../route";
 
 export const dynamic = "force-dynamic";
 
@@ -38,9 +39,18 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json({ success: false, error: "Order not found" }, { status: 404 });
     }
 
-    const price = typeof finalPrice === "number" 
-      ? finalPrice 
-      : (parseFloat(String(finalPrice)) || order.finalPrice || order.qcReports?.[0]?.revisedPrice || order.quote?.estimatedPrice || 0);
+    const verifiedQcPrice = order.qcReports?.[0]?.revisedPrice;
+    const verifiedFinalPrice = order.finalPrice;
+    const inputPrice = typeof finalPrice === "number" ? finalPrice : (parseFloat(String(finalPrice)) || null);
+
+    let price: number;
+    if (verifiedFinalPrice && (!inputPrice || (verifiedQcPrice && inputPrice === order.quote?.estimatedPrice && verifiedFinalPrice !== order.quote?.estimatedPrice))) {
+      price = verifiedFinalPrice;
+    } else {
+      price = inputPrice || verifiedFinalPrice || verifiedQcPrice || order.quote?.estimatedPrice || 0;
+    }
+
+    const verifiedImei = order.qcReports?.[0]?.imeiNumber || order.imeiRecords?.[0]?.code || "";
     const cleanUtr = typeof utr === "string" ? utr.trim() : "";
     const transactionRef = cleanUtr && !cleanUtr.startsWith("PAID-") ? cleanUtr : (order.urn && !order.urn.startsWith("PAID-") ? order.urn : null);
 
@@ -147,6 +157,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
           customerPhone: phoneStr,
           customerAddress: customerAddressStr,
           deviceName,
+          imei: verifiedImei,
           quotedPrice: order.quote?.estimatedPrice || price,
           requotedPrice: order.qcReports?.[0]?.revisedPrice || price,
           finalPrice: price,
@@ -162,6 +173,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     }
 
     logger.info(`[AGENT COMPLETED ORDER] #${order.orderNumber} marked COMPLETED & PAID by ${activeAgentName}. Sheets synced & PDF invoice: ${emailSent ? "Sent via " + emailProvider : "Failed: " + emailError}.`);
+
+    invalidateAgentOrdersCache();
 
     return NextResponse.json({
       success: true,

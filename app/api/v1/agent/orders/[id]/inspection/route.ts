@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { logger } from "@/lib/utils/logger";
+import { invalidateAgentOrdersCache } from "../../route";
 
 export const dynamic = "force-dynamic";
 
@@ -145,6 +146,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
         imeiRecords: true,
       },
     });
+
+    invalidateAgentOrdersCache();
 
     logger.info(`[AGENT INSPECTION COMPLETED] Order #${order.orderNumber} - IMEI: ${imei}, Final Offer: ₹${finalPriceVal}`);
 

@@ -265,7 +265,10 @@ export default function AgentDashboardPage() {
 
     if (!isSilent) setLoading(true);
     try {
-      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}`);
+      const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}&_t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache, no-store" },
+      });
       const json = await res.json();
       if (json.success && Array.isArray(json.orders)) {
         const fetchedOrders: AgentOrder[] = json.orders;
@@ -569,7 +572,7 @@ export default function AgentDashboardPage() {
 
   // Mark Paid & Complete Order Handler (Instant 1-Click completion)
   const handleMarkPaid = async (ord: AgentOrder) => {
-    const finalPrice = ord.finalPrice || ord.amount || ord.estimatedPrice || 0;
+    const finalPrice = ord.finalPrice || ord.requotedPrice || ord.revisedPrice || ord.amount || ord.estimatedPrice || 0;
     const rawUrn = ord.urn?.trim() || "";
     // If OCR extracted URN from uploaded screenshot, use it; otherwise leave blank ("")
     const finalUtr = rawUrn && !rawUrn.startsWith("PAID-") && rawUrn !== "128158907549" && rawUrn !== "623480124575" ? rawUrn : "";
@@ -696,10 +699,10 @@ export default function AgentDashboardPage() {
       {/* NAVBAR */}
       <header className="bg-neutral-900 border-b border-neutral-800 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-2 sm:gap-3">
-          <Link href="/">
+          <Link href="/" aria-label="CashALL">
             <Image
               src="/logo.png"
-              alt="CashALL Logo"
+              alt="CashALL"
               width={110}
               height={30}
               className="h-6 sm:h-8 w-auto object-contain"

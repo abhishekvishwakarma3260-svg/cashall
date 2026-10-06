@@ -72,10 +72,10 @@ export default function AgentLoginPage() {
       <div className="w-full max-w-md space-y-6 relative z-10">
         {/* LOGO & TITLE HEADER */}
         <div className="text-center space-y-3">
-          <Link href="/" className="inline-block">
+          <Link href="/" className="inline-block" aria-label="CashALL">
             <Image
               src="/logo.png"
-              alt="CashALL Logo"
+              alt="CashALL"
               width={160}
               height={44}
               className="h-10 w-auto object-contain mx-auto"

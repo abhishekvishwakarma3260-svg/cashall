@@ -72,10 +72,10 @@ export default function SupportLoginPage() {
         
         {/* LOGO & HEADER */}
         <div className="text-center space-y-3">
-          <Link href="/" className="inline-block">
+          <Link href="/" className="inline-block" aria-label="CashALL">
             <Image
               src="/logo.png"
-              alt="CashALL Logo"
+              alt="CashALL"
               width={160}
               height={44}
               className="h-10 w-auto object-contain mx-auto"

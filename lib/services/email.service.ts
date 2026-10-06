@@ -151,6 +151,7 @@ export class EmailService {
     customerPhone,
     customerAddress,
     deviceName,
+    imei,
     quotedPrice,
     requotedPrice,
     finalPrice,
@@ -165,6 +166,7 @@ export class EmailService {
     customerPhone?: string;
     customerAddress?: string;
     deviceName: string;
+    imei?: string;
     quotedPrice?: number;
     requotedPrice?: number;
     finalPrice: number;
@@ -183,6 +185,7 @@ export class EmailService {
         customerEmail: to,
         customerAddress,
         deviceName,
+        imei,
         quotedPrice,
         requotedPrice,
         amountPaid: finalPrice,
@@ -204,7 +207,8 @@ export class EmailService {
       orderDate,
       completedDate,
       quotedPrice,
-      requotedPrice
+      requotedPrice,
+      imei
     );
     const subject = `CashALL Official Invoice #${orderNumber} — ₹${finalPrice.toLocaleString("en-IN")}`;
 
@@ -278,7 +282,8 @@ export class EmailService {
     orderDate?: string,
     completedDate?: string,
     quotedPrice?: number,
-    requotedPrice?: number
+    requotedPrice?: number,
+    imei?: string
   ) {
     const effectiveQuotedPrice = quotedPrice || amount;
     const effectiveReQuotedPrice = requotedPrice || amount;
@@ -309,6 +314,11 @@ export class EmailService {
           <tr>
             <td style="padding: 10px 14px; border: 1px solid #e5e7eb; font-weight: 700; color: #374151;">Device Purchased</td>
             <td style="padding: 10px 14px; border: 1px solid #e5e7eb; color: #111827; font-weight: 600;">${deviceName}</td>
+          </tr>` : ""}
+          ${imei ? `
+          <tr style="background-color: #f9fafb;">
+            <td style="padding: 10px 14px; border: 1px solid #e5e7eb; font-weight: 700; color: #374151;">Verified Device IMEI / Serial</td>
+            <td style="padding: 10px 14px; border: 1px solid #e5e7eb; color: #1d4ed8; font-family: monospace; font-weight: 700; letter-spacing: 0.5px;">${imei}</td>
           </tr>` : ""}
           <tr style="background-color: #f9fafb;">
             <td style="padding: 10px 14px; border: 1px solid #e5e7eb; font-weight: 700; color: #374151;">Order Placed Time</td>
