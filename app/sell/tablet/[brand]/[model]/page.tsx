@@ -68,7 +68,17 @@ export default function TabletVariantSelectionPage() {
       imageUrl: null,
     };
 
-  const variants = INITIAL_VARIANTS.filter((v) => v.modelId === model?.id);
+  const variants = INITIAL_VARIANTS.filter((v) => {
+    if (!model) return false;
+    if (v.modelId === model.id) return true;
+    const vId = v.modelId.toLowerCase();
+    const mId = model.id.toLowerCase();
+    const mSlug = model.slug.toLowerCase();
+    if (vId === mId) return true;
+    if (vId === `m-${mSlug}` || vId === `m-tablet-${mSlug}` || vId === `m-${brandSlug.toLowerCase()}-${mSlug}`) return true;
+    if (vId.replace(/^m-(tablet-)?([a-z0-9]+-)?/, "") === mSlug.replace(/^([a-z0-9]+-)?/, "")) return true;
+    return false;
+  });
   const fallbackVariants =
     variants.length > 0
       ? variants

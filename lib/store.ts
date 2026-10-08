@@ -12302,19 +12302,7 @@ const MOBILE_MODELS_PART_4: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "m-xiaomi-17-ultra",
-    "brandId": "b-xiaomi",
-    "brandSlug": "xiaomi",
-    "name": "17 Ultra",
-    "slug": "xiaomi-17-ultra",
-    "imageUrl": "/api/v1/catalog/image/xiaomi-17-ultra",
-    "releaseYear": 2026,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "m-xiaomi-xiaomi-17",
     "brandId": "b-xiaomi",
@@ -31856,32 +31844,8 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
   
   
   
-  {
-    "id": "m-google-pixel-10-pro-fold",
-    "brandId": "b-google",
-    "brandSlug": "google",
-    "name": "Google Pixel 10 Pro Fold",
-    "slug": "google-pixel-10-pro-fold",
-    "imageUrl": "/api/v1/catalog/image/google-pixel-10-pro-fold",
-    "releaseYear": 2026,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
-  {
-    "id": "m-google-pixel-9a",
-    "brandId": "b-google",
-    "brandSlug": "google",
-    "name": "Google Pixel 9a",
-    "slug": "google-pixel-9a",
-    "imageUrl": "/api/v1/catalog/image/google-pixel-9a",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
+  
   {
     "id": "m-oneplus-oneplus-open-2",
     "brandId": "b-oneplus",
@@ -31908,19 +31872,7 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "m-xiaomi-xiaomi-15",
-    "brandId": "b-xiaomi",
-    "brandSlug": "xiaomi",
-    "name": "Xiaomi 15",
-    "slug": "xiaomi-15",
-    "imageUrl": "/api/v1/catalog/image/xiaomi-15",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "m-xiaomi-xiaomi-15-pro",
     "brandId": "b-xiaomi",
@@ -31934,19 +31886,7 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "m-xiaomi-xiaomi-15-ultra",
-    "brandId": "b-xiaomi",
-    "brandSlug": "xiaomi",
-    "name": "Xiaomi 15 Ultra",
-    "slug": "xiaomi-15-ultra",
-    "imageUrl": "/api/v1/catalog/image/xiaomi-15-ultra",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "m-xiaomi-redmi-note-14-pro-plus-5g",
     "brandId": "b-xiaomi",
@@ -32116,45 +32056,9 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "m-realme-realme-gt-7-pro",
-    "brandId": "b-realme",
-    "brandSlug": "realme",
-    "name": "Realme GT 7 Pro",
-    "slug": "realme-gt-7-pro",
-    "imageUrl": "/api/v1/catalog/image/realme-gt-7-pro",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
-  {
-    "id": "m-realme-realme-14-pro-plus-5g",
-    "brandId": "b-realme",
-    "brandSlug": "realme",
-    "name": "Realme 14 Pro+ 5G",
-    "slug": "realme-14-pro-plus-5g",
-    "imageUrl": "/api/v1/catalog/image/realme-14-pro-plus-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
-  {
-    "id": "m-realme-realme-p3-pro-5g",
-    "brandId": "b-realme",
-    "brandSlug": "realme",
-    "name": "Realme P3 Pro 5G",
-    "slug": "realme-p3-pro-5g",
-    "imageUrl": "/api/v1/catalog/image/realme-p3-pro-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
+  
+  
   {
     "id": "m-motorola-moto-edge-60-ultra",
     "brandId": "b-motorola",
@@ -32649,19 +32553,7 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "TABLET"
   },
-  {
-    "id": "m-samsung-galaxy-tab-s10-ultra-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy Tab S10 Ultra 5G",
-    "slug": "samsung-galaxy-tab-s10-ultra-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-tab-s10-ultra-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "TABLET"
-  },
+  
   {
     "id": "m-samsung-galaxy-tab-s10-plus-5g",
     "brandId": "b-samsung",
@@ -32675,32 +32567,8 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "TABLET"
   },
-  {
-    "id": "m-samsung-galaxy-tab-s10-fe-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy Tab S10 FE 5G",
-    "slug": "samsung-galaxy-tab-s10-fe-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-tab-s10-fe-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "TABLET"
-  },
-  {
-    "id": "m-samsung-galaxy-tab-a9-plus-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy Tab A9+ 5G",
-    "slug": "samsung-galaxy-tab-a9-plus-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-tab-a9-plus-5g",
-    "releaseYear": 2024,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "TABLET"
-  },
+  
+  
   {
     "id": "m-oneplus-oneplus-pad-2",
     "brandId": "b-oneplus",
@@ -32740,19 +32608,7 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "TABLET"
   },
-  {
-    "id": "m-xiaomi-xiaomi-pad-7",
-    "brandId": "b-xiaomi",
-    "brandSlug": "xiaomi",
-    "name": "Xiaomi Pad 7",
-    "slug": "xiaomi-pad-7",
-    "imageUrl": "/api/v1/catalog/image/xiaomi-pad-7",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "TABLET"
-  },
+  
   {
     "id": "m-xiaomi-redmi-pad-pro-5g",
     "brandId": "b-xiaomi",
@@ -39498,7 +39354,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno2-f-256-gb-6-gb",
     "modelId": "m-oppo-oppo-reno2-f",
     "storage": "256 GB",
-    "basePrice": 5121,
+    "basePrice": 6800,
     "active": true,
     "ram": "6 GB"
   },
@@ -46961,7 +46817,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y12-64-gb-3-gb",
     "modelId": "m-vivo-vivo-y12",
     "storage": "64 GB",
-    "basePrice": 3596,
+    "basePrice": 4200,
     "active": true,
     "ram": "3 GB"
   },
@@ -47041,7 +46897,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-4-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 3788,
+    "basePrice": 4400,
     "active": true,
     "ram": "4 GB"
   },
@@ -47057,7 +46913,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-6-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 4131,
+    "basePrice": 4400,
     "active": true,
     "ram": "6 GB"
   },
@@ -47065,7 +46921,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-8-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4400,
     "active": true,
     "ram": "8 GB"
   },
@@ -49633,7 +49489,7 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "id": "v-m-laptop-acer-extensa-series-standard",
     "modelId": "m-laptop-acer-extensa-series",
     "storage": "Standard",
-    "basePrice": 0,
+    "basePrice": 7500,
     "active": true
   },
   {
@@ -53375,7 +53231,7 @@ const MOBILE_VARIANTS_PART_9: DeviceVariantData[] = [
     "id": "v-m-laptop-msi-msi-crosshair-series-standard",
     "modelId": "m-laptop-msi-msi-crosshair-series",
     "storage": "Standard",
-    "basePrice": 0,
+    "basePrice": 32000,
     "active": true
   },
   {
@@ -53924,7 +53780,7 @@ const MOBILE_VARIANTS_PART_10: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-32-gb",
     "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
     "storage": "32 GB",
-    "basePrice": 2070,
+    "basePrice": 2500,
     "active": true
   },
   {
@@ -54050,7 +53906,7 @@ const MOBILE_VARIANTS_PART_10: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
     "storage": "128 GB",
-    "basePrice": 6888,
+    "basePrice": 7400,
     "active": true
   },
   {
@@ -55524,7 +55380,7 @@ const MOBILE_VARIANTS_PART_10: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-512-gb",
     "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
     "storage": "512 GB",
-    "basePrice": 45450,
+    "basePrice": 49500,
     "active": true
   },
   {
@@ -55538,7 +55394,7 @@ const MOBILE_VARIANTS_PART_10: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-256-gb",
     "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
     "storage": "256 GB",
-    "basePrice": 40400,
+    "basePrice": 46500,
     "active": true
   },
   {
@@ -56073,7 +55929,7 @@ const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-128-gb",
     "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
     "storage": "128 GB",
-    "basePrice": 3737,
+    "basePrice": 4400,
     "active": true
   },
   {
@@ -56199,7 +56055,7 @@ const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
     "storage": "128 GB",
-    "basePrice": 1616,
+    "basePrice": 2200,
     "active": true
   },
   {
@@ -56283,7 +56139,7 @@ const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
     "storage": "128 GB",
-    "basePrice": 6565,
+    "basePrice": 7600,
     "active": true
   },
   {
@@ -56360,14 +56216,14 @@ const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-2-tb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "2 TB",
-    "basePrice": 76760,
+    "basePrice": 92500,
     "active": true
   },
   {
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-1-tb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "1 TB",
-    "basePrice": 72114,
+    "basePrice": 81500,
     "active": true
   },
   {
@@ -56381,7 +56237,7 @@ const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-512-gb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "512 GB",
-    "basePrice": 59590,
+    "basePrice": 74500,
     "active": true
   },
   {
@@ -60348,7 +60204,7 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-acer-extensa-series-standard",
     "modelId": "m-laptop-acer-extensa-series",
     "storage": "Standard",
-    "basePrice": 0,
+    "basePrice": 7500,
     "active": true
   },
   {
@@ -64090,7 +63946,7 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-msi-msi-crosshair-series-standard",
     "modelId": "m-laptop-msi-msi-crosshair-series",
     "storage": "Standard",
-    "basePrice": 0,
+    "basePrice": 32000,
     "active": true
   },
   {
@@ -64639,7 +64495,7 @@ const TABLET_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-32-gb",
     "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
     "storage": "32 GB",
-    "basePrice": 2070,
+    "basePrice": 2500,
     "active": true
   },
   {
@@ -64765,7 +64621,7 @@ const TABLET_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
     "storage": "128 GB",
-    "basePrice": 6888,
+    "basePrice": 7400,
     "active": true
   },
   {
@@ -66239,7 +66095,7 @@ const TABLET_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-512-gb",
     "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
     "storage": "512 GB",
-    "basePrice": 45450,
+    "basePrice": 49500,
     "active": true
   },
   {
@@ -66253,7 +66109,7 @@ const TABLET_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-256-gb",
     "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
     "storage": "256 GB",
-    "basePrice": 40400,
+    "basePrice": 46500,
     "active": true
   },
   {
@@ -66788,7 +66644,7 @@ const TABLET_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-128-gb",
     "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
     "storage": "128 GB",
-    "basePrice": 3737,
+    "basePrice": 4400,
     "active": true
   },
   {
@@ -66914,7 +66770,7 @@ const TABLET_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
     "storage": "128 GB",
-    "basePrice": 1616,
+    "basePrice": 2200,
     "active": true
   },
   {
@@ -66998,7 +66854,7 @@ const TABLET_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-128-gb",
     "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
     "storage": "128 GB",
-    "basePrice": 6565,
+    "basePrice": 7600,
     "active": true
   },
   {
@@ -67075,14 +66931,14 @@ const TABLET_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-2-tb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "2 TB",
-    "basePrice": 76760,
+    "basePrice": 92500,
     "active": true
   },
   {
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-1-tb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "1 TB",
-    "basePrice": 72114,
+    "basePrice": 81500,
     "active": true
   },
   {
@@ -67096,7 +66952,7 @@ const TABLET_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-512-gb",
     "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
     "storage": "512 GB",
-    "basePrice": 59590,
+    "basePrice": 74500,
     "active": true
   },
   {
@@ -75756,7 +75612,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9a835930-f55a-401e-83dd-d0301285f50c",
     "modelId": "823f36af-3f73-434d-9f39-7714f03ac434",
     "storage": "256 GB",
-    "basePrice": 90900,
+    "basePrice": 98500,
     "active": true,
     "ram": "12 GB"
   },
@@ -75764,7 +75620,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f4c625ef-40be-476d-b24a-7ec42f1e4487",
     "modelId": "823f36af-3f73-434d-9f39-7714f03ac434",
     "storage": "256 GB",
-    "basePrice": 90900,
+    "basePrice": 98500,
     "active": true,
     "ram": "12 GB"
   },
@@ -75772,7 +75628,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "29b61be5-fe40-4324-aee4-e6030ba1e49e",
     "modelId": "823f36af-3f73-434d-9f39-7714f03ac434",
     "storage": "256 GB",
-    "basePrice": 90900,
+    "basePrice": 98500,
     "active": true,
     "ram": "12 GB"
   },
@@ -75788,7 +75644,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3d6590f3-2fd6-43e0-92cf-2d1c94cba99d",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1298,
+    "basePrice": 1480,
     "active": true,
     "ram": "4 GB"
   },
@@ -75838,42 +75694,42 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "65a536b4-fb67-483b-9d99-220cd57d3405",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
     "id": "3995c049-86db-4a9d-b1d8-2a195744def9",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
     "id": "0d516d9e-460a-4507-a263-31c013478a09",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
     "id": "0cb338a9-4185-4c7b-a3cc-9e12eef42b14",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
     "id": "4e350b18-75ef-4a3b-a6f5-e39b585bc69b",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
     "id": "9de4f92e-6495-4563-8933-2bf2dc5d8aac",
     "modelId": "f8b7f388-6a85-4ede-b4a3-8615700a631d",
     "storage": "64 GB",
-    "basePrice": 1576,
+    "basePrice": 1480,
     "active": true
   },
   {
@@ -75888,7 +75744,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5c3747d3-0ac1-4a62-a169-c2edf6e35d57",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1302,
+    "basePrice": 1520,
     "active": true,
     "ram": "4 GB"
   },
@@ -75938,42 +75794,42 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c04b5598-f3d7-4e8b-b4fb-0afbf341f8c8",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
     "id": "8ca3295f-13b0-479b-8c7b-d2f4344b62e0",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
     "id": "7ff0e04b-981a-4162-b997-8aee5cbe0d61",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
     "id": "9ab09952-fa49-4f3a-ba70-1c87d04450bf",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
     "id": "3b4b0dda-4690-42dd-9fd3-48f878e7e691",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
     "id": "2e39287e-2e32-4499-baf6-9e88947443fe",
     "modelId": "9d9aae23-03fc-4089-8ef3-d0337810adc8",
     "storage": "64 GB",
-    "basePrice": 1535,
+    "basePrice": 1520,
     "active": true
   },
   {
@@ -76331,7 +76187,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3c704d51-1078-4069-8674-0e5396dc5bd5",
     "modelId": "adfa4761-e8db-40db-82da-799d357ab15e",
     "storage": "256 GB",
-    "basePrice": 12999,
+    "basePrice": 14200,
     "active": true,
     "ram": "8 GB"
   },
@@ -76339,7 +76195,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cd29f62f-4f34-4bac-a253-b201016ad20c",
     "modelId": "adfa4761-e8db-40db-82da-799d357ab15e",
     "storage": "256 GB",
-    "basePrice": 12999,
+    "basePrice": 14200,
     "active": true,
     "ram": "8 GB"
   },
@@ -76347,7 +76203,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "45dced35-4779-4d2a-a987-75eb025f30c7",
     "modelId": "adfa4761-e8db-40db-82da-799d357ab15e",
     "storage": "256 GB",
-    "basePrice": 12999,
+    "basePrice": 14200,
     "active": true,
     "ram": "8 GB"
   },
@@ -76355,7 +76211,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "73e91635-4020-499d-9284-6e62192107a2",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1236,
+    "basePrice": 1350,
     "active": true,
     "ram": "2 GB"
   },
@@ -76413,42 +76269,42 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "745317cd-70b4-4180-855d-6b56153ced9c",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
     "id": "5b339453-48a4-4c83-940c-5d93506b2930",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
     "id": "75af00ea-92e5-464a-89db-854d15ab1967",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
     "id": "e5d300ae-46b1-4f78-ba59-cafcba2ef65a",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
     "id": "5bb72fa8-a358-4bf0-b63e-ba6bc7583b21",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
     "id": "2fb3c90b-8fad-49e5-91aa-981b3e332dda",
     "modelId": "e68f26e2-9254-4c17-aa3b-a094a69c33ea",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1350,
     "active": true
   },
   {
@@ -80318,7 +80174,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "dce6ec3f-f857-447a-aba1-353b47ca6809",
     "modelId": "36e0064c-6c53-4368-be6c-0d50b2c63b4c",
     "storage": "256 GB",
-    "basePrice": 19190,
+    "basePrice": 21500,
     "active": true,
     "ram": "8 GB"
   },
@@ -80326,7 +80182,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1fb10799-3d2d-4be4-b4ed-8c9dcca1edc9",
     "modelId": "36e0064c-6c53-4368-be6c-0d50b2c63b4c",
     "storage": "256 GB",
-    "basePrice": 19190,
+    "basePrice": 21500,
     "active": true,
     "ram": "8 GB"
   },
@@ -80334,7 +80190,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cca757be-eb28-428d-a6a7-76546612b035",
     "modelId": "36e0064c-6c53-4368-be6c-0d50b2c63b4c",
     "storage": "256 GB",
-    "basePrice": 19190,
+    "basePrice": 21500,
     "active": true,
     "ram": "8 GB"
   },
@@ -80718,7 +80574,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5975f4ea-0f11-4405-88ff-3b0ac8301b2b",
     "modelId": "975e9319-ad63-42a6-bec7-fe04221f6d6a",
     "storage": "512 GB",
-    "basePrice": 16160,
+    "basePrice": 20500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80726,7 +80582,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e1202d0b-5076-47b6-b8aa-483595c68205",
     "modelId": "975e9319-ad63-42a6-bec7-fe04221f6d6a",
     "storage": "512 GB",
-    "basePrice": 16160,
+    "basePrice": 20500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80734,7 +80590,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7424c3fc-0778-4472-a8f3-60290bb147e1",
     "modelId": "975e9319-ad63-42a6-bec7-fe04221f6d6a",
     "storage": "512 GB",
-    "basePrice": 16160,
+    "basePrice": 20500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80837,7 +80693,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7ae25042-8699-4f20-aaf3-469aaeaf3075",
     "modelId": "deffe76b-ee4d-4696-83e5-786fd1f8831e",
     "storage": "1 TB",
-    "basePrice": 57919,
+    "basePrice": 71500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80975,7 +80831,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7cd91af2-7ce6-4f62-ad6c-71a0455dd631",
     "modelId": "1cc11faa-9de5-4d3c-b005-d1c54c46da88",
     "storage": "1 TB",
-    "basePrice": 78780,
+    "basePrice": 108500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80983,7 +80839,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "834df682-0a5c-4e72-b338-080dd05155b0",
     "modelId": "1cc11faa-9de5-4d3c-b005-d1c54c46da88",
     "storage": "1 TB",
-    "basePrice": 78780,
+    "basePrice": 108500,
     "active": true,
     "ram": "12 GB"
   },
@@ -80991,7 +80847,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a2beb68f-b25a-4756-a35e-afebb0659e95",
     "modelId": "1cc11faa-9de5-4d3c-b005-d1c54c46da88",
     "storage": "1 TB",
-    "basePrice": 78780,
+    "basePrice": 108500,
     "active": true,
     "ram": "12 GB"
   },
@@ -82760,7 +82616,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cc4d79e6-e338-4d29-b560-2177e4133c72",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1654,
+    "basePrice": 1980,
     "active": true,
     "ram": "3 GB"
   },
@@ -82810,49 +82666,49 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "805ea3b1-b3ca-4924-88ff-99e4884e511b",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "5028af2b-01b3-4480-9905-8411466b899c",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "8493bf00-471f-4729-a8ee-5153e31094e3",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "05b74b90-4049-44bc-9f5e-4fda4366f167",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "c84d0549-2bee-4df8-831b-e3a52e01eb5a",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "63b3d979-23f3-4c77-a0eb-cfe372e6adf0",
     "modelId": "0842f3b9-9080-44d2-ad43-328f8712331d",
     "storage": "64 GB",
-    "basePrice": 1919,
+    "basePrice": 1980,
     "active": true
   },
   {
     "id": "260f5478-4a74-4a70-a9c2-f3447927348e",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1346,
+    "basePrice": 1550,
     "active": true,
     "ram": "2 GB"
   },
@@ -82910,42 +82766,42 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c35dd35c-7923-49f5-bdab-dbc5538bd118",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "721da505-cdff-4ad1-9a91-f0918423bad9",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "733e38b5-8fdb-4d97-97dd-aa4239499d53",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "c755d5fd-6912-423c-8d88-6974e861d502",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "394d8092-83bd-4243-aa1a-5572e75ebaab",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
     "id": "2968bf1c-440e-4f61-9c1f-b086c038177f",
     "modelId": "e297bd47-33ce-4c43-a4e9-d08b556f9137",
     "storage": "32 GB",
-    "basePrice": 1606,
+    "basePrice": 1550,
     "active": true
   },
   {
@@ -83782,6 +83638,23 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
 
 
 const LATEST_2026_VARIANTS: DeviceVariantData[] = [
+  {
+    "id": "v-m-laptop-apple-macbook-pro-2012-500-gb",
+    "modelId": "m-laptop-apple-macbook-pro-2012",
+    "storage": "500 GB HDD",
+    "ram": "8 GB",
+    "basePrice": 8500,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-apple-macbook-pro-2012-256-gb",
+    "modelId": "m-laptop-apple-macbook-pro-2012",
+    "storage": "256 GB SSD",
+    "ram": "8 GB",
+    "basePrice": 10500,
+    "active": true
+  },
+
   // Apple iPhone 18 Pro Max - Cashify Verified + 1% (NO 128 GB!)
   {
     "id": "v-m-apple-apple-iphone-18-pro-max-256-gb",
