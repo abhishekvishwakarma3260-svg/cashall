@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { logger } from "@/lib/utils/logger";
-import { invalidateAgentOrdersCache } from "../../route";
+import { invalidateAgentOrdersCache } from "@/lib/cache/agent-cache";
 
 export const dynamic = "force-dynamic";
 

@@ -11,6 +11,7 @@ import { INITIAL_BRANDS, INITIAL_MODELS } from "@/lib/store";
 import { getSeriesForBrand, filterModelsBySeries } from "@/lib/series-data";
 import { Search, ChevronRight, Smartphone, Sparkles, Layers } from "lucide-react";
 import { trackMetaStandardEvent } from "@/lib/analytics/meta";
+import { AiVerificationBar } from "@/components/common/AiVerificationBar";
 
 export default function ModelSelectionPage() {
   const params = useParams();
@@ -176,6 +177,11 @@ export default function ModelSelectionPage() {
               </button>
             </div>
           )}
+
+          {/* AI VERIFICATION TRUST BAR */}
+          <div className="pt-8">
+            <AiVerificationBar deviceName={`${brand.name} phones`} />
+          </div>
 
         </div>
       </main>

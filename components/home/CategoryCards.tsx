@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Smartphone, Laptop, Tablet, ArrowRight, Gamepad2, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
@@ -16,8 +17,13 @@ export function CategoryCards() {
           if (locStr) {
             const parsed = JSON.parse(locStr);
             const state = (parsed?.state || "").toLowerCase();
+            const city = (parsed?.city || "").toLowerCase();
             setIsWestBengal(
-              state.includes("west bengal") || state.includes("bengal") || state.trim() === "wb"
+              state.includes("west bengal") ||
+              state.includes("bengal") ||
+              state.trim() === "wb" ||
+              city.includes("kolkata") ||
+              city.includes("howrah")
             );
           } else {
             setIsWestBengal(false);
@@ -41,17 +47,19 @@ export function CategoryCards() {
     {
       id: "mobile",
       title: "Mobile Phone",
-      subtitle: "Sell iPhone, Samsung, OnePlus, Pixel & more",
+      subtitle: "Sell iPhone, Samsung, OnePlus, Pixel & more with instant spot valuation.",
+      image: "/images/devices/phone.jpg",
       icon: Smartphone,
       status: "AVAILABLE",
       available: true,
       href: "/sell/mobile",
-      btnText: "Sell Mobile",
+      btnText: "Sell Mobile Phone",
     },
     {
       id: "laptop",
-      title: "Laptop",
-      subtitle: "Sell MacBook, Dell, HP, Lenovo, Asus & Acer",
+      title: "Laptop & MacBook",
+      subtitle: "Sell MacBook, Dell, HP, Lenovo, Asus & Acer with certified SSD erasure.",
+      image: "/images/devices/laptop.jpg",
       icon: Laptop,
       status: "AVAILABLE",
       available: true,
@@ -61,7 +69,8 @@ export function CategoryCards() {
     {
       id: "tablet",
       title: "Tablet / iPad",
-      subtitle: "Sell Apple iPad, Galaxy Tab & Lenovo Pad",
+      subtitle: "Sell Apple iPad, Galaxy Tab & Lenovo Pad with guaranteed locked buyback.",
+      image: "/images/devices/tablet.jpg",
       icon: Tablet,
       status: "AVAILABLE",
       available: true,
@@ -81,48 +90,52 @@ export function CategoryCards() {
             Sell Your Device
           </h2>
           <p className="text-sm text-neutral-600 mt-2 font-normal">
-            Select your device category to calculate a guaranteed algorithmic price quote.
+            Select your device category to calculate a guaranteed algorithmic price quote with ₹0 convenience fees.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
-            return (
-              <Link
-                key={cat.id}
-                href={cat.href}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-neutral-200/80 hover:border-brand-yellow/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_-6px_rgba(255,212,0,0.22)] transition-all duration-300 group flex flex-col justify-between hover:-translate-y-0.5"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-brand-yellow/15 border border-brand-yellow/30 flex items-center justify-center text-brand-black group-hover:scale-105 transition-transform">
-                      <Icon className="w-6 h-6 text-brand-black" />
-                    </div>
-                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
-                      Active
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-extrabold text-brand-black group-hover:text-black">
-                    {cat.title}
-                  </h3>
-                  <p className="text-xs text-neutral-500 mt-1 leading-relaxed font-normal">
-                    {cat.subtitle}
-                  </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((cat) => (
+            <Link
+              key={cat.id}
+              href={cat.href}
+              className="bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/80 hover:border-brand-yellow/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_-6px_rgba(255,212,0,0.25)] transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1"
+            >
+              <div>
+                {/* ACTUAL DEVICE PHOTOGRAPH */}
+                <div className="relative h-44 w-full rounded-2xl overflow-hidden mb-5 border border-neutral-100 shadow-xs bg-neutral-950 group-hover:border-brand-yellow/40 transition-all">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 360px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <span className="absolute top-3 right-3 text-[10px] font-extrabold text-emerald-800 bg-white/95 backdrop-blur-md border border-emerald-200 px-2.5 py-0.5 rounded-full shadow-xs">
+                    Live Rates
+                  </span>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs font-bold text-brand-black mt-6 group-hover:text-amber-600 group-hover:translate-x-1 transition-transform">
-                  <span>{cat.btnText}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </Link>
-            );
-          })}
+                <h3 className="text-lg font-black text-brand-black group-hover:text-black">
+                  {cat.title}
+                </h3>
+                <p className="text-xs text-neutral-500 mt-1 leading-relaxed font-normal">
+                  {cat.subtitle}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-1.5 text-xs font-black text-brand-black mt-6 group-hover:text-amber-600 group-hover:translate-x-1 transition-transform">
+                <span>{cat.btnText}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+          ))}
         </div>
 
         {/* PS5 RENTAL FEATURED BANNER - EXCLUSIVE TO WEST BENGAL / KOLKATA */}
         {isWestBengal && (
-          <div className="mt-8 rounded-2xl p-6 sm:p-7 bg-gradient-to-r from-neutral-950 via-[#0a1636] to-neutral-950 border border-blue-900/40 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-8 rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-neutral-950 via-[#0a1636] to-neutral-950 border border-blue-900/40 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2.5 max-w-xl">
               <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-400/25 text-[11px] font-bold uppercase tracking-wider">
                 <Gamepad2 className="w-3.5 h-3.5 text-brand-yellow" />
@@ -144,10 +157,20 @@ export function CategoryCards() {
               </div>
             </div>
 
-            <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+            <div className="shrink-0 flex items-center gap-4">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-blue-500/40 shadow-2xl shrink-0 bg-neutral-950">
+                <Image
+                  src="/images/devices/ps5.jpg"
+                  alt="Sony PlayStation 5 Rental"
+                  fill
+                  className="object-cover"
+                  sizes="128px"
+                />
+              </div>
+
               <Link
                 href="/rent/ps5"
-                className="px-6 py-3 rounded-xl bg-brand-yellow text-black font-extrabold text-xs hover:bg-yellow-400 shadow-yellowGlow transition-transform active:scale-95 flex items-center gap-2"
+                className="px-6 py-3.5 rounded-xl bg-brand-yellow text-black font-extrabold text-xs hover:bg-yellow-400 shadow-yellowGlow transition-transform active:scale-95 flex items-center gap-2 whitespace-nowrap cursor-pointer"
               >
                 <span>Rent PS 5</span>
                 <ArrowRight className="w-3.5 h-3.5" />

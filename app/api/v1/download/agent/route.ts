@@ -1,18 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { verifyAppDownloadAccess } from "@/lib/security/app-access";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   try {
-    const publicApkPath = path.join(process.cwd(), "public", "CashALL-Agent.apk");
-    const rootApkPath = path.join(process.cwd(), "CashALL-Agent.apk");
-    const apkPath = fs.existsSync(publicApkPath) ? publicApkPath : rootApkPath;
+    // 1. Verify access authorization - strictly restricted to assigned field agents
+    const access = verifyAppDownloadAccess(req, "AGENT");
+    if (!access.authorized) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: access.reason || "Access Restricted: CashALL Field Agent App is restricted to registered pickup personnel.",
+          code: "UNAUTHORIZED_AGENT_APP_ACCESS",
+        },
+        { status: 403 }
+      );
+    }
+
+    // 2. Locate APK file from secure root directory (NOT in public directory)
+    const apkPath = path.join(process.cwd(), "CashALL-Agent.apk");
 
     if (!fs.existsSync(apkPath)) {
       return NextResponse.json(
-        { success: false, error: "Agent APK build not found. Please contact admin." },
+        { success: false, error: "Field Agent APK build not found. Please compile the app first." },
         { status: 404 }
       );
     }
@@ -27,6 +40,7 @@ export async function GET(req: NextRequest) {
         "Content-Disposition": 'attachment; filename="CashALL-Agent.apk"',
         "Content-Length": stat.size.toString(),
         "Cache-Control": "no-cache, no-store, must-revalidate",
+        "X-Content-Type-Options": "nosniff",
       },
     });
   } catch (error: any) {

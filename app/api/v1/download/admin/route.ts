@@ -1,14 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { verifyAppDownloadAccess } from "@/lib/security/app-access";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   try {
-    const publicApkPath = path.join(process.cwd(), "public", "CashALL-Admin.apk");
-    const rootApkPath = path.join(process.cwd(), "CashALL-Admin.apk");
-    const apkPath = fs.existsSync(publicApkPath) ? publicApkPath : rootApkPath;
+    // 1. Verify access authorization - strictly restricted to authorized admin operators
+    const access = verifyAppDownloadAccess(req, "ADMIN");
+    if (!access.authorized) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: access.reason || "Access Restricted: CashALL Operations Admin App is restricted to authorized operators.",
+          code: "UNAUTHORIZED_ADMIN_APP_ACCESS",
+        },
+        { status: 403 }
+      );
+    }
+
+    // 2. Locate APK file from secure root directory (NOT in public directory)
+    const apkPath = path.join(process.cwd(), "CashALL-Admin.apk");
 
     if (!fs.existsSync(apkPath)) {
       return NextResponse.json(
@@ -27,6 +40,7 @@ export async function GET(req: NextRequest) {
         "Content-Disposition": 'attachment; filename="CashALL-Admin.apk"',
         "Content-Length": stat.size.toString(),
         "Cache-Control": "no-cache, no-store, must-revalidate",
+        "X-Content-Type-Options": "nosniff",
       },
     });
   } catch (error: any) {

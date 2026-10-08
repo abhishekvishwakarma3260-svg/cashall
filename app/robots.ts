@@ -14,6 +14,8 @@ export default function robots(): MetadataRoute.Robots {
     "/receipt/",
     "/sale-receipt/",
     "/dashboard/",
+    "/download/",
+    "/download",
   ];
 
   const aiBots = [

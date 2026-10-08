@@ -224,6 +224,16 @@ export default function QuoteResultPage() {
     setAuthModalOpen(true);
   };
 
+  const handleRecalculate = () => {
+    if (!quote) return;
+    const bSlug = matchedBrand?.slug || "apple";
+    const mSlug = matchedModel?.slug || "iphone-15";
+    const vId = quote.variantId || "";
+    router.push(
+      `/sell/mobile/${bSlug}/${mSlug}/assess?variantId=${encodeURIComponent(vId)}&existingQuoteId=${encodeURIComponent(quote.id)}&existingQuoteNumber=${encodeURIComponent(quote.quoteNumber)}`
+    );
+  };
+
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
     const clean = phoneNumber.replace(/\D/g, "");
@@ -366,60 +376,48 @@ export default function QuoteResultPage() {
             </div>
           )}
 
-          {/* TRANSPARENT PRICE BREAKDOWN CARD */}
+          {/* INSTANT CASHALL VALUATION CARD */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-premium space-y-6">
-            <div className="flex items-center justify-between border-b border-gray-100 pb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-gray-100 pb-4">
               <div>
-                <h2 className="text-lg font-black text-brand-black">
-                  Transparent Price Calculation
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-1 border border-amber-200/60">
+                  <Sparkles className="w-3 h-3 text-amber-600" />
+                  <span>Guaranteed Price Lock</span>
+                </div>
+                <h2 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight">
+                  Instant CashALL Valuation
                 </h2>
                 <p className="text-xs text-brand-muted mt-0.5">
-                  Line-item breakdown of how your estimated price was derived
+                  Direct guaranteed payout for {resolvedDeviceName} with zero hidden deductions
                 </p>
               </div>
-              <span className={`text-xs font-bold px-2.5 py-1 rounded-lg ${isCancelled ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-500"}`}>
-                {isCancelled ? "CANCELLED" : `Quote ID: ${quote.quoteNumber}`}
-              </span>
-            </div>
-
-            <div className="divide-y divide-gray-100 text-xs sm:text-sm">
-              {/* BASE PRICE */}
-              <div className="py-3 flex items-center justify-between font-bold text-brand-black">
-                <div>
-                  <span>Base Acquisition Value ({resolvedDeviceName})</span>
-                  <div className="text-[11px] font-normal text-brand-muted">Market baseline for flawless unit</div>
-                </div>
-                <span className="font-price text-base">₹{quote.basePrice.toLocaleString("en-IN")}</span>
-              </div>
-
-              {/* DEDUCTIONS & BONUSES */}
-              {breakdown.map((item, idx) => (
-                <div key={idx} className="py-3 flex items-center justify-between">
-                  <div>
-                    <span className="font-bold text-brand-black">{item.title}</span>
-                    <span className="text-gray-400 ml-2">({item.selection})</span>
-                  </div>
-                  <span
-                    className={`font-bold font-price ${
-                      item.amount > 0 ? "text-green-600" : item.amount < 0 ? "text-red-600" : "text-gray-400"
-                    }`}
-                  >
-                    {item.amount > 0 ? `+₹${item.amount}` : item.amount < 0 ? `-₹${Math.abs(item.amount)}` : "₹0"}
-                  </span>
-                </div>
-              ))}
-
-              {/* TOTAL ESTIMATED VALUE */}
-              <div className="pt-4 pb-2 flex items-center justify-between font-black text-base sm:text-lg text-brand-black">
-                <span>Estimated CashALL Value</span>
-                <span className={`text-xl sm:text-2xl font-price ${isCancelled ? "text-gray-400 line-through" : "text-black"}`}>
-                  ₹{quote.estimatedPrice.toLocaleString("en-IN")}
+              <div>
+                <span className={`text-xs font-bold px-3 py-1.5 rounded-xl ${isCancelled ? "bg-red-100 text-red-700" : "bg-neutral-100 text-neutral-700 border border-neutral-200"}`}>
+                  {isCancelled ? "CANCELLED" : `Quote ID: ${quote.quoteNumber}`}
                 </span>
               </div>
             </div>
 
+            {/* DIRECT VALUED PRICE SHOWCASE */}
+            <div className="py-6 px-6 sm:px-8 bg-neutral-900 text-white rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border border-neutral-800 shadow-inner">
+              <div>
+                <span className="text-[11px] uppercase tracking-wider font-extrabold text-neutral-400">
+                  Device Valuation
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-neutral-100 mt-0.5">
+                  {resolvedDeviceName}
+                </h3>
+              </div>
+              <div className="sm:text-right">
+                <div className="text-[11px] text-neutral-400 font-medium">CashALL Guaranteed Payout</div>
+                <div className={`text-3xl sm:text-4xl font-black font-price tracking-tight ${isCancelled ? "text-neutral-500 line-through" : "text-brand-yellow"}`}>
+                  ₹{quote.estimatedPrice.toLocaleString("en-IN")}
+                </div>
+              </div>
+            </div>
+
             {/* TRUST BAR */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-gray-100">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-gray-50 p-3 rounded-xl border border-gray-100">
                 <Truck className="w-4 h-4 text-brand-yellow shrink-0" />
                 <span>Fast Doorstep Pickup</span>
@@ -434,9 +432,9 @@ export default function QuoteResultPage() {
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA ACTION BUTTONS */}
             {isCancelled ? (
-              <div className="pt-4">
+              <div className="pt-2">
                 <Link href="/sell/mobile" className="block w-full">
                   <Button variant="primary" size="lg" fullWidth className="font-black text-base py-4 gap-2 shadow-yellowGlow">
                     <span>START NEW VALUATION</span>
@@ -445,23 +443,33 @@ export default function QuoteResultPage() {
                 </Link>
               </div>
             ) : (
-              <div className="pt-4 flex flex-col sm:flex-row items-center gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                 <Button
                   onClick={handleScheduleClick}
                   variant="primary"
                   size="lg"
                   fullWidth
-                  className="font-black text-base py-4 gap-2 shadow-yellowGlow"
+                  className="font-black text-base py-4 gap-2 shadow-yellowGlow flex-1"
                 >
                   <span>SCHEDULE FAST PICKUP</span>
                   <ArrowRight className="w-5 h-5" />
                 </Button>
 
                 <Button
+                  onClick={handleRecalculate}
+                  variant="secondary"
+                  size="lg"
+                  className="font-extrabold text-xs text-neutral-800 bg-neutral-100 hover:bg-neutral-200 border border-neutral-300 px-5 py-4 gap-1.5 shrink-0"
+                >
+                  <RefreshCw className="w-4 h-4 text-neutral-600" />
+                  <span>Re-calculate</span>
+                </Button>
+
+                <Button
                   onClick={() => setCancelModalOpen(true)}
                   variant="tertiary"
                   size="lg"
-                  className="font-bold text-xs text-red-600 hover:bg-red-50 border border-red-200 shrink-0 px-5 py-4 gap-1.5"
+                  className="font-bold text-xs text-red-600 hover:bg-red-50 border border-red-200 shrink-0 px-4 py-4 gap-1.5"
                 >
                   <Ban className="w-4 h-4" />
                   <span>Decline Quote</span>

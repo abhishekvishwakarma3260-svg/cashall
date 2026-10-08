@@ -60,6 +60,7 @@ android-admin-app/.gradle/
 android-customer-app/app/build/
 android-customer-app/.gradle/
 hs_err*.log
+*.apk
 /CashALL-Caller.apk
 /CashALL-Customer.apk
 database_backups/

@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { INITIAL_BRANDS, INITIAL_MODELS, BrandData } from "@/lib/store";
 import { Search, ChevronRight } from "lucide-react";
 import { BrandIcon } from "@/components/common/BrandIcon";
+import { AiVerificationBar } from "@/components/common/AiVerificationBar";
 
 export default function BrandSelectionPage() {
   const [search, setSearch] = useState("");
@@ -118,6 +119,11 @@ export default function BrandSelectionPage() {
                 </button>
               </div>
             )}
+          </div>
+
+          {/* AI VERIFICATION TRUST BAR */}
+          <div className="pt-8">
+            <AiVerificationBar />
           </div>
 
         </div>

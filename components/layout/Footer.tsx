@@ -3,22 +3,53 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Truck, Banknote, HelpCircle, Facebook, Instagram, Youtube } from "lucide-react";
+import { ShieldCheck, Truck, Banknote, HelpCircle, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
 export function Footer() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isWestBengal, setIsWestBengal] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedUser = localStorage.getItem("cashall_user");
       setIsLoggedIn(!!storedUser);
+
+      const checkLocation = () => {
+        try {
+          const locStr = localStorage.getItem("cashall_location");
+          if (locStr) {
+            const parsed = JSON.parse(locStr);
+            const state = (parsed?.state || "").toLowerCase();
+            const city = (parsed?.city || "").toLowerCase();
+            setIsWestBengal(
+              state.includes("west bengal") ||
+              state.includes("bengal") ||
+              state.trim() === "wb" ||
+              city.includes("kolkata") ||
+              city.includes("howrah")
+            );
+          } else {
+            setIsWestBengal(false);
+          }
+        } catch {
+          setIsWestBengal(false);
+        }
+      };
+
+      checkLocation();
+      window.addEventListener("cashall_location_updated", checkLocation);
+      window.addEventListener("storage", checkLocation);
+      return () => {
+        window.removeEventListener("cashall_location_updated", checkLocation);
+        window.removeEventListener("storage", checkLocation);
+      };
     }
   }, []);
 
   return (
     <footer className="bg-brand-black text-gray-400 border-t border-neutral-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* TRUST BADGES RIBBON */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pb-12 mb-12 border-b border-neutral-800">
           <div className="flex items-center gap-3">
@@ -107,6 +138,15 @@ export function Footer() {
               >
                 <Youtube className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </a>
+              <a
+                href="https://www.linkedin.com/company/cashall/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-gray-400 hover:text-brand-yellow hover:border-brand-yellow/50 transition-all group"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              </a>
             </div>
 
             {/* OFFICIAL EMAIL SUPPORT DIRECTLY BELOW FOLLOW US ON */}
@@ -140,11 +180,13 @@ export function Footer() {
                   Sell Tablet / iPad
                 </Link>
               </li>
-              <li>
-                <Link href="/rent/ps5" className="hover:text-brand-yellow transition-colors text-blue-400 font-semibold">
-                  Rent PS5 Console
-                </Link>
-              </li>
+              {isWestBengal && (
+                <li>
+                  <Link href="/rent/ps5" className="hover:text-brand-yellow transition-colors text-blue-400 font-semibold">
+                    Rent PS5 Console
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link href="/sell-phone-in-kolkata" className="hover:text-brand-yellow transition-colors text-brand-yellow/90 font-semibold">
                   Sell Phone in Kolkata

@@ -15,6 +15,8 @@ Disallow: /orders/
 Disallow: /receipt/
 Disallow: /sale-receipt/
 Disallow: /dashboard/
+Disallow: /download/
+Disallow: /download
 
 # SearchGPT, OpenAI ChatGPT Web Browsing & Search
 User-agent: OAI-SearchBot

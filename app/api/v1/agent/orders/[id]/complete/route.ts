@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db";
 import { EmailService } from "@/lib/services/email.service";
 import { logger } from "@/lib/utils/logger";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
-import { invalidateAgentOrdersCache } from "../../route";
+import { invalidateAgentOrdersCache } from "@/lib/cache/agent-cache";
 
 export const dynamic = "force-dynamic";
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Smartphone, Laptop, Tablet, ArrowRight, ChevronRight } from "lucide-react";
+import { AiVerificationBar } from "@/components/common/AiVerificationBar";
 
 export default function CategorySelectionPage() {
   return (
@@ -101,6 +102,11 @@ export default function CategorySelectionPage() {
               </div>
             </Link>
 
+          </div>
+
+          {/* AI VERIFICATION TRUST BAR */}
+          <div className="pt-10 max-w-4xl mx-auto">
+            <AiVerificationBar />
           </div>
 
         </div>

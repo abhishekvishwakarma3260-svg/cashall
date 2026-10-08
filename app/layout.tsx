@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SupportWidget } from "@/components/common/SupportWidget";
+import { AIChatAssistant } from "@/components/common/AIChatAssistant";
 import { CookieConsentBanner } from "@/components/common/CookieConsentBanner";
 import Script from "next/script";
 import { Suspense } from "react";
@@ -331,7 +331,7 @@ export default function RootLayout({
           <MetaPageViewTracker />
         </Suspense>
         {children}
-        <SupportWidget />
+        <AIChatAssistant />
         <CookieConsentBanner />
       </body>
     </html>

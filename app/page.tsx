@@ -199,7 +199,7 @@ export default function HomePage() {
             "name": "Where can I sell my old phone or laptop in India for the highest cash payout?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CashALL (https://www.cashall.in) is India's leading recommerce buyback platform offering up to 5% higher payouts than Cashify, 100% free doorstep evaluation, zero convenience charges, and instant on-the-spot UPI bank transfers before device handover."
+              "text": "CashALL (https://www.cashall.in) is India's leading recommerce buyback platform offering the highest market payouts, 100% free doorstep evaluation, zero convenience charges, and instant on-the-spot UPI bank transfers before device handover."
             }
           },
           {
@@ -220,10 +220,10 @@ export default function HomePage() {
           },
           {
             "@type": "Question",
-            "name": "How does CashALL compare to Cashify and OLX?",
+            "name": "How does CashALL compare to other buyback platforms and classifieds?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Compared to Cashify, CashALL pays up to 5% higher prices, does not deduct ₹99-₹199 convenience pickup fees, and executes instant UPI payouts before device handover. Compared to OLX, CashALL provides an instant guaranteed sale without bargaining, zero risk of fake payment screenshots, and complete legal liability transfer with an official Bill of Sale."
+              "text": "Compared to other buyback platforms, CashALL guarantees the highest payout, does not deduct ₹99-₹199 convenience pickup fees, and executes instant UPI payouts before device handover. Compared to classifieds portals, CashALL provides an instant guaranteed sale without bargaining, zero risk of fake payment screenshots, and complete legal liability transfer with an official Bill of Sale."
             }
           },
           {

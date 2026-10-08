@@ -6,18 +6,7 @@ import { formatPickupDateDisplay } from "@/lib/utils/pickup-date";
 
 export const dynamic = "force-dynamic";
 
-interface AgentOrdersCacheEntry {
-  data: any;
-  timestamp: number;
-}
-
-// In-memory server-side cache for high-frequency agent polling
-const agentOrdersCache = new Map<string, AgentOrdersCacheEntry>();
-const CACHE_TTL_MS = 15000; // 15 seconds max cache
-
-export function invalidateAgentOrdersCache() {
-  agentOrdersCache.clear();
-}
+import { agentOrdersCache, AGENT_CACHE_TTL_MS } from "@/lib/cache/agent-cache";
 
 export async function GET(req: NextRequest) {
   try {
@@ -30,7 +19,7 @@ export async function GET(req: NextRequest) {
     // Server-side cache (bypassed if refreshing or updating)
     const cacheKey = `${agentId || ""}_${phone || ""}_${name || ""}`.toLowerCase().trim();
     const cached = agentOrdersCache.get(cacheKey);
-    if (!isBypass && cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+    if (!isBypass && cached && Date.now() - cached.timestamp < AGENT_CACHE_TTL_MS) {
       return NextResponse.json(cached.data, {
         headers: {
           "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",

@@ -435,7 +435,7 @@ function PickupCheckoutContent() {
 
     // Strictly validate non-prechecked legal declaration & terms
     if (!termsAccepted) {
-      alert("Please confirm the Seller Legal Declaration and accept the Purchase Agreement (v1.0) to schedule your pickup.");
+      alert("Please confirm the Seller Legal Declaration and accept the Purchase Agreement to schedule your pickup.");
       return;
     }
 
@@ -1130,8 +1130,8 @@ function PickupCheckoutContent() {
                     <ShieldCheck className="w-5 h-5 text-brand-yellow shrink-0" />
                     <h2 className="text-base font-bold text-brand-black">4. Seller Legal Declaration &amp; Terms <span className="text-red-500">*</span></h2>
                   </div>
-                  <span className="text-[11px] font-mono font-bold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">
-                    Agreement v1.0
+                  <span className="text-[11px] font-bold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">
+                    Official Agreement
                   </span>
                 </div>
 
@@ -1139,11 +1139,12 @@ function PickupCheckoutContent() {
                   {/* Statutory Affirmation Box */}
                   <div className="bg-neutral-50 rounded-2xl p-4 border border-brand-border text-xs text-brand-muted space-y-2 leading-relaxed">
                     <p className="font-bold text-brand-black">
-                      Pursuant to the Indian Contract Act, 1872 and recommerce regulations, CashALL (operated by Aarna Enterprise) purchases pre-owned devices directly from lawful owners.
+                      Pursuant to the Indian Contract Act, 1872, the DPDP Act 2023, and recommerce regulations, CashALL (operated by Aarna Enterprise) purchases pre-owned devices directly from lawful owners.
                     </p>
                     <ul className="list-disc pl-4 space-y-1 text-[11px]">
                       <li>You declare you are the lawful, authorized owner with unrestricted right to sell.</li>
                       <li>The device is not stolen, lost, or subject to EMI financing claims, liens, or telecommunication blacklisting.</li>
+                      <li>Your personal data &amp; KYC details are processed strictly in compliance with the Digital Personal Data Protection (DPDP) Act 2023 for verification and payout.</li>
                       <li>The online quote is an automated estimate; final purchase price is confirmed after physical inspection.</li>
                       <li>You retain full right to decline any revised valuation at doorstep with <strong className="text-brand-black font-bold">₹0 cancellation fee</strong>.</li>
                     </ul>
@@ -1152,7 +1153,7 @@ function PickupCheckoutContent() {
                       onClick={() => setShowAgreementModal(true)}
                       className="text-[11px] font-bold text-brand-blue underline hover:text-blue-800 pt-1 block"
                     >
-                      Read Complete Used Device Purchase Agreement (v1.0) &rarr;
+                      Read Complete Used Device Purchase Agreement &rarr;
                     </button>
                   </div>
 
@@ -1166,7 +1167,7 @@ function PickupCheckoutContent() {
                       className="w-4 h-4 mt-0.5 accent-brand-yellow rounded shrink-0 cursor-pointer"
                     />
                     <span className="text-xs text-brand-black leading-snug">
-                      <strong className="font-bold text-brand-black">Mandatory:</strong> I confirm that I am the lawful owner with authority to sell this device and agree to the{" "}
+                      <strong className="font-bold text-brand-black">Mandatory:</strong> I confirm that I am the lawful owner with authority to sell this device, consent to personal data and KYC processing under the DPDP Act 2023 for doorstep evaluation, and agree to the{" "}
                       <Link href="/seller-terms" target="_blank" className="font-bold underline text-brand-black hover:text-brand-blue">
                         Seller Terms
                       </Link>
@@ -1179,7 +1180,7 @@ function PickupCheckoutContent() {
                         }}
                         className="font-bold underline text-brand-black hover:text-brand-blue"
                       >
-                        Used Device Purchase Agreement (v1.0)
+                        Used Device Purchase Agreement
                       </button>
                       .
                     </span>

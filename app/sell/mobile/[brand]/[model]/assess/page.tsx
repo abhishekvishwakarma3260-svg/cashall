@@ -126,11 +126,15 @@ export default function MobileAssessmentPage() {
     }
   }, [isIPhone]);
 
+  const existingQuoteId = searchParams.get("existingQuoteId") || "";
+  const existingQuoteNumber = searchParams.get("existingQuoteNumber") || "";
+
   // ── WIZARD STATE ──────────────────────────────────────────────────────────
   const [step, setStep] = useState<number>(1);
   const [unlockModalOpen, setUnlockModalOpen] = useState(false);
 
   // STEP 1: Basic Functionality Check
+  const [deviceSwitchesOn, setDeviceSwitchesOn] = useState<string | null>("yes");
   const [canMakeCalls, setCanMakeCalls] = useState<boolean | null>(null);
   const [touchScreenWorking, setTouchScreenWorking] = useState<boolean | null>(null);
   const [isScreenOriginal, setIsScreenOriginal] = useState<boolean | null>(null);
@@ -153,6 +157,31 @@ export default function MobileAssessmentPage() {
   // STEP 5: Mobile Age (Conditional when underWarranty === true)
   const [mobileAge, setMobileAge] = useState<string>("Below 3 months");
 
+  // Restore previous answers if re-calculating existing quote
+  useEffect(() => {
+    if (existingQuoteId && typeof window !== "undefined") {
+      try {
+        const stored = localStorage.getItem(`cashall_quote_${existingQuoteId}`);
+        if (stored) {
+          const q = JSON.parse(stored);
+          if (q.selectedAnswersJson) {
+            const ans = JSON.parse(q.selectedAnswersJson);
+            if (ans.deviceSwitchesOn) setDeviceSwitchesOn(ans.deviceSwitchesOn);
+            if (ans.canMakeCalls !== undefined) setCanMakeCalls(ans.canMakeCalls);
+            if (ans.touchScreenWorking !== undefined) setTouchScreenWorking(ans.touchScreenWorking);
+            if (ans.isScreenOriginal !== undefined) setIsScreenOriginal(ans.isScreenOriginal);
+            if (ans.underWarranty !== undefined) setUnderWarranty(ans.underWarranty);
+            if (ans.hasGstBill !== undefined) setHasGstBill(ans.hasGstBill);
+            if (ans.selectedDefects) setSelectedDefects(ans.selectedDefects);
+            if (ans.selectedProblems) setSelectedProblems(ans.selectedProblems);
+            if (ans.selectedAccessories) setSelectedAccessories(ans.selectedAccessories);
+            if (ans.mobileAge) setMobileAge(ans.mobileAge);
+          }
+        }
+      } catch {}
+    }
+  }, [existingQuoteId]);
+
   const totalSteps = underWarranty === true ? 5 : 4;
 
   const toggleArrayItem = (array: string[], item: string) => {
@@ -172,6 +201,9 @@ export default function MobileAssessmentPage() {
     };
 
     // Step 1 Deductions
+    if (deviceSwitchesOn === "no") {
+      addDeduction("Device Dead / Non-Bootable", 50);
+    }
     if (canMakeCalls === false) {
       addDeduction("Calling / Network Faulty", 18);
     }
@@ -285,6 +317,8 @@ export default function MobileAssessmentPage() {
   // Check if current step can proceed
   const isStepValid = () => {
     if (step === 1) {
+      if (deviceSwitchesOn === null) return false;
+      if (deviceSwitchesOn === "no") return true;
       if (canMakeCalls === null || touchScreenWorking === null || isScreenOriginal === null || underWarranty === null) {
         return false;
       }
@@ -321,9 +355,9 @@ export default function MobileAssessmentPage() {
   };
 
   const proceedWithQuote = () => {
-    const quoteId = `quote-${Date.now()}`;
+    const quoteId = existingQuoteId || `quote-${Date.now()}`;
     const random5Digits = Math.floor(10000 + Math.random() * 90000);
-    const quoteNumber = `CAQ${random5Digits}`;
+    const quoteNumber = existingQuoteNumber || `CAQ${random5Digits}`;
     const deviceFullName = formatDeviceName(brand.name, model.name, variant.storage);
 
     const sanitizedProblems = isIPhone
@@ -332,6 +366,7 @@ export default function MobileAssessmentPage() {
 
     const answersSummary = {
       device: deviceFullName,
+      deviceSwitchesOn,
       canMakeCalls,
       touchScreenWorking,
       isScreenOriginal,
@@ -393,6 +428,17 @@ export default function MobileAssessmentPage() {
         breakdownJson: newQuote.breakdownJson,
         createdAt: newQuote.createdAt,
       });
+
+      try {
+        const savedQuotes = JSON.parse(localStorage.getItem("cashall_quotes") || "[]");
+        const existingIdx = savedQuotes.findIndex((q: any) => q.id === quoteId || q.quoteNumber === quoteNumber);
+        if (existingIdx >= 0) {
+          savedQuotes[existingIdx] = newQuote;
+        } else {
+          savedQuotes.push(newQuote);
+        }
+        localStorage.setItem("cashall_quotes", JSON.stringify(savedQuotes));
+      } catch {}
     }
 
     fetch("/api/v1/quotes/save", {
@@ -482,57 +528,80 @@ export default function MobileAssessmentPage() {
               {step === 1 && (
                 <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
                   <RadioQuestionItem
-                    id="q-calls"
+                    id="q-switch-on"
                     questionNumber={1}
-                    question="Are you able to make and receive calls?"
-                    hint="Check your device for cellular network connectivity issues."
-                    options={["Yes", "No"]}
-                    selectedValue={canMakeCalls}
-                    onSelect={(val) => setCanMakeCalls(val)}
+                    question="Does your mobile switch on or is it dead?"
+                    hint="Check if the phone powers on normally and displays the screen."
+                    options={[
+                      { value: "yes", label: "Yes, my phone switches on" },
+                      { value: "no", label: "No, it's dead" },
+                    ]}
+                    selectedValue={deviceSwitchesOn}
+                    onSelect={(val) => {
+                      setDeviceSwitchesOn(val);
+                      if (val === "no") {
+                        setCanMakeCalls(false);
+                        setTouchScreenWorking(false);
+                      }
+                    }}
                   />
 
-                  <RadioQuestionItem
-                    id="q-touch"
-                    questionNumber={2}
-                    question="Is your device's touch screen working properly?"
-                    hint="Check the touch screen functionality of your phone."
-                    options={["Yes", "No"]}
-                    selectedValue={touchScreenWorking}
-                    onSelect={(val) => setTouchScreenWorking(val)}
-                  />
-
-                  <RadioQuestionItem
-                    id="q-screen-orig"
-                    questionNumber={3}
-                    question="Is your phone's screen original?"
-                    hint="Pick 'Yes' if screen was never changed or was changed by Authorized Service Center. Pick 'No' if screen was changed at local shop."
-                    options={["Yes", "No"]}
-                    selectedValue={isScreenOriginal}
-                    onSelect={(val) => setIsScreenOriginal(val)}
-                  />
-
-                  <RadioQuestionItem
-                    id="q-warranty"
-                    questionNumber={4}
-                    question="Is your device under manufacturer warranty?"
-                    hint="You can get a better price for your device if it's under manufacturer warranty with a GST valid bill."
-                    options={["Yes", "No"]}
-                    selectedValue={underWarranty}
-                    onSelect={(val) => setUnderWarranty(val)}
-                  />
-
-                  {underWarranty === true && (
-                    <div className="pt-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                  {deviceSwitchesOn !== "no" && (
+                    <>
                       <RadioQuestionItem
-                        id="q-gst-bill"
-                        questionNumber={5}
-                        question="Do you have GST valid bill with the same IMEI?"
-                        hint="Make sure your bill has device IMEI mentioned on it."
+                        id="q-calls"
+                        questionNumber={2}
+                        question="Are you able to make and receive calls?"
+                        hint="Check your device for cellular network connectivity issues."
                         options={["Yes", "No"]}
-                        selectedValue={hasGstBill}
-                        onSelect={(val) => setHasGstBill(val)}
+                        selectedValue={canMakeCalls}
+                        onSelect={(val) => setCanMakeCalls(val)}
                       />
-                    </div>
+
+                      <RadioQuestionItem
+                        id="q-touch"
+                        questionNumber={3}
+                        question="Is your device's touch screen working properly?"
+                        hint="Check the touch screen functionality of your phone."
+                        options={["Yes", "No"]}
+                        selectedValue={touchScreenWorking}
+                        onSelect={(val) => setTouchScreenWorking(val)}
+                      />
+
+                      <RadioQuestionItem
+                        id="q-screen-orig"
+                        questionNumber={4}
+                        question="Is your phone's screen original?"
+                        hint="Pick 'Yes' if screen was never changed or was changed by Authorized Service Center. Pick 'No' if screen was changed at local shop."
+                        options={["Yes", "No"]}
+                        selectedValue={isScreenOriginal}
+                        onSelect={(val) => setIsScreenOriginal(val)}
+                      />
+
+                      <RadioQuestionItem
+                        id="q-warranty"
+                        questionNumber={5}
+                        question="Is your device under manufacturer warranty?"
+                        hint="You can get a better price for your device if it's under manufacturer warranty with a GST valid bill."
+                        options={["Yes", "No"]}
+                        selectedValue={underWarranty}
+                        onSelect={(val) => setUnderWarranty(val)}
+                      />
+
+                      {underWarranty === true && (
+                        <div className="pt-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                          <RadioQuestionItem
+                            id="q-gst-bill"
+                            questionNumber={6}
+                            question="Do you have GST valid bill with the same IMEI?"
+                            hint="Make sure your bill has device IMEI mentioned on it."
+                            options={["Yes", "No"]}
+                            selectedValue={hasGstBill}
+                            onSelect={(val) => setHasGstBill(val)}
+                          />
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               )}
@@ -592,6 +661,26 @@ export default function MobileAssessmentPage() {
               {step === 3 && (
                 <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {/* FOR IPHONE: Battery Health & e-SIM placed at the VERY TOP */}
+                    {isIPhone && (
+                      <>
+                        <VisualOptionCard
+                          id="prob-bat-service"
+                          label="Battery in Service (Health is less than 80%)"
+                          imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244621b86f8.jpg"
+                          selected={selectedProblems.includes("battery_service")}
+                          onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "battery_service"))}
+                        />
+                        <VisualOptionCard
+                          id="prob-esim"
+                          label="e-SIM / Cellular Not Working"
+                          imageUrl="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/SIM_card_tray_broken_missing.png"
+                          selected={selectedProblems.includes("esim_issue")}
+                          onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "esim_issue"))}
+                        />
+                      </>
+                    )}
+
                     <VisualOptionCard
                       id="prob-front-cam"
                       label="Front Camera not working"
@@ -704,24 +793,6 @@ export default function MobileAssessmentPage() {
                       selected={selectedProblems.includes("proximity_sensor")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "proximity_sensor"))}
                     />
-                    {isIPhone && (
-                      <>
-                        <VisualOptionCard
-                          id="prob-bat-service"
-                          label="Battery in Service (Health is less than 80%)"
-                          imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244621b86f8.jpg"
-                          selected={selectedProblems.includes("battery_service")}
-                          onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "battery_service"))}
-                        />
-                        <VisualOptionCard
-                          id="prob-esim"
-                          label="e-SIM / Cellular Not Working"
-                          imageUrl="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/SIM_card_tray_broken_missing.png"
-                          selected={selectedProblems.includes("esim_issue")}
-                          onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "esim_issue"))}
-                        />
-                      </>
-                    )}
                   </div>
 
                   <div className="pt-4 border-t border-gray-100 flex items-center justify-between">

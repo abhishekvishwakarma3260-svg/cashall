@@ -1,17 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, CheckCircle2, ShieldCheck, Smartphone, PhoneCall, Headphones, Sparkles, ChevronDown, Settings } from "lucide-react";
+import { Download, CheckCircle2, ShieldCheck, Smartphone, PhoneCall, Headphones, Sparkles, Settings, Lock, Unlock, KeyRound, AlertCircle } from "lucide-react";
 
 export default function DownloadCallerPage() {
   const [downloading, setDownloading] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState<"vivo" | "samsung" | "other">("vivo");
+  const [passkey, setPasskey] = useState("");
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = sessionStorage.getItem("cashall_caller_download_key") || sessionStorage.getItem("cashall_app_access_key");
+      const supportSession = localStorage.getItem("cashall_support_session");
+      if (stored || supportSession) {
+        setIsAuthorized(true);
+        if (stored) setPasskey(stored);
+      }
+    }
+  }, []);
+
+  const handleVerify = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanKey = passkey.trim();
+    const validKeys = ["CASHALL_CALLER_SECURE_2026", "CASHALL_VIP_2026", "CALLER_DESK_2026", "Ank933967@"];
+    if (validKeys.some((k) => k.toLowerCase() === cleanKey.toLowerCase())) {
+      setIsAuthorized(true);
+      setError("");
+      sessionStorage.setItem("cashall_caller_download_key", cleanKey);
+    } else {
+      setError("Invalid Caller Passkey. Access restricted to verified operations telecallers.");
+    }
+  };
 
   const handleDownload = () => {
+    if (!isAuthorized) {
+      setError("Please verify passkey to download.");
+      return;
+    }
     setDownloading(true);
-    window.location.href = "/api/v1/download/caller";
+    const keyToUse = passkey.trim() || sessionStorage.getItem("cashall_caller_download_key") || "CASHALL_VIP_2026";
+    window.location.href = `/api/v1/download/caller?key=${encodeURIComponent(keyToUse)}`;
     setTimeout(() => setDownloading(false), 4000);
   };
 
@@ -37,6 +69,55 @@ export default function DownloadCallerPage() {
           </div>
         </div>
 
+        {/* ACCESS BADGE */}
+        <div className="bg-yellow-950/40 border border-yellow-500/30 rounded-2xl p-3 text-xs text-yellow-300 flex items-center justify-center gap-2 font-bold">
+          <Lock className="w-4 h-4 text-yellow-400 shrink-0" />
+          <span>Restricted to Operations Telecalling Staff</span>
+        </div>
+
+        {/* PASSKEY VERIFICATION */}
+        {!isAuthorized ? (
+          <form onSubmit={handleVerify} className="space-y-3 bg-neutral-950/70 p-4 rounded-2xl border border-neutral-800 text-left">
+            <label className="text-xs font-bold text-neutral-300 flex items-center gap-1.5">
+              <KeyRound className="w-3.5 h-3.5 text-yellow-400" />
+              <span>Enter Caller Desk Passkey</span>
+            </label>
+            <input
+              type="password"
+              value={passkey}
+              onChange={(e) => {
+                setPasskey(e.target.value);
+                if (error) setError("");
+              }}
+              placeholder="Enter Caller Security Passkey"
+              className="w-full px-3 py-2.5 rounded-xl bg-neutral-800 border border-neutral-700 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-yellow-400"
+            />
+            {error && (
+              <p className="text-[11px] text-red-400 flex items-center gap-1">
+                <AlertCircle className="w-3 h-3" /> {error}
+              </p>
+            )}
+            <button
+              type="submit"
+              className="w-full py-2.5 rounded-xl bg-yellow-400 text-black font-extrabold text-xs uppercase hover:bg-yellow-300 transition-colors"
+            >
+              Verify Passkey
+            </button>
+          </form>
+        ) : (
+          <div className="bg-emerald-950/40 border border-emerald-800/80 rounded-2xl p-3 text-xs text-emerald-300 flex items-center justify-between font-bold">
+            <span className="flex items-center gap-1.5">
+              <Unlock className="w-4 h-4 text-emerald-400" /> Authorized Caller Access Granted
+            </span>
+            <button
+              onClick={() => setIsAuthorized(false)}
+              className="text-[10px] text-neutral-400 hover:text-white underline"
+            >
+              Lock
+            </button>
+          </div>
+        )}
+
         {/* FEATURE PILLS */}
         <div className="grid grid-cols-2 gap-2 text-left text-xs bg-neutral-950/80 border border-neutral-800/80 p-3.5 rounded-2xl">
           <div className="flex items-center gap-2 text-neutral-300">
@@ -61,11 +142,17 @@ export default function DownloadCallerPage() {
         <div className="space-y-2">
           <button
             onClick={handleDownload}
-            disabled={downloading}
-            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 hover:from-emerald-300 hover:to-teal-400 text-black font-black text-sm transition shadow-xl active:scale-95 flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-50"
+            disabled={downloading || !isAuthorized}
+            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 hover:from-emerald-300 hover:to-teal-400 text-black font-black text-sm transition shadow-xl active:scale-95 flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Download className="w-5 h-5 stroke-[2.5]" />
-            <span>{downloading ? "Starting Download..." : "Download / Update CashALL Caller APK"}</span>
+            <span>
+              {!isAuthorized
+                ? "Locked (Enter Passkey Above)"
+                : downloading
+                ? "Starting Download..."
+                : "Download CashALL Caller APK"}
+            </span>
           </button>
           <div className="text-[11px] text-neutral-400 flex items-center justify-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -78,12 +165,12 @@ export default function DownloadCallerPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-bold text-yellow-400">
               <Settings className="w-4 h-4" />
-              <span>Auto Call Recording Setup (Mandatory)</span>
+              <span>Auto Call Recording Setup</span>
             </div>
           </div>
 
           <p className="text-[11px] text-neutral-400 leading-relaxed">
-            On Android 13 devices (such as Vivo V20), the system Phone app must be enabled once to record calls automatically:
+            On Android 13 devices, the system Phone app must be enabled once to record calls automatically:
           </p>
 
           {/* Brand Switcher */}
@@ -113,102 +200,11 @@ export default function DownloadCallerPage() {
               Xiaomi / Oppo
             </button>
           </div>
-
-          {/* Dynamic Instructions */}
-          {selectedBrand === "vivo" && (
-            <div className="space-y-1.5 text-xs text-neutral-300 bg-neutral-900/90 border border-neutral-800 p-3 rounded-xl">
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">1</span>
-                <span>Open your native <strong>Phone (Dialer) app</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">2</span>
-                <span>Tap the <strong>3 dots (⋮)</strong> at top right corner</span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">3</span>
-                <span>Tap <strong>Call settings ➔ Record settings</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">4</span>
-                <span>Select <strong>Record all calls automatically</strong></span>
-              </div>
-            </div>
-          )}
-
-          {selectedBrand === "samsung" && (
-            <div className="space-y-1.5 text-xs text-neutral-300 bg-neutral-900/90 border border-neutral-800 p-3 rounded-xl">
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">1</span>
-                <span>Open the <strong>Phone app</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">2</span>
-                <span>Tap the <strong>3 dots (⋮) ➔ Settings</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">3</span>
-                <span>Tap <strong>Record calls</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">4</span>
-                <span>Turn ON <strong>Auto record calls</strong></span>
-              </div>
-            </div>
-          )}
-
-          {selectedBrand === "other" && (
-            <div className="space-y-1.5 text-xs text-neutral-300 bg-neutral-900/90 border border-neutral-800 p-3 rounded-xl">
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">1</span>
-                <span>Open <strong>Phone dialer app ➔ Settings</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">2</span>
-                <span>Tap <strong>Call recording</strong></span>
-              </div>
-              <div className="flex items-start gap-2 font-medium">
-                <span className="w-4 h-4 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center shrink-0 text-[10px]">3</span>
-                <span>Turn ON <strong>Record calls automatically</strong></span>
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* INSTALLATION SAFETY NOTICE */}
-        <div className="bg-neutral-950/60 border border-neutral-800/80 rounded-2xl p-4 text-left text-xs space-y-2 text-neutral-400">
-          <div className="flex items-center gap-1.5 text-neutral-300 font-bold text-xs">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>Safe &amp; Enterprise Verified</span>
-          </div>
-          <p className="text-[11px] leading-relaxed">
-            If Chrome shows <em>&quot;File might be harmful&quot;</em>, tap <strong>Download anyway</strong>. This is standard for internal enterprise APKs installed outside the Google Play Store.
-          </p>
-        </div>
-
-        {/* HELPFUL LINKS */}
-        <div className="flex items-center justify-between text-xs text-neutral-400 pt-2 px-1">
-          <Link href="/download/agent" className="hover:text-yellow-400 transition">
-            Looking for Field Agent App? ➔
-          </Link>
-          <a href="/CashALL-Caller.apk" download="CashALL-Caller.apk" className="text-neutral-500 hover:text-white underline">
-            Direct File Download
-          </a>
-        </div>
-
-        {/* ADMIN & HUB SHORTCUTS */}
-        <div className="pt-2 flex items-center justify-between text-xs text-neutral-500">
-          <Link
-            href="/download"
-            className="hover:text-yellow-400 transition"
-          >
-            ← View All Apps Hub
-          </Link>
-          <Link
-            href="/admin/support/calls"
-            className="hover:text-yellow-400 transition"
-          >
-            Back to Call Console →
+        <div className="text-center pt-2">
+          <Link href="/support/login" className="text-xs text-yellow-400 hover:underline font-semibold">
+            &larr; Return to Caller / Support Login
           </Link>
         </div>
       </div>

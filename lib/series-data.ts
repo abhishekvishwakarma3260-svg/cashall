@@ -6,7 +6,7 @@ export interface SeriesItem {
 
 export const BRAND_SERIES_MAP: Record<string, SeriesItem[]> = {
   samsung: [
-    { id: "s-sam-s", name: "Galaxy S Series", matchPattern: ["Galaxy S", "S25", "S24", "S23", "S22", "S21", "S20", "S10", "S9", "S8", "S7", "S6"] },
+    { id: "s-sam-s", name: "Galaxy S Series", matchPattern: ["Galaxy S", "S26", "S25", "S24", "S23", "S22", "S21", "S20", "S10", "S9", "S8", "S7", "S6"] },
     { id: "s-sam-a", name: "Galaxy A Series", matchPattern: ["Galaxy A", " A0", " A1", " A2", " A3", " A5", " A7", " A8", " A9", " A50", " A51", " A52", " A53", " A54", " A55", " A70", " A71", " A72", " A73"] },
     { id: "s-sam-m", name: "Galaxy M Series", matchPattern: ["Galaxy M", " M0", " M1", " M2", " M3", " M5", " M10", " M20", " M30", " M51", " M52", " M53", " M54", " M55"] },
     { id: "s-sam-z", name: "Galaxy Z Flip / Fold", matchPattern: ["Galaxy Z", "Fold", "Flip"] },
@@ -17,6 +17,7 @@ export const BRAND_SERIES_MAP: Record<string, SeriesItem[]> = {
     { id: "s-sam-c", name: "Galaxy C Series", matchPattern: ["Galaxy C", " C5", " C7", " C9", " C55"] },
   ],
   apple: [
+    { id: "s-app-18", name: "iPhone 18 Series", matchPattern: ["iPhone 18", "iPhone 18 Pro", "iPhone 18 Air"] },
     { id: "s-app-17", name: "iPhone 17 Series", matchPattern: ["iPhone 17", "iPhone Air"] },
     { id: "s-app-16", name: "iPhone 16 Series", matchPattern: ["iPhone 16"] },
     { id: "s-app-15", name: "iPhone 15 Series", matchPattern: ["iPhone 15"] },
@@ -39,7 +40,7 @@ export const BRAND_SERIES_MAP: Record<string, SeriesItem[]> = {
   ],
   oneplus: [
     { id: "s-op-nord", name: "Nord Series", matchPattern: ["Nord"] },
-    { id: "s-op-num", name: "Number Series", matchPattern: ["OnePlus 12", "OnePlus 11", "OnePlus 10", "OnePlus 9", "OnePlus 8", "OnePlus 7", "OnePlus 6", "OnePlus 5", "OnePlus 3"] },
+    { id: "s-op-num", name: "Number Series", matchPattern: ["OnePlus 13", "OnePlus 12", "OnePlus 11", "OnePlus 10", "OnePlus 9", "OnePlus 8", "OnePlus 7", "OnePlus 6", "OnePlus 5", "OnePlus 3"] },
     { id: "s-op-r", name: "R Series", matchPattern: ["12R", "11R", "10R", "9R", "9RT"] },
     { id: "s-op-open", name: "Open Series", matchPattern: ["Open"] },
   ],
@@ -80,6 +81,8 @@ export const BRAND_SERIES_MAP: Record<string, SeriesItem[]> = {
     { id: "s-mot-one", name: "Moto One Series", matchPattern: ["Moto One", "One Vision", "One Action", "One Fusion", "One Macro"] },
   ],
   google: [
+    { id: "s-goo-11", name: "Pixel 11 Series", matchPattern: ["Pixel 11"] },
+    { id: "s-goo-10", name: "Pixel 10 Series", matchPattern: ["Pixel 10"] },
     { id: "s-goo-9", name: "Pixel 9 Series", matchPattern: ["Pixel 9"] },
     { id: "s-goo-8", name: "Pixel 8 Series", matchPattern: ["Pixel 8"] },
     { id: "s-goo-7", name: "Pixel 7 Series", matchPattern: ["Pixel 7"] },

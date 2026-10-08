@@ -1,18 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { verifyAppDownloadAccess } from "@/lib/security/app-access";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   try {
-    const publicApkPath = path.join(process.cwd(), "public", "CashALL-Caller.apk");
-    const rootApkPath = path.join(process.cwd(), "CashALL-Caller.apk");
-    const apkPath = fs.existsSync(publicApkPath) ? publicApkPath : rootApkPath;
+    // 1. Verify access authorization - strictly restricted to authorized telecalling staff
+    const access = verifyAppDownloadAccess(req, "CALLER");
+    if (!access.authorized) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: access.reason || "Access Restricted: CashALL Caller Desk App is restricted to authorized operations telecallers.",
+          code: "UNAUTHORIZED_CALLER_APP_ACCESS",
+        },
+        { status: 403 }
+      );
+    }
+
+    // 2. Locate APK file from secure root directory (NOT in public directory)
+    const apkPath = path.join(process.cwd(), "CashALL-Caller.apk");
 
     if (!fs.existsSync(apkPath)) {
       return NextResponse.json(
-        { success: false, error: "Caller APK build not found. Please contact admin." },
+        { success: false, error: "Caller Desk APK build not found. Please compile the app first." },
         { status: 404 }
       );
     }
@@ -27,12 +40,13 @@ export async function GET(req: NextRequest) {
         "Content-Disposition": 'attachment; filename="CashALL-Caller.apk"',
         "Content-Length": stat.size.toString(),
         "Cache-Control": "no-cache, no-store, must-revalidate",
+        "X-Content-Type-Options": "nosniff",
       },
     });
   } catch (error: any) {
-    console.error("Error serving Caller APK:", error);
+    console.error("Error serving Caller Desk APK:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to download Caller APK" },
+      { success: false, error: "Failed to download Caller Desk APK" },
       { status: 500 }
     );
   }
