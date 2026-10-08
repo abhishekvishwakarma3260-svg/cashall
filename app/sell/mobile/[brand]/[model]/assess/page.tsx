@@ -54,7 +54,7 @@ export default function MobileAssessmentPage() {
     brandSlug: brand.slug,
     name: modelSlug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
     slug: modelSlug,
-    imageUrl: `https://s3ng.cashify.in/cashify/product/img/xhdpi/${modelSlug}.jpg`,
+    imageUrl: `/api/v1/catalog/image/${modelSlug}`,
     releaseYear: 2024,
     popular: true,
     active: true,
@@ -613,28 +613,28 @@ export default function MobileAssessmentPage() {
                     <VisualOptionCard
                       id="defect-screen-broken"
                       label="Broken/scratch on device screen"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/62a31a9a6c17e.png"
+                      imageUrl="/api/v1/catalog/asset/62a31a9a6c17e.png"
                       selected={selectedDefects.includes("broken_screen")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "broken_screen"))}
                     />
                     <VisualOptionCard
                       id="defect-dead-spot"
                       label="Dead Spot/Visible line and Discoloration on screen"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/62a31ad88c473.png"
+                      imageUrl="/api/v1/catalog/asset/62a31ad88c473.png"
                       selected={selectedDefects.includes("dead_spot_lines")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "dead_spot_lines"))}
                     />
                     <VisualOptionCard
                       id="defect-body-dent"
                       label="Scratch/Dent on device body"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/62a31b0b3b18d.png"
+                      imageUrl="/api/v1/catalog/asset/62a31b0b3b18d.png"
                       selected={selectedDefects.includes("body_dent_scratch")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "body_dent_scratch"))}
                     />
                     <VisualOptionCard
                       id="defect-panel-broken"
                       label="Device panel missing/broken"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/62a87a14b538f.png"
+                      imageUrl="/api/v1/catalog/asset/62a87a14b538f.png"
                       selected={selectedDefects.includes("panel_missing")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "panel_missing"))}
                     />
@@ -667,14 +667,14 @@ export default function MobileAssessmentPage() {
                         <VisualOptionCard
                           id="prob-bat-service"
                           label="Battery in Service (Health is less than 80%)"
-                          imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244621b86f8.jpg"
+                          imageUrl="/api/v1/catalog/asset/5d244621b86f8.jpg"
                           selected={selectedProblems.includes("battery_service")}
                           onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "battery_service"))}
                         />
                         <VisualOptionCard
                           id="prob-esim"
                           label="e-SIM / Cellular Not Working"
-                          imageUrl="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/SIM_card_tray_broken_missing.png"
+                          imageUrl="/api/v1/catalog/asset/SIM_card_tray_broken_missing.png"
                           selected={selectedProblems.includes("esim_issue")}
                           onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "esim_issue"))}
                         />
@@ -684,112 +684,112 @@ export default function MobileAssessmentPage() {
                     <VisualOptionCard
                       id="prob-front-cam"
                       label="Front Camera not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2440e1d4b31.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2440e1d4b31.jpg"
                       selected={selectedProblems.includes("front_camera")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "front_camera"))}
                     />
                     <VisualOptionCard
                       id="prob-back-cam"
                       label="Back Camera not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2441a16cca9.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2441a16cca9.jpg"
                       selected={selectedProblems.includes("back_camera")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "back_camera"))}
                     />
                     <VisualOptionCard
                       id="prob-vol-button"
                       label="Volume Button not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2443731c3db.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2443731c3db.jpg"
                       selected={selectedProblems.includes("volume_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "volume_button"))}
                     />
                     <VisualOptionCard
                       id="prob-finger-touch"
                       label="Finger Touch not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2444092bce8.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2444092bce8.jpg"
                       selected={selectedProblems.includes("finger_touch")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "finger_touch"))}
                     />
                     <VisualOptionCard
                       id="prob-wifi"
                       label="WiFi not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2442d22fa49.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2442d22fa49.jpg"
                       selected={selectedProblems.includes("wifi")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "wifi"))}
                     />
                     <VisualOptionCard
                       id="prob-speaker"
                       label="Speaker Faulty"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244674ced62.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d244674ced62.jpg"
                       selected={selectedProblems.includes("speaker")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "speaker"))}
                     />
                     <VisualOptionCard
                       id="prob-silent-button"
                       label="Silent Button not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5df0e69829e5c.png"
+                      imageUrl="/api/v1/catalog/asset/5df0e69829e5c.png"
                       selected={selectedProblems.includes("silent_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "silent_button"))}
                     />
                     <VisualOptionCard
                       id="prob-face-sensor"
                       label="Face Sensor not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d2448e9ec9d0.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d2448e9ec9d0.jpg"
                       selected={selectedProblems.includes("face_sensor")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "face_sensor"))}
                     />
                     <VisualOptionCard
                       id="prob-power-button"
                       label="Power Button not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244762197f4.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d244762197f4.jpg"
                       selected={selectedProblems.includes("power_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "power_button"))}
                     />
                     <VisualOptionCard
                       id="prob-charging-port"
                       label="Charging Port not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d24486306b57.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d24486306b57.jpg"
                       selected={selectedProblems.includes("charging_port")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "charging_port"))}
                     />
                     <VisualOptionCard
                       id="prob-audio-receiver"
                       label="Audio Receiver not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5dfb2607b7889.png"
+                      imageUrl="/api/v1/catalog/asset/5dfb2607b7889.png"
                       selected={selectedProblems.includes("audio_receiver")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "audio_receiver"))}
                     />
                     <VisualOptionCard
                       id="prob-camera-glass"
                       label="Camera Glass Broken"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5f868584a1a09.png"
+                      imageUrl="/api/v1/catalog/asset/5f868584a1a09.png"
                       selected={selectedProblems.includes("camera_glass")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "camera_glass"))}
                     />
                     <VisualOptionCard
                       id="prob-mic"
                       label="Microphone not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a3ef18975.png"
+                      imageUrl="/api/v1/catalog/asset/6023a3ef18975.png"
                       selected={selectedProblems.includes("microphone")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "microphone"))}
                     />
                     <VisualOptionCard
                       id="prob-bluetooth"
                       label="Bluetooth not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a363ad07d.png"
+                      imageUrl="/api/v1/catalog/asset/6023a363ad07d.png"
                       selected={selectedProblems.includes("bluetooth")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "bluetooth"))}
                     />
                     <VisualOptionCard
                       id="prob-vibrator"
                       label="Vibrator is not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a3a6f00e2.png"
+                      imageUrl="/api/v1/catalog/asset/6023a3a6f00e2.png"
                       selected={selectedProblems.includes("vibrator")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "vibrator"))}
                     />
                     <VisualOptionCard
                       id="prob-prox-sensor"
                       label="Proximity Sensor not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a5bda784d.png"
+                      imageUrl="/api/v1/catalog/asset/6023a5bda784d.png"
                       selected={selectedProblems.includes("proximity_sensor")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "proximity_sensor"))}
                     />
@@ -819,7 +819,7 @@ export default function MobileAssessmentPage() {
                     <VisualOptionCard
                       id="acc-box"
                       label="Original Box with same IMEI"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/5d244b6c82230.jpg"
+                      imageUrl="/api/v1/catalog/asset/5d244b6c82230.jpg"
                       selected={selectedAccessories.includes("box")}
                       onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "box"))}
                       sublabel="Original retail packaging with matching IMEI barcode"
@@ -827,7 +827,7 @@ export default function MobileAssessmentPage() {
                     <VisualOptionCard
                       id="acc-charger"
                       label="Original Charger of Device"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Charger_Available.png"
+                      imageUrl="/api/v1/catalog/asset/Charger_Available.png"
                       selected={selectedAccessories.includes("charger")}
                       onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "charger"))}
                       sublabel="Working original power adapter & cable"
@@ -836,7 +836,7 @@ export default function MobileAssessmentPage() {
                       <VisualOptionCard
                         id="acc-spen"
                         label="Original S Pen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a3a6f00e2.png"
+                        imageUrl="/api/v1/catalog/asset/6023a3a6f00e2.png"
                         selected={selectedAccessories.includes("spen")}
                         onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "spen"))}
                         sublabel="Official Samsung stylus pen in working condition"

@@ -56,7 +56,7 @@ export default function TabletAssessmentPage() {
     brandSlug: brand.slug,
     name: modelSlug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
     slug: modelSlug,
-    imageUrl: `https://s3ng.cashify.in/cashify/product/img/xhdpi/${modelSlug}.jpg`,
+    imageUrl: `/api/v1/catalog/image/${modelSlug}`,
     releaseYear: 2023,
     popular: true,
     active: true,
@@ -785,7 +785,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-body-no-scr"
                         label="No scratches"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Minor_Body_1.png"
+                        imageUrl="/api/v1/catalog/asset/No_Minor_Body_1.png"
                         selected={bodyScratches === "no_scratches"}
                         onClick={() => setBodyScratches("no_scratches")}
                         multiSelect={false}
@@ -793,7 +793,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-body-1-2-scr"
                         label="1-2 scratches"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1-2_Minor_scratch_body.png"
+                        imageUrl="/api/v1/catalog/asset/1-2_Minor_scratch_body.png"
                         selected={bodyScratches === "1_2_scratches"}
                         onClick={() => setBodyScratches("1_2_scratches")}
                         multiSelect={false}
@@ -801,7 +801,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-body-more-2-scr"
                         label="More than 2 scratches"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Heavy_scratch-body.png"
+                        imageUrl="/api/v1/catalog/asset/Heavy_scratch-body.png"
                         selected={bodyScratches === "more_than_2"}
                         onClick={() => setBodyScratches("more_than_2")}
                         multiSelect={false}
@@ -818,7 +818,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-dent-none"
                         label="No dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Dents_on_top_panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Dents_on_top_panel.png"
                         selected={bodyDents === "no_dents"}
                         onClick={() => setBodyDents("no_dents")}
                         multiSelect={false}
@@ -826,7 +826,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-dent-1-2"
                         label="1-2 minor dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1_Minor_Dent_1.png"
+                        imageUrl="/api/v1/catalog/asset/1_Minor_Dent_1.png"
                         selected={bodyDents === "minor_dents"}
                         onClick={() => setBodyDents("minor_dents")}
                         multiSelect={false}
@@ -834,7 +834,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-dent-major"
                         label="Major dent(s) or more than 2"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Major_Dents_1.png"
+                        imageUrl="/api/v1/catalog/asset/Major_Dents_1.png"
                         selected={bodyDents === "major_dents"}
                         onClick={() => setBodyDents("major_dents")}
                         multiSelect={false}
@@ -851,7 +851,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-bent-none"
                         label="Not bent or loose screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Cracked_or_Loose_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Cracked_or_Loose_Panel.png"
                         selected={bentLoose === "not_bent"}
                         onClick={() => setBentLoose("not_bent")}
                         multiSelect={false}
@@ -859,7 +859,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-bent-body"
                         label="Body Bent"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Crack-Damage_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/Crack-Damage_Panel.png"
                         selected={bentLoose === "bent"}
                         onClick={() => setBentLoose("bent")}
                         multiSelect={false}
@@ -867,7 +867,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-loose-screen"
                         label="Loose Screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Loose_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/Loose_Panel.png"
                         selected={bentLoose === "loose"}
                         onClick={() => setBentLoose("loose")}
                         multiSelect={false}
@@ -884,7 +884,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-panel-nodefect"
                         label="No Defect in Panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Cracked_or_Loose_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Cracked_or_Loose_Panel.png"
                         selected={panelCondition === "no_defect"}
                         onClick={() => setPanelCondition("no_defect")}
                         multiSelect={false}
@@ -892,7 +892,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-panel-broken"
                         label="Back panel broken/shattered"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Crack-Damage_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/Crack-Damage_Panel.png"
                         selected={panelCondition === "broken"}
                         onClick={() => setPanelCondition("broken")}
                         multiSelect={false}
@@ -909,7 +909,7 @@ export default function TabletAssessmentPage() {
                     <VisualOptionCard
                       id="tab-acc-charger"
                       label="Charger Available"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Charger_Available.png"
+                      imageUrl="/api/v1/catalog/asset/Charger_Available.png"
                       selected={accessories.includes("charger")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "charger"))}
                       sublabel="Original charging brick and cable"
@@ -917,7 +917,7 @@ export default function TabletAssessmentPage() {
                     <VisualOptionCard
                       id="tab-acc-box"
                       label="Box with same IMEI"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Box_Available.png"
+                      imageUrl="/api/v1/catalog/asset/Box_Available.png"
                       selected={accessories.includes("box")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "box"))}
                       sublabel="Retail packaging with matching serial/IMEI"
@@ -926,7 +926,7 @@ export default function TabletAssessmentPage() {
                       <VisualOptionCard
                         id="tab-acc-stylus"
                         label="Original Stylus / S Pen / Apple Pencil"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6023a3a6f00e2.png"
+                        imageUrl="/api/v1/catalog/asset/6023a3a6f00e2.png"
                         selected={accessories.includes("stylus")}
                         onClick={() => setAccessories(toggleArrayItem(accessories, "stylus"))}
                         sublabel="Functional official pencil or stylus"

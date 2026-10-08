@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { DeviceSearch } from "./DeviceSearch";
-import { HeroLocationBar } from "./HeroLocationBar";
 import {
   Smartphone,
   Laptop,
@@ -226,9 +225,6 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
         
-        {/* SERVICE AREA LOCATION BAR */}
-        <HeroLocationBar />
-
         {/* MINIMALIST HERO SLIDER (Cashify-Style Sleek Dark Banner) */}
         <div
           className="relative overflow-hidden rounded-3xl border border-neutral-800/80 bg-gradient-to-r from-neutral-950 via-stone-950 to-neutral-950 shadow-2xl"

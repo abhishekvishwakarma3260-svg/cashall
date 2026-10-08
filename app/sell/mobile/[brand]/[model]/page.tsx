@@ -67,7 +67,7 @@ export default function VariantSelectionPage() {
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" "),
       slug: modelSlug,
-      imageUrl: `https://s3ng.cashify.in/cashify/product/img/xhdpi/${modelSlug}.jpg`,
+      imageUrl: `/api/v1/catalog/image/${modelSlug}`,
       popular: true,
       active: true,
       category: "MOBILE",

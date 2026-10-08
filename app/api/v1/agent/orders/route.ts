@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
     if (!isBypass && cached && Date.now() - cached.timestamp < AGENT_CACHE_TTL_MS) {
       return NextResponse.json(cached.data, {
         headers: {
-          "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "Cache-Control": "public, s-maxage=10, max-age=10, stale-while-revalidate=30",
           "X-Cache": "HIT",
         },
       });
@@ -256,7 +256,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "Cache-Control": "public, s-maxage=10, max-age=10, stale-while-revalidate=30",
         "X-Cache": "MISS",
       },
     });

@@ -56,7 +56,7 @@ export default function LaptopAssessmentPage() {
     brandSlug: brand.slug,
     name: modelSlug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
     slug: modelSlug,
-    imageUrl: `https://s3ng.cashify.in/cashify/product/img/xhdpi/${modelSlug}.jpg`,
+    imageUrl: `/api/v1/catalog/image/${modelSlug}`,
     releaseYear: 2023,
     popular: true,
     active: true,
@@ -587,77 +587,77 @@ export default function LaptopAssessmentPage() {
                     <VisualOptionCard
                       id="prob-laptop-kb"
                       label="Keyboard not working; key(s) missing/not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9d8f386a4.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9d8f386a4.png"
                       selected={functionalProblems.includes("keyboard")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "keyboard"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-cddvd"
                       label="CD/DVD Drive not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cb0aceb0.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9cb0aceb0.png"
                       selected={functionalProblems.includes("cddvd")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "cddvd"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-touchpad"
                       label="Touchpad not working; Left/Right click faulty"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cad03f51.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9cad03f51.png"
                       selected={functionalProblems.includes("touchpad")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "touchpad"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-battery"
                       label="Battery dead, backup < 60 mins, health < 80%, cycle count > 800"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cab2beab.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9cab2beab.png"
                       selected={functionalProblems.includes("battery_dead")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "battery_dead"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-speakers"
                       label="Speakers not working; faulty/cracked sound"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9ceeabfbd.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9ceeabfbd.png"
                       selected={functionalProblems.includes("speakers")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "speakers"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-wifi"
                       label="Wi-Fi not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9d25e5a56.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9d25e5a56.png"
                       selected={functionalProblems.includes("wifi")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "wifi"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-usb"
                       label="USB Port not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9ddc6abb4.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9ddc6abb4.png"
                       selected={functionalProblems.includes("usb")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "usb"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-webcam"
                       label="Web Cam not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9e0f2bf81.png"
+                      imageUrl="/api/v1/catalog/asset/60ab9e0f2bf81.png"
                       selected={functionalProblems.includes("webcam")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "webcam"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-charging"
                       label="Charging Port not working"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/6148560d0c3b3.png"
+                      imageUrl="/api/v1/catalog/asset/6148560d0c3b3.png"
                       selected={functionalProblems.includes("charging_port")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "charging_port"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-harddrive"
                       label="Hard Drive Missing/Defective"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/61487866ea5a5.png"
+                      imageUrl="/api/v1/catalog/asset/61487866ea5a5.png"
                       selected={functionalProblems.includes("hard_drive")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "hard_drive"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-mobo"
                       label="Motherboard issue - auto restart, hanging, heating/not booting"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/62e0d8a3d520e.png"
+                      imageUrl="/api/v1/catalog/asset/62e0d8a3d520e.png"
                       selected={functionalProblems.includes("motherboard")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "motherboard"))}
                     />
@@ -692,7 +692,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="scr-no-scratches"
                         label="No scratches on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Scratches_on_screen.png"
+                        imageUrl="/api/v1/catalog/asset/No_Scratches_on_screen.png"
                         selected={screenScratches === "no_scratches"}
                         onClick={() => setScreenScratches("no_scratches")}
                         multiSelect={false}
@@ -700,7 +700,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="scr-1-2-scratches"
                         label="1-2 scratches on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Minor_scratches.png"
+                        imageUrl="/api/v1/catalog/asset/Minor_scratches.png"
                         selected={screenScratches === "1_2_scratches"}
                         onClick={() => setScreenScratches("1_2_scratches")}
                         multiSelect={false}
@@ -708,7 +708,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="scr-more-2-scratches"
                         label="More than 2 scratches on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Major_scratches.png"
+                        imageUrl="/api/v1/catalog/asset/Major_scratches.png"
                         selected={screenScratches === "more_than_2"}
                         onClick={() => setScreenScratches("more_than_2")}
                         multiSelect={false}
@@ -716,7 +716,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="scr-cracked-broken"
                         label="Screen Cracked or Broken"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Screen_Cracked.png"
+                        imageUrl="/api/v1/catalog/asset/Screen_Cracked.png"
                         selected={screenScratches === "cracked_broken"}
                         onClick={() => setScreenScratches("cracked_broken")}
                         multiSelect={false}
@@ -733,7 +733,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="disc-no"
                         label="No Discolouration"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Discoloration.png"
+                        imageUrl="/api/v1/catalog/asset/No_Discoloration.png"
                         selected={screenDiscoloration === "no_discoloration"}
                         onClick={() => setScreenDiscoloration("no_discoloration")}
                         multiSelect={false}
@@ -741,7 +741,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="disc-minor"
                         label="Minor Discolouration"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Minor_Discoloration.png"
+                        imageUrl="/api/v1/catalog/asset/Minor_Discoloration.png"
                         selected={screenDiscoloration === "minor"}
                         onClick={() => setScreenDiscoloration("minor")}
                         multiSelect={false}
@@ -749,7 +749,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="disc-major"
                         label="Major Discolouration"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Major_Discoloration.png"
+                        imageUrl="/api/v1/catalog/asset/Major_Discoloration.png"
                         selected={screenDiscoloration === "major"}
                         onClick={() => setScreenDiscoloration("major")}
                         multiSelect={false}
@@ -766,7 +766,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="spot-no"
                         label="No spots on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Spots.png"
+                        imageUrl="/api/v1/catalog/asset/No_Spots.png"
                         selected={screenSpots === "no_spots"}
                         onClick={() => setScreenSpots("no_spots")}
                         multiSelect={false}
@@ -774,7 +774,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="spot-minor"
                         label="1-2 minor spots on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1-2_Spots_on_Screen-Display.png"
+                        imageUrl="/api/v1/catalog/asset/1-2_Spots_on_Screen-Display.png"
                         selected={screenSpots === "minor_spots"}
                         onClick={() => setScreenSpots("minor_spots")}
                         multiSelect={false}
@@ -782,7 +782,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="spot-heavy"
                         label="Large/ heavy visible spots on screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Heavy_Spots_on_Screen-Display.png"
+                        imageUrl="/api/v1/catalog/asset/Heavy_Spots_on_Screen-Display.png"
                         selected={screenSpots === "heavy_spots"}
                         onClick={() => setScreenSpots("heavy_spots")}
                         multiSelect={false}
@@ -799,7 +799,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="line-no"
                         label="No Lines"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Lines.png"
+                        imageUrl="/api/v1/catalog/asset/No_Lines.png"
                         selected={screenLines === "no_lines"}
                         onClick={() => setScreenLines("no_lines")}
                         multiSelect={false}
@@ -807,7 +807,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="line-visible"
                         label="Visible lines on Screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Visible_lines_on_Screen.png"
+                        imageUrl="/api/v1/catalog/asset/Visible_lines_on_Screen.png"
                         selected={screenLines === "visible_lines"}
                         onClick={() => setScreenLines("visible_lines")}
                         multiSelect={false}
@@ -815,7 +815,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="line-flickering"
                         label="Display Flickering"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Display_Flickering.png"
+                        imageUrl="/api/v1/catalog/asset/Display_Flickering.png"
                         selected={screenLines === "flickering"}
                         onClick={() => setScreenLines("flickering")}
                         multiSelect={false}
@@ -823,7 +823,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="line-blackdots"
                         label="Black Dots on Screen"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Screen_Cracked_1.png"
+                        imageUrl="/api/v1/catalog/asset/Screen_Cracked_1.png"
                         selected={screenLines === "black_dots"}
                         onClick={() => setScreenLines("black_dots")}
                         multiSelect={false}
@@ -840,7 +840,7 @@ export default function LaptopAssessmentPage() {
                     <VisualOptionCard
                       id="laptop-acc-box"
                       label="Original Box with same serial number"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Box_Available.png"
+                      imageUrl="/api/v1/catalog/asset/Box_Available.png"
                       selected={accessories.includes("box")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "box"))}
                       sublabel="Original retail packaging with matching serial tag"
@@ -848,7 +848,7 @@ export default function LaptopAssessmentPage() {
                     <VisualOptionCard
                       id="laptop-acc-charger"
                       label="Original charger available"
-                      imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Charger_Available.png"
+                      imageUrl="/api/v1/catalog/asset/Charger_Available.png"
                       selected={accessories.includes("charger")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "charger"))}
                       sublabel="Official power adapter and charging cord"
@@ -857,7 +857,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="laptop-acc-stylus"
                         label="Original Stylus / Pen available"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/spen.png"
+                        imageUrl="/api/v1/catalog/asset/spen.png"
                         selected={accessories.includes("stylus")}
                         onClick={() => setAccessories(toggleArrayItem(accessories, "stylus"))}
                         sublabel="Original stylus / active pen that ships with the device"
@@ -898,7 +898,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="bodyscr-no"
                         label="No Scratches"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Minor_Body_1.png"
+                        imageUrl="/api/v1/catalog/asset/No_Minor_Body_1.png"
                         selected={bodyScratches === "no_scratches"}
                         onClick={() => setBodyScratches("no_scratches")}
                         multiSelect={false}
@@ -906,7 +906,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="bodyscr-minor"
                         label="Minor Scratch on Body"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1-2_Minor_scratch_body.png"
+                        imageUrl="/api/v1/catalog/asset/1-2_Minor_scratch_body.png"
                         selected={bodyScratches === "minor"}
                         onClick={() => setBodyScratches("minor")}
                         multiSelect={false}
@@ -914,7 +914,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="bodyscr-major"
                         label="Major Scratch on Body"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Heavy_scratch-body.png"
+                        imageUrl="/api/v1/catalog/asset/Heavy_scratch-body.png"
                         selected={bodyScratches === "major"}
                         onClick={() => setBodyScratches("major")}
                         multiSelect={false}
@@ -931,7 +931,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="topdent-no"
                         label="No Dents on top panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Dents_on_top_panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Dents_on_top_panel.png"
                         selected={topPanelDents === "no_dents"}
                         onClick={() => setTopPanelDents("no_dents")}
                         multiSelect={false}
@@ -939,7 +939,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="topdent-upto2"
                         label="Upto 2 Minor Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1_Minor_Dent_1.png"
+                        imageUrl="/api/v1/catalog/asset/1_Minor_Dent_1.png"
                         selected={topPanelDents === "upto_2"}
                         onClick={() => setTopPanelDents("upto_2")}
                         multiSelect={false}
@@ -947,7 +947,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="topdent-more2"
                         label="More than 2 Minor Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Multiple_Minor_Dents_1.png"
+                        imageUrl="/api/v1/catalog/asset/Multiple_Minor_Dents_1.png"
                         selected={topPanelDents === "more_than_2"}
                         onClick={() => setTopPanelDents("more_than_2")}
                         multiSelect={false}
@@ -955,7 +955,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="topdent-major"
                         label="1 or more Major Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Major_Dents_1.png"
+                        imageUrl="/api/v1/catalog/asset/Major_Dents_1.png"
                         selected={topPanelDents === "major"}
                         onClick={() => setTopPanelDents("major")}
                         multiSelect={false}
@@ -972,7 +972,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="basedent-no"
                         label="No Dents on base panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Dents_on_base_panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Dents_on_base_panel.png"
                         selected={basePanelDents === "no_dents"}
                         onClick={() => setBasePanelDents("no_dents")}
                         multiSelect={false}
@@ -980,7 +980,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="basedent-upto2"
                         label="Upto 2 Minor Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/1_Minor_Dent_Base.png"
+                        imageUrl="/api/v1/catalog/asset/1_Minor_Dent_Base.png"
                         selected={basePanelDents === "upto_2"}
                         onClick={() => setBasePanelDents("upto_2")}
                         multiSelect={false}
@@ -988,7 +988,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="basedent-more2"
                         label="More than 2 Minor Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Multiple_Minor_Dents_Base.png"
+                        imageUrl="/api/v1/catalog/asset/Multiple_Minor_Dents_Base.png"
                         selected={basePanelDents === "more_than_2"}
                         onClick={() => setBasePanelDents("more_than_2")}
                         multiSelect={false}
@@ -996,7 +996,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="basedent-major"
                         label="1 or more Major Dents"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Major_Dents_base.png"
+                        imageUrl="/api/v1/catalog/asset/Major_Dents_base.png"
                         selected={basePanelDents === "major"}
                         onClick={() => setBasePanelDents("major")}
                         multiSelect={false}
@@ -1013,7 +1013,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="hinges-no"
                         label="No Loose Hinges"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Hinges-No.png"
+                        imageUrl="/api/v1/catalog/asset/Hinges-No.png"
                         selected={looseHinges === "no_loose"}
                         onClick={() => setLooseHinges("no_loose")}
                         multiSelect={false}
@@ -1021,7 +1021,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="hinges-yes"
                         label="Yes - Loose Hinges"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Hinges_-Yes.png"
+                        imageUrl="/api/v1/catalog/asset/Hinges_-Yes.png"
                         selected={looseHinges === "loose"}
                         onClick={() => setLooseHinges("loose")}
                         multiSelect={false}
@@ -1038,7 +1038,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="panel-no"
                         label="No Cracked or Loose Panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/No_Cracked_or_Loose_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/No_Cracked_or_Loose_Panel.png"
                         selected={panelCondition === "no_defect"}
                         onClick={() => setPanelCondition("no_defect")}
                         multiSelect={false}
@@ -1046,7 +1046,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="panel-loose"
                         label="Loose Panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Loose_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/Loose_Panel.png"
                         selected={panelCondition === "loose"}
                         onClick={() => setPanelCondition("loose")}
                         multiSelect={false}
@@ -1054,7 +1054,7 @@ export default function LaptopAssessmentPage() {
                       <VisualOptionCard
                         id="panel-crack"
                         label="Crack/Damage Panel"
-                        imageUrl="https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/Crack-Damage_Panel.png"
+                        imageUrl="/api/v1/catalog/asset/Crack-Damage_Panel.png"
                         selected={panelCondition === "cracked"}
                         onClick={() => setPanelCondition("cracked")}
                         multiSelect={false}
