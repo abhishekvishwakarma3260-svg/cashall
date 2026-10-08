@@ -73,23 +73,33 @@ export default function VariantSelectionPage() {
       category: "MOBILE",
     };
 
-  const variants = INITIAL_VARIANTS.filter((v) => v.modelId === model.id);
+  const variants = INITIAL_VARIANTS.filter((v) => {
+    if (v.modelId === model.id) return true;
+    const vId = v.modelId.toLowerCase();
+    const mId = model.id.toLowerCase();
+    const mSlug = model.slug.toLowerCase();
+    if (vId === mId) return true;
+    if (vId === `m-${mSlug}` || vId === `m-${brandSlug.toLowerCase()}-${mSlug}`) return true;
+    if (vId.replace(/^m-([a-z0-9]+-)?/, "") === mSlug.replace(/^([a-z0-9]+-)?/, "")) return true;
+    return false;
+  });
+
   const fallbackVariants =
     variants.length > 0
       ? variants
       : [
           {
-            id: `v-${model.slug}-128`,
-            modelId: model.id,
-            storage: "128 GB",
-            basePrice: 28000,
-            active: true,
-          },
-          {
             id: `v-${model.slug}-256`,
             modelId: model.id,
             storage: "256 GB",
-            basePrice: 34000,
+            basePrice: 45000,
+            active: true,
+          },
+          {
+            id: `v-${model.slug}-512`,
+            modelId: model.id,
+            storage: "512 GB",
+            basePrice: 52000,
             active: true,
           },
         ];

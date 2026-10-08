@@ -31853,45 +31853,9 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "m-samsung-galaxy-s25-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S25 5G",
-    "slug": "samsung-galaxy-s25-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s25-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
-  {
-    "id": "m-samsung-galaxy-s25-plus-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S25 Plus 5G",
-    "slug": "samsung-galaxy-s25-plus-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s25-plus-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
-  {
-    "id": "m-samsung-galaxy-s25-ultra-5g",
-    "brandId": "b-samsung",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S25 Ultra 5G",
-    "slug": "samsung-galaxy-s25-ultra-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s25-ultra-5g",
-    "releaseYear": 2025,
-    "popular": true,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
+  
+  
   {
     "id": "m-google-pixel-10-pro-fold",
     "brandId": "b-google",
@@ -32840,10 +32804,56 @@ const LATEST_2026_MODELS: DeviceModelData[] = [
     "active": true,
     "contactForPrice": false,
     "category": "TABLET"
-  }
+  },
+  {
+    "id": "m-samsung-galaxy-s26-5g",
+    "brandId": "b-samsung",
+    "brandSlug": "samsung",
+    "name": "Samsung Galaxy S26 5G",
+    "slug": "samsung-galaxy-s26-5g",
+    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26-5g",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
+  {
+    "id": "m-samsung-galaxy-s26-plus-5g",
+    "brandId": "b-samsung",
+    "brandSlug": "samsung",
+    "name": "Samsung Galaxy S26 Plus 5G",
+    "slug": "samsung-galaxy-s26-plus-5g",
+    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26-plus-5g",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
+  {
+    "id": "m-samsung-galaxy-s26-ultra-5g",
+    "brandId": "b-samsung",
+    "brandSlug": "samsung",
+    "name": "Samsung Galaxy S26 Ultra 5G",
+    "slug": "samsung-galaxy-s26-ultra-5g",
+    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26-ultra-5g",
+    "releaseYear": 2026,
+    "popular": true,
+    "active": true,
+    "contactForPrice": false,
+    "category": "MOBILE"
+  },
 ];
 
-export const INITIAL_MODELS: DeviceModelData[] = [...MOBILE_MODELS_PART_1, ...MOBILE_MODELS_PART_2, ...MOBILE_MODELS_PART_3, ...MOBILE_MODELS_PART_4, ...MOBILE_MODELS_PART_5, ...LATEST_2026_MODELS, ...LAPTOP_MODELS_PART_1, ...LAPTOP_MODELS_PART_2, ...TABLET_MODELS_PART_1, ...TABLET_MODELS_PART_2];
+const RAW_INITIAL_MODELS: DeviceModelData[] = [...MOBILE_MODELS_PART_1, ...MOBILE_MODELS_PART_2, ...MOBILE_MODELS_PART_3, ...MOBILE_MODELS_PART_4, ...MOBILE_MODELS_PART_5, ...LATEST_2026_MODELS, ...LAPTOP_MODELS_PART_1, ...LAPTOP_MODELS_PART_2, ...TABLET_MODELS_PART_1, ...TABLET_MODELS_PART_2];
+const seenModelSlugs = new Set<string>();
+export const INITIAL_MODELS: DeviceModelData[] = RAW_INITIAL_MODELS.filter((m) => {
+  const key = m.slug.toLowerCase();
+  if (seenModelSlugs.has(key)) return false;
+  seenModelSlugs.add(key);
+  return true;
+});
 
 const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
   {
@@ -45771,7 +45781,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "512 GB",
-    "basePrice": 43945,
+    "basePrice": 42660,
     "active": true,
     "ram": "12 GB"
   },
@@ -45779,7 +45789,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "256 GB",
-    "basePrice": 42248,
+    "basePrice": 40830,
     "active": true,
     "ram": "12 GB"
   },
@@ -45787,7 +45797,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "128 GB",
-    "basePrice": 41299,
+    "basePrice": 40200,
     "active": true,
     "ram": "12 GB"
   },
@@ -45795,7 +45805,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "512 GB",
-    "basePrice": 51510,
+    "basePrice": 48590,
     "active": true,
     "ram": "12 GB"
   },
@@ -45803,7 +45813,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "256 GB",
-    "basePrice": 48702,
+    "basePrice": 47250,
     "active": true,
     "ram": "12 GB"
   },
@@ -45811,7 +45821,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 72306,
+    "basePrice": 72760,
     "active": true,
     "ram": "12 GB"
   },
@@ -45819,7 +45829,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 69468,
+    "basePrice": 66840,
     "active": true,
     "ram": "12 GB"
   },
@@ -45827,7 +45837,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 64610,
+    "basePrice": 62610,
     "active": true,
     "ram": "12 GB"
   },
@@ -83772,55 +83782,245 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
 
 
 const LATEST_2026_VARIANTS: DeviceVariantData[] = [
+  // Apple iPhone 18 Pro Max - Cashify Verified + 1% (NO 128 GB!)
   {
-    "id": "v-m-samsung-galaxy-s25-5g-128-gb",
-    "modelId": "m-samsung-galaxy-s25-5g",
-    "storage": "128 GB",
+    "id": "v-m-apple-apple-iphone-18-pro-max-256-gb",
+    "modelId": "m-apple-apple-iphone-18-pro-max",
+    "storage": "256 GB",
+    "basePrice": 131300,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-max-512-gb",
+    "modelId": "m-apple-apple-iphone-18-pro-max",
+    "storage": "512 GB",
+    "basePrice": 131450,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-max-1-tb",
+    "modelId": "m-apple-apple-iphone-18-pro-max",
+    "storage": "1 TB",
+    "basePrice": 139130,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-max-2-tb",
+    "modelId": "m-apple-apple-iphone-18-pro-max",
+    "storage": "2 TB",
+    "basePrice": 158320,
+    "active": true
+  },
+  // Apple iPhone 18 Pro - Cashify Verified + 1%
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-256-gb",
+    "modelId": "m-apple-apple-iphone-18-pro",
+    "storage": "256 GB",
+    "basePrice": 115140,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-512-gb",
+    "modelId": "m-apple-apple-iphone-18-pro",
+    "storage": "512 GB",
+    "basePrice": 121860,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-1-tb",
+    "modelId": "m-apple-apple-iphone-18-pro",
+    "storage": "1 TB",
+    "basePrice": 134330,
+    "active": true
+  },
+  {
+    "id": "v-m-apple-apple-iphone-18-pro-2-tb",
+    "modelId": "m-apple-apple-iphone-18-pro",
+    "storage": "2 TB",
+    "basePrice": 153520,
+    "active": true
+  },
+  // Samsung Galaxy S26 5G - Cashify Verified + 1%
+  {
+    "id": "v-m-samsung-galaxy-s26-5g-256-gb",
+    "modelId": "m-samsung-galaxy-s26-5g",
+    "storage": "256 GB",
+    "basePrice": 49180,
+    "active": true
+  },
+  {
+    "id": "v-m-samsung-galaxy-s26-5g-512-gb",
+    "modelId": "m-samsung-galaxy-s26-5g",
+    "storage": "512 GB",
+    "basePrice": 58060,
+    "active": true
+  },
+  // Samsung Galaxy S26 Plus 5G - Cashify Verified + 1%
+  {
+    "id": "v-m-samsung-galaxy-s26-plus-5g-256-gb",
+    "modelId": "m-samsung-galaxy-s26-plus-5g",
+    "storage": "256 GB",
+    "basePrice": 59250,
+    "active": true
+  },
+  {
+    "id": "v-m-samsung-galaxy-s26-plus-5g-512-gb",
+    "modelId": "m-samsung-galaxy-s26-plus-5g",
+    "storage": "512 GB",
+    "basePrice": 67750,
+    "active": true
+  },
+  // Samsung Galaxy S26 Ultra 5G - Cashify Verified + 1%
+  {
+    "id": "v-m-samsung-galaxy-s26-ultra-5g-256-gb",
+    "modelId": "m-samsung-galaxy-s26-ultra-5g",
+    "storage": "256 GB",
+    "basePrice": 78600,
+    "active": true
+  },
+  {
+    "id": "v-m-samsung-galaxy-s26-ultra-5g-512-gb",
+    "modelId": "m-samsung-galaxy-s26-ultra-5g",
+    "storage": "512 GB",
+    "basePrice": 82760,
+    "active": true
+  },
+  {
+    "id": "v-m-samsung-galaxy-s26-ultra-5g-1-tb",
+    "modelId": "m-samsung-galaxy-s26-ultra-5g",
+    "storage": "1 TB",
+    "basePrice": 97150,
+    "active": true
+  },
+  // Google Pixel 10 Pro Fold
+  {
+    "id": "v-m-google-pixel-10-pro-fold-256-gb",
+    "modelId": "m-google-pixel-10-pro-fold",
+    "storage": "256 GB",
+    "basePrice": 88880,
+    "active": true
+  },
+  {
+    "id": "v-m-google-pixel-10-pro-fold-512-gb",
+    "modelId": "m-google-pixel-10-pro-fold",
+    "storage": "512 GB",
+    "basePrice": 95950,
+    "active": true
+  },
+  {
+    "id": "v-m-google-pixel-10-pro-fold-1-tb",
+    "modelId": "m-google-pixel-10-pro-fold",
+    "storage": "1 TB",
+    "basePrice": 106050,
+    "active": true
+  },
+  // Laptop Models Variants
+  {
+    "id": "v-m-laptop-dell-g15-series-512-gb",
+    "modelId": "m-laptop-dell-g15-series",
+    "storage": "512 GB SSD",
     "basePrice": 38500,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-5g-256-gb",
-    "modelId": "m-samsung-galaxy-s25-5g",
-    "storage": "256 GB",
-    "basePrice": 40200,
+    "id": "v-m-laptop-dell-g15-series-1-tb",
+    "modelId": "m-laptop-dell-g15-series",
+    "storage": "1 TB SSD",
+    "basePrice": 43500,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-plus-5g-256-gb",
-    "modelId": "m-samsung-galaxy-s25-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 48200,
+    "id": "v-m-laptop-dell-g16-series-1-tb",
+    "modelId": "m-laptop-dell-g16-series",
+    "storage": "1 TB SSD",
+    "basePrice": 52000,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-plus-5g-512-gb",
-    "modelId": "m-samsung-galaxy-s25-plus-5g",
-    "storage": "512 GB",
-    "basePrice": 49800,
+    "id": "v-m-laptop-lenovo-ideapad-gaming-3-15ach6-512-gb",
+    "modelId": "m-laptop-lenovo-ideapad-gaming-3-15ach6",
+    "storage": "512 GB SSD",
+    "basePrice": 29500,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-ultra-5g-256-gb",
-    "modelId": "m-samsung-galaxy-s25-ultra-5g",
-    "storage": "256 GB",
-    "basePrice": 65400,
+    "id": "v-m-laptop-lenovo-ideapad-slim-3-15iah8-512-gb",
+    "modelId": "m-laptop-lenovo-ideapad-slim-3-15iah8",
+    "storage": "512 GB SSD",
+    "basePrice": 24000,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-ultra-5g-512-gb",
-    "modelId": "m-samsung-galaxy-s25-ultra-5g",
-    "storage": "512 GB",
-    "basePrice": 66200,
+    "id": "v-m-laptop-lenovo-ideapad-slim-5-14irl8-512-gb",
+    "modelId": "m-laptop-lenovo-ideapad-slim-5-14irl8",
+    "storage": "512 GB SSD",
+    "basePrice": 31000,
     "active": true
   },
   {
-    "id": "v-m-samsung-galaxy-s25-ultra-5g-1-tb",
-    "modelId": "m-samsung-galaxy-s25-ultra-5g",
-    "storage": "1 TB",
-    "basePrice": 67500,
+    "id": "v-m-laptop-lenovo-legion-7-16irx9-1-tb",
+    "modelId": "m-laptop-lenovo-legion-7-16irx9",
+    "storage": "1 TB SSD",
+    "basePrice": 78000,
     "active": true
   },
+  {
+    "id": "v-m-laptop-lenovo-legion-y-series-1-tb",
+    "modelId": "m-laptop-lenovo-legion-y-series",
+    "storage": "1 TB SSD",
+    "basePrice": 45000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-thinkbook-15-gen-5-512-gb",
+    "modelId": "m-laptop-lenovo-thinkbook-15-gen-5",
+    "storage": "512 GB SSD",
+    "basePrice": 28000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-thinkpad-e16-gen-1-512-gb",
+    "modelId": "m-laptop-lenovo-thinkpad-e16-gen-1",
+    "storage": "512 GB SSD",
+    "basePrice": 32000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-thinkpad-t14s-gen-4-512-gb",
+    "modelId": "m-laptop-lenovo-thinkpad-t14s-gen-4",
+    "storage": "512 GB SSD",
+    "basePrice": 44000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-thinkpad-x1-carbon-gen-11-512-gb",
+    "modelId": "m-laptop-lenovo-thinkpad-x1-carbon-gen-11",
+    "storage": "512 GB SSD",
+    "basePrice": 58000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-yoga-9i-14irh8-1-tb",
+    "modelId": "m-laptop-lenovo-yoga-9i-14irh8",
+    "storage": "1 TB SSD",
+    "basePrice": 62000,
+    "active": true
+  },
+  {
+    "id": "v-m-laptop-lenovo-yoga-book-9i-dual-oled-1-tb",
+    "modelId": "m-laptop-lenovo-yoga-book-9i-dual-oled",
+    "storage": "1 TB SSD",
+    "basePrice": 72000,
+    "active": true
+  },
+
+  
+  
+  
+  
+  
+  
+  
   {
     "id": "v-m-google-pixel-9a-128-gb",
     "modelId": "m-google-pixel-9a",
