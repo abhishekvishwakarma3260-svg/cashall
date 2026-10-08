@@ -28257,19 +28257,7 @@ const MOBILE_MODELS_PART_5: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "a4ee6c9a-a6ae-4135-902b-bd6041434a49",
-    "brandId": "550e8400-e29b-41d4-a716-446655440002",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S26",
-    "slug": "samsung-galaxy-s26",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26",
-    "releaseYear": 2024,
-    "popular": false,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "bb2a05a1-a07c-4ea3-9071-eb260149956d",
     "brandId": "550e8400-e29b-41d4-a716-446655440002",
@@ -29206,19 +29194,7 @@ const MOBILE_MODELS_PART_5: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "085aee0d-e91e-487f-baed-cde878bb3f6e",
-    "brandId": "550e8400-e29b-41d4-a716-446655440002",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S26 Plus",
-    "slug": "samsung-galaxy-s26-plus",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26-plus",
-    "releaseYear": 2024,
-    "popular": false,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "fe1ecaa8-5495-4f71-b5f4-4936a149572f",
     "brandId": "63e86623-18e5-4177-b609-886990cd774a",
@@ -29908,19 +29884,7 @@ const MOBILE_MODELS_PART_5: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "9f4afceb-f9c1-4321-a1eb-45f429828e7e",
-    "brandId": "550e8400-e29b-41d4-a716-446655440002",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy S26 Ultra",
-    "slug": "samsung-galaxy-s26-ultra",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-s26-ultra",
-    "releaseYear": 2024,
-    "popular": false,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "119198b0-441a-4bb4-b35b-ce507e81d158",
     "brandId": "c51ce35b-b4d4-4349-979d-02cad1bab152",
@@ -31026,19 +30990,7 @@ const MOBILE_MODELS_PART_5: DeviceModelData[] = [
     "contactForPrice": false,
     "category": "MOBILE"
   },
-  {
-    "id": "2fe622cf-7af6-47a2-98cc-aca43edd39c8",
-    "brandId": "550e8400-e29b-41d4-a716-446655440002",
-    "brandSlug": "samsung",
-    "name": "Samsung Galaxy Z Flip7 FE 5G",
-    "slug": "samsung-galaxy-z-flip7-fe-5g",
-    "imageUrl": "/api/v1/catalog/image/samsung-galaxy-z-flip7-fe-5g",
-    "releaseYear": 2024,
-    "popular": false,
-    "active": true,
-    "contactForPrice": false,
-    "category": "MOBILE"
-  },
+  
   {
     "id": "f3ca41ab-7c9e-487c-ac45-121445ba5885",
     "brandId": "c51ce35b-b4d4-4349-979d-02cad1bab152",
