@@ -44,17 +44,25 @@ export default function TabletVariantSelectionPage() {
     };
 
   const cleanModelSlug = modelSlug.toLowerCase();
+  const strippedSlug = cleanModelSlug.replace(new RegExp(`^${brandSlug.toLowerCase()}-`), "");
   const model =
     INITIAL_MODELS.find(
       (m) =>
-        (m.slug.toLowerCase() === cleanModelSlug || m.id === cleanModelSlug) &&
-        m.category === "TABLET"
+        m.category === "TABLET" &&
+        (m.slug.toLowerCase() === cleanModelSlug ||
+          m.slug.toLowerCase() === strippedSlug ||
+          m.slug.toLowerCase() === `${brandSlug.toLowerCase()}-${strippedSlug}` ||
+          m.slug.toLowerCase().replace(new RegExp(`^${brandSlug.toLowerCase()}-`), "") === strippedSlug ||
+          m.id.toLowerCase() === cleanModelSlug ||
+          m.name.toLowerCase().replace(/\s+/g, "-") === cleanModelSlug)
     ) ||
-    INITIAL_MODELS.find((m) => m.slug.toLowerCase() === cleanModelSlug) ||
     INITIAL_MODELS.find(
-      (m) => m.category === "TABLET" && m.brandSlug?.toLowerCase() === brandSlug.toLowerCase()
+      (m) =>
+        m.slug.toLowerCase() === cleanModelSlug ||
+        m.slug.toLowerCase() === strippedSlug ||
+        m.slug.toLowerCase().replace(new RegExp(`^${brandSlug.toLowerCase()}-`), "") === strippedSlug
     ) || {
-      id: `m-${brandSlug}-${cleanModelSlug}`,
+      id: `m-tablet-${brandSlug}-${strippedSlug}`,
       brandId: brand.id,
       brandSlug: brand.slug,
       name: modelSlug
