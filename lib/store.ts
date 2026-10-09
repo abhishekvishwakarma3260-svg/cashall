@@ -49024,78 +49024,6 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
 
 const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
   {
-    "id": "v-m-xiaomi-xiaomi-redmi-8a-dual-32-gb-2-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-8a-dual",
-    "storage": "32 GB",
-    "basePrice": 2808,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-8a-dual-32-gb-3-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-8a-dual",
-    "storage": "32 GB",
-    "basePrice": 2909,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-8a-dual-64-gb-3-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-8a-dual",
-    "storage": "64 GB",
-    "basePrice": 3141,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-max-64-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro-max",
-    "storage": "64 GB",
-    "basePrice": 5010,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-max-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro-max",
-    "storage": "128 GB",
-    "basePrice": 5595,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-max-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro-max",
-    "storage": "128 GB",
-    "basePrice": 5949,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-64-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9",
-    "storage": "64 GB",
-    "basePrice": 4313,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-128-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9",
-    "storage": "128 GB",
-    "basePrice": 4707,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-9-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-9",
-    "storage": "128 GB",
-    "basePrice": 5121,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
     "id": "v-m-xiaomi-xiaomi-redmi-9-prime-64-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9-prime",
     "storage": "64 GB",
@@ -49124,22 +49052,6 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "active": true
   },
   {
-    "id": "v-m-xiaomi-xiaomi-redmi-9a-32-gb-2-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-9a",
-    "storage": "32 GB",
-    "basePrice": 2828,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-9a-32-gb-3-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-9a",
-    "storage": "32 GB",
-    "basePrice": 3101,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
     "id": "v-m-xiaomi-xiaomi-redmi-9i-64-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9i",
     "storage": "64 GB",
@@ -49154,158 +49066,6 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "active": true
   },
   {
-    "id": "v-m-xiaomi-xiaomi-mi-10t-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-10t",
-    "storage": "128 GB",
-    "basePrice": 7413,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-10t-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-10t",
-    "storage": "128 GB",
-    "basePrice": 7737,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-mi-10t-pro-128-gb-8-gb",
-    "modelId": "m-xiaomi-mi-10t-pro",
-    "storage": "128 GB",
-    "basePrice": 7726,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-10i-64-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-10i",
-    "storage": "64 GB",
-    "basePrice": 6868,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-10i-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-10i",
-    "storage": "128 GB",
-    "basePrice": 7726,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-10i-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-10i",
-    "storage": "128 GB",
-    "basePrice": 7989,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-9-power-64-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-9-power",
-    "storage": "64 GB",
-    "basePrice": 3676,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-9-power-128-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-9-power",
-    "storage": "128 GB",
-    "basePrice": 3919,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-9-power-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-9-power",
-    "storage": "128 GB",
-    "basePrice": 4272,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-10-power-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-10-power",
-    "storage": "128 GB",
-    "basePrice": 5353,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-10-power-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-10-power",
-    "storage": "128 GB",
-    "basePrice": 5353,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-64-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10",
-    "storage": "64 GB",
-    "basePrice": 4515,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10",
-    "storage": "128 GB",
-    "basePrice": 5070,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-64-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro",
-    "storage": "64 GB",
-    "basePrice": 4585,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro",
-    "storage": "128 GB",
-    "basePrice": 5414,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro",
-    "storage": "128 GB",
-    "basePrice": 5999,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-max-64-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro-max",
-    "storage": "64 GB",
-    "basePrice": 5050,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-max-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro-max",
-    "storage": "128 GB",
-    "basePrice": 5848,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-10-pro-max-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-10-pro-max",
-    "storage": "128 GB",
-    "basePrice": 6383,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
     "id": "v-m-xiaomi-xiaomi-mi-11x-pro-128-gb",
     "modelId": "m-xiaomi-xiaomi-mi-11x-pro",
     "storage": "128 GB",
@@ -49318,10759 +49078,19 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "storage": "256 GB",
     "basePrice": 8494,
     "active": true
-  },
-  {
-    "id": "v-m-xiaomi-mi-11-ultra-256-gb-12-gb",
-    "modelId": "m-xiaomi-mi-11-ultra",
-    "storage": "256 GB",
-    "basePrice": 17544,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-11x-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-11x",
-    "storage": "128 GB",
-    "basePrice": 7817,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-11x-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-11x",
-    "storage": "128 GB",
-    "basePrice": 8302,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-11-lite-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-11-lite",
-    "storage": "128 GB",
-    "basePrice": 5787,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-mi-11-lite-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-mi-11-lite",
-    "storage": "128 GB",
-    "basePrice": 6121,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-laptop-acer-travelmate-p4-series-standard",
-    "modelId": "m-laptop-acer-travelmate-p4-series",
-    "storage": "Standard",
-    "basePrice": 17170,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-travelmate-p2-series-standard",
-    "modelId": "m-laptop-acer-travelmate-p2-series",
-    "storage": "Standard",
-    "basePrice": 15150,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-travelmate-p6-series-standard",
-    "modelId": "m-laptop-acer-travelmate-p6-series",
-    "storage": "Standard",
-    "basePrice": 19190,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-series-standard",
-    "modelId": "m-laptop-acer-aspire-series",
-    "storage": "Standard",
-    "basePrice": 7747,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-one-series-standard",
-    "modelId": "m-laptop-acer-aspire-one-series",
-    "storage": "Standard",
-    "basePrice": 3606,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-e-series-standard",
-    "modelId": "m-laptop-acer-aspire-e-series",
-    "storage": "Standard",
-    "basePrice": 9332,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-5-series-standard",
-    "modelId": "m-laptop-acer-aspire-5-series",
-    "storage": "Standard",
-    "basePrice": 13877,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-3-series-standard",
-    "modelId": "m-laptop-acer-aspire-3-series",
-    "storage": "Standard",
-    "basePrice": 8403,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-series-standard",
-    "modelId": "m-laptop-acer-predator-series",
-    "storage": "Standard",
-    "basePrice": 14120,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-switch-series-standard",
-    "modelId": "m-laptop-acer-switch-series",
-    "storage": "Standard",
-    "basePrice": 11181,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-nitro-spin-series-standard",
-    "modelId": "m-laptop-acer-nitro-spin-series",
-    "storage": "Standard",
-    "basePrice": 13453,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-spin-series-standard",
-    "modelId": "m-laptop-acer-spin-series",
-    "storage": "Standard",
-    "basePrice": 11181,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-acer-chromebook-series-standard",
-    "modelId": "m-laptop-acer-acer-chromebook-series",
-    "storage": "Standard",
-    "basePrice": 3899,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-series-standard",
-    "modelId": "m-laptop-acer-swift-series",
-    "storage": "Standard",
-    "basePrice": 11756,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-nitro-5-series-standard",
-    "modelId": "m-laptop-acer-nitro-5-series",
-    "storage": "Standard",
-    "basePrice": 15544,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-aspire-7-series-standard",
-    "modelId": "m-laptop-acer-aspire-7-series",
-    "storage": "Standard",
-    "basePrice": 17311,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-helios-300-series-standard",
-    "modelId": "m-laptop-acer-predator-helios-300-series",
-    "storage": "Standard",
-    "basePrice": 21139,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-5-series-standard",
-    "modelId": "m-laptop-acer-swift-5-series",
-    "storage": "Standard",
-    "basePrice": 19806,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-extensa-series-standard",
-    "modelId": "m-laptop-acer-extensa-series",
-    "storage": "Standard",
-    "basePrice": 7500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-3-series-standard",
-    "modelId": "m-laptop-acer-swift-3-series",
-    "storage": "Standard",
-    "basePrice": 9262,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-nitro-5-spin-series-standard",
-    "modelId": "m-laptop-acer-nitro-5-spin-series",
-    "storage": "Standard",
-    "basePrice": 15251,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-spin-1-series-standard",
-    "modelId": "m-laptop-acer-spin-1-series",
-    "storage": "Standard",
-    "basePrice": 4282,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-spin-5-series-standard",
-    "modelId": "m-laptop-acer-spin-5-series",
-    "storage": "Standard",
-    "basePrice": 9938,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-switch-5-series-standard",
-    "modelId": "m-laptop-acer-switch-5-series",
-    "storage": "Standard",
-    "basePrice": 11736,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-spin-3-series-standard",
-    "modelId": "m-laptop-acer-spin-3-series",
-    "storage": "Standard",
-    "basePrice": 8403,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-15-series-standard",
-    "modelId": "m-laptop-acer-predator-15-series",
-    "storage": "Standard",
-    "basePrice": 17029,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-nitro-7-series-standard",
-    "modelId": "m-laptop-acer-nitro-7-series",
-    "storage": "Standard",
-    "basePrice": 16069,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-spin-7-series-standard",
-    "modelId": "m-laptop-acer-spin-7-series",
-    "storage": "Standard",
-    "basePrice": 17412,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-7-series-standard",
-    "modelId": "m-laptop-acer-swift-7-series",
-    "storage": "Standard",
-    "basePrice": 19109,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-x-series-standard",
-    "modelId": "m-laptop-acer-swift-x-series",
-    "storage": "Standard",
-    "basePrice": 18372,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-swift-3x-series-standard",
-    "modelId": "m-laptop-acer-swift-3x-series",
-    "storage": "Standard",
-    "basePrice": 21725,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-conceptd-3-series-standard",
-    "modelId": "m-laptop-acer-conceptd-3-series",
-    "storage": "Standard",
-    "basePrice": 26997,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-conceptd-5-series-standard",
-    "modelId": "m-laptop-acer-conceptd-5-series",
-    "storage": "Standard",
-    "basePrice": 28573,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-conceptd-7-series-standard",
-    "modelId": "m-laptop-acer-conceptd-7-series",
-    "storage": "Standard",
-    "basePrice": 30977,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-conceptd-9-series-standard",
-    "modelId": "m-laptop-acer-conceptd-9-series",
-    "storage": "Standard",
-    "basePrice": 32098,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-triton-300-series-standard",
-    "modelId": "m-laptop-acer-predator-triton-300-series",
-    "storage": "Standard",
-    "basePrice": 18948,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-triton-500-series-standard",
-    "modelId": "m-laptop-acer-predator-triton-500-series",
-    "storage": "Standard",
-    "basePrice": 21341,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-triton-700-series-standard",
-    "modelId": "m-laptop-acer-predator-triton-700-series",
-    "storage": "Standard",
-    "basePrice": 21715,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-triton-900-series-standard",
-    "modelId": "m-laptop-acer-predator-triton-900-series",
-    "storage": "Standard",
-    "basePrice": 24472,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-helios-500-series-standard",
-    "modelId": "m-laptop-acer-predator-helios-500-series",
-    "storage": "Standard",
-    "basePrice": 23967,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-helios-700-series-standard",
-    "modelId": "m-laptop-acer-predator-helios-700-series",
-    "storage": "Standard",
-    "basePrice": 28381,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-17-series-standard",
-    "modelId": "m-laptop-acer-predator-17-series",
-    "storage": "Standard",
-    "basePrice": 17887,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-predator-21x-series-standard",
-    "modelId": "m-laptop-acer-predator-21x-series",
-    "storage": "Standard",
-    "basePrice": 18847,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-acer-other-acer-series-standard",
-    "modelId": "m-laptop-acer-other-acer-series",
-    "storage": "Standard",
-    "basePrice": 4282,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2025-standard",
-    "modelId": "m-laptop-apple-macbook-air-2025",
-    "storage": "Standard",
-    "basePrice": 70700,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2025-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2025",
-    "storage": "Standard",
-    "basePrice": 95950,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-neo-series-standard",
-    "modelId": "m-laptop-apple-macbook-neo-series",
-    "storage": "Standard",
-    "basePrice": 36360,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2026-standard",
-    "modelId": "m-laptop-apple-macbook-air-2026",
-    "storage": "Standard",
-    "basePrice": 70700,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2024-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2024",
-    "storage": "Standard",
-    "basePrice": 65650,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2023-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2023",
-    "storage": "Standard",
-    "basePrice": 70700,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2022-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2022",
-    "storage": "Standard",
-    "basePrice": 62620,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2020-touch-bar-four-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2020-touch-bar-four-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 44076,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2021-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2021",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2020-touch-bar-two-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2020-touch-bar-two-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 35804,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2020-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2020",
-    "storage": "Standard",
-    "basePrice": 42420,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2019-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2019",
-    "storage": "Standard",
-    "basePrice": 36431,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-four-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar-four-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 35804,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-two-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar-two-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 33643,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar",
-    "storage": "Standard",
-    "basePrice": 36522,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-mid-2018-touch-bar-four-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-mid-2018-touch-bar-four-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 33249,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-mid-2017-touch-bar-four-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-mid-2017-touch-bar-four-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 28139,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-mid-2017-two-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-mid-2017-two-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 26432,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-late-2016-touch-bar-four-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-late-2016-touch-bar-four-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 28139,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-late-2016-two-thunderbolt-3-ports-standard",
-    "modelId": "m-laptop-apple-macbook-pro-late-2016-two-thunderbolt-3-ports",
-    "storage": "Standard",
-    "basePrice": 25573,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-retina-mid-2015-standard",
-    "modelId": "m-laptop-apple-macbook-pro-retina-mid-2015",
-    "storage": "Standard",
-    "basePrice": 25139,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-retina-early-2015-standard",
-    "modelId": "m-laptop-apple-macbook-pro-retina-early-2015",
-    "storage": "Standard",
-    "basePrice": 15150,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-retina-mid-2014-standard",
-    "modelId": "m-laptop-apple-macbook-pro-retina-mid-2014",
-    "storage": "Standard",
-    "basePrice": 18624,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-retina-late-2013-standard",
-    "modelId": "m-laptop-apple-macbook-pro-retina-late-2013",
-    "storage": "Standard",
-    "basePrice": 14655,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-retina-early-2013-standard",
-    "modelId": "m-laptop-apple-macbook-pro-retina-early-2013",
-    "storage": "Standard",
-    "basePrice": 14069,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2012-standard",
-    "modelId": "m-laptop-apple-macbook-pro-2012",
-    "ram": "4 GB",
-    "storage": "Standard",
-    "basePrice": 11850,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2023-standard",
-    "modelId": "m-laptop-apple-macbook-air-2023",
-    "storage": "Standard",
-    "basePrice": 54894,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2022-standard",
-    "modelId": "m-laptop-apple-macbook-air-2022",
-    "storage": "Standard",
-    "basePrice": 49005,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2020-standard",
-    "modelId": "m-laptop-apple-macbook-air-2020",
-    "storage": "Standard",
-    "basePrice": 36006,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2024-standard",
-    "modelId": "m-laptop-apple-macbook-air-2024",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2019-standard",
-    "modelId": "m-laptop-apple-macbook-air-2019",
-    "storage": "Standard",
-    "basePrice": 27018,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-2018-standard",
-    "modelId": "m-laptop-apple-macbook-air-2018",
-    "storage": "Standard",
-    "basePrice": 23260,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-mid-2017-standard",
-    "modelId": "m-laptop-apple-macbook-air-mid-2017",
-    "storage": "Standard",
-    "basePrice": 17897,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-early-2015-standard",
-    "modelId": "m-laptop-apple-macbook-air-early-2015",
-    "storage": "Standard",
-    "basePrice": 14655,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-early-2014-standard",
-    "modelId": "m-laptop-apple-macbook-air-early-2014",
-    "storage": "Standard",
-    "basePrice": 11514,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-air-mid-2013-standard",
-    "modelId": "m-laptop-apple-macbook-air-mid-2013",
-    "storage": "Standard",
-    "basePrice": 11514,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-retina-mid-2017-standard",
-    "modelId": "m-laptop-apple-macbook-retina-mid-2017",
-    "storage": "Standard",
-    "basePrice": 18604,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-retina-early-2016-standard",
-    "modelId": "m-laptop-apple-macbook-retina-early-2016",
-    "storage": "Standard",
-    "basePrice": 15695,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-retina-early-2015-standard",
-    "modelId": "m-laptop-apple-macbook-retina-early-2015",
-    "storage": "Standard",
-    "basePrice": 13948,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-x-series-standard",
-    "modelId": "m-laptop-asus-asus-x-series",
-    "storage": "Standard",
-    "basePrice": 5747,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-vivobook-series-standard",
-    "modelId": "m-laptop-asus-vivobook-series",
-    "storage": "Standard",
-    "basePrice": 9342,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-k-series-standard",
-    "modelId": "m-laptop-asus-asus-k-series",
-    "storage": "Standard",
-    "basePrice": 10241,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-r-series-standard",
-    "modelId": "m-laptop-asus-asus-r-series",
-    "storage": "Standard",
-    "basePrice": 5595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-e-series-standard",
-    "modelId": "m-laptop-asus-asus-e-series",
-    "storage": "Standard",
-    "basePrice": 4333,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-rog-series-standard",
-    "modelId": "m-laptop-asus-rog-series",
-    "storage": "Standard",
-    "basePrice": 18746,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-eeebook-series-standard",
-    "modelId": "m-laptop-asus-eeebook-series",
-    "storage": "Standard",
-    "basePrice": 3121,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-a-series-standard",
-    "modelId": "m-laptop-asus-asus-a-series",
-    "storage": "Standard",
-    "basePrice": 7848,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-vivobook-s-series-standard",
-    "modelId": "m-laptop-asus-vivobook-s-series",
-    "storage": "Standard",
-    "basePrice": 7110,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-f-series-standard",
-    "modelId": "m-laptop-asus-asus-f-series",
-    "storage": "Standard",
-    "basePrice": 10342,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-tuf-gaming-series-standard",
-    "modelId": "m-laptop-asus-tuf-gaming-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-zenbook-series-standard",
-    "modelId": "m-laptop-asus-zenbook-series",
-    "storage": "Standard",
-    "basePrice": 9171,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-gaming-series-standard",
-    "modelId": "m-laptop-asus-gaming-series",
-    "storage": "Standard",
-    "basePrice": 7908,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-q-series-standard",
-    "modelId": "m-laptop-asus-asus-q-series",
-    "storage": "Standard",
-    "basePrice": 5595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-n-series-standard",
-    "modelId": "m-laptop-asus-asus-n-series",
-    "storage": "Standard",
-    "basePrice": 6272,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-vivobook-pro-series-standard",
-    "modelId": "m-laptop-asus-vivobook-pro-series",
-    "storage": "Standard",
-    "basePrice": 9171,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-fx-series-standard",
-    "modelId": "m-laptop-asus-asus-fx-series",
-    "storage": "Standard",
-    "basePrice": 5646,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-rog-strix-series-standard",
-    "modelId": "m-laptop-asus-rog-strix-series",
-    "storage": "Standard",
-    "basePrice": 28684,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asuspro-p-series-standard",
-    "modelId": "m-laptop-asus-asuspro-p-series",
-    "storage": "Standard",
-    "basePrice": 13049,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-zenbook-u-series-standard",
-    "modelId": "m-laptop-asus-zenbook-u-series",
-    "storage": "Standard",
-    "basePrice": 4333,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-zenbook-flip-series-standard",
-    "modelId": "m-laptop-asus-zenbook-flip-series",
-    "storage": "Standard",
-    "basePrice": 15958,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-chromebook-series-standard",
-    "modelId": "m-laptop-asus-asus-chromebook-series",
-    "storage": "Standard",
-    "basePrice": 2161,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-vivobook-flip-series-standard",
-    "modelId": "m-laptop-asus-vivobook-flip-series",
-    "storage": "Standard",
-    "basePrice": 11029,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-chromebook-flip-series-standard",
-    "modelId": "m-laptop-asus-asus-chromebook-flip-series",
-    "storage": "Standard",
-    "basePrice": 17544,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-b-series-standard",
-    "modelId": "m-laptop-asus-asus-b-series",
-    "storage": "Standard",
-    "basePrice": 7626,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-nx-series-standard",
-    "modelId": "m-laptop-asus-asus-nx-series",
-    "storage": "Standard",
-    "basePrice": 8302,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-p-series-standard",
-    "modelId": "m-laptop-asus-asus-p-series",
-    "storage": "Standard",
-    "basePrice": 5595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-zenbook-s-series-standard",
-    "modelId": "m-laptop-asus-zenbook-s-series",
-    "storage": "Standard",
-    "basePrice": 5595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asuspro-b-series-standard",
-    "modelId": "m-laptop-asus-asuspro-b-series",
-    "storage": "Standard",
-    "basePrice": 13049,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-fz-series-standard",
-    "modelId": "m-laptop-asus-asus-fz-series",
-    "storage": "Standard",
-    "basePrice": 8302,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-zenbook-pro-series-standard",
-    "modelId": "m-laptop-asus-zenbook-pro-series",
-    "storage": "Standard",
-    "basePrice": 26310,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-rog-zephyrus-series-standard",
-    "modelId": "m-laptop-asus-rog-zephyrus-series",
-    "storage": "Standard",
-    "basePrice": 33249,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-asus-v-series-standard",
-    "modelId": "m-laptop-asus-asus-v-series",
-    "storage": "Standard",
-    "basePrice": 4333,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-proart-studiobook-series-standard",
-    "modelId": "m-laptop-asus-proart-studiobook-series",
-    "storage": "Standard",
-    "basePrice": 27098,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-asus-other-asus-series-standard",
-    "modelId": "m-laptop-asus-other-asus-series",
-    "storage": "Standard",
-    "basePrice": 4333,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-essential-series-standard",
-    "modelId": "m-laptop-avita-essential-series",
-    "storage": "Standard",
-    "basePrice": 3555,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-liber-series-standard",
-    "modelId": "m-laptop-avita-liber-series",
-    "storage": "Standard",
-    "basePrice": 8211,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-pura-series-standard",
-    "modelId": "m-laptop-avita-pura-series",
-    "storage": "Standard",
-    "basePrice": 7434,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-cosmos-series-standard",
-    "modelId": "m-laptop-avita-cosmos-series",
-    "storage": "Standard",
-    "basePrice": 8474,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-magus-lite-standard",
-    "modelId": "m-laptop-avita-magus-lite",
-    "storage": "Standard",
-    "basePrice": 1889,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-avita-admiror-series-standard",
-    "modelId": "m-laptop-avita-admiror-series",
-    "storage": "Standard",
-    "basePrice": 10918,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-g15-gaming-series-standard",
-    "modelId": "m-laptop-dell-g15-gaming-series",
-    "storage": "Standard",
-    "basePrice": 22220,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-g16-gaming-series-standard",
-    "modelId": "m-laptop-dell-g16-gaming-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-vostro-3000-series-standard",
-    "modelId": "m-laptop-dell-vostro-3000-series",
-    "storage": "Standard",
-    "basePrice": 12625,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-vostro-5000-series-standard",
-    "modelId": "m-laptop-dell-vostro-5000-series",
-    "storage": "Standard",
-    "basePrice": 13635,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-vostro-7000-series-standard",
-    "modelId": "m-laptop-dell-vostro-7000-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-3000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-latitude-3000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-5000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-latitude-5000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 10605,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-7000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-latitude-7000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-9000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-latitude-9000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 18685,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-15-series-standard",
-    "modelId": "m-laptop-dell-dell-15-series",
-    "storage": "Standard",
-    "basePrice": 17170,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-series-standard",
-    "modelId": "m-laptop-dell-inspiron-series",
-    "storage": "Standard",
-    "basePrice": 12817,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-3000-series-standard",
-    "modelId": "m-laptop-dell-inspiron-3000-series",
-    "storage": "Standard",
-    "basePrice": 10504,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-3000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-inspiron-3000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 8585,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-5000-series-standard",
-    "modelId": "m-laptop-dell-inspiron-5000-series",
-    "storage": "Standard",
-    "basePrice": 10706,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-5000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-inspiron-5000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 10908,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-7000-series-standard",
-    "modelId": "m-laptop-dell-inspiron-7000-series",
-    "storage": "Standard",
-    "basePrice": 13332,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-7000-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-inspiron-7000-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 14140,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-n5000-series-standard",
-    "modelId": "m-laptop-dell-inspiron-n5000-series",
-    "storage": "Standard",
-    "basePrice": 6565,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-inspiron-gaming-series-standard",
-    "modelId": "m-laptop-dell-inspiron-gaming-series",
-    "storage": "Standard",
-    "basePrice": 9898,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-vostro-series-standard",
-    "modelId": "m-laptop-dell-vostro-series",
-    "storage": "Standard",
-    "basePrice": 11706,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-series-standard",
-    "modelId": "m-laptop-dell-latitude-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-e3000-series-standard",
-    "modelId": "m-laptop-dell-latitude-e3000-series",
-    "storage": "Standard",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-e4000-series-standard",
-    "modelId": "m-laptop-dell-latitude-e4000-series",
-    "storage": "Standard",
-    "basePrice": 7070,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-e5000-series-standard",
-    "modelId": "m-laptop-dell-latitude-e5000-series",
-    "storage": "Standard",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-e6000-series-standard",
-    "modelId": "m-laptop-dell-latitude-e6000-series",
-    "storage": "Standard",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-e7000-series-standard",
-    "modelId": "m-laptop-dell-latitude-e7000-series",
-    "storage": "Standard",
-    "basePrice": 12625,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-3000-series-standard",
-    "modelId": "m-laptop-dell-latitude-3000-series",
-    "storage": "Standard",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-5000-series-standard",
-    "modelId": "m-laptop-dell-latitude-5000-series",
-    "storage": "Standard",
-    "basePrice": 11211,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-6000-series-standard",
-    "modelId": "m-laptop-dell-latitude-6000-series",
-    "storage": "Standard",
-    "basePrice": 8080,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-7000-series-standard",
-    "modelId": "m-laptop-dell-latitude-7000-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-latitude-9000-series-standard",
-    "modelId": "m-laptop-dell-latitude-9000-series",
-    "storage": "Standard",
-    "basePrice": 19190,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-precision-series-standard",
-    "modelId": "m-laptop-dell-precision-series",
-    "storage": "Standard",
-    "basePrice": 22846,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-studio-series-standard",
-    "modelId": "m-laptop-dell-studio-series",
-    "storage": "Standard",
-    "basePrice": 5818,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-alienware-series-standard",
-    "modelId": "m-laptop-dell-alienware-series",
-    "storage": "Standard",
-    "basePrice": 17877,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-chromebook-series-standard",
-    "modelId": "m-laptop-dell-dell-chromebook-series",
-    "storage": "Standard",
-    "basePrice": 3101,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-g7-gaming-series-standard",
-    "modelId": "m-laptop-dell-g7-gaming-series",
-    "storage": "Standard",
-    "basePrice": 25472,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-g5-gaming-series-standard",
-    "modelId": "m-laptop-dell-g5-gaming-series",
-    "storage": "Standard",
-    "basePrice": 17089,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-g3-gaming-series-standard",
-    "modelId": "m-laptop-dell-g3-gaming-series",
-    "storage": "Standard",
-    "basePrice": 16948,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-xps-series-standard",
-    "modelId": "m-laptop-dell-xps-series",
-    "storage": "Standard",
-    "basePrice": 11958,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-other-dell-series-standard",
-    "modelId": "m-laptop-dell-other-dell-series",
-    "storage": "Standard",
-    "basePrice": 1283,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-g15-5520-series-standard",
-    "modelId": "m-laptop-dell-dell-g15-5520-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-g7-series-standard",
-    "modelId": "m-laptop-dell-dell-g7-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-g5-series-standard",
-    "modelId": "m-laptop-dell-dell-g5-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-gaming-g15-5000-series-standard",
-    "modelId": "m-laptop-dell-dell-gaming-g15-5000-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-studio-xps-13-series-standard",
-    "modelId": "m-laptop-dell-dell-studio-xps-13-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-studio-xps-16-series-standard",
-    "modelId": "m-laptop-dell-dell-studio-xps-16-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-xps-15-series-standard",
-    "modelId": "m-laptop-dell-dell-xps-15-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-alienware-16x-aurora-series-standard",
-    "modelId": "m-laptop-dell-dell-alienware-16x-aurora-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-alienware-15-series-standard",
-    "modelId": "m-laptop-dell-dell-alienware-15-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-xps-17-series-standard",
-    "modelId": "m-laptop-dell-dell-xps-17-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-16-plus-series-standard",
-    "modelId": "m-laptop-dell-dell-16-plus-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-15-7000-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-15-7000-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-16-plus-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-16-plus-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-15-2026-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-15-2026-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-7400-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-7400-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-7500-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-7500-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-9300-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-9300-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-9400-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-9400-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m11x-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-m11x-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m11x-r3-series-standard",
-    "modelId": "m-laptop-dell-dell-m11x-r3-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-13-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-13-series",
-    "storage": "Standard",
-    "basePrice": 2525,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-xps-15z-series-standard",
-    "modelId": "m-laptop-dell-dell-xps-15z-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-14-plus-2-in-1-series-standard",
-    "modelId": "m-laptop-dell-dell-14-plus-2-in-1-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-7200-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-7200-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-3440-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-3440-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-3530-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-3530-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-13-7000-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-13-7000-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-14-5440-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-14-5440-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-14-7000-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-14-7000-series",
-    "storage": "Standard",
-    "basePrice": 29290,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-14-plus-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-14-plus-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-15-7500-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-15-7500-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-17-7000-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-17-7000-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-3500-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-3500-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiron-7500-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiron-7500-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-9500-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-9500-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-14-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-14-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-3500-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-3500-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-5300-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-5300-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-5400-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-5400-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-5500-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-5500-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-latitude-7300-series-standard",
-    "modelId": "m-laptop-dell-dell-latitude-7300-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-15-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-15-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-vostro-3400-series-standard",
-    "modelId": "m-laptop-dell-dell-vostro-3400-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-xps-14-series-standard",
-    "modelId": "m-laptop-dell-dell-xps-14-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-inspiro-5440-series-standard",
-    "modelId": "m-laptop-dell-dell-inspiro-5440-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-xps-13-2026-series-standard",
-    "modelId": "m-laptop-dell-dell-xps-13-2026-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-standard",
-    "modelId": "m-laptop-dell-sell-now",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-2-standard",
-    "modelId": "m-laptop-dell-sell-now-2",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-3-standard",
-    "modelId": "m-laptop-dell-sell-now-3",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-4-standard",
-    "modelId": "m-laptop-dell-sell-now-4",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-5-standard",
-    "modelId": "m-laptop-dell-sell-now-5",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-6-standard",
-    "modelId": "m-laptop-dell-sell-now-6",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-7-standard",
-    "modelId": "m-laptop-dell-sell-now-7",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-8-standard",
-    "modelId": "m-laptop-dell-sell-now-8",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-9-standard",
-    "modelId": "m-laptop-dell-sell-now-9",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-10-standard",
-    "modelId": "m-laptop-dell-sell-now-10",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-11-standard",
-    "modelId": "m-laptop-dell-sell-now-11",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-12-standard",
-    "modelId": "m-laptop-dell-sell-now-12",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-13-standard",
-    "modelId": "m-laptop-dell-sell-now-13",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-14-standard",
-    "modelId": "m-laptop-dell-sell-now-14",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-15-standard",
-    "modelId": "m-laptop-dell-sell-now-15",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-16-standard",
-    "modelId": "m-laptop-dell-sell-now-16",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-sell-now-17-standard",
-    "modelId": "m-laptop-dell-sell-now-17",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-13-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-13-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-15-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-15-r2-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-15-r4-series-standard",
-    "modelId": "m-laptop-dell-dell-15-r4-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-17-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-17-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-17-r3-series-standard",
-    "modelId": "m-laptop-dell-dell-17-r3-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-17-r5-series-standard",
-    "modelId": "m-laptop-dell-dell-17-r5-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-area-51m-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-area-51m-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-area-51m-series-standard",
-    "modelId": "m-laptop-dell-dell-area-51m-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m11x-series-standard",
-    "modelId": "m-laptop-dell-dell-m11x-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m14x-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-m14x-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m14x-series-standard",
-    "modelId": "m-laptop-dell-dell-m14x-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15-r3-series-standard",
-    "modelId": "m-laptop-dell-dell-m15-r3-series",
-    "storage": "Standard",
-    "basePrice": 46460,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15-r4-series-standard",
-    "modelId": "m-laptop-dell-dell-m15-r4-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15-r5-series-standard",
-    "modelId": "m-laptop-dell-dell-m15-r5-series",
-    "storage": "Standard",
-    "basePrice": 51510,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15-r7-series-standard",
-    "modelId": "m-laptop-dell-dell-m15-r7-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15-series-standard",
-    "modelId": "m-laptop-dell-dell-m15-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m15x-series-standard",
-    "modelId": "m-laptop-dell-dell-m15x-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-m17-r2-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17-r3-series-standard",
-    "modelId": "m-laptop-dell-dell-m17-r3-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17-r4-series-standard",
-    "modelId": "m-laptop-dell-dell-m17-r4-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17-r5-series-standard",
-    "modelId": "m-laptop-dell-dell-m17-r5-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17-series-standard",
-    "modelId": "m-laptop-dell-dell-m17-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17x-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-m17x-r2-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17x-r3-series-standard",
-    "modelId": "m-laptop-dell-dell-m17x-r3-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m17x-r4-series-standard",
-    "modelId": "m-laptop-dell-dell-m17x-r4-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m18x-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-m18x-r2-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-m18x-series-standard",
-    "modelId": "m-laptop-dell-dell-m18x-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-x14-series-standard",
-    "modelId": "m-laptop-dell-dell-x14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-x15-r1-series-standard",
-    "modelId": "m-laptop-dell-dell-x15-r1-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-x17-r1-series-standard",
-    "modelId": "m-laptop-dell-dell-x17-r1-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-dell-x17-r2-series-standard",
-    "modelId": "m-laptop-dell-dell-x17-r2-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-dell-m17x-series-standard",
-    "modelId": "m-laptop-dell-m17x-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-8-series-standard",
-    "modelId": "m-laptop-hp-zbook-8-series",
-    "storage": "Standard",
-    "basePrice": 35350,
-    "active": true
   }
 ];
 
 const MOBILE_VARIANTS_PART_9: DeviceVariantData[] = [
-  {
-    "id": "v-m-laptop-hp-zbook-firefly-series-standard",
-    "modelId": "m-laptop-hp-zbook-firefly-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-fury-series-standard",
-    "modelId": "m-laptop-hp-zbook-fury-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-power-series-standard",
-    "modelId": "m-laptop-hp-zbook-power-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-studio-series-standard",
-    "modelId": "m-laptop-hp-zbook-studio-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-x-series-standard",
-    "modelId": "m-laptop-hp-zbook-x-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-pavilion-series-standard",
-    "modelId": "m-laptop-hp-pavilion-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-15-series-standard",
-    "modelId": "m-laptop-hp-hp-15-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-notebook-series-standard",
-    "modelId": "m-laptop-hp-hp-notebook-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-probook-series-standard",
-    "modelId": "m-laptop-hp-probook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-elitebook-series-standard",
-    "modelId": "m-laptop-hp-elitebook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-g-series-standard",
-    "modelId": "m-laptop-hp-g-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-envy-series-standard",
-    "modelId": "m-laptop-hp-envy-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-14-series-standard",
-    "modelId": "m-laptop-hp-hp-14-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-pavilion-power-series-standard",
-    "modelId": "m-laptop-hp-pavilion-power-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-300-series-standard",
-    "modelId": "m-laptop-hp-hp-300-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-spectre-series-standard",
-    "modelId": "m-laptop-hp-spectre-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-split-series-standard",
-    "modelId": "m-laptop-hp-split-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-chromebook-series-standard",
-    "modelId": "m-laptop-hp-hp-chromebook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-omen-series-standard",
-    "modelId": "m-laptop-hp-omen-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-200-series-standard",
-    "modelId": "m-laptop-hp-200-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-17-series-standard",
-    "modelId": "m-laptop-hp-hp-17-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-stream-series-standard",
-    "modelId": "m-laptop-hp-stream-series",
-    "storage": "Standard",
-    "basePrice": 2636,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-series-standard",
-    "modelId": "m-laptop-hp-zbook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-pavilion-gaming-series-standard",
-    "modelId": "m-laptop-hp-pavilion-gaming-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-slatebook-series-standard",
-    "modelId": "m-laptop-hp-slatebook-series",
-    "storage": "Standard",
-    "basePrice": 2676,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-victus-series-standard",
-    "modelId": "m-laptop-hp-victus-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-other-hp-series-standard",
-    "modelId": "m-laptop-hp-other-hp-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omen-16-max-series-standard",
-    "modelId": "m-laptop-hp-hp-omen-16-max-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omen-16-series-standard",
-    "modelId": "m-laptop-hp-hp-omen-16-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omen-15-series-standard",
-    "modelId": "m-laptop-hp-hp-omen-15-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omnibook-x-flip-series-standard",
-    "modelId": "m-laptop-hp-hp-omnibook-x-flip-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-victus-15-series-standard",
-    "modelId": "m-laptop-hp-hp-victus-15-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-victus-16-series-standard",
-    "modelId": "m-laptop-hp-hp-victus-16-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-17-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-17-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-hyperx-omen-2026-series-standard",
-    "modelId": "m-laptop-hp-hp-hyperx-omen-2026-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-gaming-15-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-gaming-15-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-15s-series-standard",
-    "modelId": "m-laptop-hp-hp-15s-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-247-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-247-g8-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-255-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-255-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-348-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-348-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-645-g9-notebook-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-645-g9-notebook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-14-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-x360-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-x360-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-14u-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-14u-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-15-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-15-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-15-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-15-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-create-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-create-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-firefly-14-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-firefly-14-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-firefly-15-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-firefly-15-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-fury-15-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-fury-15-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-fury-17-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-fury-17-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-power-15-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-power-15-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-power-15-g9-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-power-15-g9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-studio-16-g9-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-studio-16-g9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-studio-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-studio-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-studio-x360-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-studio-x360-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-chromebook-14a-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-chromebook-14a-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omnibook-ultra-flip-series-standard",
-    "modelId": "m-laptop-hp-hp-omnibook-ultra-flip-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-plus-14-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-plus-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-14-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-14u-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-14u-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-17-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-17-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-firefly-14-g9-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-firefly-14-g9-series",
-    "storage": "Standard",
-    "basePrice": 36259,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-245-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-245-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-340s-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-340s-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-645-g10-notebook-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-645-g10-notebook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-645-g11-notebook-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-645-g11-notebook-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-15-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-15-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-440-g9-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-440-g9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-15u-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-15u-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-15u-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-15u-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-firefly-14-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-firefly-14-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-firefly-15-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-firefly-15-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-fury-16-g9-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-fury-16-g9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-power-17-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-power-17-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-studio-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-studio-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-zbook-firefly-16-g9-series-standard",
-    "modelId": "m-laptop-hp-zbook-firefly-16-g9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-14s-series-standard",
-    "modelId": "m-laptop-hp-hp-14s-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-chromebook-x2-series-standard",
-    "modelId": "m-laptop-hp-hp-chromebook-x2-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-chromebook-x360-14-series-standard",
-    "modelId": "m-laptop-hp-hp-chromebook-x360-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-1050-g1-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-1050-g1-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-735-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-735-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-735-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-735-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-745-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-745-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-745-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-745-g6-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-755-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-755-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-830-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-830-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-830-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-830-g6-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-830-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-830-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-830-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-830-g8-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-835-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-835-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-835-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-835-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-840-aero-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-840-aero-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-840-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-840-g6-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-840-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-840-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-840-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-840-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-845-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-845-g7-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-845-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-845-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-850-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-850-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-850-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-850-g6-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-850-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-850-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-850-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-850-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-855-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-855-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-855-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-855-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g3-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g3-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g4-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g4-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g6-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-830-g5-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-830-g5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-830-g6-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-830-g6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-830-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-830-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-elitebook-x360-830-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-elitebook-x360-830-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-13-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-13-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-14-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-14-series",
-    "storage": "Standard",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-15-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-15-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-16-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-16-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-17-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-17-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-envy-x360-series-standard",
-    "modelId": "m-laptop-hp-hp-envy-x360-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-omen-17-series-standard",
-    "modelId": "m-laptop-hp-hp-omen-17-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-pavilion-13-series-standard",
-    "modelId": "m-laptop-hp-hp-pavilion-13-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-430-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-430-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-440-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-440-g7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-440-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-440-g8-series",
-    "storage": "Standard",
-    "basePrice": 32320,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-445-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-445-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-445-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-445-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-450-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-450-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-450-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-450-g8-series",
-    "storage": "Standard",
-    "basePrice": 35350,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-455-g7-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-455-g7-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-455-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-455-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-630-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-630-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-635-aero-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-635-aero-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-640-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-640-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-650-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-650-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-x360-435-g8-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-x360-435-g8-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-probook-x360-440-g1-series-standard",
-    "modelId": "m-laptop-hp-hp-probook-x360-440-g1-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-spectre-x360-13-series-standard",
-    "modelId": "m-laptop-hp-hp-spectre-x360-13-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-spectre-x360-14-series-standard",
-    "modelId": "m-laptop-hp-hp-spectre-x360-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-spectre-x360-16-series-standard",
-    "modelId": "m-laptop-hp-hp-spectre-x360-16-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-14u-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-14u-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-15u-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-15u-series",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-hp-hp-zbook-studio-x360-series-standard",
-    "modelId": "m-laptop-hp-hp-zbook-studio-x360-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-5-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-5-series",
-    "storage": "Standard",
-    "basePrice": 12625,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-slim-7-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-slim-7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-loq-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-loq-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-5i-series-standard",
-    "modelId": "m-laptop-lenovo-legion-5i-series",
-    "storage": "Standard",
-    "basePrice": 35350,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-slim-5-series-standard",
-    "modelId": "m-laptop-lenovo-legion-slim-5-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-slim-5i-series-standard",
-    "modelId": "m-laptop-lenovo-legion-slim-5i-series",
-    "storage": "Standard",
-    "basePrice": 38380,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-5i-pro-series-standard",
-    "modelId": "m-laptop-lenovo-legion-5i-pro-series",
-    "storage": "Standard",
-    "basePrice": 43430,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-pro-5-series-standard",
-    "modelId": "m-laptop-lenovo-legion-pro-5-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-pro-5i-series-standard",
-    "modelId": "m-laptop-lenovo-legion-pro-5i-series",
-    "storage": "Standard",
-    "basePrice": 39390,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-pro-7i-series-standard",
-    "modelId": "m-laptop-lenovo-legion-pro-7i-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-300-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-300-series",
-    "storage": "Standard",
-    "basePrice": 11595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-500-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-500-series",
-    "storage": "Standard",
-    "basePrice": 6373,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-t-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-t-series",
-    "storage": "Standard",
-    "basePrice": 6110,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-100-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-100-series",
-    "storage": "Standard",
-    "basePrice": 5020,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-s-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-s-series",
-    "storage": "Standard",
-    "basePrice": 5595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-500-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-500-series",
-    "storage": "Standard",
-    "basePrice": 10120,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-l-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-l-series",
-    "storage": "Standard",
-    "basePrice": 8777,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-y-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-y-series",
-    "storage": "Standard",
-    "basePrice": 18968,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-flex-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-flex-series",
-    "storage": "Standard",
-    "basePrice": 6767,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-e-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-e-series",
-    "storage": "Standard",
-    "basePrice": 11999,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-slim-3i-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-slim-3i-series",
-    "storage": "Standard",
-    "basePrice": 17503,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-v-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-v-series",
-    "storage": "Standard",
-    "basePrice": 6444,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-x-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-x-series",
-    "storage": "Standard",
-    "basePrice": 7403,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-edge-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-edge-series",
-    "storage": "Standard",
-    "basePrice": 5161,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-300e-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-300e-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-series-standard",
-    "modelId": "m-laptop-lenovo-legion-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-n-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-n-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-500e-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-500e-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-700-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-700-series",
-    "storage": "Standard",
-    "basePrice": 10443,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-gaming-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-gaming-series",
-    "storage": "Standard",
-    "basePrice": 20311,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-a-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-a-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-900-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-900-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-d-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-d-series",
-    "storage": "Standard",
-    "basePrice": 6010,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-twist-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-twist-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-700-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-700-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-c-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-c-series",
-    "storage": "Standard",
-    "basePrice": 4727,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-11e-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-11e-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-5-series-standard",
-    "modelId": "m-laptop-lenovo-legion-5-series",
-    "storage": "Standard",
-    "basePrice": 22079,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-slim-5i-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-slim-5i-series",
-    "storage": "Standard",
-    "basePrice": 22472,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkbook-series-standard",
-    "modelId": "m-laptop-lenovo-thinkbook-series",
-    "storage": "Standard",
-    "basePrice": 5908,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-p-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-p-series",
-    "storage": "Standard",
-    "basePrice": 7696,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-100e-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-100e-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-11e-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-11e-series",
-    "storage": "Standard",
-    "basePrice": 2909,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-helix-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-helix-series",
-    "storage": "Standard",
-    "basePrice": 6141,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-ideapad-900-series-standard",
-    "modelId": "m-laptop-lenovo-ideapad-900-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-7-series-standard",
-    "modelId": "m-laptop-lenovo-legion-7-series",
-    "storage": "Standard",
-    "basePrice": 33178,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-student-chromebooks-standard",
-    "modelId": "m-laptop-lenovo-student-chromebooks",
-    "storage": "Standard",
-    "basePrice": 1333,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-other-lenovo-series-standard",
-    "modelId": "m-laptop-lenovo-other-lenovo-series",
-    "storage": "Standard",
-    "basePrice": 4454,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-9i-series-standard",
-    "modelId": "m-laptop-lenovo-legion-9i-series",
-    "storage": "Standard",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-6-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-6-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-slim-6i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-slim-6i-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-7-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-7i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-7i-series",
-    "storage": "Standard",
-    "basePrice": 35350,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-pro-7i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-pro-7i-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-slim-7i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-slim-7i-series",
-    "storage": "Standard",
-    "basePrice": 38380,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-9i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-9i-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-yoga-book-9i-series-standard",
-    "modelId": "m-laptop-lenovo-yoga-book-9i-series",
-    "storage": "Standard",
-    "basePrice": 55550,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-thinkpad-x1-series-standard",
-    "modelId": "m-laptop-lenovo-thinkpad-x1-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-y720-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-y720-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-gaming-3-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-gaming-3-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-5i-17-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-5i-17-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-slim-7-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-slim-7-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-y540-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-y540-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-y730-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-y730-series",
-    "storage": "Standard",
-    "basePrice": 8080,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-y520-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-y520-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-legion-y530-series-standard",
-    "modelId": "m-laptop-lenovo-legion-y530-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-gaming-3i-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-gaming-3i-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-5-15-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-5-15-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-slim-7i-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-slim-7i-series",
-    "storage": "Standard",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-7i-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-7i-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-yoga-slim-7i-aura-edition-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-yoga-slim-7i-aura-edition-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-1i-gen-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-1i-gen-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-13s-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-13s-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-14p-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-14p-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-14s-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-14s-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-14s-yoga-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-14s-yoga-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-15p-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-15p-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-16p-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-16p-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkpad-e14-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkpad-e14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkpad-z13-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkpad-z13-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-5-17-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-5-17-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-15-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-15-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-v15-gen-4-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-v15-gen-4-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-yoga-9-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-yoga-9-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-1-gen-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-1-gen-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-3-gen-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-3-gen-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-5-gen-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-5-gen-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-13x-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-13x-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-14-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-14-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkpad-z16-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkpad-z16-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-yoga-duet-7i-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-yoga-duet-7i-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-standard",
-    "modelId": "m-laptop-lenovo-sell-now",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-2-standard",
-    "modelId": "m-laptop-lenovo-sell-now-2",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-3-standard",
-    "modelId": "m-laptop-lenovo-sell-now-3",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-4-standard",
-    "modelId": "m-laptop-lenovo-sell-now-4",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-5-standard",
-    "modelId": "m-laptop-lenovo-sell-now-5",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-6-standard",
-    "modelId": "m-laptop-lenovo-sell-now-6",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-7-standard",
-    "modelId": "m-laptop-lenovo-sell-now-7",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-8-standard",
-    "modelId": "m-laptop-lenovo-sell-now-8",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-9-standard",
-    "modelId": "m-laptop-lenovo-sell-now-9",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-10-standard",
-    "modelId": "m-laptop-lenovo-sell-now-10",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-11-standard",
-    "modelId": "m-laptop-lenovo-sell-now-11",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-12-standard",
-    "modelId": "m-laptop-lenovo-sell-now-12",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-13-standard",
-    "modelId": "m-laptop-lenovo-sell-now-13",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-14-standard",
-    "modelId": "m-laptop-lenovo-sell-now-14",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-15-standard",
-    "modelId": "m-laptop-lenovo-sell-now-15",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-16-standard",
-    "modelId": "m-laptop-lenovo-sell-now-16",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-17-standard",
-    "modelId": "m-laptop-lenovo-sell-now-17",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-18-standard",
-    "modelId": "m-laptop-lenovo-sell-now-18",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-19-standard",
-    "modelId": "m-laptop-lenovo-sell-now-19",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-20-standard",
-    "modelId": "m-laptop-lenovo-sell-now-20",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-21-standard",
-    "modelId": "m-laptop-lenovo-sell-now-21",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-22-standard",
-    "modelId": "m-laptop-lenovo-sell-now-22",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-23-standard",
-    "modelId": "m-laptop-lenovo-sell-now-23",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-24-standard",
-    "modelId": "m-laptop-lenovo-sell-now-24",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-25-standard",
-    "modelId": "m-laptop-lenovo-sell-now-25",
-    "storage": "Standard",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-26-standard",
-    "modelId": "m-laptop-lenovo-sell-now-26",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-27-standard",
-    "modelId": "m-laptop-lenovo-sell-now-27",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-28-standard",
-    "modelId": "m-laptop-lenovo-sell-now-28",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-29-standard",
-    "modelId": "m-laptop-lenovo-sell-now-29",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-30-standard",
-    "modelId": "m-laptop-lenovo-sell-now-30",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-sell-now-31-standard",
-    "modelId": "m-laptop-lenovo-sell-now-31",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-legion-y7000-series-standard",
-    "modelId": "m-laptop-lenovo-lenovo-legion-y7000-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lenovo-lenovo-thinkbook-13s-standard",
-    "modelId": "m-laptop-lenovo-lenovo-thinkbook-13s",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lg-other-lg-series-standard",
-    "modelId": "m-laptop-lg-other-lg-series",
-    "storage": "Standard",
-    "basePrice": 6171,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-lg-lg-gram-series-standard",
-    "modelId": "m-laptop-lg-lg-gram-series",
-    "storage": "Standard",
-    "basePrice": 8585,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-series",
-    "storage": "Standard",
-    "basePrice": 7595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-4-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-4-series",
-    "storage": "Standard",
-    "basePrice": 12938,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-series-standard",
-    "modelId": "m-laptop-microsoft-surface-series",
-    "storage": "Standard",
-    "basePrice": 4848,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-book-series-standard",
-    "modelId": "m-laptop-microsoft-surface-book-series",
-    "storage": "Standard",
-    "basePrice": 12474,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-3-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-3-series",
-    "storage": "Standard",
-    "basePrice": 10373,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-book-2-series-standard",
-    "modelId": "m-laptop-microsoft-surface-book-2-series",
-    "storage": "Standard",
-    "basePrice": 14403,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-go-series-standard",
-    "modelId": "m-laptop-microsoft-surface-go-series",
-    "storage": "Standard",
-    "basePrice": 3596,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-5-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-5-series",
-    "storage": "Standard",
-    "basePrice": 14271,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-laptop-2-series-standard",
-    "modelId": "m-laptop-microsoft-surface-laptop-2-series",
-    "storage": "Standard",
-    "basePrice": 14403,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-2-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-2-series",
-    "storage": "Standard",
-    "basePrice": 8484,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-laptop-3-series-standard",
-    "modelId": "m-laptop-microsoft-surface-laptop-3-series",
-    "storage": "Standard",
-    "basePrice": 17594,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-2-series-standard",
-    "modelId": "m-laptop-microsoft-surface-2-series",
-    "storage": "Standard",
-    "basePrice": 4939,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-3-series-standard",
-    "modelId": "m-laptop-microsoft-surface-3-series",
-    "storage": "Standard",
-    "basePrice": 5545,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-6-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-6-series",
-    "storage": "Standard",
-    "basePrice": 16493,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-laptop-4-series-standard",
-    "modelId": "m-laptop-microsoft-surface-laptop-4-series",
-    "storage": "Standard",
-    "basePrice": 19533,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-7-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-7-series",
-    "storage": "Standard",
-    "basePrice": 20170,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-laptop-series-standard",
-    "modelId": "m-laptop-microsoft-surface-laptop-series",
-    "storage": "Standard",
-    "basePrice": 12474,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-book-3-series-standard",
-    "modelId": "m-laptop-microsoft-surface-book-3-series",
-    "storage": "Standard",
-    "basePrice": 17594,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-pro-x-series-standard",
-    "modelId": "m-laptop-microsoft-surface-pro-x-series",
-    "storage": "Standard",
-    "basePrice": 23402,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-surface-go-2-series-standard",
-    "modelId": "m-laptop-microsoft-surface-go-2-series",
-    "storage": "Standard",
-    "basePrice": 8969,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-microsoft-other-microsoft-series-standard",
-    "modelId": "m-laptop-microsoft-other-microsoft-series",
-    "storage": "Standard",
-    "basePrice": 10827,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-msi-crosshair-series-standard",
-    "modelId": "m-laptop-msi-msi-crosshair-series",
-    "storage": "Standard",
-    "basePrice": 32000,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-gl-series-standard",
-    "modelId": "m-laptop-msi-gl-series",
-    "storage": "Standard",
-    "basePrice": 23927,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-gf-series-standard",
-    "modelId": "m-laptop-msi-gf-series",
-    "storage": "Standard",
-    "basePrice": 21028,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-modern-series-standard",
-    "modelId": "m-laptop-msi-modern-series",
-    "storage": "Standard",
-    "basePrice": 21947,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-gp-leopard-series-standard",
-    "modelId": "m-laptop-msi-gp-leopard-series",
-    "storage": "Standard",
-    "basePrice": 23927,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-ge-raider-series-standard",
-    "modelId": "m-laptop-msi-ge-raider-series",
-    "storage": "Standard",
-    "basePrice": 24907,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-prestige-series-standard",
-    "modelId": "m-laptop-msi-prestige-series",
-    "storage": "Standard",
-    "basePrice": 21947,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-gs-steath-series-standard",
-    "modelId": "m-laptop-msi-gs-steath-series",
-    "storage": "Standard",
-    "basePrice": 21028,
-    "active": true
-  }
 ];
 
 const MOBILE_VARIANTS_PART_10: DeviceVariantData[] = [
-  {
-    "id": "v-m-laptop-msi-gt-titan-series-standard",
-    "modelId": "m-laptop-msi-gt-titan-series",
-    "storage": "Standard",
-    "basePrice": 21028,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-alpha-series-standard",
-    "modelId": "m-laptop-msi-alpha-series",
-    "storage": "Standard",
-    "basePrice": 17422,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-creator-series-standard",
-    "modelId": "m-laptop-msi-creator-series",
-    "storage": "Standard",
-    "basePrice": 20170,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-wp-series-standard",
-    "modelId": "m-laptop-msi-wp-series",
-    "storage": "Standard",
-    "basePrice": 9040,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-delta-series-standard",
-    "modelId": "m-laptop-msi-delta-series",
-    "storage": "Standard",
-    "basePrice": 18130,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-wt-series-standard",
-    "modelId": "m-laptop-msi-wt-series",
-    "storage": "Standard",
-    "basePrice": 9040,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-ws-series-standard",
-    "modelId": "m-laptop-msi-ws-series",
-    "storage": "Standard",
-    "basePrice": 9040,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-wf-series-standard",
-    "modelId": "m-laptop-msi-wf-series",
-    "storage": "Standard",
-    "basePrice": 9040,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-we-series-standard",
-    "modelId": "m-laptop-msi-we-series",
-    "storage": "Standard",
-    "basePrice": 9040,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-bravo-series-standard",
-    "modelId": "m-laptop-msi-bravo-series",
-    "storage": "Standard",
-    "basePrice": 18130,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-msi-summit-series-standard",
-    "modelId": "m-laptop-msi-summit-series",
-    "storage": "Standard",
-    "basePrice": 27401,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-nokia-nokia-purebook-series-standard",
-    "modelId": "m-laptop-nokia-nokia-purebook-series",
-    "storage": "Standard",
-    "basePrice": 17281,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-other-laptop-other-laptop-series-standard",
-    "modelId": "m-laptop-other-laptop-other-laptop-series",
-    "storage": "Standard",
-    "basePrice": 3060,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-realme-book-prime-series-standard",
-    "modelId": "m-laptop-realme-book-prime-series",
-    "storage": "Standard",
-    "basePrice": 25371,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-realme-book-slim-series-standard",
-    "modelId": "m-laptop-realme-book-slim-series",
-    "storage": "Standard",
-    "basePrice": 18422,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book-go-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book-go-series",
-    "storage": "Standard",
-    "basePrice": 10969,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book2-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book2-series",
-    "storage": "Standard",
-    "basePrice": 22210,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book2-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book2-360-series",
-    "storage": "Standard",
-    "basePrice": 27613,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book2-pro-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book2-pro-series",
-    "storage": "Standard",
-    "basePrice": 29351,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book2-pro-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book2-pro-360-series",
-    "storage": "Standard",
-    "basePrice": 29785,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book3-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book3-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book3-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book3-360-series",
-    "storage": "Standard",
-    "basePrice": 33330,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book3-ultra-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book3-ultra-series",
-    "storage": "Standard",
-    "basePrice": 55550,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book3-pro-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book3-pro-360-series",
-    "storage": "Standard",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-series",
-    "storage": "Standard",
-    "basePrice": 30128,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-360-series",
-    "storage": "Standard",
-    "basePrice": 31785,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-pro-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-pro-series",
-    "storage": "Standard",
-    "basePrice": 31179,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-pro-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-pro-360-series",
-    "storage": "Standard",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-ultra-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-ultra-series",
-    "storage": "Standard",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book4-edge-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book4-edge-series",
-    "storage": "Standard",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book5-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book5-series",
-    "storage": "Standard",
-    "basePrice": 42521,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book5-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book5-360-series",
-    "storage": "Standard",
-    "basePrice": 43895,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book5-pro-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book5-pro-series",
-    "storage": "Standard",
-    "basePrice": 47147,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-galaxy-book5-pro-360-series-standard",
-    "modelId": "m-laptop-samsung-galaxy-book5-pro-360-series",
-    "storage": "Standard",
-    "basePrice": 50399,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-samsung-others-samsung-series-standard",
-    "modelId": "m-laptop-samsung-others-samsung-series",
-    "storage": "Standard",
-    "basePrice": 4070,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-xiaomi-mi-notebook-standard",
-    "modelId": "m-laptop-xiaomi-mi-notebook",
-    "storage": "Standard",
-    "basePrice": 16190,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-xiaomi-mi-air-series-standard",
-    "modelId": "m-laptop-xiaomi-mi-air-series",
-    "storage": "Standard",
-    "basePrice": 9191,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-xiaomi-mi-pro-series-standard",
-    "modelId": "m-laptop-xiaomi-mi-pro-series",
-    "storage": "Standard",
-    "basePrice": 12595,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-xiaomi-redmibook-series-standard",
-    "modelId": "m-laptop-xiaomi-redmibook-series",
-    "storage": "Standard",
-    "basePrice": 13988,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 3777,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 2545,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 2778,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 3212,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 4060,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 2798,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular",
-    "storage": "32 GB",
-    "basePrice": 3202,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-1st-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 3525,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 3161,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 2919,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 5151,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 4434,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular",
-    "storage": "32 GB",
-    "basePrice": 4434,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 5232,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 5616,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-2nd-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 3586,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-3rd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-3rd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 13342,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-3rd-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-3rd-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 16221,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-3rd-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-3rd-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 14494,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-3rd-gen-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-3rd-gen-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 17372,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-4th-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-4th-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 20826,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-4th-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-4th-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 19867,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-4th-gen-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-4th-gen-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 21786,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-4th-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-4th-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 20917,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 1273,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 1475,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 1656,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 1424,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular",
-    "storage": "32 GB",
-    "basePrice": 1879,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-1st-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 1970,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 2121,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 2500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 2687,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 2959,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 2333,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular",
-    "storage": "32 GB",
-    "basePrice": 2545,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 3141,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2nd-gen-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 3505,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 2737,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 3303,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 2121,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 3303,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 3686,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3rd-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 2828,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 4151,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-only-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-only",
-    "storage": "16 GB",
-    "basePrice": 3202,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 4343,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 5949,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
-    "storage": "32 GB",
-    "basePrice": 6232,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 7400,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 6898,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4th-gen-wi-fi-cellular",
-    "storage": "16 GB",
-    "basePrice": 4818,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-5th-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-5th-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 12110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-5th-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-5th-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 12605,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-5th-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-5th-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 13393,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-5th-gen-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-5th-gen-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 14281,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-6th-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-6th-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 21210,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-6th-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-6th-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 23230,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-6th-gen-wi-fi-cellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-6th-gen-wi-fi-cellular",
-    "storage": "64 GB",
-    "basePrice": 24745,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-6th-gen-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-6th-gen-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 25755,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 11201,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 10615,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 9938,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular",
-    "storage": "32 GB",
-    "basePrice": 11494,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 13544,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-1st-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 12181,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 12514,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 13786,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 16503,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular",
-    "storage": "64 GB",
-    "basePrice": 14463,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 16412,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-2nd-gen-wi-ficellular",
-    "storage": "512 GB",
-    "basePrice": 18160,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 17210,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 18796,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 22392,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 25806,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular",
-    "storage": "64 GB",
-    "basePrice": 20463,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 23624,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular",
-    "storage": "512 GB",
-    "basePrice": 25119,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-3rd-gen-wi-ficellular",
-    "storage": "1 TB",
-    "basePrice": 27462,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 24341,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 24927,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 29462,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 31643,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 26331,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 28179,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular",
-    "storage": "512 GB",
-    "basePrice": 29926,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-4th-gen-wi-ficellular",
-    "storage": "1 TB",
-    "basePrice": 33492,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 34754,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 36996,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 41087,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 44006,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-fi-only",
-    "storage": "2 TB",
-    "basePrice": 47894,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 37188,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 40016,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular",
-    "storage": "512 GB",
-    "basePrice": 45460,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular",
-    "storage": "1 TB",
-    "basePrice": 47894,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-5th-gen-wi-ficellular",
-    "storage": "2 TB",
-    "basePrice": 52278,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 10363,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 10080,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 11322,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular",
-    "storage": "32 GB",
-    "basePrice": 10272,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 11615,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-1st-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 12474,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-5th-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-97-5th-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 8827,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-5th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-97-5th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 9120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-5th-gen-wi-ficellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-97-5th-gen-wi-ficellular",
-    "storage": "32 GB",
-    "basePrice": 9120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-5th-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-97-5th-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-6th-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-97-6th-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 10080,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-6th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-97-6th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 11039,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-6th-gen-wi-ficellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-97-6th-gen-wi-ficellular",
-    "storage": "32 GB",
-    "basePrice": 11039,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-97-6th-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-97-6th-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 12474,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 13241,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 14968,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 16312,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular",
-    "storage": "64 GB",
-    "basePrice": 13918,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular",
-    "storage": "256 GB",
-    "basePrice": 15544,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-2nd-gen-wi-ficellular",
-    "storage": "512 GB",
-    "basePrice": 19483,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-102-7th-gen-wi-fi-only-32-gb",
-    "modelId": "m-tablet-apple-ipad-102-7th-gen-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 11999,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-102-7th-gen-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-102-7th-gen-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 12958,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-102-7th-gen-wi-ficellular-32-gb",
-    "modelId": "m-tablet-apple-ipad-102-7th-gen-wi-ficellular",
-    "storage": "32 GB",
-    "basePrice": 12474,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-102-7th-gen-wi-ficellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-102-7th-gen-wi-ficellular",
-    "storage": "128 GB",
-    "basePrice": 14392,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 30997,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 33875,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 36178,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 39148,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 39148,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 40976,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-cellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-cellular",
-    "storage": "512 GB",
-    "basePrice": 43087,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-wi-fi-cellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-wi-fi-cellular",
-    "storage": "1 TB",
-    "basePrice": 47016,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-only-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 40784,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 43470,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 47399,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 49894,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-cellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-cellular",
-    "storage": "128 GB",
-    "basePrice": 51813,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 55459,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-cellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-cellular",
-    "storage": "512 GB",
-    "basePrice": 56802,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-wi-fi-cellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-wi-fi-cellular",
-    "storage": "1 TB",
-    "basePrice": 58439,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 50187,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 56035,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 61317,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-only-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-only",
-    "storage": "2 TB",
-    "basePrice": 66206,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 56227,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular",
-    "storage": "512 GB",
-    "basePrice": 63236,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular",
-    "storage": "1 TB",
-    "basePrice": 68508,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-11-wi-fi-cellular",
-    "storage": "2 TB",
-    "basePrice": 72831,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-only-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 64579,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-only-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 70336,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-only-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-only",
-    "storage": "1 TB",
-    "basePrice": 74942,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-only-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-only",
-    "storage": "2 TB",
-    "basePrice": 79638,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular",
-    "storage": "256 GB",
-    "basePrice": 71104,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular",
-    "storage": "512 GB",
-    "basePrice": 78871,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular",
-    "storage": "1 TB",
-    "basePrice": 82709,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-m4-13-wi-fi-cellular",
-    "storage": "2 TB",
-    "basePrice": 86355,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2020-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2020",
-    "storage": "1 TB",
-    "basePrice": 31310,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2020-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2020",
-    "storage": "512 GB",
-    "basePrice": 28280,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2020-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2020",
-    "storage": "256 GB",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2020",
-    "storage": "128 GB",
-    "basePrice": 23230,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-cellular-2-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-cellular",
-    "storage": "2 TB",
-    "basePrice": 129280,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-cellular-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-cellular",
-    "storage": "1 TB",
-    "basePrice": 119180,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-cellular-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-cellular",
-    "storage": "512 GB",
-    "basePrice": 111100,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-cellular-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-cellular",
-    "storage": "256 GB",
-    "basePrice": 101000,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-wifi-2-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-wifi",
-    "storage": "2 TB",
-    "basePrice": 118675,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-wifi-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-wifi",
-    "storage": "1 TB",
-    "basePrice": 108070,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-wifi",
-    "storage": "512 GB",
-    "basePrice": 97970,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m5-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m5-wifi",
-    "storage": "256 GB",
-    "basePrice": 86860,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular-2-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular",
-    "storage": "2 TB",
-    "basePrice": 113120,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular",
-    "storage": "1 TB",
-    "basePrice": 100798,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular",
-    "storage": "512 GB",
-    "basePrice": 90900,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-cellular",
-    "storage": "256 GB",
-    "basePrice": 80800,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024",
-    "storage": "2 TB",
-    "basePrice": 83830,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024",
-    "storage": "1 TB",
-    "basePrice": 78780,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024",
-    "storage": "512 GB",
-    "basePrice": 74235,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-wi-fi-2024",
-    "storage": "256 GB",
-    "basePrice": 68680,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-cellular-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-cellular",
-    "storage": "1 TB",
-    "basePrice": 91910,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-cellular-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-cellular",
-    "storage": "512 GB",
-    "basePrice": 80800,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-cellular-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-cellular",
-    "storage": "256 GB",
-    "basePrice": 73730,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-cellular-128-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-cellular",
-    "storage": "128 GB",
-    "basePrice": 68680,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-only-2-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-only",
-    "storage": "2 TB",
-    "basePrice": 103020,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-only-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-only",
-    "storage": "1 TB",
-    "basePrice": 92920,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-only-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-only",
-    "storage": "512 GB",
-    "basePrice": 75750,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m5-wifi-only-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m5-wifi-only",
-    "storage": "256 GB",
-    "basePrice": 66660,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wificellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wificellular",
-    "storage": "1 TB",
-    "basePrice": 61610,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wificellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wificellular",
-    "storage": "512 GB",
-    "basePrice": 60095,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wificellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wificellular",
-    "storage": "256 GB",
-    "basePrice": 58580,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wificellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wificellular",
-    "storage": "128 GB",
-    "basePrice": 55550,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-wifi-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 77770,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 68175,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 58580,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-13-inch-wifi-128-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-13-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 55045,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022",
-    "storage": "2 TB",
-    "basePrice": 66660,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022",
-    "storage": "1 TB",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022",
-    "storage": "512 GB",
-    "basePrice": 57570,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022",
-    "storage": "256 GB",
-    "basePrice": 54540,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-wi-fi-2022",
-    "storage": "128 GB",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-wi-fi-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-wi-fi",
-    "storage": "2 TB",
-    "basePrice": 70700,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-wi-fi-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-wi-fi",
-    "storage": "1 TB",
-    "basePrice": 64640,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-wi-fi-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-wi-fi",
-    "storage": "512 GB",
-    "basePrice": 59085,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-wi-fi-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-wi-fi",
-    "storage": "256 GB",
-    "basePrice": 53025,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-cellular-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-cellular",
-    "storage": "1 TB",
-    "basePrice": 77770,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-cellular-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-cellular",
-    "storage": "512 GB",
-    "basePrice": 66660,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-cellular-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-cellular",
-    "storage": "256 GB",
-    "basePrice": 56560,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-cellular-128-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-cellular",
-    "storage": "128 GB",
-    "basePrice": 51510,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wificellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wificellular",
-    "storage": "1 TB",
-    "basePrice": 64640,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wificellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wificellular",
-    "storage": "512 GB",
-    "basePrice": 58075,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wificellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wificellular",
-    "storage": "256 GB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wificellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wificellular",
-    "storage": "128 GB",
-    "basePrice": 48783,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-wifi-1-tb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 71710,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 59590,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 50500,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m4-11-inch-wifi-128-gb-12-gb",
-    "modelId": "m-tablet-apple-ipad-air-m4-11-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 45450,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wifi-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wifi-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wifi-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 46056,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-13-inch-wifi-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-13-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 42420,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wifi-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 55550,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wifi-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 48480,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wifi-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 43430,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-11-inch-wifi-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-11-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 38380,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wifi-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 43430,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wifi-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 40400,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wifi-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 37370,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wifi-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 34340,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wifi-512-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wifi",
-    "storage": "512 GB",
-    "basePrice": 32825,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wifi-256-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wifi",
-    "storage": "256 GB",
-    "basePrice": 28280,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wifi-128-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wifi",
-    "storage": "128 GB",
-    "basePrice": 23230,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wificellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wificellular",
-    "storage": "1 TB",
-    "basePrice": 77770,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wificellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wificellular",
-    "storage": "512 GB",
-    "basePrice": 71710,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wificellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wificellular",
-    "storage": "256 GB",
-    "basePrice": 64640,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wificellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wificellular",
-    "storage": "128 GB",
-    "basePrice": 61610,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wifi-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wifi",
-    "storage": "1 TB",
-    "basePrice": 68680,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wifi-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wifi",
-    "storage": "512 GB",
-    "basePrice": 62620,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wifi-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wifi",
-    "storage": "256 GB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m3-13-inch-wifi-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m3-13-inch-wifi",
-    "storage": "128 GB",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022",
-    "storage": "2 TB",
-    "basePrice": 58580,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022",
-    "storage": "1 TB",
-    "basePrice": 54540,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022",
-    "storage": "512 GB",
-    "basePrice": 53530,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022",
-    "storage": "256 GB",
-    "basePrice": 50500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-cellular-2022",
-    "storage": "128 GB",
-    "basePrice": 47470,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021",
-    "storage": "2 TB",
-    "basePrice": 55550,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021",
-    "storage": "1 TB",
-    "basePrice": 53530,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021",
-    "storage": "512 GB",
-    "basePrice": 48480,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021",
-    "storage": "256 GB",
-    "basePrice": 46965,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-cellular-2021",
-    "storage": "128 GB",
-    "basePrice": 44440,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022",
-    "storage": "2 TB",
-    "basePrice": 57570,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022",
-    "storage": "1 TB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022",
-    "storage": "512 GB",
-    "basePrice": 47470,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022",
-    "storage": "256 GB",
-    "basePrice": 44440,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-4th-gen-m2-wi-fi-2022",
-    "storage": "128 GB",
-    "basePrice": 42420,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wificellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wificellular",
-    "storage": "1 TB",
-    "basePrice": 49490,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wificellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wificellular",
-    "storage": "512 GB",
-    "basePrice": 46460,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wificellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wificellular",
-    "storage": "256 GB",
-    "basePrice": 43430,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-m2-11-inch-wificellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-m2-11-inch-wificellular",
-    "storage": "128 GB",
-    "basePrice": 41410,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
-    "storage": "2 TB",
-    "basePrice": 53530,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
-    "storage": "1 TB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
-    "storage": "512 GB",
-    "basePrice": 49500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
-    "storage": "128 GB",
-    "basePrice": 42420,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-5th-gen-wi-fi-2021",
-    "storage": "256 GB",
-    "basePrice": 46500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-cellular-2024-512-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-cellular-2024",
-    "storage": "512 GB",
-    "basePrice": 43430,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-cellular-2024-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-cellular-2024",
-    "storage": "256 GB",
-    "basePrice": 38885,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-cellular-2024-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-cellular-2024",
-    "storage": "128 GB",
-    "basePrice": 36057,
-    "active": true
-  }
 ];
 
 const MOBILE_VARIANTS_PART_11: DeviceVariantData[] = [
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021",
-    "storage": "2 TB",
-    "basePrice": 47470,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021",
-    "storage": "1 TB",
-    "basePrice": 44440,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021",
-    "storage": "512 GB",
-    "basePrice": 41410,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021",
-    "storage": "256 GB",
-    "basePrice": 37370,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-wi-fi-2021",
-    "storage": "128 GB",
-    "basePrice": 34340,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020",
-    "storage": "1 TB",
-    "basePrice": 38380,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020",
-    "storage": "512 GB",
-    "basePrice": 35350,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020",
-    "storage": "256 GB",
-    "basePrice": 32320,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-cellular-2020",
-    "storage": "128 GB",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020",
-    "storage": "1 TB",
-    "basePrice": 37370,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020",
-    "storage": "512 GB",
-    "basePrice": 34340,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020",
-    "storage": "256 GB",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-4th-gen-wi-fi-2020",
-    "storage": "128 GB",
-    "basePrice": 29290,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024-512-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024",
-    "storage": "512 GB",
-    "basePrice": 36360,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024-256-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024",
-    "storage": "256 GB",
-    "basePrice": 30805,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-7th-gen-wi-fi-2024",
-    "storage": "128 GB",
-    "basePrice": 26866,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wificellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wificellular",
-    "storage": "512 GB",
-    "basePrice": 39390,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wificellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wificellular",
-    "storage": "256 GB",
-    "basePrice": 33835,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-11th-gen-wificellular-128-gb",
-    "modelId": "m-tablet-apple-ipad-11th-gen-wificellular",
-    "storage": "128 GB",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-109-10th-gen-cellular-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-109-10th-gen-cellular-2022",
-    "storage": "256 GB",
-    "basePrice": 24240,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-109-10th-gen-cellular-2022-64-gb",
-    "modelId": "m-tablet-apple-ipad-109-10th-gen-cellular-2022",
-    "storage": "64 GB",
-    "basePrice": 21210,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-109-10th-gen-wi-fi-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-109-10th-gen-wi-fi-2022",
-    "storage": "256 GB",
-    "basePrice": 20705,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-109-10th-gen-wi-fi-2022-64-gb",
-    "modelId": "m-tablet-apple-ipad-109-10th-gen-wi-fi-2022",
-    "storage": "64 GB",
-    "basePrice": 17170,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-5th-gen-cellular-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-5th-gen-cellular-2022",
-    "storage": "256 GB",
-    "basePrice": 31815,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-5th-gen-cellular-2022-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-5th-gen-cellular-2022",
-    "storage": "64 GB",
-    "basePrice": 29088,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020",
-    "storage": "1 TB",
-    "basePrice": 33330,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020",
-    "storage": "512 GB",
-    "basePrice": 30300,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020",
-    "storage": "256 GB",
-    "basePrice": 28280,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-2nd-gen-cellular-2020",
-    "storage": "128 GB",
-    "basePrice": 25250,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-5th-gen-wi-fi-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-air-5th-gen-wi-fi-2022",
-    "storage": "256 GB",
-    "basePrice": 25755,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-5th-gen-wi-fi-2022-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-5th-gen-wi-fi-2022",
-    "storage": "64 GB",
-    "basePrice": 23735,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-9th-gen-cellular-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-9th-gen-cellular-2021",
-    "storage": "256 GB",
-    "basePrice": 16160,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-9th-gen-cellular-2021-64-gb",
-    "modelId": "m-tablet-apple-ipad-9th-gen-cellular-2021",
-    "storage": "64 GB",
-    "basePrice": 15150,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-9th-gen-wi-fi-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-9th-gen-wi-fi-2021",
-    "storage": "256 GB",
-    "basePrice": 14645,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-9th-gen-wi-fi-2021-64-gb",
-    "modelId": "m-tablet-apple-ipad-9th-gen-wi-fi-2021",
-    "storage": "64 GB",
-    "basePrice": 13635,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017",
-    "storage": "512 GB",
-    "basePrice": 14140,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017",
-    "storage": "256 GB",
-    "basePrice": 13130,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-cellular-2017",
-    "storage": "64 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-cellular-2017-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-cellular-2017",
-    "storage": "512 GB",
-    "basePrice": 13130,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-cellular-2017-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-cellular-2017",
-    "storage": "256 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-cellular-2017-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-cellular-2017",
-    "storage": "64 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-8th-gen-cellular-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-8th-gen-cellular-2020",
-    "storage": "128 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-8th-gen-cellular-2020-32-gb",
-    "modelId": "m-tablet-apple-ipad-8th-gen-cellular-2020",
-    "storage": "32 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-8th-gen-wi-fi-2020-128-gb",
-    "modelId": "m-tablet-apple-ipad-8th-gen-wi-fi-2020",
-    "storage": "128 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-8th-gen-wi-fi-2020-32-gb",
-    "modelId": "m-tablet-apple-ipad-8th-gen-wi-fi-2020",
-    "storage": "32 GB",
-    "basePrice": 10605,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-6th-gen-wi-fi-2018-128-gb",
-    "modelId": "m-tablet-apple-ipad-6th-gen-wi-fi-2018",
-    "storage": "128 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-6th-gen-wi-fi-2018-32-gb",
-    "modelId": "m-tablet-apple-ipad-6th-gen-wi-fi-2018",
-    "storage": "32 GB",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-wi-fi-2016-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-wi-fi-2016",
-    "storage": "256 GB",
-    "basePrice": 8585,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-wi-fi-2016-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-wi-fi-2016",
-    "storage": "128 GB",
-    "basePrice": 8080,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-wi-fi-2016-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-wi-fi-2016",
-    "storage": "32 GB",
-    "basePrice": 7575,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-cellular-2012-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-cellular-2012",
-    "storage": "128 GB",
-    "basePrice": 1919,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-cellular-2012-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-cellular-2012",
-    "storage": "64 GB",
-    "basePrice": 1838,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-cellular-2012-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-cellular-2012",
-    "storage": "32 GB",
-    "basePrice": 1818,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-cellular-2012-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-cellular-2012",
-    "storage": "16 GB",
-    "basePrice": 1717,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-wi-fi-2012-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-wi-fi-2012",
-    "storage": "64 GB",
-    "basePrice": 1717,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-wi-fi-2012-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-wi-fi-2012",
-    "storage": "32 GB",
-    "basePrice": 1566,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-wi-fi-2012-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-wi-fi-2012",
-    "storage": "16 GB",
-    "basePrice": 1515,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-5th-gen-cellular-2017-128-gb",
-    "modelId": "m-tablet-apple-ipad-5th-gen-cellular-2017",
-    "storage": "128 GB",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-5th-gen-cellular-2017-32-gb",
-    "modelId": "m-tablet-apple-ipad-5th-gen-cellular-2017",
-    "storage": "32 GB",
-    "basePrice": 8080,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-5th-gen-wi-fi-2017-128-gb",
-    "modelId": "m-tablet-apple-ipad-5th-gen-wi-fi-2017",
-    "storage": "128 GB",
-    "basePrice": 8585,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-5th-gen-wi-fi-2017-32-gb",
-    "modelId": "m-tablet-apple-ipad-5th-gen-wi-fi-2017",
-    "storage": "32 GB",
-    "basePrice": 7575,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-6th-gen-cellular-2018-128-gb",
-    "modelId": "m-tablet-apple-ipad-6th-gen-cellular-2018",
-    "storage": "128 GB",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-6th-gen-cellular-2018-32-gb",
-    "modelId": "m-tablet-apple-ipad-6th-gen-cellular-2018",
-    "storage": "32 GB",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-7th-gen-cellular-2019-128-gb",
-    "modelId": "m-tablet-apple-ipad-7th-gen-cellular-2019",
-    "storage": "128 GB",
-    "basePrice": 11615,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-7th-gen-cellular-2019-32-gb",
-    "modelId": "m-tablet-apple-ipad-7th-gen-cellular-2019",
-    "storage": "32 GB",
-    "basePrice": 10605,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-7th-gen-wi-fi-2019-128-gb",
-    "modelId": "m-tablet-apple-ipad-7th-gen-wi-fi-2019",
-    "storage": "128 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-7th-gen-wi-fi-2019-32-gb",
-    "modelId": "m-tablet-apple-ipad-7th-gen-wi-fi-2019",
-    "storage": "32 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-cellular-2014-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-cellular-2014",
-    "storage": "128 GB",
-    "basePrice": 4242,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-cellular-2014-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-cellular-2014",
-    "storage": "64 GB",
-    "basePrice": 3838,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-cellular-2014-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-cellular-2014",
-    "storage": "32 GB",
-    "basePrice": 3636,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-cellular-2014-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-cellular-2014",
-    "storage": "16 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
-    "storage": "64 GB",
-    "basePrice": 4040,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
-    "storage": "128 GB",
-    "basePrice": 4400,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
-    "storage": "32 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-2-wi-fi-2014-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-2-wi-fi-2014",
-    "storage": "16 GB",
-    "basePrice": 3232,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-cellular-2013-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-cellular-2013",
-    "storage": "128 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-cellular-2013-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-cellular-2013",
-    "storage": "64 GB",
-    "basePrice": 3333,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-cellular-2013-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-cellular-2013",
-    "storage": "32 GB",
-    "basePrice": 3232,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-cellular-2013-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-cellular-2013",
-    "storage": "16 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-wi-fi-2013-128-gb",
-    "modelId": "m-tablet-apple-ipad-air-wi-fi-2013",
-    "storage": "128 GB",
-    "basePrice": 2525,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-wi-fi-2013-64-gb",
-    "modelId": "m-tablet-apple-ipad-air-wi-fi-2013",
-    "storage": "64 GB",
-    "basePrice": 2424,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-wi-fi-2013-32-gb",
-    "modelId": "m-tablet-apple-ipad-air-wi-fi-2013",
-    "storage": "32 GB",
-    "basePrice": 2323,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-air-wi-fi-2013-16-gb",
-    "modelId": "m-tablet-apple-ipad-air-wi-fi-2013",
-    "storage": "16 GB",
-    "basePrice": 2222,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-cellular-2013-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-cellular-2013",
-    "storage": "128 GB",
-    "basePrice": 2020,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-cellular-2013-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-cellular-2013",
-    "storage": "64 GB",
-    "basePrice": 1919,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-cellular-2013-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-cellular-2013",
-    "storage": "32 GB",
-    "basePrice": 1818,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-cellular-2013-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-cellular-2013",
-    "storage": "16 GB",
-    "basePrice": 1768,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
-    "storage": "64 GB",
-    "basePrice": 1919,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
-    "storage": "32 GB",
-    "basePrice": 1818,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
-    "storage": "16 GB",
-    "basePrice": 1717,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-2-wi-fi-2013-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-2-wi-fi-2013",
-    "storage": "128 GB",
-    "basePrice": 2200,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-cellular-2014-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-cellular-2014",
-    "storage": "128 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-cellular-2014-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-cellular-2014",
-    "storage": "64 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-cellular-2014-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-cellular-2014",
-    "storage": "16 GB",
-    "basePrice": 2020,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-wi-fi-2014-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-wi-fi-2014",
-    "storage": "128 GB",
-    "basePrice": 4040,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-wi-fi-2014-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-wi-fi-2014",
-    "storage": "64 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-3-wi-fi-2014-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-3-wi-fi-2014",
-    "storage": "16 GB",
-    "basePrice": 2525,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-cellular-2015-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-cellular-2015",
-    "storage": "128 GB",
-    "basePrice": 7575,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-cellular-2015-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-cellular-2015",
-    "storage": "64 GB",
-    "basePrice": 7070,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-cellular-2015-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-cellular-2015",
-    "storage": "32 GB",
-    "basePrice": 6565,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-cellular-2015-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-cellular-2015",
-    "storage": "16 GB",
-    "basePrice": 6060,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-64-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
-    "storage": "64 GB",
-    "basePrice": 7070,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-128-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
-    "storage": "128 GB",
-    "basePrice": 7600,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-32-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
-    "storage": "32 GB",
-    "basePrice": 6060,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-mini-4-wi-fi-2015-16-gb",
-    "modelId": "m-tablet-apple-ipad-mini-4-wi-fi-2015",
-    "storage": "16 GB",
-    "basePrice": 5555,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-wi-fi-2017-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-wi-fi-2017",
-    "storage": "512 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-wi-fi-2017-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-wi-fi-2017",
-    "storage": "256 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-105-inch-wi-fi-2017-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-105-inch-wi-fi-2017",
-    "storage": "64 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021",
-    "storage": "2 TB",
-    "basePrice": 48480,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021",
-    "storage": "1 TB",
-    "basePrice": 45450,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021",
-    "storage": "512 GB",
-    "basePrice": 41410,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021",
-    "storage": "256 GB",
-    "basePrice": 39390,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-3rd-gen-cellular-2021",
-    "storage": "128 GB",
-    "basePrice": 37370,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
-    "storage": "2 TB",
-    "basePrice": 92500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
-    "storage": "1 TB",
-    "basePrice": 81500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
-    "storage": "256 GB",
-    "basePrice": 66660,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-m4-cellular-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-m4-cellular",
-    "storage": "512 GB",
-    "basePrice": 74500,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-cellular-2018-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-cellular-2018",
-    "storage": "1 TB",
-    "basePrice": 25856,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-cellular-2018-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-cellular-2018",
-    "storage": "512 GB",
-    "basePrice": 23432,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-cellular-2018-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-cellular-2018",
-    "storage": "256 GB",
-    "basePrice": 21210,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-cellular-2018-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-cellular-2018",
-    "storage": "64 GB",
-    "basePrice": 19190,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2018-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2018",
-    "storage": "1 TB",
-    "basePrice": 23735,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2018-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2018",
-    "storage": "512 GB",
-    "basePrice": 20705,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2018-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2018",
-    "storage": "256 GB",
-    "basePrice": 18180,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-11-inch-wi-fi-2018-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-11-inch-wi-fi-2018",
-    "storage": "64 GB",
-    "basePrice": 17170,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017",
-    "storage": "512 GB",
-    "basePrice": 14140,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017",
-    "storage": "256 GB",
-    "basePrice": 13130,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-2nd-gen-wi-fi-2017",
-    "storage": "64 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018",
-    "storage": "1 TB",
-    "basePrice": 29290,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018",
-    "storage": "512 GB",
-    "basePrice": 27270,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018",
-    "storage": "256 GB",
-    "basePrice": 25755,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-cellular-2018",
-    "storage": "64 GB",
-    "basePrice": 22220,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018",
-    "storage": "1 TB",
-    "basePrice": 28280,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018",
-    "storage": "512 GB",
-    "basePrice": 24240,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018",
-    "storage": "256 GB",
-    "basePrice": 20200,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018-64-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-3rd-gen-wi-fi-2018",
-    "storage": "64 GB",
-    "basePrice": 19190,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022",
-    "storage": "2 TB",
-    "basePrice": 70700,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022",
-    "storage": "1 TB",
-    "basePrice": 67670,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022",
-    "storage": "512 GB",
-    "basePrice": 65650,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022",
-    "storage": "256 GB",
-    "basePrice": 60600,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-6th-gen-m2-cellular-2022",
-    "storage": "128 GB",
-    "basePrice": 56560,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-cellular-2015-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-cellular-2015",
-    "storage": "256 GB",
-    "basePrice": 11110,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-cellular-2015-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-cellular-2015",
-    "storage": "128 GB",
-    "basePrice": 10605,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-cellular-2015-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-cellular-2015",
-    "storage": "32 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-wi-fi-2015-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-wi-fi-2015",
-    "storage": "256 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-wi-fi-2015-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-wi-fi-2015",
-    "storage": "128 GB",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-129-inch-wi-fi-2015-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-129-inch-wi-fi-2015",
-    "storage": "32 GB",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024-2-tb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024",
-    "storage": "2 TB",
-    "basePrice": 90900,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024-1-tb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024",
-    "storage": "1 TB",
-    "basePrice": 87365,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024-512-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024",
-    "storage": "512 GB",
-    "basePrice": 83325,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-13-inch-m4-cellular-2024",
-    "storage": "256 GB",
-    "basePrice": 74740,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-cellular-2016-256-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-cellular-2016",
-    "storage": "256 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-cellular-2016-128-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-cellular-2016",
-    "storage": "128 GB",
-    "basePrice": 9090,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-apple-ipad-pro-97-inch-cellular-2016-32-gb",
-    "modelId": "m-tablet-apple-ipad-pro-97-inch-cellular-2016",
-    "storage": "32 GB",
-    "basePrice": 8080,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-honor-honor-mediapad-t3-10-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-honor-honor-mediapad-t3-10-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1687,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-mediapad-t3-10-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-mediapad-t3-10-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 1717,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-mediapad-t3-80-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-honor-honor-mediapad-t3-80-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1252,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-mediapad-t3-80-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-mediapad-t3-80-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 1515,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-5-101-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-pad-5-101-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3343,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-5-101-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-5-101-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 3626,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-5-8-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-pad-5-8-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2030,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-5-8-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-5-8-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2505,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-tab-5-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-tab-5-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 1858,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-tab-5-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-tab-5-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2656,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-8-4-gb128-gb-wifi-only-128-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-8-4-gb128-gb-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 5767,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-8-6-gb128-gb-wifi-only-128-gb-6-gb",
-    "modelId": "m-tablet-honor-honor-pad-8-6-gb128-gb-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 6191,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-x8-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-honor-honor-pad-x8-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3505,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-x8-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-x8-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 4161,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-9-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-honor-honor-pad-9-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 9140,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-x9-4-gb128-gb-128-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-x9-4-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 5767,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-x9-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-honor-honor-pad-x9-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6858,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-honor-honor-pad-x8a-4-gb128-gb-wifi-only-128-gb-4-gb",
-    "modelId": "m-tablet-honor-honor-pad-x8a-4-gb128-gb-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 4020,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-m5-lite-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-m5-lite-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3495,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-m5-lite-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-m5-lite-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 3757,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t5-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t5-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2424,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t5-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t5-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2495,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-matepad-t8-lte-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-huawei-huawei-matepad-t8-lte-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4727,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-matepad-t8-wifi-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-huawei-huawei-matepad-t8-wifi-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3798,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t3-70-8-gb-1-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t3-70",
-    "storage": "8 GB",
-    "basePrice": 1515,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t3-70-16-gb-2-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t3-70",
-    "storage": "16 GB",
-    "basePrice": 1798,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t3-10-16-gb-2-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t3-10",
-    "storage": "16 GB",
-    "basePrice": 1697,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-huawei-huawei-mediapad-t3-10-32-gb-3-gb",
-    "modelId": "m-tablet-huawei-huawei-mediapad-t3-10",
-    "storage": "32 GB",
-    "basePrice": 2232,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-7-essential-wifi-only-1-gb8-gb-8-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-7-essential-wifi-only-1-gb8-gb",
-    "storage": "8 GB",
-    "basePrice": 717,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-10-tablet-10-16gb-3gwifi-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-10-tablet-10-16gb-3gwifi",
-    "storage": "16 GB",
-    "basePrice": 1131,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-8-wifi4g-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-8-wifi4g-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1313,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi4g-1-gb16-gb-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi4g-1-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 828,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-7-wifi4g-1-gb16-gb-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-7-wifi4g-1-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 939,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-8-plus-wifi4g-3-gb16-gb-16-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-8-plus-wifi4g-3-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2020,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-8-plus-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-8-plus-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2535,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-wifi-only-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-wifi-only-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2727,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2818,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3202,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-wifi4g-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3525,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wifi-only-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wifi-only-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2353,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wifi4g-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wifi4g-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2535,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wifi4g-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wifi4g-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3384,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wifi-only-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wifi-only-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3101,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wifi4g-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wifi4g-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3384,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-only-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-only-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2444,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi4g-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi4g-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2636,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-only-64gb-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-only-64gb",
-    "storage": "64 GB",
-    "basePrice": 3020,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-1-gb8-gb-8-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-1-gb8-gb",
-    "storage": "8 GB",
-    "basePrice": 1414,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-1-gb16-gb-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-1-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1535,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-v7-wifi-only-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-v7-wifi-only-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1697,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-v7-wifi4g-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-v7-wifi4g-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2313,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-v7-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-v7-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2666,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p10-wifi4g-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p10-wifi4g-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2818,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p10-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p10-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 3343,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-wifi-only-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-wifi-only-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1788,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-wifi4g-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-wifi4g-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2303,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-plus-wifi4g-3-gb16-gb-16-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-plus-wifi4g-3-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2495,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-plus-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-plus-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2636,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-7-essential-wifi4g-1-gb16-gb-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-7-essential-wifi4g-1-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 869,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi-only-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi-only-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 747,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi4g-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-8-wifi4g-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 919,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-pro-wifi4g-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-pro-wifi4g-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2727,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-pro-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-pro-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 2868,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-smart-tab-wifi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-smart-tab-wifi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 3717,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-plus-wi-fi4g-4-gb128-gb-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-plus-wi-fi4g-4-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 4464,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-plus-wi-fi4g-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-plus-wi-fi4g-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3666,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-10-1-gb16-gb-101-inch-wi-fi-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-10-1-gb16-gb-101-inch-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 1091,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-2-a850-1-gb16-gb-8-inch-wi-fi4g-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-2-a850-1-gb16-gb-8-inch-wi-fi4g",
-    "storage": "16 GB",
-    "basePrice": 1707,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-e8-1-gb16-gb-8-inch-wi-fi-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-e8-1-gb16-gb-8-inch-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 869,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-e8-2-gb16-gb-8-inch-wi-fi-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-e8-2-gb16-gb-8-inch-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 1030,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-4-gb64-gb-101-inch-wi-fi4g-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-4-gb64-gb-101-inch-wi-fi4g",
-    "storage": "64 GB",
-    "basePrice": 4090,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab3-8-plus-3-gb16-gb-8-inch-wi-fi4g-16-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab3-8-plus-3-gb16-gb-8-inch-wi-fi4g",
-    "storage": "16 GB",
-    "basePrice": 2020,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p11-pro-wi-filte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p11-pro-wi-filte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6868,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifi-only-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 1879,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifilte-1-gb16-gb-16-gb-1-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifilte-1-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1596,
-    "active": true,
-    "ram": "1 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifilte-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wifilte-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 1939,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-idea-tab-pro-gen-2-256-gb-12-gb",
-    "modelId": "m-tablet-lenovo-lenovo-idea-tab-pro-gen-2",
-    "storage": "256 GB",
-    "basePrice": 23735,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-idea-tab-pro-gen-2-256-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-idea-tab-pro-gen-2",
-    "storage": "256 GB",
-    "basePrice": 21210,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-k11-gen-2-4g-256-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-k11-gen-2-4g",
-    "storage": "256 GB",
-    "basePrice": 11110,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-k11-wi-fi-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-k11-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 8080,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p11-2nd-gen-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p11-2nd-gen",
-    "storage": "128 GB",
-    "basePrice": 7575,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-k11-lte-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-k11-lte",
-    "storage": "128 GB",
-    "basePrice": 7474,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-k11-lte-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-k11-lte",
-    "storage": "128 GB",
-    "basePrice": 8282,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-5g-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-5g",
-    "storage": "128 GB",
-    "basePrice": 7777,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-5g-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-5g",
-    "storage": "128 GB",
-    "basePrice": 7575,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tablet-m9-wi-fi-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tablet-m9-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 7070,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-smart-tab-m10-hd-plus-103-lte-128-gb",
-    "modelId": "m-tablet-lenovo-lenovo-smart-tab-m10-hd-plus-103-lte",
-    "storage": "128 GB",
-    "basePrice": 6060,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-11-wifi4g-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-11-wifi4g",
-    "storage": "128 GB",
-    "basePrice": 6060,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tablet-m9-4g-32-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tablet-m9-4g",
-    "storage": "32 GB",
-    "basePrice": 5555,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-gen-3-lte-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-gen-3-lte",
-    "storage": "64 GB",
-    "basePrice": 5252,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-k10-fhd-103-lte-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-k10-fhd-103-lte",
-    "storage": "64 GB",
-    "basePrice": 4646,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p12-wi-fi-256-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p12-wi-fi",
-    "storage": "256 GB",
-    "basePrice": 9696,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p12-wi-fi-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p12-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 9191,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m11-lte-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m11-lte",
-    "storage": "128 GB",
-    "basePrice": 6969,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m11-lte-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m11-lte",
-    "storage": "128 GB",
-    "basePrice": 6565,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-plus-wifi-256-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-plus-wifi",
-    "storage": "256 GB",
-    "basePrice": 7777,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-plus-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 6868,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-11-4g-128-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-11-4g",
-    "storage": "128 GB",
-    "basePrice": 6060,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-plus-3rd-gen-lte-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-plus-3rd-gen-lte",
-    "storage": "128 GB",
-    "basePrice": 5757,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-plus-4g-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-plus-4g",
-    "storage": "128 GB",
-    "basePrice": 5454,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m11-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m11-wifi",
-    "storage": "128 GB",
-    "basePrice": 5454,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-plus-3rd-gen-wifi-128-gb-6-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-plus-3rd-gen-wifi",
-    "storage": "128 GB",
-    "basePrice": 5353,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m9-lte-128-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m9-lte",
-    "storage": "128 GB",
-    "basePrice": 5252,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-101-inch-4g-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-101-inch-4g",
-    "storage": "64 GB",
-    "basePrice": 5050,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p10-4g-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p10-4g",
-    "storage": "64 GB",
-    "basePrice": 4747,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-101-wifi-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-2nd-gen-101-wifi",
-    "storage": "64 GB",
-    "basePrice": 4545,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-fhd-plus-103-lte-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-fhd-plus-103-lte",
-    "storage": "32 GB",
-    "basePrice": 4444,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-fhd-plus-wifi-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-fhd-plus-wifi",
-    "storage": "32 GB",
-    "basePrice": 4040,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-smart-tab-4g-64-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-smart-tab-4g",
-    "storage": "64 GB",
-    "basePrice": 3838,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-gen-3-wifi-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-gen-3-wifi",
-    "storage": "64 GB",
-    "basePrice": 3535,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wi-fi-64-gb-3-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 3535,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-wi-fi-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-wi-fi",
-    "storage": "32 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-4g-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-4g",
-    "storage": "32 GB",
-    "basePrice": 3535,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-4g-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-4g",
-    "storage": "32 GB",
-    "basePrice": 3434,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-v7-4g-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-v7-4g",
-    "storage": "64 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-pro-4g-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-pro-4g",
-    "storage": "64 GB",
-    "basePrice": 3030,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-pro-4g-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-pro-4g",
-    "storage": "32 GB",
-    "basePrice": 2727,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-4g-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-4g",
-    "storage": "32 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-64-gb-4-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi",
-    "storage": "64 GB",
-    "basePrice": 3535,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi-32-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m8-2nd-gen-wifi",
-    "storage": "32 GB",
-    "basePrice": 3030,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m10-hd-wi-fi-32-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m10-hd-wi-fi",
-    "storage": "32 GB",
-    "basePrice": 2828,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-4g",
-    "storage": "16 GB",
-    "basePrice": 2323,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-lte-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-lte",
-    "storage": "16 GB",
-    "basePrice": 2222,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab4-8-plus-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab4-8-plus-4g",
-    "storage": "16 GB",
-    "basePrice": 2222,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab3-8-plus-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab3-8-plus-4g",
-    "storage": "16 GB",
-    "basePrice": 2121,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-a7-50-tablet-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-a7-50-tablet",
-    "storage": "16 GB",
-    "basePrice": 2045,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-idea-tab-a3000-tablet-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-idea-tab-a3000-tablet",
-    "storage": "16 GB",
-    "basePrice": 2045,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-a10-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-a10",
-    "storage": "16 GB",
-    "basePrice": 2045,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab4-8-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab4-8-4g",
-    "storage": "16 GB",
-    "basePrice": 2020,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wi-fi-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-m7-2nd-gen-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 1818,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-a8-50-tablet-3g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-a8-50-tablet-3g",
-    "storage": "16 GB",
-    "basePrice": 1687,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-8-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-8-4g",
-    "storage": "16 GB",
-    "basePrice": 1364,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-yoga-tab-3-8-inch-wi-fi-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-yoga-tab-3-8-inch-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 1313,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-p11-pro-lte-128-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-p11-pro-lte",
-    "storage": "128 GB",
-    "basePrice": 7272,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-10-101-inch-wi-fi-16-gb-2-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-10-101-inch-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 1515,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-plus-4g-64-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-plus-4g",
-    "storage": "64 GB",
-    "basePrice": 2727,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-4-10-wi-fi-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-4-10-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 3030,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-7-essential-4g-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-7-essential-4g",
-    "storage": "16 GB",
-    "basePrice": 1717,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-7-essential-wi-fi-8-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-7-essential-wi-fi",
-    "storage": "8 GB",
-    "basePrice": 1515,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-lenovo-lenovo-tab-v7-wi-fi-16-gb",
-    "modelId": "m-tablet-lenovo-lenovo-tab-v7-wi-fi",
-    "storage": "16 GB",
-    "basePrice": 2525,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g20-wi-fi-only-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g20-wi-fi-only-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4474,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g70-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g70-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 7767,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g62-4-gb64-gb-wifi-only-64-gb-4-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g62-4-gb64-gb-wifi-only",
-    "storage": "64 GB",
-    "basePrice": 5696,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g62-4-gb64-gb-wifi4g-64-gb-4-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g62-4-gb64-gb-wifi4g",
-    "storage": "64 GB",
-    "basePrice": 6161,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g70-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g70-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 8141,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g62-4-gb128-gb-wi-fi-only-128-gb-4-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g62-4-gb128-gb-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 6161,
-    "active": true,
-    "ram": "4 GB"
-  }
 ];
 
 const MOBILE_VARIANTS_PART_12: DeviceVariantData[] = [
-  {
-    "id": "v-m-realme-realme-14-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-14-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 16695,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-14-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-14-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 17018,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-15-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-15-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 18130,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-15-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-15-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 19150,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-15-pro-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-15-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 19695,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-15-pro-5g-512-gb-12-gb",
-    "modelId": "m-realme-realme-15-pro-5g",
-    "storage": "512 GB",
-    "basePrice": 22372,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-plus-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-13-pro-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 16938,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-plus-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-13-pro-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 17261,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-plus-5g-512-gb-12-gb",
-    "modelId": "m-realme-realme-13-pro-plus-5g",
-    "storage": "512 GB",
-    "basePrice": 17574,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-13-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 14716,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-13-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 16776,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-pro-5g-512-gb-12-gb",
-    "modelId": "m-realme-realme-13-pro-5g",
-    "storage": "512 GB",
-    "basePrice": 17322,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-plus-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-13-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 11302,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-plus-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-13-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 11908,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-13-plus-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-13-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 12918,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-12-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 14170,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-12-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 15059,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12-pro-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-12-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 15604,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12x-5g-128-gb-4-gb",
-    "modelId": "m-realme-realme-12x-5g",
-    "storage": "128 GB",
-    "basePrice": 7626,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12x-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-12x-5g",
-    "storage": "128 GB",
-    "basePrice": 10534,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-12x-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-12x-5g",
-    "storage": "128 GB",
-    "basePrice": 10878,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6-256-gb-8-gb",
-    "modelId": "m-realme-realme-gt-6",
-    "storage": "256 GB",
-    "basePrice": 16928,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6-256-gb-12-gb",
-    "modelId": "m-realme-realme-gt-6",
-    "storage": "256 GB",
-    "basePrice": 17473,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6-512-gb-16-gb",
-    "modelId": "m-realme-realme-gt-6",
-    "storage": "512 GB",
-    "basePrice": 20584,
-    "active": true,
-    "ram": "16 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6t-128-gb-8-gb",
-    "modelId": "m-realme-realme-gt-6t",
-    "storage": "128 GB",
-    "basePrice": 14837,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6t-256-gb-8-gb",
-    "modelId": "m-realme-realme-gt-6t",
-    "storage": "256 GB",
-    "basePrice": 16039,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6t-256-gb-12-gb",
-    "modelId": "m-realme-realme-gt-6t",
-    "storage": "256 GB",
-    "basePrice": 16625,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-gt-6t-512-gb-12-gb",
-    "modelId": "m-realme-realme-gt-6t",
-    "storage": "512 GB",
-    "basePrice": 18372,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-p1-5g",
-    "storage": "128 GB",
-    "basePrice": 9908,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-p1-5g",
-    "storage": "128 GB",
-    "basePrice": 10393,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-p1-5g",
-    "storage": "256 GB",
-    "basePrice": 10595,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-p1-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 9090,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-p1-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 9595,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p1-pro-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-p1-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 9746,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p2-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-p2-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 9746,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p2-pro-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-p2-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 10595,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-p2-pro-5g-512-gb-12-gb",
-    "modelId": "m-realme-realme-p2-pro-5g",
-    "storage": "512 GB",
-    "basePrice": 12372,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-narzo-70-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-narzo-70-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 10292,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-narzo-70x-5g-128-gb-4-gb",
-    "modelId": "m-realme-realme-narzo-70x-5g",
-    "storage": "128 GB",
-    "basePrice": 6141,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-realme-realme-narzo-70x-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-narzo-70x-5g",
-    "storage": "128 GB",
-    "basePrice": 7222,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-narzo-70x-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-narzo-70x-5g",
-    "storage": "128 GB",
-    "basePrice": 7626,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11-pro-plus-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-11-pro-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 16170,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11-pro-plus-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-11-pro-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 16534,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-11-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 14574,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11-pro-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-11-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 14988,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11-pro-5g-256-gb-12-gb",
-    "modelId": "m-realme-realme-11-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 15443,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11x-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-11x-5g",
-    "storage": "128 GB",
-    "basePrice": 9312,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-11x-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-11x-5g",
-    "storage": "128 GB",
-    "basePrice": 9827,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-10-pro-plus-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-10-pro-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 9979,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-10-pro-plus-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-10-pro-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 10231,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-10-pro-plus-5g-256-gb-8-gb",
-    "modelId": "m-realme-realme-10-pro-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 10443,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-realme-realme-10-pro-5g-128-gb-6-gb",
-    "modelId": "m-realme-realme-10-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 8585,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-realme-realme-10-pro-5g-128-gb-8-gb",
-    "modelId": "m-realme-realme-10-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 8838,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-pro-5g-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 12746,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-pro-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 13494,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-pro-5g-256-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 14211,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-5g-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-5g",
-    "storage": "128 GB",
-    "basePrice": 10150,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-5g",
-    "storage": "256 GB",
-    "basePrice": 10595,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-13-5g-256-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-13-5g",
-    "storage": "256 GB",
-    "basePrice": 11019,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-12-pro-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-12-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 9171,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-12-5g-128-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-12-5g",
-    "storage": "128 GB",
-    "basePrice": 8807,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-12-5g-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-12-5g",
-    "storage": "128 GB",
-    "basePrice": 9353,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-note-12-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-note-12-5g",
-    "storage": "256 GB",
-    "basePrice": 9767,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-12-5g-128-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-12-5g",
-    "storage": "128 GB",
-    "basePrice": 8080,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-12-5g-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-12-5g",
-    "storage": "128 GB",
-    "basePrice": 9161,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-12-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-12-5g",
-    "storage": "256 GB",
-    "basePrice": 10221,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-13c-5g-128-gb-4-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-13c-5g",
-    "storage": "128 GB",
-    "basePrice": 7757,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-13c-5g-128-gb-6-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-13c-5g",
-    "storage": "128 GB",
-    "basePrice": 8019,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-redmi-13c-5g-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-redmi-13c-5g",
-    "storage": "256 GB",
-    "basePrice": 8504,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-17-ultra-512-gb-16-gb",
-    "modelId": "m-xiaomi-17-ultra",
-    "storage": "512 GB",
-    "basePrice": 76130,
-    "active": true,
-    "ram": "16 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-17-256-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-17",
-    "storage": "256 GB",
-    "basePrice": 54270,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-17-512-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-17",
-    "storage": "512 GB",
-    "basePrice": 57650,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-17t-256-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-17t",
-    "storage": "256 GB",
-    "basePrice": 36280,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-17t-512-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-17t",
-    "storage": "512 GB",
-    "basePrice": 39760,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-14-128-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-14",
-    "storage": "128 GB",
-    "basePrice": 27482,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-14-civi-256-gb-8-gb",
-    "modelId": "m-xiaomi-xiaomi-14-civi",
-    "storage": "256 GB",
-    "basePrice": 18988,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-xiaomi-xiaomi-14-civi-512-gb-12-gb",
-    "modelId": "m-xiaomi-xiaomi-14-civi",
-    "storage": "512 GB",
-    "basePrice": 19644,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-50-fusion-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-edge-50-fusion-5g",
-    "storage": "128 GB",
-    "basePrice": 13928,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-50-fusion-5g-256-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-edge-50-fusion-5g",
-    "storage": "256 GB",
-    "basePrice": 15291,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-50-ultra-5g-512-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-edge-50-ultra-5g",
-    "storage": "512 GB",
-    "basePrice": 25937,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-40-5g-256-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-edge-40-5g",
-    "storage": "256 GB",
-    "basePrice": 15372,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-40-neo-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-edge-40-neo-5g",
-    "storage": "128 GB",
-    "basePrice": 13837,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-edge-40-neo-5g-256-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-edge-40-neo-5g",
-    "storage": "256 GB",
-    "basePrice": 15170,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g85-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-g85-5g",
-    "storage": "128 GB",
-    "basePrice": 12756,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g85-5g-256-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-g85-5g",
-    "storage": "256 GB",
-    "basePrice": 13988,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g64-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-g64-5g",
-    "storage": "128 GB",
-    "basePrice": 9484,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g64-5g-256-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-g64-5g",
-    "storage": "256 GB",
-    "basePrice": 10716,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g54-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-g54-5g",
-    "storage": "128 GB",
-    "basePrice": 10090,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g54-5g-256-gb-12-gb",
-    "modelId": "m-motorola-motorola-moto-g54-5g",
-    "storage": "256 GB",
-    "basePrice": 11312,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g45-5g-128-gb-4-gb",
-    "modelId": "m-motorola-motorola-moto-g45-5g",
-    "storage": "128 GB",
-    "basePrice": 7131,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g45-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-g45-5g",
-    "storage": "128 GB",
-    "basePrice": 9060,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g34-5g-128-gb-4-gb",
-    "modelId": "m-motorola-motorola-moto-g34-5g",
-    "storage": "128 GB",
-    "basePrice": 7222,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-motorola-motorola-moto-g34-5g-128-gb-8-gb",
-    "modelId": "m-motorola-motorola-moto-g34-5g",
-    "storage": "128 GB",
-    "basePrice": 8545,
-    "active": true,
-    "ram": "8 GB"
-  },
-
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-tab-g62-4-gb128-gb-wi-fi4g-128-gb-4-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-tab-g62-4-gb128-gb-wi-fi4g",
-    "storage": "128 GB",
-    "basePrice": 6545,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-pad-60-pro-wi-fi-only-128-gb-8-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-pad-60-pro-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 13776,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-pad-60-pro-wi-fi-only-256-gb-12-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-pad-60-pro-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 14625,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-pad-60-neo-wi-fi5g-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-pad-60-neo-wi-fi5g-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 9928,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-motorola-motorola-moto-pad-60-neo-wi-fi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-motorola-motorola-moto-pad-60-neo-wi-fi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 9454,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t20-wi-fi-only-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t20-wi-fi-only-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4888,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t20-wi-fi-only-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t20-wi-fi-only-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5222,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t20-wi-fi4g-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t20-wi-fi4g-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5363,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t10-3-gb32-gb-wi-fi-only-32-gb-3-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t10-3-gb32-gb-wi-fi-only",
-    "storage": "32 GB",
-    "basePrice": 4090,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t10-4-gb64-gb-wi-fi-only-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t10-4-gb64-gb-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 4424,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t10-3-gb32-gb-wi-fi4g-32-gb-3-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t10-3-gb32-gb-wi-fi4g",
-    "storage": "32 GB",
-    "basePrice": 4282,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t10-4-gb64-gb-wi-fi4g-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t10-4-gb64-gb-wi-fi4g",
-    "storage": "64 GB",
-    "basePrice": 4798,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t21-4-gb64-gb-wi-fi-only-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t21-4-gb64-gb-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 5646,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-nokia-nokia-tab-t21-4-gb64-gb-wi-fi4g-64-gb-4-gb",
-    "modelId": "m-tablet-nokia-nokia-tab-t21-4-gb64-gb-wi-fi4g",
-    "storage": "64 GB",
-    "basePrice": 6161,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-8-gb128-gb-wi-fi-only-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-8-gb128-gb-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 11433,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-12-gb256-gb-wi-fi-only-256-gb-12-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-12-gb256-gb-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 12554,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-8-gb128-gb-wi-fi-only-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-8-gb128-gb-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 8090,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-8-gb128-gb-lte-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-8-gb128-gb-lte",
-    "storage": "128 GB",
-    "basePrice": 8989,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-8-gb256-gb-lte-256-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-8-gb256-gb-lte",
-    "storage": "256 GB",
-    "basePrice": 9413,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-2-wi-fi-only-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-2-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 15756,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-2-wi-fi-only-256-gb-12-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-2-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 16978,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-lite-wi-fi-only-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-lite-wi-fi-only-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 9353,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-lite-lte-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-lite-lte-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 10504,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-3-wi-fi-only-256-gb-12-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-3-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 26149,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-3-wi-fi-only-512-gb-12-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-3-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 29027,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-2-wi-fi-only-128-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-2-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 15786,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-2-wi-fi-only-256-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-2-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 17513,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-go-2-5g-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-go-2-5g-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 19240,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-4-wi-fi-only-256-gb-8-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-4-wi-fi-only",
-    "storage": "256 GB",
-    "basePrice": 31664,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oneplus-oneplus-pad-4-wi-fi-only-512-gb-12-gb",
-    "modelId": "m-tablet-oneplus-oneplus-pad-4-wi-fi-only",
-    "storage": "512 GB",
-    "basePrice": 34542,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-air-4-gb64-gb-wi-fi-only-64-gb-4-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-air-4-gb64-gb-wi-fi-only",
-    "storage": "64 GB",
-    "basePrice": 5272,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-air-4-gb128-gb-wi-fi-only-128-gb-4-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-air-4-gb128-gb-wi-fi-only",
-    "storage": "128 GB",
-    "basePrice": 5838,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-se-lte-128-gb-6-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-se-lte",
-    "storage": "128 GB",
-    "basePrice": 7898,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-se-lte-128-gb-8-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-se-lte",
-    "storage": "128 GB",
-    "basePrice": 8373,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-se-4-gb128-gb-wi-fi-128-gb-4-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-se-4-gb128-gb-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 6777,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-5-5g-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-5-5g-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 19190,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-oppo-oppo-pad-5-wi-fi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-oppo-oppo-pad-5-wi-fi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 15736,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-poco-poco-pad-5g-128-gb-8-gb",
-    "modelId": "m-tablet-poco-poco-pad-5g",
-    "storage": "128 GB",
-    "basePrice": 10676,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-poco-poco-pad-5g-256-gb-8-gb",
-    "modelId": "m-tablet-poco-poco-pad-5g",
-    "storage": "256 GB",
-    "basePrice": 11807,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-realme-realme-pad-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 5171,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 6767,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-wifi-only-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-realme-realme-pad-wifi-only-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4888,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-mini-wi-fi-only-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-realme-realme-pad-mini-wi-fi-only-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3666,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-mini-wi-fi-only-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-mini-wi-fi-only-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 4848,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-mini-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-realme-realme-pad-mini-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4424,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-mini-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-mini-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5030,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-x-4-gb64-gb-wifi-only-64-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-x-4-gb64-gb-wifi-only",
-    "storage": "64 GB",
-    "basePrice": 6020,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-x-4-gb64-gb-5g-64-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-x-4-gb64-gb-5g",
-    "storage": "64 GB",
-    "basePrice": 7292,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-x-6-gb128-gb-5g-128-gb-6-gb",
-    "modelId": "m-tablet-realme-realme-pad-x-6-gb128-gb-5g",
-    "storage": "128 GB",
-    "basePrice": 8555,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-realme-realme-pad-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6959,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-2-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-realme-realme-pad-2-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 7009,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-2-lte-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-realme-realme-pad-2-lte-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 7757,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-2-lite-4-gb128-gb-128-gb-4-gb",
-    "modelId": "m-tablet-realme-realme-pad-2-lite-4-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6020,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-2-lite-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-realme-realme-pad-2-lite-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6353,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-2-wi-fi-only-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-realme-realme-pad-2-wi-fi-only-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 5737,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-3-5g-128-gb-8-gb",
-    "modelId": "m-tablet-realme-realme-pad-3-5g",
-    "storage": "128 GB",
-    "basePrice": 17322,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-3-5g-256-gb-8-gb",
-    "modelId": "m-tablet-realme-realme-pad-3-5g",
-    "storage": "256 GB",
-    "basePrice": 18473,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-realme-realme-pad-3-wi-fi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-realme-realme-pad-3-wi-fi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 15594,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-70-2018-lte-15-gb8-gb-8-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-70-2018-lte-15-gb8-gb",
-    "storage": "8 GB",
-    "basePrice": 1889,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s3-lte-4-gb32-gb-32-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s3-lte-4-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3717,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-105-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-105-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 5100,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s-84-lte-3-gb16-gb-16-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s-84-lte-3-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2212,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s-105-lte-3-gb16-gb-16-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s-105-lte-3-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 3202,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-80-2015-wi-fi-15-gb16-gb-16-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-80-2015-wi-fi-15-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2121,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s2-97-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s2-97-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2818,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-97-wifi-15-gb16-gb-16-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-97-wifi-15-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2353,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s-84-wifi-3-gb16-gb-16-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s-84-wifi-3-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2020,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s5e-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s5e-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 6212,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-j-max-15-gb16-gb-16-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-j-max-15-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 1374,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-j-max-15-gb8-gb-8-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-j-max-15-gb8-gb",
-    "storage": "8 GB",
-    "basePrice": 1182,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-80-2017-lte-2-gb16-gb-16-gb-2-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-80-2017-lte-2-gb16-gb",
-    "storage": "16 GB",
-    "basePrice": 2788,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-101-2019-wifi-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-101-2019-wifi-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2616,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 8838,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-80-2019-lte-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-80-2019-lte-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2828,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-80-2019-wifi-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-80-2019-wifi-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2838,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-wifi-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-wifi-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 8555,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s5e-wifi-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s5e-wifi-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5737,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-101-2019-lte-2-gb32-gb-32-gb-2-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-101-2019-lte-2-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 2949,
-    "active": true,
-    "ram": "2 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-wifi-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-wifi-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 6848,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 7656,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-wifi-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-wifi-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 12413,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 15049,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-plus-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-plus-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 17018,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4575,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-wifi-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-wifi-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 3878,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-plus-wifi-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-plus-wifi-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 15887,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-wifi-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-wifi-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 10252,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 12413,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 14665,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-lite-wifi-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-lite-wifi-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4060,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-lite-lte-3-gb32-gb-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-lite-lte-3-gb32-gb",
-    "storage": "32 GB",
-    "basePrice": 4818,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-wifi-3-gb64-gb-64-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-104-2020-wifi-3-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 4343,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a-70-2016-wifi-15-gb8-gb-8-gb-5-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a-70-2016-wifi-15-gb8-gb",
-    "storage": "8 GB",
-    "basePrice": 1172,
-    "active": true,
-    "ram": "5 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s4-105-wifi-4-gb256-gb-256-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s4-105-wifi-4-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 5404,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s4-105-wifi-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s4-105-wifi-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5121,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s4-105-lte-4-gb64-gb-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s4-105-lte-4-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5737,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-3-gb32-gb-wifi-only-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-3-gb32-gb-wifi-only",
-    "storage": "32 GB",
-    "basePrice": 5292,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-4-gb64-gb-wifi-only-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-4-gb64-gb-wifi-only",
-    "storage": "64 GB",
-    "basePrice": 5767,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-3-gb32-gb-lte-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-3-gb32-gb-lte",
-    "storage": "32 GB",
-    "basePrice": 6616,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-4-gb64-gb-lte-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-105-2021-4-gb64-gb-lte",
-    "storage": "64 GB",
-    "basePrice": 6989,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-wifi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-wifi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 17624,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-5g-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-5g-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 20261,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-plus-wifi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-plus-wifi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 22705,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-plus-5g-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-plus-5g-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 25997,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wifi-12-gb256-gb-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wifi-12-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 32108,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-ultra-5g-12-gb256-gb-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-ultra-5g-12-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 34835,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-ultra-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-ultra-5g",
-    "storage": "256 GB",
-    "basePrice": 63630,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-ultra-5g-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-ultra-5g",
-    "storage": "512 GB",
-    "basePrice": 65650,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-ultra-5g-512-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-ultra-5g",
-    "storage": "512 GB",
-    "basePrice": 56055,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-5g-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-5g",
-    "storage": "512 GB",
-    "basePrice": 60600,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-5g",
-    "storage": "256 GB",
-    "basePrice": 58580,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-5g-128-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-5g",
-    "storage": "128 GB",
-    "basePrice": 55550,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-s9-ultra-5g-256-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-s9-ultra-5g",
-    "storage": "256 GB",
-    "basePrice": 52520,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-ultra-5g-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-ultra-5g",
-    "storage": "512 GB",
-    "basePrice": 54035,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-ultra-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-ultra-5g",
-    "storage": "256 GB",
-    "basePrice": 50500,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-wifi",
-    "storage": "512 GB",
-    "basePrice": 55550,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-wifi",
-    "storage": "256 GB",
-    "basePrice": 51510,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s11-wifi-128-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s11-wifi",
-    "storage": "128 GB",
-    "basePrice": 49793,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-ultra-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-ultra-wifi",
-    "storage": "256 GB",
-    "basePrice": 48985,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-ultra-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-ultra-wifi",
-    "storage": "512 GB",
-    "basePrice": 50197,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-s8-ultra-5g-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-s8-ultra-5g",
-    "storage": "128 GB",
-    "basePrice": 38178,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wi-fi-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 33330,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-ultra-wifi-512-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-ultra-wifi",
-    "storage": "512 GB",
-    "basePrice": 53833,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-ultra-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-ultra-wifi",
-    "storage": "256 GB",
-    "basePrice": 49490,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-plus-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 38885,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-ultra-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-ultra-5g",
-    "storage": "256 GB",
-    "basePrice": 38582,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-ultra-wifi",
-    "storage": "256 GB",
-    "basePrice": 35754,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 39895,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-5g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 34845,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-plus-5g-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 28987,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-5g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-5g",
-    "storage": "128 GB",
-    "basePrice": 28785,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-5g",
-    "storage": "256 GB",
-    "basePrice": 32724,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-plus-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-plus-wifi",
-    "storage": "256 GB",
-    "basePrice": 28280,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-wifi",
-    "storage": "256 GB",
-    "basePrice": 27977,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-wifi",
-    "storage": "128 GB",
-    "basePrice": 20806,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-wifi",
-    "storage": "256 GB",
-    "basePrice": 31310,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-wifi",
-    "storage": "128 GB",
-    "basePrice": 26866,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-wifi",
-    "storage": "256 GB",
-    "basePrice": 27270,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s10-fe-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 25250,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-plus-wifi-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 25149,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-5g-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-5g",
-    "storage": "256 GB",
-    "basePrice": 24240,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-5g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 16665,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-5g-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-5g",
-    "storage": "128 GB",
-    "basePrice": 22826,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-plus-lte-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-plus-lte",
-    "storage": "128 GB",
-    "basePrice": 19190,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-plus-wi-fi-128-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-plus-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 17675,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-lte-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-lte",
-    "storage": "128 GB",
-    "basePrice": 17170,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-plus-5g-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 15756,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-plus-5g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 16362,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-wifi-only-256-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-wifi-only",
-    "storage": "256 GB",
-    "basePrice": 18180,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-wifi-only-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 14241,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-wi-fi-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 14140,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-64-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte",
-    "storage": "64 GB",
-    "basePrice": 13635,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-lte",
-    "storage": "128 GB",
-    "basePrice": 16665,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-plus-wifi-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 13332,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-plus-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 15352,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-wi-fi-64-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 12120,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s7-fe-wi-fi-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s7-fe-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 14140,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-wifi-4g-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-wifi-4g",
-    "storage": "64 GB",
-    "basePrice": 11615,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-wifi-4g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-wifi-4g",
-    "storage": "128 GB",
-    "basePrice": 12120,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-wifi-256-gb-12-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-wifi",
-    "storage": "256 GB",
-    "basePrice": 20200,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-plus-wifi",
-    "storage": "128 GB",
-    "basePrice": 14645,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lte-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lte",
-    "storage": "128 GB",
-    "basePrice": 10100,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-wi-fi-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 9595,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s4-105-lte-64-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s4-105-lte",
-    "storage": "64 GB",
-    "basePrice": 8383,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte-128-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte",
-    "storage": "128 GB",
-    "basePrice": 9696,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-lte",
-    "storage": "64 GB",
-    "basePrice": 8686,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-wifi",
-    "storage": "128 GB",
-    "basePrice": 9797,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a11-wifi-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a11-wifi",
-    "storage": "64 GB",
-    "basePrice": 8484,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-lte-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-lte",
-    "storage": "64 GB",
-    "basePrice": 7676,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-wi-fi-128-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 8585,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s6-lite-wi-fi-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s6-lite-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 7676,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-wifi-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-wifi",
-    "storage": "64 GB",
-    "basePrice": 6565,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s5e-wi-fi-64-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s5e-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 6565,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-plus-wi-fi-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-plus-wi-fi",
-    "storage": "128 GB",
-    "basePrice": 7777,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-plus-wi-fi-64-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-plus-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 6363,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-wi-fi-64-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-wi-fi",
-    "storage": "64 GB",
-    "basePrice": 6868,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-wi-fi-32-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-wi-fi",
-    "storage": "32 GB",
-    "basePrice": 5959,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-lite-lte-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-lite-lte",
-    "storage": "32 GB",
-    "basePrice": 5353,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s5e-lte-64-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s5e-lte",
-    "storage": "64 GB",
-    "basePrice": 7272,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s4-105-wi-fi-256-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s4-105-wi-fi",
-    "storage": "256 GB",
-    "basePrice": 7070,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a7-lite-wifi-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a7-lite-wifi",
-    "storage": "32 GB",
-    "basePrice": 5353,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 9090,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g",
-    "storage": "128 GB",
-    "basePrice": 8181,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a9-plus-5g",
-    "storage": "64 GB",
-    "basePrice": 7373,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s8-wifi-128-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s8-wifi",
-    "storage": "128 GB",
-    "basePrice": 19695,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-lte-64-gb-4-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-lte",
-    "storage": "64 GB",
-    "basePrice": 7878,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-a8-lte-32-gb-3-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-a8-lte",
-    "storage": "32 GB",
-    "basePrice": 7575,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-5g-256-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-5g",
-    "storage": "256 GB",
-    "basePrice": 38380,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-5g-128-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-5g",
-    "storage": "128 GB",
-    "basePrice": 31815,
-    "active": true
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-5g-256-gb-8-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-5g",
-    "storage": "256 GB",
-    "basePrice": 21210,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-samsung-samsung-galaxy-tab-s9-fe-5g-128-gb-6-gb",
-    "modelId": "m-tablet-samsung-samsung-galaxy-tab-s9-fe-5g",
-    "storage": "128 GB",
-    "basePrice": 15655,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-5-wifi-only-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-5-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 7524,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-5-wifi-only-256-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-5-wifi-only",
-    "storage": "256 GB",
-    "basePrice": 8282,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-6-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-6-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 9221,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-6-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-6-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 10060,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-3-gb64-gb-64-gb-3-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-3-gb64-gb",
-    "storage": "64 GB",
-    "basePrice": 5171,
-    "active": true,
-    "ram": "3 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-4-gb128-gb-128-gb-4-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-4-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 5929,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 6494,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only-128-gb-4-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 5272,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 5737,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only-128-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-se-wifi-only",
-    "storage": "128 GB",
-    "basePrice": 6020,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-se-4g-64-gb-4-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-se-4g",
-    "storage": "64 GB",
-    "basePrice": 4798,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-se-4g-128-gb-4-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-se-4g",
-    "storage": "128 GB",
-    "basePrice": 5363,
-    "active": true,
-    "ram": "4 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-pro-wifi-only-6-gb128-gb-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-pro-wifi-only-6-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 7343,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-pro-5g-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-pro-5g-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 9403,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-pro-5g-8-gb256-gb-256-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-pro-5g-8-gb256-gb",
-    "storage": "256 GB",
-    "basePrice": 10070,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-7-128-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-7",
-    "storage": "128 GB",
-    "basePrice": 13544,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-pad-7-256-gb-12-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-pad-7",
-    "storage": "256 GB",
-    "basePrice": 14766,
-    "active": true,
-    "ram": "12 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-5g-128-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-5g",
-    "storage": "128 GB",
-    "basePrice": 16312,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-5g-256-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-5g",
-    "storage": "256 GB",
-    "basePrice": 17463,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-cellular-128-gb-6-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-cellular",
-    "storage": "128 GB",
-    "basePrice": 9979,
-    "active": true,
-    "ram": "6 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-cellular-256-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-cellular",
-    "storage": "256 GB",
-    "basePrice": 11130,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-wi-fi-only-8-gb128-gb-128-gb-8-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-pro-wi-fi-only-8-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 14584,
-    "active": true,
-    "ram": "8 GB"
-  },
-  {
-    "id": "v-m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-only-4-gb128-gb-128-gb-4-gb",
-    "modelId": "m-tablet-xiaomi-xiaomi-redmi-pad-2-wifi-only-4-gb128-gb",
-    "storage": "128 GB",
-    "basePrice": 8827,
-    "active": true,
-    "ram": "4 GB"
-  }
 ];
 
 const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
@@ -60099,35 +49119,35 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-acer-aspire-series-standard",
     "modelId": "m-laptop-acer-aspire-series",
     "storage": "Standard",
-    "basePrice": 7747,
+    "basePrice": 7750,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-aspire-one-series-standard",
     "modelId": "m-laptop-acer-aspire-one-series",
     "storage": "Standard",
-    "basePrice": 3606,
+    "basePrice": 3610,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-aspire-e-series-standard",
     "modelId": "m-laptop-acer-aspire-e-series",
     "storage": "Standard",
-    "basePrice": 9332,
+    "basePrice": 9340,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-aspire-5-series-standard",
     "modelId": "m-laptop-acer-aspire-5-series",
     "storage": "Standard",
-    "basePrice": 13877,
+    "basePrice": 13880,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-aspire-3-series-standard",
     "modelId": "m-laptop-acer-aspire-3-series",
     "storage": "Standard",
-    "basePrice": 8403,
+    "basePrice": 8410,
     "active": true
   },
   {
@@ -60141,245 +49161,245 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-acer-switch-series-standard",
     "modelId": "m-laptop-acer-switch-series",
     "storage": "Standard",
-    "basePrice": 11181,
+    "basePrice": 11190,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-nitro-spin-series-standard",
     "modelId": "m-laptop-acer-nitro-spin-series",
     "storage": "Standard",
-    "basePrice": 13453,
+    "basePrice": 13460,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-spin-series-standard",
     "modelId": "m-laptop-acer-spin-series",
     "storage": "Standard",
-    "basePrice": 11181,
+    "basePrice": 11190,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-acer-chromebook-series-standard",
     "modelId": "m-laptop-acer-acer-chromebook-series",
     "storage": "Standard",
-    "basePrice": 3899,
+    "basePrice": 3900,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-series-standard",
     "modelId": "m-laptop-acer-swift-series",
     "storage": "Standard",
-    "basePrice": 11756,
+    "basePrice": 11760,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-nitro-5-series-standard",
     "modelId": "m-laptop-acer-nitro-5-series",
     "storage": "Standard",
-    "basePrice": 15544,
+    "basePrice": 15550,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-aspire-7-series-standard",
     "modelId": "m-laptop-acer-aspire-7-series",
     "storage": "Standard",
-    "basePrice": 17311,
+    "basePrice": 17320,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-helios-300-series-standard",
     "modelId": "m-laptop-acer-predator-helios-300-series",
     "storage": "Standard",
-    "basePrice": 21139,
+    "basePrice": 21140,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-5-series-standard",
     "modelId": "m-laptop-acer-swift-5-series",
     "storage": "Standard",
-    "basePrice": 19806,
+    "basePrice": 19810,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-extensa-series-standard",
     "modelId": "m-laptop-acer-extensa-series",
     "storage": "Standard",
-    "basePrice": 7500,
+    "basePrice": 5050,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-3-series-standard",
     "modelId": "m-laptop-acer-swift-3-series",
     "storage": "Standard",
-    "basePrice": 9262,
+    "basePrice": 9270,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-nitro-5-spin-series-standard",
     "modelId": "m-laptop-acer-nitro-5-spin-series",
     "storage": "Standard",
-    "basePrice": 15251,
+    "basePrice": 15260,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-spin-1-series-standard",
     "modelId": "m-laptop-acer-spin-1-series",
     "storage": "Standard",
-    "basePrice": 4282,
+    "basePrice": 4290,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-spin-5-series-standard",
     "modelId": "m-laptop-acer-spin-5-series",
     "storage": "Standard",
-    "basePrice": 9938,
+    "basePrice": 9940,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-switch-5-series-standard",
     "modelId": "m-laptop-acer-switch-5-series",
     "storage": "Standard",
-    "basePrice": 11736,
+    "basePrice": 11740,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-spin-3-series-standard",
     "modelId": "m-laptop-acer-spin-3-series",
     "storage": "Standard",
-    "basePrice": 8403,
+    "basePrice": 8410,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-15-series-standard",
     "modelId": "m-laptop-acer-predator-15-series",
     "storage": "Standard",
-    "basePrice": 17029,
+    "basePrice": 17030,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-nitro-7-series-standard",
     "modelId": "m-laptop-acer-nitro-7-series",
     "storage": "Standard",
-    "basePrice": 16069,
+    "basePrice": 16070,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-spin-7-series-standard",
     "modelId": "m-laptop-acer-spin-7-series",
     "storage": "Standard",
-    "basePrice": 17412,
+    "basePrice": 17420,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-7-series-standard",
     "modelId": "m-laptop-acer-swift-7-series",
     "storage": "Standard",
-    "basePrice": 19109,
+    "basePrice": 19110,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-x-series-standard",
     "modelId": "m-laptop-acer-swift-x-series",
     "storage": "Standard",
-    "basePrice": 18372,
+    "basePrice": 18380,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-swift-3x-series-standard",
     "modelId": "m-laptop-acer-swift-3x-series",
     "storage": "Standard",
-    "basePrice": 21725,
+    "basePrice": 21730,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-conceptd-3-series-standard",
     "modelId": "m-laptop-acer-conceptd-3-series",
     "storage": "Standard",
-    "basePrice": 26997,
+    "basePrice": 27000,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-conceptd-5-series-standard",
     "modelId": "m-laptop-acer-conceptd-5-series",
     "storage": "Standard",
-    "basePrice": 28573,
+    "basePrice": 28580,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-conceptd-7-series-standard",
     "modelId": "m-laptop-acer-conceptd-7-series",
     "storage": "Standard",
-    "basePrice": 30977,
+    "basePrice": 30980,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-conceptd-9-series-standard",
     "modelId": "m-laptop-acer-conceptd-9-series",
     "storage": "Standard",
-    "basePrice": 32098,
+    "basePrice": 32100,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-triton-300-series-standard",
     "modelId": "m-laptop-acer-predator-triton-300-series",
     "storage": "Standard",
-    "basePrice": 18948,
+    "basePrice": 18950,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-triton-500-series-standard",
     "modelId": "m-laptop-acer-predator-triton-500-series",
     "storage": "Standard",
-    "basePrice": 21341,
+    "basePrice": 21350,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-triton-700-series-standard",
     "modelId": "m-laptop-acer-predator-triton-700-series",
     "storage": "Standard",
-    "basePrice": 21715,
+    "basePrice": 21720,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-triton-900-series-standard",
     "modelId": "m-laptop-acer-predator-triton-900-series",
     "storage": "Standard",
-    "basePrice": 24472,
+    "basePrice": 24480,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-helios-500-series-standard",
     "modelId": "m-laptop-acer-predator-helios-500-series",
     "storage": "Standard",
-    "basePrice": 23967,
+    "basePrice": 23970,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-helios-700-series-standard",
     "modelId": "m-laptop-acer-predator-helios-700-series",
     "storage": "Standard",
-    "basePrice": 28381,
+    "basePrice": 28390,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-17-series-standard",
     "modelId": "m-laptop-acer-predator-17-series",
     "storage": "Standard",
-    "basePrice": 17887,
+    "basePrice": 17890,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-predator-21x-series-standard",
     "modelId": "m-laptop-acer-predator-21x-series",
     "storage": "Standard",
-    "basePrice": 18847,
+    "basePrice": 18850,
     "active": true
   },
   {
     "id": "v-m-laptop-acer-other-acer-series-standard",
     "modelId": "m-laptop-acer-other-acer-series",
     "storage": "Standard",
-    "basePrice": 4282,
+    "basePrice": 4290,
     "active": true
   },
   {
@@ -60435,7 +49455,7 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-apple-macbook-pro-2020-touch-bar-four-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-2020-touch-bar-four-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 44076,
+    "basePrice": 44080,
     "active": true
   },
   {
@@ -60449,7 +49469,7 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-apple-macbook-pro-2020-touch-bar-two-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-2020-touch-bar-two-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 35804,
+    "basePrice": 35810,
     "active": true
   },
   {
@@ -60463,70 +49483,70 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-apple-macbook-pro-2019-standard",
     "modelId": "m-laptop-apple-macbook-pro-2019",
     "storage": "Standard",
-    "basePrice": 36431,
+    "basePrice": 36440,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-four-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar-four-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 35804,
+    "basePrice": 35810,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-two-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar-two-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 33643,
+    "basePrice": 33650,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-2019-touch-bar-standard",
     "modelId": "m-laptop-apple-macbook-pro-2019-touch-bar",
     "storage": "Standard",
-    "basePrice": 36522,
+    "basePrice": 36530,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-mid-2018-touch-bar-four-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-mid-2018-touch-bar-four-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 33249,
+    "basePrice": 33250,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-mid-2017-touch-bar-four-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-mid-2017-touch-bar-four-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 28139,
+    "basePrice": 28140,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-mid-2017-two-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-mid-2017-two-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 26432,
+    "basePrice": 26440,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-late-2016-touch-bar-four-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-late-2016-touch-bar-four-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 28139,
+    "basePrice": 28140,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-late-2016-two-thunderbolt-3-ports-standard",
     "modelId": "m-laptop-apple-macbook-pro-late-2016-two-thunderbolt-3-ports",
     "storage": "Standard",
-    "basePrice": 25573,
+    "basePrice": 25580,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-retina-mid-2015-standard",
     "modelId": "m-laptop-apple-macbook-pro-retina-mid-2015",
     "storage": "Standard",
-    "basePrice": 25139,
+    "basePrice": 25140,
     "active": true
   },
   {
@@ -60540,50 +49560,42 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-apple-macbook-pro-retina-mid-2014-standard",
     "modelId": "m-laptop-apple-macbook-pro-retina-mid-2014",
     "storage": "Standard",
-    "basePrice": 18624,
+    "basePrice": 18630,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-retina-late-2013-standard",
     "modelId": "m-laptop-apple-macbook-pro-retina-late-2013",
     "storage": "Standard",
-    "basePrice": 14655,
+    "basePrice": 14660,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-pro-retina-early-2013-standard",
     "modelId": "m-laptop-apple-macbook-pro-retina-early-2013",
     "storage": "Standard",
-    "basePrice": 14069,
-    "active": true
-  },
-  {
-    "id": "v-m-laptop-apple-macbook-pro-2012-standard-laptop",
-    "modelId": "m-laptop-apple-macbook-pro-2012",
-    "ram": "4 GB",
-    "storage": "Standard",
-    "basePrice": 11850,
+    "basePrice": 14070,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-2023-standard",
     "modelId": "m-laptop-apple-macbook-air-2023",
     "storage": "Standard",
-    "basePrice": 54894,
+    "basePrice": 54900,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-2022-standard",
     "modelId": "m-laptop-apple-macbook-air-2022",
     "storage": "Standard",
-    "basePrice": 49005,
+    "basePrice": 49010,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-2020-standard",
     "modelId": "m-laptop-apple-macbook-air-2020",
     "storage": "Standard",
-    "basePrice": 36006,
+    "basePrice": 36010,
     "active": true
   },
   {
@@ -60597,133 +49609,133 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-apple-macbook-air-2019-standard",
     "modelId": "m-laptop-apple-macbook-air-2019",
     "storage": "Standard",
-    "basePrice": 27018,
+    "basePrice": 27020,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-2018-standard",
     "modelId": "m-laptop-apple-macbook-air-2018",
     "storage": "Standard",
-    "basePrice": 23260,
+    "basePrice": 23270,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-mid-2017-standard",
     "modelId": "m-laptop-apple-macbook-air-mid-2017",
     "storage": "Standard",
-    "basePrice": 17897,
+    "basePrice": 17900,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-early-2015-standard",
     "modelId": "m-laptop-apple-macbook-air-early-2015",
     "storage": "Standard",
-    "basePrice": 14655,
+    "basePrice": 14660,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-early-2014-standard",
     "modelId": "m-laptop-apple-macbook-air-early-2014",
     "storage": "Standard",
-    "basePrice": 11514,
+    "basePrice": 11520,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-air-mid-2013-standard",
     "modelId": "m-laptop-apple-macbook-air-mid-2013",
     "storage": "Standard",
-    "basePrice": 11514,
+    "basePrice": 11520,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-retina-mid-2017-standard",
     "modelId": "m-laptop-apple-macbook-retina-mid-2017",
     "storage": "Standard",
-    "basePrice": 18604,
+    "basePrice": 18610,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-retina-early-2016-standard",
     "modelId": "m-laptop-apple-macbook-retina-early-2016",
     "storage": "Standard",
-    "basePrice": 15695,
+    "basePrice": 15700,
     "active": true
   },
   {
     "id": "v-m-laptop-apple-macbook-retina-early-2015-standard",
     "modelId": "m-laptop-apple-macbook-retina-early-2015",
     "storage": "Standard",
-    "basePrice": 13948,
+    "basePrice": 13950,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-x-series-standard",
     "modelId": "m-laptop-asus-asus-x-series",
     "storage": "Standard",
-    "basePrice": 5747,
+    "basePrice": 5750,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-vivobook-series-standard",
     "modelId": "m-laptop-asus-vivobook-series",
     "storage": "Standard",
-    "basePrice": 9342,
+    "basePrice": 9350,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-k-series-standard",
     "modelId": "m-laptop-asus-asus-k-series",
     "storage": "Standard",
-    "basePrice": 10241,
+    "basePrice": 10250,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-r-series-standard",
     "modelId": "m-laptop-asus-asus-r-series",
     "storage": "Standard",
-    "basePrice": 5595,
+    "basePrice": 5600,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-e-series-standard",
     "modelId": "m-laptop-asus-asus-e-series",
     "storage": "Standard",
-    "basePrice": 4333,
+    "basePrice": 4340,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-rog-series-standard",
     "modelId": "m-laptop-asus-rog-series",
     "storage": "Standard",
-    "basePrice": 18746,
+    "basePrice": 18750,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-eeebook-series-standard",
     "modelId": "m-laptop-asus-eeebook-series",
     "storage": "Standard",
-    "basePrice": 3121,
+    "basePrice": 3130,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-a-series-standard",
     "modelId": "m-laptop-asus-asus-a-series",
     "storage": "Standard",
-    "basePrice": 7848,
+    "basePrice": 7850,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-vivobook-s-series-standard",
     "modelId": "m-laptop-asus-vivobook-s-series",
     "storage": "Standard",
-    "basePrice": 7110,
+    "basePrice": 7120,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-f-series-standard",
     "modelId": "m-laptop-asus-asus-f-series",
     "storage": "Standard",
-    "basePrice": 10342,
+    "basePrice": 10350,
     "active": true
   },
   {
@@ -60737,210 +49749,210 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-asus-zenbook-series-standard",
     "modelId": "m-laptop-asus-zenbook-series",
     "storage": "Standard",
-    "basePrice": 9171,
+    "basePrice": 9180,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-gaming-series-standard",
     "modelId": "m-laptop-asus-gaming-series",
     "storage": "Standard",
-    "basePrice": 7908,
+    "basePrice": 7910,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-q-series-standard",
     "modelId": "m-laptop-asus-asus-q-series",
     "storage": "Standard",
-    "basePrice": 5595,
+    "basePrice": 5600,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-n-series-standard",
     "modelId": "m-laptop-asus-asus-n-series",
     "storage": "Standard",
-    "basePrice": 6272,
+    "basePrice": 6280,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-vivobook-pro-series-standard",
     "modelId": "m-laptop-asus-vivobook-pro-series",
     "storage": "Standard",
-    "basePrice": 9171,
+    "basePrice": 9180,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-fx-series-standard",
     "modelId": "m-laptop-asus-asus-fx-series",
     "storage": "Standard",
-    "basePrice": 5646,
+    "basePrice": 5650,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-rog-strix-series-standard",
     "modelId": "m-laptop-asus-rog-strix-series",
     "storage": "Standard",
-    "basePrice": 28684,
+    "basePrice": 28690,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asuspro-p-series-standard",
     "modelId": "m-laptop-asus-asuspro-p-series",
     "storage": "Standard",
-    "basePrice": 13049,
+    "basePrice": 13050,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-zenbook-u-series-standard",
     "modelId": "m-laptop-asus-zenbook-u-series",
     "storage": "Standard",
-    "basePrice": 4333,
+    "basePrice": 4340,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-zenbook-flip-series-standard",
     "modelId": "m-laptop-asus-zenbook-flip-series",
     "storage": "Standard",
-    "basePrice": 15958,
+    "basePrice": 15960,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-chromebook-series-standard",
     "modelId": "m-laptop-asus-asus-chromebook-series",
     "storage": "Standard",
-    "basePrice": 2161,
+    "basePrice": 2170,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-vivobook-flip-series-standard",
     "modelId": "m-laptop-asus-vivobook-flip-series",
     "storage": "Standard",
-    "basePrice": 11029,
+    "basePrice": 11030,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-chromebook-flip-series-standard",
     "modelId": "m-laptop-asus-asus-chromebook-flip-series",
     "storage": "Standard",
-    "basePrice": 17544,
+    "basePrice": 17550,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-b-series-standard",
     "modelId": "m-laptop-asus-asus-b-series",
     "storage": "Standard",
-    "basePrice": 7626,
+    "basePrice": 7630,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-nx-series-standard",
     "modelId": "m-laptop-asus-asus-nx-series",
     "storage": "Standard",
-    "basePrice": 8302,
+    "basePrice": 8310,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-p-series-standard",
     "modelId": "m-laptop-asus-asus-p-series",
     "storage": "Standard",
-    "basePrice": 5595,
+    "basePrice": 5600,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-zenbook-s-series-standard",
     "modelId": "m-laptop-asus-zenbook-s-series",
     "storage": "Standard",
-    "basePrice": 5595,
+    "basePrice": 5600,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asuspro-b-series-standard",
     "modelId": "m-laptop-asus-asuspro-b-series",
     "storage": "Standard",
-    "basePrice": 13049,
+    "basePrice": 13050,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-fz-series-standard",
     "modelId": "m-laptop-asus-asus-fz-series",
     "storage": "Standard",
-    "basePrice": 8302,
+    "basePrice": 8310,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-zenbook-pro-series-standard",
     "modelId": "m-laptop-asus-zenbook-pro-series",
     "storage": "Standard",
-    "basePrice": 26310,
+    "basePrice": 26320,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-rog-zephyrus-series-standard",
     "modelId": "m-laptop-asus-rog-zephyrus-series",
     "storage": "Standard",
-    "basePrice": 33249,
+    "basePrice": 33250,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-asus-v-series-standard",
     "modelId": "m-laptop-asus-asus-v-series",
     "storage": "Standard",
-    "basePrice": 4333,
+    "basePrice": 4340,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-proart-studiobook-series-standard",
     "modelId": "m-laptop-asus-proart-studiobook-series",
     "storage": "Standard",
-    "basePrice": 27098,
+    "basePrice": 27100,
     "active": true
   },
   {
     "id": "v-m-laptop-asus-other-asus-series-standard",
     "modelId": "m-laptop-asus-other-asus-series",
     "storage": "Standard",
-    "basePrice": 4333,
+    "basePrice": 4340,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-essential-series-standard",
     "modelId": "m-laptop-avita-essential-series",
     "storage": "Standard",
-    "basePrice": 3555,
+    "basePrice": 3560,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-liber-series-standard",
     "modelId": "m-laptop-avita-liber-series",
     "storage": "Standard",
-    "basePrice": 8211,
+    "basePrice": 8220,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-pura-series-standard",
     "modelId": "m-laptop-avita-pura-series",
     "storage": "Standard",
-    "basePrice": 7434,
+    "basePrice": 7440,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-cosmos-series-standard",
     "modelId": "m-laptop-avita-cosmos-series",
     "storage": "Standard",
-    "basePrice": 8474,
+    "basePrice": 8480,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-magus-lite-standard",
     "modelId": "m-laptop-avita-magus-lite",
     "storage": "Standard",
-    "basePrice": 1889,
+    "basePrice": 1890,
     "active": true
   },
   {
     "id": "v-m-laptop-avita-admiror-series-standard",
     "modelId": "m-laptop-avita-admiror-series",
     "storage": "Standard",
-    "basePrice": 10918,
+    "basePrice": 10920,
     "active": true
   },
   {
@@ -60961,21 +49973,21 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-vostro-3000-series-standard",
     "modelId": "m-laptop-dell-vostro-3000-series",
     "storage": "Standard",
-    "basePrice": 12625,
+    "basePrice": 12630,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-vostro-5000-series-standard",
     "modelId": "m-laptop-dell-vostro-5000-series",
     "storage": "Standard",
-    "basePrice": 13635,
+    "basePrice": 13640,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-vostro-7000-series-standard",
     "modelId": "m-laptop-dell-vostro-7000-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 14140,
     "active": true
   },
   {
@@ -60989,21 +50001,21 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-latitude-5000-2-in-1-series-standard",
     "modelId": "m-laptop-dell-latitude-5000-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 10605,
+    "basePrice": 10610,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-latitude-7000-2-in-1-series-standard",
     "modelId": "m-laptop-dell-latitude-7000-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11620,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-latitude-9000-2-in-1-series-standard",
     "modelId": "m-laptop-dell-latitude-9000-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 18685,
+    "basePrice": 18690,
     "active": true
   },
   {
@@ -61017,42 +50029,42 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-inspiron-series-standard",
     "modelId": "m-laptop-dell-inspiron-series",
     "storage": "Standard",
-    "basePrice": 12817,
+    "basePrice": 12820,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-3000-series-standard",
     "modelId": "m-laptop-dell-inspiron-3000-series",
     "storage": "Standard",
-    "basePrice": 10504,
+    "basePrice": 10510,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-3000-2-in-1-series-standard",
     "modelId": "m-laptop-dell-inspiron-3000-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 8585,
+    "basePrice": 8590,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-5000-series-standard",
     "modelId": "m-laptop-dell-inspiron-5000-series",
     "storage": "Standard",
-    "basePrice": 10706,
+    "basePrice": 10710,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-5000-2-in-1-series-standard",
     "modelId": "m-laptop-dell-inspiron-5000-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 10908,
+    "basePrice": 10910,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-7000-series-standard",
     "modelId": "m-laptop-dell-inspiron-7000-series",
     "storage": "Standard",
-    "basePrice": 13332,
+    "basePrice": 13340,
     "active": true
   },
   {
@@ -61066,28 +50078,28 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-inspiron-n5000-series-standard",
     "modelId": "m-laptop-dell-inspiron-n5000-series",
     "storage": "Standard",
-    "basePrice": 6565,
+    "basePrice": 6570,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-inspiron-gaming-series-standard",
     "modelId": "m-laptop-dell-inspiron-gaming-series",
     "storage": "Standard",
-    "basePrice": 9898,
+    "basePrice": 9900,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-vostro-series-standard",
     "modelId": "m-laptop-dell-vostro-series",
     "storage": "Standard",
-    "basePrice": 11706,
+    "basePrice": 11710,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-latitude-series-standard",
     "modelId": "m-laptop-dell-latitude-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 9890,
     "active": true
   },
   {
@@ -61122,21 +50134,21 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-latitude-e7000-series-standard",
     "modelId": "m-laptop-dell-latitude-e7000-series",
     "storage": "Standard",
-    "basePrice": 12625,
+    "basePrice": 12630,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-latitude-3000-series-standard",
     "modelId": "m-laptop-dell-latitude-3000-series",
     "storage": "Standard",
-    "basePrice": 9595,
+    "basePrice": 9600,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-latitude-5000-series-standard",
     "modelId": "m-laptop-dell-latitude-5000-series",
     "storage": "Standard",
-    "basePrice": 11211,
+    "basePrice": 11220,
     "active": true
   },
   {
@@ -61150,7 +50162,7 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-latitude-7000-series-standard",
     "modelId": "m-laptop-dell-latitude-7000-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 13130,
     "active": true
   },
   {
@@ -61164,70 +50176,70 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-precision-series-standard",
     "modelId": "m-laptop-dell-precision-series",
     "storage": "Standard",
-    "basePrice": 22846,
+    "basePrice": 22850,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-studio-series-standard",
     "modelId": "m-laptop-dell-studio-series",
     "storage": "Standard",
-    "basePrice": 5818,
+    "basePrice": 5820,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-alienware-series-standard",
     "modelId": "m-laptop-dell-alienware-series",
     "storage": "Standard",
-    "basePrice": 17877,
+    "basePrice": 17880,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-chromebook-series-standard",
     "modelId": "m-laptop-dell-dell-chromebook-series",
     "storage": "Standard",
-    "basePrice": 3101,
+    "basePrice": 3110,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-g7-gaming-series-standard",
     "modelId": "m-laptop-dell-g7-gaming-series",
     "storage": "Standard",
-    "basePrice": 25472,
+    "basePrice": 25480,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-g5-gaming-series-standard",
     "modelId": "m-laptop-dell-g5-gaming-series",
     "storage": "Standard",
-    "basePrice": 17089,
+    "basePrice": 17090,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-g3-gaming-series-standard",
     "modelId": "m-laptop-dell-g3-gaming-series",
     "storage": "Standard",
-    "basePrice": 16948,
+    "basePrice": 16950,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-xps-series-standard",
     "modelId": "m-laptop-dell-xps-series",
     "storage": "Standard",
-    "basePrice": 11958,
+    "basePrice": 11960,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-other-dell-series-standard",
     "modelId": "m-laptop-dell-other-dell-series",
     "storage": "Standard",
-    "basePrice": 1283,
+    "basePrice": 1290,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-g15-5520-series-standard",
     "modelId": "m-laptop-dell-dell-g15-5520-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61241,14 +50253,14 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-g5-series-standard",
     "modelId": "m-laptop-dell-dell-g5-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-gaming-g15-5000-series-standard",
     "modelId": "m-laptop-dell-dell-gaming-g15-5000-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
@@ -61269,21 +50281,21 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-xps-15-series-standard",
     "modelId": "m-laptop-dell-dell-xps-15-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 17170,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-alienware-16x-aurora-series-standard",
     "modelId": "m-laptop-dell-dell-alienware-16x-aurora-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-alienware-15-series-standard",
     "modelId": "m-laptop-dell-dell-alienware-15-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 17170,
     "active": true
   },
   {
@@ -61297,49 +50309,49 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-16-plus-series-standard",
     "modelId": "m-laptop-dell-dell-16-plus-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-15-7000-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-15-7000-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-16-plus-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-16-plus-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-latitude-15-2026-series-standard",
     "modelId": "m-laptop-dell-dell-latitude-15-2026-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-latitude-7400-series-standard",
     "modelId": "m-laptop-dell-dell-latitude-7400-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-latitude-7500-series-standard",
     "modelId": "m-laptop-dell-dell-latitude-7500-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-latitude-9300-series-standard",
     "modelId": "m-laptop-dell-dell-latitude-9300-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61353,14 +50365,14 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-m11x-r2-series-standard",
     "modelId": "m-laptop-dell-dell-m11x-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m11x-r3-series-standard",
     "modelId": "m-laptop-dell-dell-m11x-r3-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61374,49 +50386,49 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-xps-15z-series-standard",
     "modelId": "m-laptop-dell-dell-xps-15z-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-14-plus-2-in-1-series-standard",
     "modelId": "m-laptop-dell-dell-14-plus-2-in-1-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-latitude-7200-series-standard",
     "modelId": "m-laptop-dell-dell-latitude-7200-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-vostro-3440-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-3440-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-vostro-3530-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-3530-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-13-7000-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-13-7000-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-14-5440-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-14-5440-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61430,28 +50442,28 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-inspiron-14-plus-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-14-plus-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-15-7500-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-15-7500-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-17-7000-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-17-7000-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiron-3500-series-standard",
     "modelId": "m-laptop-dell-dell-inspiron-3500-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61472,14 +50484,14 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-vostro-14-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-14-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-vostro-3500-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-3500-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61514,126 +50526,126 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-vostro-15-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-15-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 17170,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-vostro-3400-series-standard",
     "modelId": "m-laptop-dell-dell-vostro-3400-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-xps-14-series-standard",
     "modelId": "m-laptop-dell-dell-xps-14-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-inspiro-5440-series-standard",
     "modelId": "m-laptop-dell-dell-inspiro-5440-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-xps-13-2026-series-standard",
     "modelId": "m-laptop-dell-dell-xps-13-2026-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-standard",
     "modelId": "m-laptop-dell-sell-now",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-2-standard",
     "modelId": "m-laptop-dell-sell-now-2",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-3-standard",
     "modelId": "m-laptop-dell-sell-now-3",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-4-standard",
     "modelId": "m-laptop-dell-sell-now-4",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-5-standard",
     "modelId": "m-laptop-dell-sell-now-5",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-6-standard",
     "modelId": "m-laptop-dell-sell-now-6",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-7-standard",
     "modelId": "m-laptop-dell-sell-now-7",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-8-standard",
     "modelId": "m-laptop-dell-sell-now-8",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-9-standard",
     "modelId": "m-laptop-dell-sell-now-9",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-10-standard",
     "modelId": "m-laptop-dell-sell-now-10",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-11-standard",
     "modelId": "m-laptop-dell-sell-now-11",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-12-standard",
     "modelId": "m-laptop-dell-sell-now-12",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-13-standard",
     "modelId": "m-laptop-dell-sell-now-13",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61647,98 +50659,98 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-sell-now-15-standard",
     "modelId": "m-laptop-dell-sell-now-15",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-16-standard",
     "modelId": "m-laptop-dell-sell-now-16",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-sell-now-17-standard",
     "modelId": "m-laptop-dell-sell-now-17",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-13-r2-series-standard",
     "modelId": "m-laptop-dell-dell-13-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-15-r2-series-standard",
     "modelId": "m-laptop-dell-dell-15-r2-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-15-r4-series-standard",
     "modelId": "m-laptop-dell-dell-15-r4-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-17-r2-series-standard",
     "modelId": "m-laptop-dell-dell-17-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-17-r3-series-standard",
     "modelId": "m-laptop-dell-dell-17-r3-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-17-r5-series-standard",
     "modelId": "m-laptop-dell-dell-17-r5-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-area-51m-r2-series-standard",
     "modelId": "m-laptop-dell-dell-area-51m-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-area-51m-series-standard",
     "modelId": "m-laptop-dell-dell-area-51m-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m11x-series-standard",
     "modelId": "m-laptop-dell-dell-m11x-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m14x-r2-series-standard",
     "modelId": "m-laptop-dell-dell-m14x-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m14x-series-standard",
     "modelId": "m-laptop-dell-dell-m14x-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61766,63 +50778,63 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-m15-r7-series-standard",
     "modelId": "m-laptop-dell-dell-m15-r7-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m15-series-standard",
     "modelId": "m-laptop-dell-dell-m15-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 17170,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m15x-series-standard",
     "modelId": "m-laptop-dell-dell-m15x-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17-r2-series-standard",
     "modelId": "m-laptop-dell-dell-m17-r2-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17-r3-series-standard",
     "modelId": "m-laptop-dell-dell-m17-r3-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17-r4-series-standard",
     "modelId": "m-laptop-dell-dell-m17-r4-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17-r5-series-standard",
     "modelId": "m-laptop-dell-dell-m17-r5-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17-series-standard",
     "modelId": "m-laptop-dell-dell-m17-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-m17x-r2-series-standard",
     "modelId": "m-laptop-dell-dell-m17x-r2-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61850,21 +50862,21 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-dell-m18x-series-standard",
     "modelId": "m-laptop-dell-dell-m18x-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-x14-series-standard",
     "modelId": "m-laptop-dell-dell-x14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-dell-x15-r1-series-standard",
     "modelId": "m-laptop-dell-dell-x15-r1-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -61934,154 +50946,154 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-pavilion-series-standard",
     "modelId": "m-laptop-hp-pavilion-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-15-series-standard",
     "modelId": "m-laptop-hp-hp-15-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-notebook-series-standard",
     "modelId": "m-laptop-hp-hp-notebook-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 11330,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-probook-series-standard",
     "modelId": "m-laptop-hp-probook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 10810,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-elitebook-series-standard",
     "modelId": "m-laptop-hp-elitebook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 15190,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-g-series-standard",
     "modelId": "m-laptop-hp-g-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 7910,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-envy-series-standard",
     "modelId": "m-laptop-hp-envy-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 12740,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-14-series-standard",
     "modelId": "m-laptop-hp-hp-14-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-pavilion-power-series-standard",
     "modelId": "m-laptop-hp-pavilion-power-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6380,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-300-series-standard",
     "modelId": "m-laptop-hp-hp-300-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 11220,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-spectre-series-standard",
     "modelId": "m-laptop-hp-spectre-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 16950,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-split-series-standard",
     "modelId": "m-laptop-hp-split-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 2160,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-chromebook-series-standard",
     "modelId": "m-laptop-hp-hp-chromebook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4200,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-omen-series-standard",
     "modelId": "m-laptop-hp-omen-series",
     "storage": "Standard",
-    "basePrice": 60600,
+    "basePrice": 16020,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-200-series-standard",
     "modelId": "m-laptop-hp-200-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 9690,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-17-series-standard",
     "modelId": "m-laptop-hp-hp-17-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 11030,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-stream-series-standard",
     "modelId": "m-laptop-hp-stream-series",
     "storage": "Standard",
-    "basePrice": 2636,
+    "basePrice": 2640,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-zbook-series-standard",
     "modelId": "m-laptop-hp-zbook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 22960,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-pavilion-gaming-series-standard",
     "modelId": "m-laptop-hp-pavilion-gaming-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 23520,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-slatebook-series-standard",
     "modelId": "m-laptop-hp-slatebook-series",
     "storage": "Standard",
-    "basePrice": 2676,
+    "basePrice": 2680,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-victus-series-standard",
     "modelId": "m-laptop-hp-victus-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 24190,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-other-hp-series-standard",
     "modelId": "m-laptop-hp-other-hp-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 4740,
     "active": true
   },
   {
@@ -62102,84 +51114,84 @@ const LAPTOP_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-omen-15-series-standard",
     "modelId": "m-laptop-hp-hp-omen-15-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-omnibook-x-flip-series-standard",
     "modelId": "m-laptop-hp-hp-omnibook-x-flip-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 45450,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-victus-15-series-standard",
     "modelId": "m-laptop-hp-hp-victus-15-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-victus-16-series-standard",
     "modelId": "m-laptop-hp-hp-victus-16-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-17-g6-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-17-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-hyperx-omen-2026-series-standard",
     "modelId": "m-laptop-hp-hp-hyperx-omen-2026-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-pavilion-gaming-15-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-gaming-15-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-15s-series-standard",
     "modelId": "m-laptop-hp-hp-15s-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-247-g8-series-standard",
     "modelId": "m-laptop-hp-hp-247-g8-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-255-g8-series-standard",
     "modelId": "m-laptop-hp-hp-255-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-348-g7-series-standard",
     "modelId": "m-laptop-hp-hp-348-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-645-g9-notebook-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-645-g9-notebook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11330,
     "active": true
   }
 ];
@@ -62189,147 +51201,147 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-pavilion-14-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-pavilion-x360-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-x360-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-14u-g6-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-14u-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-15-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-15-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-15-g6-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-15-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-create-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-create-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-firefly-14-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-firefly-14-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-firefly-15-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-firefly-15-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-fury-15-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-fury-15-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-fury-17-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-fury-17-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-power-15-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-power-15-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-power-15-g9-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-power-15-g9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-studio-16-g9-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-studio-16-g9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-studio-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-studio-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-studio-x360-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-studio-x360-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-chromebook-14a-g5-series-standard",
     "modelId": "m-laptop-hp-hp-chromebook-14a-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-omnibook-ultra-flip-series-standard",
     "modelId": "m-laptop-hp-hp-omnibook-ultra-flip-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 55550,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-pavilion-plus-14-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-plus-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-14-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-14u-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-14u-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-17-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-17-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -62343,441 +51355,441 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-245-g8-series-standard",
     "modelId": "m-laptop-hp-hp-245-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-340s-g7-series-standard",
     "modelId": "m-laptop-hp-hp-340s-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-645-g10-notebook-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-645-g10-notebook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11330,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-645-g11-notebook-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-645-g11-notebook-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11330,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-pavilion-15-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-15-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-440-g9-series-standard",
     "modelId": "m-laptop-hp-hp-probook-440-g9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-15u-g5-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-15u-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-15u-g6-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-15u-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-firefly-14-g8-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-firefly-14-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-firefly-15-g8-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-firefly-15-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-fury-16-g9-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-fury-16-g9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-power-17-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-power-17-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-studio-g7-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-studio-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-zbook-firefly-16-g9-series-standard",
     "modelId": "m-laptop-hp-zbook-firefly-16-g9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-14s-series-standard",
     "modelId": "m-laptop-hp-hp-14s-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-chromebook-x2-series-standard",
     "modelId": "m-laptop-hp-hp-chromebook-x2-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-chromebook-x360-14-series-standard",
     "modelId": "m-laptop-hp-hp-chromebook-x360-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-1050-g1-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-1050-g1-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-735-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-735-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-735-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-735-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-745-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-745-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-745-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-745-g6-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-755-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-755-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-830-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-830-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-830-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-830-g6-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-830-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-830-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-830-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-830-g8-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-835-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-835-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-835-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-835-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-840-aero-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-840-aero-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-840-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-840-g6-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-840-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-840-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-840-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-840-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-845-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-845-g7-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-845-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-845-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-850-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-850-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-850-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-850-g6-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-850-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-850-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-850-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-850-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-855-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-855-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-855-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-855-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g3-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g3-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g4-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g4-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1030-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1030-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g6-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-1040-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-1040-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-830-g5-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-830-g5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-830-g6-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-830-g6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-830-g7-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-830-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-elitebook-x360-830-g8-series-standard",
     "modelId": "m-laptop-hp-hp-elitebook-x360-830-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-13-series-standard",
     "modelId": "m-laptop-hp-hp-envy-13-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-14-series-standard",
     "modelId": "m-laptop-hp-hp-envy-14-series",
     "storage": "Standard",
-    "basePrice": 3030,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-15-series-standard",
     "modelId": "m-laptop-hp-hp-envy-15-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 13530,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-16-series-standard",
     "modelId": "m-laptop-hp-hp-envy-16-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-17-series-standard",
     "modelId": "m-laptop-hp-hp-envy-17-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11030,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-envy-x360-series-standard",
     "modelId": "m-laptop-hp-hp-envy-x360-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-omen-17-series-standard",
     "modelId": "m-laptop-hp-hp-omen-17-series",
     "storage": "Standard",
-    "basePrice": 60600,
+    "basePrice": 11030,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-pavilion-13-series-standard",
     "modelId": "m-laptop-hp-hp-pavilion-13-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-430-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-430-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-440-g7-series-standard",
     "modelId": "m-laptop-hp-hp-probook-440-g7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -62791,21 +51803,21 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-probook-445-g7-series-standard",
     "modelId": "m-laptop-hp-hp-probook-445-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-445-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-445-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-450-g7-series-standard",
     "modelId": "m-laptop-hp-hp-probook-450-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -62819,49 +51831,49 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-probook-455-g7-series-standard",
     "modelId": "m-laptop-hp-hp-probook-455-g7-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-455-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-455-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-630-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-630-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-635-aero-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-635-aero-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-640-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-640-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-650-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-650-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-probook-x360-435-g8-series-standard",
     "modelId": "m-laptop-hp-hp-probook-x360-435-g8-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -62875,63 +51887,63 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-hp-hp-spectre-x360-13-series-standard",
     "modelId": "m-laptop-hp-hp-spectre-x360-13-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-spectre-x360-14-series-standard",
     "modelId": "m-laptop-hp-hp-spectre-x360-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 11830,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-spectre-x360-16-series-standard",
     "modelId": "m-laptop-hp-hp-spectre-x360-16-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-14u-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-14u-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-15u-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-15u-series",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-hp-hp-zbook-studio-x360-series-standard",
     "modelId": "m-laptop-hp-hp-zbook-studio-x360-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-5-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-5-series",
     "storage": "Standard",
-    "basePrice": 12625,
+    "basePrice": 12630,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-slim-7-series-standard",
     "modelId": "m-laptop-lenovo-yoga-slim-7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 26770,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-loq-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-loq-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 27850,
     "active": true
   },
   {
@@ -62945,7 +51957,7 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-legion-slim-5-series-standard",
     "modelId": "m-laptop-lenovo-legion-slim-5-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 29290,
     "active": true
   },
   {
@@ -62987,21 +51999,21 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-ideapad-300-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-300-series",
     "storage": "Standard",
-    "basePrice": 11595,
+    "basePrice": 11600,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-500-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-500-series",
     "storage": "Standard",
-    "basePrice": 6373,
+    "basePrice": 6380,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-t-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-t-series",
     "storage": "Standard",
-    "basePrice": 6110,
+    "basePrice": 6120,
     "active": true
   },
   {
@@ -63015,126 +52027,126 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-ideapad-s-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-s-series",
     "storage": "Standard",
-    "basePrice": 5595,
+    "basePrice": 5600,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-500-series-standard",
     "modelId": "m-laptop-lenovo-yoga-500-series",
     "storage": "Standard",
-    "basePrice": 10120,
+    "basePrice": 10130,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-l-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-l-series",
     "storage": "Standard",
-    "basePrice": 8777,
+    "basePrice": 8780,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-y-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-y-series",
     "storage": "Standard",
-    "basePrice": 18968,
+    "basePrice": 18970,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-flex-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-flex-series",
     "storage": "Standard",
-    "basePrice": 6767,
+    "basePrice": 6770,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-e-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-e-series",
     "storage": "Standard",
-    "basePrice": 11999,
+    "basePrice": 12000,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-slim-3i-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-slim-3i-series",
     "storage": "Standard",
-    "basePrice": 17503,
+    "basePrice": 17510,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-v-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-v-series",
     "storage": "Standard",
-    "basePrice": 6444,
+    "basePrice": 6450,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-x-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-x-series",
     "storage": "Standard",
-    "basePrice": 7403,
+    "basePrice": 7410,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-edge-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-edge-series",
     "storage": "Standard",
-    "basePrice": 5161,
+    "basePrice": 5170,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-300e-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-300e-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 5750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-legion-series-standard",
     "modelId": "m-laptop-lenovo-legion-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-n-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-n-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-500e-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-500e-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4020,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-700-series-standard",
     "modelId": "m-laptop-lenovo-yoga-700-series",
     "storage": "Standard",
-    "basePrice": 10443,
+    "basePrice": 10450,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-gaming-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-gaming-series",
     "storage": "Standard",
-    "basePrice": 20311,
+    "basePrice": 20320,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-a-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-a-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 5550,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-900-series-standard",
     "modelId": "m-laptop-lenovo-yoga-900-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 10450,
     "active": true
   },
   {
@@ -63148,105 +52160,105 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-thinkpad-twist-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-twist-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6530,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-700-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-700-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 7050,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-c-series-standard",
     "modelId": "m-laptop-lenovo-yoga-c-series",
     "storage": "Standard",
-    "basePrice": 4727,
+    "basePrice": 4730,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-11e-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-11e-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 5650,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-legion-5-series-standard",
     "modelId": "m-laptop-lenovo-legion-5-series",
     "storage": "Standard",
-    "basePrice": 22079,
+    "basePrice": 22080,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-slim-5i-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-slim-5i-series",
     "storage": "Standard",
-    "basePrice": 22472,
+    "basePrice": 22480,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkbook-series-standard",
     "modelId": "m-laptop-lenovo-thinkbook-series",
     "storage": "Standard",
-    "basePrice": 5908,
+    "basePrice": 5910,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-p-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-p-series",
     "storage": "Standard",
-    "basePrice": 7696,
+    "basePrice": 7700,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-100e-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-100e-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4020,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-11e-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-11e-series",
     "storage": "Standard",
-    "basePrice": 2909,
+    "basePrice": 2910,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-thinkpad-helix-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-helix-series",
     "storage": "Standard",
-    "basePrice": 6141,
+    "basePrice": 6150,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-ideapad-900-series-standard",
     "modelId": "m-laptop-lenovo-ideapad-900-series",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 10630,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-legion-7-series-standard",
     "modelId": "m-laptop-lenovo-legion-7-series",
     "storage": "Standard",
-    "basePrice": 33178,
+    "basePrice": 33180,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-student-chromebooks-standard",
     "modelId": "m-laptop-lenovo-student-chromebooks",
     "storage": "Standard",
-    "basePrice": 1333,
+    "basePrice": 1340,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-other-lenovo-series-standard",
     "modelId": "m-laptop-lenovo-other-lenovo-series",
     "storage": "Standard",
-    "basePrice": 4454,
+    "basePrice": 4460,
     "active": true
   },
   {
@@ -63260,21 +52272,21 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-yoga-6-series-standard",
     "modelId": "m-laptop-lenovo-yoga-6-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-slim-6i-series-standard",
     "modelId": "m-laptop-lenovo-yoga-slim-6i-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-yoga-7-series-standard",
     "modelId": "m-laptop-lenovo-yoga-7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -63288,7 +52300,7 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-yoga-pro-7i-series-standard",
     "modelId": "m-laptop-lenovo-yoga-pro-7i-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -63316,42 +52328,42 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-thinkpad-x1-series-standard",
     "modelId": "m-laptop-lenovo-thinkpad-x1-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-y720-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-y720-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-gaming-3-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-gaming-3-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-5i-17-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-5i-17-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-slim-7-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-slim-7-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-y540-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-y540-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
@@ -63365,28 +52377,28 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-lenovo-legion-y520-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-y520-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-legion-y530-series-standard",
     "modelId": "m-laptop-lenovo-legion-y530-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-gaming-3i-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-gaming-3i-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-5-15-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-5-15-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
@@ -63400,504 +52412,504 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-lenovo-legion-7i-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-7i-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-yoga-slim-7i-aura-edition-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-yoga-slim-7i-aura-edition-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-1i-gen-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-1i-gen-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-13s-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-13s-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-14p-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-14p-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-14s-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-14s-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-14s-yoga-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-14s-yoga-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-15p-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-15p-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-16p-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-16p-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkpad-e14-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkpad-e14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkpad-z13-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkpad-z13-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-5-17-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-5-17-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-15-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-15-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-v15-gen-4-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-v15-gen-4-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-yoga-9-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-yoga-9-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-1-gen-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-1-gen-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-3-gen-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-3-gen-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-ideapad-slim-5-gen-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-ideapad-slim-5-gen-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 4540,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-13x-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-13x-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-14-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-14-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkpad-z16-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkpad-z16-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-yoga-duet-7i-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-yoga-duet-7i-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-standard",
     "modelId": "m-laptop-lenovo-sell-now",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-2-standard",
     "modelId": "m-laptop-lenovo-sell-now-2",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-3-standard",
     "modelId": "m-laptop-lenovo-sell-now-3",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-4-standard",
     "modelId": "m-laptop-lenovo-sell-now-4",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-5-standard",
     "modelId": "m-laptop-lenovo-sell-now-5",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-6-standard",
     "modelId": "m-laptop-lenovo-sell-now-6",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-7-standard",
     "modelId": "m-laptop-lenovo-sell-now-7",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-8-standard",
     "modelId": "m-laptop-lenovo-sell-now-8",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-9-standard",
     "modelId": "m-laptop-lenovo-sell-now-9",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-10-standard",
     "modelId": "m-laptop-lenovo-sell-now-10",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-11-standard",
     "modelId": "m-laptop-lenovo-sell-now-11",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-12-standard",
     "modelId": "m-laptop-lenovo-sell-now-12",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-13-standard",
     "modelId": "m-laptop-lenovo-sell-now-13",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-14-standard",
     "modelId": "m-laptop-lenovo-sell-now-14",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-15-standard",
     "modelId": "m-laptop-lenovo-sell-now-15",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-16-standard",
     "modelId": "m-laptop-lenovo-sell-now-16",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-17-standard",
     "modelId": "m-laptop-lenovo-sell-now-17",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-18-standard",
     "modelId": "m-laptop-lenovo-sell-now-18",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-19-standard",
     "modelId": "m-laptop-lenovo-sell-now-19",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-20-standard",
     "modelId": "m-laptop-lenovo-sell-now-20",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-21-standard",
     "modelId": "m-laptop-lenovo-sell-now-21",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-22-standard",
     "modelId": "m-laptop-lenovo-sell-now-22",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-23-standard",
     "modelId": "m-laptop-lenovo-sell-now-23",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-24-standard",
     "modelId": "m-laptop-lenovo-sell-now-24",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-25-standard",
     "modelId": "m-laptop-lenovo-sell-now-25",
     "storage": "Standard",
-    "basePrice": 25250,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-26-standard",
     "modelId": "m-laptop-lenovo-sell-now-26",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-27-standard",
     "modelId": "m-laptop-lenovo-sell-now-27",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-28-standard",
     "modelId": "m-laptop-lenovo-sell-now-28",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-29-standard",
     "modelId": "m-laptop-lenovo-sell-now-29",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-30-standard",
     "modelId": "m-laptop-lenovo-sell-now-30",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-sell-now-31-standard",
     "modelId": "m-laptop-lenovo-sell-now-31",
     "storage": "Standard",
-    "basePrice": 45450,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-legion-y7000-series-standard",
     "modelId": "m-laptop-lenovo-lenovo-legion-y7000-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 18500,
     "active": true
   },
   {
     "id": "v-m-laptop-lenovo-lenovo-thinkbook-13s-standard",
     "modelId": "m-laptop-lenovo-lenovo-thinkbook-13s",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-lg-other-lg-series-standard",
     "modelId": "m-laptop-lg-other-lg-series",
     "storage": "Standard",
-    "basePrice": 6171,
+    "basePrice": 6180,
     "active": true
   },
   {
     "id": "v-m-laptop-lg-lg-gram-series-standard",
     "modelId": "m-laptop-lg-lg-gram-series",
     "storage": "Standard",
-    "basePrice": 8585,
+    "basePrice": 8590,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-series",
     "storage": "Standard",
-    "basePrice": 7595,
+    "basePrice": 7600,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-4-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-4-series",
     "storage": "Standard",
-    "basePrice": 12938,
+    "basePrice": 12940,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-series-standard",
     "modelId": "m-laptop-microsoft-surface-series",
     "storage": "Standard",
-    "basePrice": 4848,
+    "basePrice": 4850,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-book-series-standard",
     "modelId": "m-laptop-microsoft-surface-book-series",
     "storage": "Standard",
-    "basePrice": 12474,
+    "basePrice": 12480,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-3-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-3-series",
     "storage": "Standard",
-    "basePrice": 10373,
+    "basePrice": 10380,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-book-2-series-standard",
     "modelId": "m-laptop-microsoft-surface-book-2-series",
     "storage": "Standard",
-    "basePrice": 14403,
+    "basePrice": 14410,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-go-series-standard",
     "modelId": "m-laptop-microsoft-surface-go-series",
     "storage": "Standard",
-    "basePrice": 3596,
+    "basePrice": 3600,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-5-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-5-series",
     "storage": "Standard",
-    "basePrice": 14271,
+    "basePrice": 14280,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-laptop-2-series-standard",
     "modelId": "m-laptop-microsoft-surface-laptop-2-series",
     "storage": "Standard",
-    "basePrice": 14403,
+    "basePrice": 14410,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-2-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-2-series",
     "storage": "Standard",
-    "basePrice": 8484,
+    "basePrice": 8490,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-laptop-3-series-standard",
     "modelId": "m-laptop-microsoft-surface-laptop-3-series",
     "storage": "Standard",
-    "basePrice": 17594,
+    "basePrice": 17600,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-2-series-standard",
     "modelId": "m-laptop-microsoft-surface-2-series",
     "storage": "Standard",
-    "basePrice": 4939,
+    "basePrice": 4940,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-3-series-standard",
     "modelId": "m-laptop-microsoft-surface-3-series",
     "storage": "Standard",
-    "basePrice": 5545,
+    "basePrice": 5550,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-6-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-6-series",
     "storage": "Standard",
-    "basePrice": 16493,
+    "basePrice": 16500,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-laptop-4-series-standard",
     "modelId": "m-laptop-microsoft-surface-laptop-4-series",
     "storage": "Standard",
-    "basePrice": 19533,
+    "basePrice": 19540,
     "active": true
   },
   {
@@ -63911,35 +52923,35 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-microsoft-surface-laptop-series-standard",
     "modelId": "m-laptop-microsoft-surface-laptop-series",
     "storage": "Standard",
-    "basePrice": 12474,
+    "basePrice": 12480,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-book-3-series-standard",
     "modelId": "m-laptop-microsoft-surface-book-3-series",
     "storage": "Standard",
-    "basePrice": 17594,
+    "basePrice": 17600,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-pro-x-series-standard",
     "modelId": "m-laptop-microsoft-surface-pro-x-series",
     "storage": "Standard",
-    "basePrice": 23402,
+    "basePrice": 23410,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-surface-go-2-series-standard",
     "modelId": "m-laptop-microsoft-surface-go-2-series",
     "storage": "Standard",
-    "basePrice": 8969,
+    "basePrice": 8970,
     "active": true
   },
   {
     "id": "v-m-laptop-microsoft-other-microsoft-series-standard",
     "modelId": "m-laptop-microsoft-other-microsoft-series",
     "storage": "Standard",
-    "basePrice": 10827,
+    "basePrice": 10830,
     "active": true
   },
   {
@@ -63953,63 +52965,63 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-msi-gl-series-standard",
     "modelId": "m-laptop-msi-gl-series",
     "storage": "Standard",
-    "basePrice": 23927,
+    "basePrice": 23930,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-gf-series-standard",
     "modelId": "m-laptop-msi-gf-series",
     "storage": "Standard",
-    "basePrice": 21028,
+    "basePrice": 21030,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-modern-series-standard",
     "modelId": "m-laptop-msi-modern-series",
     "storage": "Standard",
-    "basePrice": 21947,
+    "basePrice": 21950,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-gp-leopard-series-standard",
     "modelId": "m-laptop-msi-gp-leopard-series",
     "storage": "Standard",
-    "basePrice": 23927,
+    "basePrice": 23930,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-ge-raider-series-standard",
     "modelId": "m-laptop-msi-ge-raider-series",
     "storage": "Standard",
-    "basePrice": 24907,
+    "basePrice": 24910,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-prestige-series-standard",
     "modelId": "m-laptop-msi-prestige-series",
     "storage": "Standard",
-    "basePrice": 21947,
+    "basePrice": 21950,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-gs-steath-series-standard",
     "modelId": "m-laptop-msi-gs-steath-series",
     "storage": "Standard",
-    "basePrice": 21028,
+    "basePrice": 21030,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-gt-titan-series-standard",
     "modelId": "m-laptop-msi-gt-titan-series",
     "storage": "Standard",
-    "basePrice": 21028,
+    "basePrice": 21030,
     "active": true
   },
   {
     "id": "v-m-laptop-msi-alpha-series-standard",
     "modelId": "m-laptop-msi-alpha-series",
     "storage": "Standard",
-    "basePrice": 17422,
+    "basePrice": 17430,
     "active": true
   },
   {
@@ -64072,14 +53084,14 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-msi-summit-series-standard",
     "modelId": "m-laptop-msi-summit-series",
     "storage": "Standard",
-    "basePrice": 27401,
+    "basePrice": 27410,
     "active": true
   },
   {
     "id": "v-m-laptop-nokia-nokia-purebook-series-standard",
     "modelId": "m-laptop-nokia-nokia-purebook-series",
     "storage": "Standard",
-    "basePrice": 17281,
+    "basePrice": 17290,
     "active": true
   },
   {
@@ -64093,21 +53105,21 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-realme-book-prime-series-standard",
     "modelId": "m-laptop-realme-book-prime-series",
     "storage": "Standard",
-    "basePrice": 25371,
+    "basePrice": 25380,
     "active": true
   },
   {
     "id": "v-m-laptop-realme-book-slim-series-standard",
     "modelId": "m-laptop-realme-book-slim-series",
     "storage": "Standard",
-    "basePrice": 18422,
+    "basePrice": 18430,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book-go-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book-go-series",
     "storage": "Standard",
-    "basePrice": 10969,
+    "basePrice": 10970,
     "active": true
   },
   {
@@ -64121,21 +53133,21 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-samsung-galaxy-book2-360-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book2-360-series",
     "storage": "Standard",
-    "basePrice": 27613,
+    "basePrice": 27620,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book2-pro-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book2-pro-series",
     "storage": "Standard",
-    "basePrice": 29351,
+    "basePrice": 29360,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book2-pro-360-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book2-pro-360-series",
     "storage": "Standard",
-    "basePrice": 29785,
+    "basePrice": 29790,
     "active": true
   },
   {
@@ -64163,28 +53175,28 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-samsung-galaxy-book3-pro-360-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book3-pro-360-series",
     "storage": "Standard",
-    "basePrice": 40400,
+    "basePrice": 6750,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book4-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book4-series",
     "storage": "Standard",
-    "basePrice": 30128,
+    "basePrice": 30130,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book4-360-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book4-360-series",
     "storage": "Standard",
-    "basePrice": 31785,
+    "basePrice": 31790,
     "active": true
   },
   {
     "id": "v-m-laptop-samsung-galaxy-book4-pro-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book4-pro-series",
     "storage": "Standard",
-    "basePrice": 31179,
+    "basePrice": 31180,
     "active": true
   },
   {
@@ -64205,7 +53217,7 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-samsung-galaxy-book4-edge-series-standard",
     "modelId": "m-laptop-samsung-galaxy-book4-edge-series",
     "storage": "Standard",
-    "basePrice": 30300,
+    "basePrice": 6750,
     "active": true
   },
   {
@@ -64240,35 +53252,35 @@ const LAPTOP_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-laptop-samsung-others-samsung-series-standard",
     "modelId": "m-laptop-samsung-others-samsung-series",
     "storage": "Standard",
-    "basePrice": 4070,
+    "basePrice": 4080,
     "active": true
   },
   {
     "id": "v-m-laptop-xiaomi-mi-notebook-standard",
     "modelId": "m-laptop-xiaomi-mi-notebook",
     "storage": "Standard",
-    "basePrice": 16190,
+    "basePrice": 16200,
     "active": true
   },
   {
     "id": "v-m-laptop-xiaomi-mi-air-series-standard",
     "modelId": "m-laptop-xiaomi-mi-air-series",
     "storage": "Standard",
-    "basePrice": 9191,
+    "basePrice": 9200,
     "active": true
   },
   {
     "id": "v-m-laptop-xiaomi-mi-pro-series-standard",
     "modelId": "m-laptop-xiaomi-mi-pro-series",
     "storage": "Standard",
-    "basePrice": 12595,
+    "basePrice": 12600,
     "active": true
   },
   {
     "id": "v-m-laptop-xiaomi-redmibook-series-standard",
     "modelId": "m-laptop-xiaomi-redmibook-series",
     "storage": "Standard",
-    "basePrice": 13988,
+    "basePrice": 13990,
     "active": true
   }
 ];
@@ -83792,21 +72804,21 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-laptop-dell-g15-series-512-gb",
     "modelId": "m-laptop-dell-g15-series",
     "storage": "512 GB SSD",
-    "basePrice": 38500,
+    "basePrice": 22220,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-g15-series-1-tb",
     "modelId": "m-laptop-dell-g15-series",
     "storage": "1 TB SSD",
-    "basePrice": 43500,
+    "basePrice": 22220,
     "active": true
   },
   {
     "id": "v-m-laptop-dell-g16-series-1-tb",
     "modelId": "m-laptop-dell-g16-series",
     "storage": "1 TB SSD",
-    "basePrice": 52000,
+    "basePrice": 20200,
     "active": true
   },
   {
@@ -83841,7 +72853,7 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-laptop-lenovo-legion-y-series-1-tb",
     "modelId": "m-laptop-lenovo-legion-y-series",
     "storage": "1 TB SSD",
-    "basePrice": 45000,
+    "basePrice": 17040,
     "active": true
   },
   {
