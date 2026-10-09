@@ -240,7 +240,7 @@ export function RecommerceSeoBlock() {
                   Sell Old Phone Near Me: Free Doorstep Pickup in 24 Hours
                 </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
-                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Liluah, and expanding across West Bengal, Uttar Pradesh, and Bihar. Free 24-hour doorstep inspection by verified technicians.
+                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Ranchi (Jharkhand), Patna (Bihar), Gorakhpur &amp; Ballia (UP). Free same-day or 24-hour doorstep inspection by verified technicians.
                 </p>
               </div>
               <Link
@@ -276,7 +276,133 @@ export function RecommerceSeoBlock() {
           </div>
         </div>
 
-        {/* SECTION 4: GREEN CIRCULAR ECONOMY COMMITMENT */}
+        {/* SECTION 4: HIGH-VOLUME SEARCH DIRECTORY (SEO, AEO & GEO) */}
+        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-brand-border shadow-subtleCard space-y-8">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-black mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Explore High-Demand Categories</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-black text-brand-black">
+              Popular Keyword Searches &amp; Device Valuation Corridors
+            </h2>
+            <p className="text-xs sm:text-sm text-brand-muted mt-1">
+              Find instant quotes for second-hand mobiles, price checks, and local doorstep buyback hubs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Category 1 */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
+                Sell Old Phone &amp; Buyback
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  { label: "Sell Old Phone", href: "/sell-used-phone" },
+                  { label: "Sell Used Phone Online", href: "/sell-used-phone" },
+                  { label: "Cash for Phone", href: "/sell/mobile" },
+                  { label: "Old Phone Sell Online", href: "/sell-used-phone" },
+                  { label: "Sell Old Handset", href: "/sell/mobile" },
+                  { label: "Sold Old Phone", href: "/sell-used-phone" },
+                  { label: "Sell Dead Phone", href: "/sell/mobile" },
+                  { label: "Sell Broken Screen Phone", href: "/sell/mobile" },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Category 2 */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
+                Second Hand &amp; 2nd Hand Mobile
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  { label: "Second Hand Mobile", href: "/sell/mobile" },
+                  { label: "2nd Hand Mobile Phones", href: "/sell/mobile" },
+                  { label: "Used Second Hand Mobile", href: "/sell/mobile" },
+                  { label: "2 Hand Mobile Phone", href: "/sell/mobile" },
+                  { label: "Second Hand iPhone", href: "/sell/mobile/apple" },
+                  { label: "Refurbished Mobiles", href: "/sell/mobile" },
+                  { label: "Refurbished Phones", href: "/sell/mobile" },
+                  { label: "Buy Second Hand Mobile", href: "/sell/mobile" },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Category 3 */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
+                Price Calculator &amp; Valuation
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  { label: "Mobile Price", href: "/sell-used-phone" },
+                  { label: "Mobile Resale Value Calculator", href: "/sell-used-phone" },
+                  { label: "Used Phone Price Calculator", href: "/sell-used-phone" },
+                  { label: "Second Hand Mobile Price Check", href: "/sell-used-phone" },
+                  { label: "Phone Valuation Tool Online", href: "/sell-used-phone" },
+                  { label: "iPhone Resale Value", href: "/sell/mobile/apple" },
+                  { label: "Laptop Resale Calculator", href: "/sell/laptop" },
+                  { label: "Instant Guaranteed Quote", href: "/sell-used-phone" },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Category 4 */}
+            <div className="space-y-3">
+              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
+                Doorstep Pickup Hubs (Near Me)
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  { label: "Mobile Shop Near Me", href: "/sell-used-phone" },
+                  { label: "Second Hand Mobile Shop Near Me", href: "/sell-used-phone" },
+                  { label: "Sell Old Phone Kolkata", href: "/sell-phone-in-kolkata" },
+                  { label: "Sell Old Phone Ranchi", href: "/sell-used-phone" },
+                  { label: "Sell Old Phone Howrah", href: "/sell-phone-in-howrah" },
+                  { label: "Sell Old Phone Patna", href: "/sell-used-phone" },
+                  { label: "Sell Old Phone Gorakhpur", href: "/sell-phone-in-gorakhpur" },
+                  { label: "Sell Old Phone Ballia", href: "/sell-used-phone" },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 5: GREEN CIRCULAR ECONOMY COMMITMENT */}
         <div className="bg-neutral-950 text-white rounded-3xl p-8 sm:p-10 shadow-premium flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black">
@@ -293,7 +419,7 @@ export function RecommerceSeoBlock() {
 
           <div className="shrink-0">
             <Link
-              href="/sell"
+              href="/sell-used-phone"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-brand-yellow hover:bg-amber-400 text-brand-black font-black text-xs sm:text-sm shadow-md transition hover:scale-105"
             >
               <span>Calculate Old Phone Price</span>

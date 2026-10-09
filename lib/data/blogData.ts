@@ -429,5 +429,210 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ]
     }
+  },
+  {
+    slug: "second-hand-mobile-price-check-calculator-guide",
+    title: "Second Hand Mobile Price Check: How to Calculate Used Phone Resale Value in 2026",
+    subtitle: "Stop guessing what your old phone is worth. Learn how algorithmic price calculators evaluate used mobiles and get maximum cash.",
+    excerpt: "Use CashALL's instant second hand mobile price calculator to check the guaranteed resale value of your old phone in 60 seconds with ₹0 pickup fees.",
+    category: "Guides & Tips",
+    readTime: "6 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-09",
+    author: {
+      name: "CashALL Valuation Team",
+      role: "Chief Pricing Analyst",
+      avatar: "C"
+    },
+    tags: [
+      "Second Hand Mobile",
+      "Mobile Price",
+      "Used Phone Price Calculator",
+      "Second Hand Mobile Price Check",
+      "Mobile Resale Value Calculator",
+      "Sell Old Phone",
+      "2nd Hand Mobile Phones",
+      "Phone Valuation Tool Online"
+    ],
+    aeoQuickAnswer: {
+      question: "How do I check the exact second hand price of my mobile phone online?",
+      answer: "To check the exact second-hand market value of your mobile, enter your brand, model, storage variant, and current physical condition into CashALL's online valuation calculator at https://www.cashall.in/sell-used-phone. The calculator compares real-time secondary market demand, hardware depreciation, battery health, and display condition to give an accurate, guaranteed cash quote in under 60 seconds with ₹0 pickup fees.",
+      keyTakeaway: "Online price calculators provide locked quotes and direct doorstep payouts, protecting sellers from offline dealer markdowns that slash 30–40% on minor cosmetic wear."
+    },
+    geoInsights: {
+      region: "Kolkata, Ranchi, Patna & Uttar Pradesh",
+      trendHeadline: "Sellers Shift From Offline Bargaining to Online Price Calculators",
+      insight: "In cities like Ranchi, Patna, Kolkata, and Gorakhpur, over 65% of smartphone sellers now benchmark device resale prices online before upgrading, securing up to 5% higher payouts than local shops."
+    },
+    content: {
+      intro: "Wondering how much your old smartphone is actually worth today? Instead of making trips to multiple local shops or haggling with strangers on classified apps, modern recommerce relies on automated price calculators. Here is how second-hand mobile price calculation works in 2026 and how you can get maximum cash for your device.",
+      sections: [
+        {
+          heading: "1. Core Factors That Determine Your Second Hand Mobile Price",
+          body: [
+            "Every phone begins depreciating the moment it leaves the showroom. However, the exact resale value depends on five primary factors:",
+            "• Screen & Display Status: An original OEM OLED or AMOLED screen in scratch-free condition retains the highest value. Dead pixels, touch glitches, or third-party replacement screens reduce quotes.",
+            "• Battery Health: Modern buyers look for battery capacity above 80%. A degraded battery requires a minor discount for replacement costs.",
+            "• Functional Components: Biometrics (Face ID / fingerprint sensor), main and ultra-wide cameras, microphones, and charging ports must pass diagnostic inspection.",
+            "• Physical Body Condition: Minor hairline scratches from everyday pocket use are treated as normal wear, whereas deep dents on metal chassis lower aesthetic grades.",
+            "• Original Accessories & GST Invoice: Having the original box, charging cable, and a valid purchase bill adds up to ₹1,500 extra value."
+          ]
+        },
+        {
+          heading: "2. How CashALL's Instant Price Calculator Operates",
+          body: [
+            "CashALL eliminates guesswork by using a dynamic algorithmic pricing model trained on thousands of weekly transactions across eastern and northern India.",
+            "When you select your phone on CashALL, our system checks live secondary market supply and demand curves, ensuring you receive the true market clearing rate rather than arbitrary offline dealer discounts.",
+            "Best of all, your online valuation is locked for the scheduled pickup window, meaning no surprise renegotiations on your doorstep."
+          ],
+          callout: {
+            title: "Zero Hidden Convenience Fees",
+            text: "Unlike other platforms that deduct ₹99 to ₹199 doorstep inspection fees from your final payment, CashALL guarantees ₹0 pickup and cancellation charges.",
+            type: "highlight"
+          }
+        },
+        {
+          heading: "3. 2026 Second Hand Mobile Price Benchmarks",
+          body: [
+            "Here is the average realistic resale value retention across major smartphone categories after 1 to 2 years of use:"
+          ],
+          table: {
+            headers: ["Device Tier", "Typical Retention (Year 1)", "Typical Retention (Year 2)", "Key Resale Factor"],
+            rows: [
+              ["Apple iPhone Flagships", "65% - 75%", "50% - 60%", "Long software support & brand prestige"],
+              ["Samsung Galaxy S Series", "55% - 65%", "40% - 48%", "Camera zoom capabilities & Galaxy AI"],
+              ["OnePlus & Premium Android", "50% - 60%", "35% - 42%", "Fast charging & clean performance"],
+              ["Budget / Mid-Range (₹15k-₹25k)", "40% - 50%", "25% - 32%", "High volume market saturation"]
+            ]
+          }
+        },
+        {
+          heading: "4. Step-by-Step Guide to Calculating Your Phone Price",
+          body: [
+            "1. Visit https://www.cashall.in/sell/mobile and pick your brand (Apple, Samsung, OnePlus, Xiaomi, Vivo, etc.).",
+            "2. Select your exact model and storage capacity (e.g., iPhone 15 128GB or Galaxy S24 Ultra 256GB).",
+            "3. Answer straightforward condition questions regarding screen, body, and operational status.",
+            "4. Receive your guaranteed quote instantly and schedule a doorstep pickup at your preferred date and time."
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: "Can I use the price calculator for broken or damaged phones?",
+          answer: "Yes! CashALL evaluates phones in any state, including cracked screens, non-working buttons, or dead motherboards, calculating component salvage value."
+        },
+        {
+          question: "Does CashALL charge any fee to calculate my phone price?",
+          answer: "No, the online price calculator is 100% free with no obligation to book a pickup."
+        },
+        {
+          question: "When is the money paid to my account?",
+          answer: "Payment is transferred via UPI (Google Pay, PhonePe, Paytm) or IMPS bank transfer on the spot during pickup, before our agent takes custody of your phone."
+        }
+      ]
+    }
+  },
+  {
+    slug: "sell-old-phone-online-doorstep-cash-vs-mobile-shop-near-me",
+    title: "Sell Old Phone Online: Free Doorstep Pickup vs Local Mobile Shop Near Me",
+    subtitle: "Should you sell your old smartphone to an offline shop down the road or use an online buyback platform? Here is the honest comparison.",
+    excerpt: "Compare selling your old phone at a local mobile shop near you versus CashALL's free doorstep pickup with instant UPI payment and certified data wipe.",
+    category: "Resale Insights",
+    readTime: "5 min read",
+    publishedAt: "2026-10-02",
+    updatedAt: "2026-10-09",
+    author: {
+      name: "CashALL Market Team",
+      role: "Recommerce Field Director",
+      avatar: "C"
+    },
+    tags: [
+      "Sell Old Phone",
+      "Mobile Shop Near Me",
+      "Second Hand Mobile Shop Near Me",
+      "Cash for Phone",
+      "Sell Used Phone Online",
+      "Sell Old Phone Near Me",
+      "Doorstep Pickup",
+      "Sell Old Phone Ranchi",
+      "Sell Old Phone Kolkata"
+    ],
+    aeoQuickAnswer: {
+      question: "Is it better to sell an old phone online or to a local mobile shop near me?",
+      answer: "Selling your old phone online through CashALL is safer, faster, and more profitable than visiting a local mobile shop. CashALL offers free 24-hour doorstep pickup, up to 5% higher cash payouts, certified NIST 800-88 on-site data wiping, an official digital Bill of Sale, and instant UPI bank transfer before handover. Offline mobile shops often cut quotes significantly to protect retail markups and lack legal transfer documents.",
+      keyTakeaway: "Online doorstep recommerce removes offline dealer haggling, personal security risks, and hidden deductions."
+    },
+    geoInsights: {
+      region: "Ranchi, Kolkata, Howrah, Gorakhpur, Ballia & Patna",
+      trendHeadline: "Doorstep Buyback Expansion Across Key Urban Corridors",
+      insight: "With CashALL's express fleets now active across Ranchi, Kolkata, and UP, customers avoid traveling to crowded retail hubs like Chadni Chowk Kolkata or Main Road Ranchi."
+    },
+    content: {
+      intro: "Whenever it is time to upgrade to a new phone, most people face a dilemma: Should I walk over to the local mobile phone shop near me, or sell my phone online? While visiting a neighborhood store used to be the default choice, transparent doorstep recommerce services like CashALL have transformed the experience.",
+      sections: [
+        {
+          heading: "1. The Hidden Downsides of Selling to Offline Mobile Shops",
+          body: [
+            "Walking into an offline mobile shop near you often involves unexpected hurdles:",
+            "• Subjective Lowball Offers: Offline dealers do not have algorithmic pricing. They quote conservatively low prices to ensure large retail profit margins when reselling.",
+            "• Aggressive Price Cuts: A minor surface scuff that costs nothing to polish is often used as leverage to slash your payout by 30% to 40%.",
+            "• Zero Legal Indemnification: Most local dealers hand you cash without a proper GST Bill of Sale. If that phone is later resold or misused, your IMEI remains registered to your identity, creating legal exposure.",
+            "• Incomplete Data Sanitation: A basic manual factory reset can sometimes leave remnants of user data recoverable with specialized forensic tools."
+          ]
+        },
+        {
+          heading: "2. Why Online Doorstep Recommerce with CashALL is Superior",
+          body: [
+            "CashALL was built to solve every single frustration associated with traditional phone selling:",
+            "• Locked Transparent Valuations: Answer simple condition questions on cashall.in to lock your guaranteed quote.",
+            "• Free Home Pickup: You never have to travel in traffic or wait in retail queues. Our verified agent comes directly to your home or office.",
+            "• NIST 800-88 Data Sanitization: Our field executive assists you with an international standard data wipe before packing the device.",
+            "• Instant UPI Payment: Funds are transferred via Google Pay, PhonePe, or direct bank transfer on the spot. Handover only happens once money is in your account.",
+            "• Official Digital Bill of Sale: You receive a legal, digitally signed GST document that officially transfers ownership and protects you from any future liability."
+          ]
+        },
+        {
+          heading: "3. Direct Comparison: CashALL vs Local Mobile Shops",
+          body: [
+            "Here is how CashALL stacks up against traditional brick-and-mortar stores:"
+          ],
+          table: {
+            headers: ["Feature", "CashALL Online Doorstep", "Local Mobile Shop Near You"],
+            rows: [
+              ["Doorstep Convenience", "100% Free (At your home/office)", "Requires traveling and waiting in store"],
+              ["Price Calculation", "Algorithmic & Transparent", "Arbitrary dealer bargaining"],
+              ["Doorstep Pickup Fee", "₹0 Free", "N/A"],
+              ["Payment Speed", "Instant UPI Before Handover", "Cash (often short on exact change)"],
+              ["Data Security", "Certified NIST 800-88 Wipe", "Basic manual reset"],
+              ["Legal Protection", "Official GST Bill of Sale", "Rarely provided"]
+            ]
+          }
+        },
+        {
+          heading: "4. Where is CashALL Doorstep Pickup Available?",
+          body: [
+            "CashALL operates active doorstep pickup teams across 240+ verified postal codes:",
+            "• West Bengal: Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, and New Town.",
+            "• Jharkhand: Ranchi (Main Road, Station, Harmu Road, Kanke, Doranda).",
+            "• Bihar: Patna (Central, Kankarbagh, Boring Road, Danapur).",
+            "• Uttar Pradesh: Gorakhpur (Golghar, Medical College) and Ballia."
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: "What documents do I need to sell my phone on CashALL?",
+          answer: "You only need a valid government-issued photo ID (such as an Aadhaar Card, PAN Card, Voter ID, or Driving License) for ownership verification."
+        },
+        {
+          question: "Can I cancel my pickup if I change my mind?",
+          answer: "Yes, you can reschedule or cancel anytime with ₹0 cancellation fees."
+        },
+        {
+          question: "Is there any cash handling fee or inspection fee?",
+          answer: "No. CashALL charges zero convenience fees and zero inspection charges. The price agreed upon is the exact amount transferred to your bank."
+        }
+      ]
+    }
   }
 ];

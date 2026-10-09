@@ -91,5 +91,21 @@ export const TECH_NEWS: TechNewsItem[] = [
       "Sellers love the fact that they don't have to waste time traveling or arguing over prices. A trained technician comes to their address, checks the phone, and sends payment directly to their bank account.",
       "CashALL covers all of Kolkata, Howrah, and nearby areas with fast same-day appointments."
     ]
+  },
+  {
+    id: "news-6",
+    slug: "second-hand-mobile-price-calculators-gain-massive-traction-in-ranchi-and-patna",
+    title: "Second Hand Mobile Price Calculators Surge in Popularity Across Eastern India",
+    excerpt: "Sellers in Ranchi, Patna, and Kolkata now rely on instant online price checks and free doorstep pickup, bypassing traditional offline bargaining.",
+    source: "Recommerce India Wire",
+    publishedAt: "2026-10-08",
+    category: "Market Trends",
+    readTime: "3 min read",
+    trending: true,
+    content: [
+      "Consumers in Tier-1 and Tier-2 hubs like Ranchi, Patna, and Kolkata are rapidly embracing automated price calculators to determine the fair resale value of used mobile phones.",
+      "Rather than negotiating with multiple offline dealers on Main Road or Fraser Road, sellers enter device details online to lock guaranteed valuations with ₹0 convenience deductions.",
+      "CashALL's expansion of free doorstep inspection with on-the-spot UPI bank transfers has accelerated this shift, creating a secure, legal alternative to informal classified ads."
+    ]
   }
 ];

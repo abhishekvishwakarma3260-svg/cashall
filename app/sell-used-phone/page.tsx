@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sell Used Phone Online | Highest Cash Payout & Free Doorstep Pickup | CashALL",
+  title: "Sell Used Phone Online | Second Hand Mobile Price Calculator & Doorstep Cash | CashALL",
   description:
-    "Sell your used phone online at CashALL for the highest market price. Instant quote in 60 seconds, free doorstep pickup in 24 hours, zero hidden deductions, and direct UPI payout before handover.",
+    "Sell your used phone online at CashALL for the highest market price. Instant quote in 60 seconds with our second hand mobile price calculator, free doorstep pickup in 24 hours, zero hidden deductions, and direct UPI payout before handover.",
   keywords: [
     "sell used phone",
     "sell used phone online",
@@ -31,23 +31,35 @@ export const metadata: Metadata = {
     "sell my phone",
     "old phone sell online",
     "sell old phone online",
-    "how to sell old phone",
-    "where can i sell my old phone",
-    "best website to sell old phone",
-    "best buyback platform alternative",
-    "apple trade in alternative",
-    "online exchange alternative",
-    "sell iphone online",
-    "sell samsung phone online",
-    "sell oneplus online",
+    "second hand mobile",
+    "2nd hand mobile phones",
+    "used second hand mobile",
+    "2 hand mobile phone",
+    "mobile price",
+    "mobile resale value calculator",
+    "used phone price calculator",
+    "second hand mobile price check",
+    "phone valuation tool online",
     "sell old phone near me",
-    "cash for phone"
+    "second hand mobile shop near me",
+    "cash for phone",
+    "refurbished mobiles",
+    "second hand iphone",
+    "sold old phone",
+    "old sell phone",
+    "sell old handset",
+    "sell old phone Ranchi",
+    "sell old phone Kolkata",
+    "sell old phone Patna",
+    "sell old phone Gorakhpur",
+    "best buyback platform alternative",
+    "apple trade in alternative"
   ],
   alternates: {
     canonical: "https://www.cashall.in/sell-used-phone",
   },
   openGraph: {
-    title: "Sell Used Phone Online for Instant Cash | CashALL",
+    title: "Sell Used Phone Online for Instant Cash | Second Hand Mobile Price Check | CashALL",
     description:
       "Get up to 5% higher valuation for your used phone. Free doorstep evaluation, certified data wiping, zero hidden charges, and instant UPI payment.",
     url: "https://www.cashall.in/sell-used-phone",
@@ -76,12 +88,20 @@ const SERVICE_REGIONS = [
 
 const FAQS = [
   {
+    q: "How does CashALL's second hand mobile price calculator work?",
+    a: "Our algorithmic price calculator evaluates your phone's exact brand, model, storage, screen status, battery wear, and camera functionality against live secondary market demand. You get a transparent, locked quote in under 60 seconds with ₹0 pickup fees and zero surprise deductions at your doorstep."
+  },
+  {
     q: "How can I sell my used phone online on CashALL?",
     a: "Selling your used phone takes 3 simple steps: 1) Select your brand and model, 2) Answer a few quick condition questions to get an instant guaranteed quote, and 3) Schedule a free doorstep pickup. Our field executive inspects the phone at your home and transfers cash to your UPI or bank account before taking the device."
   },
   {
     q: "Why should I choose CashALL over other brands or exchange programs?",
     a: "Unlike other brands and aggregators, CashALL charges ₹0 pickup fees (no ₹99–₹199 convenience charges), offers up to 5% higher base valuations, conducts transparent on-the-spot physical inspection without arbitrary quote-halving, and pays you full cash directly instead of delayed gift cards or exchange vouchers."
+  },
+  {
+    q: "Can I sell my used phone in Ranchi, Patna, Kolkata, and UP?",
+    a: "Yes! CashALL offers free doorstep pickup across Kolkata, Howrah, Hooghly, Barrackpore, Ranchi (Jharkhand), Patna (Bihar), Gorakhpur (UP), and Ballia (UP). Our agent visits your address, inspects your device, and makes payment immediately."
   },
   {
     q: "Is CashALL safe? What happens to my private data?",
@@ -124,8 +144,10 @@ export default function SellUsedPhonePage() {
     "areaServed": [
       { "@type": "City", "name": "Kolkata" },
       { "@type": "City", "name": "Howrah" },
+      { "@type": "City", "name": "Ranchi" },
+      { "@type": "City", "name": "Patna" },
       { "@type": "City", "name": "Gorakhpur" },
-      { "@type": "City", "name": "Patna" }
+      { "@type": "City", "name": "Ballia" }
     ],
     "description": "Sell your used smartphone online for highest cash value with free 24h doorstep pickup."
   };
@@ -434,6 +456,39 @@ export default function SellUsedPhonePage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* POPULAR SEARCHES & VALUATION DIRECTORY */}
+          <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4">
+            <h3 className="text-base font-black text-brand-black flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-brand-yellow" />
+              <span>Popular Second Hand Mobile &amp; Valuation Searches</span>
+            </h3>
+            <div className="flex flex-wrap gap-2 text-xs">
+              {[
+                { label: "Second Hand Mobile Price Check", href: "/sell/mobile" },
+                { label: "Used Phone Price Calculator", href: "/sell/mobile" },
+                { label: "Sell Old Phone Online", href: "/sell-used-phone" },
+                { label: "Cash for Phone", href: "/sell/mobile" },
+                { label: "2nd Hand Mobile Phones", href: "/sell/mobile" },
+                { label: "Sell Old Phone Ranchi", href: "/sell/mobile" },
+                { label: "Sell Old Phone Kolkata", href: "/sell-phone-in-kolkata" },
+                { label: "Sell Old Phone Howrah", href: "/sell-phone-in-howrah" },
+                { label: "Sell Old Phone Gorakhpur", href: "/sell-phone-in-gorakhpur" },
+                { label: "Sell iPhone Online", href: "/sell/mobile/apple" },
+                { label: "Sell Samsung Galaxy", href: "/sell/mobile/samsung" },
+                { label: "Refurbished Mobiles Valuation", href: "/sell/mobile" },
+                { label: "Mobile Resale Value Calculator", href: "/sell/mobile" },
+              ].map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className="px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-brand-yellow hover:text-brand-black text-neutral-700 font-bold transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* FINAL CTA */}

@@ -159,6 +159,12 @@ Resale prices range from ₹1,000 for older budget smartphones up to ₹1,00,000
 #### Why do some iPhones retain value while Android phones drop faster?
 Apple maintains a closed ecosystem, releases only one flagship series per year, and offers 5 to 7 years of iOS security updates. Android manufacturers release dozens of models annually, resulting in faster supply saturation and steeper price depreciation.
 
+#### How does the second-hand mobile price calculator work on CashALL?
+CashALL's online price calculator at https://www.cashall.in/sell-used-phone computes real-time device value in under 60 seconds. It benchmarks model, storage, screen status, battery wear, and physical housing against live market supply/demand, providing a guaranteed quote with ₹0 pickup fees.
+
+#### Is it better to sell to a local second-hand mobile shop near me or use CashALL?
+Selling via CashALL is faster, safer, and yields up to 5% higher payouts. CashALL sends a verified technician to your home across Kolkata, Howrah, Hooghly, Barrackpore, Ranchi, Patna, and Gorakhpur/Ballia for free, performs certified NIST 800-88 data sanitization on-site, transfers instant UPI funds directly to your account before handover, and provides a legally binding GST Bill of Sale. Offline stores lack legal indemnification and frequently deduct 30-40% for minor cosmetic flaws.
+
 #### How much does phone condition affect price?
 - **Flawless / Pristine:** 100% of base market value.
 - **Good (light micro-wear):** 90% – 95% of base value.

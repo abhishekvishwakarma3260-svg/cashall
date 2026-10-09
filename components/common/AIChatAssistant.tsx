@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import {
   X,
@@ -225,6 +226,7 @@ const DEFAULT_PRESET_QUESTIONS = [
 ];
 
 export function AIChatAssistant() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -245,6 +247,17 @@ export function AIChatAssistant() {
       messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages, isOpen, isTyping]);
+
+  // Strict: The bot agent should ONLY be on customer pages, never on admin, agent, or partner portal pages
+  const isCustomerPage =
+    Boolean(pathname) &&
+    !pathname?.startsWith("/admin") &&
+    !pathname?.startsWith("/agent") &&
+    !pathname?.startsWith("/partner");
+
+  if (!isCustomerPage) {
+    return null;
+  }
 
   const findBestResponse = (query: string) => {
     const clean = query.toLowerCase().trim();
