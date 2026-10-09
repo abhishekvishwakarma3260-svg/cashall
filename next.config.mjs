@@ -165,6 +165,11 @@ const nextConfig = {
         destination: '/compare/cashall-vs-other-platforms',
         permanent: true,
       },
+      {
+        source: '/site.xml',
+        destination: '/sitemap.xml',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

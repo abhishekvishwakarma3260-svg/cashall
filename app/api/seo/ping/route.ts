@@ -10,6 +10,7 @@ export async function GET() {
   const urls = [
     `https://${host}/`,
     `https://${host}/sell`,
+    `https://${host}/sell-used-phone`,
     `https://${host}/sell/mobile`,
     `https://${host}/sell/laptop`,
     `https://${host}/sell/tablet`,
@@ -21,6 +22,8 @@ export async function GET() {
     `https://${host}/faq`,
     `https://${host}/reviews`,
     `https://${host}/blog`,
+    `https://${host}/blog/second-hand-mobile-price-check-calculator-guide`,
+    `https://${host}/blog/sell-old-phone-online-doorstep-cash-vs-mobile-shop-near-me`,
     `https://${host}/news`,
     `https://${host}/articles`,
     `https://${host}/llms.txt`,

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { INITIAL_MODELS, INITIAL_BRANDS } from "@/lib/store";
+import { BLOG_POSTS } from "@/lib/data/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.cashall.in";
@@ -272,11 +273,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  // Blog Article Pages (AEO & GEO Pillars)
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt || now),
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
   return [
     ...staticPages,
     ...mobileBrandPages,
     ...laptopBrandPages,
     ...tabletBrandPages,
+    ...blogPages,
     ...modelPages,
   ];
 }
