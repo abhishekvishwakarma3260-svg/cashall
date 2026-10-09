@@ -330,6 +330,9 @@ export default function RootLayout({
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Knowledge Base" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Knowledge Reference" />
+        <link rel="author" href="/humans.txt" />
+        <link rel="help" href="/llms.txt" />
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="CashALL Search" />
       </head>
       <body className="bg-brand-bg text-brand-black min-h-screen font-sans antialiased">
         <Script

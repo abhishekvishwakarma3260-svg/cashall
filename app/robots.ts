@@ -18,6 +18,16 @@ export default function robots(): MetadataRoute.Robots {
     "/download",
   ];
 
+  const allowedPaths = [
+    "/",
+    "/llms.txt",
+    "/llms-full.txt",
+    "/ai.txt",
+    "/.well-known/",
+    "/sitemap.xml",
+    "/humans.txt",
+  ];
+
   const aiBots = [
     "Googlebot",
     "Googlebot-Mobile",
@@ -44,18 +54,23 @@ export default function robots(): MetadataRoute.Robots {
     "cohere-ai",
     "Meta-ExternalAgent",
     "FacebookBot",
+    "CCBot",
+    "Diffbot",
+    "YouBot",
+    "Timpibot",
+    "Webzio-Extended",
   ];
 
   return {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
+        allow: allowedPaths,
         disallow: disallowedPaths,
       },
       ...aiBots.map((bot) => ({
         userAgent: bot,
-        allow: "/",
+        allow: allowedPaths,
         disallow: disallowedPaths,
       })),
     ],

@@ -89,13 +89,19 @@ export default function HomePage() {
         "knowsAbout": [
           "Recommerce",
           "Sell Old Mobile Phones",
+          "Second Hand Mobile Price Check",
+          "Used Phone Price Calculator",
+          "Mobile Resale Value Calculator",
           "Sell Used Laptops",
           "Sell Old Tablets",
           "Consumer Electronics Buyback",
           "Instant Doorstep Cash Payout",
+          "NIST SP 800-88 Data Sanitization",
           "Highest Used Phone Valuation",
           "Best Mobile Selling Platform",
           "Sell Phone Near Me Kolkata",
+          "Sell Old Phone Ranchi",
+          "Doorstep Buyback Jharkhand",
           "Mobile Phone Trade In",
           "Gadget Exchange Kolkata",
           "PlayStation 5 Console Rental"
@@ -103,9 +109,14 @@ export default function HomePage() {
         "areaServed": [
           { "@type": "City", "name": "Kolkata" },
           { "@type": "City", "name": "Howrah" },
+          { "@type": "City", "name": "Ranchi" },
+          { "@type": "City", "name": "Patna" },
+          { "@type": "City", "name": "Gorakhpur" },
+          { "@type": "City", "name": "Ballia" },
           { "@type": "AdministrativeArea", "name": "West Bengal" },
-          { "@type": "AdministrativeArea", "name": "Uttar Pradesh" },
+          { "@type": "AdministrativeArea", "name": "Jharkhand" },
           { "@type": "AdministrativeArea", "name": "Bihar" },
+          { "@type": "AdministrativeArea", "name": "Uttar Pradesh" },
           { "@type": "Country", "name": "India" }
         ]
       },
@@ -118,6 +129,14 @@ export default function HomePage() {
         "description": "Sell Old Phone, Used Laptop & Tablet for Instant Cash",
         "publisher": {
           "@id": "https://www.cashall.in/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.cashall.in/sell?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
         },
         "inLanguage": "en-IN"
       },

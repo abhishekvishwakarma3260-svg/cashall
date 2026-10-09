@@ -170,6 +170,11 @@ const nextConfig = {
         destination: '/sitemap.xml',
         permanent: true,
       },
+      {
+        source: '/robot.txt',
+        destination: '/robots.txt',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
