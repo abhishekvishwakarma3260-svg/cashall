@@ -7,22 +7,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const AD_SLIDES = [
   {
     id: 1,
-    image: "/photos/advertise1.png",
+    image: "/photos/advertise1.webp",
     alt: "CashALL Best Price Guarantee - Old Devices Real Value Instant Cash",
   },
   {
     id: 2,
-    image: "/photos/advetise2.png",
+    image: "/photos/advetise2.webp",
     alt: "CashALL Instant Doorstep Cash - Old Devices Sitting Idle Turn Them Into Cash",
   },
   {
     id: 3,
-    image: "/photos/advetise3.png",
+    image: "/photos/advetise3.webp",
     alt: "CashALL Transparent Pricing & Zero Deductions",
   },
   {
     id: 4,
-    image: "/photos/advertise4.png",
+    image: "/photos/advertise4.webp",
     alt: "CashALL Fast Doorstep Pickup & Direct Payout",
   },
 ];

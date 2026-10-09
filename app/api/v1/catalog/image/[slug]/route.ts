@@ -104,30 +104,13 @@ export async function GET(
     }
   }
 
-  try {
-    const upstreamRes = await fetch(targetUrl, {
+  if (targetUrl) {
+    return NextResponse.redirect(targetUrl, {
+      status: 308,
       headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
       },
-      next: { revalidate: 2592000 },
     });
-
-    if (upstreamRes.ok) {
-      const buffer = await upstreamRes.arrayBuffer();
-      const contentType = upstreamRes.headers.get("content-type") || "image/jpeg";
-
-      return new NextResponse(buffer, {
-        status: 200,
-        headers: {
-          "Content-Type": contentType,
-          "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
-          "X-Content-Type-Options": "nosniff",
-        },
-      });
-    }
-  } catch (err) {
-    console.warn(`Upstream image fetch failed for ${slug}:`, err);
   }
 
   // Graceful SVG fallback

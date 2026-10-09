@@ -66,7 +66,7 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
           "name": "CashALL",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cashall.in/photos/CashALL_logo.png"
+            "url": "https://www.cashall.in/photos/CashALL_logo.webp"
           }
         },
         "mainEntityOfPage": {

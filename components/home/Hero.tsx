@@ -221,11 +221,11 @@ export function Hero() {
       
       {/* AMBIENT BRAND LIGHTING ACCENTS */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 bg-[url('/photos/CashALL_brand_pattern.png')] bg-cover bg-center opacity-5 pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/photos/CashALL_brand_pattern.webp')] bg-cover bg-center opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
         
-        {/* MINIMALIST HERO SLIDER (Cashify-Style Sleek Dark Banner) */}
+        {/* MINIMALIST HERO SLIDER (Sleek Dark Banner) */}
         <div
           className="relative overflow-hidden rounded-3xl border border-neutral-800/80 bg-gradient-to-r from-neutral-950 via-stone-950 to-neutral-950 shadow-2xl"
           onMouseEnter={() => setIsPaused(true)}

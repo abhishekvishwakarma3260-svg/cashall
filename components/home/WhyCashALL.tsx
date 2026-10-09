@@ -106,7 +106,7 @@ export function WhyCashALL() {
             {/* RIGHT PROMOTIONAL IMAGE */}
             <div className="relative h-64 md:h-full min-h-[280px] bg-neutral-900 overflow-hidden">
               <Image
-                src="/photos/CashALL_yt_banner.png"
+                src="/photos/CashALL_yt_banner.webp"
                 alt="CashALL Promotional Banner"
                 fill
                 className="object-cover object-center"

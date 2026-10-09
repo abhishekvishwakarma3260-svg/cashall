@@ -21,33 +21,14 @@ export async function GET(
     return new NextResponse("Asset ID required", { status: 400 });
   }
 
-  // Fetch from upstream server-side without client knowing
   const targetUrl = `https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/${id}`;
 
-  try {
-    const upstreamRes = await fetch(targetUrl, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-      },
-      next: { revalidate: 2592000 },
-    });
-
-    if (upstreamRes.ok) {
-      const buffer = await upstreamRes.arrayBuffer();
-      const contentType = upstreamRes.headers.get("content-type") || (id.endsWith(".png") ? "image/png" : "image/jpeg");
-
-      return new NextResponse(buffer, {
-        status: 200,
-        headers: {
-          "Content-Type": contentType,
-          "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
-          "X-Content-Type-Options": "nosniff",
-        },
-      });
-    }
-  } catch (err) {
-    console.warn(`Upstream asset fetch failed for ${id}:`, err);
-  }
+  return NextResponse.redirect(targetUrl, {
+    status: 308,
+    headers: {
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    },
+  });
 
   return new NextResponse(FALLBACK_ICON_SVGS.default, {
     status: 200,
