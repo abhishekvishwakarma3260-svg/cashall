@@ -256,6 +256,49 @@ export default function AgentDashboardPage() {
   const agentSessionRef = useRef<any>(null);
   agentSessionRef.current = agentSession;
 
+  const handleCallCustomer = useCallback((customerPhone: string, customerName?: string, deviceName?: string, orderNumber?: string) => {
+    const cleanPhone = (customerPhone || "").trim();
+    if (!cleanPhone) return;
+
+    // 1. Launch native dialer or web tel: protocol
+    if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
+      try {
+        (window as any).CashAllAgentNative.callCustomer(
+          cleanPhone,
+          customerName || "Customer",
+          deviceName || "Mobile Device",
+          orderNumber || ""
+        );
+      } catch (e) {
+        window.location.href = `tel:${cleanPhone}`;
+      }
+    } else {
+      window.location.href = `tel:${cleanPhone}`;
+    }
+
+    // 2. Immediately register call timestamp in backend (JSON payload)
+    try {
+      fetch("/api/v1/support/recordings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          role: "AGENT",
+          actorRole: "AGENT",
+          callType: "AGENT_PICKUP_CALL",
+          supportPersonName: agentSessionRef.current?.name || agentSession?.name || "Field Agent",
+          supportPersonPhone: agentSessionRef.current?.phone || agentSession?.phone || "",
+          customerPhone: cleanPhone,
+          customerName: customerName || "Customer",
+          deviceName: deviceName || "Mobile Device",
+          quoteId: orderNumber || "",
+          callNotes: "Agent called customer via CashALL Agent App",
+        }),
+      }).catch((err) => {
+        console.warn("Call log upload failed:", err);
+      });
+    } catch (e) {}
+  }, [agentSession]);
+
   const fetchOrders = useCallback(async (isSilent = false) => {
     const session = agentSessionRef.current;
     const agentId = session?.id || "";
@@ -1007,39 +1050,7 @@ export default function AgentDashboardPage() {
                       <div className="flex flex-wrap items-center gap-2 pt-0.5">
                         <button
                           type="button"
-                          onClick={() => {
-                            // 1. Launch native dialer / phone call
-                            if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
-                              (window as any).CashAllAgentNative.callCustomer(
-                                ord.customerPhone,
-                                ord.customerName || "Customer",
-                                ord.deviceName || "Mobile Device",
-                                ord.orderNumber || ord.id
-                              );
-                            } else {
-                              window.location.href = `tel:${ord.customerPhone}`;
-                            }
-
-                            // 2. Immediately register call timestamp in backend
-                            try {
-                              fetch("/api/v1/support/recordings", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({
-                                  role: "AGENT",
-                                  actorRole: "AGENT",
-                                  callType: "AGENT_PICKUP_CALL",
-                                  supportPersonName: agentSession?.name || "Field Agent",
-                                  supportPersonPhone: agentSession?.phone || "",
-                                  customerPhone: ord.customerPhone,
-                                  customerName: ord.customerName || "Customer",
-                                  deviceName: ord.deviceName || "Mobile Device",
-                                  quoteId: ord.orderNumber || ord.id,
-                                  callNotes: "Agent called customer via CashALL Agent App",
-                                }),
-                              }).catch(() => {});
-                            } catch (e) {}
-                          }}
+                          onClick={() => handleCallCustomer(ord.customerPhone, ord.customerName, ord.deviceName, ord.orderNumber || ord.id)}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-sm transition active:scale-95 cursor-pointer"
                           title="Call customer and log call date & time"
                         >
@@ -1049,15 +1060,8 @@ export default function AgentDashboardPage() {
                         <a
                           href={`tel:${ord.customerPhone}`}
                           onClick={(e) => {
-                            if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
-                              e.preventDefault();
-                              (window as any).CashAllAgentNative.callCustomer(
-                                ord.customerPhone,
-                                ord.customerName || "Customer",
-                                ord.deviceName || "Mobile Device",
-                                ord.orderNumber || ord.id
-                              );
-                            }
+                            e.preventDefault();
+                            handleCallCustomer(ord.customerPhone, ord.customerName, ord.deviceName, ord.orderNumber || ord.id);
                           }}
                           className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-300 hover:text-white transition"
                         >
@@ -1357,37 +1361,12 @@ export default function AgentDashboardPage() {
                       if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.stopAlarm) {
                         (window as any).CashAllAgentNative.stopAlarm();
                       }
-                      // 1. Launch native dialer / phone call
-                      if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.callCustomer) {
-                        (window as any).CashAllAgentNative.callCustomer(
-                          activeAlertLead.customerPhone,
-                          activeAlertLead.customerName || "Customer",
-                          activeAlertLead.deviceName || "Mobile Device",
-                          activeAlertLead.orderNumber || activeAlertLead.id
-                        );
-                      } else {
-                        window.location.href = `tel:${activeAlertLead.customerPhone}`;
-                      }
-
-                      // 2. Immediately register call timestamp in backend
-                      try {
-                        fetch("/api/v1/support/recordings", {
-                          method: "POST",
-                          headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify({
-                            role: "AGENT",
-                            actorRole: "AGENT",
-                            callType: "AGENT_PICKUP_CALL",
-                            supportPersonName: agentSession?.name || "Field Agent",
-                            supportPersonPhone: agentSession?.phone || "",
-                            customerPhone: activeAlertLead.customerPhone,
-                            customerName: activeAlertLead.customerName || "Customer",
-                            deviceName: activeAlertLead.deviceName || "Mobile Device",
-                            quoteId: activeAlertLead.orderNumber || activeAlertLead.id,
-                            callNotes: "Agent called customer via CashALL Agent App",
-                          }),
-                        }).catch(() => {});
-                      } catch (e) {}
+                      handleCallCustomer(
+                        activeAlertLead.customerPhone,
+                        activeAlertLead.customerName,
+                        activeAlertLead.deviceName,
+                        activeAlertLead.orderNumber || activeAlertLead.id
+                      );
                     }}
                     className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] cursor-pointer shadow-sm active:scale-95 transition"
                     title="Call customer and log call date & time"
@@ -1395,7 +1374,24 @@ export default function AgentDashboardPage() {
                     <PhoneCall className="w-3 h-3" />
                     <span>Call Customer</span>
                   </button>
-                  <a href={`tel:${activeAlertLead.customerPhone}`} className="font-bold text-yellow-400 hover:underline">
+                  <a
+                    href={`tel:${activeAlertLead.customerPhone}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      buzzerAlarm.stop();
+                      setIsAlarmSounding(false);
+                      if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.stopAlarm) {
+                        (window as any).CashAllAgentNative.stopAlarm();
+                      }
+                      handleCallCustomer(
+                        activeAlertLead.customerPhone,
+                        activeAlertLead.customerName,
+                        activeAlertLead.deviceName,
+                        activeAlertLead.orderNumber || activeAlertLead.id
+                      );
+                    }}
+                    className="font-bold text-yellow-400 hover:underline"
+                  >
                     {activeAlertLead.customerPhone}
                   </a>
                 </div>

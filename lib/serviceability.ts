@@ -76,6 +76,11 @@ export const PATNA_PINCODES: string[] = [
   "800003"
 ];
 
+// 8. Ranchi, Jharkhand (3 PIN codes)
+export const RANCHI_PINCODES: string[] = [
+  "834001", "834002", "834003"
+];
+
 export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
   {
     id: "dist-kolkata",
@@ -126,6 +131,13 @@ export const SERVICEABLE_DISTRICTS: ServiceableDistrict[] = [
     count: PATNA_PINCODES.length,
     pincodes: PATNA_PINCODES,
   },
+  {
+    id: "dist-ranchi",
+    name: "Ranchi",
+    state: "Jharkhand",
+    count: RANCHI_PINCODES.length,
+    pincodes: RANCHI_PINCODES,
+  },
 ];
 
 // Specific locality metadata for corridor stations / hubs
@@ -147,6 +159,9 @@ export const NAMED_LOCALITIES: Record<string, string> = {
   "712235": "Konnagar",
   "712248": "Rishra",
   "712258": "Uttarpara",
+  "834001": "Main Road / Station",
+  "834002": "Harmu Road",
+  "834003": "Kanke / Morabadi",
 };
 
 // Fast lookup map for all serviceable pincodes (O(1) lookups)

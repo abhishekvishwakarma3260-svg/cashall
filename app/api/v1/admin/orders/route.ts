@@ -159,7 +159,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         createdAt: true,
       },
       orderBy: { createdAt: "desc" },
-      take: 200,
+      take: 500,
     });
 
     agentCalls = rawAgentLogs
@@ -186,6 +186,8 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     const customerPhoneDigits = (ord.user?.phone || ord.customerPhone || ord.address?.phone || "").replace(/\D/g, "").slice(-10);
     const quoteNumClean = (ord.quote?.quoteNumber || "").toUpperCase().trim();
 
+    const ordIdClean = (ord.id || "").toUpperCase().trim();
+
     const pickup = ord.pickups?.[0];
     const assignedPartner = pickup?.partner;
     const pickupNotes = (pickup?.notes && pickup.notes !== "Doorstep pickup order confirmed." && pickup.notes !== "Order synced to database automatically.")
@@ -201,39 +203,38 @@ export const GET = apiWrapper(async (req: NextRequest) => {
       agentName = pickupNotes;
     }
 
-    const hasAssignedAgent = Boolean(ord.agentId || ord.agent || (pickupNotes && pickupNotes !== "CashALL Logistics"));
-
     let agentCalled = false;
     let agentCalledAt: string | null = null;
     let agentCalledBy: string | null = null;
 
-    // Strict rule: An order can ONLY have an agent call if it is assigned to an agent
-    if (hasAssignedAgent) {
-      const matchedCall = agentCalls.find((c) => {
-        const matchesOrder =
-          (orderNumClean && c.orderNumber === orderNumClean) ||
-          (quoteNumClean && c.orderNumber === quoteNumClean) ||
-          (customerPhoneDigits && c.customerPhone && c.customerPhone === customerPhoneDigits);
+    const matchedCall = agentCalls.find((c) => {
+      const matchesOrder =
+        (orderNumClean && c.orderNumber === orderNumClean) ||
+        (quoteNumClean && c.orderNumber === quoteNumClean) ||
+        (ordIdClean && c.orderNumber === ordIdClean) ||
+        (customerPhoneDigits && c.customerPhone && (c.customerPhone === customerPhoneDigits || c.customerPhone.endsWith(customerPhoneDigits) || customerPhoneDigits.endsWith(c.customerPhone)));
 
-        if (!matchesOrder) return false;
+      if (!matchesOrder) return false;
 
-        // Ensure caller is not support staff
-        if (isSupportStaff(c.agentName, c.agentPhone)) return false;
+      // Ensure caller is not support staff
+      if (isSupportStaff(c.agentName, c.agentPhone)) return false;
 
-        // If assignedAgentName is available and call has a specific name, verify match
-        if (agentName && c.agentName && c.agentName !== "Field Agent") {
-          const cNameLower = c.agentName.toLowerCase();
-          const aNameLower = agentName.toLowerCase();
-          return cNameLower.includes(aNameLower) || aNameLower.includes(cNameLower);
-        }
+      // If assigned agent name is available (and not generic dummy), verify match if agent name is specific
+      if (agentName && agentName !== "CashALL Logistics" && c.agentName && c.agentName !== "Field Agent") {
+        const cNameLower = c.agentName.toLowerCase();
+        const aNameLower = agentName.toLowerCase();
+        return cNameLower.includes(aNameLower) || aNameLower.includes(cNameLower);
+      }
 
-        return true;
-      });
+      return true;
+    });
 
-      if (matchedCall) {
-        agentCalled = true;
-        agentCalledAt = matchedCall.calledAt;
-        agentCalledBy = matchedCall.agentName || agentName;
+    if (matchedCall) {
+      agentCalled = true;
+      agentCalledAt = matchedCall.calledAt;
+      agentCalledBy = matchedCall.agentName || agentName || "Field Agent";
+      if (!agentName) {
+        agentName = agentCalledBy;
       }
     }
     // Resolve deviceName: breakdownJson → variant→model chain → fallback

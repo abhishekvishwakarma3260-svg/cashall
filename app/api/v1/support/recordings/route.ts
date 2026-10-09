@@ -181,22 +181,57 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
-    const formData = await req.formData();
-    const audioFile = formData.get("audio") as File | null;
-    const supportPersonName = (formData.get("supportPersonName") as string) || "Support Staff";
-    const supportPersonPhone = (formData.get("supportPersonPhone") as string) || "";
-    const rawCustomerPhone = (formData.get("customerPhone") as string) || "";
+    const contentType = req.headers.get("content-type") || "";
+    let audioFile: File | null = null;
+    let supportPersonName = "Support Staff";
+    let supportPersonPhone = "";
+    let rawCustomerPhone = "";
+    let customerName = "";
+    let deviceName = "";
+    let quoteId = "";
+    let durationSeconds = 0;
+    let callOutcome = "CALL_COMPLETED";
+    let callNotes = "Recorded via CashALL Android Caller App.";
+    let callStartTime = new Date().toISOString();
+    let callEndTime = new Date().toISOString();
+    let roleInput = "";
+    let callType = "";
+
+    if (contentType.includes("application/json")) {
+      const json = await req.json().catch(() => ({}));
+      supportPersonName = json.supportPersonName || "Field Agent";
+      supportPersonPhone = json.supportPersonPhone || "";
+      rawCustomerPhone = json.customerPhone || "";
+      customerName = json.customerName || "";
+      deviceName = json.deviceName || "";
+      quoteId = json.quoteId || "";
+      durationSeconds = Number(json.durationSeconds) || 0;
+      callOutcome = json.callOutcome || "CALL_COMPLETED";
+      callNotes = json.callNotes || "Recorded via CashALL Agent App";
+      callStartTime = json.callStartTime || new Date().toISOString();
+      callEndTime = json.callEndTime || new Date().toISOString();
+      roleInput = (json.role || json.actorRole || "AGENT").toUpperCase();
+      callType = json.callType || "AGENT_PICKUP_CALL";
+    } else {
+      const formData = await req.formData();
+      audioFile = formData.get("audio") as File | null;
+      supportPersonName = (formData.get("supportPersonName") as string) || "Support Staff";
+      supportPersonPhone = (formData.get("supportPersonPhone") as string) || "";
+      rawCustomerPhone = (formData.get("customerPhone") as string) || "";
+      customerName = (formData.get("customerName") as string) || "";
+      deviceName = (formData.get("deviceName") as string) || "";
+      quoteId = (formData.get("quoteId") as string) || "";
+      durationSeconds = Number(formData.get("durationSeconds")) || 0;
+      callOutcome = (formData.get("callOutcome") as string) || "CALL_COMPLETED";
+      callNotes = (formData.get("callNotes") as string) || "Recorded via CashALL Android Caller App.";
+      callStartTime = (formData.get("callStartTime") as string) || new Date().toISOString();
+      callEndTime = (formData.get("callEndTime") as string) || new Date().toISOString();
+      roleInput = ((formData.get("role") as string) || (formData.get("actorRole") as string) || "").toUpperCase();
+      callType = (formData.get("callType") as string) || "";
+    }
+
     let customerPhone = rawCustomerPhone.trim();
     if (customerPhone.startsWith("+91")) customerPhone = customerPhone.replace("+91", "").trim();
-
-    let customerName = (formData.get("customerName") as string) || "";
-    let deviceName = (formData.get("deviceName") as string) || "";
-    let quoteId = (formData.get("quoteId") as string) || "";
-    const durationSeconds = Number(formData.get("durationSeconds")) || 0;
-    const callOutcome = (formData.get("callOutcome") as string) || "CALL_COMPLETED";
-    const callNotes = (formData.get("callNotes") as string) || "Recorded via CashALL Android Caller App.";
-    const callStartTime = (formData.get("callStartTime") as string) || new Date().toISOString();
-    const callEndTime = (formData.get("callEndTime") as string) || new Date().toISOString();
 
     // Automatic Quote & Customer Enrichment if not already provided
     const cleanDigits = customerPhone.replace(/\D/g, "").slice(-10);
@@ -314,11 +349,9 @@ export async function POST(req: NextRequest) {
     if (!deviceName) deviceName = "Mobile Device";
     if (!quoteId) quoteId = "N/A";
 
-    const roleInput = ((formData.get("role") as string) || (formData.get("actorRole") as string) || "").toUpperCase();
-
     const isAgent =
       roleInput === "AGENT" ||
-      formData.get("callType") === "AGENT_PICKUP_CALL" ||
+      callType === "AGENT_PICKUP_CALL" ||
       callNotes.toLowerCase().includes("field agent") ||
       callNotes.toLowerCase().includes("agent app") ||
       supportPersonName.toLowerCase().includes("arshad") ||

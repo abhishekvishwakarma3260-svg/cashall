@@ -74290,6 +74290,7 @@ export const INITIAL_SERVICE_STATES: string[] = [
   "West Bengal",
   "Uttar Pradesh",
   "Bihar",
+  "Jharkhand",
 ];
 
 const seenServicePins = new Set<string>();

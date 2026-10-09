@@ -68,6 +68,15 @@ const SERVICEABLE_STATES: ServiceableStateConfig[] = [
       { name: "Patna", tag: "Express Doorstep", pincodesSummary: "Patna Central Hub" },
     ],
   },
+  {
+    state: "Jharkhand",
+    badge: "Doorstep Pickup Active",
+    iconText: "JH",
+    description: "Ranchi Urban Corridors & City Hubs",
+    districts: [
+      { name: "Ranchi", tag: "Express Doorstep", pincodesSummary: "834001, 834002, 834003" },
+    ],
+  },
 ];
 
 export function LocationModal({

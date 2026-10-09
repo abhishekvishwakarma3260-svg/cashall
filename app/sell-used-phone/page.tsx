@@ -71,6 +71,7 @@ const SERVICE_REGIONS = [
   { state: "West Bengal", cities: "Kolkata, Howrah, Hooghly, Barrackpore", eta: "Within 2 to 4 Hours" },
   { state: "Uttar Pradesh", cities: "Gorakhpur, Ballia", eta: "Same Day / 24 Hours" },
   { state: "Bihar", cities: "Patna", eta: "Same Day / 24 Hours" },
+  { state: "Jharkhand", cities: "Ranchi", eta: "Same Day / 24 Hours" },
 ];
 
 const FAQS = [

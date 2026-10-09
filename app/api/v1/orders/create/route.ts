@@ -87,36 +87,6 @@ export async function POST(req: NextRequest) {
     const city = pinDetails.city;
     const state = pinDetails.state;
 
-    // Hard block any attempt to mention closed regions (Ranchi / Jharkhand)
-    const combinedAddressText = [
-      data.line1,
-      data.line2,
-      data.area,
-      data.city,
-      data.state,
-      body.city,
-      body.state,
-      body.address,
-      line1,
-      line2,
-    ].filter(Boolean).join(" ").toLowerCase();
-
-    if (
-      combinedAddressText.includes("jharkhand") ||
-      combinedAddressText.includes("ranchi") ||
-      combinedAddressText.includes("jamshedpur") ||
-      combinedAddressText.includes("dhanbad") ||
-      combinedAddressText.includes("bokaro") ||
-      combinedAddressText.includes("hazaribagh")
-    ) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "CashALL doorstep pickup operations in Ranchi & Jharkhand are permanently closed. Please provide an address in West Bengal, Bihar, or Gorakhpur/Ballia (UP).",
-        },
-        { status: 400 }
-      );
-    }
     const pickupDate = getRecordedPickupDate(data.pickupDate || "Tomorrow");
     const pickupTimeSlot = data.pickupTimeSlot ? String(data.pickupTimeSlot).trim() : "10 AM - 1 PM";
     const deviceName = cleanDeviceName(data.deviceName ? String(data.deviceName).trim() : "Customer Mobile Device");

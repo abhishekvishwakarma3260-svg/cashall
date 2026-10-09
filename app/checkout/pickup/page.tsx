@@ -806,9 +806,6 @@ function PickupCheckoutContent() {
                         <p className="text-xs text-red-700 mt-0.5 leading-relaxed">
                           Sorry! CashALL doorstep pickup is currently not available for PIN code <strong className="font-mono font-bold underline decoration-red-400">{pincode || "entered"}</strong>.
                         </p>
-                        <p className="text-[11px] text-red-600/90 mt-1 font-semibold">
-                          Notice: Doorstep operations in Ranchi &amp; Jharkhand are completely closed. We only service West Bengal, Bihar, and Gorakhpur/Ballia (UP).
-                        </p>
                       </div>
                     </div>
 

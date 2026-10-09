@@ -91,6 +91,9 @@ CashALL operates dedicated express doorstep fleets exclusively across its verifi
 ### 3. Bihar Cluster:
 - **Patna:** Patna Central, Kankarbagh, Boring Road, Bailey Road, Danapur (800001 to 800020).
 
+### 4. Jharkhand Cluster:
+- **Ranchi:** Main Road, Station, Harmu Road, Kanke, Morabadi, Doranda (834001, 834002, 834003).
+
 ---
 
 ## 5. Canonical Links
