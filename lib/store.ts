@@ -33528,49 +33528,49 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16-pro-128-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "128 GB",
-    "basePrice": 73720,
+    "basePrice": 72720,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "256 GB",
-    "basePrice": 76920,
+    "basePrice": 79790,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "512 GB",
-    "basePrice": 78860,
+    "basePrice": 85850,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "1 TB",
-    "basePrice": 80220,
+    "basePrice": 92920,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "256 GB",
-    "basePrice": 85650,
+    "basePrice": 88880,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "512 GB",
-    "basePrice": 87590,
+    "basePrice": 95950,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "1 TB",
-    "basePrice": 90500,
+    "basePrice": 103020,
     "active": true
   },
   {
@@ -34219,7 +34219,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-pro-fold-256-gb-16-gb",
     "modelId": "m-google-google-pixel-9-pro-fold",
     "storage": "256 GB",
-    "basePrice": 68458,
+    "basePrice": 72720,
     "active": true,
     "ram": "16 GB"
   },
@@ -45613,7 +45613,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-1021-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 63720,
+    "basePrice": 58984,
     "active": true,
     "ram": "12 GB"
   },
@@ -45621,7 +45621,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 63240,
+    "basePrice": 54742,
     "active": true,
     "ram": "12 GB"
   },
@@ -45629,7 +45629,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 62770,
+    "basePrice": 51308,
     "active": true,
     "ram": "12 GB"
   },
@@ -45637,7 +45637,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "512 GB",
-    "basePrice": 42660,
+    "basePrice": 44790,
     "active": true,
     "ram": "12 GB"
   },
@@ -45645,7 +45645,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "256 GB",
-    "basePrice": 40830,
+    "basePrice": 42870,
     "active": true,
     "ram": "12 GB"
   },
@@ -45653,7 +45653,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "128 GB",
-    "basePrice": 40200,
+    "basePrice": 42210,
     "active": true,
     "ram": "12 GB"
   },
@@ -45661,7 +45661,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "512 GB",
-    "basePrice": 48590,
+    "basePrice": 51030,
     "active": true,
     "ram": "12 GB"
   },
@@ -45669,7 +45669,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "256 GB",
-    "basePrice": 47250,
+    "basePrice": 49610,
     "active": true,
     "ram": "12 GB"
   },
@@ -45685,7 +45685,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 66840,
+    "basePrice": 70200,
     "active": true,
     "ram": "12 GB"
   },
@@ -45693,7 +45693,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 62610,
+    "basePrice": 65750,
     "active": true,
     "ram": "12 GB"
   },
@@ -83667,21 +83667,21 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-18-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-18-pro-max",
     "storage": "512 GB",
-    "basePrice": 131450,
+    "basePrice": 138370,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-18-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-18-pro-max",
     "storage": "1 TB",
-    "basePrice": 139130,
+    "basePrice": 146450,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-18-pro-max-2-tb",
     "modelId": "m-apple-apple-iphone-18-pro-max",
     "storage": "2 TB",
-    "basePrice": 158320,
+    "basePrice": 166650,
     "active": true
   },
   // Apple iPhone 18 Pro - Cashify Verified + 1%
@@ -83689,28 +83689,28 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-18-pro-256-gb",
     "modelId": "m-apple-apple-iphone-18-pro",
     "storage": "256 GB",
-    "basePrice": 115140,
+    "basePrice": 121200,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-18-pro-512-gb",
     "modelId": "m-apple-apple-iphone-18-pro",
     "storage": "512 GB",
-    "basePrice": 121860,
+    "basePrice": 128270,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-18-pro-1-tb",
     "modelId": "m-apple-apple-iphone-18-pro",
     "storage": "1 TB",
-    "basePrice": 134330,
+    "basePrice": 141400,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-18-pro-2-tb",
     "modelId": "m-apple-apple-iphone-18-pro",
     "storage": "2 TB",
-    "basePrice": 153520,
+    "basePrice": 161600,
     "active": true
   },
   // Samsung Galaxy S26 5G - Cashify Verified + 1%
@@ -83718,14 +83718,14 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-samsung-galaxy-s26-5g-256-gb",
     "modelId": "m-samsung-galaxy-s26-5g",
     "storage": "256 GB",
-    "basePrice": 49180,
+    "basePrice": 51770,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-5g-512-gb",
     "modelId": "m-samsung-galaxy-s26-5g",
     "storage": "512 GB",
-    "basePrice": 58060,
+    "basePrice": 61110,
     "active": true
   },
   // Samsung Galaxy S26 Plus 5G - Cashify Verified + 1%
@@ -83733,14 +83733,14 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-samsung-galaxy-s26-plus-5g-256-gb",
     "modelId": "m-samsung-galaxy-s26-plus-5g",
     "storage": "256 GB",
-    "basePrice": 59250,
+    "basePrice": 62370,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-plus-5g-512-gb",
     "modelId": "m-samsung-galaxy-s26-plus-5g",
     "storage": "512 GB",
-    "basePrice": 67750,
+    "basePrice": 71330,
     "active": true
   },
   // Samsung Galaxy S26 Ultra 5G - Cashify Verified + 1%
@@ -83748,21 +83748,21 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-samsung-galaxy-s26-ultra-5g-256-gb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 78600,
+    "basePrice": 82740,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-ultra-5g-512-gb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 82760,
+    "basePrice": 87120,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-ultra-5g-1-tb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 97150,
+    "basePrice": 102270,
     "active": true
   },
   // Google Pixel 10 Pro Fold
