@@ -283,19 +283,6 @@ export function DeviceSearch() {
         )}
       </div>
 
-      {/* POPULAR SEARCH QUICK TAGS */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mt-3 text-xs text-gray-400">
-        <span className="font-semibold text-gray-500">Popular Searches:</span>
-        {POPULAR_SEARCH_CHIPS.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => setQuery(tag)}
-            className="px-2.5 py-1 rounded-full bg-white/80 hover:bg-brand-yellow hover:text-brand-black border border-gray-200 text-brand-muted transition-colors text-[11px] font-medium"
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
     </div>
   );
 }

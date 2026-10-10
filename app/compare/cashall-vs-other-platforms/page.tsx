@@ -383,7 +383,7 @@ export default function CompareAllPlatformsPage() {
                 <span>Zero Deductions • Instant UPI Transfer</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black">
-                Experience The CashALL Advantage Today
+                Sell Your Device with Instant Doorstep Payout
               </h3>
               <p className="text-xs sm:text-sm text-neutral-300 max-w-lg">
                 Sell your old smartphone, laptop, or tablet in 60 seconds with 100% free doorstep pickup and guaranteed instant payment.

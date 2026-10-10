@@ -836,14 +836,14 @@ function PickupCheckoutContent() {
                                   onClick={() => setExpandedDistrict(isExpanded ? null : dist.id)}
                                   className="text-[10px] font-extrabold px-2.5 py-1 bg-neutral-100 hover:bg-brand-yellow hover:text-brand-black text-gray-700 rounded-lg transition-colors flex items-center gap-1"
                                 >
-                                  <span>{dist.count} PINs</span>
+                                  <span>View Areas</span>
                                   {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
                                 </button>
                               </div>
 
                               {isExpanded && (
                                 <div className="mt-2.5 pt-2.5 border-t border-gray-100 max-h-32 overflow-y-auto pr-1">
-                                  <p className="text-[10px] text-gray-500 font-medium mb-1.5">Serviceable PIN codes in {dist.name}:</p>
+                                  <p className="text-[10px] text-gray-500 font-medium mb-1.5">Direct Doorstep Hubs in {dist.name}:</p>
                                   <div className="flex flex-wrap gap-1">
                                     {dist.pincodes.map((pin) => (
                                       <span

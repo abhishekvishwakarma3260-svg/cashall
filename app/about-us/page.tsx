@@ -87,11 +87,6 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* 1. HERO SECTION */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-black text-xs font-black shadow-xs">
-              <Sparkles className="w-4 h-4" />
-              <span>India's Most Transparent Re-Commerce Platform</span>
-            </div>
-
             <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-tight">
               Reinventing How India <br className="hidden sm:inline" />
               <span className="bg-brand-black text-brand-yellow px-3 py-1 rounded-2xl">Sells Used Electronics</span>
