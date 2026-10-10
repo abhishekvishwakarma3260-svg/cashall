@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Edge cached for 24 hours
 
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";

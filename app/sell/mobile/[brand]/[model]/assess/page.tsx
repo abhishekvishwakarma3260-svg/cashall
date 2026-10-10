@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
@@ -23,7 +21,7 @@ import { formatDeviceName } from "@/lib/device";
 import { trackMetaCustomEvent, trackMetaStandardEvent } from "@/lib/analytics/meta";
 import { ChevronRight } from "lucide-react";
 
-export default function MobileAssessmentPage() {
+function MobileAssessmentContent() {
   const params = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -902,5 +900,13 @@ export default function MobileAssessmentPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function MobileAssessmentPage() {
+  return (
+    <React.Suspense fallback={<div className="min-h-screen bg-brand-black flex items-center justify-center text-white text-sm font-semibold">Loading device evaluation...</div>}>
+      <MobileAssessmentContent />
+    </React.Suspense>
   );
 }

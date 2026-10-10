@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { verifyAppDownloadAccess } from "@/lib/security/app-access";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 2592000;
 
 export async function GET(req: NextRequest) {
   try {
@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
         "Content-Type": "application/vnd.android.package-archive",
         "Content-Disposition": 'attachment; filename="CashALL-Caller.apk"',
         "Content-Length": stat.size.toString(),
-        "Cache-Control": "private, max-age=86400",
+        "Cache-Control": "public, max-age=86400, s-maxage=2592000, immutable",
         "X-Content-Type-Options": "nosniff",
       },
     });

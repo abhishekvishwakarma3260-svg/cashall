@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
@@ -28,7 +26,7 @@ import { tabletHasStylus } from "@/lib/laptop-specs";
 import { trackMetaCustomEvent, trackMetaStandardEvent } from "@/lib/analytics/meta";
 import { ChevronRight } from "lucide-react";
 
-export default function TabletAssessmentPage() {
+function TabletAssessmentContent() {
   const router = useRouter();
   const params = useParams();
   const searchParams = useSearchParams();
@@ -992,5 +990,13 @@ export default function TabletAssessmentPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function TabletAssessmentPage() {
+  return (
+    <React.Suspense fallback={<div className="min-h-screen bg-brand-black flex items-center justify-center text-white text-sm font-semibold">Loading device evaluation...</div>}>
+      <TabletAssessmentContent />
+    </React.Suspense>
   );
 }

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { CUSTOMER_REVIEWS, CustomerReview } from "@/lib/data/reviewsData";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600; // Edge cached for 1 hour
 
 export async function GET(req: NextRequest) {
   try {

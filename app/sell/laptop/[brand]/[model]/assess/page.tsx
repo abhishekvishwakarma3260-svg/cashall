@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
@@ -27,7 +25,7 @@ import { ChevronRight } from "lucide-react";
 // NOTE: Processor/RAM/Storage options are now model-specific.
 // They are derived at runtime via getLaptopSpecs() using the brand + model slug.
 
-export default function LaptopAssessmentPage() {
+function LaptopAssessmentContent() {
   const router = useRouter();
   const params = useParams();
   const searchParams = useSearchParams();
@@ -1099,5 +1097,13 @@ export default function LaptopAssessmentPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function LaptopAssessmentPage() {
+  return (
+    <React.Suspense fallback={<div className="min-h-screen bg-brand-black flex items-center justify-center text-white text-sm font-semibold">Loading device evaluation...</div>}>
+      <LaptopAssessmentContent />
+    </React.Suspense>
   );
 }

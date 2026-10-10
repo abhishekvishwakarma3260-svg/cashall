@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { LegalDocumentService, DEFAULT_LEGAL_DOCUMENTS, LegalDocType } from "@/lib/services/legal-document.service";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Edge cached for 24 hours
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);

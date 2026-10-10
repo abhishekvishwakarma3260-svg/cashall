@@ -3,7 +3,7 @@ import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { INITIAL_SERVICE_AREAS } from "@/lib/store";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Edge cached for 24 hours
 
 export const GET = apiWrapper(async (_req: NextRequest) => {
   try {
