@@ -57,7 +57,7 @@ export function CustomerReviewsSection() {
                 Top Rated Customer Reviews
               </h3>
               <span className="text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5 rounded-full flex items-center gap-1">
-                <Star className="w-3 h-3 fill-amber-500 text-amber-500" /> 5.0 Rating
+                <Star className="w-3 h-3 fill-amber-500 text-amber-500" /> Top Verified Ratings
               </span>
             </div>
 

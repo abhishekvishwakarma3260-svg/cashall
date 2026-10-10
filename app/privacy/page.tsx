@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             <section className="space-y-3">
               <h2 className="text-base sm:text-lg font-black text-brand-black">1. Overview &amp; Data Fiduciary Identity</h2>
               <p>
-                <strong>CashALL</strong> (accessible at <Link href="/" className="text-brand-black underline font-semibold">https://www.cashall.in</Link>) is a consumer electronic device buyback, recommerce, and gaming rental platform owned and operated by <strong>Aarna Enterprise</strong> (&ldquo;CashALL&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a registered enterprise headquartered in Kolkata, West Bengal, India.
+                <strong>CashALL</strong> (accessible at <Link href="/" className="text-brand-black underline font-semibold">https://www.cashall.in</Link>) is a consumer electronic device buyback, recommerce, and gaming rental platform owned and operated by <strong>Aarna Enterprise</strong> (&ldquo;CashALL&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), a registered enterprise headquartered in Howrah, West Bengal, India.
               </p>
               <p>
                 This Privacy Policy articulates our obligations as a Data Fiduciary pursuant to the Digital Personal Data Protection (DPDP) Act 2023, the Information Technology Act, 2000, and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011.

@@ -296,7 +296,7 @@ export function Footer() {
         {/* COMPANY LEGAL INFORMATION */}
         <div className="pt-8 border-t border-neutral-800 text-xs text-neutral-400 space-y-1.5">
           <p className="font-semibold text-neutral-300">
-            CashALL • Operating under Aarna Enterprise | Headquartered in Kolkata, West Bengal, India.
+            CashALL • Operating under Aarna Enterprise | Headquartered in Howrah, West Bengal, India.
           </p>
           <p className="text-[11px] text-neutral-500 leading-relaxed">
             Official Email Support: <span className="text-brand-yellow font-bold">support@cashall.in</span> • Customer Helpline: <span className="text-white font-bold">+91 7604092333</span>. All brand names, logos, and trademarks (Apple, Samsung, OnePlus, Sony PlayStation, etc.) are the property of their respective owners and used solely for identification purposes.

@@ -24,32 +24,25 @@ import {
 
 const MILESTONES = [
   {
-    year: "2023",
-    title: "The Inception in Kolkata",
+    year: "Aug 2026",
+    title: "The Genesis in Howrah",
     description:
-      "Founded under Aarna Enterprise with a singular mission: end the era of offline dealer lowballing and doorstep price slashing by introducing mathematical, line-item pricing transparency.",
-    badge: "Origin"
+      "Founded in Howrah, West Bengal under Aarna Enterprise with a singular mission: end the era of offline dealer lowballing and doorstep price slashing by introducing mathematical, line-item pricing transparency.",
+    badge: "Genesis"
   },
   {
-    year: "2024",
-    title: "15-Minute Doorstep Express Dispatch",
+    year: "Sep 2026",
+    title: "Direct Doorstep Hub Expansion",
     description:
-      "Pioneered hyper-local logistics across Kolkata, Howrah, Salt Lake, and New Town, achieving an average doorstep arrival time of under 30 minutes with zero pickup charges.",
-    badge: "Scale"
+      "Expanded direct field coverage across Howrah, Kolkata, Hooghly, Barrackpore, Gorakhpur, Ranchi, and Patna with verified doorstep technicians and instant UPI payouts.",
+    badge: "Expansion"
   },
   {
-    year: "2025",
-    title: "NIST 800-88 Data Sanitization Protocol",
+    year: "Oct 2026",
+    title: "Verified Payouts & Gaming Hub",
     description:
-      "Implemented bank-grade on-site data wiping with customer-witnessed factory resets and legally indemnifying digital Bills of Sale for every transaction.",
-    badge: "Security"
-  },
-  {
-    year: "2026",
-    title: "25,000+ Orders & Gaming Rentals",
-    description:
-      "Crossed 25,000+ completed customer buybacks, disbursed over ₹12 Crore in instant UPI payouts, and launched India's premier PlayStation 5 console rental service.",
-    badge: "Leadership"
+      "Crossed 180+ verified customer device evaluations, disbursed 100% instant on-the-spot bank UPI payouts with digital Bills of Sale, and launched premier PlayStation 5 console rentals.",
+    badge: "Milestone"
   }
 ];
 
@@ -72,7 +65,7 @@ const CORE_VALUES = [
   {
     icon: Leaf,
     title: "Circular Electronics Economy",
-    desc: "By repairing, refurbishing, and extending the operational lifecycle of consumer tech, we divert thousands of kilograms of toxic e-waste from landfills."
+    desc: "By repairing, refurbishing, and extending the operational lifecycle of consumer tech, we divert e-waste from landfills and promote sustainable reuse."
   }
 ];
 
@@ -100,20 +93,20 @@ export default function AboutUsPage() {
           {/* 2. LIVE IMPACT METRICS COUNTER */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div className="bg-white border border-brand-border rounded-3xl p-6 text-center shadow-subtleCard space-y-1">
-              <div className="text-2xl sm:text-4xl font-black text-brand-black">25,000+</div>
-              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Devices Purchased</div>
+              <div className="text-2xl sm:text-4xl font-black text-brand-black">180+</div>
+              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Devices Evaluated</div>
             </div>
             <div className="bg-white border border-brand-border rounded-3xl p-6 text-center shadow-subtleCard space-y-1">
-              <div className="text-2xl sm:text-4xl font-black text-emerald-600">₹12 Cr+</div>
-              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Direct UPI Paid Out</div>
+              <div className="text-2xl sm:text-4xl font-black text-emerald-600">100%</div>
+              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Instant UPI Payouts</div>
             </div>
             <div className="bg-white border border-brand-border rounded-3xl p-6 text-center shadow-subtleCard space-y-1">
-              <div className="text-2xl sm:text-4xl font-black text-brand-black">15 Mins</div>
-              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Avg. Doorstep Dispatch</div>
+              <div className="text-2xl sm:text-4xl font-black text-brand-black">Same-Day</div>
+              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Doorstep Pickup</div>
             </div>
             <div className="bg-white border border-brand-border rounded-3xl p-6 text-center shadow-subtleCard space-y-1">
-              <div className="text-2xl sm:text-4xl font-black text-amber-500">100%</div>
-              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Data Wiped Clean</div>
+              <div className="text-2xl sm:text-4xl font-black text-amber-500">Zero</div>
+              <div className="text-xs font-bold text-brand-muted uppercase tracking-wider">Hidden Fees</div>
             </div>
           </div>
 
@@ -130,7 +123,7 @@ export default function AboutUsPage() {
                 Every year in India, millions of functional smartphones sit gathering dust in drawers. Why? Because the existing options to sell them were fundamentally broken.
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed">
-                Take your phone to a local offline shop in Chandni Chowk or neighborhood market, and the dealer lowballs you by 35% without any verifiable rationale. Try selling on peer-to-peer classified websites, and you are inundated with scammers sending fake UPI QR codes or strangers demanding to meet in isolated locations. Try legacy online aggregators, and they quote you ₹20,000 online only to send an agent who slashes it to ₹11,000 on arrival for microscopic scuffs.
+                Take your phone to a local offline shop in neighborhood markets, and the dealer lowballs you by 35% without any verifiable rationale. Try selling on peer-to-peer classified websites, and you are inundated with scammers sending fake UPI QR codes or strangers demanding to meet in isolated locations. Try legacy online aggregators, and they quote you ₹20,000 online only to send an agent who slashes it to ₹11,000 on arrival for microscopic scuffs.
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed font-semibold">
                 CashALL was born to eliminate this exploitation. We engineered an objective, line-item valuation algorithm. We eliminated convenience fees. And we built a customer-first policy where you get paid in full via instant bank UPI before our technician steps out of your door.
@@ -145,7 +138,7 @@ export default function AboutUsPage() {
                 The Journey of CashALL
               </h2>
               <p className="text-xs sm:text-sm text-brand-muted">
-                From a local Kolkata startup to Eastern India's most trusted device re-commerce engine.
+                From our headquarters in Howrah to Eastern India's most transparent device re-commerce engine.
               </p>
             </div>
 
@@ -170,9 +163,9 @@ export default function AboutUsPage() {
             <div className="max-w-2xl mx-auto bg-white border-2 border-brand-yellow rounded-3xl p-8 shadow-premium space-y-3 transition-all duration-300">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black bg-brand-yellow text-brand-black px-3 py-1 rounded-full uppercase">
-                  {MILESTONES[activeTab].badge} • Year {MILESTONES[activeTab].year}
+                  {MILESTONES[activeTab].badge} • {MILESTONES[activeTab].year}
                 </span>
-                <span className="text-xs text-brand-muted font-bold">Milestone #{activeTab + 1} of 4</span>
+                <span className="text-xs text-brand-muted font-bold">Milestone #{activeTab + 1} of {MILESTONES.length}</span>
               </div>
               <h3 className="text-xl font-black text-brand-black">
                 {MILESTONES[activeTab].title}
@@ -246,7 +239,7 @@ export default function AboutUsPage() {
                 Ready to Experience Honest Device Selling?
               </h3>
               <p className="text-xs sm:text-sm text-neutral-300 max-w-lg">
-                Join 25,000+ satisfied sellers across Kolkata, Howrah, and West Bengal. Book your 100% free doorstep evaluation now.
+                Join verified sellers across Howrah, Kolkata, Ranchi, Patna, and Eastern India. Book your 100% free doorstep evaluation now.
               </p>
             </div>
             <Link

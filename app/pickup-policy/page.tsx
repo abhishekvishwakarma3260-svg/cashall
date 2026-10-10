@@ -93,7 +93,26 @@ export default function PickupPolicyPage() {
                 Doorstep pickup is actively deployed by verified technicians across our primary urban centers:
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/howrah.jpg"
+                    alt="Howrah Central Headquarters - Howrah Bridge"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Howrah Hub (HQ)</h3>
+                      <span className="text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5 rounded-full">
+                        Central Hub • Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Shibpur, Salkia, Bally, Liluah, Nabanna, Howrah Station Corridor &amp; GT Road.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
                   <img
                     src="/images/locations/kolkata.jpg"
@@ -115,25 +134,6 @@ export default function PickupPolicyPage() {
 
                 <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
                   <img
-                    src="/images/locations/howrah.jpg"
-                    alt="Howrah Serviceable Hub - Howrah Bridge"
-                    className="w-full h-32 object-cover"
-                  />
-                  <div className="p-4 space-y-1.5 flex-grow">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-extrabold text-sm text-brand-black">Howrah Hub</h3>
-                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
-                        Same-Day Active
-                      </span>
-                    </div>
-                    <p className="text-xs text-brand-muted">
-                      Shibpur, Salkia, Bally, Liluah, Nabanna, Howrah Station Corridor.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
-                  <img
                     src="/images/locations/hooghly.jpg"
                     alt="Hooghly & Barrackpore Hub - Hooghly Riverside"
                     className="w-full h-32 object-cover"
@@ -147,6 +147,44 @@ export default function PickupPolicyPage() {
                     </div>
                     <p className="text-xs text-brand-muted">
                       Serampore, Rishra, Konnagar, Uttarpara, Barrackpore Cantonment, Titagarh.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/ranchi.jpg"
+                    alt="Ranchi Serviceable Hub - Jagannath Temple Ranchi"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Ranchi Hub</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Doorstep Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Lalpur, Doranda, Kanke Road, Hinoo, Ratu Road, Bariatu, Morabadi, Harmu.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/patna.jpg"
+                    alt="Patna Serviceable Hub - Golghar Patna"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Patna Hub</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Doorstep Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Boring Road, Kankarbagh, Bailey Road, Fraser Road, Danapur, Rajendra Nagar, Patliputra.
                     </p>
                   </div>
                 </div>

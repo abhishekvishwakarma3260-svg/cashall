@@ -73,11 +73,24 @@ export function CustomerReviewCard({ review }: CustomerReviewCardProps) {
         <div className="flex items-center justify-between gap-2 bg-amber-50/70 border border-amber-200/80 rounded-xl px-3 py-1.5">
           <div className="flex items-center gap-1">
             <div className="flex items-center gap-0.5 shrink-0">
-              {[...Array(review.rating)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />
-              ))}
+              {[1, 2, 3, 4, 5].map((starNum) => {
+                if (review.rating >= starNum) {
+                  return <Star key={starNum} className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />;
+                } else if (review.rating >= starNum - 0.5) {
+                  return (
+                    <span key={starNum} className="relative inline-block w-3.5 h-3.5 shrink-0">
+                      <Star className="w-3.5 h-3.5 text-amber-200 fill-amber-100 shrink-0" />
+                      <span className="absolute inset-0 overflow-hidden w-[50%]">
+                        <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />
+                      </span>
+                    </span>
+                  );
+                } else {
+                  return <Star key={starNum} className="w-3.5 h-3.5 text-neutral-300 fill-neutral-200 shrink-0" />;
+                }
+              })}
             </div>
-            <span className="text-xs font-black text-amber-950 ml-1.5">5.0 Star</span>
+            <span className="text-xs font-black text-amber-950 ml-1.5">{review.rating.toFixed(1)} Star</span>
           </div>
           <span className="text-[10px] font-bold text-neutral-600 bg-white/90 border border-amber-200/80 px-2 py-0.5 rounded-md shrink-0">
             Verified Sale
