@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const revalidate = 2592000; // Cache on Edge for 30 days
-export const runtime = "nodejs";
+export const revalidate = 31536000; // Cache on Edge for 1 year
+export const runtime = "edge";
 
 const BRAND_LOGO_URLS: Record<string, string> = {
   apple: "https://s3n.cashify.in/cashify/brand/img/xhdpi/2e7cdc22-5a5f.jpg?w=200",
@@ -36,33 +36,13 @@ export async function GET(
   req: NextRequest,
   { params }: { params: { slug: string } }
 ) {
-  const slug = params?.slug?.toLowerCase();
-  if (!slug) {
-    return new NextResponse("Brand slug required", { status: 400 });
-  }
+  const slug = params?.slug?.toLowerCase() || "";
+  const targetUrl = BRAND_LOGO_URLS[slug] || "https://s3n.cashify.in/cashify/brand/img/xhdpi/2e7cdc22-5a5f.jpg?w=200";
 
-  const targetUrl = BRAND_LOGO_URLS[slug];
-  if (targetUrl) {
-    return NextResponse.redirect(targetUrl, {
-      status: 308,
-      headers: {
-        "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
-      },
-    });
-  }
-
-  // Fallback SVG with brand name text
-  const cleanName = slug.charAt(0).toUpperCase() + slug.slice(1);
-  const fallbackSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
-    <rect width="200" height="80" rx="16" fill="#18181b"/>
-    <text x="100" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#fbbf24" text-anchor="middle" letter-spacing="1">${cleanName}</text>
-  </svg>`;
-
-  return new NextResponse(fallbackSvg, {
-    status: 200,
+  return NextResponse.redirect(targetUrl, {
+    status: 301,
     headers: {
-      "Content-Type": "image/svg+xml",
-      "Cache-Control": "public, max-age=604800, s-maxage=604800, immutable",
+      "Cache-Control": "public, max-age=31536000, s-maxage=31536000, immutable",
     },
   });
 }

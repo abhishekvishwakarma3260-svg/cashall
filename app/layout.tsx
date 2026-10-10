@@ -6,6 +6,8 @@ import Script from "next/script";
 import { Suspense } from "react";
 import { MetaPageViewTracker } from "@/components/analytics/MetaPageViewTracker";
 
+export const revalidate = 86400; // Cache pages on Edge CDN for 24 hours (Freezes Fast Origin Transfer)
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cashall.in"),
 
