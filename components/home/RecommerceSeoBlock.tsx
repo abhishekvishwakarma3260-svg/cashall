@@ -34,10 +34,6 @@ export function RecommerceSeoBlock() {
         {/* SECTION 1: MASTER SEO BANNER & VALUE PROPOSITION */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-brand-border shadow-subtleCard space-y-6">
           <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-black">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>India's Transparent Re-Commerce Platform</span>
-            </div>
             <h2 className="text-2xl sm:text-4xl font-black text-brand-black tracking-tight leading-tight">
               Sell Your Old Phone Online for Best Cash with CashALL
             </h2>
@@ -46,33 +42,33 @@ export function RecommerceSeoBlock() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-brand-border/60">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5 border-t border-brand-border/60">
             <div className="space-y-1.5">
-              <div className="flex items-center gap-2 font-black text-brand-black text-sm">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              <div className="flex items-center gap-2 font-bold text-brand-black text-sm">
+                <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0 inline-block" />
                 <span>Highest Price Guarantee</span>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed">
+              <p className="text-xs text-brand-muted leading-relaxed pl-4">
                 Guaranteed up to 5% higher payouts than legacy aggregators with zero hidden pickup or diagnostic deductions.
               </p>
             </div>
 
             <div className="space-y-1.5">
-              <div className="flex items-center gap-2 font-black text-brand-black text-sm">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+              <div className="flex items-center gap-2 font-bold text-brand-black text-sm">
+                <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0 inline-block" />
                 <span>Certified On-Site Data Wipe</span>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed">
+              <p className="text-xs text-brand-muted leading-relaxed pl-4">
                 Every device undergoes a NIST 800-88 compliant data wipe on-site with legal Bill of Sale indemnifying you.
               </p>
             </div>
 
             <div className="space-y-1.5">
-              <div className="flex items-center gap-2 font-black text-brand-black text-sm">
-                <Zap className="w-4 h-4 text-emerald-600 shrink-0" />
+              <div className="flex items-center gap-2 font-bold text-brand-black text-sm">
+                <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0 inline-block" />
                 <span>Instant Doorstep Payout</span>
               </div>
-              <p className="text-xs text-brand-muted leading-relaxed">
+              <p className="text-xs text-brand-muted leading-relaxed pl-4">
                 Funds are transferred via UPI (Google Pay, PhonePe, Paytm) directly into your bank account before our agent leaves.
               </p>
             </div>
@@ -141,12 +137,12 @@ export function RecommerceSeoBlock() {
             {/* Card 1: Alternative to Other Brands */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-lg">
-                  ⚡
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Zero Hidden Doorstep Charges
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Other Brands Alternative: Zero Hidden Fees
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   Looking to sell your old phone without heavy commission cuts? Unlike other brands and aggregators that deduct ₹99–₹199 convenience charges at your doorstep and slash up to 40% on minor hairline scratches, CashALL offers honest algorithmic pricing with <strong>₹0 pickup fee</strong> and <strong>up to 5% higher real cash payout</strong>.
                 </p>
@@ -167,12 +163,12 @@ export function RecommerceSeoBlock() {
             {/* Card 2: Sell iPhone & Apple Trade In Alternative */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-800 font-black text-lg">
-                  🍎
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Sell Old iPhone Online for Direct Cash
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Sell Old iPhone Online &amp; Apple Trade In Alternative
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   Upgrading to the <strong>iPhone 16, 17 Pro, or 17 Pro Max</strong>? Official Apple Trade In and e-commerce exchange programs only offer store credits or low exchange values with strict deduction rules. Sell your iPhone 11, 12, 13, 14, 15, or 16 at CashALL for <strong>instant cash via UPI</strong> directly into your bank before handing over the device.
                 </p>
@@ -189,12 +185,12 @@ export function RecommerceSeoBlock() {
             {/* Card 3: Sell Laptop Online */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-800 font-black text-lg">
-                  💻
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Sell Used Laptop Online (MacBook, Dell, HP &amp; Lenovo)
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Sell Old Laptop Online: Instant Cash for MacBook, Dell, HP &amp; Lenovo
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   Don&apos;t let your used laptop gather dust. CashALL buys MacBooks, gaming laptops, and Windows work laptops across Dell, HP, Lenovo, Asus, and Acer. Get instant doorstep evaluation, certified hardware assessment, and on-the-spot bank transfer.
                 </p>
@@ -211,12 +207,12 @@ export function RecommerceSeoBlock() {
             {/* Card 4: Sell Samsung & Android Flagships */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-800 font-black text-lg">
-                  📱
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Sell Samsung Galaxy, OnePlus &amp; Android Flagships
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Sell Samsung Galaxy, OnePlus &amp; Android Flagships
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   Get the best resale price for Samsung Galaxy S23, S24, S25, S26 Ultra, Z Fold, Z Flip, OnePlus 11, 12, 13, and Google Pixel devices. Even phones with screen cracks, battery wear, or missing original boxes get competitive buyback quotes.
                 </p>
@@ -233,21 +229,21 @@ export function RecommerceSeoBlock() {
             {/* Card 5: Local GEO Coverage */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-800 font-black text-lg">
-                  📍
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Free Doorstep Pickup Across Active Hubs
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Sell Old Phone Near Me: Free Doorstep Pickup in 24 Hours
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
-                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Ranchi (Jharkhand), Patna (Bihar), Gorakhpur &amp; Ballia (UP). Free same-day or 24-hour doorstep inspection by verified technicians.
+                  Serving Kolkata, Howrah, Hooghly, Barrackpore, Salt Lake, New Town, Ranchi, Patna, Gorakhpur &amp; Ballia. Free same-day or 24-hour doorstep inspection by verified technicians.
                 </p>
               </div>
               <Link
                 href="/sell-phone-in-kolkata"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-rose-800 hover:text-rose-950 pt-2"
               >
-                <span>View Serviceable Cities &amp; Pincodes</span>
+                <span>View Serviceable Cities</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -255,12 +251,12 @@ export function RecommerceSeoBlock() {
             {/* Card 6: 100% Data Privacy & Safety */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-2xl bg-teal-100 flex items-center justify-center text-teal-800 font-black text-lg">
-                  🛡️
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <h3 className="text-lg font-black text-brand-black">
+                    Statutory Bill of Sale &amp; Verified Data Wiping
+                  </h3>
                 </div>
-                <h3 className="text-lg font-black text-brand-black">
-                  Safe Way to Sell Phone Online: Zero Scam Guarantee
-                </h3>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   No meeting random strangers on classified sites. No fake payment screenshots. Every transaction is legally backed by an official digital Bill of Sale, transferring complete legal liability and guaranteeing 100% on-site data wiping under NIST guidelines.
                 </p>
@@ -276,28 +272,13 @@ export function RecommerceSeoBlock() {
           </div>
         </div>
 
-        {/* SECTION 4: HIGH-VOLUME SEARCH DIRECTORY (SEO, AEO & GEO) */}
-        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-brand-border shadow-subtleCard space-y-8">
-          <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-black mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Explore High-Demand Categories</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl font-black text-brand-black">
-              Popular Keyword Searches &amp; Device Valuation Corridors
-            </h2>
-            <p className="text-xs sm:text-sm text-brand-muted mt-1">
-              Find instant quotes for second-hand mobiles, price checks, and local doorstep buyback hubs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Category 1 */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
-                Sell Old Phone &amp; Buyback
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
+        {/* SECTION 4: HIGH-VOLUME SEARCH DIRECTORY — ACCESSIBLE TO SEARCH ENGINES, AI & CRAWLERS ONLY (NOT VISIBLE TO USERS) */}
+        <div className="sr-only" aria-hidden="false">
+          <h2>Popular Keyword Searches &amp; Valuation Corridors</h2>
+          <nav aria-label="Device Resale Directory">
+            <div>
+              <h3>Sell Old Phone &amp; Buyback</h3>
+              <div>
                 {[
                   { label: "Sell Old Phone", href: "/sell-used-phone" },
                   { label: "Sell Used Phone Online", href: "/sell-used-phone" },
@@ -308,23 +289,14 @@ export function RecommerceSeoBlock() {
                   { label: "Sell Dead Phone", href: "/sell/mobile" },
                   { label: "Sell Broken Screen Phone", href: "/sell/mobile" },
                 ].map((item, idx) => (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
               </div>
             </div>
 
-            {/* Category 2 */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
-                Second Hand &amp; 2nd Hand Mobile
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
+            <div>
+              <h3>Second Hand &amp; 2nd Hand Mobile</h3>
+              <div>
                 {[
                   { label: "Second Hand Mobile", href: "/sell/mobile" },
                   { label: "2nd Hand Mobile Phones", href: "/sell/mobile" },
@@ -335,23 +307,14 @@ export function RecommerceSeoBlock() {
                   { label: "Refurbished Phones", href: "/sell/mobile" },
                   { label: "Buy Second Hand Mobile", href: "/sell/mobile" },
                 ].map((item, idx) => (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
               </div>
             </div>
 
-            {/* Category 3 */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
-                Price Calculator &amp; Valuation
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
+            <div>
+              <h3>Price Calculator &amp; Valuation</h3>
+              <div>
                 {[
                   { label: "Mobile Price", href: "/sell-used-phone" },
                   { label: "Mobile Resale Value Calculator", href: "/sell-used-phone" },
@@ -362,23 +325,14 @@ export function RecommerceSeoBlock() {
                   { label: "Laptop Resale Calculator", href: "/sell/laptop" },
                   { label: "Instant Guaranteed Quote", href: "/sell-used-phone" },
                 ].map((item, idx) => (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
               </div>
             </div>
 
-            {/* Category 4 */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-brand-black">
-                Doorstep Pickup Hubs (Near Me)
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
+            <div>
+              <h3>Doorstep Pickup Hubs</h3>
+              <div>
                 {[
                   { label: "Mobile Shop Near Me", href: "/sell-used-phone" },
                   { label: "Second Hand Mobile Shop Near Me", href: "/sell-used-phone" },
@@ -389,26 +343,16 @@ export function RecommerceSeoBlock() {
                   { label: "Sell Old Phone Gorakhpur", href: "/sell-phone-in-gorakhpur" },
                   { label: "Sell Old Phone Ballia", href: "/sell-used-phone" },
                 ].map((item, idx) => (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    className="text-[11px] font-semibold text-neutral-600 hover:text-brand-black bg-neutral-100 hover:bg-brand-yellow/40 px-2.5 py-1 rounded-lg transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
               </div>
             </div>
-          </div>
+          </nav>
         </div>
 
-        {/* SECTION 5: GREEN CIRCULAR ECONOMY COMMITMENT */}
+        {/* SECTION 5: CIRCULAR ECONOMY COMMITMENT */}
         <div className="bg-neutral-950 text-white rounded-3xl p-8 sm:p-10 shadow-premium flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-xl text-center md:text-left">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black">
-              <Leaf className="w-4 h-4" />
-              <span>Environmental Circular Economy</span>
-            </div>
             <h3 className="text-2xl sm:text-3xl font-black">
               Sell Old Devices, Reduce E-Waste in India
             </h3>

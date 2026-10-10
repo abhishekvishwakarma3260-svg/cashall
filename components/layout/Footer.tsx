@@ -221,7 +221,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/blog" className="hover:text-brand-yellow transition-colors">
-                  Be Smart, Sell Smart (Blog)
+                  Resale Q&amp;A &amp; Blog
                 </Link>
               </li>
               <li>

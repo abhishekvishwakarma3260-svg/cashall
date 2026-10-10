@@ -82,14 +82,94 @@ export default function PickupPolicyPage() {
               </p>
             </section>
 
-            <section className="space-y-3 p-5 rounded-2xl bg-gray-50 border border-brand-border">
-              <h2 className="text-sm sm:text-base font-bold text-brand-black flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-brand-yellow" />
-                Serviceable Hubs
-              </h2>
-              <p className="text-xs">
-                Doorstep pickup is actively deployed across Kolkata, North 24 Parganas, South 24 Parganas, Howrah, Hooghly, and Gorakhpur.
+            <section className="space-y-4 pt-2">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-brand-yellow" />
+                <h2 className="text-base sm:text-lg font-black text-brand-black">
+                  Serviceable Hubs &amp; Direct Field Coverage
+                </h2>
+              </div>
+              <p className="text-xs text-neutral-600">
+                Doorstep pickup is actively deployed by verified technicians across our primary urban centers:
               </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/kolkata.jpg"
+                    alt="Kolkata Serviceable Hub - Victoria Memorial"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Kolkata Hub</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Same-Day Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Salt Lake, New Town, Park Street, Ballygunge, Gariahat, Jadavpur, Behala, Dum Dum.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/howrah.jpg"
+                    alt="Howrah Serviceable Hub - Howrah Bridge"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Howrah Hub</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Same-Day Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Shibpur, Salkia, Bally, Liluah, Nabanna, Howrah Station Corridor.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/hooghly.jpg"
+                    alt="Hooghly & Barrackpore Hub - Hooghly Riverside"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Hooghly &amp; Barrackpore</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Doorstep Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Serampore, Rishra, Konnagar, Uttarpara, Barrackpore Cantonment, Titagarh.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-brand-border rounded-2xl overflow-hidden shadow-xs flex flex-col">
+                  <img
+                    src="/images/locations/gorakhpur.jpg"
+                    alt="Gorakhpur Hub - Gorakhpur"
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4 space-y-1.5 flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-extrabold text-sm text-brand-black">Gorakhpur Hub</h3>
+                      <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                        Doorstep Active
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-muted">
+                      Golghar, Medical College Road, Rapti Nagar, Rustampur, Civil Lines.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </section>
 
           </div>

@@ -5,31 +5,25 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BLOG_POSTS } from "@/lib/data/blogData";
 import {
-  Sparkles,
   ArrowRight,
   BookOpen,
   Clock,
-  Calendar,
-  ChevronRight,
-  CheckCircle2,
-  TrendingUp,
-  ShieldCheck,
   Newspaper
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Be Smart, Sell Smart: Phone Resale Value Guides & Tech Insights | CashALL",
+  title: "Phone Resale Value Guides & Frequently Asked Questions | CashALL",
   description:
-    "Explore authoritative resale valuation guides, market depreciation analysis, eSIM security protocols, and on-device AI trade-in trends from the CashALL research team.",
+    "Direct answers and guides on smartphone resale values, storage ROI, account removal checklists, and how to get maximum cash for your used phone in India.",
   alternates: {
     canonical: "https://www.cashall.in/blog",
   },
   openGraph: {
-    title: "Be Smart, Sell Smart: Phone Resale Value Guides & Tech Insights | CashALL",
+    title: "Phone Resale Value Guides & Frequently Asked Questions | CashALL",
     description:
-      "Understand device depreciation, storage ROI, clean phone checklists, and how to get maximum cash for your used phone in India.",
+      "Direct answers on device valuation, storage ROI, clean phone checklists, and how to get maximum cash for your used phone in India.",
     url: "https://www.cashall.in/blog",
-    images: ["/photos/CashALL_logo.png"],
+    images: ["/photos/CashALL_logo.webp"],
   },
 };
 
@@ -37,8 +31,8 @@ export default function BlogIndexPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "CashALL Smart Resale Blog",
-    "description": "Expert advice, price benchmarks, and security guides for selling old smartphones and electronics.",
+    "name": "CashALL Resale Guides",
+    "description": "Clear answers and guides for selling old smartphones and electronics.",
     "publisher": {
       "@type": "Organization",
       "name": "CashALL",
@@ -65,17 +59,12 @@ export default function BlogIndexPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* HEADER */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-black text-xs font-black shadow-xs">
-              <Sparkles className="w-4 h-4" />
-              <span>CashALL Knowledge & Research Hub</span>
-            </div>
-
             <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight">
-              Be Smart, <span className="bg-brand-black text-brand-yellow px-3 py-1 rounded-2xl">Sell Smart</span>
+              Phone Selling <span className="bg-brand-black text-brand-yellow px-3 py-1 rounded-2xl">Questions & Guides</span>
             </h1>
 
             <p className="text-sm sm:text-base text-brand-muted max-w-2xl mx-auto leading-relaxed">
-              Real-world device valuation data, depreciation calculators, and data privacy guides designed to help you get the highest possible payout when selling your old gadgets.
+              Clear, practical answers about phone valuation, price depreciation, storage choices, and how to safely prepare your device before selling.
             </p>
 
             <div className="flex items-center justify-center gap-3 pt-2">
@@ -91,24 +80,28 @@ export default function BlogIndexPage() {
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-brand-border text-xs font-extrabold text-brand-black hover:border-brand-black transition"
               >
                 <BookOpen className="w-3.5 h-3.5 text-brand-black" />
-                <span>All Articles & Guides</span>
+                <span>All Guides</span>
               </Link>
             </div>
           </div>
 
-          {/* FEATURED / LATEST BLOG POSTS GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* QUESTIONS & ANSWERS GUIDES GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {BLOG_POSTS.map((post) => (
               <article
                 key={post.slug}
-                className="bg-white rounded-3xl border border-brand-border p-6 shadow-subtleCard hover:shadow-premium hover:border-brand-yellow transition-all duration-200 flex flex-col justify-between space-y-5"
+                className="bg-white rounded-3xl border border-brand-border p-6 sm:p-7 shadow-subtleCard hover:shadow-premium hover:border-brand-yellow transition-all duration-200 flex flex-col justify-between space-y-4"
               >
-                <div className="space-y-3.5">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-black uppercase tracking-wider text-brand-black bg-brand-yellow/30 border border-brand-yellow/60 px-2.5 py-0.5 rounded-full">
-                      {post.category}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-[11px] text-brand-muted font-medium">
+                    <span>
+                      {new Date(post.publishedAt).toLocaleDateString("en-IN", {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                      })}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[11px] text-brand-muted font-medium">
+                    <span className="inline-flex items-center gap-1">
                       <Clock className="w-3 h-3" />
                       {post.readTime}
                     </span>
@@ -116,34 +109,25 @@ export default function BlogIndexPage() {
 
                   <Link href={`/${post.slug}`} className="block group">
                     <h2 className="text-lg sm:text-xl font-black text-brand-black group-hover:text-amber-600 transition leading-snug">
-                      {post.title}
+                      {post.aeoQuickAnswer.question || post.title}
                     </h2>
                   </Link>
 
-                  <p className="text-xs text-brand-muted line-clamp-3 leading-relaxed">
-                    {post.excerpt}
+                  <p className="text-xs text-neutral-600 leading-relaxed font-normal line-clamp-4">
+                    {post.aeoQuickAnswer.answer || post.excerpt}
                   </p>
-
-                  {/* AEO KEY TAKEAWAY TEASER */}
-                  <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-3 text-[11px] text-amber-950 font-medium">
-                    <div className="font-extrabold flex items-center gap-1 text-amber-900 mb-0.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>Key Takeaway:</span>
-                    </div>
-                    {post.aeoQuickAnswer.keyTakeaway}
-                  </div>
                 </div>
 
                 <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between">
                   <span className="text-[11px] text-brand-muted">
-                    {new Date(post.publishedAt).toLocaleDateString("en-IN", { month: "short", day: "numeric", year: "numeric" })}
+                    {post.author.name}
                   </span>
 
                   <Link
                     href={`/${post.slug}`}
                     className="inline-flex items-center gap-1 text-xs font-black text-brand-black hover:text-amber-600 transition"
                   >
-                    <span>Read Article</span>
+                    <span>Read Full Guide</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

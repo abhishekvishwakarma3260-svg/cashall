@@ -31,50 +31,50 @@ interface LocationModalProps {
 interface ServiceableStateConfig {
   state: string;
   badge: string;
-  districts: { name: string; tag: string; pincodesSummary: string }[];
+  districts: { name: string; tag: string; image: string }[];
   description: string;
-  iconText: string;
+  image: string;
 }
 
 const SERVICEABLE_STATES: ServiceableStateConfig[] = [
   {
     state: "West Bengal",
     badge: "Primary Hub • 2-4 Hr Doorstep",
-    iconText: "WB",
-    description: "Kolkata, Howrah, Hooghly, Barrackpore (217 PIN Codes)",
+    image: "/images/locations/kolkata.jpg",
+    description: "Kolkata, Howrah, Hooghly, Barrackpore",
     districts: [
-      { name: "Kolkata", tag: "700xxx Belt • Free Doorstep in 2-4 hrs", pincodesSummary: "151 PIN Codes" },
-      { name: "Howrah", tag: "Express Doorstep Active", pincodesSummary: "19 PIN Codes" },
-      { name: "Hooghly", tag: "Doorstep Pickup Active", pincodesSummary: "26 PIN Codes" },
-      { name: "Barrackpore", tag: "Doorstep Pickup Active", pincodesSummary: "47 PIN Codes" },
+      { name: "Kolkata", tag: "Free Doorstep in 2-4 hrs", image: "/images/locations/kolkata.jpg" },
+      { name: "Howrah", tag: "Express Doorstep Active", image: "/images/locations/howrah.jpg" },
+      { name: "Hooghly", tag: "Doorstep Pickup Active", image: "/images/locations/hooghly.jpg" },
+      { name: "Barrackpore", tag: "Doorstep Pickup Active", image: "/images/locations/hooghly.jpg" },
     ],
   },
   {
     state: "Uttar Pradesh",
     badge: "Express Doorstep Hub",
-    iconText: "UP",
+    image: "/images/locations/gorakhpur.jpg",
     description: "Gorakhpur & Ballia Express Pickup Hubs",
     districts: [
-      { name: "Gorakhpur", tag: "Express Doorstep", pincodesSummary: "273001 to 273017" },
-      { name: "Ballia", tag: "Doorstep Pickup Hub", pincodesSummary: "277001, 277506" },
+      { name: "Gorakhpur", tag: "Express Doorstep", image: "/images/locations/gorakhpur.jpg" },
+      { name: "Ballia", tag: "Doorstep Pickup Hub", image: "/images/locations/gorakhpur.jpg" },
     ],
   },
   {
     state: "Bihar",
     badge: "Doorstep Service Active",
-    iconText: "BR",
+    image: "/images/locations/kolkata.jpg",
     description: "Patna Central & Surrounding Districts",
     districts: [
-      { name: "Patna", tag: "Express Doorstep", pincodesSummary: "Patna Central Hub" },
+      { name: "Patna", tag: "Express Doorstep", image: "/images/locations/kolkata.jpg" },
     ],
   },
   {
     state: "Jharkhand",
     badge: "Doorstep Pickup Active",
-    iconText: "JH",
+    image: "/images/locations/howrah.jpg",
     description: "Ranchi Urban Corridors & City Hubs",
     districts: [
-      { name: "Ranchi", tag: "Express Doorstep", pincodesSummary: "834001, 834002, 834003" },
+      { name: "Ranchi", tag: "Express Doorstep", image: "/images/locations/howrah.jpg" },
     ],
   },
 ];
@@ -258,28 +258,32 @@ export function LocationModal({
                       key={dist.name}
                       type="button"
                       onClick={() => handleSelect(dist.name, selectedStateForDistricts.state, true)}
-                      className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all ${
+                      className={`p-3.5 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all ${
                         isDistSelected
                           ? "bg-brand-yellow text-brand-black border-brand-yellow font-black shadow-lg"
                           : "bg-neutral-900 hover:bg-neutral-800 border-neutral-800 text-gray-200 hover:border-brand-yellow/60"
                       }`}
                     >
-                      <div>
-                        <div className={`text-sm font-extrabold ${isDistSelected ? "text-brand-black" : "text-white"}`}>
-                          {dist.name}
-                        </div>
-                        <div className={`text-xs mt-0.5 ${isDistSelected ? "text-neutral-800" : "text-gray-400"}`}>
-                          {dist.tag}
-                        </div>
-                        <div className={`text-[10px] mt-0.5 ${isDistSelected ? "text-neutral-700" : "text-gray-500 font-mono"}`}>
-                          Coverage: {dist.pincodesSummary}
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={dist.image}
+                          alt={dist.name}
+                          className="w-12 h-12 rounded-xl object-cover shrink-0 border border-white/10"
+                        />
+                        <div>
+                          <div className={`text-sm font-extrabold ${isDistSelected ? "text-brand-black" : "text-white"}`}>
+                            {dist.name}
+                          </div>
+                          <div className={`text-xs mt-0.5 ${isDistSelected ? "text-neutral-800" : "text-gray-400"}`}>
+                            {dist.tag}
+                          </div>
                         </div>
                       </div>
                       {isDistSelected ? (
                         <Check className="w-5 h-5 text-brand-black shrink-0" />
                       ) : (
-                        <div className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center shrink-0 text-brand-yellow">
-                          <ArrowRight className="w-4 h-4" />
+                        <div className="w-7 h-7 rounded-full bg-neutral-800 flex items-center justify-center shrink-0 text-brand-yellow">
+                          <ArrowRight className="w-3.5 h-3.5" />
                         </div>
                       )}
                     </button>
@@ -326,15 +330,11 @@ export function LocationModal({
                       }`}
                     >
                       <div className="flex items-center gap-3.5">
-                        <div
-                          className={`w-12 h-12 rounded-xl flex items-center justify-center font-black text-base border shrink-0 ${
-                            isStateSelected
-                              ? "bg-brand-yellow text-brand-black border-brand-yellow"
-                              : "bg-neutral-800 text-brand-yellow border-neutral-700"
-                          }`}
-                        >
-                          {stConfig.iconText}
-                        </div>
+                        <img
+                          src={stConfig.image}
+                          alt={stConfig.state}
+                          className="w-12 h-12 rounded-xl object-cover shrink-0 border border-neutral-700"
+                        />
                         <div>
                           <div className="flex items-center gap-2">
                             <span className="text-base font-black text-white">{stConfig.state}</span>

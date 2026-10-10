@@ -180,10 +180,6 @@ export default function SellUsedPhonePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 text-brand-yellow text-xs font-bold mb-4">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>India's Transparent Phone Recommerce Platform</span>
-                </div>
                 <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
                   Sell Used Phone Online for <span className="text-brand-yellow">Instant Cash</span>
                 </h1>
@@ -194,15 +190,15 @@ export default function SellUsedPhonePage() {
                 {/* Quick Trust Badges */}
                 <div className="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-gray-300">
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl">
-                    <CheckCircle2 className="w-4 h-4 text-brand-yellow" />
+                    <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0" />
                     <span>₹0 Doorstep Pickup Fee</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl">
-                    <Zap className="w-4 h-4 text-brand-yellow" />
+                    <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0" />
                     <span>Instant UPI / Bank Payout</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-xl">
-                    <ShieldCheck className="w-4 h-4 text-brand-yellow" />
+                    <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0" />
                     <span>NIST 800-88 Data Wipe</span>
                   </div>
                 </div>

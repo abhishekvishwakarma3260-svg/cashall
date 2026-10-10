@@ -30,7 +30,7 @@ export function DeviceSearch() {
       return {
         type: "city",
         title: "Sell Old Phone in Ranchi (Jharkhand)",
-        subtitle: "Free 24-Hr Doorstep Pickup across Ranchi PIN codes",
+        subtitle: "Free 24-Hr Doorstep Pickup across Ranchi Hub",
         url: "/sell-used-phone",
       };
     }

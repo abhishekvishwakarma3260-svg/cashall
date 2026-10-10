@@ -403,27 +403,6 @@ export function Hero() {
         <div id="find-phone" className="pt-2">
           <DeviceSearch />
         </div>
-
-        {/* TRUST SIGNALS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 text-left pt-1">
-          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-900/50 border border-neutral-800/70">
-            <Truck className="w-4 h-4 text-brand-yellow shrink-0" />
-            <span className="text-xs font-semibold text-neutral-200">Free Doorstep Pickup</span>
-          </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-900/50 border border-neutral-800/70">
-            <Zap className="w-4 h-4 text-brand-yellow shrink-0" />
-            <span className="text-xs font-semibold text-neutral-200">Spot UPI Payment</span>
-          </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-900/50 border border-neutral-800/70">
-            <ShieldCheck className="w-4 h-4 text-brand-yellow shrink-0" />
-            <span className="text-xs font-semibold text-neutral-200">Zero Convenience Fee</span>
-          </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-900/50 border border-neutral-800/70">
-            <RotateCcw className="w-4 h-4 text-brand-yellow shrink-0" />
-            <span className="text-xs font-semibold text-neutral-200">DPDP Certified Wipe</span>
-          </div>
-        </div>
-
       </div>
     </section>
   );

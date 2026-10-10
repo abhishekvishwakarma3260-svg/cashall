@@ -110,9 +110,6 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
           {/* ARTICLE HEADER */}
           <header className="space-y-4">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="px-3 py-1 rounded-full text-xs font-black bg-brand-yellow/30 text-brand-black border border-brand-yellow/50 uppercase tracking-wider">
-                {post.category}
-              </span>
               <span className="inline-flex items-center gap-1 text-xs text-brand-muted font-medium">
                 <Clock className="w-3.5 h-3.5" />
                 {post.readTime}
@@ -148,18 +145,18 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                   href="/sell"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-yellow hover:bg-amber-400 text-brand-black font-black text-xs shadow-xs transition"
                 >
-                  <Sparkles className="w-3.5 h-3.5" />
                   <span>Check Phone Value</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
           </header>
 
-          {/* AEO (ANSWER ENGINE OPTIMIZATION) DIRECT ANSWER BOX */}
+          {/* DIRECT ANSWER BOX */}
           <section className="bg-amber-50/80 border-2 border-brand-yellow/80 rounded-3xl p-6 sm:p-7 shadow-subtleCard space-y-3 relative overflow-hidden">
             <div className="flex items-center gap-2 text-xs font-black text-amber-950 uppercase tracking-wider">
               <Lightbulb className="w-4 h-4 text-brand-black" />
-              <span>Direct Answer & Key Takeaway (AEO)</span>
+              <span>Direct Answer</span>
             </div>
             <h2 className="text-base sm:text-lg font-black text-brand-black leading-snug">
               {post.aeoQuickAnswer.question}
@@ -168,7 +165,7 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
               {post.aeoQuickAnswer.answer}
             </p>
             <div className="pt-2 border-t border-amber-200/80 flex items-start gap-2 text-xs text-amber-950 font-bold">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <span className="w-2 h-2 rounded-full bg-brand-yellow shrink-0 mt-1.5" />
               <span>{post.aeoQuickAnswer.keyTakeaway}</span>
             </div>
           </section>
@@ -282,15 +279,11 @@ export function BlogPostTemplate({ post }: BlogPostTemplateProps) {
           {/* SELL CALL TO ACTION FOOTER BANNER */}
           <section className="bg-brand-black text-white rounded-3xl p-8 sm:p-10 shadow-premium flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
             <div className="space-y-2 text-center sm:text-left z-10">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-yellow text-xs font-black">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Instant Doorstep Payout Guaranteed</span>
-              </div>
               <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
                 Ready to Sell Your Device Today?
               </h3>
               <p className="text-xs sm:text-sm text-neutral-300 max-w-md">
-                Get up to 5% higher price than other online platforms, enjoy free 15-minute doorstep dispatch in Kolkata &amp; Howrah, and receive instant UPI cash on the spot!
+                Get up to 5% higher price than other online platforms, enjoy free doorstep pickup in Kolkata, Howrah, Hooghly &amp; Gorakhpur, and receive instant UPI cash on the spot!
               </p>
             </div>
 
