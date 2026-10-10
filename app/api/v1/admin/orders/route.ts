@@ -157,7 +157,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         createdAt: true,
       },
       orderBy: { createdAt: "desc" },
-      take: 500,
+      take: 50,
     });
 
     agentCalls = rawAgentLogs
