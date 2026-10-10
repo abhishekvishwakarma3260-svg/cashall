@@ -100,7 +100,7 @@ export function Footer() {
           <div className="col-span-2 space-y-4">
             <div className="relative h-10 w-36">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="CashALL"
                 width={160}
                 height={45}

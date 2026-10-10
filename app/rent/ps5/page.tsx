@@ -420,7 +420,7 @@ export default function Ps5RentalPage() {
             <Link href="/" className="flex items-center group shrink-0" title="Go to CashALL Home" aria-label="CashALL">
               <div className="relative h-8 sm:h-9 w-24 sm:w-28 flex items-center justify-start">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="CashALL"
                   width={140}
                   height={40}

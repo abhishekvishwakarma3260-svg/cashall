@@ -74,7 +74,7 @@ export default function AgentLoginPage() {
         <div className="text-center space-y-3">
           <Link href="/" className="inline-block" aria-label="CashALL">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="CashALL"
               width={160}
               height={44}

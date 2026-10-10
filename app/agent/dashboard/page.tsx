@@ -744,7 +744,7 @@ export default function AgentDashboardPage() {
         <div className="flex items-center gap-2 sm:gap-3">
           <Link href="/" aria-label="CashALL">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="CashALL"
               width={110}
               height={30}

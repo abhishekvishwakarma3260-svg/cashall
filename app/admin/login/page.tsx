@@ -64,7 +64,7 @@ export default function AdminLoginPage() {
         <div className="text-center space-y-3">
           <div className="flex justify-center items-center py-2">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="CashALL"
               width={160}
               height={44}

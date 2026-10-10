@@ -170,7 +170,7 @@ export function Header() {
               <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="CashALL" title="CashALL">
                 <div className="relative h-9 sm:h-12 w-28 sm:w-44 flex items-center justify-start py-0.5">
                   <Image
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="CashALL"
                     width={240}
                     height={60}

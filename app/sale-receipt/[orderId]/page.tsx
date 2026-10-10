@@ -156,7 +156,7 @@ export default function CustomerSaleReceiptPage() {
           <div className="flex items-center gap-4">
             <div className="relative h-14 w-44">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="CashALL"
                 width={180}
                 height={55}
