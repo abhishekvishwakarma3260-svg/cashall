@@ -2,6 +2,7 @@ import crypto from "crypto";
 
 interface SessionPayload {
   uid: string;
+  name?: string;
   email?: string;
   phone?: string;
   role: string;
@@ -46,7 +47,7 @@ function base64UrlDecode(str: string): string {
  * Creates a cryptographically signed HMAC-SHA256 session token.
  */
 export function signSessionToken(
-  payload: { uid: string; email?: string; phone?: string; role: string },
+  payload: { uid: string; name?: string; email?: string; phone?: string; role: string },
   expiresInSeconds: number = 7 * 24 * 60 * 60
 ): string {
   const now = Math.floor(Date.now() / 1000);
@@ -74,7 +75,7 @@ export function signSessionToken(
  */
 export function verifySessionToken(
   token: string
-): { uid: string; email?: string; phone?: string; role: string } | null {
+): { uid: string; name?: string; email?: string; phone?: string; role: string } | null {
   if (!token || typeof token !== "string") return null;
 
   const parts = token.split(".");
@@ -108,6 +109,7 @@ export function verifySessionToken(
 
     return {
       uid: payload.uid,
+      name: payload.name,
       email: payload.email,
       phone: payload.phone,
       role: payload.role,

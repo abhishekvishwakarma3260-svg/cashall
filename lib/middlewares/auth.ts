@@ -6,6 +6,7 @@ import { prisma } from "../db";
 
 export interface DecodedUser {
   uid: string;
+  name?: string;
   phone?: string;
   email?: string;
   role: string;
@@ -106,6 +107,7 @@ export async function verifyAuthToken(req: NextRequest): Promise<DecodedUser> {
   if (verifiedSession) {
     return {
       uid: verifiedSession.uid,
+      name: verifiedSession.name,
       phone: verifiedSession.phone,
       email: verifiedSession.email,
       role: (verifiedSession.role || "CUSTOMER").toUpperCase(),
