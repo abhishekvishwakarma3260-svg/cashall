@@ -52,6 +52,7 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
       invoices: {
         orderBy: { createdAt: "desc" },
       },
+      imeiRecords: true,
     },
   });
 
@@ -151,8 +152,8 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
       }));
 
   const sanitizedImeiRecords = isPrivileged
-    ? order.imeiRecords
-    : order.imeiRecords?.map((im: any) => ({
+    ? (order as any).imeiRecords
+    : (order as any).imeiRecords?.map((im: any) => ({
         ...im,
         code: im.code ? `${im.code.slice(0, 6)}******${im.code.slice(-2)}` : null,
       }));
