@@ -43,6 +43,8 @@ next-env.d.ts
 
 .vercel
 .env*
+agents_login_credentials*.txt
+*.credentials.txt
 
 # scraper debug
 page_debug.html

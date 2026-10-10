@@ -10,34 +10,23 @@ try {
 
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
-// Supabase IPv4 Transaction Pooler URL (Port 6543 handles high concurrent traffic via transaction pooling)
-const SUPABASE_IPV4_POOLER_URL =
-  "postgresql://postgres.uyqwewpkwkxvrzahdusu:goPVIP2cXfIX2e3s@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=5&pool_timeout=30&sslmode=require";
-
-// STRICT: NEVER use POSTGRES_URL_NON_POOLING (port 5432 session mode, max 15 clients).
-// Always prioritize pooled connection URLs (port 6543).
+// Resolve database connection URL strictly from environment variables
 let dbUrl =
   process.env.POSTGRES_PRISMA_URL ||
   process.env.POSTGRES_URL ||
   process.env.DATABASE_URL ||
-  SUPABASE_IPV4_POOLER_URL;
+  "";
+
+if (!dbUrl) {
+  // Fail securely when database environment variable is not configured
+  throw new Error(
+    "[FATAL CONFIGURATION ERROR] Database connection URL is missing. Set DATABASE_URL or POSTGRES_PRISMA_URL in environment configuration."
+  );
+}
 
 // If the URL accidentally points to session mode (:5432/), rewrite to transaction pooler (:6543/)
 if (dbUrl.includes(":5432/")) {
   dbUrl = dbUrl.replace(":5432/", ":6543/");
-}
-
-// CRITICAL: Ensure we ALWAYS use the NEW Supabase project (uyqwewpkwkxvrzahdusu) and NEVER the old projects
-if (
-  !dbUrl ||
-  dbUrl.includes("vvivimdwycuseteduoqv") ||
-  dbUrl.includes("jqysknhobtpcbyyltnfc") ||
-  dbUrl.includes("ipzvutzhvmtnybelwspw") ||
-  dbUrl.includes("uxyxjixpkpiiabogflpp") ||
-  !dbUrl.includes("uyqwewpkwkxvrzahdusu") ||
-  dbUrl.includes("localhost")
-) {
-  dbUrl = SUPABASE_IPV4_POOLER_URL;
 }
 
 // Ensure Supabase transaction pooler parameters are present

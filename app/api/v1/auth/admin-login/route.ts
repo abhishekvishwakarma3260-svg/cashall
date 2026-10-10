@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { AppError } from "@/lib/utils/AppError";
 import { prisma } from "@/lib/db";
+import { signSessionToken } from "@/lib/auth/session-token";
+import { rateLimiter } from "@/lib/middlewares/security";
 
 export const dynamic = "force-dynamic";
 
@@ -12,9 +14,10 @@ const ALLOWED_ADMINS = [
   "AYUSH GUPTA",
 ];
 
-const ADMIN_PASSWORD = "Ank933967@";
-
 export const POST = apiWrapper(async (req: NextRequest) => {
+  // Strict rate limiting to prevent brute force
+  rateLimiter(req, 10, 60000);
+
   const body = await req.json();
 
   // Accept input via name, operatorName, email, or username
@@ -29,7 +32,13 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     throw new AppError("Password is required.", 400);
   }
 
-  // Case-insensitive operator name matching (capital, small, mixed letters) or Admin phone/email
+  // Load authoritative admin password from environment
+  const expectedPassword = process.env.ADMIN_PASSWORD;
+  if (!expectedPassword) {
+    throw new AppError("Admin authentication is not configured on this server.", 500);
+  }
+
+  // Case-insensitive operator name matching or Admin phone/email lookup
   let matchedAdmin = ALLOWED_ADMINS.find(
     (adminName) => adminName.toLowerCase() === inputName.toLowerCase()
   );
@@ -54,8 +63,8 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     }
   }
 
-  // Exact-case password matching
-  if (!matchedAdmin || inputPassword !== ADMIN_PASSWORD) {
+  // Verify credentials
+  if (!matchedAdmin || inputPassword !== expectedPassword) {
     throw new AppError("Invalid operator name or password.", 401);
   }
 
@@ -81,6 +90,14 @@ export const POST = apiWrapper(async (req: NextRequest) => {
   }
 
   const slugifiedId = `admin_${matchedAdmin.toLowerCase().replace(/\s+/g, "_")}`;
+  const adminEmail = `${matchedAdmin.toLowerCase().replace(/\s+/g, ".")}@cashall.in`;
+
+  // Issue cryptographically signed HMAC-SHA256 session token
+  const signedToken = signSessionToken({
+    uid: slugifiedId,
+    email: adminEmail,
+    role: "ADMIN",
+  }, 7 * 24 * 60 * 60);
 
   const response = NextResponse.json({
     success: true,
@@ -88,17 +105,18 @@ export const POST = apiWrapper(async (req: NextRequest) => {
       user: {
         id: slugifiedId,
         name: matchedAdmin,
-        email: `${matchedAdmin.toLowerCase().replace(/\s+/g, ".")}@cashall.in`,
+        email: adminEmail,
         role: "ADMIN",
         status: "ACTIVE",
       },
-      token: "tok_admin_master_session",
+      token: signedToken,
     },
   });
 
-  response.cookies.set("cashall_admin_token", "tok_admin_master_session", {
+  response.cookies.set("cashall_admin_token", signedToken, {
     path: "/",
     httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     maxAge: 60 * 60 * 24 * 7,
   });

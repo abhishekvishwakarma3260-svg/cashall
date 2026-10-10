@@ -1,17 +1,6 @@
-let resolvedDbUrl =
-  process.env.DATABASE_URL ||
-  process.env.POSTGRES_PRISMA_URL ||
-  process.env.POSTGRES_URL ||
-  "";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  env: {
-    DATABASE_URL: resolvedDbUrl,
-    POSTGRES_PRISMA_URL: resolvedDbUrl,
-    POSTGRES_URL: resolvedDbUrl,
-  },
   compress: true,
   poweredByHeader: false,
   images: {
@@ -108,29 +97,38 @@ const nextConfig = {
         ],
       },
       {
-        source: '/api/v1/agent/orders',
+        source: '/api/v1/agent/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=60, stale-while-revalidate=120',
+            value: 'private, no-cache, no-store, max-age=0, must-revalidate',
           },
         ],
       },
       {
-        source: '/api/v1/admin/orders/latest-check',
+        source: '/api/v1/admin/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=60, stale-while-revalidate=120',
+            value: 'private, no-cache, no-store, max-age=0, must-revalidate',
           },
         ],
       },
       {
-        source: '/api/v1/partner/orders',
+        source: '/api/v1/orders/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=60, stale-while-revalidate=120',
+            value: 'private, no-cache, no-store, max-age=0, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/api/v1/partner/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'private, no-cache, no-store, max-age=0, must-revalidate',
           },
         ],
       },

@@ -143,12 +143,36 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
     ? order.address
     : (order.address ? { city: order.address.city, state: order.address.state, pincode: order.address.pincode } : null);
 
+  const sanitizedQcReports = isPrivileged
+    ? order.qcReports
+    : order.qcReports?.map((qc: any) => ({
+        ...qc,
+        imeiNumber: qc.imeiNumber ? `${qc.imeiNumber.slice(0, 6)}******${qc.imeiNumber.slice(-2)}` : null,
+      }));
+
+  const sanitizedImeiRecords = isPrivileged
+    ? order.imeiRecords
+    : order.imeiRecords?.map((im: any) => ({
+        ...im,
+        code: im.code ? `${im.code.slice(0, 6)}******${im.code.slice(-2)}` : null,
+      }));
+
+  const sanitizedPayments = isPrivileged
+    ? order.payments
+    : order.payments?.map((pm: any) => ({
+        ...pm,
+        transactionRef: pm.transactionRef && pm.transactionRef.length > 4 ? `****${pm.transactionRef.slice(-4)}` : "Verified",
+      }));
+
   return NextResponse.json({
     success: true,
     data: {
       ...order,
       user: sanitizedUser,
       address: sanitizedAddress,
+      qcReports: sanitizedQcReports,
+      imeiRecords: sanitizedImeiRecords,
+      payments: sanitizedPayments,
       deviceName,
       addressSummary,
       customerName: order.user?.name || "Customer",
@@ -159,8 +183,8 @@ export const GET = apiWrapper(async (req: NextRequest, { params }: { params: { i
       agentName: assignedAgentName,
       agentPhone: assignedAgentPhone,
       assignedPartnerBusiness: assignedPartner?.businessName || "CashALL Express Logistics",
-      utr: order.urn || activePayment?.transactionRef || "",
-      urn: order.urn || activePayment?.transactionRef || "",
+      utr: isPrivileged ? (order.urn || activePayment?.transactionRef || "") : (order.urn ? `****${order.urn.slice(-4)}` : "Verified"),
+      urn: isPrivileged ? (order.urn || activePayment?.transactionRef || "") : (order.urn ? `****${order.urn.slice(-4)}` : "Verified"),
       quotedPrice,
       estimatedPrice: quotedPrice,
       requotedPrice,

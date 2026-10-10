@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
+import { verifyAuthToken } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -88,6 +89,27 @@ export const GET = apiWrapper(async (
     displayStatus = "ORDERED";
   }
 
+  // Check privilege level for customer phone privacy
+  let isPrivileged = false;
+  try {
+    const authUser = await verifyAuthToken(req);
+    if (["ADMIN", "SUPER_ADMIN", "MANAGER", "EMPLOYEE", "AGENT"].includes(authUser.role)) {
+      isPrivileged = true;
+    } else if (
+      (quote.userId && authUser.uid === quote.userId) ||
+      (authUser.phone && quote.customerPhone && authUser.phone.slice(-10) === quote.customerPhone.slice(-10))
+    ) {
+      isPrivileged = true;
+    }
+  } catch {
+    isPrivileged = false;
+  }
+
+  const rawPhone = quote.customerPhone || "";
+  const maskedPhone = rawPhone.length >= 10
+    ? `${rawPhone.slice(0, 2)}******${rawPhone.slice(-2)}`
+    : (rawPhone ? "******" : "");
+
   return NextResponse.json({
     success: true,
     quote: {
@@ -109,7 +131,7 @@ export const GET = apiWrapper(async (
       createdAt: quote.createdAt.toISOString(),
       expiresAt: quote.expiresAt.toISOString(),
       customerName: quote.customerName || "",
-      customerPhone: quote.customerPhone || "",
+      customerPhone: isPrivileged ? rawPhone : maskedPhone,
       breakdownJson: quote.breakdownJson,
       selectedAnswersJson: quote.selectedAnswersJson,
     },

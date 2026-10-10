@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { signSessionToken } from "@/lib/auth/session-token";
 
 export const dynamic = "force-dynamic";
 
@@ -22,8 +23,10 @@ export async function POST(req: Request) {
     const inputNormalized = normalize(inputName);
     const cleanPhone = inputName.replace(/\D/g, "");
 
+    const adminMasterPass = process.env.ADMIN_PASSWORD;
+
     // 1. Dedicated agent login check for SANGEET SHAW
-    if ((inputNormalized === "sangeetshaw" || cleanPhone === "6289477287") && (inputPassword === "Ank933967@" || !inputPassword)) {
+    if ((inputNormalized === "sangeetshaw" || cleanPhone === "6289477287") && inputPassword && (inputPassword === adminMasterPass || (adminMasterPass && inputPassword === "Ank933967@"))) {
       let agent = await prisma.user.findFirst({
         where: {
           role: "AGENT",
@@ -54,7 +57,12 @@ export async function POST(req: Request) {
       }
 
       const agentId = agent.id;
-      const token = `tok_agent_${agentId}_${Date.now()}`;
+      const token = signSessionToken({
+        uid: agentId,
+        email: agent.email || "sangeetshaw39@gmail.com",
+        phone: agent.phone || "6289477287",
+        role: "AGENT",
+      }, 7 * 24 * 60 * 60);
 
       return NextResponse.json({
         success: true,
@@ -137,7 +145,8 @@ export async function POST(req: Request) {
       const isPhoneMatch =
         agentPhoneDigits &&
         (inputPassword?.trim() === agent.phone?.trim() || inputPassDigits === agentPhoneDigits);
-      const isMasterMatch = inputPassword === "Ank933967@";
+      const adminMasterPass = process.env.ADMIN_PASSWORD;
+      const isMasterMatch = inputPassword === adminMasterPass || (adminMasterPass && inputPassword === "Ank933967@");
 
       if (!isPhoneMatch && !isMasterMatch) {
         return NextResponse.json(
@@ -146,7 +155,12 @@ export async function POST(req: Request) {
         );
       }
 
-      const token = `tok_agent_${agent.id}_${Date.now()}`;
+      const token = signSessionToken({
+        uid: agent.id,
+        email: agent.email || `${(agent.name || inputName).toLowerCase().replace(/\s+/g, ".")}@cashall.in`,
+        phone: agent.phone || cleanPhone || undefined,
+        role: "AGENT",
+      }, 7 * 24 * 60 * 60);
       return NextResponse.json({
         success: true,
         token,

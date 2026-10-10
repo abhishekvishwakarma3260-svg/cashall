@@ -2,11 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { logger } from "@/lib/utils/logger";
 import { invalidateAgentOrdersCache } from "@/lib/cache/agent-cache";
+import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
+    const authUser = await verifyAuthToken(req);
+    requireRole(["AGENT", "ADMIN", "SUPER_ADMIN", "MANAGER"], authUser.role);
+
     const orderIdentifier = params.id;
     const body = await req.json().catch(() => ({}));
 

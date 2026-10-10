@@ -1,4 +1,6 @@
+import crypto from "crypto";
 import { logger } from "@/lib/utils/logger";
+import { prisma } from "@/lib/db";
 
 interface StoredOtp {
   code: string;
@@ -7,7 +9,7 @@ interface StoredOtp {
   lastSentAt: number;
 }
 
-// In-memory global store across serverless requests in same instance
+// In-memory fallback cache across serverless requests in same instance
 const globalOtpStore = new Map<string, StoredOtp>();
 
 export class SmsService {
@@ -19,29 +21,52 @@ export class SmsService {
   private static readonly RATE_LIMIT_MS = 30 * 1000; // 30s resend cooldown
 
   /**
-   * Generates and dispatches a live 6-digit OTP SMS via StartMessaging
+   * Generates and dispatches a cryptographically secure 6-digit OTP SMS via StartMessaging
    */
-  public static async sendOtp(phone: string): Promise<{ success: boolean; message: string; cooldownSeconds?: number }> {
+  public static async sendOtp(
+    phone: string
+  ): Promise<{ success: boolean; message: string; cooldownSeconds?: number }> {
     const cleanPhone = (phone || "").replace(/\D/g, "").slice(-10);
     if (cleanPhone.length !== 10) {
       return { success: false, message: "Invalid 10-digit mobile number." };
     }
 
-    const existing = globalOtpStore.get(cleanPhone);
     const now = Date.now();
 
-    // Check resend rate limit cooldown
-    if (existing && now - existing.lastSentAt < this.RATE_LIMIT_MS) {
-      const waitSec = Math.ceil((this.RATE_LIMIT_MS - (now - existing.lastSentAt)) / 1000);
-      return {
-        success: false,
-        message: `Please wait ${waitSec}s before requesting a new OTP.`,
-        cooldownSeconds: waitSec,
-      };
+    // Check recent attempts in DB for rate limiting
+    try {
+      const recentLog = await prisma.otpLog.findFirst({
+        where: {
+          phone: cleanPhone,
+          createdAt: { gte: new Date(now - this.RATE_LIMIT_MS) },
+        },
+        orderBy: { createdAt: "desc" },
+      });
+
+      if (recentLog) {
+        const elapsed = now - recentLog.createdAt.getTime();
+        const waitSec = Math.max(1, Math.ceil((this.RATE_LIMIT_MS - elapsed) / 1000));
+        return {
+          success: false,
+          message: `Please wait ${waitSec}s before requesting a new OTP.`,
+          cooldownSeconds: waitSec,
+        };
+      }
+    } catch {
+      // If DB check fails, fallback to in-memory check
+      const existing = globalOtpStore.get(cleanPhone);
+      if (existing && now - existing.lastSentAt < this.RATE_LIMIT_MS) {
+        const waitSec = Math.ceil((this.RATE_LIMIT_MS - (now - existing.lastSentAt)) / 1000);
+        return {
+          success: false,
+          message: `Please wait ${waitSec}s before requesting a new OTP.`,
+          cooldownSeconds: waitSec,
+        };
+      }
     }
 
-    // Generate cryptographic 6-digit code
-    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    // Cryptographically secure 6-digit code (100000 - 999999)
+    const code = crypto.randomInt(100000, 1000000).toString();
     const apiKey = process.env.STARTMESSAGING_API_KEY || "";
 
     if (!apiKey) {
@@ -68,7 +93,7 @@ export class SmsService {
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
 
       if (!res.ok || !data.success) {
         logger.error("StartMessaging SMS delivery error:", data);
@@ -78,7 +103,23 @@ export class SmsService {
         };
       }
 
-      // Store in memory
+      // 1. Persist OTP in database for distributed serverless reliability
+      const expiresAtDate = new Date(now + this.OTP_TTL_MS);
+      try {
+        await prisma.otpLog.create({
+          data: {
+            phone: cleanPhone,
+            code,
+            expiresAt: expiresAtDate,
+            verified: false,
+            type: "LOGIN",
+          },
+        });
+      } catch (dbErr) {
+        logger.warn("Database OtpLog save warning:", dbErr);
+      }
+
+      // 2. Also save in memory fallback
       globalOtpStore.set(cleanPhone, {
         code,
         expiresAt: now + this.OTP_TTL_MS,
@@ -86,7 +127,11 @@ export class SmsService {
         lastSentAt: now,
       });
 
-      logger.info(`Live OTP SMS sent successfully to +91${cleanPhone} (StartMsg reqId: ${data.requestId || data.data?.messageId})`);
+      logger.info(
+        `Live OTP SMS sent successfully to +91${cleanPhone} (StartMsg reqId: ${
+          data.requestId || data.data?.messageId
+        })`
+      );
 
       return {
         success: true,
@@ -104,11 +149,45 @@ export class SmsService {
   /**
    * Verifies the 6-digit OTP code entered by the customer
    */
-  public static verifyOtp(phone: string, inputCode: string): { success: boolean; message: string } {
+  public static async verifyOtp(
+    phone: string,
+    inputCode: string
+  ): Promise<{ success: boolean; message: string }> {
     const cleanPhone = (phone || "").replace(/\D/g, "").slice(-10);
-    const stored = globalOtpStore.get(cleanPhone);
     const cleanInput = (inputCode || "").trim();
 
+    if (!cleanInput || cleanInput.length < 4) {
+      return { success: false, message: "Valid OTP code is required." };
+    }
+
+    // 1. Check persistent database OtpLog first
+    try {
+      const activeOtpRecord = await prisma.otpLog.findFirst({
+        where: {
+          phone: cleanPhone,
+          verified: false,
+          expiresAt: { gt: new Date() },
+        },
+        orderBy: { createdAt: "desc" },
+      });
+
+      if (activeOtpRecord) {
+        if (activeOtpRecord.code === cleanInput) {
+          // Mark OTP verified
+          await prisma.otpLog.update({
+            where: { id: activeOtpRecord.id },
+            data: { verified: true },
+          });
+          globalOtpStore.delete(cleanPhone);
+          return { success: true, message: "OTP verified successfully." };
+        }
+      }
+    } catch (dbErr) {
+      logger.warn("Database OtpLog check warning, falling back to memory:", dbErr);
+    }
+
+    // 2. Fallback to in-memory store
+    const stored = globalOtpStore.get(cleanPhone);
     if (!stored) {
       return { success: false, message: "OTP not found or expired. Please request a new OTP." };
     }

@@ -4,6 +4,7 @@ import { SmsService } from "@/lib/services/sms.service";
 import { AppError } from "@/lib/utils/AppError";
 import { logger } from "@/lib/utils/logger";
 import { prisma } from "@/lib/db";
+import { signSessionToken } from "@/lib/auth/session-token";
 import { z } from "zod";
 
 const verifySchema = z.object({
@@ -29,16 +30,18 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     throw new AppError("Invalid 10-digit mobile number.", 400);
   }
 
-  const inputOtp = otp || code;
+  const inputOtp = (otp || code || "").trim();
 
-  if (inputOtp) {
-    const verifyResult = SmsService.verifyOtp(cleanPhone, inputOtp);
-    if (!verifyResult.success) {
-      return NextResponse.json(
-        { success: false, message: verifyResult.message },
-        { status: 400 }
-      );
-    }
+  if (!inputOtp || inputOtp.length < 4) {
+    throw new AppError("Valid OTP code is required for verification.", 400);
+  }
+
+  const verifyResult = await SmsService.verifyOtp(cleanPhone, inputOtp);
+  if (!verifyResult.success) {
+    return NextResponse.json(
+      { success: false, message: verifyResult.message },
+      { status: 400 }
+    );
   }
 
   // Find or create customer in database
@@ -65,14 +68,23 @@ export const POST = apiWrapper(async (req: NextRequest) => {
 
   logger.info(`Customer +91${cleanPhone} verified successfully.`);
 
+  const userId = user?.id || `usr-${cleanPhone}`;
+  const signedToken = signSessionToken({
+    uid: userId,
+    phone: cleanPhone,
+    role: user?.role || "CUSTOMER",
+  }, 30 * 24 * 60 * 60);
+
   return NextResponse.json({
     success: true,
     message: "Phone number verified successfully.",
     phone: cleanPhone,
+    token: signedToken,
     user: {
-      id: user?.id || `usr-${cleanPhone}`,
+      id: userId,
       name: user?.name || name?.trim() || "Customer",
       phone: cleanPhone,
+      role: user?.role || "CUSTOMER",
     },
   });
 });

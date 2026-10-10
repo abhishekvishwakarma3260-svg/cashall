@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { firebaseAdmin } from "../services/firebase";
 import { AppError } from "../utils/AppError";
+import { verifySessionToken } from "../auth/session-token";
 
 export interface DecodedUser {
   uid: string;
@@ -8,8 +9,6 @@ export interface DecodedUser {
   email?: string;
   role: string;
 }
-
-const ADMIN_MASTER_TOKEN = "tok_admin_master_session";
 
 export async function verifyAuthToken(req: NextRequest): Promise<DecodedUser> {
   const authHeader = req.headers.get("authorization");
@@ -22,25 +21,18 @@ export async function verifyAuthToken(req: NextRequest): Promise<DecodedUser> {
     throw new AppError("Authentication required. Please log in.", 401);
   }
 
-  // Accept any admin session token directly (email/password admin login)
-  if (token === ADMIN_MASTER_TOKEN || token.startsWith("tok_admin")) {
-    const adminEmail = (process.env.ADMIN_EMAIL || "support@cashall.in").trim().toLowerCase();
+  // 1. First, check if the token is a cryptographically signed HMAC-SHA256 session token
+  const verifiedSession = verifySessionToken(token);
+  if (verifiedSession) {
     return {
-      uid: "admin_master_1",
-      email: adminEmail,
-      role: "ADMIN",
+      uid: verifiedSession.uid,
+      phone: verifiedSession.phone,
+      email: verifiedSession.email,
+      role: verifiedSession.role,
     };
   }
 
-  // Accept support caller session tokens
-  if (token.startsWith("tok_support")) {
-    return {
-      uid: "support_agent_1",
-      email: "support@cashall.in",
-      role: "SUPPORT",
-    };
-  }
-
+  // 2. Otherwise verify via Firebase Admin ID token
   try {
     const decodedToken = await firebaseAdmin.auth().verifyIdToken(token);
     return {
@@ -50,7 +42,7 @@ export async function verifyAuthToken(req: NextRequest): Promise<DecodedUser> {
       role: (decodedToken.role as string) || "CUSTOMER",
     };
   } catch (error: any) {
-    throw new AppError(`Authentication failed: ${error.message}`, 401);
+    throw new AppError(`Authentication failed: Invalid or expired session credentials.`, 401);
   }
 }
 

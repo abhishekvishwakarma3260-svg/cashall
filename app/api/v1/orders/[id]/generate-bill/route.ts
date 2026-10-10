@@ -1,8 +1,33 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { formatDeviceName, cleanDeviceName } from "@/lib/device";
+import { verifyAuthToken } from "@/lib/middlewares/auth";
 
-async function getOrderBillData(orderIdentifier: string) {
+function maskCustomerName(name: string): string {
+  if (!name) return "Customer";
+  const parts = name.trim().split(/\s+/);
+  return parts
+    .map((p) => (p.length > 1 ? `${p[0]}${"*".repeat(p.length - 1)}` : p))
+    .join(" ");
+}
+
+function maskPhoneNumber(phone: string): string {
+  const clean = (phone || "").replace(/\D/g, "").slice(-10);
+  if (clean.length === 10) {
+    return `${clean.slice(0, 2)}******${clean.slice(-2)}`;
+  }
+  return "******";
+}
+
+function maskImeiNumber(imei: string): string {
+  const clean = (imei || "").trim();
+  if (clean.length >= 14) {
+    return `${clean.slice(0, 6)}******${clean.slice(-2)}`;
+  }
+  return "******";
+}
+
+async function getOrderBillData(req: NextRequest, orderIdentifier: string) {
   const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(orderIdentifier);
   const cleanOrderNum = orderIdentifier.replace(/^#/, "");
 
@@ -50,6 +75,22 @@ async function getOrderBillData(orderIdentifier: string) {
     } as any;
   }
 
+  // Privilege verification for PII / IMEI unmasking
+  let isPrivileged = false;
+  try {
+    const authUser = await verifyAuthToken(req);
+    if (["ADMIN", "SUPER_ADMIN", "MANAGER", "EMPLOYEE", "AGENT"].includes(authUser.role)) {
+      isPrivileged = true;
+    } else if (
+      authUser.uid === order.userId ||
+      (authUser.phone && order.user?.phone && authUser.phone.slice(-10) === order.user.phone.slice(-10))
+    ) {
+      isPrivileged = true;
+    }
+  } catch {
+    isPrivileged = false;
+  }
+
   let explicitDeviceName = "";
   if (order.quote?.breakdownJson) {
     try {
@@ -94,13 +135,24 @@ async function getOrderBillData(orderIdentifier: string) {
   const finalPrice = order.finalPrice || payment?.amount || requotedPrice || quotedPrice;
 
   const rawUtr = order.urn || payment?.transactionRef || (order as any).utr || "";
-  const utrNumber = rawUtr && !rawUtr.startsWith("PAID-") && rawUtr !== "623480124575" ? rawUtr : "";
-  const imeiCode = order.imeiRecords?.[0]?.code || order.qcReports?.[0]?.imeiNumber || (order as any).imeiNumber || "N/A";
-  const agentName = order.agent?.name || order.pickups?.[0]?.notes || "Hyder Ali";
+  const utrNumber = isPrivileged
+    ? (rawUtr && !rawUtr.startsWith("PAID-") && rawUtr !== "623480124575" ? rawUtr : "")
+    : (rawUtr && rawUtr.length > 4 ? `****${rawUtr.slice(-4)}` : "Verified");
 
-  const customerAddress = order.address
-    ? [order.address.house, order.address.street, order.address.area, order.address.city, order.address.state ? `${order.address.state} - ${order.address.pincode}` : order.address.pincode].filter(Boolean).join(", ")
-    : "Howrah, West Bengal";
+  const rawImei = order.imeiRecords?.[0]?.code || order.qcReports?.[0]?.imeiNumber || (order as any).imeiNumber || "";
+  const imeiCode = isPrivileged ? (rawImei || "N/A") : maskImeiNumber(rawImei);
+  const agentName = order.agent?.name || order.pickups?.[0]?.notes || "CashALL Authorized Agent";
+
+  const rawSellerName = order.user?.name || (order as any).customerName || "Customer";
+  const rawSellerPhone = order.user?.phone || (order as any).customerPhone || "—";
+
+  const customerAddress = isPrivileged
+    ? (order.address
+        ? [order.address.house, order.address.street, order.address.area, order.address.city, order.address.state ? `${order.address.state} - ${order.address.pincode}` : order.address.pincode].filter(Boolean).join(", ")
+        : "Howrah, West Bengal")
+    : (order.address
+        ? [order.address.area || order.address.city, order.address.city, order.address.pincode].filter(Boolean).join(", ")
+        : "Howrah, West Bengal");
 
   const currentYear = new Date().getFullYear();
   const billNumber = `${order.orderNumber}_${currentYear}`;
@@ -111,10 +163,11 @@ async function getOrderBillData(orderIdentifier: string) {
     orderDate: order.createdAt?.toISOString() || new Date().toISOString(),
     completionDate: order.updatedAt?.toISOString() || new Date().toISOString(),
     transactionDate: order.updatedAt?.toISOString() || new Date().toISOString(),
+    isPrivileged,
     seller: {
-      name: order.user?.name || (order as any).customerName || "Customer",
-      phone: order.user?.phone || (order as any).customerPhone || "—",
-      phoneMasked: order.user?.phone || (order as any).customerPhone || "—",
+      name: isPrivileged ? rawSellerName : maskCustomerName(rawSellerName),
+      phone: isPrivileged ? rawSellerPhone : maskPhoneNumber(rawSellerPhone),
+      phoneMasked: maskPhoneNumber(rawSellerPhone),
       address: customerAddress,
     },
     buyer: {
@@ -152,7 +205,7 @@ async function getOrderBillData(orderIdentifier: string) {
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const result = await getOrderBillData(params.id);
+    const result = await getOrderBillData(req, params.id);
     if (!result) {
       return NextResponse.json({ success: false, error: "Order not found" }, { status: 404 });
     }
@@ -174,7 +227,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const result = await getOrderBillData(params.id);
+    const result = await getOrderBillData(req, params.id);
     if (!result) {
       return NextResponse.json({ success: false, error: "Order not found" }, { status: 404 });
     }
