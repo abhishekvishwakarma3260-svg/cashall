@@ -1,75 +1,52 @@
 # CashALL (https://www.cashall.in) Official Robots.txt
-# Optimized for Google, Bing, DuckDuckGo, and Generative AI Search Engines (AEO/GEO)
+# Strict Bandwidth Protection & Anti-Scraper Configuration
 
+# 1. Completely Block Aggressive Scrapers and Bandwidth-Draining Bots
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: Amazonbot
+User-agent: PetalBot
+User-agent: SemrushBot
+User-agent: AhrefsBot
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: Diffbot
+User-agent: Timpibot
+User-agent: Webzio-Extended
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+User-agent: MegaIndex
+User-agent: Claude-Web
+Disallow: /
+
+# 2. General Crawlers Policy (Google, Bing, etc.)
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /download/
+Disallow: /download
 Disallow: /admin/
 Disallow: /partner/
 Disallow: /agent/
 Disallow: /support/
-Disallow: /api/
 Disallow: /checkout/
 Disallow: /track/
 Disallow: /order/
 Disallow: /orders/
-Disallow: /receipt/
-Disallow: /sale-receipt/
-Disallow: /dashboard/
-Disallow: /download/
-Disallow: /download
+Disallow: /quote/
+Disallow: /quote
+Disallow: /account/
+Disallow: /account
+Disallow: /privacy-request/
+Disallow: /privacy-request
+Disallow: /photos/
+Disallow: /*.apk$
+Disallow: /*.csv$
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.pdf$
+Crawl-delay: 10
 
-# SearchGPT, OpenAI ChatGPT Web Browsing & Search
-User-agent: OAI-SearchBot
-User-agent: GPTBot
-User-agent: ChatGPT-User
-Allow: /
-
-# Googlebot, Google Other, Google Extended AI
-User-agent: Googlebot
-User-agent: Googlebot-Mobile
-User-agent: Googlebot-Image
-User-agent: Google-InspectionTool
-User-agent: GoogleOther
-User-agent: Google-Extended
-Allow: /
-
-# Microsoft Bing & Copilot
-User-agent: Bingbot
-Allow: /
-
-# Perplexity AI Engine
-User-agent: PerplexityBot
-Allow: /
-
-# Anthropic Claude
-User-agent: ClaudeBot
-User-agent: Claude-Web
-User-agent: anthropic-ai
-Allow: /
-
-# Apple Intelligence & Siri
-User-agent: Applebot
-User-agent: Applebot-Extended
-Allow: /
-
-# Meta AI, Amazon, TikTok, Cohere & Open Foundation Models
-User-agent: Meta-ExternalAgent
-User-agent: FacebookBot
-User-agent: Amazonbot
-User-agent: Bytespider
-User-agent: cohere-ai
-User-agent: CCBot
-User-agent: Diffbot
-User-agent: YouBot
-User-agent: Timpibot
-User-agent: Webzio-Extended
-Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /ai.txt
-Allow: /.well-known/
-Allow: /humans.txt
-
-# Canonical Sitemaps & Host
+# 3. Canonical Sitemaps & Host
 Sitemap: https://www.cashall.in/sitemap.xml
 Host: https://www.cashall.in

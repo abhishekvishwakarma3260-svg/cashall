@@ -1,11 +1,27 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+// Regex targeting aggressive web scrapers and bandwidth-draining crawlers
+const AGGRESSIVE_BOTS_REGEX = /bytespider|ccbot|amazonbot|petalbot|semrushbot|ahrefsbot|dotbot|mj12bot|dataforseobot|blexbot|diffbot|timpibot|webzio|claude-web/i;
+
 export function middleware(request: NextRequest) {
+  const userAgent = request.headers.get("user-agent") || "";
+
+  // 1. Edge Shield: Immediately terminate aggressive bandwidth-draining bots (Freezes Fast Origin Transfer)
+  if (AGGRESSIVE_BOTS_REGEX.test(userAgent)) {
+    return new Response("Access Restricted: Automated scraping blocked to preserve service capacity.", {
+      status: 403,
+      headers: {
+        "Content-Type": "text/plain",
+        "Cache-Control": "public, max-age=86400",
+      },
+    });
+  }
+
   const host = request.headers.get("host") || "";
   const correlationId = request.headers.get("x-correlation-id") || `req-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
-  // 1. Canonical Domain Redirection:
+  // 2. Canonical Domain Redirection:
   // If traffic lands on vercel.app preview/production domains or non-www cashall.in, 301 redirect to canonical https://www.cashall.in
   if (
     !host.includes("localhost") &&
@@ -26,10 +42,10 @@ export function middleware(request: NextRequest) {
     },
   });
 
-  // 2. Set Correlation ID for distributed tracing
+  // 3. Set Correlation ID for distributed tracing
   response.headers.set("X-Correlation-ID", correlationId);
 
-  // 3. Security Headers
+  // 4. Security Headers
   response.headers.set("X-DNS-Prefetch-Control", "on");
   response.headers.set("X-Frame-Options", "SAMEORIGIN");
   response.headers.set("X-Content-Type-Options", "nosniff");
@@ -43,7 +59,7 @@ export function middleware(request: NextRequest) {
     "camera=(self), microphone=(), geolocation=(self)"
   );
 
-  // 4. Content Security Policy (allows Next.js runtime, Meta Pixel, Google Fonts, and self)
+  // 5. Content Security Policy (allows Next.js runtime, Meta Pixel, Google Fonts, and self)
   const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com;

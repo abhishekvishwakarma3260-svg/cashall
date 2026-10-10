@@ -440,6 +440,46 @@ runTest(".gitignore ignores agents_login_credentials*.txt and sensitive dumps", 
   assert.ok(gitignoreFile.includes("agents_login_credentials*.txt"));
 });
 
+// -----------------------------------------------------------------------------
+// TEST SUITE 6: VERCEL FAST ORIGIN TRANSFER FREEZE & BANDWIDTH CONTROLS
+// -----------------------------------------------------------------------------
+console.log("\n--- SUITE 6: Vercel Fast Origin Transfer Freeze & Bandwidth Controls ---");
+
+runTest("public/robots.txt and app/robots.ts block Bytespider, CCBot, and heavy files", () => {
+  const pubRobots = fs.readFileSync(path.join(ROOT_DIR, "public/robots.txt"), "utf8");
+  const appRobots = fs.readFileSync(path.join(ROOT_DIR, "app/robots.ts"), "utf8");
+  assert.ok(pubRobots.includes("User-agent: Bytespider") && pubRobots.includes("Disallow: /"));
+  assert.ok(pubRobots.includes("Disallow: /*.apk$"));
+  assert.ok(appRobots.includes('"Bytespider"') && appRobots.includes('"CCBot"'));
+});
+
+runTest("middleware.ts implements Edge Bot Shield terminating aggressive scrapers", () => {
+  const middlewareFile = fs.readFileSync(path.join(ROOT_DIR, "middleware.ts"), "utf8");
+  assert.ok(middlewareFile.includes("AGGRESSIVE_BOTS_REGEX"));
+  assert.ok(middlewareFile.includes("bytespider"));
+  assert.ok(middlewareFile.includes("status: 403"));
+});
+
+runTest("next.config.mjs enables Edge CDN caching on public catalog and blog routes", () => {
+  const nextConfig = fs.readFileSync(path.join(ROOT_DIR, "next.config.mjs"), "utf8");
+  assert.ok(nextConfig.includes("source: '/sell/:path*'"));
+  assert.ok(nextConfig.includes("public, s-maxage=86400, stale-while-revalidate=604800"));
+  assert.ok(nextConfig.includes("source: '/blog/:path*'"));
+});
+
+runTest("public/ directory does not bundle raw heavy APK or CSV deadweight", () => {
+  assert.ok(!fs.existsSync(path.join(ROOT_DIR, "public/CashALL-Agent.apk")));
+  assert.ok(!fs.existsSync(path.join(ROOT_DIR, "public/CashALL-Admin.apk")));
+  assert.ok(!fs.existsSync(path.join(ROOT_DIR, "public/CashALL-Caller.apk")));
+  assert.ok(!fs.existsSync(path.join(ROOT_DIR, "public/CashALL_Meta_Catalog_Feed.csv")));
+});
+
+runTest("Download API routes support external storage redirect to bypass Vercel serverless origin", () => {
+  const customerRoute = fs.readFileSync(path.join(ROOT_DIR, "app/api/v1/download/customer/route.ts"), "utf8");
+  assert.ok(customerRoute.includes("APK_STORAGE_BASE_URL"));
+  assert.ok(customerRoute.includes("NextResponse.redirect"));
+});
+
 console.log("\n================================================================================");
 console.log(`📊 TEST RESULTS SUMMARY: ${passedCount} PASSED, ${failedCount} FAILED`);
 console.log("================================================================================");

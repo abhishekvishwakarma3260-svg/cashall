@@ -20,7 +20,14 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    // 2. Locate APK file from secure root directory (NOT in public directory)
+    // 2. Check for external CDN / Storage URL (GitHub Releases or Supabase bucket) to eliminate Vercel Origin Transfer
+    const externalStorageBase = process.env.APK_STORAGE_BASE_URL || process.env.NEXT_PUBLIC_APK_STORAGE_URL;
+    if (externalStorageBase) {
+      const targetUrl = `${externalStorageBase.replace(/\/$/, "")}/CashALL-Admin.apk`;
+      return NextResponse.redirect(targetUrl, 302);
+    }
+
+    // 3. Fallback: Locate APK file from secure root directory (NOT in public directory)
     const apkPath = path.join(process.cwd(), "CashALL-Admin.apk");
 
     if (!fs.existsSync(apkPath)) {
@@ -39,7 +46,7 @@ export async function GET(req: NextRequest) {
         "Content-Type": "application/vnd.android.package-archive",
         "Content-Disposition": 'attachment; filename="CashALL-Admin.apk"',
         "Content-Length": stat.size.toString(),
-        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Cache-Control": "private, max-age=86400",
         "X-Content-Type-Options": "nosniff",
       },
     });
