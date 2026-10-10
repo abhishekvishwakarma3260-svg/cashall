@@ -136,6 +136,25 @@ class InHouseBuzzerAlarm {
 
 const buzzerAlarm = new InHouseBuzzerAlarm();
 
+function getAgentAuthHeaders(session?: any) {
+  let token = "";
+  if (typeof window !== "undefined") {
+    token = localStorage.getItem("cashall_agent_token") || "";
+    if (!token) {
+      try {
+        const raw = localStorage.getItem("cashall_agent_session");
+        if (raw) token = JSON.parse(raw).token || "";
+      } catch {}
+    }
+  }
+  return {
+    ...(token ? { Authorization: `Bearer ${token}`, "x-auth-token": token } : {}),
+    ...(session?.phone ? { "x-agent-phone": session.phone } : {}),
+    ...(session?.name ? { "x-agent-name": session.name } : {}),
+    ...(session?.id ? { "x-agent-id": session.id } : {}),
+  };
+}
+
 interface AgentOrder {
   id: string;
   orderNumber: string;
@@ -308,9 +327,14 @@ export default function AgentDashboardPage() {
 
     if (!isSilent) setLoading(true);
     try {
+      const authHeaders = getAgentAuthHeaders(session);
       const res = await fetch(`/api/v1/agent/orders?agentId=${agentId}&phone=${phone}&name=${name}&_t=${Date.now()}`, {
         cache: "no-store",
-        headers: { "Cache-Control": "no-cache, no-store" },
+        credentials: "include",
+        headers: {
+          "Cache-Control": "no-cache, no-store",
+          ...authHeaders,
+        },
       });
       const json = await res.json();
       if (json.success && Array.isArray(json.orders)) {
@@ -622,13 +646,19 @@ export default function AgentDashboardPage() {
 
     setActionLoading(ord.id + "-paid");
     try {
+      const authHeaders = getAgentAuthHeaders(agentSession);
       const res = await fetch(`/api/v1/agent/orders/${ord.orderNumber}/complete`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          ...authHeaders,
+        },
         body: JSON.stringify({
           finalPrice,
           utr: finalUtr,
           agentName: agentSession?.name || "Field Agent",
+          agentPhone: agentSession?.phone || "",
         }),
       });
 
@@ -693,9 +723,14 @@ export default function AgentDashboardPage() {
 
     setActionLoading(ord.id + "-reject");
     try {
+      const authHeaders = getAgentAuthHeaders(agentSession);
       const res = await fetch(`/api/v1/orders/${ord.orderNumber}/cancel`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          ...authHeaders,
+        },
         body: JSON.stringify({ reason: reason.trim() }),
       });
 

@@ -75,16 +75,26 @@ export default function PartnerPortalPage() {
         throw new Error(data.error || data.message || "Partner authentication failed.");
       }
 
-      const sessionObj = data.data?.partner || {
-        id: `p_${Date.now()}`,
-        name: name.trim(),
-        phone: cleanPhone,
-        businessName: businessName.trim() || "CashALL Logistics",
-        city: city || "Kolkata",
+      const partnerToken = data.data?.token || data.token || `tok_partner_${cleanPhone}`;
+      const sessionObj = {
+        ...(data.data?.partner || {
+          id: `p_${cleanPhone}`,
+          name: name.trim(),
+          phone: cleanPhone,
+          businessName: businessName.trim() || "CashALL Logistics",
+          city: city || "Kolkata",
+        }),
+        token: partnerToken,
       };
 
       if (typeof window !== "undefined") {
         localStorage.setItem("cashall_partner_session", JSON.stringify(sessionObj));
+        localStorage.setItem("cashall_partner_token", partnerToken);
+        localStorage.setItem("cashall_session_token", partnerToken);
+        try {
+          document.cookie = `cashall_partner_token=${partnerToken}; path=/; max-age=2592000; SameSite=Lax`;
+          document.cookie = `cashall_session_token=${partnerToken}; path=/; max-age=2592000; SameSite=Lax`;
+        } catch {}
       }
       setPartnerUser(sessionObj);
       router.push("/partner/orders");

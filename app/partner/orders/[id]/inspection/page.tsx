@@ -79,9 +79,30 @@ export default function PartnerInspectionPage({ params }: { params: { id: string
     setFlaggedWarning(false);
 
     try {
+      let partnerToken = "";
+      let partnerPhone = "";
+      let partnerId = "";
+      if (typeof window !== "undefined") {
+        partnerToken = localStorage.getItem("cashall_partner_token") || "";
+        try {
+          const session = JSON.parse(localStorage.getItem("cashall_partner_session") || "{}");
+          if (!partnerToken) partnerToken = session.token || "";
+          partnerPhone = session.phone || "";
+          partnerId = session.id || "";
+        } catch {}
+      }
+
+      const authHeaders = {
+        "Content-Type": "application/json",
+        ...(partnerToken ? { Authorization: `Bearer ${partnerToken}`, "x-auth-token": partnerToken } : {}),
+        ...(partnerPhone ? { "x-partner-phone": partnerPhone } : {}),
+        ...(partnerId ? { "x-partner-id": partnerId } : {}),
+      };
+
       const res = await fetch(`/api/v1/orders/${params.id}/inspection`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: authHeaders,
         body: JSON.stringify({
           inspectorName,
           imei1: imei1.replace(/\D/g, ""),
@@ -107,7 +128,8 @@ export default function PartnerInspectionPage({ params }: { params: { id: string
       // Submit Final Offer
       await fetch(`/api/v1/orders/${params.id}/final-offer`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: authHeaders,
         body: JSON.stringify({
           finalPrice: Number(revisedPrice),
           reason: priceDifferenceReason || "Physical inspection completed.",

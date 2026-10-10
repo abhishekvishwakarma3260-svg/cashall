@@ -58,9 +58,30 @@ export default function PartnerPaymentPage({ params }: { params: { id: string } 
     setError("");
 
     try {
+      let partnerToken = "";
+      let partnerPhone = "";
+      let partnerId = "";
+      if (typeof window !== "undefined") {
+        partnerToken = localStorage.getItem("cashall_partner_token") || "";
+        try {
+          const session = JSON.parse(localStorage.getItem("cashall_partner_session") || "{}");
+          if (!partnerToken) partnerToken = session.token || "";
+          partnerPhone = session.phone || "";
+          partnerId = session.id || "";
+        } catch {}
+      }
+
+      const authHeaders = {
+        "Content-Type": "application/json",
+        ...(partnerToken ? { Authorization: `Bearer ${partnerToken}`, "x-auth-token": partnerToken } : {}),
+        ...(partnerPhone ? { "x-partner-phone": partnerPhone } : {}),
+        ...(partnerId ? { "x-partner-id": partnerId } : {}),
+      };
+
       const res = await fetch(`/api/v1/orders/${params.id}/payment`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: authHeaders,
         body: JSON.stringify({
           amount: Number(amount),
           upiId: upiId.trim(),

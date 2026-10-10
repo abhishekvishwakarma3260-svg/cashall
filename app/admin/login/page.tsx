@@ -35,15 +35,22 @@ export default function AdminLoginPage() {
 
       if (res.ok && data.success) {
         if (typeof window !== "undefined") {
+          const adminToken = data.data?.token || "tok_admin_session";
           localStorage.setItem(
             "cashall_admin_session",
             JSON.stringify({
               name: data.data?.user?.name || name.trim(),
               email: data.data?.user?.email || "admin@cashall.in",
               role: data.data?.user?.role || "ADMIN",
-              token: data.data?.token || "tok_admin_session",
+              token: adminToken,
             })
           );
+          localStorage.setItem("cashall_admin_token", adminToken);
+          localStorage.setItem("cashall_session_token", adminToken);
+          try {
+            document.cookie = `cashall_admin_token=${adminToken}; path=/; max-age=2592000; SameSite=Lax`;
+            document.cookie = `cashall_session_token=${adminToken}; path=/; max-age=2592000; SameSite=Lax`;
+          } catch {}
         }
         router.replace("/admin");
       } else {

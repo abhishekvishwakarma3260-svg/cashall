@@ -64,7 +64,7 @@ export async function POST(req: Request) {
         role: "AGENT",
       }, 7 * 24 * 60 * 60);
 
-      return NextResponse.json({
+      const response = NextResponse.json({
         success: true,
         token,
         agent: {
@@ -75,6 +75,23 @@ export async function POST(req: Request) {
           role: "AGENT",
         },
       });
+
+      response.cookies.set("cashall_agent_token", token, {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 30 * 24 * 60 * 60,
+      });
+      response.cookies.set("cashall_session_token", token, {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 30 * 24 * 60 * 60,
+      });
+
+      return response;
     }
 
     // 2. Fast direct lookup by phone or email or case-insensitive exact name
@@ -161,7 +178,7 @@ export async function POST(req: Request) {
         phone: agent.phone || cleanPhone || undefined,
         role: "AGENT",
       }, 7 * 24 * 60 * 60);
-      return NextResponse.json({
+      const response = NextResponse.json({
         success: true,
         token,
         agent: {
@@ -172,6 +189,23 @@ export async function POST(req: Request) {
           role: "AGENT",
         },
       });
+
+      response.cookies.set("cashall_agent_token", token, {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 30 * 24 * 60 * 60,
+      });
+      response.cookies.set("cashall_session_token", token, {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 30 * 24 * 60 * 60,
+      });
+
+      return response;
     }
 
     return NextResponse.json(

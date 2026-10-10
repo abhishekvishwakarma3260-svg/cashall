@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/utils/AppError";
+import { signSessionToken } from "@/lib/auth/session-token";
 import { z } from "zod";
 
 const schema = z.object({
@@ -70,8 +71,15 @@ export const POST = apiWrapper(async (req: NextRequest) => {
       city: validation.data.city || "Kolkata",
     };
   }
+  
+  const signedToken = signSessionToken({
+    uid: partner.id,
+    phone: partner.phone,
+    email: partner.email,
+    role: "PARTNER",
+  }, 30 * 24 * 60 * 60);
 
-  return NextResponse.json({
+  const response = NextResponse.json({
     success: true,
     message: validation.data.mode === "REGISTER" ? "Partner account created successfully." : "Partner authenticated successfully.",
     data: {
@@ -83,7 +91,24 @@ export const POST = apiWrapper(async (req: NextRequest) => {
         businessName: partner.businessName || "CashALL Logistics",
         city: partner.city,
       },
-      token: `tok_partner_${partner.id}`,
+      token: signedToken,
     },
   });
+
+  response.cookies.set("cashall_partner_token", signedToken, {
+    path: "/",
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 30 * 24 * 60 * 60,
+  });
+  response.cookies.set("cashall_session_token", signedToken, {
+    path: "/",
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 30 * 24 * 60 * 60,
+  });
+
+  return response;
 });

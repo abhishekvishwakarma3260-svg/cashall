@@ -144,17 +144,23 @@ export default function SupportDashboardPage() {
     setError("");
     try {
       let token = "";
+      let name = "";
       if (typeof window !== "undefined") {
+        token = localStorage.getItem("cashall_support_token") || "";
         try {
           const session = JSON.parse(localStorage.getItem("cashall_support_session") || "{}");
-          token = session?.token || "";
+          if (!token) token = session?.token || "";
+          name = session?.supportUser?.name || "";
         } catch {}
       }
-      const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+      const headers: Record<string, string> = {
+        ...(token ? { Authorization: `Bearer ${token}`, "x-auth-token": token } : {}),
+        ...(name ? { "x-support-name": name } : {}),
+      };
 
       const [quotesRes, callsRes] = await Promise.all([
-        fetch("/api/v1/admin/quotes?limit=1000", { headers }),
-        fetch("/api/v1/support/calls", { headers }),
+        fetch("/api/v1/admin/quotes?limit=1000", { headers, credentials: "include" }),
+        fetch("/api/v1/support/calls", { headers, credentials: "include" }),
       ]);
 
       const quotesJson = await quotesRes.json();
@@ -226,9 +232,26 @@ export default function SupportDashboardPage() {
 
     setSubmittingCall(true);
     try {
+      let token = "";
+      let name = "";
+      if (typeof window !== "undefined") {
+        token = localStorage.getItem("cashall_support_token") || "";
+        try {
+          const session = JSON.parse(localStorage.getItem("cashall_support_session") || "{}");
+          if (!token) token = session?.token || "";
+          name = session?.supportUser?.name || "";
+        } catch {}
+      }
+      const authHeaders = {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}`, "x-auth-token": token } : {}),
+        ...(name ? { "x-support-name": name } : {}),
+      };
+
       const res = await fetch("/api/v1/support/calls", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: authHeaders,
         body: JSON.stringify({
           supportPersonName: supportSession?.name || "Support Agent",
           quoteId: currentQuote.quoteNumber,
@@ -281,9 +304,26 @@ export default function SupportDashboardPage() {
 
     setConvertingOrder(true);
     try {
+      let token = "";
+      let name = "";
+      if (typeof window !== "undefined") {
+        token = localStorage.getItem("cashall_support_token") || "";
+        try {
+          const session = JSON.parse(localStorage.getItem("cashall_support_session") || "{}");
+          if (!token) token = session?.token || "";
+          name = session?.supportUser?.name || "";
+        } catch {}
+      }
+      const authHeaders = {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}`, "x-auth-token": token } : {}),
+        ...(name ? { "x-support-name": name } : {}),
+      };
+
       const res = await fetch("/api/v1/admin/quotes/convert", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: authHeaders,
         body: JSON.stringify({
           quoteNumber: quoteToConvert.quoteNumber,
           customerName: convertForm.customerName || quoteToConvert.customerName,

@@ -42,6 +42,14 @@ export default function AgentLoginPage() {
             loggedInAt: new Date().toISOString(),
           })
         );
+        if (json.token) {
+          localStorage.setItem("cashall_agent_token", json.token);
+          localStorage.setItem("cashall_session_token", json.token);
+          try {
+            document.cookie = `cashall_agent_token=${json.token}; path=/; max-age=2592000; SameSite=Lax`;
+            document.cookie = `cashall_session_token=${json.token}; path=/; max-age=2592000; SameSite=Lax`;
+          } catch {}
+        }
         // Persist session to Android native bridge for 24/7 background monitoring when app is closed
         try {
           if (typeof window !== "undefined" && (window as any).CashAllAgentNative?.saveAgentSession) {

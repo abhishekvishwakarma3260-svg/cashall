@@ -44,6 +44,14 @@ export default function SupportLoginPage() {
               loggedInAt: new Date().toISOString(),
             })
           );
+          if (data.token) {
+            localStorage.setItem("cashall_support_token", data.token);
+            localStorage.setItem("cashall_session_token", data.token);
+            try {
+              document.cookie = `cashall_support_token=${data.token}; path=/; max-age=2592000; SameSite=Lax`;
+              document.cookie = `cashall_session_token=${data.token}; path=/; max-age=2592000; SameSite=Lax`;
+            } catch {}
+          }
           if ((window as any).CashAllNative?.setAgentInfo) {
             (window as any).CashAllNative.setAgentInfo(
               data.supportUser?.name || name.trim(),

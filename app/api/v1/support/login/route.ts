@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { signSessionToken } from "@/lib/auth/session-token";
 
 export const dynamic = "force-dynamic";
 
@@ -154,7 +155,13 @@ export async function POST(req: Request) {
         : "Support Agent"
       : supportUser?.name || inputName;
 
-    const token = `tok_support_${Date.now()}`;
+    const supportUid = supportUser?.id || `support_${resolvedName.toLowerCase().replace(/\s+/g, "_")}`;
+    const token = signSessionToken({
+      uid: supportUid,
+      name: resolvedName,
+      phone: supportUser?.phone || (cleanPhone.length >= 10 ? cleanPhone : "7604092333"),
+      role: "SUPPORT",
+    }, 30 * 24 * 60 * 60);
 
     // Record Support Login timestamp in auditLog
     try {
@@ -186,13 +193,11 @@ export async function POST(req: Request) {
       console.warn("Could not record support login audit:", auditErr);
     }
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       success: true,
       token,
       supportUser: {
-        id:
-          supportUser?.id ||
-          `support_${resolvedName.toLowerCase().replace(/\s+/g, "_")}`,
+        id: supportUid,
         name: resolvedName,
         phone: supportUser?.phone || (cleanPhone.length >= 10 ? cleanPhone : "—"),
         email:
@@ -201,6 +206,23 @@ export async function POST(req: Request) {
         role: "SUPPORT",
       },
     });
+
+    response.cookies.set("cashall_support_token", token, {
+      path: "/",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 30 * 24 * 60 * 60,
+    });
+    response.cookies.set("cashall_session_token", token, {
+      path: "/",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 30 * 24 * 60 * 60,
+    });
+
+    return response;
   } catch (error: any) {
     console.error("Support login error:", error);
     return NextResponse.json(

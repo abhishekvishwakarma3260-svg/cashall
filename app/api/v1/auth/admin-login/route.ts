@@ -92,12 +92,12 @@ export const POST = apiWrapper(async (req: NextRequest) => {
   const slugifiedId = `admin_${matchedAdmin.toLowerCase().replace(/\s+/g, "_")}`;
   const adminEmail = `${matchedAdmin.toLowerCase().replace(/\s+/g, ".")}@cashall.in`;
 
-  // Issue cryptographically signed HMAC-SHA256 session token
+  // Issue cryptographically signed HMAC-SHA256 session token (valid 30 days)
   const signedToken = signSessionToken({
     uid: slugifiedId,
     email: adminEmail,
     role: "ADMIN",
-  }, 7 * 24 * 60 * 60);
+  }, 30 * 24 * 60 * 60);
 
   const response = NextResponse.json({
     success: true,
@@ -113,13 +113,16 @@ export const POST = apiWrapper(async (req: NextRequest) => {
     },
   });
 
-  response.cookies.set("cashall_admin_token", signedToken, {
+  const cookieOptions = {
     path: "/",
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 7,
-  });
+    sameSite: "lax" as const,
+    maxAge: 30 * 24 * 60 * 60,
+  };
+
+  response.cookies.set("cashall_admin_token", signedToken, cookieOptions);
+  response.cookies.set("cashall_session_token", signedToken, cookieOptions);
 
   return response;
 });

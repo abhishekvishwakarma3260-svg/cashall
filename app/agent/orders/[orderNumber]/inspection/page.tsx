@@ -60,6 +60,8 @@ export default function AgentOrderInspectionPage() {
   const [hasManuallyEditedFinal, setHasManuallyEditedFinal] = useState<boolean>(false);
   const [reason, setReason] = useState("");
 
+  const [agentToken, setAgentToken] = useState<string>("");
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("cashall_agent_session");
@@ -68,7 +70,9 @@ export default function AgentOrderInspectionPage() {
         return;
       }
       try {
-        setAgentSession(JSON.parse(saved).agent || { name: "Field Agent" });
+        const parsed = JSON.parse(saved);
+        setAgentSession(parsed.agent || { name: "Field Agent" });
+        setAgentToken(parsed.token || localStorage.getItem("cashall_agent_token") || "");
       } catch (e) {}
     }
   }, [router]);
@@ -297,9 +301,25 @@ export default function AgentOrderInspectionPage() {
 
     setSaving(true);
     try {
+      let tokenToSend = agentToken;
+      if (!tokenToSend && typeof window !== "undefined") {
+        try {
+          const raw = localStorage.getItem("cashall_agent_session");
+          if (raw) tokenToSend = JSON.parse(raw).token || "";
+          if (!tokenToSend) tokenToSend = localStorage.getItem("cashall_agent_token") || "";
+        } catch {}
+      }
+
       const res = await fetch(`/api/v1/agent/orders/${orderNumberParam}/inspection`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          ...(tokenToSend ? { Authorization: `Bearer ${tokenToSend}`, "x-auth-token": tokenToSend } : {}),
+          ...(agentSession?.phone ? { "x-agent-phone": agentSession.phone } : {}),
+          ...(agentSession?.name ? { "x-agent-name": agentSession.name } : {}),
+          ...(agentSession?.id ? { "x-agent-id": agentSession.id } : {}),
+        },
         body: JSON.stringify({
           imei: imei.trim(),
           inspectedAnswers: inspectedAnswersObj,
@@ -309,6 +329,7 @@ export default function AgentOrderInspectionPage() {
           reason: reason.trim() || "Physical QC inspection verified at doorstep",
           customerEmail: customerEmail.trim(),
           agentName: agentSession?.name || "Field Agent",
+          agentPhone: agentSession?.phone || "",
         }),
       });
 
