@@ -16,9 +16,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
 
   const skip = (page - 1) * limit;
 
-  const where: any = {
-    deletedAt: null,
-  };
+  const where: any = {};
 
   if (status) {
     where.status = status;
