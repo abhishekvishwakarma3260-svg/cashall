@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { apiWrapper } from "@/lib/utils/api-wrapper";
 import { prisma } from "@/lib/db";
 
-export const revalidate = 86400; // Edge cached for 24 hours
+export const dynamic = "force-dynamic";
 
 export const GET = apiWrapper(async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);

@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { verifyAppDownloadAccess } from "@/lib/security/app-access";
 
-export const revalidate = 2592000;
+export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   try {
