@@ -1,4 +1,4 @@
-// CashALL Unified Catalog Store
+﻿// CashALL Unified Catalog Store
 // Mobiles, Laptops, and Tablets (Base Cashify/Cashkr Valuation +1% Real Pricing, Customer Display: Up to +5% Benefit)
 
 import { SERVICEABLE_DISTRICTS } from "./serviceability";
@@ -32716,889 +32716,889 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-6-16-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "16 GB",
-    "basePrice": 1550,
+    "basePrice": 1687,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-32-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "32 GB",
-    "basePrice": 1770,
+    "basePrice": 1909,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-64-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "64 GB",
-    "basePrice": 2000,
+    "basePrice": 2141,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-128-gb",
     "modelId": "m-apple-apple-iphone-6",
     "storage": "128 GB",
-    "basePrice": 2200,
+    "basePrice": 2343,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-16-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "16 GB",
-    "basePrice": 2080,
+    "basePrice": 2222,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-64-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "64 GB",
-    "basePrice": 2380,
+    "basePrice": 2525,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6-plus-128-gb",
     "modelId": "m-apple-apple-iphone-6-plus",
     "storage": "128 GB",
-    "basePrice": 2640,
+    "basePrice": 2788,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-16-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "16 GB",
-    "basePrice": 2010,
+    "basePrice": 2151,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-32-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "32 GB",
-    "basePrice": 2270,
+    "basePrice": 2414,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-64-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "64 GB",
-    "basePrice": 2570,
+    "basePrice": 2717,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-128-gb",
     "modelId": "m-apple-apple-iphone-6s",
     "storage": "128 GB",
-    "basePrice": 2720,
+    "basePrice": 2868,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-16-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "16 GB",
-    "basePrice": 2270,
+    "basePrice": 2414,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-32-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "32 GB",
-    "basePrice": 2830,
+    "basePrice": 2980,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-64-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "64 GB",
-    "basePrice": 3240,
+    "basePrice": 3404,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-6s-plus-128-gb",
     "modelId": "m-apple-apple-iphone-6s-plus",
     "storage": "128 GB",
-    "basePrice": 3650,
+    "basePrice": 3858,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-16-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "16 GB",
-    "basePrice": 1670,
+    "basePrice": 1717,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-32-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "32 GB",
-    "basePrice": 1930,
+    "basePrice": 2070,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-64-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "64 GB",
-    "basePrice": 2040,
+    "basePrice": 2222,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-1st-generation-128-gb",
     "modelId": "m-apple-apple-iphone-se-1st-generation",
     "storage": "128 GB",
-    "basePrice": 2160,
+    "basePrice": 2293,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-32-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "32 GB",
-    "basePrice": 4050,
+    "basePrice": 4363,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-128-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "128 GB",
-    "basePrice": 4380,
+    "basePrice": 4747,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-256-gb",
     "modelId": "m-apple-apple-iphone-7",
     "storage": "256 GB",
-    "basePrice": 4660,
+    "basePrice": 4969,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-32-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "32 GB",
-    "basePrice": 4840,
+    "basePrice": 5161,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-128-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "128 GB",
-    "basePrice": 5370,
+    "basePrice": 5696,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-7-plus-256-gb",
     "modelId": "m-apple-apple-iphone-7-plus",
     "storage": "256 GB",
-    "basePrice": 5810,
+    "basePrice": 6161,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-64-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "64 GB",
-    "basePrice": 5290,
+    "basePrice": 5656,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-128-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "128 GB",
-    "basePrice": 5850,
+    "basePrice": 6272,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-256-gb",
     "modelId": "m-apple-apple-iphone-8",
     "storage": "256 GB",
-    "basePrice": 6150,
+    "basePrice": 6545,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-64-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "64 GB",
-    "basePrice": 6650,
+    "basePrice": 7030,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-128-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "128 GB",
-    "basePrice": 6920,
+    "basePrice": 7302,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-8-plus-256-gb",
     "modelId": "m-apple-apple-iphone-8-plus",
     "storage": "256 GB",
-    "basePrice": 7440,
+    "basePrice": 8120,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-x-64-gb",
     "modelId": "m-apple-apple-iphone-x",
     "storage": "64 GB",
-    "basePrice": 9370,
+    "basePrice": 9646,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-x-256-gb",
     "modelId": "m-apple-apple-iphone-x",
     "storage": "256 GB",
-    "basePrice": 9930,
+    "basePrice": 10332,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-64-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "64 GB",
-    "basePrice": 9800,
+    "basePrice": 10161,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-128-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "128 GB",
-    "basePrice": 10600,
+    "basePrice": 11060,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xr-256-gb",
     "modelId": "m-apple-apple-iphone-xr",
     "storage": "256 GB",
-    "basePrice": 10920,
+    "basePrice": 11352,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-64-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "64 GB",
-    "basePrice": 10300,
+    "basePrice": 10787,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-256-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "256 GB",
-    "basePrice": 11610,
+    "basePrice": 12059,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-512-gb",
     "modelId": "m-apple-apple-iphone-xs",
     "storage": "512 GB",
-    "basePrice": 11730,
+    "basePrice": 12221,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-64-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "64 GB",
-    "basePrice": 11590,
+    "basePrice": 12474,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-256-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "256 GB",
-    "basePrice": 12510,
+    "basePrice": 13463,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-xs-max-512-gb",
     "modelId": "m-apple-apple-iphone-xs-max",
     "storage": "512 GB",
-    "basePrice": 13180,
+    "basePrice": 13665,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-64-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "64 GB",
-    "basePrice": 12360,
+    "basePrice": 12857,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-128-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "128 GB",
-    "basePrice": 14030,
+    "basePrice": 14322,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-256-gb",
     "modelId": "m-apple-apple-iphone-11",
     "storage": "256 GB",
-    "basePrice": 14430,
+    "basePrice": 14988,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-64-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "64 GB",
-    "basePrice": 14990,
+    "basePrice": 15302,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-256-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "256 GB",
-    "basePrice": 17180,
+    "basePrice": 17261,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-512-gb",
     "modelId": "m-apple-apple-iphone-11-pro",
     "storage": "512 GB",
-    "basePrice": 17580,
+    "basePrice": 18251,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-64-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "64 GB",
-    "basePrice": 16810,
+    "basePrice": 17291,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "256 GB",
-    "basePrice": 18570,
+    "basePrice": 19251,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-11-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-11-pro-max",
     "storage": "512 GB",
-    "basePrice": 19100,
+    "basePrice": 19826,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-64-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "64 GB",
-    "basePrice": 7450,
+    "basePrice": 9691,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-128-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "128 GB",
-    "basePrice": 7850,
+    "basePrice": 9997,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2020-256-gb",
     "modelId": "m-apple-apple-iphone-se-2020",
     "storage": "256 GB",
-    "basePrice": 8100,
+    "basePrice": 10201,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-64-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "64 GB",
-    "basePrice": 16200,
+    "basePrice": 16614,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-128-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "128 GB",
-    "basePrice": 17260,
+    "basePrice": 17756,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-256-gb",
     "modelId": "m-apple-apple-iphone-12",
     "storage": "256 GB",
-    "basePrice": 18470,
+    "basePrice": 19594,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-64-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "64 GB",
-    "basePrice": 14150,
+    "basePrice": 14443,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-128-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "128 GB",
-    "basePrice": 15850,
+    "basePrice": 16372,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-mini-256-gb",
     "modelId": "m-apple-apple-iphone-12-mini",
     "storage": "256 GB",
-    "basePrice": 16330,
+    "basePrice": 16786,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-128-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "128 GB",
-    "basePrice": 22600,
+    "basePrice": 23402,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-256-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "256 GB",
-    "basePrice": 24220,
+    "basePrice": 24907,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-512-gb",
     "modelId": "m-apple-apple-iphone-12-pro",
     "storage": "512 GB",
-    "basePrice": 25560,
+    "basePrice": 27088,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "128 GB",
-    "basePrice": 24060,
+    "basePrice": 25240,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "256 GB",
-    "basePrice": 25430,
+    "basePrice": 26088,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-12-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-12-pro-max",
     "storage": "512 GB",
-    "basePrice": 26910,
+    "basePrice": 27654,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-128-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "128 GB",
-    "basePrice": 23710,
+    "basePrice": 23664,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-256-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "256 GB",
-    "basePrice": 25090,
+    "basePrice": 24927,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-512-gb",
     "modelId": "m-apple-apple-iphone-13",
     "storage": "512 GB",
-    "basePrice": 25740,
+    "basePrice": 25583,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-128-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "128 GB",
-    "basePrice": 20980,
+    "basePrice": 21846,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-256-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "256 GB",
-    "basePrice": 21790,
+    "basePrice": 22311,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-mini-512-gb",
     "modelId": "m-apple-apple-iphone-13-mini",
     "storage": "512 GB",
-    "basePrice": 22060,
+    "basePrice": 22664,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-128-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "128 GB",
-    "basePrice": 32540,
+    "basePrice": 32865,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-256-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "256 GB",
-    "basePrice": 34560,
+    "basePrice": 34007,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-512-gb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "512 GB",
-    "basePrice": 35780,
+    "basePrice": 36138,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-1-tb",
     "modelId": "m-apple-apple-iphone-13-pro",
     "storage": "1 TB",
-    "basePrice": 36590,
+    "basePrice": 36784,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "128 GB",
-    "basePrice": 34350,
+    "basePrice": 34694,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "256 GB",
-    "basePrice": 35160,
+    "basePrice": 36330,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "512 GB",
-    "basePrice": 38000,
+    "basePrice": 38622,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-13-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-13-pro-max",
     "storage": "1 TB",
-    "basePrice": 39620,
+    "basePrice": 39764,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-64-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "64 GB",
-    "basePrice": 12000,
+    "basePrice": 12019,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-128-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "128 GB",
-    "basePrice": 12400,
+    "basePrice": 12120,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-se-2022-256-gb",
     "modelId": "m-apple-apple-iphone-se-2022",
     "storage": "256 GB",
-    "basePrice": 13210,
+    "basePrice": 12686,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-128-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "128 GB",
-    "basePrice": 27220,
+    "basePrice": 41400,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-256-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "256 GB",
-    "basePrice": 28030,
+    "basePrice": 28169,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-512-gb",
     "modelId": "m-apple-apple-iphone-14",
     "storage": "512 GB",
-    "basePrice": 28430,
+    "basePrice": 28714,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-128-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "128 GB",
-    "basePrice": 41640,
+    "basePrice": 41400,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-256-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "256 GB",
-    "basePrice": 43670,
+    "basePrice": 43380,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-512-gb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "512 GB",
-    "basePrice": 45290,
+    "basePrice": 44955,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-1-tb",
     "modelId": "m-apple-apple-iphone-14-pro",
     "storage": "1 TB",
-    "basePrice": 46100,
+    "basePrice": 46308,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-128-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "128 GB",
-    "basePrice": 43460,
+    "basePrice": 43198,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "256 GB",
-    "basePrice": 45080,
+    "basePrice": 45440,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "512 GB",
-    "basePrice": 47100,
+    "basePrice": 48066,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-14-pro-max",
     "storage": "1 TB",
-    "basePrice": 48720,
+    "basePrice": 48551,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-128-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "128 GB",
-    "basePrice": 28430,
+    "basePrice": 28472,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-256-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "256 GB",
-    "basePrice": 29650,
+    "basePrice": 30290,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-14-plus-512-gb",
     "modelId": "m-apple-apple-iphone-14-plus",
     "storage": "512 GB",
-    "basePrice": 30860,
+    "basePrice": 31007,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-128-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "128 GB",
-    "basePrice": 40890,
+    "basePrice": 40824,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-256-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "256 GB",
-    "basePrice": 43270,
+    "basePrice": 43703,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-512-gb",
     "modelId": "m-apple-apple-iphone-15",
     "storage": "512 GB",
-    "basePrice": 45570,
+    "basePrice": 46723,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-128-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "128 GB",
-    "basePrice": 61920,
+    "basePrice": 60792,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-256-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "256 GB",
-    "basePrice": 64800,
+    "basePrice": 65327,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-512-gb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "512 GB",
-    "basePrice": 67680,
+    "basePrice": 67872,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-1-tb",
     "modelId": "m-apple-apple-iphone-15-pro",
     "storage": "1 TB",
-    "basePrice": 70080,
+    "basePrice": 69912,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "256 GB",
-    "basePrice": 70560,
+    "basePrice": 70488,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "512 GB",
-    "basePrice": 72000,
+    "basePrice": 74174,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-15-pro-max",
     "storage": "1 TB",
-    "basePrice": 77760,
+    "basePrice": 78245,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-128-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "128 GB",
-    "basePrice": 43980,
+    "basePrice": 44602,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-256-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "256 GB",
-    "basePrice": 45650,
+    "basePrice": 46490,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-15-plus-512-gb",
     "modelId": "m-apple-apple-iphone-15-plus",
     "storage": "512 GB",
-    "basePrice": 48500,
+    "basePrice": 48894,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-128-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "128 GB",
-    "basePrice": 51360,
+    "basePrice": 47995,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-256-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "256 GB",
-    "basePrice": 53760,
+    "basePrice": 52409,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-512-gb",
     "modelId": "m-apple-apple-iphone-16",
     "storage": "512 GB",
-    "basePrice": 54720,
+    "basePrice": 52843,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-128-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "128 GB",
-    "basePrice": 53280,
+    "basePrice": 52166,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-256-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "256 GB",
-    "basePrice": 53760,
+    "basePrice": 52358,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-plus-512-gb",
     "modelId": "m-apple-apple-iphone-16-plus",
     "storage": "512 GB",
-    "basePrice": 54720,
+    "basePrice": 53328,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-128-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "128 GB",
-    "basePrice": 72720,
+    "basePrice": 74851,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "256 GB",
-    "basePrice": 79790,
+    "basePrice": 77982,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "512 GB",
-    "basePrice": 85850,
+    "basePrice": 79356,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro",
     "storage": "1 TB",
-    "basePrice": 92920,
+    "basePrice": 80335,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "256 GB",
-    "basePrice": 88880,
+    "basePrice": 87193,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "512 GB",
-    "basePrice": 95950,
+    "basePrice": 88759,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "1 TB",
-    "basePrice": 103020,
+    "basePrice": 92092,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-128-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "128 GB",
-    "basePrice": 36380,
+    "basePrice": 35794,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-256-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "256 GB",
-    "basePrice": 38320,
+    "basePrice": 37229,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-512-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "512 GB",
-    "basePrice": 40740,
+    "basePrice": 40269,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16e-512-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "512 GB",
-    "basePrice": 40740,
+    "basePrice": 40269,
     "active": true,
     "ram": "8 GB"
   },
@@ -33606,7 +33606,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16e-256-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "256 GB",
-    "basePrice": 38320,
+    "basePrice": 37229,
     "active": true,
     "ram": "8 GB"
   },
@@ -33614,7 +33614,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16e-128-gb-8-gb",
     "modelId": "m-apple-apple-iphone-16e",
     "storage": "128 GB",
-    "basePrice": 36380,
+    "basePrice": 35794,
     "active": true,
     "ram": "8 GB"
   },
@@ -33622,7 +33622,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-256-gb",
     "modelId": "m-apple-apple-iphone-17",
     "storage": "256 GB",
-    "basePrice": 62700,
+    "basePrice": 59085,
     "active": true,
     "ram": "8 GB"
   },
@@ -33630,7 +33630,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-512-gb",
     "modelId": "m-apple-apple-iphone-17",
     "storage": "512 GB",
-    "basePrice": 66500,
+    "basePrice": 65145,
     "active": true,
     "ram": "8 GB"
   },
@@ -33638,28 +33638,28 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-air-256-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "256 GB",
-    "basePrice": 69000,
+    "basePrice": 68449,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-512-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "512 GB",
-    "basePrice": 76000,
+    "basePrice": 77528,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-1-tb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "1 TB",
-    "basePrice": 87000,
+    "basePrice": 87729,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-air-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "1 TB",
-    "basePrice": 87000,
+    "basePrice": 87729,
     "active": true,
     "ram": "12 GB"
   },
@@ -33667,7 +33667,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-air-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "512 GB",
-    "basePrice": 76000,
+    "basePrice": 77528,
     "active": true,
     "ram": "12 GB"
   },
@@ -33675,7 +33675,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-air-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-air",
     "storage": "256 GB",
-    "basePrice": 69000,
+    "basePrice": 68449,
     "active": true,
     "ram": "12 GB"
   },
@@ -33683,28 +33683,28 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-256-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "256 GB",
-    "basePrice": 102000,
+    "basePrice": 102010,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-512-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "512 GB",
-    "basePrice": 108000,
+    "basePrice": 107060,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-1-tb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "1 TB",
-    "basePrice": 110000,
+    "basePrice": 113120,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "1 TB",
-    "basePrice": 110000,
+    "basePrice": 113120,
     "active": true,
     "ram": "12 GB"
   },
@@ -33712,7 +33712,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "512 GB",
-    "basePrice": 108000,
+    "basePrice": 107060,
     "active": true,
     "ram": "12 GB"
   },
@@ -33720,7 +33720,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro",
     "storage": "256 GB",
-    "basePrice": 102000,
+    "basePrice": 102010,
     "active": true,
     "ram": "12 GB"
   },
@@ -33728,35 +33728,35 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "256 GB",
-    "basePrice": 110000,
+    "basePrice": 110090,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "512 GB",
-    "basePrice": 117000,
+    "basePrice": 116655,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "1 TB",
-    "basePrice": 119500,
+    "basePrice": 120695,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-2-tb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "2 TB",
-    "basePrice": 124000,
+    "basePrice": 126250,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17-pro-max-2-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "2 TB",
-    "basePrice": 124000,
+    "basePrice": 126250,
     "active": true,
     "ram": "12 GB"
   },
@@ -33764,7 +33764,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-1-tb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "1 TB",
-    "basePrice": 119500,
+    "basePrice": 120695,
     "active": true,
     "ram": "12 GB"
   },
@@ -33772,7 +33772,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-512-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "512 GB",
-    "basePrice": 117000,
+    "basePrice": 116655,
     "active": true,
     "ram": "12 GB"
   },
@@ -33780,7 +33780,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17-pro-max-256-gb-12-gb",
     "modelId": "m-apple-apple-iphone-17-pro-max",
     "storage": "256 GB",
-    "basePrice": 110000,
+    "basePrice": 110090,
     "active": true,
     "ram": "12 GB"
   },
@@ -33788,21 +33788,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17e-256-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "256 GB",
-    "basePrice": 45000,
+    "basePrice": 43430,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17e-512-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "512 GB",
-    "basePrice": 54000,
+    "basePrice": 52722,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-17e-512-gb-8-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "512 GB",
-    "basePrice": 54000,
+    "basePrice": 52722,
     "active": true,
     "ram": "8 GB"
   },
@@ -33810,7 +33810,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-17e-256-gb-8-gb",
     "modelId": "m-apple-apple-iphone-17e",
     "storage": "256 GB",
-    "basePrice": 45000,
+    "basePrice": 43430,
     "active": true,
     "ram": "8 GB"
   },
@@ -33818,7 +33818,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-5z-64-gb-6-gb",
     "modelId": "m-asus-asus-zenfone-5z",
     "storage": "64 GB",
-    "basePrice": 3707,
+    "basePrice": 3744,
     "active": true,
     "ram": "6 GB"
   },
@@ -33826,7 +33826,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-5z-128-gb-6-gb",
     "modelId": "m-asus-asus-zenfone-5z",
     "storage": "128 GB",
-    "basePrice": 3979,
+    "basePrice": 4019,
     "active": true,
     "ram": "6 GB"
   },
@@ -33834,7 +33834,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-5z-256-gb-8-gb",
     "modelId": "m-asus-asus-zenfone-5z",
     "storage": "256 GB",
-    "basePrice": 4141,
+    "basePrice": 4182,
     "active": true,
     "ram": "8 GB"
   },
@@ -33842,7 +33842,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-max-pro-m1-64-gb-4-gb",
     "modelId": "m-asus-asus-zenfone-max-pro-m1",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "4 GB"
   },
@@ -33850,7 +33850,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-max-pro-m1-64-gb-6-gb",
     "modelId": "m-asus-asus-zenfone-max-pro-m1",
     "storage": "64 GB",
-    "basePrice": 2202,
+    "basePrice": 2050,
     "active": true,
     "ram": "6 GB"
   },
@@ -33858,7 +33858,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-max-pro-m2-32-gb-3-gb",
     "modelId": "m-asus-asus-zenfone-max-pro-m2",
     "storage": "32 GB",
-    "basePrice": 2111,
+    "basePrice": 2132,
     "active": true,
     "ram": "3 GB"
   },
@@ -33866,7 +33866,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-max-pro-m2-64-gb-4-gb",
     "modelId": "m-asus-asus-zenfone-max-pro-m2",
     "storage": "64 GB",
-    "basePrice": 2384,
+    "basePrice": 2408,
     "active": true,
     "ram": "4 GB"
   },
@@ -33874,7 +33874,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-zenfone-max-pro-m2-64-gb-6-gb",
     "modelId": "m-asus-asus-zenfone-max-pro-m2",
     "storage": "64 GB",
-    "basePrice": 2565,
+    "basePrice": 2408,
     "active": true,
     "ram": "6 GB"
   },
@@ -33882,7 +33882,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-6z-64-gb-6-gb",
     "modelId": "m-asus-asus-6z",
     "storage": "64 GB",
-    "basePrice": 5717,
+    "basePrice": 5774,
     "active": true,
     "ram": "6 GB"
   },
@@ -33890,7 +33890,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-6z-128-gb-6-gb",
     "modelId": "m-asus-asus-6z",
     "storage": "128 GB",
-    "basePrice": 5969,
+    "basePrice": 6029,
     "active": true,
     "ram": "6 GB"
   },
@@ -33898,7 +33898,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-6z-256-gb-8-gb",
     "modelId": "m-asus-asus-6z",
     "storage": "256 GB",
-    "basePrice": 6252,
+    "basePrice": 6315,
     "active": true,
     "ram": "8 GB"
   },
@@ -33906,7 +33906,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-rog-phone-zs600kl-128-gb-8-gb",
     "modelId": "m-asus-asus-rog-phone-zs600kl",
     "storage": "128 GB",
-    "basePrice": 5515,
+    "basePrice": 5570,
     "active": true,
     "ram": "8 GB"
   },
@@ -33914,7 +33914,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-rog-phone-ii-zs660kl-128-gb-8-gb",
     "modelId": "m-asus-asus-rog-phone-ii-zs660kl",
     "storage": "128 GB",
-    "basePrice": 7090,
+    "basePrice": 7161,
     "active": true,
     "ram": "8 GB"
   },
@@ -33922,7 +33922,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-rog-phone-ii-zs660kl-512-gb-12-gb",
     "modelId": "m-asus-asus-rog-phone-ii-zs660kl",
     "storage": "512 GB",
-    "basePrice": 7524,
+    "basePrice": 7599,
     "active": true,
     "ram": "12 GB"
   },
@@ -33930,7 +33930,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-rog-phone-3-128-gb-8-gb",
     "modelId": "m-asus-asus-rog-phone-3",
     "storage": "128 GB",
-    "basePrice": 8464,
+    "basePrice": 8549,
     "active": true,
     "ram": "8 GB"
   },
@@ -33954,7 +33954,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-asus-asus-8z-128-gb-8-gb",
     "modelId": "m-asus-asus-8z",
     "storage": "128 GB",
-    "basePrice": 7403,
+    "basePrice": 7477,
     "active": true,
     "ram": "8 GB"
   },
@@ -33962,21 +33962,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3-64-gb",
     "modelId": "m-google-google-pixel-3",
     "storage": "64 GB",
-    "basePrice": 3747,
+    "basePrice": 3784,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-3-128-gb",
     "modelId": "m-google-google-pixel-3",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-3-128-gb-4-gb",
     "modelId": "m-google-google-pixel-3",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true,
     "ram": "4 GB"
   },
@@ -33984,7 +33984,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3-64-gb-3-gb",
     "modelId": "m-google-google-pixel-3",
     "storage": "64 GB",
-    "basePrice": 3747,
+    "basePrice": 3784,
     "active": true,
     "ram": "3 GB"
   },
@@ -33992,7 +33992,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3a-64-gb-4-gb",
     "modelId": "m-google-google-pixel-3a",
     "storage": "64 GB",
-    "basePrice": 3788,
+    "basePrice": 3826,
     "active": true,
     "ram": "4 GB"
   },
@@ -34000,7 +34000,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-4a-128-gb-6-gb",
     "modelId": "m-google-google-pixel-4a",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true,
     "ram": "6 GB"
   },
@@ -34008,7 +34008,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6a-128-gb-6-gb",
     "modelId": "m-google-google-pixel-6a",
     "storage": "128 GB",
-    "basePrice": 10666,
+    "basePrice": 10773,
     "active": true,
     "ram": "6 GB"
   },
@@ -34016,21 +34016,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-7-128-gb",
     "modelId": "m-google-google-pixel-7",
     "storage": "128 GB",
-    "basePrice": 15200,
+    "basePrice": 15352,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-7-256-gb",
     "modelId": "m-google-google-pixel-7",
     "storage": "256 GB",
-    "basePrice": 15443,
+    "basePrice": 15597,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-7-256-gb-8-gb",
     "modelId": "m-google-google-pixel-7",
     "storage": "256 GB",
-    "basePrice": 15443,
+    "basePrice": 15597,
     "active": true,
     "ram": "8 GB"
   },
@@ -34038,7 +34038,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-7-128-gb-8-gb",
     "modelId": "m-google-google-pixel-7",
     "storage": "128 GB",
-    "basePrice": 15200,
+    "basePrice": 15352,
     "active": true,
     "ram": "8 GB"
   },
@@ -34046,21 +34046,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-7-pro-128-gb",
     "modelId": "m-google-google-pixel-7-pro",
     "storage": "128 GB",
-    "basePrice": 19392,
+    "basePrice": 19586,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-7-pro-256-gb",
     "modelId": "m-google-google-pixel-7-pro",
     "storage": "256 GB",
-    "basePrice": 19715,
+    "basePrice": 19912,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-7-pro-128-gb-12-gb",
     "modelId": "m-google-google-pixel-7-pro",
     "storage": "128 GB",
-    "basePrice": 19392,
+    "basePrice": 19586,
     "active": true,
     "ram": "12 GB"
   },
@@ -34068,7 +34068,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-7-pro-256-gb-12-gb",
     "modelId": "m-google-google-pixel-7-pro",
     "storage": "256 GB",
-    "basePrice": 19715,
+    "basePrice": 19912,
     "active": true,
     "ram": "12 GB"
   },
@@ -34076,7 +34076,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-7a-128-gb-8-gb",
     "modelId": "m-google-google-pixel-7a",
     "storage": "128 GB",
-    "basePrice": 18513,
+    "basePrice": 18698,
     "active": true,
     "ram": "8 GB"
   },
@@ -34120,14 +34120,14 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-8-pro-512-gb",
     "modelId": "m-google-google-pixel-8-pro",
     "storage": "512 GB",
-    "basePrice": 33451,
+    "basePrice": 33744,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-8-pro-512-gb-12-gb",
     "modelId": "m-google-google-pixel-8-pro",
     "storage": "512 GB",
-    "basePrice": 33451,
+    "basePrice": 33744,
     "active": true,
     "ram": "12 GB"
   },
@@ -34181,7 +34181,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-256-gb-12-gb",
     "modelId": "m-google-google-pixel-9",
     "storage": "256 GB",
-    "basePrice": 38299,
+    "basePrice": 38682,
     "active": true,
     "ram": "12 GB"
   },
@@ -34189,21 +34189,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-pro-xl-256-gb",
     "modelId": "m-google-google-pixel-9-pro-xl",
     "storage": "256 GB",
-    "basePrice": 54782,
+    "basePrice": 55166,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-9-pro-xl-512-gb",
     "modelId": "m-google-google-pixel-9-pro-xl",
     "storage": "512 GB",
-    "basePrice": 56722,
+    "basePrice": 57206,
     "active": true
   },
   {
     "id": "v-m-google-google-pixel-9-pro-xl-512-gb-16-gb",
     "modelId": "m-google-google-pixel-9-pro-xl",
     "storage": "512 GB",
-    "basePrice": 56722,
+    "basePrice": 57206,
     "active": true,
     "ram": "16 GB"
   },
@@ -34211,7 +34211,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-pro-xl-256-gb-16-gb",
     "modelId": "m-google-google-pixel-9-pro-xl",
     "storage": "256 GB",
-    "basePrice": 54782,
+    "basePrice": 55166,
     "active": true,
     "ram": "16 GB"
   },
@@ -34219,7 +34219,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-pro-fold-256-gb-16-gb",
     "modelId": "m-google-google-pixel-9-pro-fold",
     "storage": "256 GB",
-    "basePrice": 72720,
+    "basePrice": 69143,
     "active": true,
     "ram": "16 GB"
   },
@@ -34227,7 +34227,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9-pro-256-gb-16-gb",
     "modelId": "m-google-google-pixel-9-pro",
     "storage": "256 GB",
-    "basePrice": 50611,
+    "basePrice": 51117,
     "active": true,
     "ram": "16 GB"
   },
@@ -34235,7 +34235,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-9a-256-gb-8-gb",
     "modelId": "m-google-google-pixel-9a",
     "storage": "256 GB",
-    "basePrice": 27684,
+    "basePrice": 27961,
     "active": true,
     "ram": "8 GB"
   },
@@ -34243,7 +34243,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-10-256-gb-12-gb",
     "modelId": "m-google-google-pixel-10",
     "storage": "256 GB",
-    "basePrice": 46531,
+    "basePrice": 46996,
     "active": true,
     "ram": "12 GB"
   },
@@ -34251,7 +34251,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-10-pro-256-gb-16-gb",
     "modelId": "m-google-google-pixel-10-pro",
     "storage": "256 GB",
-    "basePrice": 65145,
+    "basePrice": 65796,
     "active": true,
     "ram": "16 GB"
   },
@@ -34259,7 +34259,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-10-pro-xl-256-gb-16-gb",
     "modelId": "m-google-google-pixel-10-pro-xl",
     "storage": "256 GB",
-    "basePrice": 71306,
+    "basePrice": 72019,
     "active": true,
     "ram": "16 GB"
   },
@@ -34267,7 +34267,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-10-pro-fold-256-gb-16-gb",
     "modelId": "m-google-google-pixel-10-pro-fold",
     "storage": "256 GB",
-    "basePrice": 96960,
+    "basePrice": 97930,
     "active": true,
     "ram": "16 GB"
   },
@@ -34275,7 +34275,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-10a-256-gb-8-gb",
     "modelId": "m-google-google-pixel-10a",
     "storage": "256 GB",
-    "basePrice": 33542,
+    "basePrice": 33877,
     "active": true,
     "ram": "8 GB"
   },
@@ -34283,7 +34283,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-pro-fold-512-gb-16-gb",
     "modelId": "m-google-google-pixel-11-pro-fold",
     "storage": "512 GB",
-    "basePrice": 101000,
+    "basePrice": 102010,
     "active": true,
     "ram": "16 GB"
   },
@@ -34299,7 +34299,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-pro-xl-256-gb-12-gb",
     "modelId": "m-google-google-pixel-11-pro-xl",
     "storage": "256 GB",
-    "basePrice": 90900,
+    "basePrice": 91809,
     "active": true,
     "ram": "12 GB"
   },
@@ -34307,7 +34307,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-pro-512-gb-16-gb",
     "modelId": "m-google-google-pixel-11-pro",
     "storage": "512 GB",
-    "basePrice": 75750,
+    "basePrice": 76508,
     "active": true,
     "ram": "16 GB"
   },
@@ -34315,7 +34315,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-pro-256-gb-12-gb",
     "modelId": "m-google-google-pixel-11-pro",
     "storage": "256 GB",
-    "basePrice": 70700,
+    "basePrice": 71407,
     "active": true,
     "ram": "12 GB"
   },
@@ -34323,7 +34323,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-512-gb-12-gb",
     "modelId": "m-google-google-pixel-11",
     "storage": "512 GB",
-    "basePrice": 52520,
+    "basePrice": 53045,
     "active": true,
     "ram": "12 GB"
   },
@@ -34331,7 +34331,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-11-256-gb-12-gb",
     "modelId": "m-google-google-pixel-11",
     "storage": "256 GB",
-    "basePrice": 50500,
+    "basePrice": 51005,
     "active": true,
     "ram": "12 GB"
   },
@@ -34339,7 +34339,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6-pro-512-gb-12-gb",
     "modelId": "m-google-google-pixel-6-pro",
     "storage": "512 GB",
-    "basePrice": 18180,
+    "basePrice": 18362,
     "active": true,
     "ram": "12 GB"
   },
@@ -34347,7 +34347,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6-pro-256-gb-12-gb",
     "modelId": "m-google-google-pixel-6-pro",
     "storage": "256 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "12 GB"
   },
@@ -34355,7 +34355,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6-pro-128-gb-12-gb",
     "modelId": "m-google-google-pixel-6-pro",
     "storage": "128 GB",
-    "basePrice": 15150,
+    "basePrice": 15302,
     "active": true,
     "ram": "12 GB"
   },
@@ -34363,7 +34363,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6-256-gb-8-gb",
     "modelId": "m-google-google-pixel-6",
     "storage": "256 GB",
-    "basePrice": 14140,
+    "basePrice": 14281,
     "active": true,
     "ram": "8 GB"
   },
@@ -34371,7 +34371,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-6-128-gb-8-gb",
     "modelId": "m-google-google-pixel-6",
     "storage": "128 GB",
-    "basePrice": 13130,
+    "basePrice": 13261,
     "active": true,
     "ram": "8 GB"
   },
@@ -34379,7 +34379,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-5-128-gb-8-gb",
     "modelId": "m-google-google-pixel-5",
     "storage": "128 GB",
-    "basePrice": 8585,
+    "basePrice": 8671,
     "active": true,
     "ram": "8 GB"
   },
@@ -34387,7 +34387,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-5a-5g-128-gb-6-gb",
     "modelId": "m-google-google-pixel-5a-5g",
     "storage": "128 GB",
-    "basePrice": 8080,
+    "basePrice": 8161,
     "active": true,
     "ram": "6 GB"
   },
@@ -34395,7 +34395,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3a-xl-64-gb-4-gb",
     "modelId": "m-google-google-pixel-3a-xl",
     "storage": "64 GB",
-    "basePrice": 6060,
+    "basePrice": 6121,
     "active": true,
     "ram": "4 GB"
   },
@@ -34403,7 +34403,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3-xl-128-gb-4-gb",
     "modelId": "m-google-google-pixel-3-xl",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -34411,7 +34411,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-google-google-pixel-3-xl-64-gb-4-gb",
     "modelId": "m-google-google-pixel-3-xl",
     "storage": "64 GB",
-    "basePrice": 4545,
+    "basePrice": 4590,
     "active": true,
     "ram": "4 GB"
   },
@@ -34419,7 +34419,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-8x-64-gb-4-gb",
     "modelId": "m-honor-honor-8x",
     "storage": "64 GB",
-    "basePrice": 2172,
+    "basePrice": 2474,
     "active": true,
     "ram": "4 GB"
   },
@@ -34443,7 +34443,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-play-64-gb-4-gb",
     "modelId": "m-honor-honor-play",
     "storage": "64 GB",
-    "basePrice": 2060,
+    "basePrice": 2131,
     "active": true,
     "ram": "4 GB"
   },
@@ -34483,7 +34483,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-10-128-gb-6-gb",
     "modelId": "m-honor-honor-10",
     "storage": "128 GB",
-    "basePrice": 2545,
+    "basePrice": 2570,
     "active": true,
     "ram": "6 GB"
   },
@@ -34491,7 +34491,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-7a-32-gb-3-gb",
     "modelId": "m-honor-honor-7a",
     "storage": "32 GB",
-    "basePrice": 1656,
+    "basePrice": 1673,
     "active": true,
     "ram": "3 GB"
   },
@@ -34499,7 +34499,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-view-10-128-gb-6-gb",
     "modelId": "m-honor-honor-view-10",
     "storage": "128 GB",
-    "basePrice": 2889,
+    "basePrice": 2918,
     "active": true,
     "ram": "6 GB"
   },
@@ -34515,7 +34515,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-9-lite-64-gb-4-gb",
     "modelId": "m-honor-honor-9-lite",
     "storage": "64 GB",
-    "basePrice": 1879,
+    "basePrice": 1898,
     "active": true,
     "ram": "4 GB"
   },
@@ -34523,7 +34523,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-holly-4-plus-32-gb-3-gb",
     "modelId": "m-honor-honor-holly-4-plus",
     "storage": "32 GB",
-    "basePrice": 970,
+    "basePrice": 980,
     "active": true,
     "ram": "3 GB"
   },
@@ -34531,7 +34531,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-9i-64-gb-4-gb",
     "modelId": "m-honor-honor-9i",
     "storage": "64 GB",
-    "basePrice": 1899,
+    "basePrice": 1918,
     "active": true,
     "ram": "4 GB"
   },
@@ -34553,7 +34553,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-8-32-gb-4-gb",
     "modelId": "m-honor-honor-8",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1550,
     "active": true,
     "ram": "4 GB"
   },
@@ -34561,7 +34561,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-8-pro-64-gb-4-gb",
     "modelId": "m-honor-honor-8-pro",
     "storage": "64 GB",
-    "basePrice": 2707,
+    "basePrice": 2734,
     "active": true,
     "ram": "4 GB"
   },
@@ -34569,7 +34569,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-8-pro-128-gb-6-gb",
     "modelId": "m-honor-honor-8-pro",
     "storage": "128 GB",
-    "basePrice": 3040,
+    "basePrice": 3070,
     "active": true,
     "ram": "6 GB"
   },
@@ -34591,7 +34591,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-10-lite-32-gb-3-gb",
     "modelId": "m-honor-honor-10-lite",
     "storage": "32 GB",
-    "basePrice": 1970,
+    "basePrice": 1990,
     "active": true,
     "ram": "3 GB"
   },
@@ -34599,7 +34599,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-10-lite-64-gb-6-gb",
     "modelId": "m-honor-honor-10-lite",
     "storage": "64 GB",
-    "basePrice": 2778,
+    "basePrice": 2806,
     "active": true,
     "ram": "6 GB"
   },
@@ -34607,7 +34607,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-10-lite-64-gb-4-gb",
     "modelId": "m-honor-honor-10-lite",
     "storage": "64 GB",
-    "basePrice": 2323,
+    "basePrice": 2806,
     "active": true,
     "ram": "4 GB"
   },
@@ -34615,7 +34615,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-10-lite-128-gb-6-gb",
     "modelId": "m-honor-honor-10-lite",
     "storage": "128 GB",
-    "basePrice": 3000,
+    "basePrice": 3030,
     "active": true,
     "ram": "6 GB"
   },
@@ -34623,7 +34623,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-view-20-128-gb-6-gb",
     "modelId": "m-honor-honor-view-20",
     "storage": "128 GB",
-    "basePrice": 3697,
+    "basePrice": 3734,
     "active": true,
     "ram": "6 GB"
   },
@@ -34631,7 +34631,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-view-20-128-gb-8-gb",
     "modelId": "m-honor-honor-view-20",
     "storage": "128 GB",
-    "basePrice": 4464,
+    "basePrice": 3734,
     "active": true,
     "ram": "8 GB"
   },
@@ -34639,7 +34639,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-view-20-256-gb-8-gb",
     "modelId": "m-honor-honor-view-20",
     "storage": "256 GB",
-    "basePrice": 4969,
+    "basePrice": 5019,
     "active": true,
     "ram": "8 GB"
   },
@@ -34647,7 +34647,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-20i-128-gb-4-gb",
     "modelId": "m-honor-honor-20i",
     "storage": "128 GB",
-    "basePrice": 2505,
+    "basePrice": 2530,
     "active": true,
     "ram": "4 GB"
   },
@@ -34655,7 +34655,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-20-128-gb-6-gb",
     "modelId": "m-honor-honor-20",
     "storage": "128 GB",
-    "basePrice": 2778,
+    "basePrice": 2806,
     "active": true,
     "ram": "6 GB"
   },
@@ -34663,7 +34663,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-9x-pro-256-gb-6-gb",
     "modelId": "m-honor-honor-9x-pro",
     "storage": "256 GB",
-    "basePrice": 3192,
+    "basePrice": 3224,
     "active": true,
     "ram": "6 GB"
   },
@@ -34671,7 +34671,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-9a-64-gb-3-gb",
     "modelId": "m-honor-honor-9a",
     "storage": "64 GB",
-    "basePrice": 2101,
+    "basePrice": 2122,
     "active": true,
     "ram": "3 GB"
   },
@@ -34679,7 +34679,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-9s-32-gb-2-gb",
     "modelId": "m-honor-honor-9s",
     "storage": "32 GB",
-    "basePrice": 1939,
+    "basePrice": 1958,
     "active": true,
     "ram": "2 GB"
   },
@@ -34695,7 +34695,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-200-5g-512-gb-12-gb",
     "modelId": "m-honor-honor-200-5g",
     "storage": "512 GB",
-    "basePrice": 14554,
+    "basePrice": 14700,
     "active": true,
     "ram": "12 GB"
   },
@@ -34703,7 +34703,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-200-pro-5g-512-gb-12-gb",
     "modelId": "m-honor-honor-200-pro-5g",
     "storage": "512 GB",
-    "basePrice": 21230,
+    "basePrice": 21442,
     "active": true,
     "ram": "12 GB"
   },
@@ -34711,7 +34711,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-200-lite-5g-256-gb-8-gb",
     "modelId": "m-honor-honor-200-lite-5g",
     "storage": "256 GB",
-    "basePrice": 8201,
+    "basePrice": 8283,
     "active": true,
     "ram": "8 GB"
   },
@@ -34735,7 +34735,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-honor-honor-90-512-gb-12-gb",
     "modelId": "m-honor-honor-90",
     "storage": "512 GB",
-    "basePrice": 12474,
+    "basePrice": 12599,
     "active": true,
     "ram": "12 GB"
   },
@@ -34743,7 +34743,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-nova-3i-128-gb-4-gb",
     "modelId": "m-huawei-huawei-nova-3i",
     "storage": "128 GB",
-    "basePrice": 3262,
+    "basePrice": 3295,
     "active": true,
     "ram": "4 GB"
   },
@@ -34751,7 +34751,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-p20-pro-128-gb-6-gb",
     "modelId": "m-huawei-huawei-p20-pro",
     "storage": "128 GB",
-    "basePrice": 3707,
+    "basePrice": 3744,
     "active": true,
     "ram": "6 GB"
   },
@@ -34759,7 +34759,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-p20-lite-64-gb-4-gb",
     "modelId": "m-huawei-huawei-p20-lite",
     "storage": "64 GB",
-    "basePrice": 2919,
+    "basePrice": 2948,
     "active": true,
     "ram": "4 GB"
   },
@@ -34767,7 +34767,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-mate-20-pro-128-gb-6-gb",
     "modelId": "m-huawei-huawei-mate-20-pro",
     "storage": "128 GB",
-    "basePrice": 4414,
+    "basePrice": 4458,
     "active": true,
     "ram": "6 GB"
   },
@@ -34775,14 +34775,14 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-p30-pro-8-gb",
     "modelId": "m-huawei-huawei-p30-pro",
     "storage": "8 GB",
-    "basePrice": 7858,
+    "basePrice": 7937,
     "active": true
   },
   {
     "id": "v-m-huawei-huawei-p30-lite-128-gb-4-gb",
     "modelId": "m-huawei-huawei-p30-lite",
     "storage": "128 GB",
-    "basePrice": 3979,
+    "basePrice": 4019,
     "active": true,
     "ram": "4 GB"
   },
@@ -34790,7 +34790,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-p30-lite-128-gb-6-gb",
     "modelId": "m-huawei-huawei-p30-lite",
     "storage": "128 GB",
-    "basePrice": 4121,
+    "basePrice": 4019,
     "active": true,
     "ram": "6 GB"
   },
@@ -34798,7 +34798,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-mate-10-64-gb-4-gb",
     "modelId": "m-huawei-huawei-mate-10",
     "storage": "64 GB",
-    "basePrice": 3616,
+    "basePrice": 3652,
     "active": true,
     "ram": "4 GB"
   },
@@ -34806,7 +34806,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-mate-20-128-gb-4-gb",
     "modelId": "m-huawei-huawei-mate-20",
     "storage": "128 GB",
-    "basePrice": 3616,
+    "basePrice": 3652,
     "active": true,
     "ram": "4 GB"
   },
@@ -34814,7 +34814,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-y9-prime-2019-128-gb-4-gb",
     "modelId": "m-huawei-huawei-y9-prime-2019",
     "storage": "128 GB",
-    "basePrice": 3707,
+    "basePrice": 3744,
     "active": true,
     "ram": "4 GB"
   },
@@ -34822,7 +34822,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-huawei-huawei-mate-30-pro-256-gb-8-gb",
     "modelId": "m-huawei-huawei-mate-30-pro",
     "storage": "256 GB",
-    "basePrice": 8292,
+    "basePrice": 8375,
     "active": true,
     "ram": "8 GB"
   },
@@ -34830,7 +34830,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-5-64-gb-6-gb",
     "modelId": "m-infinix-infinix-zero-5",
     "storage": "64 GB",
-    "basePrice": 2232,
+    "basePrice": 2254,
     "active": true,
     "ram": "6 GB"
   },
@@ -34838,7 +34838,7 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-s3x-32-gb-3-gb",
     "modelId": "m-infinix-infinix-hot-s3x",
     "storage": "32 GB",
-    "basePrice": 1353,
+    "basePrice": 1367,
     "active": true,
     "ram": "3 GB"
   }
@@ -34849,7 +34849,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-5-stylus-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-5-stylus",
     "storage": "64 GB",
-    "basePrice": 1626,
+    "basePrice": 1642,
     "active": true,
     "ram": "4 GB"
   },
@@ -34857,7 +34857,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-7-pro-64-gb-6-gb",
     "modelId": "m-infinix-infinix-hot-7-pro",
     "storage": "64 GB",
-    "basePrice": 2060,
+    "basePrice": 2081,
     "active": true,
     "ram": "6 GB"
   },
@@ -34865,7 +34865,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-5-32-gb-3-gb",
     "modelId": "m-infinix-infinix-note-5",
     "storage": "32 GB",
-    "basePrice": 1040,
+    "basePrice": 1050,
     "active": true,
     "ram": "3 GB"
   },
@@ -34873,7 +34873,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-5-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-5",
     "storage": "64 GB",
-    "basePrice": 1131,
+    "basePrice": 1142,
     "active": true,
     "ram": "4 GB"
   },
@@ -34881,7 +34881,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-s4-32-gb-3-gb",
     "modelId": "m-infinix-infinix-s4",
     "storage": "32 GB",
-    "basePrice": 1464,
+    "basePrice": 1479,
     "active": true,
     "ram": "3 GB"
   },
@@ -34889,7 +34889,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-s4-64-gb-4-gb",
     "modelId": "m-infinix-infinix-s4",
     "storage": "64 GB",
-    "basePrice": 1757,
+    "basePrice": 1775,
     "active": true,
     "ram": "4 GB"
   },
@@ -34897,7 +34897,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-2-16-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-2",
     "storage": "16 GB",
-    "basePrice": 838,
+    "basePrice": 846,
     "active": true,
     "ram": "2 GB"
   },
@@ -34905,7 +34905,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-2-32-gb-3-gb",
     "modelId": "m-infinix-infinix-smart-2",
     "storage": "32 GB",
-    "basePrice": 1010,
+    "basePrice": 1020,
     "active": true,
     "ram": "3 GB"
   },
@@ -34913,7 +34913,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-s3-32-gb-3-gb",
     "modelId": "m-infinix-infinix-hot-s3",
     "storage": "32 GB",
-    "basePrice": 1303,
+    "basePrice": 1316,
     "active": true,
     "ram": "3 GB"
   },
@@ -34921,7 +34921,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-s3-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-s3",
     "storage": "64 GB",
-    "basePrice": 1687,
+    "basePrice": 1704,
     "active": true,
     "ram": "4 GB"
   },
@@ -34929,7 +34929,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-4-32-gb-3-gb",
     "modelId": "m-infinix-infinix-note-4",
     "storage": "32 GB",
-    "basePrice": 1020,
+    "basePrice": 1030,
     "active": true,
     "ram": "3 GB"
   },
@@ -34937,7 +34937,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-5-pro-128-gb-6-gb",
     "modelId": "m-infinix-infinix-zero-5-pro",
     "storage": "128 GB",
-    "basePrice": 2262,
+    "basePrice": 2285,
     "active": true,
     "ram": "6 GB"
   },
@@ -34945,7 +34945,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-6-pro-32-gb-3-gb",
     "modelId": "m-infinix-infinix-hot-6-pro",
     "storage": "32 GB",
-    "basePrice": 1970,
+    "basePrice": 1990,
     "active": true,
     "ram": "3 GB"
   },
@@ -34953,7 +34953,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-7-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-7",
     "storage": "64 GB",
-    "basePrice": 1899,
+    "basePrice": 1918,
     "active": true,
     "ram": "4 GB"
   },
@@ -34961,7 +34961,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-8-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-8",
     "storage": "64 GB",
-    "basePrice": 2404,
+    "basePrice": 2428,
     "active": true,
     "ram": "4 GB"
   },
@@ -34969,7 +34969,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-s5-64-gb-4-gb",
     "modelId": "m-infinix-infinix-s5",
     "storage": "64 GB",
-    "basePrice": 2010,
+    "basePrice": 2030,
     "active": true,
     "ram": "4 GB"
   },
@@ -34977,7 +34977,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-s5-pro-64-gb-4-gb",
     "modelId": "m-infinix-infinix-s5-pro",
     "storage": "64 GB",
-    "basePrice": 2586,
+    "basePrice": 2612,
     "active": true,
     "ram": "4 GB"
   },
@@ -34985,7 +34985,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-s5-lite-64-gb-4-gb",
     "modelId": "m-infinix-infinix-s5-lite",
     "storage": "64 GB",
-    "basePrice": 1879,
+    "basePrice": 1898,
     "active": true,
     "ram": "4 GB"
   },
@@ -34993,7 +34993,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-9-pro-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-9-pro",
     "storage": "64 GB",
-    "basePrice": 2848,
+    "basePrice": 2876,
     "active": true,
     "ram": "4 GB"
   },
@@ -35001,7 +35001,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-7-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-7",
     "storage": "64 GB",
-    "basePrice": 2818,
+    "basePrice": 2846,
     "active": true,
     "ram": "4 GB"
   },
@@ -35009,7 +35009,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-hd-2021-32-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-hd-2021",
     "storage": "32 GB",
-    "basePrice": 1798,
+    "basePrice": 1816,
     "active": true,
     "ram": "2 GB"
   },
@@ -35017,7 +35017,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-10-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-10",
     "storage": "64 GB",
-    "basePrice": 2939,
+    "basePrice": 2968,
     "active": true,
     "ram": "4 GB"
   },
@@ -35033,7 +35033,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-8i-128-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-8i",
     "storage": "128 GB",
-    "basePrice": 3969,
+    "basePrice": 4009,
     "active": true,
     "ram": "8 GB"
   },
@@ -35041,7 +35041,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-5-32-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-5",
     "storage": "32 GB",
-    "basePrice": 2151,
+    "basePrice": 2173,
     "active": true,
     "ram": "2 GB"
   },
@@ -35057,7 +35057,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-10-play-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-10-play",
     "storage": "64 GB",
-    "basePrice": 2939,
+    "basePrice": 2968,
     "active": true,
     "ram": "4 GB"
   },
@@ -35065,7 +35065,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-10s-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-10s",
     "storage": "64 GB",
-    "basePrice": 2778,
+    "basePrice": 3000,
     "active": true,
     "ram": "4 GB"
   },
@@ -35081,7 +35081,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-10-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-10",
     "storage": "64 GB",
-    "basePrice": 2889,
+    "basePrice": 2918,
     "active": true,
     "ram": "4 GB"
   },
@@ -35097,7 +35097,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-10-pro-256-gb-8-gb",
     "modelId": "m-infinix-infinix-note-10-pro",
     "storage": "256 GB",
-    "basePrice": 4252,
+    "basePrice": 4295,
     "active": true,
     "ram": "8 GB"
   },
@@ -35105,7 +35105,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-11-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-11",
     "storage": "64 GB",
-    "basePrice": 2959,
+    "basePrice": 2989,
     "active": true,
     "ram": "4 GB"
   },
@@ -35113,7 +35113,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-11s-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-11s",
     "storage": "64 GB",
-    "basePrice": 3182,
+    "basePrice": 3214,
     "active": true,
     "ram": "4 GB"
   },
@@ -35137,7 +35137,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-11s-128-gb-8-gb",
     "modelId": "m-infinix-infinix-note-11s",
     "storage": "128 GB",
-    "basePrice": 3434,
+    "basePrice": 3468,
     "active": true,
     "ram": "8 GB"
   },
@@ -35145,7 +35145,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-11-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-11",
     "storage": "64 GB",
-    "basePrice": 3222,
+    "basePrice": 3254,
     "active": true,
     "ram": "4 GB"
   },
@@ -35161,7 +35161,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-5g-128-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-5g",
     "storage": "128 GB",
-    "basePrice": 5474,
+    "basePrice": 5529,
     "active": true,
     "ram": "8 GB"
   },
@@ -35169,7 +35169,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-4-plus-32-gb-3-gb",
     "modelId": "m-infinix-infinix-smart-4-plus",
     "storage": "32 GB",
-    "basePrice": 2172,
+    "basePrice": 2194,
     "active": true,
     "ram": "3 GB"
   },
@@ -35177,7 +35177,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-12-play-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-12-play",
     "storage": "64 GB",
-    "basePrice": 3535,
+    "basePrice": 3570,
     "active": true,
     "ram": "4 GB"
   },
@@ -35185,7 +35185,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-9-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-9",
     "storage": "64 GB",
-    "basePrice": 2626,
+    "basePrice": 2652,
     "active": true,
     "ram": "4 GB"
   },
@@ -35193,7 +35193,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-11s-free-fire-edition-128-gb-8-gb",
     "modelId": "m-infinix-infinix-note-11s-free-fire-edition",
     "storage": "128 GB",
-    "basePrice": 3939,
+    "basePrice": 3978,
     "active": true,
     "ram": "8 GB"
   },
@@ -35201,7 +35201,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-11-2022-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-11-2022",
     "storage": "64 GB",
-    "basePrice": 2697,
+    "basePrice": 2724,
     "active": true,
     "ram": "4 GB"
   },
@@ -35209,7 +35209,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-4-32-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-4",
     "storage": "32 GB",
-    "basePrice": 1535,
+    "basePrice": 1550,
     "active": true,
     "ram": "2 GB"
   },
@@ -35217,7 +35217,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12-turbo-128-gb-8-gb",
     "modelId": "m-infinix-infinix-note-12-turbo",
     "storage": "128 GB",
-    "basePrice": 3828,
+    "basePrice": 3866,
     "active": true,
     "ram": "8 GB"
   },
@@ -35225,7 +35225,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-12",
     "storage": "64 GB",
-    "basePrice": 4090,
+    "basePrice": 4131,
     "active": true,
     "ram": "4 GB"
   },
@@ -35241,7 +35241,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12-pro-4g-256-gb-8-gb",
     "modelId": "m-infinix-infinix-note-12-pro-4g",
     "storage": "256 GB",
-    "basePrice": 4868,
+    "basePrice": 4917,
     "active": true,
     "ram": "8 GB"
   },
@@ -35249,7 +35249,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12-pro-5g-128-gb-8-gb",
     "modelId": "m-infinix-infinix-note-12-pro-5g",
     "storage": "128 GB",
-    "basePrice": 5959,
+    "basePrice": 6019,
     "active": true,
     "ram": "8 GB"
   },
@@ -35257,7 +35257,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-12-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-12",
     "storage": "64 GB",
-    "basePrice": 3293,
+    "basePrice": 3326,
     "active": true,
     "ram": "4 GB"
   },
@@ -35265,7 +35265,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-6-64-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-6",
     "storage": "64 GB",
-    "basePrice": 2384,
+    "basePrice": 2408,
     "active": true,
     "ram": "2 GB"
   },
@@ -35273,7 +35273,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12-5g-64-gb-6-gb",
     "modelId": "m-infinix-infinix-note-12-5g",
     "storage": "64 GB",
-    "basePrice": 4242,
+    "basePrice": 4284,
     "active": true,
     "ram": "6 GB"
   },
@@ -35281,7 +35281,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-6-plus-64-gb-3-gb",
     "modelId": "m-infinix-infinix-smart-6-plus",
     "storage": "64 GB",
-    "basePrice": 2414,
+    "basePrice": 2438,
     "active": true,
     "ram": "3 GB"
   },
@@ -35297,7 +35297,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-12-pro-128-gb-8-gb",
     "modelId": "m-infinix-infinix-hot-12-pro",
     "storage": "128 GB",
-    "basePrice": 3565,
+    "basePrice": 3601,
     "active": true,
     "ram": "8 GB"
   },
@@ -35305,7 +35305,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-6-hd-32-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-6-hd",
     "storage": "32 GB",
-    "basePrice": 2101,
+    "basePrice": 2122,
     "active": true,
     "ram": "2 GB"
   },
@@ -35313,7 +35313,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-ultra-256-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-ultra",
     "storage": "256 GB",
-    "basePrice": 8625,
+    "basePrice": 8711,
     "active": true,
     "ram": "8 GB"
   },
@@ -35321,7 +35321,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-20-128-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-20",
     "storage": "128 GB",
-    "basePrice": 4535,
+    "basePrice": 4580,
     "active": true,
     "ram": "8 GB"
   },
@@ -35329,7 +35329,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-20-5g-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-20-5g",
     "storage": "64 GB",
-    "basePrice": 4121,
+    "basePrice": 4162,
     "active": true,
     "ram": "4 GB"
   },
@@ -35345,7 +35345,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-20-play-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-20-play",
     "storage": "64 GB",
-    "basePrice": 2919,
+    "basePrice": 2948,
     "active": true,
     "ram": "4 GB"
   },
@@ -35353,7 +35353,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-12i-64-gb-4-gb",
     "modelId": "m-infinix-infinix-note-12i",
     "storage": "64 GB",
-    "basePrice": 2919,
+    "basePrice": 2948,
     "active": true,
     "ram": "4 GB"
   },
@@ -35361,7 +35361,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-7-64-gb-4-gb",
     "modelId": "m-infinix-infinix-smart-7",
     "storage": "64 GB",
-    "basePrice": 2101,
+    "basePrice": 2122,
     "active": true,
     "ram": "4 GB"
   },
@@ -35377,7 +35377,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-5g-2023-128-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-5g-2023",
     "storage": "128 GB",
-    "basePrice": 5474,
+    "basePrice": 5529,
     "active": true,
     "ram": "8 GB"
   },
@@ -35385,7 +35385,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-5g-2023-turbo-256-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-5g-2023-turbo",
     "storage": "256 GB",
-    "basePrice": 5999,
+    "basePrice": 6059,
     "active": true,
     "ram": "8 GB"
   },
@@ -35393,7 +35393,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-7-hd-64-gb-2-gb",
     "modelId": "m-infinix-infinix-smart-7-hd",
     "storage": "64 GB",
-    "basePrice": 1868,
+    "basePrice": 1887,
     "active": true,
     "ram": "2 GB"
   },
@@ -35401,7 +35401,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-30i-64-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-30i",
     "storage": "64 GB",
-    "basePrice": 3222,
+    "basePrice": 3254,
     "active": true,
     "ram": "4 GB"
   },
@@ -35409,7 +35409,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-30i-128-gb-8-gb",
     "modelId": "m-infinix-infinix-hot-30i",
     "storage": "128 GB",
-    "basePrice": 5020,
+    "basePrice": 5070,
     "active": true,
     "ram": "8 GB"
   },
@@ -35417,7 +35417,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-gt-10-pro-256-gb-8-gb",
     "modelId": "m-infinix-infinix-gt-10-pro",
     "storage": "256 GB",
-    "basePrice": 9555,
+    "basePrice": 9651,
     "active": true,
     "ram": "8 GB"
   },
@@ -35449,7 +35449,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-30-5g-128-gb-8-gb",
     "modelId": "m-infinix-infinix-hot-30-5g",
     "storage": "128 GB",
-    "basePrice": 6252,
+    "basePrice": 5254,
     "active": true,
     "ram": "8 GB"
   },
@@ -35457,7 +35457,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-8-hd-64-gb-3-gb",
     "modelId": "m-infinix-infinix-smart-8-hd",
     "storage": "64 GB",
-    "basePrice": 2878,
+    "basePrice": 2907,
     "active": true,
     "ram": "3 GB"
   },
@@ -35465,7 +35465,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-8-64-gb-4-gb",
     "modelId": "m-infinix-infinix-smart-8",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3091,
     "active": true,
     "ram": "4 GB"
   },
@@ -35473,7 +35473,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-40-pro-5g-256-gb-8-gb",
     "modelId": "m-infinix-infinix-note-40-pro-5g",
     "storage": "256 GB",
-    "basePrice": 9444,
+    "basePrice": 9538,
     "active": true,
     "ram": "8 GB"
   },
@@ -35481,7 +35481,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-gt-20-pro-256-gb-8-gb",
     "modelId": "m-infinix-infinix-gt-20-pro",
     "storage": "256 GB",
-    "basePrice": 9948,
+    "basePrice": 10050,
     "active": true,
     "ram": "8 GB"
   },
@@ -35497,7 +35497,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-40i-256-gb-8-gb",
     "modelId": "m-infinix-infinix-hot-40i",
     "storage": "256 GB",
-    "basePrice": 4161,
+    "basePrice": 4203,
     "active": true,
     "ram": "8 GB"
   },
@@ -35505,7 +35505,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-40-5g-256-gb-8-gb",
     "modelId": "m-infinix-infinix-note-40-5g",
     "storage": "256 GB",
-    "basePrice": 6929,
+    "basePrice": 6998,
     "active": true,
     "ram": "8 GB"
   },
@@ -35513,7 +35513,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-40-pro-plus-5g-256-gb-12-gb",
     "modelId": "m-infinix-infinix-note-40-pro-plus-5g",
     "storage": "256 GB",
-    "basePrice": 9797,
+    "basePrice": 9895,
     "active": true,
     "ram": "12 GB"
   },
@@ -35521,7 +35521,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-zero-flip-5g-512-gb-8-gb",
     "modelId": "m-infinix-infinix-zero-flip-5g",
     "storage": "512 GB",
-    "basePrice": 19301,
+    "basePrice": 19494,
     "active": true,
     "ram": "8 GB"
   },
@@ -35567,7 +35567,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-50-5g-128-gb-8-gb",
     "modelId": "m-infinix-infinix-hot-50-5g",
     "storage": "128 GB",
-    "basePrice": 5404,
+    "basePrice": 4295,
     "active": true,
     "ram": "8 GB"
   },
@@ -35575,7 +35575,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-50x-5g-128-gb-6-gb",
     "modelId": "m-infinix-infinix-note-50x-5g",
     "storage": "128 GB",
-    "basePrice": 6363,
+    "basePrice": 6454,
     "active": true,
     "ram": "6 GB"
   },
@@ -35583,7 +35583,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-note-50x-5g-128-gb-8-gb",
     "modelId": "m-infinix-infinix-note-50x-5g",
     "storage": "128 GB",
-    "basePrice": 7080,
+    "basePrice": 6427,
     "active": true,
     "ram": "8 GB"
   },
@@ -35591,7 +35591,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-60i-5g-128-gb-4-gb",
     "modelId": "m-infinix-infinix-hot-60i-5g",
     "storage": "128 GB",
-    "basePrice": 6151,
+    "basePrice": 6213,
     "active": true,
     "ram": "4 GB"
   },
@@ -35599,7 +35599,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-hot-60-5g-plus-128-gb-6-gb",
     "modelId": "m-infinix-infinix-hot-60-5g-plus",
     "storage": "128 GB",
-    "basePrice": 7080,
+    "basePrice": 7151,
     "active": true,
     "ram": "6 GB"
   },
@@ -35607,7 +35607,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-9-hd-64-gb-3-gb",
     "modelId": "m-infinix-infinix-smart-9-hd",
     "storage": "64 GB",
-    "basePrice": 4161,
+    "basePrice": 4203,
     "active": true,
     "ram": "3 GB"
   },
@@ -35615,7 +35615,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-infinix-infinix-smart-10-64-gb-4-gb",
     "modelId": "m-infinix-infinix-smart-10",
     "storage": "64 GB",
-    "basePrice": 4161,
+    "basePrice": 4203,
     "active": true,
     "ram": "4 GB"
   },
@@ -35623,21 +35623,21 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-3-128-gb",
     "modelId": "m-iqoo-iqoo-3",
     "storage": "128 GB",
-    "basePrice": 6121,
+    "basePrice": 6232,
     "active": true
   },
   {
     "id": "v-m-iqoo-iqoo-3-256-gb",
     "modelId": "m-iqoo-iqoo-3",
     "storage": "256 GB",
-    "basePrice": 6353,
+    "basePrice": 6464,
     "active": true
   },
   {
     "id": "v-m-iqoo-iqoo-7-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-7-5g",
     "storage": "128 GB",
-    "basePrice": 9676,
+    "basePrice": 9773,
     "active": true,
     "ram": "8 GB"
   },
@@ -35645,7 +35645,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-7-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-7-5g",
     "storage": "256 GB",
-    "basePrice": 9868,
+    "basePrice": 10019,
     "active": true,
     "ram": "8 GB"
   },
@@ -35653,7 +35653,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-7-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-7-5g",
     "storage": "256 GB",
-    "basePrice": 10019,
+    "basePrice": 10171,
     "active": true,
     "ram": "12 GB"
   },
@@ -35661,7 +35661,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-7-legend-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-7-legend-5g",
     "storage": "128 GB",
-    "basePrice": 11241,
+    "basePrice": 11353,
     "active": true,
     "ram": "8 GB"
   },
@@ -35669,7 +35669,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-7-legend-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-7-legend-5g",
     "storage": "256 GB",
-    "basePrice": 11474,
+    "basePrice": 11625,
     "active": true,
     "ram": "12 GB"
   },
@@ -35677,7 +35677,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z3-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z3-5g",
     "storage": "128 GB",
-    "basePrice": 7575,
+    "basePrice": 7726,
     "active": true,
     "ram": "6 GB"
   },
@@ -35685,7 +35685,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z3-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z3-5g",
     "storage": "128 GB",
-    "basePrice": 7878,
+    "basePrice": 7651,
     "active": true,
     "ram": "8 GB"
   },
@@ -35701,7 +35701,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z5-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z5-5g",
     "storage": "128 GB",
-    "basePrice": 8242,
+    "basePrice": 8324,
     "active": true,
     "ram": "8 GB"
   },
@@ -35717,7 +35717,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-9-5g",
     "storage": "128 GB",
-    "basePrice": 11090,
+    "basePrice": 11201,
     "active": true,
     "ram": "8 GB"
   },
@@ -35733,7 +35733,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9-pro-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-9-pro-5g",
     "storage": "256 GB",
-    "basePrice": 15837,
+    "basePrice": 15988,
     "active": true,
     "ram": "8 GB"
   },
@@ -35749,7 +35749,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9-se-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-9-se-5g",
     "storage": "128 GB",
-    "basePrice": 11756,
+    "basePrice": 11874,
     "active": true,
     "ram": "8 GB"
   },
@@ -35757,7 +35757,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9-se-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-9-se-5g",
     "storage": "256 GB",
-    "basePrice": 11857,
+    "basePrice": 12009,
     "active": true,
     "ram": "12 GB"
   },
@@ -35765,7 +35765,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-pro-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z6-pro-5g",
     "storage": "128 GB",
-    "basePrice": 7797,
+    "basePrice": 7959,
     "active": true,
     "ram": "6 GB"
   },
@@ -35773,7 +35773,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-pro-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z6-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8181,
+    "basePrice": 7875,
     "active": true,
     "ram": "8 GB"
   },
@@ -35805,7 +35805,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z6-5g",
     "storage": "128 GB",
-    "basePrice": 8302,
+    "basePrice": 7878,
     "active": true,
     "ram": "8 GB"
   },
@@ -35813,7 +35813,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-128-gb-4-gb",
     "modelId": "m-iqoo-iqoo-z6",
     "storage": "128 GB",
-    "basePrice": 5585,
+    "basePrice": 5641,
     "active": true,
     "ram": "4 GB"
   },
@@ -35821,7 +35821,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z6",
     "storage": "128 GB",
-    "basePrice": 6040,
+    "basePrice": 5641,
     "active": true,
     "ram": "6 GB"
   },
@@ -35829,7 +35829,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z6",
     "storage": "128 GB",
-    "basePrice": 6424,
+    "basePrice": 5641,
     "active": true,
     "ram": "8 GB"
   },
@@ -35837,7 +35837,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-6-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-6-5g",
     "storage": "128 GB",
-    "basePrice": 11019,
+    "basePrice": 11129,
     "active": true,
     "ram": "8 GB"
   },
@@ -35845,7 +35845,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-6-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-neo-6-5g",
     "storage": "256 GB",
-    "basePrice": 11241,
+    "basePrice": 11353,
     "active": true,
     "ram": "12 GB"
   },
@@ -35853,7 +35853,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9t-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-9t-5g",
     "storage": "128 GB",
-    "basePrice": 14382,
+    "basePrice": 14526,
     "active": true,
     "ram": "8 GB"
   },
@@ -35861,7 +35861,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-9t-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-9t-5g",
     "storage": "256 GB",
-    "basePrice": 15493,
+    "basePrice": 15685,
     "active": true,
     "ram": "12 GB"
   },
@@ -35869,7 +35869,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-3-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-3-5g",
     "storage": "256 GB",
-    "basePrice": 7232,
+    "basePrice": 7304,
     "active": true,
     "ram": "12 GB"
   },
@@ -35877,7 +35877,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z6-lite-5g-64-gb-4-gb",
     "modelId": "m-iqoo-iqoo-z6-lite-5g",
     "storage": "64 GB",
-    "basePrice": 5888,
+    "basePrice": 5947,
     "active": true,
     "ram": "4 GB"
   },
@@ -35909,7 +35909,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-7-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-7-5g",
     "storage": "128 GB",
-    "basePrice": 11211,
+    "basePrice": 11323,
     "active": true,
     "ram": "8 GB"
   },
@@ -35917,7 +35917,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-7-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-neo-7-5g",
     "storage": "256 GB",
-    "basePrice": 11857,
+    "basePrice": 11976,
     "active": true,
     "ram": "12 GB"
   },
@@ -35933,7 +35933,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z7-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z7-5g",
     "storage": "128 GB",
-    "basePrice": 9524,
+    "basePrice": 9151,
     "active": true,
     "ram": "8 GB"
   },
@@ -35949,7 +35949,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z7s-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z7s-5g",
     "storage": "128 GB",
-    "basePrice": 8878,
+    "basePrice": 8191,
     "active": true,
     "ram": "8 GB"
   },
@@ -35957,7 +35957,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-7-pro-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-7-pro-5g",
     "storage": "128 GB",
-    "basePrice": 17029,
+    "basePrice": 17199,
     "active": true,
     "ram": "8 GB"
   },
@@ -35965,7 +35965,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-7-pro-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-neo-7-pro-5g",
     "storage": "256 GB",
-    "basePrice": 17271,
+    "basePrice": 17524,
     "active": true,
     "ram": "12 GB"
   },
@@ -35973,7 +35973,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z7-pro-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z7-pro-5g",
     "storage": "128 GB",
-    "basePrice": 12928,
+    "basePrice": 13057,
     "active": true,
     "ram": "8 GB"
   },
@@ -35989,7 +35989,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-12-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-12-5g",
     "storage": "256 GB",
-    "basePrice": 25442,
+    "basePrice": 25735,
     "active": true,
     "ram": "12 GB"
   },
@@ -35997,7 +35997,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-12-5g-256-gb-16-gb",
     "modelId": "m-iqoo-iqoo-12-5g",
     "storage": "256 GB",
-    "basePrice": 27220,
+    "basePrice": 27512,
     "active": true,
     "ram": "16 GB"
   },
@@ -36005,7 +36005,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-12-5g-512-gb-16-gb",
     "modelId": "m-iqoo-iqoo-12-5g",
     "storage": "512 GB",
-    "basePrice": 28108,
+    "basePrice": 28411,
     "active": true,
     "ram": "16 GB"
   },
@@ -36013,7 +36013,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-9-pro-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-9-pro-5g",
     "storage": "128 GB",
-    "basePrice": 17120,
+    "basePrice": 17291,
     "active": true,
     "ram": "8 GB"
   },
@@ -36021,7 +36021,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-9-pro-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-9-pro-5g",
     "storage": "256 GB",
-    "basePrice": 19796,
+    "basePrice": 19998,
     "active": true,
     "ram": "8 GB"
   },
@@ -36029,7 +36029,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-9-pro-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-neo-9-pro-5g",
     "storage": "256 GB",
-    "basePrice": 20543,
+    "basePrice": 20786,
     "active": true,
     "ram": "12 GB"
   },
@@ -36051,7 +36051,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9x-5g-128-gb-4-gb",
     "modelId": "m-iqoo-iqoo-z9x-5g",
     "storage": "128 GB",
-    "basePrice": 7767,
+    "basePrice": 7918,
     "active": true,
     "ram": "4 GB"
   },
@@ -36059,7 +36059,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9x-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z9x-5g",
     "storage": "128 GB",
-    "basePrice": 8514,
+    "basePrice": 8696,
     "active": true,
     "ram": "6 GB"
   },
@@ -36067,7 +36067,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9x-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z9x-5g",
     "storage": "128 GB",
-    "basePrice": 8858,
+    "basePrice": 8696,
     "active": true,
     "ram": "8 GB"
   },
@@ -36091,7 +36091,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9s-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z9s-5g",
     "storage": "128 GB",
-    "basePrice": 13221,
+    "basePrice": 13353,
     "active": true,
     "ram": "8 GB"
   },
@@ -36099,7 +36099,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9s-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z9s-5g",
     "storage": "256 GB",
-    "basePrice": 13514,
+    "basePrice": 13706,
     "active": true,
     "ram": "8 GB"
   },
@@ -36115,7 +36115,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9s-pro-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z9s-pro-5g",
     "storage": "128 GB",
-    "basePrice": 13261,
+    "basePrice": 13394,
     "active": true,
     "ram": "8 GB"
   },
@@ -36131,7 +36131,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z9s-pro-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-z9s-pro-5g",
     "storage": "256 GB",
-    "basePrice": 14352,
+    "basePrice": 14554,
     "active": true,
     "ram": "12 GB"
   },
@@ -36139,7 +36139,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-13-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-13-5g",
     "storage": "256 GB",
-    "basePrice": 29694,
+    "basePrice": 29997,
     "active": true,
     "ram": "12 GB"
   },
@@ -36155,7 +36155,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-10r-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-10r-5g",
     "storage": "128 GB",
-    "basePrice": 17524,
+    "basePrice": 17699,
     "active": true,
     "ram": "8 GB"
   },
@@ -36163,7 +36163,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-10r-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-10r-5g",
     "storage": "256 GB",
-    "basePrice": 20150,
+    "basePrice": 20301,
     "active": true,
     "ram": "8 GB"
   },
@@ -36179,7 +36179,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z10-5g",
     "storage": "128 GB",
-    "basePrice": 15908,
+    "basePrice": 16067,
     "active": true,
     "ram": "8 GB"
   },
@@ -36187,7 +36187,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10-5g-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z10-5g",
     "storage": "256 GB",
-    "basePrice": 17170,
+    "basePrice": 17372,
     "active": true,
     "ram": "8 GB"
   },
@@ -36195,7 +36195,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10-5g-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-z10-5g",
     "storage": "256 GB",
-    "basePrice": 17978,
+    "basePrice": 18180,
     "active": true,
     "ram": "12 GB"
   },
@@ -36203,7 +36203,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10x-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z10x-5g",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 10454,
     "active": true,
     "ram": "6 GB"
   },
@@ -36211,7 +36211,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10x-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z10x-5g",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 10201,
     "active": true,
     "ram": "8 GB"
   },
@@ -36227,7 +36227,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-10-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-10",
     "storage": "128 GB",
-    "basePrice": 20958,
+    "basePrice": 21210,
     "active": true,
     "ram": "8 GB"
   },
@@ -36235,7 +36235,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-neo-10-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-neo-10",
     "storage": "256 GB",
-    "basePrice": 24806,
+    "basePrice": 24998,
     "active": true,
     "ram": "8 GB"
   },
@@ -36275,7 +36275,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10-lite-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z10-lite-5g",
     "storage": "128 GB",
-    "basePrice": 8434,
+    "basePrice": 8585,
     "active": true,
     "ram": "6 GB"
   },
@@ -36291,7 +36291,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z10r-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z10r-5g",
     "storage": "128 GB",
-    "basePrice": 14645,
+    "basePrice": 14791,
     "active": true,
     "ram": "8 GB"
   },
@@ -36323,7 +36323,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-15-5g-512-gb-16-gb",
     "modelId": "m-iqoo-iqoo-15-5g",
     "storage": "512 GB",
-    "basePrice": 42016,
+    "basePrice": 42420,
     "active": true,
     "ram": "16 GB"
   },
@@ -36331,7 +36331,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-15r-256-gb-8-gb",
     "modelId": "m-iqoo-iqoo-15r",
     "storage": "256 GB",
-    "basePrice": 29492,
+    "basePrice": 29787,
     "active": true,
     "ram": "8 GB"
   },
@@ -36339,7 +36339,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-15r-256-gb-12-gb",
     "modelId": "m-iqoo-iqoo-15r",
     "storage": "256 GB",
-    "basePrice": 31512,
+    "basePrice": 29787,
     "active": true,
     "ram": "12 GB"
   },
@@ -36347,7 +36347,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-15r-512-gb-12-gb",
     "modelId": "m-iqoo-iqoo-15r",
     "storage": "512 GB",
-    "basePrice": 32825,
+    "basePrice": 33153,
     "active": true,
     "ram": "12 GB"
   },
@@ -36355,7 +36355,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z11x-5g-128-gb-6-gb",
     "modelId": "m-iqoo-iqoo-z11x-5g",
     "storage": "128 GB",
-    "basePrice": 14494,
+    "basePrice": 14645,
     "active": true,
     "ram": "6 GB"
   },
@@ -36363,7 +36363,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-iqoo-iqoo-z11x-5g-128-gb-8-gb",
     "modelId": "m-iqoo-iqoo-z11x-5g",
     "storage": "128 GB",
-    "basePrice": 15352,
+    "basePrice": 14639,
     "active": true,
     "ram": "8 GB"
   },
@@ -36379,7 +36379,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lenovo-lenovo-k10-note-64-gb-4-gb",
     "modelId": "m-lenovo-lenovo-k10-note",
     "storage": "64 GB",
-    "basePrice": 1454,
+    "basePrice": 1469,
     "active": true,
     "ram": "4 GB"
   },
@@ -36395,7 +36395,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lenovo-lenovo-k10-plus-64-gb-4-gb",
     "modelId": "m-lenovo-lenovo-k10-plus",
     "storage": "64 GB",
-    "basePrice": 1959,
+    "basePrice": 1979,
     "active": true,
     "ram": "4 GB"
   },
@@ -36403,7 +36403,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lenovo-lenovo-z6-pro-128-gb-8-gb",
     "modelId": "m-lenovo-lenovo-z6-pro",
     "storage": "128 GB",
-    "basePrice": 5313,
+    "basePrice": 5366,
     "active": true,
     "ram": "8 GB"
   },
@@ -36411,7 +36411,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-g7-plus-thinq-128-gb-6-gb",
     "modelId": "m-lg-lg-g7-plus-thinq",
     "storage": "128 GB",
-    "basePrice": 3454,
+    "basePrice": 3489,
     "active": true,
     "ram": "6 GB"
   },
@@ -36419,7 +36419,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-v40-thinq-128-gb-6-gb",
     "modelId": "m-lg-lg-v40-thinq",
     "storage": "128 GB",
-    "basePrice": 3888,
+    "basePrice": 3927,
     "active": true,
     "ram": "6 GB"
   },
@@ -36427,7 +36427,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-g7-thinq-64-gb-4-gb",
     "modelId": "m-lg-lg-g7-thinq",
     "storage": "64 GB",
-    "basePrice": 3010,
+    "basePrice": 3040,
     "active": true,
     "ram": "4 GB"
   },
@@ -36435,7 +36435,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w10-32-gb-3-gb",
     "modelId": "m-lg-lg-w10",
     "storage": "32 GB",
-    "basePrice": 2212,
+    "basePrice": 2234,
     "active": true,
     "ram": "3 GB"
   },
@@ -36443,7 +36443,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w30-pro-64-gb-4-gb",
     "modelId": "m-lg-lg-w30-pro",
     "storage": "64 GB",
-    "basePrice": 3010,
+    "basePrice": 3040,
     "active": true,
     "ram": "4 GB"
   },
@@ -36451,7 +36451,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-g8s-thinq-128-gb-6-gb",
     "modelId": "m-lg-lg-g8s-thinq",
     "storage": "128 GB",
-    "basePrice": 4414,
+    "basePrice": 4458,
     "active": true,
     "ram": "6 GB"
   },
@@ -36459,7 +36459,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-g8x-thinq-128-gb-6-gb",
     "modelId": "m-lg-lg-g8x-thinq",
     "storage": "128 GB",
-    "basePrice": 4585,
+    "basePrice": 4631,
     "active": true,
     "ram": "6 GB"
   },
@@ -36467,7 +36467,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-q60-64-gb-3-gb",
     "modelId": "m-lg-lg-q60",
     "storage": "64 GB",
-    "basePrice": 2737,
+    "basePrice": 2764,
     "active": true,
     "ram": "3 GB"
   },
@@ -36475,7 +36475,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-wing-128-gb-8-gb",
     "modelId": "m-lg-lg-wing",
     "storage": "128 GB",
-    "basePrice": 6181,
+    "basePrice": 6243,
     "active": true,
     "ram": "8 GB"
   },
@@ -36483,7 +36483,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-velvet-dual-screen-128-gb-6-gb",
     "modelId": "m-lg-lg-velvet-dual-screen",
     "storage": "128 GB",
-    "basePrice": 4939,
+    "basePrice": 4988,
     "active": true,
     "ram": "6 GB"
   },
@@ -36491,7 +36491,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-velvet-dual-screen-128-gb-8-gb",
     "modelId": "m-lg-lg-velvet-dual-screen",
     "storage": "128 GB",
-    "basePrice": 5373,
+    "basePrice": 4988,
     "active": true,
     "ram": "8 GB"
   },
@@ -36499,7 +36499,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w31-64-gb-4-gb",
     "modelId": "m-lg-lg-w31",
     "storage": "64 GB",
-    "basePrice": 2818,
+    "basePrice": 2846,
     "active": true,
     "ram": "4 GB"
   },
@@ -36507,7 +36507,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-k42-64-gb-3-gb",
     "modelId": "m-lg-lg-k42",
     "storage": "64 GB",
-    "basePrice": 2919,
+    "basePrice": 2948,
     "active": true,
     "ram": "3 GB"
   },
@@ -36515,7 +36515,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w30-32-gb-3-gb",
     "modelId": "m-lg-lg-w30",
     "storage": "32 GB",
-    "basePrice": 2565,
+    "basePrice": 2591,
     "active": true,
     "ram": "3 GB"
   },
@@ -36523,7 +36523,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w30-64-gb-4-gb",
     "modelId": "m-lg-lg-w30",
     "storage": "64 GB",
-    "basePrice": 2737,
+    "basePrice": 2764,
     "active": true,
     "ram": "4 GB"
   },
@@ -36531,7 +36531,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w31-plus-128-gb-4-gb",
     "modelId": "m-lg-lg-w31-plus",
     "storage": "128 GB",
-    "basePrice": 3171,
+    "basePrice": 3203,
     "active": true,
     "ram": "4 GB"
   },
@@ -36539,7 +36539,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w41-64-gb-4-gb",
     "modelId": "m-lg-lg-w41",
     "storage": "64 GB",
-    "basePrice": 3010,
+    "basePrice": 3040,
     "active": true,
     "ram": "4 GB"
   },
@@ -36547,7 +36547,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-lg-lg-w11-32-gb-3-gb",
     "modelId": "m-lg-lg-w11",
     "storage": "32 GB",
-    "basePrice": 1858,
+    "basePrice": 1877,
     "active": true,
     "ram": "3 GB"
   },
@@ -36555,7 +36555,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-one-power-64-gb-4-gb",
     "modelId": "m-motorola-motorola-one-power",
     "storage": "64 GB",
-    "basePrice": 2141,
+    "basePrice": 2162,
     "active": true,
     "ram": "4 GB"
   },
@@ -36563,7 +36563,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g6-plus-64-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g6-plus",
     "storage": "64 GB",
-    "basePrice": 1909,
+    "basePrice": 1928,
     "active": true,
     "ram": "6 GB"
   },
@@ -36571,7 +36571,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-z2-force-64-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-z2-force",
     "storage": "64 GB",
-    "basePrice": 1687,
+    "basePrice": 1704,
     "active": true,
     "ram": "6 GB"
   },
@@ -36587,7 +36587,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g6-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g6",
     "storage": "64 GB",
-    "basePrice": 1707,
+    "basePrice": 1724,
     "active": true,
     "ram": "4 GB"
   },
@@ -36595,7 +36595,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g7-power-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g7-power",
     "storage": "64 GB",
-    "basePrice": 1990,
+    "basePrice": 2010,
     "active": true,
     "ram": "4 GB"
   },
@@ -36603,7 +36603,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g7-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g7",
     "storage": "64 GB",
-    "basePrice": 1757,
+    "basePrice": 1775,
     "active": true,
     "ram": "4 GB"
   },
@@ -36611,7 +36611,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-one-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-one",
     "storage": "64 GB",
-    "basePrice": 1990,
+    "basePrice": 2010,
     "active": true,
     "ram": "4 GB"
   },
@@ -36619,7 +36619,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-one-vision-128-gb-4-gb",
     "modelId": "m-motorola-motorola-one-vision",
     "storage": "128 GB",
-    "basePrice": 2222,
+    "basePrice": 2244,
     "active": true,
     "ram": "4 GB"
   },
@@ -36627,7 +36627,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-one-action-128-gb-4-gb",
     "modelId": "m-motorola-motorola-one-action",
     "storage": "128 GB",
-    "basePrice": 2565,
+    "basePrice": 2591,
     "active": true,
     "ram": "4 GB"
   },
@@ -36635,7 +36635,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e6s-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e6s",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "4 GB"
   },
@@ -36643,7 +36643,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-one-macro-64-gb-4-gb",
     "modelId": "m-motorola-motorola-one-macro",
     "storage": "64 GB",
-    "basePrice": 1990,
+    "basePrice": 2010,
     "active": true,
     "ram": "4 GB"
   },
@@ -36651,7 +36651,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-plus-256-gb-12-gb",
     "modelId": "m-motorola-motorola-moto-edge-plus",
     "storage": "256 GB",
-    "basePrice": 8030,
+    "basePrice": 8110,
     "active": true,
     "ram": "12 GB"
   },
@@ -36659,7 +36659,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g8-power-lite-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g8-power-lite",
     "storage": "64 GB",
-    "basePrice": 2717,
+    "basePrice": 2744,
     "active": true,
     "ram": "4 GB"
   },
@@ -36667,7 +36667,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-razr-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-razr",
     "storage": "128 GB",
-    "basePrice": 9565,
+    "basePrice": 9661,
     "active": true,
     "ram": "6 GB"
   },
@@ -36675,7 +36675,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-one-fusion-plus-128-gb-6-gb",
     "modelId": "m-motorola-motorola-one-fusion-plus",
     "storage": "128 GB",
-    "basePrice": 4646,
+    "basePrice": 4692,
     "active": true,
     "ram": "6 GB"
   },
@@ -36683,7 +36683,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g9-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g9",
     "storage": "64 GB",
-    "basePrice": 2788,
+    "basePrice": 2816,
     "active": true,
     "ram": "4 GB"
   },
@@ -36691,7 +36691,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e7-plus-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e7-plus",
     "storage": "64 GB",
-    "basePrice": 2676,
+    "basePrice": 2703,
     "active": true,
     "ram": "4 GB"
   },
@@ -36699,7 +36699,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-razr-5g-256-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-razr-5g",
     "storage": "256 GB",
-    "basePrice": 12999,
+    "basePrice": 13129,
     "active": true,
     "ram": "8 GB"
   },
@@ -36707,7 +36707,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g9-power-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g9-power",
     "storage": "64 GB",
-    "basePrice": 2868,
+    "basePrice": 2897,
     "active": true,
     "ram": "4 GB"
   },
@@ -36715,7 +36715,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g-5g-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g-5g",
     "storage": "128 GB",
-    "basePrice": 5010,
+    "basePrice": 5060,
     "active": true,
     "ram": "6 GB"
   },
@@ -36723,7 +36723,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g30-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g30",
     "storage": "64 GB",
-    "basePrice": 3212,
+    "basePrice": 3244,
     "active": true,
     "ram": "4 GB"
   },
@@ -36731,7 +36731,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g10-power-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g10-power",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3091,
     "active": true,
     "ram": "4 GB"
   },
@@ -36739,7 +36739,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e7-power-32-gb-2-gb",
     "modelId": "m-motorola-motorola-moto-e7-power",
     "storage": "32 GB",
-    "basePrice": 2222,
+    "basePrice": 2244,
     "active": true,
     "ram": "2 GB"
   },
@@ -36747,7 +36747,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e7-power-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e7-power",
     "storage": "64 GB",
-    "basePrice": 2636,
+    "basePrice": 2737,
     "active": true,
     "ram": "4 GB"
   },
@@ -36755,7 +36755,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g60-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g60",
     "storage": "128 GB",
-    "basePrice": 5474,
+    "basePrice": 5529,
     "active": true,
     "ram": "6 GB"
   },
@@ -36763,7 +36763,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-20-pro-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-20-pro",
     "storage": "128 GB",
-    "basePrice": 7878,
+    "basePrice": 7957,
     "active": true,
     "ram": "8 GB"
   },
@@ -36771,7 +36771,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g40-fusion-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g40-fusion",
     "storage": "64 GB",
-    "basePrice": 4131,
+    "basePrice": 4172,
     "active": true,
     "ram": "4 GB"
   },
@@ -36779,7 +36779,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g40-fusion-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g40-fusion",
     "storage": "128 GB",
-    "basePrice": 5353,
+    "basePrice": 5484,
     "active": true,
     "ram": "6 GB"
   },
@@ -36795,7 +36795,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-20-fusion-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-20-fusion",
     "storage": "128 GB",
-    "basePrice": 6918,
+    "basePrice": 6763,
     "active": true,
     "ram": "8 GB"
   },
@@ -36803,7 +36803,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-20-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-20",
     "storage": "128 GB",
-    "basePrice": 6959,
+    "basePrice": 7029,
     "active": true,
     "ram": "8 GB"
   },
@@ -36811,7 +36811,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g31-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g31",
     "storage": "64 GB",
-    "basePrice": 3868,
+    "basePrice": 3907,
     "active": true,
     "ram": "4 GB"
   },
@@ -36827,7 +36827,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g51-5g-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g51-5g",
     "storage": "64 GB",
-    "basePrice": 5393,
+    "basePrice": 5447,
     "active": true,
     "ram": "4 GB"
   },
@@ -36835,7 +36835,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e40-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e40",
     "storage": "64 GB",
-    "basePrice": 3596,
+    "basePrice": 3632,
     "active": true,
     "ram": "4 GB"
   },
@@ -36843,7 +36843,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-pro-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-30-pro",
     "storage": "128 GB",
-    "basePrice": 9100,
+    "basePrice": 9191,
     "active": true,
     "ram": "8 GB"
   },
@@ -36851,7 +36851,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-edge-30",
     "storage": "128 GB",
-    "basePrice": 8565,
+    "basePrice": 8686,
     "active": true,
     "ram": "6 GB"
   },
@@ -36859,7 +36859,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-30",
     "storage": "128 GB",
-    "basePrice": 9353,
+    "basePrice": 8651,
     "active": true,
     "ram": "8 GB"
   },
@@ -36867,7 +36867,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g52-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g52",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 3978,
     "active": true,
     "ram": "4 GB"
   },
@@ -36883,7 +36883,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g71-5g-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g71-5g",
     "storage": "128 GB",
-    "basePrice": 6989,
+    "basePrice": 7059,
     "active": true,
     "ram": "6 GB"
   },
@@ -36891,7 +36891,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g82-5g-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g82-5g",
     "storage": "128 GB",
-    "basePrice": 7232,
+    "basePrice": 7343,
     "active": true,
     "ram": "6 GB"
   },
@@ -36899,7 +36899,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g82-5g-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-g82-5g",
     "storage": "128 GB",
-    "basePrice": 7989,
+    "basePrice": 7304,
     "active": true,
     "ram": "8 GB"
   },
@@ -36907,7 +36907,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g22-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g22",
     "storage": "64 GB",
-    "basePrice": 3788,
+    "basePrice": 3826,
     "active": true,
     "ram": "4 GB"
   },
@@ -36915,7 +36915,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g42-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g42",
     "storage": "64 GB",
-    "basePrice": 3484,
+    "basePrice": 3519,
     "active": true,
     "ram": "4 GB"
   },
@@ -36923,7 +36923,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g32-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-g32",
     "storage": "64 GB",
-    "basePrice": 4131,
+    "basePrice": 4172,
     "active": true,
     "ram": "4 GB"
   },
@@ -36931,7 +36931,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g32-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-g32",
     "storage": "128 GB",
-    "basePrice": 4818,
+    "basePrice": 4866,
     "active": true,
     "ram": "8 GB"
   },
@@ -36939,7 +36939,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-fusion-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-30-fusion",
     "storage": "128 GB",
-    "basePrice": 10130,
+    "basePrice": 10231,
     "active": true,
     "ram": "8 GB"
   },
@@ -36947,7 +36947,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-ultra-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-edge-30-ultra",
     "storage": "128 GB",
-    "basePrice": 12625,
+    "basePrice": 12751,
     "active": true,
     "ram": "8 GB"
   },
@@ -36955,7 +36955,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-edge-30-ultra-256-gb-12-gb",
     "modelId": "m-motorola-motorola-moto-edge-30-ultra",
     "storage": "256 GB",
-    "basePrice": 13231,
+    "basePrice": 13363,
     "active": true,
     "ram": "12 GB"
   },
@@ -36963,7 +36963,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g72-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g72",
     "storage": "128 GB",
-    "basePrice": 4969,
+    "basePrice": 5019,
     "active": true,
     "ram": "6 GB"
   },
@@ -36971,7 +36971,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g62-5g-128-gb-6-gb",
     "modelId": "m-motorola-motorola-moto-g62-5g",
     "storage": "128 GB",
-    "basePrice": 6767,
+    "basePrice": 6838,
     "active": true,
     "ram": "6 GB"
   },
@@ -36979,7 +36979,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g62-5g-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-g62-5g",
     "storage": "128 GB",
-    "basePrice": 7110,
+    "basePrice": 6835,
     "active": true,
     "ram": "8 GB"
   },
@@ -36995,7 +36995,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e32s-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e32s",
     "storage": "64 GB",
-    "basePrice": 2909,
+    "basePrice": 2938,
     "active": true,
     "ram": "4 GB"
   },
@@ -37011,7 +37011,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e13-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e13",
     "storage": "64 GB",
-    "basePrice": 4262,
+    "basePrice": 3868,
     "active": true,
     "ram": "4 GB"
   },
@@ -37019,7 +37019,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e13-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-e13",
     "storage": "128 GB",
-    "basePrice": 4505,
+    "basePrice": 4550,
     "active": true,
     "ram": "8 GB"
   },
@@ -37027,7 +37027,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e32-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e32",
     "storage": "64 GB",
-    "basePrice": 3171,
+    "basePrice": 3203,
     "active": true,
     "ram": "4 GB"
   },
@@ -37035,7 +37035,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-g73-5g-128-gb-8-gb",
     "modelId": "m-motorola-motorola-moto-g73-5g",
     "storage": "128 GB",
-    "basePrice": 7898,
+    "basePrice": 7977,
     "active": true,
     "ram": "8 GB"
   },
@@ -37043,7 +37043,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-motorola-motorola-moto-e22s-64-gb-4-gb",
     "modelId": "m-motorola-motorola-moto-e22s",
     "storage": "64 GB",
-    "basePrice": 3232,
+    "basePrice": 3264,
     "active": true,
     "ram": "4 GB"
   },
@@ -37051,7 +37051,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-61-plus-64-gb-4-gb",
     "modelId": "m-nokia-nokia-61-plus",
     "storage": "64 GB",
-    "basePrice": 2283,
+    "basePrice": 2404,
     "active": true,
     "ram": "4 GB"
   },
@@ -37075,7 +37075,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-51-plus-64-gb-4-gb",
     "modelId": "m-nokia-nokia-51-plus",
     "storage": "64 GB",
-    "basePrice": 2151,
+    "basePrice": 2414,
     "active": true,
     "ram": "4 GB"
   },
@@ -37091,7 +37091,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-8-sirocco-128-gb-6-gb",
     "modelId": "m-nokia-nokia-8-sirocco",
     "storage": "128 GB",
-    "basePrice": 3747,
+    "basePrice": 3784,
     "active": true,
     "ram": "6 GB"
   },
@@ -37099,7 +37099,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-7-plus-64-gb-4-gb",
     "modelId": "m-nokia-nokia-7-plus",
     "storage": "64 GB",
-    "basePrice": 2172,
+    "basePrice": 2194,
     "active": true,
     "ram": "4 GB"
   },
@@ -37107,7 +37107,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-81-64-gb-4-gb",
     "modelId": "m-nokia-nokia-81",
     "storage": "64 GB",
-    "basePrice": 2252,
+    "basePrice": 2275,
     "active": true,
     "ram": "4 GB"
   },
@@ -37123,7 +37123,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-71-64-gb-4-gb",
     "modelId": "m-nokia-nokia-71",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "4 GB"
   },
@@ -37147,7 +37147,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-42-32-gb-3-gb",
     "modelId": "m-nokia-nokia-42",
     "storage": "32 GB",
-    "basePrice": 1687,
+    "basePrice": 1704,
     "active": true,
     "ram": "3 GB"
   },
@@ -37171,7 +37171,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-72-64-gb-4-gb",
     "modelId": "m-nokia-nokia-72",
     "storage": "64 GB",
-    "basePrice": 2323,
+    "basePrice": 2737,
     "active": true,
     "ram": "4 GB"
   },
@@ -37187,7 +37187,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-62-64-gb-4-gb",
     "modelId": "m-nokia-nokia-62",
     "storage": "64 GB",
-    "basePrice": 2212,
+    "basePrice": 2234,
     "active": true,
     "ram": "4 GB"
   },
@@ -37195,7 +37195,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-53-64-gb-4-gb",
     "modelId": "m-nokia-nokia-53",
     "storage": "64 GB",
-    "basePrice": 2929,
+    "basePrice": 3101,
     "active": true,
     "ram": "4 GB"
   },
@@ -37211,7 +37211,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-24-64-gb-3-gb",
     "modelId": "m-nokia-nokia-24",
     "storage": "64 GB",
-    "basePrice": 2323,
+    "basePrice": 2346,
     "active": true,
     "ram": "3 GB"
   },
@@ -37219,7 +37219,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-34-64-gb-4-gb",
     "modelId": "m-nokia-nokia-34",
     "storage": "64 GB",
-    "basePrice": 2404,
+    "basePrice": 2428,
     "active": true,
     "ram": "4 GB"
   },
@@ -37227,7 +37227,7 @@ const MOBILE_VARIANTS_PART_2: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-54-64-gb-4-gb",
     "modelId": "m-nokia-nokia-54",
     "storage": "64 GB",
-    "basePrice": 2666,
+    "basePrice": 3111,
     "active": true,
     "ram": "4 GB"
   },
@@ -37246,7 +37246,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-g20-64-gb-4-gb",
     "modelId": "m-nokia-nokia-g20",
     "storage": "64 GB",
-    "basePrice": 2737,
+    "basePrice": 2764,
     "active": true,
     "ram": "4 GB"
   },
@@ -37254,7 +37254,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c20-plus-32-gb-2-gb",
     "modelId": "m-nokia-nokia-c20-plus",
     "storage": "32 GB",
-    "basePrice": 1687,
+    "basePrice": 1949,
     "active": true,
     "ram": "2 GB"
   },
@@ -37284,7 +37284,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-g10-64-gb-4-gb",
     "modelId": "m-nokia-nokia-g10",
     "storage": "64 GB",
-    "basePrice": 2535,
+    "basePrice": 2560,
     "active": true,
     "ram": "4 GB"
   },
@@ -37300,7 +37300,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c30-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c30",
     "storage": "64 GB",
-    "basePrice": 2545,
+    "basePrice": 2570,
     "active": true,
     "ram": "4 GB"
   },
@@ -37308,7 +37308,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-xr20-128-gb-6-gb",
     "modelId": "m-nokia-nokia-xr20",
     "storage": "128 GB",
-    "basePrice": 7009,
+    "basePrice": 7079,
     "active": true,
     "ram": "6 GB"
   },
@@ -37316,7 +37316,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-g21-64-gb-4-gb",
     "modelId": "m-nokia-nokia-g21",
     "storage": "64 GB",
-    "basePrice": 2778,
+    "basePrice": 2806,
     "active": true,
     "ram": "4 GB"
   },
@@ -37340,7 +37340,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c21-plus-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c21-plus",
     "storage": "64 GB",
-    "basePrice": 2697,
+    "basePrice": 2724,
     "active": true,
     "ram": "4 GB"
   },
@@ -37348,7 +37348,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-g60-5g-128-gb-6-gb",
     "modelId": "m-nokia-nokia-g60-5g",
     "storage": "128 GB",
-    "basePrice": 6373,
+    "basePrice": 6437,
     "active": true,
     "ram": "6 GB"
   },
@@ -37356,7 +37356,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c12-64-gb-2-gb",
     "modelId": "m-nokia-nokia-c12",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "2 GB"
   },
@@ -37364,7 +37364,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-x30-5g-256-gb-8-gb",
     "modelId": "m-nokia-nokia-x30-5g",
     "storage": "256 GB",
-    "basePrice": 7868,
+    "basePrice": 7947,
     "active": true,
     "ram": "8 GB"
   },
@@ -37388,7 +37388,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c12-pro-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c12-pro",
     "storage": "64 GB",
-    "basePrice": 2474,
+    "basePrice": 2323,
     "active": true,
     "ram": "4 GB"
   },
@@ -37404,7 +37404,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c31-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c31",
     "storage": "64 GB",
-    "basePrice": 2626,
+    "basePrice": 2652,
     "active": true,
     "ram": "4 GB"
   },
@@ -37412,7 +37412,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c32-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c32",
     "storage": "64 GB",
-    "basePrice": 2404,
+    "basePrice": 2428,
     "active": true,
     "ram": "4 GB"
   },
@@ -37444,7 +37444,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-c22-64-gb-4-gb",
     "modelId": "m-nokia-nokia-c22",
     "storage": "64 GB",
-    "basePrice": 2404,
+    "basePrice": 2990,
     "active": true,
     "ram": "4 GB"
   },
@@ -37484,7 +37484,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nokia-nokia-g11-plus-64-gb-4-gb",
     "modelId": "m-nokia-nokia-g11-plus",
     "storage": "64 GB",
-    "basePrice": 2626,
+    "basePrice": 2652,
     "active": true,
     "ram": "4 GB"
   },
@@ -37492,7 +37492,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-1-128-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-1",
     "storage": "128 GB",
-    "basePrice": 12938,
+    "basePrice": 13067,
     "active": true,
     "ram": "8 GB"
   },
@@ -37540,7 +37540,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-2a-5g-128-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-2a-5g",
     "storage": "128 GB",
-    "basePrice": 16554,
+    "basePrice": 16720,
     "active": true,
     "ram": "8 GB"
   },
@@ -37572,7 +37572,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-cmf-by-nothing-phone-1-128-gb-8-gb",
     "modelId": "m-nothing-cmf-by-nothing-phone-1",
     "storage": "128 GB",
-    "basePrice": 11544,
+    "basePrice": 10711,
     "active": true,
     "ram": "8 GB"
   },
@@ -37610,7 +37610,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-3a-pro-128-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-3a-pro",
     "storage": "128 GB",
-    "basePrice": 20230,
+    "basePrice": 20432,
     "active": true,
     "ram": "8 GB"
   },
@@ -37634,7 +37634,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-cmf-by-nothing-phone-2-pro-128-gb",
     "modelId": "m-nothing-cmf-by-nothing-phone-2-pro",
     "storage": "128 GB",
-    "basePrice": 13988,
+    "basePrice": 14128,
     "active": true
   },
   {
@@ -37664,21 +37664,21 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-3a-lite-128-gb",
     "modelId": "m-nothing-nothing-phone-3a-lite",
     "storage": "128 GB",
-    "basePrice": 14928,
+    "basePrice": 15241,
     "active": true
   },
   {
     "id": "v-m-nothing-nothing-phone-3a-lite-256-gb",
     "modelId": "m-nothing-nothing-phone-3a-lite",
     "storage": "256 GB",
-    "basePrice": 15433,
+    "basePrice": 15766,
     "active": true
   },
   {
     "id": "v-m-nothing-nothing-phone-4a-128-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-4a",
     "storage": "128 GB",
-    "basePrice": 24745,
+    "basePrice": 24992,
     "active": true,
     "ram": "8 GB"
   },
@@ -37686,7 +37686,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-4a-256-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-4a",
     "storage": "256 GB",
-    "basePrice": 26351,
+    "basePrice": 26765,
     "active": true,
     "ram": "8 GB"
   },
@@ -37702,7 +37702,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-nothing-nothing-phone-4a-pro-128-gb-8-gb",
     "modelId": "m-nothing-nothing-phone-4a-pro",
     "storage": "128 GB",
-    "basePrice": 28785,
+    "basePrice": 29073,
     "active": true,
     "ram": "8 GB"
   },
@@ -37726,7 +37726,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6t-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-6t",
     "storage": "128 GB",
-    "basePrice": 6108,
+    "basePrice": 5100,
     "active": true,
     "ram": "6 GB"
   },
@@ -37734,7 +37734,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6t-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-6t",
     "storage": "128 GB",
-    "basePrice": 6840,
+    "basePrice": 8059,
     "active": true,
     "ram": "8 GB"
   },
@@ -37742,7 +37742,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6t-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-6t",
     "storage": "256 GB",
-    "basePrice": 6944,
+    "basePrice": 5848,
     "active": true,
     "ram": "8 GB"
   },
@@ -37750,7 +37750,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6-64-gb-6-gb",
     "modelId": "m-oneplus-oneplus-6",
     "storage": "64 GB",
-    "basePrice": 5049,
+    "basePrice": 4070,
     "active": true,
     "ram": "6 GB"
   },
@@ -37758,7 +37758,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-6",
     "storage": "128 GB",
-    "basePrice": 5234,
+    "basePrice": 4262,
     "active": true,
     "ram": "8 GB"
   },
@@ -37766,7 +37766,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-6",
     "storage": "256 GB",
-    "basePrice": 5330,
+    "basePrice": 4363,
     "active": true,
     "ram": "8 GB"
   },
@@ -37774,7 +37774,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-5t-64-gb-6-gb",
     "modelId": "m-oneplus-oneplus-5t",
     "storage": "64 GB",
-    "basePrice": 3596,
+    "basePrice": 2596,
     "active": true,
     "ram": "6 GB"
   },
@@ -37782,7 +37782,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-5t-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-5t",
     "storage": "128 GB",
-    "basePrice": 3819,
+    "basePrice": 5305,
     "active": true,
     "ram": "8 GB"
   },
@@ -37790,7 +37790,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-5-64-gb-6-gb",
     "modelId": "m-oneplus-oneplus-5",
     "storage": "64 GB",
-    "basePrice": 3301,
+    "basePrice": 2444,
     "active": true,
     "ram": "6 GB"
   },
@@ -37798,7 +37798,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-5-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-5",
     "storage": "128 GB",
-    "basePrice": 3700,
+    "basePrice": 5203,
     "active": true,
     "ram": "8 GB"
   },
@@ -37806,7 +37806,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-3t-64-gb",
     "modelId": "m-oneplus-oneplus-3t",
     "storage": "64 GB",
-    "basePrice": 1798,
+    "basePrice": 1879,
     "active": true
   },
   {
@@ -37820,7 +37820,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-3-64-gb-6-gb",
     "modelId": "m-oneplus-oneplus-3",
     "storage": "64 GB",
-    "basePrice": 1646,
+    "basePrice": 1662,
     "active": true,
     "ram": "6 GB"
   },
@@ -37828,7 +37828,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-6t-mclaren-256-gb-10-gb",
     "modelId": "m-oneplus-oneplus-6t-mclaren",
     "storage": "256 GB",
-    "basePrice": 5777,
+    "basePrice": 5835,
     "active": true,
     "ram": "10 GB"
   },
@@ -37836,7 +37836,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-7",
     "storage": "128 GB",
-    "basePrice": 6978,
+    "basePrice": 5929,
     "active": true,
     "ram": "6 GB"
   },
@@ -37844,7 +37844,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-7",
     "storage": "256 GB",
-    "basePrice": 7666,
+    "basePrice": 6403,
     "active": true,
     "ram": "8 GB"
   },
@@ -37852,7 +37852,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7-pro-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-7-pro",
     "storage": "128 GB",
-    "basePrice": 9224,
+    "basePrice": 7646,
     "active": true,
     "ram": "6 GB"
   },
@@ -37860,7 +37860,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7-pro-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-7-pro",
     "storage": "256 GB",
-    "basePrice": 10022,
+    "basePrice": 8343,
     "active": true,
     "ram": "8 GB"
   },
@@ -37868,7 +37868,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7-pro-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-7-pro",
     "storage": "256 GB",
-    "basePrice": 10156,
+    "basePrice": 8413,
     "active": true,
     "ram": "12 GB"
   },
@@ -37876,21 +37876,21 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7t-128-gb",
     "modelId": "m-oneplus-oneplus-7t",
     "storage": "128 GB",
-    "basePrice": 6656,
+    "basePrice": 6767,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-7t-256-gb",
     "modelId": "m-oneplus-oneplus-7t",
     "storage": "256 GB",
-    "basePrice": 7110,
+    "basePrice": 7201,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-7t-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-7t",
     "storage": "256 GB",
-    "basePrice": 7110,
+    "basePrice": 7201,
     "active": true,
     "ram": "8 GB"
   },
@@ -37898,7 +37898,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7t-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-7t",
     "storage": "128 GB",
-    "basePrice": 6656,
+    "basePrice": 6767,
     "active": true,
     "ram": "8 GB"
   },
@@ -37906,7 +37906,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7t-pro-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-7t-pro",
     "storage": "256 GB",
-    "basePrice": 10060,
+    "basePrice": 8464,
     "active": true,
     "ram": "8 GB"
   },
@@ -37914,7 +37914,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7t-pro-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-7t-pro",
     "storage": "256 GB",
-    "basePrice": 10450,
+    "basePrice": 8686,
     "active": true,
     "ram": "12 GB"
   },
@@ -37922,7 +37922,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-8",
     "storage": "128 GB",
-    "basePrice": 11671,
+    "basePrice": 10090,
     "active": true,
     "ram": "6 GB"
   },
@@ -37930,7 +37930,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-8",
     "storage": "128 GB",
-    "basePrice": 12326,
+    "basePrice": 15097,
     "active": true,
     "ram": "8 GB"
   },
@@ -37938,7 +37938,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-8",
     "storage": "256 GB",
-    "basePrice": 12778,
+    "basePrice": 10827,
     "active": true,
     "ram": "12 GB"
   },
@@ -37946,7 +37946,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8-pro-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-8-pro",
     "storage": "256 GB",
-    "basePrice": 14924,
+    "basePrice": 12544,
     "active": true,
     "ram": "12 GB"
   },
@@ -37954,7 +37954,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8-pro-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-8-pro",
     "storage": "128 GB",
-    "basePrice": 14293,
+    "basePrice": 18872,
     "active": true,
     "ram": "8 GB"
   },
@@ -37962,7 +37962,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-7t-pro-mclaren-edition-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-7t-pro-mclaren-edition",
     "storage": "256 GB",
-    "basePrice": 9181,
+    "basePrice": 9273,
     "active": true,
     "ram": "12 GB"
   },
@@ -37970,7 +37970,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-64-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord",
     "storage": "64 GB",
-    "basePrice": 7804,
+    "basePrice": 7110,
     "active": true,
     "ram": "6 GB"
   },
@@ -37978,7 +37978,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord",
     "storage": "128 GB",
-    "basePrice": 8745,
+    "basePrice": 12352,
     "active": true,
     "ram": "8 GB"
   },
@@ -37986,7 +37986,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord",
     "storage": "256 GB",
-    "basePrice": 9234,
+    "basePrice": 9181,
     "active": true,
     "ram": "12 GB"
   },
@@ -37994,7 +37994,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8t-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-8t",
     "storage": "128 GB",
-    "basePrice": 11566,
+    "basePrice": 14791,
     "active": true,
     "ram": "8 GB"
   },
@@ -38002,7 +38002,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-8t-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-8t",
     "storage": "256 GB",
-    "basePrice": 12127,
+    "basePrice": 10635,
     "active": true,
     "ram": "12 GB"
   },
@@ -38010,7 +38010,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-9-5g",
     "storage": "128 GB",
-    "basePrice": 11291,
+    "basePrice": 14281,
     "active": true,
     "ram": "8 GB"
   },
@@ -38018,7 +38018,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-9-5g",
     "storage": "256 GB",
-    "basePrice": 12127,
+    "basePrice": 10746,
     "active": true,
     "ram": "12 GB"
   },
@@ -38026,7 +38026,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9r-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-9r-5g",
     "storage": "128 GB",
-    "basePrice": 11428,
+    "basePrice": 14689,
     "active": true,
     "ram": "8 GB"
   },
@@ -38034,7 +38034,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9r-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-9r-5g",
     "storage": "256 GB",
-    "basePrice": 12112,
+    "basePrice": 10554,
     "active": true,
     "ram": "12 GB"
   },
@@ -38042,7 +38042,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9-pro-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-9-pro-5g",
     "storage": "128 GB",
-    "basePrice": 13761,
+    "basePrice": 17342,
     "active": true,
     "ram": "8 GB"
   },
@@ -38050,7 +38050,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9-pro-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-9-pro-5g",
     "storage": "256 GB",
-    "basePrice": 14663,
+    "basePrice": 18362,
     "active": true,
     "ram": "12 GB"
   },
@@ -38058,7 +38058,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5g-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5g",
     "storage": "128 GB",
-    "basePrice": 8697,
+    "basePrice": 7494,
     "active": true,
     "ram": "6 GB"
   },
@@ -38066,7 +38066,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5g",
     "storage": "128 GB",
-    "basePrice": 9101,
+    "basePrice": 11221,
     "active": true,
     "ram": "8 GB"
   },
@@ -38074,7 +38074,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5g",
     "storage": "256 GB",
-    "basePrice": 9604,
+    "basePrice": 8504,
     "active": true,
     "ram": "12 GB"
   },
@@ -38082,7 +38082,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-2-5g-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord-2-5g",
     "storage": "128 GB",
-    "basePrice": 9875,
+    "basePrice": 9040,
     "active": true,
     "ram": "6 GB"
   },
@@ -38090,7 +38090,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-2-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-2-5g",
     "storage": "128 GB",
-    "basePrice": 10270,
+    "basePrice": 12241,
     "active": true,
     "ram": "8 GB"
   },
@@ -38098,7 +38098,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-2-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-2-5g",
     "storage": "256 GB",
-    "basePrice": 10759,
+    "basePrice": 10423,
     "active": true,
     "ram": "12 GB"
   },
@@ -38106,7 +38106,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9rt-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-9rt-5g",
     "storage": "128 GB",
-    "basePrice": 11946,
+    "basePrice": 15302,
     "active": true,
     "ram": "8 GB"
   },
@@ -38114,7 +38114,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-9rt-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-9rt-5g",
     "storage": "256 GB",
-    "basePrice": 13138,
+    "basePrice": 11999,
     "active": true,
     "ram": "12 GB"
   },
@@ -38122,7 +38122,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-2-5g-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-2-5g",
     "storage": "128 GB",
-    "basePrice": 9908,
+    "basePrice": 9151,
     "active": true,
     "ram": "6 GB"
   },
@@ -38130,7 +38130,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-2-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-2-5g",
     "storage": "128 GB",
-    "basePrice": 10526,
+    "basePrice": 12241,
     "active": true,
     "ram": "8 GB"
   },
@@ -38138,7 +38138,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10-pro-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-10-pro-5g",
     "storage": "128 GB",
-    "basePrice": 15632,
+    "basePrice": 20198,
     "active": true,
     "ram": "8 GB"
   },
@@ -38146,7 +38146,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10-pro-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-10-pro-5g",
     "storage": "256 GB",
-    "basePrice": 17604,
+    "basePrice": 15342,
     "active": true,
     "ram": "12 GB"
   },
@@ -38154,7 +38154,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-2-lite-5g-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-2-lite-5g",
     "storage": "128 GB",
-    "basePrice": 8930,
+    "basePrice": 8070,
     "active": true,
     "ram": "6 GB"
   },
@@ -38162,7 +38162,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-2-lite-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-2-lite-5g",
     "storage": "128 GB",
-    "basePrice": 9490,
+    "basePrice": 11221,
     "active": true,
     "ram": "8 GB"
   },
@@ -38170,7 +38170,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10r-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-10r-5g",
     "storage": "128 GB",
-    "basePrice": 11932,
+    "basePrice": 15097,
     "active": true,
     "ram": "8 GB"
   },
@@ -38178,7 +38178,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10r-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-10r-5g",
     "storage": "256 GB",
-    "basePrice": 12673,
+    "basePrice": 11160,
     "active": true,
     "ram": "12 GB"
   },
@@ -38186,7 +38186,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-2t-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-2t-5g",
     "storage": "128 GB",
-    "basePrice": 10673,
+    "basePrice": 13261,
     "active": true,
     "ram": "8 GB"
   },
@@ -38194,7 +38194,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-2t-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-2t-5g",
     "storage": "256 GB",
-    "basePrice": 11638,
+    "basePrice": 10595,
     "active": true,
     "ram": "12 GB"
   },
@@ -38202,7 +38202,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10t-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-10t-5g",
     "storage": "128 GB",
-    "basePrice": 15552,
+    "basePrice": 19688,
     "active": true,
     "ram": "8 GB"
   },
@@ -38210,7 +38210,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10t-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-10t-5g",
     "storage": "256 GB",
-    "basePrice": 17034,
+    "basePrice": 15200,
     "active": true,
     "ram": "12 GB"
   },
@@ -38218,7 +38218,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-10t-5g-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-10t-5g",
     "storage": "256 GB",
-    "basePrice": 17832,
+    "basePrice": 15867,
     "active": true,
     "ram": "16 GB"
   },
@@ -38226,7 +38226,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-11-5g",
     "storage": "128 GB",
-    "basePrice": 22430,
+    "basePrice": 23462,
     "active": true,
     "ram": "8 GB"
   },
@@ -38234,7 +38234,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11-5g-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-11-5g",
     "storage": "256 GB",
-    "basePrice": 24990,
+    "basePrice": 25502,
     "active": true,
     "ram": "16 GB"
   },
@@ -38242,7 +38242,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11-5g-marble-edition-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-11-5g-marble-edition",
     "storage": "256 GB",
-    "basePrice": 26896,
+    "basePrice": 27165,
     "active": true,
     "ram": "16 GB"
   },
@@ -38274,7 +38274,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-3-lite-5g-128-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-3-lite-5g",
     "storage": "128 GB",
-    "basePrice": 12150,
+    "basePrice": 12352,
     "active": true
   },
   {
@@ -38296,7 +38296,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-3-lite-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-3-lite-5g",
     "storage": "128 GB",
-    "basePrice": 12150,
+    "basePrice": 12352,
     "active": true,
     "ram": "8 GB"
   },
@@ -38304,7 +38304,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-3-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-3-5g",
     "storage": "128 GB",
-    "basePrice": 14840,
+    "basePrice": 15506,
     "active": true,
     "ram": "8 GB"
   },
@@ -38312,7 +38312,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-3-5g-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-nord-3-5g",
     "storage": "256 GB",
-    "basePrice": 15120,
+    "basePrice": 15463,
     "active": true,
     "ram": "16 GB"
   },
@@ -38320,7 +38320,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-3-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-3-5g",
     "storage": "128 GB",
-    "basePrice": 13900,
+    "basePrice": 14455,
     "active": true,
     "ram": "8 GB"
   },
@@ -38328,7 +38328,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-3-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-3-5g",
     "storage": "256 GB",
-    "basePrice": 14800,
+    "basePrice": 15231,
     "active": true,
     "ram": "12 GB"
   },
@@ -38336,7 +38336,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-open-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-open",
     "storage": "512 GB",
-    "basePrice": 53399,
+    "basePrice": 53933,
     "active": true,
     "ram": "16 GB"
   },
@@ -38344,7 +38344,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-open-1-tb-16-gb",
     "modelId": "m-oneplus-oneplus-open",
     "storage": "1 TB",
-    "basePrice": 60600,
+    "basePrice": 61206,
     "active": true,
     "ram": "16 GB"
   },
@@ -38352,7 +38352,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-12-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-12",
     "storage": "256 GB",
-    "basePrice": 33610,
+    "basePrice": 34370,
     "active": true,
     "ram": "12 GB"
   },
@@ -38360,7 +38360,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-12-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-12",
     "storage": "512 GB",
-    "basePrice": 37800,
+    "basePrice": 38612,
     "active": true,
     "ram": "16 GB"
   },
@@ -38368,7 +38368,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-12r-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-12r",
     "storage": "128 GB",
-    "basePrice": 24800,
+    "basePrice": 25298,
     "active": true,
     "ram": "8 GB"
   },
@@ -38376,7 +38376,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-12r-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-12r",
     "storage": "256 GB",
-    "basePrice": 26300,
+    "basePrice": 27088,
     "active": true,
     "ram": "8 GB"
   },
@@ -38384,7 +38384,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-12r-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-12r",
     "storage": "256 GB",
-    "basePrice": 26700,
+    "basePrice": 27230,
     "active": true,
     "ram": "16 GB"
   },
@@ -38392,35 +38392,35 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce4-5g-128-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-5g",
     "storage": "128 GB",
-    "basePrice": 14786,
+    "basePrice": 14934,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce4-5g-256-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-5g",
     "storage": "256 GB",
-    "basePrice": 16362,
+    "basePrice": 16526,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce4-lite-5g-128-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-lite-5g",
     "storage": "128 GB",
-    "basePrice": 13675,
+    "basePrice": 13812,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce4-lite-5g-256-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-lite-5g",
     "storage": "256 GB",
-    "basePrice": 14019,
+    "basePrice": 14159,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce4-lite-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-lite-5g",
     "storage": "128 GB",
-    "basePrice": 13675,
+    "basePrice": 13812,
     "active": true,
     "ram": "8 GB"
   },
@@ -38428,7 +38428,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce4-lite-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4-lite-5g",
     "storage": "256 GB",
-    "basePrice": 14019,
+    "basePrice": 14159,
     "active": true,
     "ram": "8 GB"
   },
@@ -38436,7 +38436,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-4-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-4",
     "storage": "128 GB",
-    "basePrice": 18109,
+    "basePrice": 18290,
     "active": true,
     "ram": "8 GB"
   },
@@ -38444,7 +38444,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-4-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-4",
     "storage": "256 GB",
-    "basePrice": 20170,
+    "basePrice": 20362,
     "active": true,
     "ram": "8 GB"
   },
@@ -38460,7 +38460,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-13",
     "storage": "256 GB",
-    "basePrice": 41612,
+    "basePrice": 41844,
     "active": true,
     "ram": "12 GB"
   },
@@ -38514,7 +38514,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-5",
     "storage": "256 GB",
-    "basePrice": 23533,
+    "basePrice": 23786,
     "active": true,
     "ram": "8 GB"
   },
@@ -38530,7 +38530,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-512-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-5",
     "storage": "512 GB",
-    "basePrice": 26260,
+    "basePrice": 26523,
     "active": true,
     "ram": "12 GB"
   },
@@ -38538,7 +38538,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5",
     "storage": "128 GB",
-    "basePrice": 17978,
+    "basePrice": 18158,
     "active": true,
     "ram": "8 GB"
   },
@@ -38546,7 +38546,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5",
     "storage": "256 GB",
-    "basePrice": 19089,
+    "basePrice": 19280,
     "active": true,
     "ram": "8 GB"
   },
@@ -38554,7 +38554,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-5-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-5",
     "storage": "256 GB",
-    "basePrice": 19544,
+    "basePrice": 19280,
     "active": true,
     "ram": "12 GB"
   },
@@ -38608,7 +38608,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-6-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-6-5g",
     "storage": "256 GB",
-    "basePrice": 26700,
+    "basePrice": 26967,
     "active": true,
     "ram": "8 GB"
   },
@@ -38616,7 +38616,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-6-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-6-5g",
     "storage": "256 GB",
-    "basePrice": 28200,
+    "basePrice": 28482,
     "active": true,
     "ram": "12 GB"
   },
@@ -38624,21 +38624,21 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-6-5g-128-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-5g",
     "storage": "128 GB",
-    "basePrice": 21462,
+    "basePrice": 21677,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce-6-5g-256-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-5g",
     "storage": "256 GB",
-    "basePrice": 23230,
+    "basePrice": 23462,
     "active": true
   },
   {
     "id": "v-m-oneplus-oneplus-nord-ce-6-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-5g",
     "storage": "256 GB",
-    "basePrice": 23230,
+    "basePrice": 23462,
     "active": true,
     "ram": "8 GB"
   },
@@ -38646,7 +38646,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-6-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-5g",
     "storage": "128 GB",
-    "basePrice": 21462,
+    "basePrice": 21677,
     "active": true,
     "ram": "8 GB"
   },
@@ -38654,7 +38654,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-6-lite-5g-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-lite-5g",
     "storage": "128 GB",
-    "basePrice": 15500,
+    "basePrice": 15812,
     "active": true,
     "ram": "6 GB"
   },
@@ -38662,7 +38662,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-6-lite-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-lite-5g",
     "storage": "128 GB",
-    "basePrice": 17500,
+    "basePrice": 15812,
     "active": true,
     "ram": "8 GB"
   },
@@ -38670,7 +38670,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce-6-lite-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce-6-lite-5g",
     "storage": "256 GB",
-    "basePrice": 19500,
+    "basePrice": 19892,
     "active": true,
     "ram": "8 GB"
   },
@@ -38678,7 +38678,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-n6-128-gb-4-gb",
     "modelId": "m-oneplus-oneplus-n6",
     "storage": "128 GB",
-    "basePrice": 15000,
+    "basePrice": 15302,
     "active": true,
     "ram": "4 GB"
   },
@@ -38686,7 +38686,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-n6-128-gb-6-gb",
     "modelId": "m-oneplus-oneplus-n6",
     "storage": "128 GB",
-    "basePrice": 16500,
+    "basePrice": 15302,
     "active": true,
     "ram": "6 GB"
   },
@@ -38694,7 +38694,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-15-5g-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-15-5g",
     "storage": "512 GB",
-    "basePrice": 58580,
+    "basePrice": 59166,
     "active": true,
     "ram": "16 GB"
   },
@@ -38702,7 +38702,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-15-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-15-5g",
     "storage": "256 GB",
-    "basePrice": 56560,
+    "basePrice": 57126,
     "active": true,
     "ram": "12 GB"
   },
@@ -38710,7 +38710,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13-5g-1-tb-24-gb",
     "modelId": "m-oneplus-oneplus-13-5g",
     "storage": "1 TB",
-    "basePrice": 51005,
+    "basePrice": 51515,
     "active": true,
     "ram": "24 GB"
   },
@@ -38718,7 +38718,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13-5g-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-13-5g",
     "storage": "512 GB",
-    "basePrice": 44440,
+    "basePrice": 44884,
     "active": true,
     "ram": "16 GB"
   },
@@ -38726,7 +38726,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-13-5g",
     "storage": "256 GB",
-    "basePrice": 41410,
+    "basePrice": 41824,
     "active": true,
     "ram": "12 GB"
   },
@@ -38734,7 +38734,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11r-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-11r",
     "storage": "512 GB",
-    "basePrice": 24240,
+    "basePrice": 24482,
     "active": true,
     "ram": "16 GB"
   },
@@ -38742,7 +38742,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11r-256-gb-16-gb",
     "modelId": "m-oneplus-oneplus-11r",
     "storage": "256 GB",
-    "basePrice": 23230,
+    "basePrice": 23462,
     "active": true,
     "ram": "16 GB"
   },
@@ -38750,7 +38750,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-11r-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-11r",
     "storage": "128 GB",
-    "basePrice": 22220,
+    "basePrice": 22442,
     "active": true,
     "ram": "8 GB"
   },
@@ -38758,7 +38758,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13s-5g-512-gb-12-gb",
     "modelId": "m-oneplus-oneplus-13s-5g",
     "storage": "512 GB",
-    "basePrice": 38077,
+    "basePrice": 38458,
     "active": true,
     "ram": "12 GB"
   },
@@ -38766,7 +38766,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13s-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-13s-5g",
     "storage": "256 GB",
-    "basePrice": 36360,
+    "basePrice": 36724,
     "active": true,
     "ram": "12 GB"
   },
@@ -38774,7 +38774,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13r-5g-512-gb-16-gb",
     "modelId": "m-oneplus-oneplus-13r-5g",
     "storage": "512 GB",
-    "basePrice": 30906,
+    "basePrice": 31215,
     "active": true,
     "ram": "16 GB"
   },
@@ -38782,7 +38782,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-13r-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-13r-5g",
     "storage": "256 GB",
-    "basePrice": 30502,
+    "basePrice": 30807,
     "active": true,
     "ram": "12 GB"
   },
@@ -38790,7 +38790,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-5g-512-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-5-5g",
     "storage": "512 GB",
-    "basePrice": 26260,
+    "basePrice": 26523,
     "active": true,
     "ram": "12 GB"
   },
@@ -38798,7 +38798,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-5g-512-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-5-5g",
     "storage": "512 GB",
-    "basePrice": 25755,
+    "basePrice": 26523,
     "active": true,
     "ram": "8 GB"
   },
@@ -38806,7 +38806,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-5-5g",
     "storage": "256 GB",
-    "basePrice": 24745,
+    "basePrice": 24992,
     "active": true,
     "ram": "12 GB"
   },
@@ -38814,7 +38814,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-5-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-5-5g",
     "storage": "256 GB",
-    "basePrice": 23735,
+    "basePrice": 24992,
     "active": true,
     "ram": "8 GB"
   },
@@ -38822,7 +38822,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-4-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-4-5g",
     "storage": "256 GB",
-    "basePrice": 20937,
+    "basePrice": 21218,
     "active": true,
     "ram": "12 GB"
   },
@@ -38830,7 +38830,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-4-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-4-5g",
     "storage": "128 GB",
-    "basePrice": 18109,
+    "basePrice": 20606,
     "active": true,
     "ram": "8 GB"
   },
@@ -38838,7 +38838,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-4-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-4-5g",
     "storage": "256 GB",
-    "basePrice": 20170,
+    "basePrice": 21218,
     "active": true,
     "ram": "8 GB"
   },
@@ -38846,7 +38846,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce5-5g-256-gb-12-gb",
     "modelId": "m-oneplus-oneplus-nord-ce5-5g",
     "storage": "256 GB",
-    "basePrice": 19594,
+    "basePrice": 19790,
     "active": true,
     "ram": "12 GB"
   },
@@ -38854,7 +38854,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce5-5g-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce5-5g",
     "storage": "256 GB",
-    "basePrice": 19089,
+    "basePrice": 19790,
     "active": true,
     "ram": "8 GB"
   },
@@ -38862,7 +38862,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce5-5g-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce5-5g",
     "storage": "128 GB",
-    "basePrice": 18180,
+    "basePrice": 18362,
     "active": true,
     "ram": "8 GB"
   },
@@ -38870,7 +38870,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce4-256-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4",
     "storage": "256 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "8 GB"
   },
@@ -38878,7 +38878,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-nord-ce4-128-gb-8-gb",
     "modelId": "m-oneplus-oneplus-nord-ce4",
     "storage": "128 GB",
-    "basePrice": 14645,
+    "basePrice": 14791,
     "active": true,
     "ram": "8 GB"
   },
@@ -38886,7 +38886,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-n6x-128-gb-4-gb",
     "modelId": "m-oneplus-oneplus-n6x",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 11221,
     "active": true,
     "ram": "4 GB"
   },
@@ -38894,7 +38894,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oneplus-oneplus-n6x-64-gb-4-gb",
     "modelId": "m-oneplus-oneplus-n6x",
     "storage": "64 GB",
-    "basePrice": 10100,
+    "basePrice": 10201,
     "active": true,
     "ram": "4 GB"
   },
@@ -38902,7 +38902,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a7-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a7",
     "storage": "64 GB",
-    "basePrice": 2535,
+    "basePrice": 2060,
     "active": true,
     "ram": "4 GB"
   },
@@ -38934,7 +38934,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f9-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f9",
     "storage": "64 GB",
-    "basePrice": 2666,
+    "basePrice": 2693,
     "active": true,
     "ram": "4 GB"
   },
@@ -38966,7 +38966,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x-256-gb-8-gb",
     "modelId": "m-oppo-oppo-find-x",
     "storage": "256 GB",
-    "basePrice": 6918,
+    "basePrice": 6987,
     "active": true,
     "ram": "8 GB"
   },
@@ -38981,14 +38981,14 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5-64-gb",
     "modelId": "m-oppo-oppo-a5",
     "storage": "64 GB",
-    "basePrice": 2788,
+    "basePrice": 2878,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f7-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f7",
     "storage": "64 GB",
-    "basePrice": 2333,
+    "basePrice": 2356,
     "active": true,
     "ram": "4 GB"
   },
@@ -39004,7 +39004,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a83-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a83",
     "storage": "32 GB",
-    "basePrice": 1374,
+    "basePrice": 1454,
     "active": true,
     "ram": "3 GB"
   },
@@ -39020,7 +39020,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a83-16-gb-2-gb",
     "modelId": "m-oppo-oppo-a83",
     "storage": "16 GB",
-    "basePrice": 1262,
+    "basePrice": 1313,
     "active": true,
     "ram": "2 GB"
   },
@@ -39028,7 +39028,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f5-youth-32-gb-3-gb",
     "modelId": "m-oppo-oppo-f5-youth",
     "storage": "32 GB",
-    "basePrice": 1646,
+    "basePrice": 1662,
     "active": true,
     "ram": "3 GB"
   },
@@ -39036,7 +39036,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f5-32-gb-4-gb",
     "modelId": "m-oppo-oppo-f5",
     "storage": "32 GB",
-    "basePrice": 1717,
+    "basePrice": 1798,
     "active": true,
     "ram": "4 GB"
   },
@@ -39044,7 +39044,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f5-64-gb-6-gb",
     "modelId": "m-oppo-oppo-f5",
     "storage": "64 GB",
-    "basePrice": 1879,
+    "basePrice": 1949,
     "active": true,
     "ram": "6 GB"
   },
@@ -39052,7 +39052,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a71-16-gb-3-gb",
     "modelId": "m-oppo-oppo-a71",
     "storage": "16 GB",
-    "basePrice": 990,
+    "basePrice": 1000,
     "active": true,
     "ram": "3 GB"
   },
@@ -39060,7 +39060,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-r11-64-gb-4-gb",
     "modelId": "m-oppo-oppo-r11",
     "storage": "64 GB",
-    "basePrice": 2222,
+    "basePrice": 2244,
     "active": true,
     "ram": "4 GB"
   },
@@ -39068,7 +39068,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-r11-plus-64-gb-6-gb",
     "modelId": "m-oppo-oppo-r11-plus",
     "storage": "64 GB",
-    "basePrice": 3141,
+    "basePrice": 3172,
     "active": true,
     "ram": "6 GB"
   },
@@ -39076,7 +39076,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a77-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a77",
     "storage": "64 GB",
-    "basePrice": 3171,
+    "basePrice": 1469,
     "active": true,
     "ram": "4 GB"
   },
@@ -39084,7 +39084,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f3-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f3",
     "storage": "64 GB",
-    "basePrice": 1454,
+    "basePrice": 1469,
     "active": true,
     "ram": "4 GB"
   },
@@ -39092,7 +39092,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f3-plus-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f3-plus",
     "storage": "64 GB",
-    "basePrice": 1879,
+    "basePrice": 2182,
     "active": true,
     "ram": "4 GB"
   },
@@ -39108,7 +39108,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a57-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a57",
     "storage": "32 GB",
-    "basePrice": 1525,
+    "basePrice": 1540,
     "active": true,
     "ram": "3 GB"
   },
@@ -39116,7 +39116,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f1s-32-gb-3-gb",
     "modelId": "m-oppo-oppo-f1s",
     "storage": "32 GB",
-    "basePrice": 1151,
+    "basePrice": 1202,
     "active": true,
     "ram": "3 GB"
   },
@@ -39124,7 +39124,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f1s-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f1s",
     "storage": "64 GB",
-    "basePrice": 1303,
+    "basePrice": 1316,
     "active": true,
     "ram": "4 GB"
   },
@@ -39132,7 +39132,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f1-plus-64-gb-4-gb",
     "modelId": "m-oppo-oppo-f1-plus",
     "storage": "64 GB",
-    "basePrice": 1273,
+    "basePrice": 1286,
     "active": true,
     "ram": "4 GB"
   },
@@ -39140,7 +39140,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-r17-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-r17-pro",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true,
     "ram": "8 GB"
   },
@@ -39148,7 +39148,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-r17-128-gb-8-gb",
     "modelId": "m-oppo-oppo-r17",
     "storage": "128 GB",
-    "basePrice": 4212,
+    "basePrice": 4254,
     "active": true,
     "ram": "8 GB"
   },
@@ -39156,7 +39156,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k1-64-gb-4-gb",
     "modelId": "m-oppo-oppo-k1",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3091,
     "active": true,
     "ram": "4 GB"
   },
@@ -39164,7 +39164,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k1-64-gb-6-gb",
     "modelId": "m-oppo-oppo-k1",
     "storage": "64 GB",
-    "basePrice": 3212,
+    "basePrice": 3091,
     "active": true,
     "ram": "6 GB"
   },
@@ -39186,7 +39186,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5s-32-gb-2-gb",
     "modelId": "m-oppo-oppo-a5s",
     "storage": "32 GB",
-    "basePrice": 2141,
+    "basePrice": 2535,
     "active": true,
     "ram": "2 GB"
   },
@@ -39194,7 +39194,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5s-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a5s",
     "storage": "32 GB",
-    "basePrice": 2444,
+    "basePrice": 2535,
     "active": true,
     "ram": "3 GB"
   },
@@ -39210,7 +39210,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a1k-32-gb-2-gb",
     "modelId": "m-oppo-oppo-a1k",
     "storage": "32 GB",
-    "basePrice": 2293,
+    "basePrice": 2316,
     "active": true,
     "ram": "2 GB"
   },
@@ -39218,7 +39218,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f11-128-gb-4-gb",
     "modelId": "m-oppo-oppo-f11",
     "storage": "128 GB",
-    "basePrice": 3293,
+    "basePrice": 3363,
     "active": true,
     "ram": "4 GB"
   },
@@ -39226,7 +39226,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f11-128-gb-6-gb",
     "modelId": "m-oppo-oppo-f11",
     "storage": "128 GB",
-    "basePrice": 3707,
+    "basePrice": 3788,
     "active": true,
     "ram": "6 GB"
   },
@@ -39234,7 +39234,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno",
     "storage": "128 GB",
-    "basePrice": 4969,
+    "basePrice": 5019,
     "active": true,
     "ram": "8 GB"
   },
@@ -39242,7 +39242,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno-10x-zoom-128-gb-6-gb",
     "modelId": "m-oppo-oppo-reno-10x-zoom",
     "storage": "128 GB",
-    "basePrice": 5474,
+    "basePrice": 5529,
     "active": true,
     "ram": "6 GB"
   },
@@ -39250,7 +39250,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno-10x-zoom-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno-10x-zoom",
     "storage": "256 GB",
-    "basePrice": 5696,
+    "basePrice": 5753,
     "active": true,
     "ram": "8 GB"
   },
@@ -39258,7 +39258,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-r15-pro-128-gb-6-gb",
     "modelId": "m-oppo-oppo-r15-pro",
     "storage": "128 GB",
-    "basePrice": 4050,
+    "basePrice": 4090,
     "active": true,
     "ram": "6 GB"
   },
@@ -39266,7 +39266,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k3-64-gb-6-gb",
     "modelId": "m-oppo-oppo-k3",
     "storage": "64 GB",
-    "basePrice": 4131,
+    "basePrice": 4172,
     "active": true,
     "ram": "6 GB"
   },
@@ -39274,7 +39274,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k3-128-gb-8-gb",
     "modelId": "m-oppo-oppo-k3",
     "storage": "128 GB",
-    "basePrice": 4323,
+    "basePrice": 4366,
     "active": true,
     "ram": "8 GB"
   },
@@ -39282,7 +39282,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a9-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a9",
     "storage": "128 GB",
-    "basePrice": 4040,
+    "basePrice": 4090,
     "active": true,
     "ram": "4 GB"
   },
@@ -39290,7 +39290,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno-2z-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno-2z",
     "storage": "256 GB",
-    "basePrice": 6232,
+    "basePrice": 6294,
     "active": true,
     "ram": "8 GB"
   },
@@ -39298,7 +39298,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno-2-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno-2",
     "storage": "256 GB",
-    "basePrice": 5969,
+    "basePrice": 6029,
     "active": true,
     "ram": "8 GB"
   },
@@ -39314,7 +39314,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5-2020-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a5-2020",
     "storage": "64 GB",
-    "basePrice": 3252,
+    "basePrice": 3323,
     "active": true,
     "ram": "4 GB"
   },
@@ -39322,7 +39322,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5-2020-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a5-2020",
     "storage": "128 GB",
-    "basePrice": 3404,
+    "basePrice": 3484,
     "active": true,
     "ram": "4 GB"
   },
@@ -39330,7 +39330,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5-2020-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a5-2020",
     "storage": "128 GB",
-    "basePrice": 3555,
+    "basePrice": 3636,
     "active": true,
     "ram": "6 GB"
   },
@@ -39338,7 +39338,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a9-2020-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a9-2020",
     "storage": "128 GB",
-    "basePrice": 4131,
+    "basePrice": 4172,
     "active": true,
     "ram": "8 GB"
   },
@@ -39354,7 +39354,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno2-f-256-gb-6-gb",
     "modelId": "m-oppo-oppo-reno2-f",
     "storage": "256 GB",
-    "basePrice": 6800,
+    "basePrice": 5121,
     "active": true,
     "ram": "6 GB"
   },
@@ -39362,7 +39362,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno2-f-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno2-f",
     "storage": "128 GB",
-    "basePrice": 6060,
+    "basePrice": 6121,
     "active": true,
     "ram": "8 GB"
   },
@@ -39378,7 +39378,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f15-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f15",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 4733,
     "active": true,
     "ram": "8 GB"
   },
@@ -39386,7 +39386,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a71-2018-16-gb-3-gb",
     "modelId": "m-oppo-oppo-a71-2018",
     "storage": "16 GB",
-    "basePrice": 1071,
+    "basePrice": 1082,
     "active": true,
     "ram": "3 GB"
   },
@@ -39394,7 +39394,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a31-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a31",
     "storage": "64 GB",
-    "basePrice": 3949,
+    "basePrice": 3988,
     "active": true,
     "ram": "4 GB"
   },
@@ -39402,7 +39402,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a31-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a31",
     "storage": "128 GB",
-    "basePrice": 4585,
+    "basePrice": 4676,
     "active": true,
     "ram": "6 GB"
   },
@@ -39418,7 +39418,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a12-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a12",
     "storage": "64 GB",
-    "basePrice": 3394,
+    "basePrice": 3428,
     "active": true,
     "ram": "4 GB"
   },
@@ -39434,7 +39434,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a52-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a52",
     "storage": "128 GB",
-    "basePrice": 4555,
+    "basePrice": 4626,
     "active": true,
     "ram": "6 GB"
   },
@@ -39442,7 +39442,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a52-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a52",
     "storage": "128 GB",
-    "basePrice": 4818,
+    "basePrice": 4626,
     "active": true,
     "ram": "8 GB"
   },
@@ -39450,7 +39450,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x2-256-gb-12-gb",
     "modelId": "m-oppo-oppo-find-x2",
     "storage": "256 GB",
-    "basePrice": 11211,
+    "basePrice": 11323,
     "active": true,
     "ram": "12 GB"
   },
@@ -39458,7 +39458,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a11k-32-gb-2-gb",
     "modelId": "m-oppo-oppo-a11k",
     "storage": "32 GB",
-    "basePrice": 2485,
+    "basePrice": 2510,
     "active": true,
     "ram": "2 GB"
   },
@@ -39466,7 +39466,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno3-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno3-pro",
     "storage": "128 GB",
-    "basePrice": 5888,
+    "basePrice": 5947,
     "active": true,
     "ram": "8 GB"
   },
@@ -39474,7 +39474,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno3-pro-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno3-pro",
     "storage": "256 GB",
-    "basePrice": 6040,
+    "basePrice": 6121,
     "active": true,
     "ram": "8 GB"
   },
@@ -39482,7 +39482,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno4-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno4-pro",
     "storage": "128 GB",
-    "basePrice": 6848,
+    "basePrice": 6916,
     "active": true,
     "ram": "8 GB"
   },
@@ -39490,7 +39490,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a53-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a53",
     "storage": "64 GB",
-    "basePrice": 4434,
+    "basePrice": 4478,
     "active": true,
     "ram": "4 GB"
   },
@@ -39506,7 +39506,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f17-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f17-pro",
     "storage": "128 GB",
-    "basePrice": 5626,
+    "basePrice": 5682,
     "active": true,
     "ram": "8 GB"
   },
@@ -39514,7 +39514,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f17-128-gb-6-gb",
     "modelId": "m-oppo-oppo-f17",
     "storage": "128 GB",
-    "basePrice": 5161,
+    "basePrice": 5242,
     "active": true,
     "ram": "6 GB"
   },
@@ -39522,7 +39522,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f17-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f17",
     "storage": "128 GB",
-    "basePrice": 5444,
+    "basePrice": 5213,
     "active": true,
     "ram": "8 GB"
   },
@@ -39530,7 +39530,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a33-2020-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a33-2020",
     "storage": "32 GB",
-    "basePrice": 3171,
+    "basePrice": 3203,
     "active": true,
     "ram": "3 GB"
   },
@@ -39538,7 +39538,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a15-32-gb-2-gb",
     "modelId": "m-oppo-oppo-a15",
     "storage": "32 GB",
-    "basePrice": 2949,
+    "basePrice": 3363,
     "active": true,
     "ram": "2 GB"
   },
@@ -39546,7 +39546,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a15-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a15",
     "storage": "32 GB",
-    "basePrice": 3293,
+    "basePrice": 3363,
     "active": true,
     "ram": "3 GB"
   },
@@ -39554,7 +39554,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a15s-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a15s",
     "storage": "64 GB",
-    "basePrice": 3676,
+    "basePrice": 3713,
     "active": true,
     "ram": "4 GB"
   },
@@ -39570,7 +39570,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno5-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno5-pro-5g",
     "storage": "128 GB",
-    "basePrice": 9342,
+    "basePrice": 9435,
     "active": true,
     "ram": "8 GB"
   },
@@ -39578,7 +39578,7 @@ const MOBILE_VARIANTS_PART_3: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f19-pro-128-gb",
     "modelId": "m-oppo-oppo-f19-pro",
     "storage": "128 GB",
-    "basePrice": 5777,
+    "basePrice": 5888,
     "active": true
   }
 ];
@@ -39588,14 +39588,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f19-pro-256-gb",
     "modelId": "m-oppo-oppo-f19-pro",
     "storage": "256 GB",
-    "basePrice": 6010,
+    "basePrice": 6121,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f19-pro-plus-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f19-pro-plus-5g",
     "storage": "128 GB",
-    "basePrice": 7767,
+    "basePrice": 7845,
     "active": true,
     "ram": "8 GB"
   },
@@ -39603,7 +39603,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f19-128-gb-6-gb",
     "modelId": "m-oppo-oppo-f19",
     "storage": "128 GB",
-    "basePrice": 5696,
+    "basePrice": 5753,
     "active": true,
     "ram": "6 GB"
   },
@@ -39611,7 +39611,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a54-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a54",
     "storage": "64 GB",
-    "basePrice": 4394,
+    "basePrice": 4438,
     "active": true,
     "ram": "4 GB"
   },
@@ -39619,7 +39619,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a54-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a54",
     "storage": "128 GB",
-    "basePrice": 4707,
+    "basePrice": 4798,
     "active": true,
     "ram": "4 GB"
   },
@@ -39627,7 +39627,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a54-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a54",
     "storage": "128 GB",
-    "basePrice": 5202,
+    "basePrice": 5302,
     "active": true,
     "ram": "6 GB"
   },
@@ -39643,7 +39643,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a53s-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a53s-5g",
     "storage": "128 GB",
-    "basePrice": 7767,
+    "basePrice": 7365,
     "active": true,
     "ram": "8 GB"
   },
@@ -39651,7 +39651,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a74-5g-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a74-5g",
     "storage": "128 GB",
-    "basePrice": 8262,
+    "basePrice": 8345,
     "active": true,
     "ram": "6 GB"
   },
@@ -39659,7 +39659,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno6-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno6-5g",
     "storage": "128 GB",
-    "basePrice": 8494,
+    "basePrice": 8579,
     "active": true,
     "ram": "8 GB"
   },
@@ -39667,7 +39667,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno6-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno6-pro-5g",
     "storage": "256 GB",
-    "basePrice": 9716,
+    "basePrice": 9813,
     "active": true,
     "ram": "12 GB"
   },
@@ -39675,7 +39675,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f19s-128-gb-6-gb",
     "modelId": "m-oppo-oppo-f19s",
     "storage": "128 GB",
-    "basePrice": 5121,
+    "basePrice": 5172,
     "active": true,
     "ram": "6 GB"
   },
@@ -39683,7 +39683,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a55-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a55",
     "storage": "64 GB",
-    "basePrice": 4777,
+    "basePrice": 4825,
     "active": true,
     "ram": "4 GB"
   },
@@ -39707,7 +39707,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a16-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a16",
     "storage": "64 GB",
-    "basePrice": 4626,
+    "basePrice": 4672,
     "active": true,
     "ram": "4 GB"
   },
@@ -39715,7 +39715,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a16k-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a16k",
     "storage": "32 GB",
-    "basePrice": 2788,
+    "basePrice": 2868,
     "active": true,
     "ram": "3 GB"
   },
@@ -39723,7 +39723,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a16k-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a16k",
     "storage": "64 GB",
-    "basePrice": 3555,
+    "basePrice": 3591,
     "active": true,
     "ram": "4 GB"
   },
@@ -39731,7 +39731,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno7-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno7-5g",
     "storage": "256 GB",
-    "basePrice": 8949,
+    "basePrice": 9038,
     "active": true,
     "ram": "8 GB"
   },
@@ -39739,7 +39739,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno7-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno7-pro-5g",
     "storage": "256 GB",
-    "basePrice": 10858,
+    "basePrice": 10967,
     "active": true,
     "ram": "12 GB"
   },
@@ -39747,7 +39747,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a76-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a76",
     "storage": "128 GB",
-    "basePrice": 5282,
+    "basePrice": 5335,
     "active": true,
     "ram": "6 GB"
   },
@@ -39755,7 +39755,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k10-128-gb-6-gb",
     "modelId": "m-oppo-oppo-k10",
     "storage": "128 GB",
-    "basePrice": 4969,
+    "basePrice": 5100,
     "active": true,
     "ram": "6 GB"
   },
@@ -39763,7 +39763,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k10-128-gb-8-gb",
     "modelId": "m-oppo-oppo-k10",
     "storage": "128 GB",
-    "basePrice": 5121,
+    "basePrice": 5019,
     "active": true,
     "ram": "8 GB"
   },
@@ -39771,7 +39771,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a16e-32-gb-3-gb",
     "modelId": "m-oppo-oppo-a16e",
     "storage": "32 GB",
-    "basePrice": 3101,
+    "basePrice": 3171,
     "active": true,
     "ram": "3 GB"
   },
@@ -39779,7 +39779,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a16e-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a16e",
     "storage": "64 GB",
-    "basePrice": 4121,
+    "basePrice": 4162,
     "active": true,
     "ram": "4 GB"
   },
@@ -39787,7 +39787,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f21-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f21-pro",
     "storage": "128 GB",
-    "basePrice": 6918,
+    "basePrice": 6987,
     "active": true,
     "ram": "8 GB"
   },
@@ -39795,7 +39795,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f21-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f21-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8232,
+    "basePrice": 8314,
     "active": true,
     "ram": "8 GB"
   },
@@ -39803,7 +39803,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a96-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a96",
     "storage": "128 GB",
-    "basePrice": 5565,
+    "basePrice": 5621,
     "active": true,
     "ram": "8 GB"
   },
@@ -39819,7 +39819,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k10-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-k10-5g",
     "storage": "128 GB",
-    "basePrice": 7353,
+    "basePrice": 6610,
     "active": true,
     "ram": "8 GB"
   },
@@ -39827,14 +39827,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno8-5g-128-gb",
     "modelId": "m-oppo-oppo-reno8-5g",
     "storage": "128 GB",
-    "basePrice": 9858,
+    "basePrice": 9957,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-reno8-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno8-pro-5g",
     "storage": "256 GB",
-    "basePrice": 11090,
+    "basePrice": 11201,
     "active": true,
     "ram": "12 GB"
   },
@@ -39842,7 +39842,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a57-2022-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a57-2022",
     "storage": "64 GB",
-    "basePrice": 4323,
+    "basePrice": 4366,
     "active": true,
     "ram": "4 GB"
   },
@@ -39850,7 +39850,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f21s-pro-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f21s-pro",
     "storage": "128 GB",
-    "basePrice": 6545,
+    "basePrice": 6610,
     "active": true,
     "ram": "8 GB"
   },
@@ -39858,7 +39858,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f21s-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f21s-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8151,
+    "basePrice": 8233,
     "active": true,
     "ram": "8 GB"
   },
@@ -39880,7 +39880,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a17k-64-gb-3-gb",
     "modelId": "m-oppo-oppo-a17k",
     "storage": "64 GB",
-    "basePrice": 3596,
+    "basePrice": 3632,
     "active": true,
     "ram": "3 GB"
   },
@@ -39888,7 +39888,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a77s-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a77s",
     "storage": "128 GB",
-    "basePrice": 5575,
+    "basePrice": 5631,
     "active": true,
     "ram": "8 GB"
   },
@@ -39896,7 +39896,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a78-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a78-5g",
     "storage": "128 GB",
-    "basePrice": 10716,
+    "basePrice": 10823,
     "active": true,
     "ram": "8 GB"
   },
@@ -39904,7 +39904,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno8t-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-reno8t-5g",
     "storage": "128 GB",
-    "basePrice": 11625,
+    "basePrice": 11741,
     "active": true,
     "ram": "8 GB"
   },
@@ -39912,7 +39912,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-n2-flip-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-find-n2-flip-5g",
     "storage": "256 GB",
-    "basePrice": 18362,
+    "basePrice": 18546,
     "active": true,
     "ram": "8 GB"
   },
@@ -39920,7 +39920,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f23-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-f23-5g",
     "storage": "256 GB",
-    "basePrice": 12504,
+    "basePrice": 12629,
     "active": true,
     "ram": "8 GB"
   },
@@ -39928,7 +39928,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno10-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno10-5g",
     "storage": "256 GB",
-    "basePrice": 16716,
+    "basePrice": 16883,
     "active": true,
     "ram": "8 GB"
   },
@@ -39936,7 +39936,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno10-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno10-pro-5g",
     "storage": "256 GB",
-    "basePrice": 19382,
+    "basePrice": 19576,
     "active": true,
     "ram": "12 GB"
   },
@@ -39944,7 +39944,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno10-pro-plus-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno10-pro-plus-5g",
     "storage": "256 GB",
-    "basePrice": 20493,
+    "basePrice": 20698,
     "active": true,
     "ram": "12 GB"
   },
@@ -39952,7 +39952,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a78-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a78",
     "storage": "128 GB",
-    "basePrice": 8181,
+    "basePrice": 8263,
     "active": true,
     "ram": "8 GB"
   },
@@ -39960,7 +39960,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-n3-flip-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-find-n3-flip-5g",
     "storage": "256 GB",
-    "basePrice": 24149,
+    "basePrice": 24390,
     "active": true,
     "ram": "12 GB"
   },
@@ -39968,7 +39968,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a58-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a58",
     "storage": "128 GB",
-    "basePrice": 6727,
+    "basePrice": 6794,
     "active": true,
     "ram": "6 GB"
   },
@@ -39976,7 +39976,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a38-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a38",
     "storage": "128 GB",
-    "basePrice": 6222,
+    "basePrice": 6284,
     "active": true,
     "ram": "4 GB"
   },
@@ -39984,7 +39984,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a17-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a17",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 3978,
     "active": true,
     "ram": "4 GB"
   },
@@ -39992,21 +39992,21 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a18-64-gb",
     "modelId": "m-oppo-oppo-a18",
     "storage": "64 GB",
-    "basePrice": 4555,
+    "basePrice": 4656,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-a18-128-gb",
     "modelId": "m-oppo-oppo-a18",
     "storage": "128 GB",
-    "basePrice": 4798,
+    "basePrice": 4898,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-a79-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a79-5g",
     "storage": "128 GB",
-    "basePrice": 10666,
+    "basePrice": 10773,
     "active": true,
     "ram": "8 GB"
   },
@@ -40044,7 +40044,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno11-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno11-pro-5g",
     "storage": "256 GB",
-    "basePrice": 19594,
+    "basePrice": 19790,
     "active": true,
     "ram": "12 GB"
   },
@@ -40087,14 +40087,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a3-pro-5g-256-gb",
     "modelId": "m-oppo-oppo-a3-pro-5g",
     "storage": "256 GB",
-    "basePrice": 12474,
+    "basePrice": 12625,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-reno12-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno12-5g",
     "storage": "256 GB",
-    "basePrice": 17715,
+    "basePrice": 17892,
     "active": true,
     "ram": "8 GB"
   },
@@ -40109,7 +40109,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno12-pro-5g-512-gb",
     "modelId": "m-oppo-oppo-reno12-pro-5g",
     "storage": "512 GB",
-    "basePrice": 20786,
+    "basePrice": 20994,
     "active": true
   },
   {
@@ -40146,7 +40146,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f27-5g-128-gb",
     "modelId": "m-oppo-oppo-f27-5g",
     "storage": "128 GB",
-    "basePrice": 13413,
+    "basePrice": 13564,
     "active": true
   },
   {
@@ -40160,7 +40160,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a3-5g-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a3-5g",
     "storage": "128 GB",
-    "basePrice": 10342,
+    "basePrice": 10445,
     "active": true,
     "ram": "6 GB"
   },
@@ -40168,21 +40168,21 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a3x-64-gb",
     "modelId": "m-oppo-oppo-a3x",
     "storage": "64 GB",
-    "basePrice": 4949,
+    "basePrice": 4998,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-a3x-128-gb",
     "modelId": "m-oppo-oppo-a3x",
     "storage": "128 GB",
-    "basePrice": 5343,
+    "basePrice": 5396,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-find-x8-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-find-x8-5g",
     "storage": "256 GB",
-    "basePrice": 32663,
+    "basePrice": 33158,
     "active": true,
     "ram": "12 GB"
   },
@@ -40190,7 +40190,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x8-5g-512-gb-16-gb",
     "modelId": "m-oppo-oppo-find-x8-5g",
     "storage": "512 GB",
-    "basePrice": 36128,
+    "basePrice": 36623,
     "active": true,
     "ram": "16 GB"
   },
@@ -40198,7 +40198,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x8-pro-5g-512-gb-16-gb",
     "modelId": "m-oppo-oppo-find-x8-pro-5g",
     "storage": "512 GB",
-    "basePrice": 46521,
+    "basePrice": 46986,
     "active": true,
     "ram": "16 GB"
   },
@@ -40214,7 +40214,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno13-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno13-5g",
     "storage": "256 GB",
-    "basePrice": 20200,
+    "basePrice": 20382,
     "active": true,
     "ram": "8 GB"
   },
@@ -40230,35 +40230,35 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno13-pro-5g-256-gb",
     "modelId": "m-oppo-oppo-reno13-pro-5g",
     "storage": "256 GB",
-    "basePrice": 23432,
+    "basePrice": 24240,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-reno13-pro-5g-512-gb",
     "modelId": "m-oppo-oppo-reno13-pro-5g",
     "storage": "512 GB",
-    "basePrice": 25351,
+    "basePrice": 25654,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f29-5g-128-gb",
     "modelId": "m-oppo-oppo-f29-5g",
     "storage": "128 GB",
-    "basePrice": 15554,
+    "basePrice": 15706,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f29-5g-256-gb",
     "modelId": "m-oppo-oppo-f29-5g",
     "storage": "256 GB",
-    "basePrice": 16665,
+    "basePrice": 16897,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f29-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f29-pro-5g",
     "storage": "128 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "8 GB"
   },
@@ -40274,7 +40274,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f29-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-f29-pro-5g",
     "storage": "256 GB",
-    "basePrice": 18483,
+    "basePrice": 18766,
     "active": true,
     "ram": "12 GB"
   },
@@ -40304,7 +40304,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-a5-5g",
     "storage": "128 GB",
-    "basePrice": 11181,
+    "basePrice": 10671,
     "active": true,
     "ram": "8 GB"
   },
@@ -40312,7 +40312,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a5x-5g-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a5x-5g",
     "storage": "64 GB",
-    "basePrice": 7575,
+    "basePrice": 7651,
     "active": true,
     "ram": "4 GB"
   },
@@ -40366,7 +40366,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k13x-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-k13x-5g",
     "storage": "128 GB",
-    "basePrice": 9444,
+    "basePrice": 8938,
     "active": true,
     "ram": "8 GB"
   },
@@ -40374,7 +40374,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno14-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno14-5g",
     "storage": "256 GB",
-    "basePrice": 24341,
+    "basePrice": 24856,
     "active": true,
     "ram": "8 GB"
   },
@@ -40390,7 +40390,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno14-5g-512-gb-12-gb",
     "modelId": "m-oppo-oppo-reno14-5g",
     "storage": "512 GB",
-    "basePrice": 28785,
+    "basePrice": 29073,
     "active": true,
     "ram": "12 GB"
   },
@@ -40398,14 +40398,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno14-pro-5g-256-gb",
     "modelId": "m-oppo-oppo-reno14-pro-5g",
     "storage": "256 GB",
-    "basePrice": 30643,
+    "basePrice": 30956,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-reno14-pro-5g-512-gb",
     "modelId": "m-oppo-oppo-reno14-pro-5g",
     "storage": "512 GB",
-    "basePrice": 34340,
+    "basePrice": 34845,
     "active": true
   },
   {
@@ -40426,7 +40426,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f31-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f31-pro-5g",
     "storage": "128 GB",
-    "basePrice": 18382,
+    "basePrice": 18566,
     "active": true,
     "ram": "8 GB"
   },
@@ -40434,7 +40434,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f31-pro-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-f31-pro-5g",
     "storage": "256 GB",
-    "basePrice": 19857,
+    "basePrice": 20139,
     "active": true,
     "ram": "8 GB"
   },
@@ -40442,7 +40442,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f31-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-f31-pro-5g",
     "storage": "256 GB",
-    "basePrice": 20614,
+    "basePrice": 20856,
     "active": true,
     "ram": "12 GB"
   },
@@ -40458,7 +40458,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k13-turbo-pro-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-k13-turbo-pro-5g",
     "storage": "256 GB",
-    "basePrice": 21210,
+    "basePrice": 21462,
     "active": true,
     "ram": "12 GB"
   },
@@ -40466,7 +40466,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k13-turbo-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-k13-turbo-5g",
     "storage": "128 GB",
-    "basePrice": 16918,
+    "basePrice": 17087,
     "active": true,
     "ram": "8 GB"
   },
@@ -40474,7 +40474,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k13-turbo-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-k13-turbo-5g",
     "storage": "256 GB",
-    "basePrice": 17675,
+    "basePrice": 17928,
     "active": true,
     "ram": "8 GB"
   },
@@ -40482,21 +40482,21 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f31-5g-128-gb",
     "modelId": "m-oppo-oppo-f31-5g",
     "storage": "128 GB",
-    "basePrice": 17372,
+    "basePrice": 17534,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f31-5g-256-gb",
     "modelId": "m-oppo-oppo-f31-5g",
     "storage": "256 GB",
-    "basePrice": 18079,
+    "basePrice": 18230,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-f31-pro-plus-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-f31-pro-plus-5g",
     "storage": "256 GB",
-    "basePrice": 21866,
+    "basePrice": 22058,
     "active": true,
     "ram": "8 GB"
   },
@@ -40504,7 +40504,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f31-pro-plus-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-f31-pro-plus-5g",
     "storage": "256 GB",
-    "basePrice": 22321,
+    "basePrice": 22483,
     "active": true,
     "ram": "12 GB"
   },
@@ -40512,7 +40512,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x9-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-find-x9-5g",
     "storage": "256 GB",
-    "basePrice": 43430,
+    "basePrice": 43733,
     "active": true,
     "ram": "12 GB"
   },
@@ -40528,7 +40528,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x9-pro-512-gb-16-gb",
     "modelId": "m-oppo-oppo-find-x9-pro",
     "storage": "512 GB",
-    "basePrice": 62620,
+    "basePrice": 63246,
     "active": true,
     "ram": "16 GB"
   },
@@ -40536,7 +40536,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a6x-5g-64-gb-4-gb",
     "modelId": "m-oppo-oppo-a6x-5g",
     "storage": "64 GB",
-    "basePrice": 8959,
+    "basePrice": 9049,
     "active": true,
     "ram": "4 GB"
   },
@@ -40560,7 +40560,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno15-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno15-5g",
     "storage": "256 GB",
-    "basePrice": 28603,
+    "basePrice": 31512,
     "active": true,
     "ram": "8 GB"
   },
@@ -40568,7 +40568,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno15-5g-256-gb-12-gb",
     "modelId": "m-oppo-oppo-reno15-5g",
     "storage": "256 GB",
-    "basePrice": 31088,
+    "basePrice": 31512,
     "active": true,
     "ram": "12 GB"
   },
@@ -40576,7 +40576,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno15-5g-512-gb-12-gb",
     "modelId": "m-oppo-oppo-reno15-5g",
     "storage": "512 GB",
-    "basePrice": 32522,
+    "basePrice": 32847,
     "active": true,
     "ram": "12 GB"
   },
@@ -40584,14 +40584,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno15-pro-mini-5g-256-gb",
     "modelId": "m-oppo-oppo-reno15-pro-mini-5g",
     "storage": "256 GB",
-    "basePrice": 34542,
+    "basePrice": 35431,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-reno15-pro-mini-5g-512-gb",
     "modelId": "m-oppo-oppo-reno15-pro-mini-5g",
     "storage": "512 GB",
-    "basePrice": 38380,
+    "basePrice": 39390,
     "active": true
   },
   {
@@ -40605,14 +40605,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno15-pro-5g-512-gb",
     "modelId": "m-oppo-oppo-reno15-pro-5g",
     "storage": "512 GB",
-    "basePrice": 43935,
+    "basePrice": 44440,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-a6-pro-5g-128-gb",
     "modelId": "m-oppo-oppo-a6-pro-5g",
     "storage": "128 GB",
-    "basePrice": 14665,
+    "basePrice": 14998,
     "active": true
   },
   {
@@ -40642,7 +40642,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k14x-5g-64-gb-4-gb",
     "modelId": "m-oppo-oppo-k14x-5g",
     "storage": "64 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "4 GB"
   },
@@ -40666,7 +40666,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a6-5g-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a6-5g",
     "storage": "128 GB",
-    "basePrice": 13433,
+    "basePrice": 13595,
     "active": true,
     "ram": "4 GB"
   },
@@ -40674,7 +40674,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a6-5g-128-gb-6-gb",
     "modelId": "m-oppo-oppo-a6-5g",
     "storage": "128 GB",
-    "basePrice": 14494,
+    "basePrice": 14655,
     "active": true,
     "ram": "6 GB"
   },
@@ -40682,7 +40682,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a6-5g-256-gb-6-gb",
     "modelId": "m-oppo-oppo-a6-5g",
     "storage": "256 GB",
-    "basePrice": 15302,
+    "basePrice": 15453,
     "active": true,
     "ram": "6 GB"
   },
@@ -40690,7 +40690,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k14-5g-128-gb-6-gb",
     "modelId": "m-oppo-oppo-k14-5g",
     "storage": "128 GB",
-    "basePrice": 11918,
+    "basePrice": 12120,
     "active": true,
     "ram": "6 GB"
   },
@@ -40698,7 +40698,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-k14-5g-256-gb-6-gb",
     "modelId": "m-oppo-oppo-k14-5g",
     "storage": "256 GB",
-    "basePrice": 12928,
+    "basePrice": 13130,
     "active": true,
     "ram": "6 GB"
   },
@@ -40714,7 +40714,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-a6s-5g-128-gb-4-gb",
     "modelId": "m-oppo-oppo-a6s-5g",
     "storage": "128 GB",
-    "basePrice": 12272,
+    "basePrice": 12423,
     "active": true,
     "ram": "4 GB"
   },
@@ -40730,7 +40730,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f33-5g-128-gb-6-gb",
     "modelId": "m-oppo-oppo-f33-5g",
     "storage": "128 GB",
-    "basePrice": 19513,
+    "basePrice": 19867,
     "active": true,
     "ram": "6 GB"
   },
@@ -40738,7 +40738,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f33-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f33-5g",
     "storage": "128 GB",
-    "basePrice": 22008,
+    "basePrice": 19708,
     "active": true,
     "ram": "8 GB"
   },
@@ -40746,7 +40746,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f33-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-f33-5g",
     "storage": "256 GB",
-    "basePrice": 24594,
+    "basePrice": 25189,
     "active": true,
     "ram": "8 GB"
   },
@@ -40754,7 +40754,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f33-pro-5g-128-gb-8-gb",
     "modelId": "m-oppo-oppo-f33-pro-5g",
     "storage": "128 GB",
-    "basePrice": 22018,
+    "basePrice": 22238,
     "active": true,
     "ram": "8 GB"
   },
@@ -40762,7 +40762,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-f33-pro-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-f33-pro-5g",
     "storage": "256 GB",
-    "basePrice": 24775,
+    "basePrice": 24977,
     "active": true,
     "ram": "8 GB"
   },
@@ -40770,21 +40770,21 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-find-x9s-256-gb",
     "modelId": "m-oppo-oppo-find-x9s",
     "storage": "256 GB",
-    "basePrice": 41915,
+    "basePrice": 42420,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-find-x9s-512-gb",
     "modelId": "m-oppo-oppo-find-x9s",
     "storage": "512 GB",
-    "basePrice": 44945,
+    "basePrice": 45450,
     "active": true
   },
   {
     "id": "v-m-oppo-oppo-find-x9-ultra-512-gb-12-gb",
     "modelId": "m-oppo-oppo-find-x9-ultra",
     "storage": "512 GB",
-    "basePrice": 79790,
+    "basePrice": 80588,
     "active": true,
     "ram": "12 GB"
   },
@@ -40792,7 +40792,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-oppo-oppo-reno16-5g-256-gb-8-gb",
     "modelId": "m-oppo-oppo-reno16-5g",
     "storage": "256 GB",
-    "basePrice": 37370,
+    "basePrice": 38380,
     "active": true,
     "ram": "8 GB"
   },
@@ -40808,7 +40808,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f1-64-gb-6-gb",
     "modelId": "m-poco-poco-f1",
     "storage": "64 GB",
-    "basePrice": 3171,
+    "basePrice": 3203,
     "active": true,
     "ram": "6 GB"
   },
@@ -40816,7 +40816,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f1-128-gb-6-gb",
     "modelId": "m-poco-poco-f1",
     "storage": "128 GB",
-    "basePrice": 3323,
+    "basePrice": 3356,
     "active": true,
     "ram": "6 GB"
   },
@@ -40824,7 +40824,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f1-256-gb-8-gb",
     "modelId": "m-poco-poco-f1",
     "storage": "256 GB",
-    "basePrice": 3636,
+    "basePrice": 3672,
     "active": true,
     "ram": "8 GB"
   },
@@ -40832,7 +40832,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x2-64-gb-6-gb",
     "modelId": "m-poco-poco-x2",
     "storage": "64 GB",
-    "basePrice": 4282,
+    "basePrice": 4325,
     "active": true,
     "ram": "6 GB"
   },
@@ -40840,7 +40840,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x2-128-gb-6-gb",
     "modelId": "m-poco-poco-x2",
     "storage": "128 GB",
-    "basePrice": 4555,
+    "basePrice": 4601,
     "active": true,
     "ram": "6 GB"
   },
@@ -40848,7 +40848,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x2-256-gb-8-gb",
     "modelId": "m-poco-poco-x2",
     "storage": "256 GB",
-    "basePrice": 4777,
+    "basePrice": 4825,
     "active": true,
     "ram": "8 GB"
   },
@@ -40856,7 +40856,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m2-pro-64-gb-4-gb",
     "modelId": "m-poco-poco-m2-pro",
     "storage": "64 GB",
-    "basePrice": 4404,
+    "basePrice": 4979,
     "active": true,
     "ram": "4 GB"
   },
@@ -40864,7 +40864,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m2-pro-64-gb-6-gb",
     "modelId": "m-poco-poco-m2-pro",
     "storage": "64 GB",
-    "basePrice": 4898,
+    "basePrice": 4979,
     "active": true,
     "ram": "6 GB"
   },
@@ -40872,7 +40872,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m2-pro-128-gb-6-gb",
     "modelId": "m-poco-poco-m2-pro",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 5121,
     "active": true,
     "ram": "6 GB"
   },
@@ -40896,7 +40896,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m2-128-gb-8-gb",
     "modelId": "m-poco-poco-m2",
     "storage": "128 GB",
-    "basePrice": 4394,
+    "basePrice": 4284,
     "active": true,
     "ram": "8 GB"
   },
@@ -40912,7 +40912,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c3-64-gb-4-gb",
     "modelId": "m-poco-poco-c3",
     "storage": "64 GB",
-    "basePrice": 3363,
+    "basePrice": 3397,
     "active": true,
     "ram": "4 GB"
   },
@@ -40920,7 +40920,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x3-64-gb-6-gb",
     "modelId": "m-poco-poco-x3",
     "storage": "64 GB",
-    "basePrice": 4626,
+    "basePrice": 4737,
     "active": true,
     "ram": "6 GB"
   },
@@ -40928,7 +40928,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x3-128-gb-6-gb",
     "modelId": "m-poco-poco-x3",
     "storage": "128 GB",
-    "basePrice": 4969,
+    "basePrice": 5161,
     "active": true,
     "ram": "6 GB"
   },
@@ -40936,7 +40936,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x3-128-gb-8-gb",
     "modelId": "m-poco-poco-x3",
     "storage": "128 GB",
-    "basePrice": 5202,
+    "basePrice": 5019,
     "active": true,
     "ram": "8 GB"
   },
@@ -40944,7 +40944,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m3-64-gb-4-gb",
     "modelId": "m-poco-poco-m3",
     "storage": "64 GB",
-    "basePrice": 4282,
+    "basePrice": 4626,
     "active": true,
     "ram": "4 GB"
   },
@@ -40952,7 +40952,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m3-64-gb-6-gb",
     "modelId": "m-poco-poco-m3",
     "storage": "64 GB",
-    "basePrice": 4515,
+    "basePrice": 4626,
     "active": true,
     "ram": "6 GB"
   },
@@ -40960,7 +40960,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m3-128-gb-6-gb",
     "modelId": "m-poco-poco-m3",
     "storage": "128 GB",
-    "basePrice": 4666,
+    "basePrice": 4777,
     "active": true,
     "ram": "6 GB"
   },
@@ -40968,7 +40968,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x3-pro-128-gb-6-gb",
     "modelId": "m-poco-poco-x3-pro",
     "storage": "128 GB",
-    "basePrice": 5333,
+    "basePrice": 5414,
     "active": true,
     "ram": "6 GB"
   },
@@ -40976,7 +40976,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x3-pro-128-gb-8-gb",
     "modelId": "m-poco-poco-x3-pro",
     "storage": "128 GB",
-    "basePrice": 5626,
+    "basePrice": 5386,
     "active": true,
     "ram": "8 GB"
   },
@@ -40984,7 +40984,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m3-pro-5g-64-gb-4-gb",
     "modelId": "m-poco-poco-m3-pro-5g",
     "storage": "64 GB",
-    "basePrice": 5818,
+    "basePrice": 5876,
     "active": true,
     "ram": "4 GB"
   },
@@ -41008,7 +41008,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f3-gt-128-gb-8-gb",
     "modelId": "m-poco-poco-f3-gt",
     "storage": "128 GB",
-    "basePrice": 8221,
+    "basePrice": 8039,
     "active": true,
     "ram": "8 GB"
   },
@@ -41016,7 +41016,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f3-gt-256-gb-8-gb",
     "modelId": "m-poco-poco-f3-gt",
     "storage": "256 GB",
-    "basePrice": 8565,
+    "basePrice": 8651,
     "active": true,
     "ram": "8 GB"
   },
@@ -41024,7 +41024,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m2-reloaded-64-gb-4-gb",
     "modelId": "m-poco-poco-m2-reloaded",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3091,
     "active": true,
     "ram": "4 GB"
   },
@@ -41040,7 +41040,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c31-64-gb-4-gb",
     "modelId": "m-poco-poco-c31",
     "storage": "64 GB",
-    "basePrice": 3788,
+    "basePrice": 3826,
     "active": true,
     "ram": "4 GB"
   },
@@ -41048,7 +41048,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m4-pro-5g-64-gb-4-gb",
     "modelId": "m-poco-poco-m4-pro-5g",
     "storage": "64 GB",
-    "basePrice": 6040,
+    "basePrice": 6100,
     "active": true,
     "ram": "4 GB"
   },
@@ -41056,7 +41056,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m4-pro-5g-128-gb-6-gb",
     "modelId": "m-poco-poco-m4-pro-5g",
     "storage": "128 GB",
-    "basePrice": 6918,
+    "basePrice": 7040,
     "active": true,
     "ram": "6 GB"
   },
@@ -41064,7 +41064,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m4-pro-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-m4-pro-5g",
     "storage": "128 GB",
-    "basePrice": 7191,
+    "basePrice": 6987,
     "active": true,
     "ram": "8 GB"
   },
@@ -41088,7 +41088,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m4-pro-128-gb-8-gb",
     "modelId": "m-poco-poco-m4-pro",
     "storage": "128 GB",
-    "basePrice": 5626,
+    "basePrice": 5478,
     "active": true,
     "ram": "8 GB"
   },
@@ -41112,7 +41112,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x4-pro-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-x4-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8070,
+    "basePrice": 7957,
     "active": true,
     "ram": "8 GB"
   },
@@ -41120,7 +41120,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m4-5g-64-gb-4-gb",
     "modelId": "m-poco-poco-m4-5g",
     "storage": "64 GB",
-    "basePrice": 5919,
+    "basePrice": 5978,
     "active": true,
     "ram": "4 GB"
   },
@@ -41144,7 +41144,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f4-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-f4-5g",
     "storage": "128 GB",
-    "basePrice": 7343,
+    "basePrice": 7181,
     "active": true,
     "ram": "8 GB"
   },
@@ -41160,7 +41160,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m5-64-gb-4-gb",
     "modelId": "m-poco-poco-m5",
     "storage": "64 GB",
-    "basePrice": 3858,
+    "basePrice": 3897,
     "active": true,
     "ram": "4 GB"
   },
@@ -41168,7 +41168,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m5-128-gb-6-gb",
     "modelId": "m-poco-poco-m5",
     "storage": "128 GB",
-    "basePrice": 4050,
+    "basePrice": 4131,
     "active": true,
     "ram": "6 GB"
   },
@@ -41184,7 +41184,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x5-pro-5g-256-gb-8-gb",
     "modelId": "m-poco-poco-x5-pro-5g",
     "storage": "256 GB",
-    "basePrice": 11231,
+    "basePrice": 11383,
     "active": true,
     "ram": "8 GB"
   },
@@ -41192,7 +41192,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c50-32-gb-2-gb",
     "modelId": "m-poco-poco-c50",
     "storage": "32 GB",
-    "basePrice": 4292,
+    "basePrice": 4798,
     "active": true,
     "ram": "2 GB"
   },
@@ -41208,7 +41208,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c55-64-gb-4-gb",
     "modelId": "m-poco-poco-c55",
     "storage": "64 GB",
-    "basePrice": 4898,
+    "basePrice": 4947,
     "active": true,
     "ram": "4 GB"
   },
@@ -41216,7 +41216,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c55-128-gb-6-gb",
     "modelId": "m-poco-poco-c55",
     "storage": "128 GB",
-    "basePrice": 5343,
+    "basePrice": 5474,
     "active": true,
     "ram": "6 GB"
   },
@@ -41240,7 +41240,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c51-64-gb-4-gb",
     "modelId": "m-poco-poco-c51",
     "storage": "64 GB",
-    "basePrice": 4656,
+    "basePrice": 4703,
     "active": true,
     "ram": "4 GB"
   },
@@ -41248,7 +41248,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c51-128-gb-6-gb",
     "modelId": "m-poco-poco-c51",
     "storage": "128 GB",
-    "basePrice": 4848,
+    "basePrice": 4949,
     "active": true,
     "ram": "6 GB"
   },
@@ -41264,7 +41264,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f5-5g-256-gb-12-gb",
     "modelId": "m-poco-poco-f5-5g",
     "storage": "256 GB",
-    "basePrice": 13160,
+    "basePrice": 13362,
     "active": true,
     "ram": "12 GB"
   },
@@ -41304,7 +41304,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c65-128-gb-4-gb",
     "modelId": "m-poco-poco-c65",
     "storage": "128 GB",
-    "basePrice": 4848,
+    "basePrice": 4949,
     "active": true,
     "ram": "4 GB"
   },
@@ -41312,7 +41312,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c65-128-gb-6-gb",
     "modelId": "m-poco-poco-c65",
     "storage": "128 GB",
-    "basePrice": 5100,
+    "basePrice": 5202,
     "active": true,
     "ram": "6 GB"
   },
@@ -41320,7 +41320,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c65-256-gb-8-gb",
     "modelId": "m-poco-poco-c65",
     "storage": "256 GB",
-    "basePrice": 5595,
+    "basePrice": 5696,
     "active": true,
     "ram": "8 GB"
   },
@@ -41344,7 +41344,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x6-5g-512-gb-12-gb",
     "modelId": "m-poco-poco-x6-5g",
     "storage": "512 GB",
-    "basePrice": 12524,
+    "basePrice": 12649,
     "active": true,
     "ram": "12 GB"
   },
@@ -41360,7 +41360,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x6-pro-5g-512-gb-12-gb",
     "modelId": "m-poco-poco-x6-pro-5g",
     "storage": "512 GB",
-    "basePrice": 15594,
+    "basePrice": 15750,
     "active": true,
     "ram": "12 GB"
   },
@@ -41392,7 +41392,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m6-5g-256-gb-8-gb",
     "modelId": "m-poco-poco-m6-5g",
     "storage": "256 GB",
-    "basePrice": 6333,
+    "basePrice": 6484,
     "active": true,
     "ram": "8 GB"
   },
@@ -41400,7 +41400,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c61-64-gb-4-gb",
     "modelId": "m-poco-poco-c61",
     "storage": "64 GB",
-    "basePrice": 4798,
+    "basePrice": 4846,
     "active": true,
     "ram": "4 GB"
   },
@@ -41424,7 +41424,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f6-5g-256-gb-12-gb",
     "modelId": "m-poco-poco-f6-5g",
     "storage": "256 GB",
-    "basePrice": 14554,
+    "basePrice": 14746,
     "active": true,
     "ram": "12 GB"
   },
@@ -41432,7 +41432,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f6-5g-512-gb-12-gb",
     "modelId": "m-poco-poco-f6-5g",
     "storage": "512 GB",
-    "basePrice": 14948,
+    "basePrice": 15097,
     "active": true,
     "ram": "12 GB"
   },
@@ -41440,7 +41440,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x6-neo-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-x6-neo-5g",
     "storage": "128 GB",
-    "basePrice": 8565,
+    "basePrice": 8651,
     "active": true,
     "ram": "8 GB"
   },
@@ -41448,7 +41448,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x6-neo-5g-256-gb-12-gb",
     "modelId": "m-poco-poco-x6-neo-5g",
     "storage": "256 GB",
-    "basePrice": 9009,
+    "basePrice": 9099,
     "active": true,
     "ram": "12 GB"
   },
@@ -41456,14 +41456,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x7-5g-128-gb",
     "modelId": "m-poco-poco-x7-5g",
     "storage": "128 GB",
-    "basePrice": 11464,
+    "basePrice": 11615,
     "active": true
   },
   {
     "id": "v-m-poco-poco-x7-5g-256-gb",
     "modelId": "m-poco-poco-x7-5g",
     "storage": "256 GB",
-    "basePrice": 12120,
+    "basePrice": 12322,
     "active": true
   },
   {
@@ -41486,7 +41486,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c75-5g-64-gb-4-gb",
     "modelId": "m-poco-poco-c75-5g",
     "storage": "64 GB",
-    "basePrice": 5646,
+    "basePrice": 5702,
     "active": true,
     "ram": "4 GB"
   },
@@ -41517,7 +41517,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m6-plus-5g-128-gb-6-gb",
     "modelId": "m-poco-poco-m6-plus-5g",
     "storage": "128 GB",
-    "basePrice": 6464,
+    "basePrice": 6565,
     "active": true,
     "ram": "6 GB"
   },
@@ -41525,7 +41525,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m6-plus-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-m6-plus-5g",
     "storage": "128 GB",
-    "basePrice": 6666,
+    "basePrice": 6529,
     "active": true,
     "ram": "8 GB"
   },
@@ -41533,7 +41533,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m7-5g-128-gb-6-gb",
     "modelId": "m-poco-poco-m7-5g",
     "storage": "128 GB",
-    "basePrice": 5959,
+    "basePrice": 6060,
     "active": true,
     "ram": "6 GB"
   },
@@ -41541,7 +41541,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m7-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-m7-5g",
     "storage": "128 GB",
-    "basePrice": 6616,
+    "basePrice": 6019,
     "active": true,
     "ram": "8 GB"
   },
@@ -41549,7 +41549,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c71-64-gb-4-gb",
     "modelId": "m-poco-poco-c71",
     "storage": "64 GB",
-    "basePrice": 3888,
+    "basePrice": 3927,
     "active": true,
     "ram": "4 GB"
   },
@@ -41565,7 +41565,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-f7-5g-256-gb",
     "modelId": "m-poco-poco-f7-5g",
     "storage": "256 GB",
-    "basePrice": 20907,
+    "basePrice": 21048,
     "active": true
   },
   {
@@ -41595,7 +41595,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m7-plus-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-m7-plus-5g",
     "storage": "128 GB",
-    "basePrice": 9242,
+    "basePrice": 9171,
     "active": true,
     "ram": "8 GB"
   },
@@ -41603,7 +41603,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c85-5g-128-gb-4-gb",
     "modelId": "m-poco-poco-c85-5g",
     "storage": "128 GB",
-    "basePrice": 7726,
+    "basePrice": 7878,
     "active": true,
     "ram": "4 GB"
   },
@@ -41619,7 +41619,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c85-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-c85-5g",
     "storage": "128 GB",
-    "basePrice": 9393,
+    "basePrice": 8585,
     "active": true,
     "ram": "8 GB"
   },
@@ -41635,7 +41635,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-m8-5g-128-gb-8-gb",
     "modelId": "m-poco-poco-m8-5g",
     "storage": "128 GB",
-    "basePrice": 14140,
+    "basePrice": 13955,
     "active": true,
     "ram": "8 GB"
   },
@@ -41651,7 +41651,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c85x-64-gb-4-gb",
     "modelId": "m-poco-poco-c85x",
     "storage": "64 GB",
-    "basePrice": 7524,
+    "basePrice": 7599,
     "active": true,
     "ram": "4 GB"
   },
@@ -41659,7 +41659,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-c85x-128-gb-4-gb",
     "modelId": "m-poco-poco-c85x",
     "storage": "128 GB",
-    "basePrice": 8282,
+    "basePrice": 8365,
     "active": true,
     "ram": "4 GB"
   },
@@ -41675,7 +41675,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x8-pro-256-gb-12-gb",
     "modelId": "m-poco-poco-x8-pro",
     "storage": "256 GB",
-    "basePrice": 23382,
+    "basePrice": 23634,
     "active": true,
     "ram": "12 GB"
   },
@@ -41690,14 +41690,14 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-poco-poco-x8-pro-max-5g-512-gb",
     "modelId": "m-poco-poco-x8-pro-max-5g",
     "storage": "512 GB",
-    "basePrice": 30502,
+    "basePrice": 30805,
     "active": true
   },
   {
     "id": "v-m-poco-poco-c81-64-gb-4-gb",
     "modelId": "m-poco-poco-c81",
     "storage": "64 GB",
-    "basePrice": 7322,
+    "basePrice": 7395,
     "active": true,
     "ram": "4 GB"
   },
@@ -41753,7 +41753,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-2-pro-64-gb-4-gb",
     "modelId": "m-realme-realme-2-pro",
     "storage": "64 GB",
-    "basePrice": 2525,
+    "basePrice": 2808,
     "active": true,
     "ram": "4 GB"
   },
@@ -41761,7 +41761,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-2-pro-64-gb-6-gb",
     "modelId": "m-realme-realme-2-pro",
     "storage": "64 GB",
-    "basePrice": 2717,
+    "basePrice": 2808,
     "active": true,
     "ram": "6 GB"
   },
@@ -41769,7 +41769,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-2-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-2-pro",
     "storage": "128 GB",
-    "basePrice": 2980,
+    "basePrice": 3010,
     "active": true,
     "ram": "8 GB"
   },
@@ -41777,7 +41777,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c1-2019-32-gb-2-gb",
     "modelId": "m-realme-realme-c1-2019",
     "storage": "32 GB",
-    "basePrice": 1838,
+    "basePrice": 2030,
     "active": true,
     "ram": "2 GB"
   },
@@ -41793,7 +41793,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c1-16-gb-2-gb",
     "modelId": "m-realme-realme-c1",
     "storage": "16 GB",
-    "basePrice": 1757,
+    "basePrice": 1775,
     "active": true,
     "ram": "2 GB"
   },
@@ -41809,7 +41809,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-2-64-gb-4-gb",
     "modelId": "m-realme-realme-2",
     "storage": "64 GB",
-    "basePrice": 2788,
+    "basePrice": 2816,
     "active": true,
     "ram": "4 GB"
   },
@@ -41825,7 +41825,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-1-64-gb-4-gb",
     "modelId": "m-realme-realme-1",
     "storage": "64 GB",
-    "basePrice": 2252,
+    "basePrice": 2343,
     "active": true,
     "ram": "4 GB"
   },
@@ -41833,7 +41833,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-1-128-gb-6-gb",
     "modelId": "m-realme-realme-1",
     "storage": "128 GB",
-    "basePrice": 2980,
+    "basePrice": 3121,
     "active": true,
     "ram": "6 GB"
   },
@@ -41849,7 +41849,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-u1-64-gb-4-gb",
     "modelId": "m-realme-realme-u1",
     "storage": "64 GB",
-    "basePrice": 2727,
+    "basePrice": 2454,
     "active": true,
     "ram": "4 GB"
   },
@@ -41865,7 +41865,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3-32-gb-3-gb",
     "modelId": "m-realme-realme-3",
     "storage": "32 GB",
-    "basePrice": 2384,
+    "basePrice": 2464,
     "active": true,
     "ram": "3 GB"
   },
@@ -41873,7 +41873,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3-64-gb-4-gb",
     "modelId": "m-realme-realme-3",
     "storage": "64 GB",
-    "basePrice": 2949,
+    "basePrice": 2727,
     "active": true,
     "ram": "4 GB"
   },
@@ -41881,7 +41881,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3-64-gb-3-gb",
     "modelId": "m-realme-realme-3",
     "storage": "64 GB",
-    "basePrice": 2636,
+    "basePrice": 2727,
     "active": true,
     "ram": "3 GB"
   },
@@ -41889,7 +41889,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3-pro-64-gb-4-gb",
     "modelId": "m-realme-realme-3-pro",
     "storage": "64 GB",
-    "basePrice": 3606,
+    "basePrice": 3656,
     "active": true,
     "ram": "4 GB"
   },
@@ -41905,7 +41905,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3-pro-128-gb-6-gb",
     "modelId": "m-realme-realme-3-pro",
     "storage": "128 GB",
-    "basePrice": 3858,
+    "basePrice": 3939,
     "active": true,
     "ram": "6 GB"
   },
@@ -41913,7 +41913,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c2-16-gb-2-gb",
     "modelId": "m-realme-realme-c2",
     "storage": "16 GB",
-    "basePrice": 1949,
+    "basePrice": 2030,
     "active": true,
     "ram": "2 GB"
   },
@@ -41929,7 +41929,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c2-32-gb-2-gb",
     "modelId": "m-realme-realme-c2",
     "storage": "32 GB",
-    "basePrice": 2222,
+    "basePrice": 2438,
     "active": true,
     "ram": "2 GB"
   },
@@ -41937,7 +41937,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x-128-gb-4-gb",
     "modelId": "m-realme-realme-x",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -41945,7 +41945,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x-128-gb-8-gb",
     "modelId": "m-realme-realme-x",
     "storage": "128 GB",
-    "basePrice": 5353,
+    "basePrice": 5100,
     "active": true,
     "ram": "8 GB"
   },
@@ -41953,7 +41953,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3i-32-gb-3-gb",
     "modelId": "m-realme-realme-3i",
     "storage": "32 GB",
-    "basePrice": 2374,
+    "basePrice": 2464,
     "active": true,
     "ram": "3 GB"
   },
@@ -41961,7 +41961,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-3i-64-gb-4-gb",
     "modelId": "m-realme-realme-3i",
     "storage": "64 GB",
-    "basePrice": 2788,
+    "basePrice": 2816,
     "active": true,
     "ram": "4 GB"
   },
@@ -41969,7 +41969,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-32-gb-3-gb",
     "modelId": "m-realme-realme-5",
     "storage": "32 GB",
-    "basePrice": 2868,
+    "basePrice": 2949,
     "active": true,
     "ram": "3 GB"
   },
@@ -41977,7 +41977,7 @@ const MOBILE_VARIANTS_PART_4: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-64-gb-4-gb",
     "modelId": "m-realme-realme-5",
     "storage": "64 GB",
-    "basePrice": 3171,
+    "basePrice": 3252,
     "active": true,
     "ram": "4 GB"
   }
@@ -41988,7 +41988,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-128-gb-4-gb",
     "modelId": "m-realme-realme-5",
     "storage": "128 GB",
-    "basePrice": 3555,
+    "basePrice": 3626,
     "active": true,
     "ram": "4 GB"
   },
@@ -41996,7 +41996,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-pro-64-gb-4-gb",
     "modelId": "m-realme-realme-5-pro",
     "storage": "64 GB",
-    "basePrice": 3828,
+    "basePrice": 4090,
     "active": true,
     "ram": "4 GB"
   },
@@ -42004,7 +42004,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-pro-64-gb-6-gb",
     "modelId": "m-realme-realme-5-pro",
     "storage": "64 GB",
-    "basePrice": 4020,
+    "basePrice": 4090,
     "active": true,
     "ram": "6 GB"
   },
@@ -42012,7 +42012,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-5-pro",
     "storage": "128 GB",
-    "basePrice": 4171,
+    "basePrice": 4213,
     "active": true,
     "ram": "8 GB"
   },
@@ -42020,7 +42020,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-xt-64-gb-4-gb",
     "modelId": "m-realme-realme-xt",
     "storage": "64 GB",
-    "basePrice": 4626,
+    "basePrice": 4858,
     "active": true,
     "ram": "4 GB"
   },
@@ -42036,7 +42036,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-xt-128-gb-8-gb",
     "modelId": "m-realme-realme-xt",
     "storage": "128 GB",
-    "basePrice": 5090,
+    "basePrice": 5141,
     "active": true,
     "ram": "8 GB"
   },
@@ -42066,7 +42066,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x2-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-x2-pro",
     "storage": "128 GB",
-    "basePrice": 5121,
+    "basePrice": 5302,
     "active": true,
     "ram": "8 GB"
   },
@@ -42082,7 +42082,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x2-64-gb-4-gb",
     "modelId": "m-realme-realme-x2",
     "storage": "64 GB",
-    "basePrice": 4131,
+    "basePrice": 4252,
     "active": true,
     "ram": "4 GB"
   },
@@ -42098,7 +42098,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x2-128-gb-8-gb",
     "modelId": "m-realme-realme-x2",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 5151,
     "active": true,
     "ram": "8 GB"
   },
@@ -42114,7 +42114,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-5i-64-gb-4-gb",
     "modelId": "m-realme-realme-5i",
     "storage": "64 GB",
-    "basePrice": 3990,
+    "basePrice": 4030,
     "active": true,
     "ram": "4 GB"
   },
@@ -42130,7 +42130,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c3-64-gb-4-gb",
     "modelId": "m-realme-realme-c3",
     "storage": "64 GB",
-    "basePrice": 3798,
+    "basePrice": 3836,
     "active": true,
     "ram": "4 GB"
   },
@@ -42138,7 +42138,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c3-32-gb-3-gb",
     "modelId": "m-realme-realme-c3",
     "storage": "32 GB",
-    "basePrice": 3020,
+    "basePrice": 3111,
     "active": true,
     "ram": "3 GB"
   },
@@ -42146,7 +42146,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x50-pro-128-gb-6-gb",
     "modelId": "m-realme-realme-x50-pro",
     "storage": "128 GB",
-    "basePrice": 6575,
+    "basePrice": 6706,
     "active": true,
     "ram": "6 GB"
   },
@@ -42154,7 +42154,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x50-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-x50-pro",
     "storage": "128 GB",
-    "basePrice": 6767,
+    "basePrice": 6641,
     "active": true,
     "ram": "8 GB"
   },
@@ -42170,7 +42170,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6-64-gb-4-gb",
     "modelId": "m-realme-realme-6",
     "storage": "64 GB",
-    "basePrice": 4515,
+    "basePrice": 4646,
     "active": true,
     "ram": "4 GB"
   },
@@ -42178,7 +42178,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6-64-gb-6-gb",
     "modelId": "m-realme-realme-6",
     "storage": "64 GB",
-    "basePrice": 4898,
+    "basePrice": 4989,
     "active": true,
     "ram": "6 GB"
   },
@@ -42202,7 +42202,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6-pro-64-gb-6-gb",
     "modelId": "m-realme-realme-6-pro",
     "storage": "64 GB",
-    "basePrice": 4555,
+    "basePrice": 4646,
     "active": true,
     "ram": "6 GB"
   },
@@ -42210,7 +42210,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6-pro-128-gb-6-gb",
     "modelId": "m-realme-realme-6-pro",
     "storage": "128 GB",
-    "basePrice": 5010,
+    "basePrice": 5070,
     "active": true,
     "ram": "6 GB"
   },
@@ -42218,7 +42218,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-6-pro",
     "storage": "128 GB",
-    "basePrice": 5262,
+    "basePrice": 5060,
     "active": true,
     "ram": "8 GB"
   },
@@ -42226,7 +42226,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-10-128-gb-4-gb",
     "modelId": "m-realme-realme-narzo-10",
     "storage": "128 GB",
-    "basePrice": 4050,
+    "basePrice": 4090,
     "active": true,
     "ram": "4 GB"
   },
@@ -42242,7 +42242,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-10a-64-gb-4-gb",
     "modelId": "m-realme-realme-narzo-10a",
     "storage": "64 GB",
-    "basePrice": 3555,
+    "basePrice": 3591,
     "active": true,
     "ram": "4 GB"
   },
@@ -42258,7 +42258,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x3-128-gb-8-gb",
     "modelId": "m-realme-realme-x3",
     "storage": "128 GB",
-    "basePrice": 5848,
+    "basePrice": 5590,
     "active": true,
     "ram": "8 GB"
   },
@@ -42266,7 +42266,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x3-superzoom-128-gb-8-gb",
     "modelId": "m-realme-realme-x3-superzoom",
     "storage": "128 GB",
-    "basePrice": 5121,
+    "basePrice": 5172,
     "active": true,
     "ram": "8 GB"
   },
@@ -42290,7 +42290,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c11-32-gb-2-gb",
     "modelId": "m-realme-realme-c11",
     "storage": "32 GB",
-    "basePrice": 2717,
+    "basePrice": 2744,
     "active": true,
     "ram": "2 GB"
   },
@@ -42306,7 +42306,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c12-64-gb-4-gb",
     "modelId": "m-realme-realme-c12",
     "storage": "64 GB",
-    "basePrice": 3626,
+    "basePrice": 3662,
     "active": true,
     "ram": "4 GB"
   },
@@ -42314,7 +42314,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6i-64-gb-4-gb",
     "modelId": "m-realme-realme-6i",
     "storage": "64 GB",
-    "basePrice": 4131,
+    "basePrice": 4606,
     "active": true,
     "ram": "4 GB"
   },
@@ -42322,7 +42322,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-6i-64-gb-6-gb",
     "modelId": "m-realme-realme-6i",
     "storage": "64 GB",
-    "basePrice": 4515,
+    "basePrice": 4606,
     "active": true,
     "ram": "6 GB"
   },
@@ -42330,7 +42330,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-7-pro-128-gb-6-gb",
     "modelId": "m-realme-realme-7-pro",
     "storage": "128 GB",
-    "basePrice": 5696,
+    "basePrice": 5797,
     "active": true,
     "ram": "6 GB"
   },
@@ -42338,7 +42338,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-7-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-7-pro",
     "storage": "128 GB",
-    "basePrice": 6161,
+    "basePrice": 5753,
     "active": true,
     "ram": "8 GB"
   },
@@ -42346,7 +42346,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c15-32-gb-3-gb",
     "modelId": "m-realme-realme-c15",
     "storage": "32 GB",
-    "basePrice": 3141,
+    "basePrice": 3232,
     "active": true,
     "ram": "3 GB"
   },
@@ -42362,7 +42362,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c15-64-gb-4-gb",
     "modelId": "m-realme-realme-c15",
     "storage": "64 GB",
-    "basePrice": 3858,
+    "basePrice": 3515,
     "active": true,
     "ram": "4 GB"
   },
@@ -42378,7 +42378,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-7-128-gb-8-gb",
     "modelId": "m-realme-realme-7",
     "storage": "128 GB",
-    "basePrice": 5434,
+    "basePrice": 5488,
     "active": true,
     "ram": "8 GB"
   },
@@ -42394,7 +42394,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-20-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-narzo-20-pro",
     "storage": "128 GB",
-    "basePrice": 4798,
+    "basePrice": 4846,
     "active": true,
     "ram": "8 GB"
   },
@@ -42402,14 +42402,14 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-20-64-gb",
     "modelId": "m-realme-realme-narzo-20",
     "storage": "64 GB",
-    "basePrice": 4434,
+    "basePrice": 4515,
     "active": true
   },
   {
     "id": "v-m-realme-realme-narzo-20-128-gb",
     "modelId": "m-realme-realme-narzo-20",
     "storage": "128 GB",
-    "basePrice": 4777,
+    "basePrice": 4888,
     "active": true
   },
   {
@@ -42424,7 +42424,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-20a-64-gb-4-gb",
     "modelId": "m-realme-realme-narzo-20a",
     "storage": "64 GB",
-    "basePrice": 3858,
+    "basePrice": 3897,
     "active": true,
     "ram": "4 GB"
   },
@@ -42446,7 +42446,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c15-qualcomm-edition-32-gb-3-gb",
     "modelId": "m-realme-realme-c15-qualcomm-edition",
     "storage": "32 GB",
-    "basePrice": 3060,
+    "basePrice": 3161,
     "active": true,
     "ram": "3 GB"
   },
@@ -42454,7 +42454,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c15-qualcomm-edition-64-gb-4-gb",
     "modelId": "m-realme-realme-c15-qualcomm-edition",
     "storage": "64 GB",
-    "basePrice": 3363,
+    "basePrice": 3397,
     "active": true,
     "ram": "4 GB"
   },
@@ -42462,7 +42462,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x7-128-gb-6-gb",
     "modelId": "m-realme-realme-x7",
     "storage": "128 GB",
-    "basePrice": 7302,
+    "basePrice": 7375,
     "active": true,
     "ram": "6 GB"
   },
@@ -42470,7 +42470,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x7-128-gb-8-gb",
     "modelId": "m-realme-realme-x7",
     "storage": "128 GB",
-    "basePrice": 7535,
+    "basePrice": 7375,
     "active": true,
     "ram": "8 GB"
   },
@@ -42478,7 +42478,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x7-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-x7-pro",
     "storage": "128 GB",
-    "basePrice": 7726,
+    "basePrice": 7803,
     "active": true,
     "ram": "8 GB"
   },
@@ -42494,7 +42494,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-30a-64-gb-4-gb",
     "modelId": "m-realme-realme-narzo-30a",
     "storage": "64 GB",
-    "basePrice": 4192,
+    "basePrice": 4234,
     "active": true,
     "ram": "4 GB"
   },
@@ -42510,7 +42510,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-narzo-30-pro-5g-128-gb-8-gb",
     "modelId": "m-realme-realme-narzo-30-pro-5g",
     "storage": "128 GB",
-    "basePrice": 7454,
+    "basePrice": 7529,
     "active": true,
     "ram": "8 GB"
   },
@@ -42518,7 +42518,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-8-128-gb-4-gb",
     "modelId": "m-realme-realme-8",
     "storage": "128 GB",
-    "basePrice": 5393,
+    "basePrice": 5515,
     "active": true,
     "ram": "4 GB"
   },
@@ -42526,7 +42526,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-8-128-gb-6-gb",
     "modelId": "m-realme-realme-8",
     "storage": "128 GB",
-    "basePrice": 5545,
+    "basePrice": 5767,
     "active": true,
     "ram": "6 GB"
   },
@@ -42534,7 +42534,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-8-128-gb-8-gb",
     "modelId": "m-realme-realme-8",
     "storage": "128 GB",
-    "basePrice": 6010,
+    "basePrice": 5767,
     "active": true,
     "ram": "8 GB"
   },
@@ -42550,7 +42550,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-8-pro-128-gb-8-gb",
     "modelId": "m-realme-realme-8-pro",
     "storage": "128 GB",
-    "basePrice": 6383,
+    "basePrice": 6171,
     "active": true,
     "ram": "8 GB"
   },
@@ -42558,7 +42558,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c21-32-gb-3-gb",
     "modelId": "m-realme-realme-c21",
     "storage": "32 GB",
-    "basePrice": 3141,
+    "basePrice": 3232,
     "active": true,
     "ram": "3 GB"
   },
@@ -42566,7 +42566,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c21-64-gb-4-gb",
     "modelId": "m-realme-realme-c21",
     "storage": "64 GB",
-    "basePrice": 3444,
+    "basePrice": 3478,
     "active": true,
     "ram": "4 GB"
   },
@@ -42574,7 +42574,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c20-32-gb-2-gb",
     "modelId": "m-realme-realme-c20",
     "storage": "32 GB",
-    "basePrice": 2596,
+    "basePrice": 2622,
     "active": true,
     "ram": "2 GB"
   },
@@ -42582,7 +42582,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c25-64-gb-4-gb",
     "modelId": "m-realme-realme-c25",
     "storage": "64 GB",
-    "basePrice": 3293,
+    "basePrice": 3326,
     "active": true,
     "ram": "4 GB"
   },
@@ -42598,7 +42598,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x7-max-5g-128-gb-8-gb",
     "modelId": "m-realme-realme-x7-max-5g",
     "storage": "128 GB",
-    "basePrice": 8413,
+    "basePrice": 8497,
     "active": true,
     "ram": "8 GB"
   },
@@ -42606,7 +42606,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-x7-max-5g-256-gb-12-gb",
     "modelId": "m-realme-realme-x7-max-5g",
     "storage": "256 GB",
-    "basePrice": 8797,
+    "basePrice": 8928,
     "active": true,
     "ram": "12 GB"
   },
@@ -42614,21 +42614,21 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-realme-realme-c25s-64-gb",
     "modelId": "m-realme-realme-c25s",
     "storage": "64 GB",
-    "basePrice": 3707,
+    "basePrice": 3788,
     "active": true
   },
   {
     "id": "v-m-realme-realme-c25s-128-gb",
     "modelId": "m-realme-realme-c25s",
     "storage": "128 GB",
-    "basePrice": 3979,
+    "basePrice": 4101,
     "active": true
   },
   {
     "id": "v-m-samsung-samsung-galaxy-a14-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a14-5g",
     "storage": "64 GB",
-    "basePrice": 7280,
+    "basePrice": 7424,
     "active": true,
     "ram": "4 GB"
   },
@@ -42636,7 +42636,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a14-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a14-5g",
     "storage": "128 GB",
-    "basePrice": 7950,
+    "basePrice": 8242,
     "active": true,
     "ram": "4 GB"
   },
@@ -42644,7 +42644,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a14-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a14-5g",
     "storage": "128 GB",
-    "basePrice": 8440,
+    "basePrice": 8625,
     "active": true,
     "ram": "6 GB"
   },
@@ -42652,7 +42652,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a14-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a14-5g",
     "storage": "128 GB",
-    "basePrice": 8970,
+    "basePrice": 9181,
     "active": true,
     "ram": "8 GB"
   },
@@ -42660,7 +42660,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a13",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 3978,
     "active": true,
     "ram": "4 GB"
   },
@@ -42668,7 +42668,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a13",
     "storage": "128 GB",
-    "basePrice": 4282,
+    "basePrice": 4363,
     "active": true,
     "ram": "4 GB"
   },
@@ -42676,7 +42676,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a13",
     "storage": "128 GB",
-    "basePrice": 4858,
+    "basePrice": 4949,
     "active": true,
     "ram": "6 GB"
   },
@@ -42692,7 +42692,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a03-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a03",
     "storage": "64 GB",
-    "basePrice": 2717,
+    "basePrice": 2744,
     "active": true,
     "ram": "4 GB"
   },
@@ -42700,7 +42700,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a03-core-32-gb-2-gb",
     "modelId": "m-samsung-samsung-galaxy-a03-core",
     "storage": "32 GB",
-    "basePrice": 2252,
+    "basePrice": 2275,
     "active": true,
     "ram": "2 GB"
   },
@@ -42708,7 +42708,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a03s-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a03s",
     "storage": "32 GB",
-    "basePrice": 2579,
+    "basePrice": 2252,
     "active": true,
     "ram": "3 GB"
   },
@@ -42716,7 +42716,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a03s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a03s",
     "storage": "64 GB",
-    "basePrice": 3477,
+    "basePrice": 4284,
     "active": true,
     "ram": "4 GB"
   },
@@ -42724,7 +42724,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a10-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a10",
     "storage": "32 GB",
-    "basePrice": 1980,
+    "basePrice": 2000,
     "active": true,
     "ram": "3 GB"
   },
@@ -42732,7 +42732,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a10s-32-gb-2-gb",
     "modelId": "m-samsung-samsung-galaxy-a10s",
     "storage": "32 GB",
-    "basePrice": 2280,
+    "basePrice": 2101,
     "active": true,
     "ram": "2 GB"
   },
@@ -42740,7 +42740,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a10s-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a10s",
     "storage": "32 GB",
-    "basePrice": 2366,
+    "basePrice": 2101,
     "active": true,
     "ram": "3 GB"
   },
@@ -42748,7 +42748,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a12-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a12",
     "storage": "128 GB",
-    "basePrice": 4451,
+    "basePrice": 4050,
     "active": true,
     "ram": "4 GB"
   },
@@ -42756,7 +42756,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a12-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a12",
     "storage": "64 GB",
-    "basePrice": 4071,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -42764,7 +42764,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a12-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a12",
     "storage": "128 GB",
-    "basePrice": 4655,
+    "basePrice": 4262,
     "active": true,
     "ram": "6 GB"
   },
@@ -42772,7 +42772,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a20-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a20",
     "storage": "32 GB",
-    "basePrice": 2565,
+    "basePrice": 2591,
     "active": true,
     "ram": "3 GB"
   },
@@ -42780,7 +42780,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a20s-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a20s",
     "storage": "32 GB",
-    "basePrice": 2812,
+    "basePrice": 2535,
     "active": true,
     "ram": "3 GB"
   },
@@ -42788,7 +42788,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a20s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a20s",
     "storage": "64 GB",
-    "basePrice": 3235,
+    "basePrice": 4080,
     "active": true,
     "ram": "4 GB"
   },
@@ -42796,7 +42796,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a21s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a21s",
     "storage": "64 GB",
-    "basePrice": 3881,
+    "basePrice": 3767,
     "active": true,
     "ram": "4 GB"
   },
@@ -42804,7 +42804,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a21s-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a21s",
     "storage": "64 GB",
-    "basePrice": 4194,
+    "basePrice": 3767,
     "active": true,
     "ram": "6 GB"
   },
@@ -42812,7 +42812,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a21s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a21s",
     "storage": "128 GB",
-    "basePrice": 4427,
+    "basePrice": 3858,
     "active": true,
     "ram": "6 GB"
   },
@@ -42820,7 +42820,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a22-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a22",
     "storage": "128 GB",
-    "basePrice": 4237,
+    "basePrice": 3959,
     "active": true,
     "ram": "4 GB"
   },
@@ -42828,7 +42828,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a22-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a22",
     "storage": "128 GB",
-    "basePrice": 4916,
+    "basePrice": 4525,
     "active": true,
     "ram": "6 GB"
   },
@@ -42836,7 +42836,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a22-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a22-5g",
     "storage": "128 GB",
-    "basePrice": 7082,
+    "basePrice": 6363,
     "active": true,
     "ram": "6 GB"
   },
@@ -42844,7 +42844,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a22-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a22-5g",
     "storage": "128 GB",
-    "basePrice": 7600,
+    "basePrice": 8875,
     "active": true,
     "ram": "8 GB"
   },
@@ -42852,7 +42852,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a23-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a23",
     "storage": "128 GB",
-    "basePrice": 5216,
+    "basePrice": 4696,
     "active": true,
     "ram": "6 GB"
   },
@@ -42860,7 +42860,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a23-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a23",
     "storage": "128 GB",
-    "basePrice": 5790,
+    "basePrice": 6529,
     "active": true,
     "ram": "8 GB"
   },
@@ -42868,7 +42868,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a30-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a30",
     "storage": "64 GB",
-    "basePrice": 2717,
+    "basePrice": 2744,
     "active": true,
     "ram": "4 GB"
   },
@@ -42883,7 +42883,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a30s-64-gb",
     "modelId": "m-samsung-samsung-galaxy-a30s",
     "storage": "64 GB",
-    "basePrice": 2565,
+    "basePrice": 2636,
     "active": true
   },
   {
@@ -42898,7 +42898,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a30s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a30s",
     "storage": "64 GB",
-    "basePrice": 2565,
+    "basePrice": 2636,
     "active": true,
     "ram": "4 GB"
   },
@@ -42906,7 +42906,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a31-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a31",
     "storage": "128 GB",
-    "basePrice": 3828,
+    "basePrice": 3866,
     "active": true,
     "ram": "6 GB"
   },
@@ -42914,7 +42914,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a32-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a32",
     "storage": "128 GB",
-    "basePrice": 5776,
+    "basePrice": 5111,
     "active": true,
     "ram": "6 GB"
   },
@@ -42922,7 +42922,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a32-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a32",
     "storage": "128 GB",
-    "basePrice": 6090,
+    "basePrice": 7243,
     "active": true,
     "ram": "8 GB"
   },
@@ -42930,7 +42930,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a5-2017-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a5-2017",
     "storage": "32 GB",
-    "basePrice": 1091,
+    "basePrice": 1102,
     "active": true,
     "ram": "3 GB"
   },
@@ -42938,7 +42938,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a50-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a50",
     "storage": "64 GB",
-    "basePrice": 3491,
+    "basePrice": 3323,
     "active": true,
     "ram": "4 GB"
   },
@@ -42946,7 +42946,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a50-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a50",
     "storage": "128 GB",
-    "basePrice": 3933,
+    "basePrice": 3515,
     "active": true,
     "ram": "6 GB"
   },
@@ -42954,7 +42954,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a50-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a50",
     "storage": "64 GB",
-    "basePrice": 3748,
+    "basePrice": 3323,
     "active": true,
     "ram": "6 GB"
   },
@@ -42962,7 +42962,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a50s-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a50s",
     "storage": "128 GB",
-    "basePrice": 3296,
+    "basePrice": 3020,
     "active": true,
     "ram": "4 GB"
   },
@@ -42970,7 +42970,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a50s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a50s",
     "storage": "128 GB",
-    "basePrice": 3434,
+    "basePrice": 3141,
     "active": true,
     "ram": "6 GB"
   },
@@ -42978,7 +42978,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a51-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a51",
     "storage": "128 GB",
-    "basePrice": 4536,
+    "basePrice": 4171,
     "active": true,
     "ram": "6 GB"
   },
@@ -42986,7 +42986,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a51-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a51",
     "storage": "128 GB",
-    "basePrice": 4864,
+    "basePrice": 5611,
     "active": true,
     "ram": "8 GB"
   },
@@ -42994,7 +42994,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a52-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a52",
     "storage": "128 GB",
-    "basePrice": 6308,
+    "basePrice": 5504,
     "active": true,
     "ram": "6 GB"
   },
@@ -43002,7 +43002,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a52-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a52",
     "storage": "128 GB",
-    "basePrice": 6707,
+    "basePrice": 8059,
     "active": true,
     "ram": "8 GB"
   },
@@ -43010,7 +43010,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a52s-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a52s-5g",
     "storage": "128 GB",
-    "basePrice": 8797,
+    "basePrice": 7918,
     "active": true,
     "ram": "6 GB"
   },
@@ -43018,7 +43018,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a52s-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a52s-5g",
     "storage": "128 GB",
-    "basePrice": 9324,
+    "basePrice": 11017,
     "active": true,
     "ram": "8 GB"
   },
@@ -43026,7 +43026,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a53-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a53-5g",
     "storage": "128 GB",
-    "basePrice": 7504,
+    "basePrice": 7626,
     "active": true,
     "ram": "6 GB"
   },
@@ -43034,7 +43034,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a53-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a53-5g",
     "storage": "128 GB",
-    "basePrice": 7666,
+    "basePrice": 9283,
     "active": true,
     "ram": "8 GB"
   },
@@ -43050,7 +43050,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a6",
     "storage": "32 GB",
-    "basePrice": 1563,
+    "basePrice": 1343,
     "active": true,
     "ram": "3 GB"
   },
@@ -43058,7 +43058,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-32-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a6",
     "storage": "32 GB",
-    "basePrice": 1738,
+    "basePrice": 1475,
     "active": true,
     "ram": "4 GB"
   },
@@ -43066,7 +43066,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a6",
     "storage": "64 GB",
-    "basePrice": 1966,
+    "basePrice": 1343,
     "active": true,
     "ram": "4 GB"
   },
@@ -43074,7 +43074,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-plus-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a6-plus",
     "storage": "32 GB",
-    "basePrice": 1776,
+    "basePrice": 1525,
     "active": true,
     "ram": "3 GB"
   },
@@ -43082,7 +43082,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-plus-32-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a6-plus",
     "storage": "32 GB",
-    "basePrice": 1919,
+    "basePrice": 1656,
     "active": true,
     "ram": "4 GB"
   },
@@ -43090,7 +43090,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a6-plus-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a6-plus",
     "storage": "64 GB",
-    "basePrice": 2052,
+    "basePrice": 1838,
     "active": true,
     "ram": "4 GB"
   },
@@ -43098,7 +43098,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a7-2016-16-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a7-2016",
     "storage": "16 GB",
-    "basePrice": 1222,
+    "basePrice": 1234,
     "active": true,
     "ram": "3 GB"
   },
@@ -43106,7 +43106,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a7-2017-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a7-2017",
     "storage": "32 GB",
-    "basePrice": 1374,
+    "basePrice": 1388,
     "active": true,
     "ram": "3 GB"
   },
@@ -43114,7 +43114,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a7-2018-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a7-2018",
     "storage": "64 GB",
-    "basePrice": 1838,
+    "basePrice": 2856,
     "active": true,
     "ram": "4 GB"
   },
@@ -43130,7 +43130,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a7-2018-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a7-2018",
     "storage": "128 GB",
-    "basePrice": 3434,
+    "basePrice": 2172,
     "active": true,
     "ram": "6 GB"
   },
@@ -43138,7 +43138,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a70-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a70",
     "storage": "128 GB",
-    "basePrice": 4030,
+    "basePrice": 4070,
     "active": true,
     "ram": "6 GB"
   },
@@ -43146,7 +43146,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a70s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a70s",
     "storage": "128 GB",
-    "basePrice": 4056,
+    "basePrice": 3575,
     "active": true,
     "ram": "6 GB"
   },
@@ -43154,7 +43154,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a70s-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a70s",
     "storage": "128 GB",
-    "basePrice": 4256,
+    "basePrice": 5100,
     "active": true,
     "ram": "8 GB"
   },
@@ -43162,7 +43162,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a71-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a71",
     "storage": "128 GB",
-    "basePrice": 4726,
+    "basePrice": 4192,
     "active": true,
     "ram": "6 GB"
   },
@@ -43170,7 +43170,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a71-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a71",
     "storage": "128 GB",
-    "basePrice": 5225,
+    "basePrice": 5917,
     "active": true,
     "ram": "8 GB"
   },
@@ -43208,21 +43208,21 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a73-5g-128-gb",
     "modelId": "m-samsung-samsung-galaxy-a73-5g",
     "storage": "128 GB",
-    "basePrice": 8777,
+    "basePrice": 8938,
     "active": true
   },
   {
     "id": "v-m-samsung-samsung-galaxy-a73-5g-256-gb",
     "modelId": "m-samsung-samsung-galaxy-a73-5g",
     "storage": "256 GB",
-    "basePrice": 9716,
+    "basePrice": 9858,
     "active": true
   },
   {
     "id": "v-m-samsung-samsung-galaxy-a73-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a73-5g",
     "storage": "256 GB",
-    "basePrice": 9716,
+    "basePrice": 9858,
     "active": true,
     "ram": "8 GB"
   },
@@ -43230,7 +43230,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a73-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a73-5g",
     "storage": "128 GB",
-    "basePrice": 8777,
+    "basePrice": 8938,
     "active": true,
     "ram": "8 GB"
   },
@@ -43238,7 +43238,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a8-plus-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a8-plus",
     "storage": "64 GB",
-    "basePrice": 2323,
+    "basePrice": 2346,
     "active": true,
     "ram": "6 GB"
   },
@@ -43246,7 +43246,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a8-star-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a8-star",
     "storage": "64 GB",
-    "basePrice": 1798,
+    "basePrice": 1816,
     "active": true,
     "ram": "6 GB"
   },
@@ -43254,7 +43254,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a80-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a80",
     "storage": "128 GB",
-    "basePrice": 5010,
+    "basePrice": 5060,
     "active": true,
     "ram": "8 GB"
   },
@@ -43262,7 +43262,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a9-2018-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a9-2018",
     "storage": "128 GB",
-    "basePrice": 3535,
+    "basePrice": 2283,
     "active": true,
     "ram": "6 GB"
   },
@@ -43270,7 +43270,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a9-2018-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a9-2018",
     "storage": "128 GB",
-    "basePrice": 3737,
+    "basePrice": 3570,
     "active": true,
     "ram": "8 GB"
   },
@@ -43278,7 +43278,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a9-pro-32-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a9-pro",
     "storage": "32 GB",
-    "basePrice": 1454,
+    "basePrice": 1469,
     "active": true,
     "ram": "4 GB"
   },
@@ -43286,21 +43286,21 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-c5-32-gb",
     "modelId": "m-samsung-samsung-galaxy-c5",
     "storage": "32 GB",
-    "basePrice": 1970,
+    "basePrice": 1990,
     "active": true
   },
   {
     "id": "v-m-samsung-samsung-galaxy-c5-64-gb",
     "modelId": "m-samsung-samsung-galaxy-c5",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true
   },
   {
     "id": "v-m-samsung-samsung-galaxy-c5-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-c5",
     "storage": "64 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "4 GB"
   },
@@ -43308,7 +43308,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-c5-32-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-c5",
     "storage": "32 GB",
-    "basePrice": 1970,
+    "basePrice": 1990,
     "active": true,
     "ram": "4 GB"
   },
@@ -43316,7 +43316,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-c5-pro-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-c5-pro",
     "storage": "64 GB",
-    "basePrice": 2060,
+    "basePrice": 2081,
     "active": true,
     "ram": "4 GB"
   },
@@ -43324,7 +43324,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-c7-pro-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-c7-pro",
     "storage": "64 GB",
-    "basePrice": 2131,
+    "basePrice": 2152,
     "active": true,
     "ram": "4 GB"
   },
@@ -43332,7 +43332,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-c9-pro-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-c9-pro",
     "storage": "64 GB",
-    "basePrice": 2172,
+    "basePrice": 2194,
     "active": true,
     "ram": "6 GB"
   },
@@ -43340,7 +43340,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f02s-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-f02s",
     "storage": "32 GB",
-    "basePrice": 3102,
+    "basePrice": 2848,
     "active": true,
     "ram": "3 GB"
   },
@@ -43348,7 +43348,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f02s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f02s",
     "storage": "64 GB",
-    "basePrice": 3220,
+    "basePrice": 3978,
     "active": true,
     "ram": "4 GB"
   },
@@ -43356,7 +43356,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f12-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f12",
     "storage": "128 GB",
-    "basePrice": 4194,
+    "basePrice": 3767,
     "active": true,
     "ram": "4 GB"
   },
@@ -43364,7 +43364,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f12-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f12",
     "storage": "64 GB",
-    "basePrice": 3705,
+    "basePrice": 4590,
     "active": true,
     "ram": "4 GB"
   },
@@ -43372,7 +43372,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f13-64-gb",
     "modelId": "m-samsung-samsung-galaxy-f13",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 4020,
     "active": true
   },
   {
@@ -43394,7 +43394,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f13-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f13",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 4020,
     "active": true,
     "ram": "4 GB"
   },
@@ -43402,7 +43402,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f22-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f22",
     "storage": "64 GB",
-    "basePrice": 4166,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -43410,7 +43410,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f22-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f22",
     "storage": "128 GB",
-    "basePrice": 4365,
+    "basePrice": 3929,
     "active": true,
     "ram": "6 GB"
   },
@@ -43418,7 +43418,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold3-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold3-5g",
     "storage": "512 GB",
-    "basePrice": 32825,
+    "basePrice": 21877,
     "active": true,
     "ram": "12 GB"
   },
@@ -43426,7 +43426,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold3-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold3-5g",
     "storage": "256 GB",
-    "basePrice": 32320,
+    "basePrice": 21725,
     "active": true,
     "ram": "12 GB"
   },
@@ -43434,7 +43434,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold2-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold2-5g",
     "storage": "256 GB",
-    "basePrice": 26260,
+    "basePrice": 26523,
     "active": true,
     "ram": "12 GB"
   },
@@ -43442,7 +43442,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-fe",
     "storage": "128 GB",
-    "basePrice": 23533,
+    "basePrice": 24412,
     "active": true,
     "ram": "8 GB"
   },
@@ -43450,7 +43450,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-fe",
     "storage": "256 GB",
-    "basePrice": 25159,
+    "basePrice": 26765,
     "active": true,
     "ram": "8 GB"
   },
@@ -43458,7 +43458,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-20-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-note-20-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 22220,
+    "basePrice": 22442,
     "active": true,
     "ram": "12 GB"
   },
@@ -43466,7 +43466,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip",
     "storage": "256 GB",
-    "basePrice": 19190,
+    "basePrice": 19382,
     "active": true,
     "ram": "8 GB"
   },
@@ -43474,7 +43474,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-plus-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-plus",
     "storage": "128 GB",
-    "basePrice": 9969,
+    "basePrice": 14077,
     "active": true,
     "ram": "8 GB"
   },
@@ -43482,7 +43482,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20",
     "storage": "128 GB",
-    "basePrice": 8646,
+    "basePrice": 12955,
     "active": true,
     "ram": "8 GB"
   },
@@ -43490,7 +43490,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f36-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f36-5g",
     "storage": "256 GB",
-    "basePrice": 14039,
+    "basePrice": 13938,
     "active": true,
     "ram": "8 GB"
   },
@@ -43498,7 +43498,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f36-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f36-5g",
     "storage": "128 GB",
-    "basePrice": 12928,
+    "basePrice": 13057,
     "active": true,
     "ram": "8 GB"
   },
@@ -43506,7 +43506,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f36-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f36-5g",
     "storage": "128 GB",
-    "basePrice": 11817,
+    "basePrice": 11534,
     "active": true,
     "ram": "6 GB"
   },
@@ -43514,7 +43514,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a07-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a07-5g",
     "storage": "128 GB",
-    "basePrice": 11514,
+    "basePrice": 11615,
     "active": true,
     "ram": "6 GB"
   },
@@ -43522,7 +43522,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a07-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a07-5g",
     "storage": "128 GB",
-    "basePrice": 10201,
+    "basePrice": 10272,
     "active": true,
     "ram": "4 GB"
   },
@@ -43530,7 +43530,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m17e-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m17e-5g",
     "storage": "128 GB",
-    "basePrice": 10706,
+    "basePrice": 10605,
     "active": true,
     "ram": "6 GB"
   },
@@ -43538,7 +43538,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m17e-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m17e-5g",
     "storage": "128 GB",
-    "basePrice": 9191,
+    "basePrice": 9090,
     "active": true,
     "ram": "4 GB"
   },
@@ -43546,7 +43546,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip3-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip3-5g",
     "storage": "256 GB",
-    "basePrice": 22220,
+    "basePrice": 12524,
     "active": true,
     "ram": "8 GB"
   },
@@ -43554,7 +43554,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip3-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip3-5g",
     "storage": "128 GB",
-    "basePrice": 21210,
+    "basePrice": 12049,
     "active": true,
     "ram": "8 GB"
   },
@@ -43562,7 +43562,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-fold-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-fold",
     "storage": "512 GB",
-    "basePrice": 18180,
+    "basePrice": 18362,
     "active": true,
     "ram": "12 GB"
   },
@@ -43570,7 +43570,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f56-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f56-5g",
     "storage": "256 GB",
-    "basePrice": 18786,
+    "basePrice": 18756,
     "active": true,
     "ram": "8 GB"
   },
@@ -43578,7 +43578,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f56-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f56-5g",
     "storage": "128 GB",
-    "basePrice": 16261,
+    "basePrice": 16301,
     "active": true,
     "ram": "8 GB"
   },
@@ -43586,7 +43586,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-plus-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10-plus",
     "storage": "512 GB",
-    "basePrice": 16665,
+    "basePrice": 9948,
     "active": true,
     "ram": "12 GB"
   },
@@ -43594,7 +43594,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-plus-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10-plus",
     "storage": "256 GB",
-    "basePrice": 15655,
+    "basePrice": 9837,
     "active": true,
     "ram": "12 GB"
   },
@@ -43602,7 +43602,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m56-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m56-5g",
     "storage": "256 GB",
-    "basePrice": 17372,
+    "basePrice": 17271,
     "active": true,
     "ram": "8 GB"
   },
@@ -43610,7 +43610,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m56-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m56-5g",
     "storage": "128 GB",
-    "basePrice": 15150,
+    "basePrice": 14998,
     "active": true,
     "ram": "8 GB"
   },
@@ -43618,7 +43618,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "1 TB",
-    "basePrice": 30684,
+    "basePrice": 9534,
     "active": true,
     "ram": "12 GB"
   },
@@ -43626,7 +43626,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "512 GB",
-    "basePrice": 27745,
+    "basePrice": 8110,
     "active": true,
     "ram": "8 GB"
   },
@@ -43634,7 +43634,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-plus-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-plus",
     "storage": "128 GB",
-    "basePrice": 24048,
+    "basePrice": 7959,
     "active": true,
     "ram": "8 GB"
   },
@@ -43642,7 +43642,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m17-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m17-5g",
     "storage": "128 GB",
-    "basePrice": 10807,
+    "basePrice": 10706,
     "active": true,
     "ram": "6 GB"
   },
@@ -43650,7 +43650,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m17-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m17-5g",
     "storage": "128 GB",
-    "basePrice": 9494,
+    "basePrice": 9120,
     "active": true,
     "ram": "4 GB"
   },
@@ -43658,7 +43658,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f70e-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f70e-5g",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 9797,
     "active": true,
     "ram": "6 GB"
   },
@@ -43666,7 +43666,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f70e-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f70e-5g",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 8787,
     "active": true,
     "ram": "4 GB"
   },
@@ -43674,7 +43674,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m15-5g-prime-edition-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m15-5g-prime-edition",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 7787,
     "active": true,
     "ram": "8 GB"
   },
@@ -43682,7 +43682,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m15-5g-prime-edition-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m15-5g-prime-edition",
     "storage": "128 GB",
-    "basePrice": 7878,
+    "basePrice": 7787,
     "active": true,
     "ram": "6 GB"
   },
@@ -43698,7 +43698,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a13-5g",
     "storage": "128 GB",
-    "basePrice": 4949,
+    "basePrice": 4998,
     "active": true,
     "ram": "6 GB"
   },
@@ -43706,7 +43706,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a13-5g",
     "storage": "128 GB",
-    "basePrice": 4444,
+    "basePrice": 4998,
     "active": true,
     "ram": "4 GB"
   },
@@ -43714,7 +43714,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a13-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a13-5g",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 3978,
     "active": true,
     "ram": "4 GB"
   },
@@ -43722,7 +43722,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a36-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-a36-5g",
     "storage": "256 GB",
-    "basePrice": 20099,
+    "basePrice": 20038,
     "active": true,
     "ram": "12 GB"
   },
@@ -43730,7 +43730,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a36-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a36-5g",
     "storage": "256 GB",
-    "basePrice": 19089,
+    "basePrice": 19190,
     "active": true,
     "ram": "8 GB"
   },
@@ -43738,7 +43738,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a36-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a36-5g",
     "storage": "128 GB",
-    "basePrice": 18180,
+    "basePrice": 18362,
     "active": true,
     "ram": "8 GB"
   },
@@ -43746,7 +43746,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-5g",
     "storage": "256 GB",
-    "basePrice": 41996,
+    "basePrice": 13504,
     "active": true,
     "ram": "8 GB"
   },
@@ -43754,7 +43754,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-5g",
     "storage": "128 GB",
-    "basePrice": 35279,
+    "basePrice": 12827,
     "active": true,
     "ram": "8 GB"
   },
@@ -43762,7 +43762,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a55-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-a55-5g",
     "storage": "256 GB",
-    "basePrice": 18786,
+    "basePrice": 19079,
     "active": true,
     "ram": "12 GB"
   },
@@ -43770,7 +43770,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a55-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a55-5g",
     "storage": "256 GB",
-    "basePrice": 17675,
+    "basePrice": 17796,
     "active": true,
     "ram": "8 GB"
   },
@@ -43778,7 +43778,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a55-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a55-5g",
     "storage": "128 GB",
-    "basePrice": 16665,
+    "basePrice": 16832,
     "active": true,
     "ram": "8 GB"
   },
@@ -43786,7 +43786,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a56-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-a56-5g",
     "storage": "256 GB",
-    "basePrice": 26765,
+    "basePrice": 26502,
     "active": true,
     "ram": "12 GB"
   },
@@ -43794,7 +43794,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a56-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a56-5g",
     "storage": "256 GB",
-    "basePrice": 25250,
+    "basePrice": 24745,
     "active": true,
     "ram": "8 GB"
   },
@@ -43802,7 +43802,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a56-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a56-5g",
     "storage": "128 GB",
-    "basePrice": 23230,
+    "basePrice": 23462,
     "active": true,
     "ram": "8 GB"
   },
@@ -43810,7 +43810,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m47-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m47-5g",
     "storage": "256 GB",
-    "basePrice": 18180,
+    "basePrice": 18362,
     "active": true,
     "ram": "8 GB"
   },
@@ -43818,7 +43818,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m47-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m47-5g",
     "storage": "128 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "8 GB"
   },
@@ -43826,7 +43826,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m47-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m47-5g",
     "storage": "128 GB",
-    "basePrice": 15654,
+    "basePrice": 16322,
     "active": true,
     "ram": "6 GB"
   },
@@ -43834,7 +43834,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a27-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a27-5g",
     "storage": "256 GB",
-    "basePrice": 18886,
+    "basePrice": 19075,
     "active": true,
     "ram": "8 GB"
   },
@@ -43842,7 +43842,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a27-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a27-5g",
     "storage": "128 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "8 GB"
   },
@@ -43850,7 +43850,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a27-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a27-5g",
     "storage": "128 GB",
-    "basePrice": 15150,
+    "basePrice": 16322,
     "active": true,
     "ram": "6 GB"
   },
@@ -43858,7 +43858,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m55-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-m55-5g",
     "storage": "256 GB",
-    "basePrice": 15251,
+    "basePrice": 15170,
     "active": true,
     "ram": "12 GB"
   },
@@ -43866,7 +43866,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m55-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m55-5g",
     "storage": "256 GB",
-    "basePrice": 14241,
+    "basePrice": 14160,
     "active": true,
     "ram": "8 GB"
   },
@@ -43874,7 +43874,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m55-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m55-5g",
     "storage": "128 GB",
-    "basePrice": 13231,
+    "basePrice": 13363,
     "active": true,
     "ram": "8 GB"
   },
@@ -43882,7 +43882,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f70-pro-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f70-pro-5g",
     "storage": "256 GB",
-    "basePrice": 17674,
+    "basePrice": 17851,
     "active": true,
     "ram": "8 GB"
   },
@@ -43890,7 +43890,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f70-pro-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f70-pro-5g",
     "storage": "128 GB",
-    "basePrice": 15150,
+    "basePrice": 15302,
     "active": true,
     "ram": "8 GB"
   },
@@ -43898,7 +43898,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f70-pro-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f70-pro-5g",
     "storage": "128 GB",
-    "basePrice": 13130,
+    "basePrice": 15302,
     "active": true,
     "ram": "6 GB"
   },
@@ -43906,7 +43906,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a35-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a35-5g",
     "storage": "256 GB",
-    "basePrice": 13736,
+    "basePrice": 13463,
     "active": true,
     "ram": "8 GB"
   },
@@ -43914,7 +43914,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a35-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a35-5g",
     "storage": "128 GB",
-    "basePrice": 12928,
+    "basePrice": 13057,
     "active": true,
     "ram": "8 GB"
   },
@@ -43922,7 +43922,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a25-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a25-5g",
     "storage": "256 GB",
-    "basePrice": 12019,
+    "basePrice": 12029,
     "active": true,
     "ram": "8 GB"
   },
@@ -43930,7 +43930,7 @@ const MOBILE_VARIANTS_PART_5: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a25-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a25-5g",
     "storage": "128 GB",
-    "basePrice": 11817,
+    "basePrice": 11935,
     "active": true,
     "ram": "8 GB"
   }
@@ -43941,7 +43941,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a25-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a25-5g",
     "storage": "128 GB",
-    "basePrice": 10403,
+    "basePrice": 10393,
     "active": true,
     "ram": "6 GB"
   },
@@ -43957,7 +43957,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a26-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a26-5g",
     "storage": "128 GB",
-    "basePrice": 12827,
+    "basePrice": 12955,
     "active": true,
     "ram": "8 GB"
   },
@@ -43973,7 +43973,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a16-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a16",
     "storage": "256 GB",
-    "basePrice": 11514,
+    "basePrice": 11629,
     "active": true,
     "ram": "8 GB"
   },
@@ -43981,7 +43981,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a16-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a16",
     "storage": "128 GB",
-    "basePrice": 9999,
+    "basePrice": 10099,
     "active": true,
     "ram": "6 GB"
   },
@@ -43989,7 +43989,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m55s-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m55s-5g",
     "storage": "256 GB",
-    "basePrice": 12625,
+    "basePrice": 12655,
     "active": true,
     "ram": "8 GB"
   },
@@ -43997,7 +43997,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m55s-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m55s-5g",
     "storage": "128 GB",
-    "basePrice": 11514,
+    "basePrice": 11453,
     "active": true,
     "ram": "8 GB"
   },
@@ -44013,7 +44013,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m36-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m36-5g",
     "storage": "128 GB",
-    "basePrice": 12322,
+    "basePrice": 12445,
     "active": true,
     "ram": "8 GB"
   },
@@ -44021,7 +44021,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m36-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m36-5g",
     "storage": "128 GB",
-    "basePrice": 10807,
+    "basePrice": 10403,
     "active": true,
     "ram": "6 GB"
   },
@@ -44029,7 +44029,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe",
     "storage": "256 GB",
-    "basePrice": 16978,
+    "basePrice": 8151,
     "active": true,
     "ram": "8 GB"
   },
@@ -44037,7 +44037,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe",
     "storage": "128 GB",
-    "basePrice": 16059,
+    "basePrice": 7797,
     "active": true,
     "ram": "8 GB"
   },
@@ -44045,7 +44045,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m35-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m35-5g",
     "storage": "256 GB",
-    "basePrice": 10605,
+    "basePrice": 10645,
     "active": true,
     "ram": "8 GB"
   },
@@ -44053,7 +44053,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m35-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m35-5g",
     "storage": "128 GB",
-    "basePrice": 10302,
+    "basePrice": 10405,
     "active": true,
     "ram": "8 GB"
   },
@@ -44061,7 +44061,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m35-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m35-5g",
     "storage": "128 GB",
-    "basePrice": 9999,
+    "basePrice": 10060,
     "active": true,
     "ram": "6 GB"
   },
@@ -44069,7 +44069,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f17-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f17-5g",
     "storage": "128 GB",
-    "basePrice": 10201,
+    "basePrice": 10100,
     "active": true,
     "ram": "6 GB"
   },
@@ -44077,7 +44077,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f17-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f17-5g",
     "storage": "128 GB",
-    "basePrice": 8989,
+    "basePrice": 8888,
     "active": true,
     "ram": "4 GB"
   },
@@ -44085,7 +44085,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-9-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-note-9",
     "storage": "512 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "8 GB"
   },
@@ -44093,7 +44093,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-9-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-note-9",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 8977,
     "active": true,
     "ram": "6 GB"
   },
@@ -44101,7 +44101,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-256-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "256 GB",
-    "basePrice": 4969,
+    "basePrice": 7447,
     "active": true,
     "ram": "6 GB"
   },
@@ -44109,7 +44109,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "128 GB",
-    "basePrice": 4858,
+    "basePrice": 7141,
     "active": true,
     "ram": "6 GB"
   },
@@ -44117,7 +44117,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-plus-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s9-plus",
     "storage": "64 GB",
-    "basePrice": 4404,
+    "basePrice": 6835,
     "active": true,
     "ram": "6 GB"
   },
@@ -44125,7 +44125,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-256-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "256 GB",
-    "basePrice": 13443,
+    "basePrice": 4909,
     "active": true,
     "ram": "4 GB"
   },
@@ -44133,7 +44133,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "128 GB",
-    "basePrice": 12261,
+    "basePrice": 4646,
     "active": true,
     "ram": "4 GB"
   },
@@ -44141,7 +44141,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s9-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s9",
     "storage": "64 GB",
-    "basePrice": 11009,
+    "basePrice": 4494,
     "active": true,
     "ram": "4 GB"
   },
@@ -44149,7 +44149,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a05-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a05",
     "storage": "128 GB",
-    "basePrice": 5454,
+    "basePrice": 5484,
     "active": true,
     "ram": "6 GB"
   },
@@ -44157,7 +44157,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a05-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a05",
     "storage": "64 GB",
-    "basePrice": 5050,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -44165,7 +44165,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f55-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-f55-5g",
     "storage": "256 GB",
-    "basePrice": 13635,
+    "basePrice": 13463,
     "active": true,
     "ram": "12 GB"
   },
@@ -44173,7 +44173,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f55-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f55-5g",
     "storage": "256 GB",
-    "basePrice": 12625,
+    "basePrice": 12221,
     "active": true,
     "ram": "8 GB"
   },
@@ -44181,7 +44181,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f55-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f55-5g",
     "storage": "128 GB",
-    "basePrice": 11413,
+    "basePrice": 11527,
     "active": true,
     "ram": "8 GB"
   },
@@ -44189,7 +44189,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a16-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a16-5g",
     "storage": "256 GB",
-    "basePrice": 11413,
+    "basePrice": 11362,
     "active": true,
     "ram": "8 GB"
   },
@@ -44197,7 +44197,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a16-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a16-5g",
     "storage": "128 GB",
-    "basePrice": 10908,
+    "basePrice": 11017,
     "active": true,
     "ram": "8 GB"
   },
@@ -44213,7 +44213,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m52-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m52-5g",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 10201,
     "active": true,
     "ram": "8 GB"
   },
@@ -44221,7 +44221,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m52-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m52-5g",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 7373,
     "active": true,
     "ram": "6 GB"
   },
@@ -44229,7 +44229,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a15-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a15-5g",
     "storage": "256 GB",
-    "basePrice": 9999,
+    "basePrice": 10050,
     "active": true,
     "ram": "8 GB"
   },
@@ -44237,7 +44237,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a15-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a15-5g",
     "storage": "128 GB",
-    "basePrice": 9494,
+    "basePrice": 9589,
     "active": true,
     "ram": "8 GB"
   },
@@ -44245,7 +44245,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a15-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a15-5g",
     "storage": "128 GB",
-    "basePrice": 9393,
+    "basePrice": 9292,
     "active": true,
     "ram": "6 GB"
   },
@@ -44253,7 +44253,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f42-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f42-5g",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 10201,
     "active": true,
     "ram": "8 GB"
   },
@@ -44261,7 +44261,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f42-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f42-5g",
     "storage": "128 GB",
-    "basePrice": 9090,
+    "basePrice": 6484,
     "active": true,
     "ram": "6 GB"
   },
@@ -44269,7 +44269,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f16-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f16-5g",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 9292,
     "active": true,
     "ram": "8 GB"
   },
@@ -44277,7 +44277,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f16-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f16-5g",
     "storage": "128 GB",
-    "basePrice": 9191,
+    "basePrice": 9292,
     "active": true,
     "ram": "6 GB"
   },
@@ -44285,7 +44285,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f16-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f16-5g",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 8989,
     "active": true,
     "ram": "4 GB"
   },
@@ -44293,7 +44293,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m16-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m16-5g",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 8868,
     "active": true,
     "ram": "8 GB"
   },
@@ -44301,7 +44301,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m16-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m16-5g",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 8868,
     "active": true,
     "ram": "6 GB"
   },
@@ -44309,7 +44309,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m16-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m16-5g",
     "storage": "128 GB",
-    "basePrice": 8383,
+    "basePrice": 8302,
     "active": true,
     "ram": "4 GB"
   },
@@ -44317,7 +44317,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m15-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m15",
     "storage": "128 GB",
-    "basePrice": 8181,
+    "basePrice": 8263,
     "active": true,
     "ram": "8 GB"
   },
@@ -44325,7 +44325,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m15-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m15",
     "storage": "128 GB",
-    "basePrice": 7777,
+    "basePrice": 8263,
     "active": true,
     "ram": "6 GB"
   },
@@ -44333,7 +44333,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m15-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m15",
     "storage": "128 GB",
-    "basePrice": 7373,
+    "basePrice": 8263,
     "active": true,
     "ram": "4 GB"
   },
@@ -44341,7 +44341,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f14-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f14-5g",
     "storage": "128 GB",
-    "basePrice": 7272,
+    "basePrice": 7353,
     "active": true,
     "ram": "6 GB"
   },
@@ -44349,7 +44349,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f14-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f14-5g",
     "storage": "128 GB",
-    "basePrice": 6969,
+    "basePrice": 7141,
     "active": true,
     "ram": "4 GB"
   },
@@ -44357,7 +44357,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f62-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f62",
     "storage": "128 GB",
-    "basePrice": 7070,
+    "basePrice": 7141,
     "active": true,
     "ram": "8 GB"
   },
@@ -44365,7 +44365,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f62-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f62",
     "storage": "128 GB",
-    "basePrice": 6666,
+    "basePrice": 5141,
     "active": true,
     "ram": "6 GB"
   },
@@ -44373,7 +44373,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-fan-edition-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-note-fan-edition",
     "storage": "64 GB",
-    "basePrice": 6565,
+    "basePrice": 6631,
     "active": true,
     "ram": "4 GB"
   },
@@ -44381,7 +44381,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m51-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m51",
     "storage": "128 GB",
-    "basePrice": 6565,
+    "basePrice": 6631,
     "active": true,
     "ram": "8 GB"
   },
@@ -44389,7 +44389,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m51-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m51",
     "storage": "128 GB",
-    "basePrice": 6262,
+    "basePrice": 4636,
     "active": true,
     "ram": "6 GB"
   },
@@ -44397,7 +44397,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a06-5g",
     "storage": "128 GB",
-    "basePrice": 7777,
+    "basePrice": 7747,
     "active": true,
     "ram": "6 GB"
   },
@@ -44405,7 +44405,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a06-5g",
     "storage": "128 GB",
-    "basePrice": 6969,
+    "basePrice": 7171,
     "active": true,
     "ram": "4 GB"
   },
@@ -44413,7 +44413,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a06-5g",
     "storage": "64 GB",
-    "basePrice": 6060,
+    "basePrice": 6121,
     "active": true,
     "ram": "4 GB"
   },
@@ -44421,7 +44421,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a07-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a07",
     "storage": "64 GB",
-    "basePrice": 5656,
+    "basePrice": 5713,
     "active": true,
     "ram": "4 GB"
   },
@@ -44429,7 +44429,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a05s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a05s",
     "storage": "128 GB",
-    "basePrice": 5959,
+    "basePrice": 5919,
     "active": true,
     "ram": "6 GB"
   },
@@ -44437,7 +44437,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a05s-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a05s",
     "storage": "128 GB",
-    "basePrice": 5454,
+    "basePrice": 5414,
     "active": true,
     "ram": "4 GB"
   },
@@ -44445,7 +44445,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m06-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m06-5g",
     "storage": "128 GB",
-    "basePrice": 6363,
+    "basePrice": 6353,
     "active": true,
     "ram": "6 GB"
   },
@@ -44453,7 +44453,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m06-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m06-5g",
     "storage": "64 GB",
-    "basePrice": 5454,
+    "basePrice": 6121,
     "active": true,
     "ram": "4 GB"
   },
@@ -44461,7 +44461,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m06-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m06-5g",
     "storage": "128 GB",
-    "basePrice": 6060,
+    "basePrice": 5999,
     "active": true,
     "ram": "4 GB"
   },
@@ -44469,7 +44469,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f06-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f06-5g",
     "storage": "128 GB",
-    "basePrice": 6464,
+    "basePrice": 6454,
     "active": true,
     "ram": "6 GB"
   },
@@ -44477,7 +44477,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f06-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f06-5g",
     "storage": "64 GB",
-    "basePrice": 5252,
+    "basePrice": 5815,
     "active": true,
     "ram": "4 GB"
   },
@@ -44485,7 +44485,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f06-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f06-5g",
     "storage": "128 GB",
-    "basePrice": 5757,
+    "basePrice": 5737,
     "active": true,
     "ram": "4 GB"
   },
@@ -44493,7 +44493,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f07-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f07",
     "storage": "64 GB",
-    "basePrice": 5252,
+    "basePrice": 5305,
     "active": true,
     "ram": "4 GB"
   },
@@ -44501,7 +44501,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m12-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m12",
     "storage": "128 GB",
-    "basePrice": 5555,
+    "basePrice": 4262,
     "active": true,
     "ram": "6 GB"
   },
@@ -44509,7 +44509,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m12-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m12",
     "storage": "64 GB",
-    "basePrice": 5252,
+    "basePrice": 5305,
     "active": true,
     "ram": "4 GB"
   },
@@ -44517,7 +44517,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m32",
     "storage": "128 GB",
-    "basePrice": 5959,
+    "basePrice": 4505,
     "active": true,
     "ram": "6 GB"
   },
@@ -44525,7 +44525,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m32",
     "storage": "64 GB",
-    "basePrice": 5050,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -44533,7 +44533,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a06",
     "storage": "128 GB",
-    "basePrice": 5454,
+    "basePrice": 5509,
     "active": true,
     "ram": "6 GB"
   },
@@ -44541,7 +44541,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a06",
     "storage": "128 GB",
-    "basePrice": 5252,
+    "basePrice": 5509,
     "active": true,
     "ram": "4 GB"
   },
@@ -44549,7 +44549,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a06-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a06",
     "storage": "64 GB",
-    "basePrice": 4848,
+    "basePrice": 4818,
     "active": true,
     "ram": "4 GB"
   },
@@ -44557,7 +44557,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m30s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m30s",
     "storage": "128 GB",
-    "basePrice": 4949,
+    "basePrice": 2990,
     "active": true,
     "ram": "6 GB"
   },
@@ -44565,7 +44565,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m30s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m30s",
     "storage": "64 GB",
-    "basePrice": 2707,
+    "basePrice": 4692,
     "active": true,
     "ram": "4 GB"
   },
@@ -44581,7 +44581,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m05-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m05",
     "storage": "64 GB",
-    "basePrice": 4444,
+    "basePrice": 4488,
     "active": true,
     "ram": "4 GB"
   },
@@ -44589,7 +44589,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f05-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f05",
     "storage": "64 GB",
-    "basePrice": 4242,
+    "basePrice": 4284,
     "active": true,
     "ram": "4 GB"
   },
@@ -44597,7 +44597,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m11-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m11",
     "storage": "64 GB",
-    "basePrice": 4141,
+    "basePrice": 4182,
     "active": true,
     "ram": "4 GB"
   },
@@ -44605,7 +44605,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m11-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m11",
     "storage": "32 GB",
-    "basePrice": 3737,
+    "basePrice": 2525,
     "active": true,
     "ram": "3 GB"
   },
@@ -44613,7 +44613,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m02s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m02s",
     "storage": "64 GB",
-    "basePrice": 4040,
+    "basePrice": 4080,
     "active": true,
     "ram": "4 GB"
   },
@@ -44621,7 +44621,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m02s-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m02s",
     "storage": "32 GB",
-    "basePrice": 3434,
+    "basePrice": 2363,
     "active": true,
     "ram": "3 GB"
   },
@@ -44629,7 +44629,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a04s-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a04s",
     "storage": "128 GB",
-    "basePrice": 3535,
+    "basePrice": 3596,
     "active": true,
     "ram": "4 GB"
   },
@@ -44637,7 +44637,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a04s-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a04s",
     "storage": "64 GB",
-    "basePrice": 3333,
+    "basePrice": 3366,
     "active": true,
     "ram": "4 GB"
   },
@@ -44645,7 +44645,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a04-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a04",
     "storage": "128 GB",
-    "basePrice": 3838,
+    "basePrice": 3767,
     "active": true,
     "ram": "4 GB"
   },
@@ -44653,7 +44653,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a04-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-a04",
     "storage": "64 GB",
-    "basePrice": 3131,
+    "basePrice": 3101,
     "active": true,
     "ram": "4 GB"
   },
@@ -44661,7 +44661,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a04-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-a04",
     "storage": "32 GB",
-    "basePrice": 2525,
+    "basePrice": 2485,
     "active": true,
     "ram": "3 GB"
   },
@@ -44669,7 +44669,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m01-core-32-gb-2-gb",
     "modelId": "m-samsung-samsung-galaxy-m01-core",
     "storage": "32 GB",
-    "basePrice": 2124,
+    "basePrice": 2145,
     "active": true,
     "ram": "2 GB"
   },
@@ -44677,7 +44677,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m01-core-16-gb-2-gb",
     "modelId": "m-samsung-samsung-galaxy-m01-core",
     "storage": "16 GB",
-    "basePrice": 1919,
+    "basePrice": 1938,
     "active": true,
     "ram": "2 GB"
   },
@@ -44685,7 +44685,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a33-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a33",
     "storage": "128 GB",
-    "basePrice": 9191,
+    "basePrice": 9283,
     "active": true,
     "ram": "8 GB"
   },
@@ -44693,7 +44693,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a33-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a33",
     "storage": "128 GB",
-    "basePrice": 8787,
+    "basePrice": 9283,
     "active": true,
     "ram": "6 GB"
   },
@@ -44701,7 +44701,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a34-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a34-5g",
     "storage": "256 GB",
-    "basePrice": 11413,
+    "basePrice": 11787,
     "active": true,
     "ram": "8 GB"
   },
@@ -44709,7 +44709,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a34-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a34-5g",
     "storage": "128 GB",
-    "basePrice": 10706,
+    "basePrice": 10813,
     "active": true,
     "ram": "8 GB"
   },
@@ -44717,7 +44717,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a34-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a34-5g",
     "storage": "128 GB",
-    "basePrice": 10403,
+    "basePrice": 10029,
     "active": true,
     "ram": "6 GB"
   },
@@ -44725,7 +44725,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a54-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a54-5g",
     "storage": "256 GB",
-    "basePrice": 14443,
+    "basePrice": 14524,
     "active": true,
     "ram": "8 GB"
   },
@@ -44733,7 +44733,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a54-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-a54-5g",
     "storage": "128 GB",
-    "basePrice": 13332,
+    "basePrice": 13251,
     "active": true,
     "ram": "8 GB"
   },
@@ -44741,7 +44741,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-a54-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-a54-5g",
     "storage": "128 GB",
-    "basePrice": 13130,
+    "basePrice": 13251,
     "active": true,
     "ram": "6 GB"
   },
@@ -44749,7 +44749,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f04-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f04",
     "storage": "64 GB",
-    "basePrice": 4040,
+    "basePrice": 4080,
     "active": true,
     "ram": "4 GB"
   },
@@ -44757,7 +44757,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f15-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f15-5g",
     "storage": "128 GB",
-    "basePrice": 9393,
+    "basePrice": 8878,
     "active": true,
     "ram": "8 GB"
   },
@@ -44765,7 +44765,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f15-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f15-5g",
     "storage": "128 GB",
-    "basePrice": 8686,
+    "basePrice": 8878,
     "active": true,
     "ram": "6 GB"
   },
@@ -44773,7 +44773,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f15-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f15-5g",
     "storage": "128 GB",
-    "basePrice": 7575,
+    "basePrice": 7797,
     "active": true,
     "ram": "4 GB"
   },
@@ -44781,7 +44781,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f23-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f23-5g",
     "storage": "128 GB",
-    "basePrice": 8888,
+    "basePrice": 6424,
     "active": true,
     "ram": "6 GB"
   },
@@ -44789,7 +44789,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f23-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-f23-5g",
     "storage": "128 GB",
-    "basePrice": 8787,
+    "basePrice": 6272,
     "active": true,
     "ram": "4 GB"
   },
@@ -44797,7 +44797,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f34-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f34-5g",
     "storage": "128 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "8 GB"
   },
@@ -44805,7 +44805,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f34-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f34-5g",
     "storage": "128 GB",
-    "basePrice": 9090,
+    "basePrice": 9403,
     "active": true,
     "ram": "6 GB"
   },
@@ -44813,7 +44813,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f41-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f41",
     "storage": "128 GB",
-    "basePrice": 5252,
+    "basePrice": 3828,
     "active": true,
     "ram": "6 GB"
   },
@@ -44821,7 +44821,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f41-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-f41",
     "storage": "64 GB",
-    "basePrice": 4646,
+    "basePrice": 3323,
     "active": true,
     "ram": "6 GB"
   },
@@ -44829,7 +44829,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-f54-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-f54-5g",
     "storage": "256 GB",
-    "basePrice": 10908,
+    "basePrice": 11017,
     "active": true,
     "ram": "8 GB"
   },
@@ -44837,7 +44837,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip4-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip4",
     "storage": "512 GB",
-    "basePrice": 23230,
+    "basePrice": 23462,
     "active": true,
     "ram": "8 GB"
   },
@@ -44845,7 +44845,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip4-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip4",
     "storage": "256 GB",
-    "basePrice": 22826,
+    "basePrice": 23054,
     "active": true,
     "ram": "8 GB"
   },
@@ -44853,7 +44853,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip4-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip4",
     "storage": "128 GB",
-    "basePrice": 22523,
+    "basePrice": 22748,
     "active": true,
     "ram": "8 GB"
   },
@@ -44861,7 +44861,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip5-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip5",
     "storage": "512 GB",
-    "basePrice": 29290,
+    "basePrice": 29583,
     "active": true,
     "ram": "8 GB"
   },
@@ -44869,7 +44869,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip5-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip5",
     "storage": "256 GB",
-    "basePrice": 27775,
+    "basePrice": 28053,
     "active": true,
     "ram": "8 GB"
   },
@@ -44877,7 +44877,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold4-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold4",
     "storage": "1 TB",
-    "basePrice": 42925,
+    "basePrice": 43354,
     "active": true,
     "ram": "12 GB"
   },
@@ -44885,7 +44885,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold4-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold4",
     "storage": "512 GB",
-    "basePrice": 40400,
+    "basePrice": 40804,
     "active": true,
     "ram": "12 GB"
   },
@@ -44893,7 +44893,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold4-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold4",
     "storage": "256 GB",
-    "basePrice": 38380,
+    "basePrice": 38764,
     "active": true,
     "ram": "12 GB"
   },
@@ -44901,7 +44901,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold5-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold5",
     "storage": "1 TB",
-    "basePrice": 55550,
+    "basePrice": 56106,
     "active": true,
     "ram": "12 GB"
   },
@@ -44909,7 +44909,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold5-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold5",
     "storage": "512 GB",
-    "basePrice": 53530,
+    "basePrice": 54065,
     "active": true,
     "ram": "12 GB"
   },
@@ -44917,7 +44917,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold5-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold5",
     "storage": "256 GB",
-    "basePrice": 51510,
+    "basePrice": 52025,
     "active": true,
     "ram": "12 GB"
   },
@@ -44925,7 +44925,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold6-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold6",
     "storage": "1 TB",
-    "basePrice": 73730,
+    "basePrice": 74467,
     "active": true,
     "ram": "12 GB"
   },
@@ -44933,7 +44933,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold6-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold6",
     "storage": "512 GB",
-    "basePrice": 72720,
+    "basePrice": 73447,
     "active": true,
     "ram": "12 GB"
   },
@@ -44941,7 +44941,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold6-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold6",
     "storage": "256 GB",
-    "basePrice": 70700,
+    "basePrice": 71407,
     "active": true,
     "ram": "12 GB"
   },
@@ -44949,7 +44949,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m02-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m02",
     "storage": "32 GB",
-    "basePrice": 3838,
+    "basePrice": 2788,
     "active": true,
     "ram": "3 GB"
   },
@@ -44957,7 +44957,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m02-32-gb-2-gb",
     "modelId": "m-samsung-samsung-galaxy-m02",
     "storage": "32 GB",
-    "basePrice": 3535,
+    "basePrice": 2788,
     "active": true,
     "ram": "2 GB"
   },
@@ -44965,7 +44965,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m04-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m04",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 3788,
     "active": true,
     "ram": "4 GB"
   },
@@ -44973,7 +44973,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m04-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m04",
     "storage": "64 GB",
-    "basePrice": 4848,
+    "basePrice": 3646,
     "active": true,
     "ram": "4 GB"
   },
@@ -44981,7 +44981,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m10-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m10",
     "storage": "32 GB",
-    "basePrice": 3535,
+    "basePrice": 3570,
     "active": true,
     "ram": "3 GB"
   },
@@ -44989,7 +44989,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m10-16-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m10",
     "storage": "16 GB",
-    "basePrice": 3030,
+    "basePrice": 3060,
     "active": true,
     "ram": "3 GB"
   },
@@ -44997,7 +44997,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m13-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m13",
     "storage": "128 GB",
-    "basePrice": 6161,
+    "basePrice": 4596,
     "active": true,
     "ram": "6 GB"
   },
@@ -45005,7 +45005,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m13-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m13",
     "storage": "64 GB",
-    "basePrice": 5757,
+    "basePrice": 5815,
     "active": true,
     "ram": "4 GB"
   },
@@ -45013,7 +45013,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m13-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m13-5g",
     "storage": "128 GB",
-    "basePrice": 7575,
+    "basePrice": 6646,
     "active": true,
     "ram": "6 GB"
   },
@@ -45021,7 +45021,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m13-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m13-5g",
     "storage": "64 GB",
-    "basePrice": 7373,
+    "basePrice": 7447,
     "active": true,
     "ram": "4 GB"
   },
@@ -45029,7 +45029,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m14-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m14-5g",
     "storage": "128 GB",
-    "basePrice": 7676,
+    "basePrice": 7838,
     "active": true,
     "ram": "6 GB"
   },
@@ -45037,7 +45037,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m14-5g-128-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m14-5g",
     "storage": "128 GB",
-    "basePrice": 7575,
+    "basePrice": 7646,
     "active": true,
     "ram": "4 GB"
   },
@@ -45045,7 +45045,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m14-5g-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m14-5g",
     "storage": "64 GB",
-    "basePrice": 7373,
+    "basePrice": 7447,
     "active": true,
     "ram": "4 GB"
   },
@@ -45053,7 +45053,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m20-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m20",
     "storage": "64 GB",
-    "basePrice": 3232,
+    "basePrice": 3264,
     "active": true,
     "ram": "4 GB"
   },
@@ -45061,7 +45061,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m20-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m20",
     "storage": "32 GB",
-    "basePrice": 3030,
+    "basePrice": 2172,
     "active": true,
     "ram": "3 GB"
   },
@@ -45069,7 +45069,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m21-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m21",
     "storage": "128 GB",
-    "basePrice": 5050,
+    "basePrice": 3505,
     "active": true,
     "ram": "6 GB"
   },
@@ -45077,7 +45077,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m21-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m21",
     "storage": "64 GB",
-    "basePrice": 4545,
+    "basePrice": 4590,
     "active": true,
     "ram": "4 GB"
   },
@@ -45085,7 +45085,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m21-2021-edition-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m21-2021-edition",
     "storage": "128 GB",
-    "basePrice": 4848,
+    "basePrice": 3555,
     "active": true,
     "ram": "6 GB"
   },
@@ -45093,7 +45093,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m21-2021-edition-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m21-2021-edition",
     "storage": "64 GB",
-    "basePrice": 4545,
+    "basePrice": 4590,
     "active": true,
     "ram": "4 GB"
   },
@@ -45101,7 +45101,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m30-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m30",
     "storage": "128 GB",
-    "basePrice": 4040,
+    "basePrice": 3030,
     "active": true,
     "ram": "6 GB"
   },
@@ -45109,7 +45109,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m30-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m30",
     "storage": "64 GB",
-    "basePrice": 3837,
+    "basePrice": 2737,
     "active": true,
     "ram": "4 GB"
   },
@@ -45117,7 +45117,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m30-32-gb-3-gb",
     "modelId": "m-samsung-samsung-galaxy-m30",
     "storage": "32 GB",
-    "basePrice": 3535,
+    "basePrice": 2545,
     "active": true,
     "ram": "3 GB"
   },
@@ -45125,7 +45125,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m31-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m31",
     "storage": "128 GB",
-    "basePrice": 4949,
+    "basePrice": 4998,
     "active": true,
     "ram": "8 GB"
   },
@@ -45133,7 +45133,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m31-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m31",
     "storage": "128 GB",
-    "basePrice": 4747,
+    "basePrice": 3717,
     "active": true,
     "ram": "6 GB"
   },
@@ -45141,7 +45141,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m31-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m31",
     "storage": "64 GB",
-    "basePrice": 4343,
+    "basePrice": 3384,
     "active": true,
     "ram": "6 GB"
   },
@@ -45149,7 +45149,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m31s-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m31s",
     "storage": "128 GB",
-    "basePrice": 5555,
+    "basePrice": 5611,
     "active": true,
     "ram": "8 GB"
   },
@@ -45157,7 +45157,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m31s-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m31s",
     "storage": "128 GB",
-    "basePrice": 4747,
+    "basePrice": 3676,
     "active": true,
     "ram": "6 GB"
   },
@@ -45165,7 +45165,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m32-5g",
     "storage": "128 GB",
-    "basePrice": 8383,
+    "basePrice": 8467,
     "active": true,
     "ram": "8 GB"
   },
@@ -45173,7 +45173,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m32-5g",
     "storage": "128 GB",
-    "basePrice": 7878,
+    "basePrice": 6706,
     "active": true,
     "ram": "6 GB"
   },
@@ -45181,7 +45181,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-prime-edition-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-m32-prime-edition",
     "storage": "64 GB",
-    "basePrice": 5252,
+    "basePrice": 5305,
     "active": true,
     "ram": "4 GB"
   },
@@ -45189,7 +45189,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m32-prime-edition-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m32-prime-edition",
     "storage": "128 GB",
-    "basePrice": 5454,
+    "basePrice": 5282,
     "active": true,
     "ram": "6 GB"
   },
@@ -45197,7 +45197,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m33-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m33-5g",
     "storage": "128 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "8 GB"
   },
@@ -45205,7 +45205,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m33-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m33-5g",
     "storage": "128 GB",
-    "basePrice": 9292,
+    "basePrice": 6929,
     "active": true,
     "ram": "6 GB"
   },
@@ -45213,7 +45213,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m34-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m34-5g",
     "storage": "256 GB",
-    "basePrice": 9393,
+    "basePrice": 9605,
     "active": true,
     "ram": "8 GB"
   },
@@ -45221,7 +45221,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m34-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m34-5g",
     "storage": "128 GB",
-    "basePrice": 9090,
+    "basePrice": 9181,
     "active": true,
     "ram": "8 GB"
   },
@@ -45229,7 +45229,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m34-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m34-5g",
     "storage": "128 GB",
-    "basePrice": 8686,
+    "basePrice": 9211,
     "active": true,
     "ram": "6 GB"
   },
@@ -45237,7 +45237,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m42-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m42-5g",
     "storage": "128 GB",
-    "basePrice": 8686,
+    "basePrice": 8773,
     "active": true,
     "ram": "8 GB"
   },
@@ -45245,7 +45245,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m42-5g-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-m42-5g",
     "storage": "128 GB",
-    "basePrice": 8383,
+    "basePrice": 6464,
     "active": true,
     "ram": "6 GB"
   },
@@ -45253,7 +45253,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-m53-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-m53-5g",
     "storage": "128 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "8 GB"
   },
@@ -45261,7 +45261,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10",
     "storage": "256 GB",
-    "basePrice": 13130,
+    "basePrice": 13261,
     "active": true,
     "ram": "8 GB"
   },
@@ -45269,7 +45269,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10",
     "storage": "128 GB",
-    "basePrice": 12625,
+    "basePrice": 12751,
     "active": true,
     "ram": "8 GB"
   },
@@ -45277,7 +45277,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-lite-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10-lite",
     "storage": "128 GB",
-    "basePrice": 8787,
+    "basePrice": 8875,
     "active": true,
     "ram": "8 GB"
   },
@@ -45285,7 +45285,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-lite-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10-lite",
     "storage": "128 GB",
-    "basePrice": 8585,
+    "basePrice": 5696,
     "active": true,
     "ram": "6 GB"
   },
@@ -45293,7 +45293,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-10-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-note-10-plus-5g",
     "storage": "512 GB",
-    "basePrice": 16160,
+    "basePrice": 16322,
     "active": true,
     "ram": "12 GB"
   },
@@ -45301,7 +45301,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-20-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-note-20",
     "storage": "256 GB",
-    "basePrice": 13635,
+    "basePrice": 13771,
     "active": true,
     "ram": "8 GB"
   },
@@ -45309,7 +45309,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-8-256-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-note-8",
     "storage": "256 GB",
-    "basePrice": 8686,
+    "basePrice": 8773,
     "active": true,
     "ram": "6 GB"
   },
@@ -45317,7 +45317,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-8-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-note-8",
     "storage": "128 GB",
-    "basePrice": 8080,
+    "basePrice": 8161,
     "active": true,
     "ram": "6 GB"
   },
@@ -45325,7 +45325,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-note-8-64-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-note-8",
     "storage": "64 GB",
-    "basePrice": 7777,
+    "basePrice": 7855,
     "active": true,
     "ram": "6 GB"
   },
@@ -45333,7 +45333,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-on8-2018-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-on8-2018",
     "storage": "64 GB",
-    "basePrice": 3030,
+    "basePrice": 3060,
     "active": true,
     "ram": "4 GB"
   },
@@ -45341,7 +45341,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10",
     "storage": "512 GB",
-    "basePrice": 24361,
+    "basePrice": 7797,
     "active": true,
     "ram": "8 GB"
   },
@@ -45349,7 +45349,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10",
     "storage": "128 GB",
-    "basePrice": 22250,
+    "basePrice": 10711,
     "active": true,
     "ram": "8 GB"
   },
@@ -45357,7 +45357,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-lite-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-lite",
     "storage": "512 GB",
-    "basePrice": 20301,
+    "basePrice": 6525,
     "active": true,
     "ram": "8 GB"
   },
@@ -45365,7 +45365,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s10-lite-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s10-lite",
     "storage": "128 GB",
-    "basePrice": 17311,
+    "basePrice": 6100,
     "active": true,
     "ram": "8 GB"
   },
@@ -45373,7 +45373,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-fe-5g",
     "storage": "128 GB",
-    "basePrice": 16059,
+    "basePrice": 12853,
     "active": true,
     "ram": "8 GB"
   },
@@ -45381,7 +45381,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-ultra-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-ultra-5g",
     "storage": "128 GB",
-    "basePrice": 13908,
+    "basePrice": 18872,
     "active": true,
     "ram": "12 GB"
   },
@@ -45389,7 +45389,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s20-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s20-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 14918,
+    "basePrice": 19382,
     "active": true,
     "ram": "12 GB"
   },
@@ -45397,7 +45397,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-fe-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-fe-5g",
     "storage": "256 GB",
-    "basePrice": 12352,
+    "basePrice": 12433,
     "active": true,
     "ram": "8 GB"
   },
@@ -45405,7 +45405,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-fe-5g",
     "storage": "128 GB",
-    "basePrice": 11544,
+    "basePrice": 11595,
     "active": true,
     "ram": "8 GB"
   },
@@ -45413,7 +45413,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-plus-5g",
     "storage": "256 GB",
-    "basePrice": 44329,
+    "basePrice": 14443,
     "active": true,
     "ram": "8 GB"
   },
@@ -45421,7 +45421,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-plus-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-plus-5g",
     "storage": "128 GB",
-    "basePrice": 43602,
+    "basePrice": 13110,
     "active": true,
     "ram": "8 GB"
   },
@@ -45429,7 +45429,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-ultra-5g-512-gb-16-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 56812,
+    "basePrice": 19907,
     "active": true,
     "ram": "16 GB"
   },
@@ -45437,7 +45437,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s21-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s21-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 56206,
+    "basePrice": 17695,
     "active": true,
     "ram": "12 GB"
   },
@@ -45445,7 +45445,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-5g",
     "storage": "256 GB",
-    "basePrice": 16645,
+    "basePrice": 17412,
     "active": true,
     "ram": "8 GB"
   },
@@ -45453,7 +45453,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-5g",
     "storage": "128 GB",
-    "basePrice": 15726,
+    "basePrice": 21422,
     "active": true,
     "ram": "8 GB"
   },
@@ -45461,7 +45461,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-plus-5g",
     "storage": "256 GB",
-    "basePrice": 18099,
+    "basePrice": 18695,
     "active": true,
     "ram": "8 GB"
   },
@@ -45469,7 +45469,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-plus-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-plus-5g",
     "storage": "128 GB",
-    "basePrice": 16726,
+    "basePrice": 22850,
     "active": true,
     "ram": "8 GB"
   },
@@ -45477,7 +45477,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 28017,
+    "basePrice": 28825,
     "active": true,
     "ram": "12 GB"
   },
@@ -45485,7 +45485,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 27290,
+    "basePrice": 28007,
     "active": true,
     "ram": "12 GB"
   },
@@ -45493,7 +45493,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s22-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s22-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 24715,
+    "basePrice": 26048,
     "active": true,
     "ram": "12 GB"
   },
@@ -45501,7 +45501,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-5g",
     "storage": "256 GB",
-    "basePrice": 24099,
+    "basePrice": 24553,
     "active": true,
     "ram": "8 GB"
   },
@@ -45509,7 +45509,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-5g",
     "storage": "128 GB",
-    "basePrice": 22725,
+    "basePrice": 22917,
     "active": true,
     "ram": "8 GB"
   },
@@ -45517,7 +45517,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-fe-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-fe-5g",
     "storage": "256 GB",
-    "basePrice": 18544,
+    "basePrice": 18857,
     "active": true,
     "ram": "8 GB"
   },
@@ -45525,7 +45525,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-fe-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-fe-5g",
     "storage": "128 GB",
-    "basePrice": 18059,
+    "basePrice": 20402,
     "active": true,
     "ram": "8 GB"
   },
@@ -45533,7 +45533,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-plus-5g-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-plus-5g",
     "storage": "512 GB",
-    "basePrice": 26967,
+    "basePrice": 27765,
     "active": true,
     "ram": "8 GB"
   },
@@ -45541,7 +45541,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-plus-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-plus-5g",
     "storage": "256 GB",
-    "basePrice": 25472,
+    "basePrice": 33969,
     "active": true,
     "ram": "8 GB"
   },
@@ -45549,7 +45549,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 39097,
+    "basePrice": 40016,
     "active": true,
     "ram": "12 GB"
   },
@@ -45557,7 +45557,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 35794,
+    "basePrice": 36653,
     "active": true,
     "ram": "12 GB"
   },
@@ -45565,7 +45565,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s23-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s23-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 34552,
+    "basePrice": 35673,
     "active": true,
     "ram": "12 GB"
   },
@@ -45573,7 +45573,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "512 GB",
-    "basePrice": 36108,
+    "basePrice": 36976,
     "active": true,
     "ram": "8 GB"
   },
@@ -45581,7 +45581,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "128 GB",
-    "basePrice": 32280,
+    "basePrice": 33572,
     "active": true,
     "ram": "8 GB"
   },
@@ -45589,7 +45589,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-5g-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-5g",
     "storage": "256 GB",
-    "basePrice": 35057,
+    "basePrice": 36118,
     "active": true,
     "ram": "8 GB"
   },
@@ -45597,7 +45597,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-plus-5g",
     "storage": "512 GB",
-    "basePrice": 38754,
+    "basePrice": 39380,
     "active": true,
     "ram": "12 GB"
   },
@@ -45605,7 +45605,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-plus-5g",
     "storage": "256 GB",
-    "basePrice": 38572,
+    "basePrice": 39380,
     "active": true,
     "ram": "12 GB"
   },
@@ -45613,7 +45613,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-1021-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 58984,
+    "basePrice": 64357,
     "active": true,
     "ram": "12 GB"
   },
@@ -45621,7 +45621,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 54742,
+    "basePrice": 64256,
     "active": true,
     "ram": "12 GB"
   },
@@ -45629,7 +45629,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s24-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s24-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 51308,
+    "basePrice": 63771,
     "active": true,
     "ram": "12 GB"
   },
@@ -45637,7 +45637,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "512 GB",
-    "basePrice": 44790,
+    "basePrice": 44662,
     "active": true,
     "ram": "12 GB"
   },
@@ -45645,7 +45645,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "256 GB",
-    "basePrice": 42870,
+    "basePrice": 42935,
     "active": true,
     "ram": "12 GB"
   },
@@ -45653,7 +45653,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-5g-128-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-5g",
     "storage": "128 GB",
-    "basePrice": 42210,
+    "basePrice": 42268,
     "active": true,
     "ram": "12 GB"
   },
@@ -45661,7 +45661,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "512 GB",
-    "basePrice": 51030,
+    "basePrice": 52833,
     "active": true,
     "ram": "12 GB"
   },
@@ -45669,7 +45669,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-plus-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-plus-5g",
     "storage": "256 GB",
-    "basePrice": 49610,
+    "basePrice": 49490,
     "active": true,
     "ram": "12 GB"
   },
@@ -45677,7 +45677,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 72760,
+    "basePrice": 73962,
     "active": true,
     "ram": "12 GB"
   },
@@ -45685,7 +45685,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 70200,
+    "basePrice": 70599,
     "active": true,
     "ram": "12 GB"
   },
@@ -45693,7 +45693,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-ultra-5g-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 65750,
+    "basePrice": 66155,
     "active": true,
     "ram": "12 GB"
   },
@@ -45701,7 +45701,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-edge-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-edge",
     "storage": "512 GB",
-    "basePrice": 49338,
+    "basePrice": 50904,
     "active": true,
     "ram": "12 GB"
   },
@@ -45709,7 +45709,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-edge-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-edge",
     "storage": "256 GB",
-    "basePrice": 42905,
+    "basePrice": 44188,
     "active": true,
     "ram": "12 GB"
   },
@@ -45717,7 +45717,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-512-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "512 GB",
-    "basePrice": 38764,
+    "basePrice": 39895,
     "active": true,
     "ram": "8 GB"
   },
@@ -45725,7 +45725,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-256-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "256 GB",
-    "basePrice": 35279,
+    "basePrice": 35855,
     "active": true,
     "ram": "8 GB"
   },
@@ -45733,7 +45733,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s25-fe-128-gb-8-gb",
     "modelId": "m-samsung-samsung-galaxy-s25-fe",
     "storage": "128 GB",
-    "basePrice": 31310,
+    "basePrice": 32320,
     "active": true,
     "ram": "8 GB"
   },
@@ -45741,7 +45741,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s8-plus-128-gb-6-gb",
     "modelId": "m-samsung-samsung-galaxy-s8-plus",
     "storage": "128 GB",
-    "basePrice": 12888,
+    "basePrice": 4080,
     "active": true,
     "ram": "6 GB"
   },
@@ -45749,7 +45749,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-s8-plus-64-gb-4-gb",
     "modelId": "m-samsung-samsung-galaxy-s8-plus",
     "storage": "64 GB",
-    "basePrice": 11383,
+    "basePrice": 6325,
     "active": true,
     "ram": "4 GB"
   },
@@ -45757,7 +45757,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip-6-512-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip-6",
     "storage": "512 GB",
-    "basePrice": 41410,
+    "basePrice": 41824,
     "active": true,
     "ram": "12 GB"
   },
@@ -45765,7 +45765,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-flip-6-256-gb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-flip-6",
     "storage": "256 GB",
-    "basePrice": 37370,
+    "basePrice": 37744,
     "active": true,
     "ram": "12 GB"
   },
@@ -45789,7 +45789,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-samsung-samsung-galaxy-z-fold-6-1-tb-12-gb",
     "modelId": "m-samsung-samsung-galaxy-z-fold-6",
     "storage": "1 TB",
-    "basePrice": 71942,
+    "basePrice": 79568,
     "active": true,
     "ram": "12 GB"
   },
@@ -45805,7 +45805,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-4-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-4",
     "storage": "64 GB",
-    "basePrice": 1990,
+    "basePrice": 2010,
     "active": true,
     "ram": "4 GB"
   },
@@ -45821,7 +45821,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-12-air-64-gb-4-gb",
     "modelId": "m-tecno-tecno-camon-12-air",
     "storage": "64 GB",
-    "basePrice": 2161,
+    "basePrice": 2183,
     "active": true,
     "ram": "4 GB"
   },
@@ -45829,7 +45829,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-15-pro-128-gb-6-gb",
     "modelId": "m-tecno-tecno-camon-15-pro",
     "storage": "128 GB",
-    "basePrice": 3313,
+    "basePrice": 3346,
     "active": true,
     "ram": "6 GB"
   },
@@ -45837,7 +45837,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-15-64-gb-4-gb",
     "modelId": "m-tecno-tecno-camon-15",
     "storage": "64 GB",
-    "basePrice": 2434,
+    "basePrice": 2458,
     "active": true,
     "ram": "4 GB"
   },
@@ -45845,7 +45845,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-5-32-gb-2-gb",
     "modelId": "m-tecno-tecno-spark-5",
     "storage": "32 GB",
-    "basePrice": 1949,
+    "basePrice": 1968,
     "active": true,
     "ram": "2 GB"
   },
@@ -45853,7 +45853,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-6-air-32-gb-2-gb",
     "modelId": "m-tecno-tecno-spark-6-air",
     "storage": "32 GB",
-    "basePrice": 1687,
+    "basePrice": 1858,
     "active": true,
     "ram": "2 GB"
   },
@@ -45877,7 +45877,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-5-pro-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-5-pro",
     "storage": "64 GB",
-    "basePrice": 2414,
+    "basePrice": 2438,
     "active": true,
     "ram": "4 GB"
   },
@@ -45885,7 +45885,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-power-2-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-power-2",
     "storage": "64 GB",
-    "basePrice": 2293,
+    "basePrice": 2316,
     "active": true,
     "ram": "4 GB"
   },
@@ -45893,7 +45893,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-power-2-air-32-gb-3-gb",
     "modelId": "m-tecno-tecno-spark-power-2-air",
     "storage": "32 GB",
-    "basePrice": 2131,
+    "basePrice": 2152,
     "active": true,
     "ram": "3 GB"
   },
@@ -45901,7 +45901,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-16-64-gb-4-gb",
     "modelId": "m-tecno-tecno-camon-16",
     "storage": "64 GB",
-    "basePrice": 2697,
+    "basePrice": 2724,
     "active": true,
     "ram": "4 GB"
   },
@@ -45909,7 +45909,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-64-gb-4-gb",
     "modelId": "m-tecno-tecno-pova",
     "storage": "64 GB",
-    "basePrice": 2656,
+    "basePrice": 2683,
     "active": true,
     "ram": "4 GB"
   },
@@ -45925,7 +45925,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-16-premier-128-gb-8-gb",
     "modelId": "m-tecno-tecno-camon-16-premier",
     "storage": "128 GB",
-    "basePrice": 3888,
+    "basePrice": 3927,
     "active": true,
     "ram": "8 GB"
   },
@@ -45933,7 +45933,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-7-pro-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-7-pro",
     "storage": "64 GB",
-    "basePrice": 2565,
+    "basePrice": 2969,
     "active": true,
     "ram": "4 GB"
   },
@@ -45949,7 +45949,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-17-128-gb-6-gb",
     "modelId": "m-tecno-tecno-camon-17",
     "storage": "128 GB",
-    "basePrice": 3394,
+    "basePrice": 3428,
     "active": true,
     "ram": "6 GB"
   },
@@ -45957,7 +45957,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-2-64-gb-4-gb",
     "modelId": "m-tecno-tecno-pova-2",
     "storage": "64 GB",
-    "basePrice": 2929,
+    "basePrice": 2958,
     "active": true,
     "ram": "4 GB"
   },
@@ -45973,7 +45973,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-8-64-gb-2-gb",
     "modelId": "m-tecno-tecno-spark-8",
     "storage": "64 GB",
-    "basePrice": 2222,
+    "basePrice": 2244,
     "active": true,
     "ram": "2 GB"
   },
@@ -45981,7 +45981,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-8t-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-8t",
     "storage": "64 GB",
-    "basePrice": 2757,
+    "basePrice": 2785,
     "active": true,
     "ram": "4 GB"
   },
@@ -45989,7 +45989,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-18-128-gb-4-gb",
     "modelId": "m-tecno-tecno-camon-18",
     "storage": "128 GB",
-    "basePrice": 3444,
+    "basePrice": 3478,
     "active": true,
     "ram": "4 GB"
   },
@@ -45997,7 +45997,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-8-pro-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-8-pro",
     "storage": "64 GB",
-    "basePrice": 2929,
+    "basePrice": 2958,
     "active": true,
     "ram": "4 GB"
   },
@@ -46005,7 +46005,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-5g",
     "storage": "128 GB",
-    "basePrice": 4707,
+    "basePrice": 4754,
     "active": true,
     "ram": "8 GB"
   },
@@ -46013,7 +46013,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-neo-128-gb-6-gb",
     "modelId": "m-tecno-tecno-pova-neo",
     "storage": "128 GB",
-    "basePrice": 2980,
+    "basePrice": 3010,
     "active": true,
     "ram": "6 GB"
   },
@@ -46021,7 +46021,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-x-256-gb-8-gb",
     "modelId": "m-tecno-tecno-phantom-x",
     "storage": "256 GB",
-    "basePrice": 5282,
+    "basePrice": 5335,
     "active": true,
     "ram": "8 GB"
   },
@@ -46029,7 +46029,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-3-64-gb-4-gb",
     "modelId": "m-tecno-tecno-pova-3",
     "storage": "64 GB",
-    "basePrice": 3363,
+    "basePrice": 3397,
     "active": true,
     "ram": "4 GB"
   },
@@ -46045,7 +46045,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-8p-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-8p",
     "storage": "64 GB",
-    "basePrice": 2848,
+    "basePrice": 2876,
     "active": true,
     "ram": "4 GB"
   },
@@ -46053,7 +46053,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-9-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-9",
     "storage": "64 GB",
-    "basePrice": 2666,
+    "basePrice": 2693,
     "active": true,
     "ram": "4 GB"
   },
@@ -46069,7 +46069,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-19-128-gb-6-gb",
     "modelId": "m-tecno-tecno-camon-19",
     "storage": "128 GB",
-    "basePrice": 3686,
+    "basePrice": 3723,
     "active": true,
     "ram": "6 GB"
   },
@@ -46077,7 +46077,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-19-neo-6-gb",
     "modelId": "m-tecno-tecno-camon-19-neo",
     "storage": "6 GB",
-    "basePrice": 3555,
+    "basePrice": 3591,
     "active": true
   },
   {
@@ -46098,7 +46098,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-20-256-gb-8-gb",
     "modelId": "m-tecno-tecno-camon-20",
     "storage": "256 GB",
-    "basePrice": 6918,
+    "basePrice": 6987,
     "active": true,
     "ram": "8 GB"
   },
@@ -46130,7 +46130,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-20-pro-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-camon-20-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8807,
+    "basePrice": 8895,
     "active": true,
     "ram": "8 GB"
   },
@@ -46152,7 +46152,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-x2-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-phantom-x2-5g",
     "storage": "256 GB",
-    "basePrice": 12625,
+    "basePrice": 12751,
     "active": true,
     "ram": "8 GB"
   },
@@ -46160,7 +46160,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-x2-pro-5g-256-gb-12-gb",
     "modelId": "m-tecno-tecno-phantom-x2-pro-5g",
     "storage": "256 GB",
-    "basePrice": 14342,
+    "basePrice": 14485,
     "active": true,
     "ram": "12 GB"
   },
@@ -46168,7 +46168,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-4-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-4",
     "storage": "128 GB",
-    "basePrice": 3818,
+    "basePrice": 3856,
     "active": true,
     "ram": "8 GB"
   },
@@ -46200,7 +46200,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-7p-128-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-7p",
     "storage": "128 GB",
-    "basePrice": 2747,
+    "basePrice": 2774,
     "active": true,
     "ram": "4 GB"
   },
@@ -46208,7 +46208,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-go-2023-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-go-2023",
     "storage": "64 GB",
-    "basePrice": 3838,
+    "basePrice": 3876,
     "active": true,
     "ram": "4 GB"
   },
@@ -46216,7 +46216,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-go-3-64-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-go-3",
     "storage": "64 GB",
-    "basePrice": 5939,
+    "basePrice": 5998,
     "active": true,
     "ram": "4 GB"
   },
@@ -46224,7 +46224,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-30-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-camon-30-5g",
     "storage": "256 GB",
-    "basePrice": 12524,
+    "basePrice": 12649,
     "active": true,
     "ram": "8 GB"
   },
@@ -46232,7 +46232,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-30-premier-5g-512-gb-12-gb",
     "modelId": "m-tecno-tecno-camon-30-premier-5g",
     "storage": "512 GB",
-    "basePrice": 14645,
+    "basePrice": 14791,
     "active": true,
     "ram": "12 GB"
   },
@@ -46240,7 +46240,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-7-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-7-5g",
     "storage": "128 GB",
-    "basePrice": 7524,
+    "basePrice": 7599,
     "active": true,
     "ram": "8 GB"
   },
@@ -46256,7 +46256,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-7-pro-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-7-pro-5g",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 10201,
     "active": true,
     "ram": "8 GB"
   },
@@ -46280,7 +46280,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-curve-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-curve-5g",
     "storage": "128 GB",
-    "basePrice": 9918,
+    "basePrice": 8497,
     "active": true,
     "ram": "8 GB"
   },
@@ -46312,7 +46312,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-camon-20s-pro-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-camon-20s-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8908,
+    "basePrice": 8997,
     "active": true,
     "ram": "8 GB"
   },
@@ -46320,7 +46320,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-v-flip2-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-phantom-v-flip2-5g",
     "storage": "256 GB",
-    "basePrice": 15453,
+    "basePrice": 15608,
     "active": true,
     "ram": "8 GB"
   },
@@ -46328,7 +46328,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-v-fold2-5g-512-gb-12-gb",
     "modelId": "m-tecno-tecno-phantom-v-fold2-5g",
     "storage": "512 GB",
-    "basePrice": 30300,
+    "basePrice": 30603,
     "active": true,
     "ram": "12 GB"
   },
@@ -46336,7 +46336,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-slim-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-slim-5g",
     "storage": "128 GB",
-    "basePrice": 11817,
+    "basePrice": 11935,
     "active": true,
     "ram": "8 GB"
   },
@@ -46344,7 +46344,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-go-5g-128-gb-4-gb",
     "modelId": "m-tecno-tecno-spark-go-5g",
     "storage": "128 GB",
-    "basePrice": 5676,
+    "basePrice": 5733,
     "active": true,
     "ram": "4 GB"
   },
@@ -46352,7 +46352,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-phantom-v-flip-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-phantom-v-flip-5g",
     "storage": "256 GB",
-    "basePrice": 13231,
+    "basePrice": 13363,
     "active": true,
     "ram": "8 GB"
   },
@@ -46360,7 +46360,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-6-pro-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-6-pro-5g",
     "storage": "256 GB",
-    "basePrice": 7777,
+    "basePrice": 7855,
     "active": true,
     "ram": "8 GB"
   },
@@ -46384,7 +46384,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-20-pro-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-spark-20-pro-5g",
     "storage": "128 GB",
-    "basePrice": 7424,
+    "basePrice": 7498,
     "active": true,
     "ram": "8 GB"
   },
@@ -46392,7 +46392,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-spark-20-pro-5g-256-gb-8-gb",
     "modelId": "m-tecno-tecno-spark-20-pro-5g",
     "storage": "256 GB",
-    "basePrice": 7424,
+    "basePrice": 8181,
     "active": true,
     "ram": "8 GB"
   },
@@ -46400,7 +46400,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-5-pro-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-5-pro",
     "storage": "128 GB",
-    "basePrice": 6565,
+    "basePrice": 6631,
     "active": true,
     "ram": "8 GB"
   },
@@ -46416,7 +46416,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pop-x-64-gb-4-gb",
     "modelId": "m-tecno-tecno-pop-x",
     "storage": "64 GB",
-    "basePrice": 5404,
+    "basePrice": 5458,
     "active": true,
     "ram": "4 GB"
   },
@@ -46424,7 +46424,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-tecno-tecno-pova-curve-2-5g-128-gb-8-gb",
     "modelId": "m-tecno-tecno-pova-curve-2-5g",
     "storage": "128 GB",
-    "basePrice": 16867,
+    "basePrice": 17036,
     "active": true,
     "ram": "8 GB"
   },
@@ -46440,7 +46440,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y39-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y39-5g",
     "storage": "128 GB",
-    "basePrice": 12600,
+    "basePrice": 12857,
     "active": true,
     "ram": "8 GB"
   },
@@ -46448,7 +46448,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y39-5g-256-gb-8-gb",
     "modelId": "m-vivo-vivo-y39-5g",
     "storage": "256 GB",
-    "basePrice": 12670,
+    "basePrice": 13696,
     "active": true,
     "ram": "8 GB"
   },
@@ -46456,7 +46456,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v9-pro-64-gb-4-gb",
     "modelId": "m-vivo-vivo-v9-pro",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3232,
     "active": true,
     "ram": "4 GB"
   },
@@ -46464,7 +46464,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v9-pro-64-gb-6-gb",
     "modelId": "m-vivo-vivo-v9-pro",
     "storage": "64 GB",
-    "basePrice": 3171,
+    "basePrice": 3232,
     "active": true,
     "ram": "6 GB"
   },
@@ -46472,7 +46472,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v11-pro-64-gb-6-gb",
     "modelId": "m-vivo-vivo-v11-pro",
     "storage": "64 GB",
-    "basePrice": 3899,
+    "basePrice": 3938,
     "active": true,
     "ram": "6 GB"
   },
@@ -46480,7 +46480,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v11-64-gb-6-gb",
     "modelId": "m-vivo-vivo-v11",
     "storage": "64 GB",
-    "basePrice": 3414,
+    "basePrice": 3448,
     "active": true,
     "ram": "6 GB"
   },
@@ -46488,7 +46488,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y83-pro-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y83-pro",
     "storage": "64 GB",
-    "basePrice": 2676,
+    "basePrice": 2703,
     "active": true,
     "ram": "4 GB"
   },
@@ -46496,7 +46496,7 @@ const MOBILE_VARIANTS_PART_6: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-nex-128-gb-8-gb",
     "modelId": "m-vivo-vivo-nex",
     "storage": "128 GB",
-    "basePrice": 4515,
+    "basePrice": 4560,
     "active": true,
     "ram": "8 GB"
   }
@@ -46507,7 +46507,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y71i-16-gb-2-gb",
     "modelId": "m-vivo-vivo-y71i",
     "storage": "16 GB",
-    "basePrice": 1303,
+    "basePrice": 1316,
     "active": true,
     "ram": "2 GB"
   },
@@ -46515,7 +46515,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y81-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y81",
     "storage": "32 GB",
-    "basePrice": 1798,
+    "basePrice": 1848,
     "active": true,
     "ram": "3 GB"
   },
@@ -46523,7 +46523,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y81-32-gb-4-gb",
     "modelId": "m-vivo-vivo-y81",
     "storage": "32 GB",
-    "basePrice": 2101,
+    "basePrice": 2161,
     "active": true,
     "ram": "4 GB"
   },
@@ -46531,7 +46531,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y83-32-gb-4-gb",
     "modelId": "m-vivo-vivo-y83",
     "storage": "32 GB",
-    "basePrice": 2283,
+    "basePrice": 2306,
     "active": true,
     "ram": "4 GB"
   },
@@ -46539,7 +46539,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v9-youth-32-gb-4-gb",
     "modelId": "m-vivo-vivo-v9-youth",
     "storage": "32 GB",
-    "basePrice": 2252,
+    "basePrice": 2275,
     "active": true,
     "ram": "4 GB"
   },
@@ -46547,7 +46547,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y71-16-gb-3-gb",
     "modelId": "m-vivo-vivo-y71",
     "storage": "16 GB",
-    "basePrice": 1343,
+    "basePrice": 1394,
     "active": true,
     "ram": "3 GB"
   },
@@ -46563,7 +46563,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y71-32-gb-4-gb",
     "modelId": "m-vivo-vivo-y71",
     "storage": "32 GB",
-    "basePrice": 1687,
+    "basePrice": 1737,
     "active": true,
     "ram": "4 GB"
   },
@@ -46571,7 +46571,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x21-128-gb-6-gb",
     "modelId": "m-vivo-vivo-x21",
     "storage": "128 GB",
-    "basePrice": 3676,
+    "basePrice": 3713,
     "active": true,
     "ram": "6 GB"
   },
@@ -46579,7 +46579,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v9-64-gb-4-gb",
     "modelId": "m-vivo-vivo-v9",
     "storage": "64 GB",
-    "basePrice": 2788,
+    "basePrice": 2816,
     "active": true,
     "ram": "4 GB"
   },
@@ -46587,7 +46587,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v7-32-gb-4-gb",
     "modelId": "m-vivo-vivo-v7",
     "storage": "32 GB",
-    "basePrice": 2101,
+    "basePrice": 2122,
     "active": true,
     "ram": "4 GB"
   },
@@ -46595,7 +46595,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v7-plus-64-gb-4-gb",
     "modelId": "m-vivo-vivo-v7-plus",
     "storage": "64 GB",
-    "basePrice": 2182,
+    "basePrice": 2204,
     "active": true,
     "ram": "4 GB"
   },
@@ -46603,7 +46603,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y69-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y69",
     "storage": "32 GB",
-    "basePrice": 1545,
+    "basePrice": 1560,
     "active": true,
     "ram": "3 GB"
   },
@@ -46625,7 +46625,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x9s-64-gb-4-gb",
     "modelId": "m-vivo-vivo-x9s",
     "storage": "64 GB",
-    "basePrice": 2353,
+    "basePrice": 2377,
     "active": true,
     "ram": "4 GB"
   },
@@ -46633,7 +46633,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x9s-plus-64-gb-4-gb",
     "modelId": "m-vivo-vivo-x9s-plus",
     "storage": "64 GB",
-    "basePrice": 2576,
+    "basePrice": 2602,
     "active": true,
     "ram": "4 GB"
   },
@@ -46641,7 +46641,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y55s-16-gb-3-gb",
     "modelId": "m-vivo-vivo-y55s",
     "storage": "16 GB",
-    "basePrice": 1060,
+    "basePrice": 1071,
     "active": true,
     "ram": "3 GB"
   },
@@ -46649,7 +46649,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y66-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y66",
     "storage": "32 GB",
-    "basePrice": 1505,
+    "basePrice": 1520,
     "active": true,
     "ram": "3 GB"
   },
@@ -46665,7 +46665,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v5-plus-64-gb-4-gb",
     "modelId": "m-vivo-vivo-v5-plus",
     "storage": "64 GB",
-    "basePrice": 2222,
+    "basePrice": 2272,
     "active": true,
     "ram": "4 GB"
   },
@@ -46673,7 +46673,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v5-32-gb-4-gb",
     "modelId": "m-vivo-vivo-v5",
     "storage": "32 GB",
-    "basePrice": 1576,
+    "basePrice": 1592,
     "active": true,
     "ram": "4 GB"
   },
@@ -46681,7 +46681,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v3-max-32-gb-4-gb",
     "modelId": "m-vivo-vivo-v3-max",
     "storage": "32 GB",
-    "basePrice": 1576,
+    "basePrice": 1592,
     "active": true,
     "ram": "4 GB"
   },
@@ -46689,7 +46689,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y95-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y95",
     "storage": "64 GB",
-    "basePrice": 3141,
+    "basePrice": 3172,
     "active": true,
     "ram": "4 GB"
   },
@@ -46713,7 +46713,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y81i-16-gb-2-gb",
     "modelId": "m-vivo-vivo-y81i",
     "storage": "16 GB",
-    "basePrice": 1303,
+    "basePrice": 1316,
     "active": true,
     "ram": "2 GB"
   },
@@ -46721,7 +46721,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z10-32-gb-4-gb",
     "modelId": "m-vivo-vivo-z10",
     "storage": "32 GB",
-    "basePrice": 2525,
+    "basePrice": 2550,
     "active": true,
     "ram": "4 GB"
   },
@@ -46729,7 +46729,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y91-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y91",
     "storage": "32 GB",
-    "basePrice": 2101,
+    "basePrice": 2374,
     "active": true,
     "ram": "2 GB"
   },
@@ -46737,7 +46737,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y91-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y91",
     "storage": "32 GB",
-    "basePrice": 2313,
+    "basePrice": 2374,
     "active": true,
     "ram": "3 GB"
   },
@@ -46753,7 +46753,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v15-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v15-pro",
     "storage": "128 GB",
-    "basePrice": 4929,
+    "basePrice": 4846,
     "active": true,
     "ram": "8 GB"
   },
@@ -46761,7 +46761,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y91i-16-gb-2-gb",
     "modelId": "m-vivo-vivo-y91i",
     "storage": "16 GB",
-    "basePrice": 1606,
+    "basePrice": 1656,
     "active": true,
     "ram": "2 GB"
   },
@@ -46769,7 +46769,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y91i-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y91i",
     "storage": "32 GB",
-    "basePrice": 1848,
+    "basePrice": 1866,
     "active": true,
     "ram": "2 GB"
   },
@@ -46785,7 +46785,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v15-64-gb-6-gb",
     "modelId": "m-vivo-vivo-v15",
     "storage": "64 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true,
     "ram": "6 GB"
   },
@@ -46793,7 +46793,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v15-128-gb-6-gb",
     "modelId": "m-vivo-vivo-v15",
     "storage": "128 GB",
-    "basePrice": 4515,
+    "basePrice": 4560,
     "active": true,
     "ram": "6 GB"
   },
@@ -46801,7 +46801,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y17-128-gb-4-gb",
     "modelId": "m-vivo-vivo-y17",
     "storage": "128 GB",
-    "basePrice": 4838,
+    "basePrice": 4886,
     "active": true,
     "ram": "4 GB"
   },
@@ -46809,7 +46809,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y15-2019-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y15-2019",
     "storage": "64 GB",
-    "basePrice": 3808,
+    "basePrice": 3846,
     "active": true,
     "ram": "4 GB"
   },
@@ -46817,7 +46817,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y12-64-gb-3-gb",
     "modelId": "m-vivo-vivo-y12",
     "storage": "64 GB",
-    "basePrice": 4200,
+    "basePrice": 3596,
     "active": true,
     "ram": "3 GB"
   },
@@ -46865,7 +46865,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-s1-128-gb-4-gb",
     "modelId": "m-vivo-vivo-s1",
     "storage": "128 GB",
-    "basePrice": 4242,
+    "basePrice": 4284,
     "active": true,
     "ram": "4 GB"
   },
@@ -46873,7 +46873,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-s1-64-gb-6-gb",
     "modelId": "m-vivo-vivo-s1",
     "storage": "64 GB",
-    "basePrice": 4121,
+    "basePrice": 4162,
     "active": true,
     "ram": "6 GB"
   },
@@ -46881,7 +46881,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-s1-128-gb-6-gb",
     "modelId": "m-vivo-vivo-s1",
     "storage": "128 GB",
-    "basePrice": 4353,
+    "basePrice": 4284,
     "active": true,
     "ram": "6 GB"
   },
@@ -46889,7 +46889,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y90-16-gb-2-gb",
     "modelId": "m-vivo-vivo-y90",
     "storage": "16 GB",
-    "basePrice": 2030,
+    "basePrice": 2050,
     "active": true,
     "ram": "2 GB"
   },
@@ -46897,7 +46897,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-4-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 4400,
+    "basePrice": 3788,
     "active": true,
     "ram": "4 GB"
   },
@@ -46905,7 +46905,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-64-gb-6-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "64 GB",
-    "basePrice": 3979,
+    "basePrice": 4050,
     "active": true,
     "ram": "6 GB"
   },
@@ -46913,7 +46913,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-6-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 4400,
+    "basePrice": 4131,
     "active": true,
     "ram": "6 GB"
   },
@@ -46921,7 +46921,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-z1x-128-gb-8-gb",
     "modelId": "m-vivo-vivo-z1x",
     "storage": "128 GB",
-    "basePrice": 4400,
+    "basePrice": 4131,
     "active": true,
     "ram": "8 GB"
   },
@@ -46929,7 +46929,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v17-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v17-pro",
     "storage": "128 GB",
-    "basePrice": 6010,
+    "basePrice": 6070,
     "active": true,
     "ram": "8 GB"
   },
@@ -46945,7 +46945,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-u10-64-gb-3-gb",
     "modelId": "m-vivo-vivo-u10",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3151,
     "active": true,
     "ram": "3 GB"
   },
@@ -46953,7 +46953,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-u10-64-gb-4-gb",
     "modelId": "m-vivo-vivo-u10",
     "storage": "64 GB",
-    "basePrice": 3373,
+    "basePrice": 3151,
     "active": true,
     "ram": "4 GB"
   },
@@ -46961,7 +46961,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y19-128-gb-4-gb",
     "modelId": "m-vivo-vivo-y19",
     "storage": "128 GB",
-    "basePrice": 4363,
+    "basePrice": 4407,
     "active": true,
     "ram": "4 GB"
   },
@@ -46969,7 +46969,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-u20-64-gb-4-gb",
     "modelId": "m-vivo-vivo-u20",
     "storage": "64 GB",
-    "basePrice": 3575,
+    "basePrice": 3676,
     "active": true,
     "ram": "4 GB"
   },
@@ -46985,7 +46985,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-u20-128-gb-8-gb",
     "modelId": "m-vivo-vivo-u20",
     "storage": "128 GB",
-    "basePrice": 3828,
+    "basePrice": 3866,
     "active": true,
     "ram": "8 GB"
   },
@@ -46993,7 +46993,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v17-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v17",
     "storage": "128 GB",
-    "basePrice": 5888,
+    "basePrice": 5947,
     "active": true,
     "ram": "8 GB"
   },
@@ -47001,7 +47001,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-s1-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-s1-pro",
     "storage": "128 GB",
-    "basePrice": 4929,
+    "basePrice": 4978,
     "active": true,
     "ram": "8 GB"
   },
@@ -47009,7 +47009,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y11-2019-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y11-2019",
     "storage": "32 GB",
-    "basePrice": 2828,
+    "basePrice": 2856,
     "active": true,
     "ram": "3 GB"
   },
@@ -47024,14 +47024,14 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v19-256-gb",
     "modelId": "m-vivo-vivo-v19",
     "storage": "256 GB",
-    "basePrice": 6121,
+    "basePrice": 6212,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-y50-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y50",
     "storage": "128 GB",
-    "basePrice": 5202,
+    "basePrice": 5254,
     "active": true,
     "ram": "8 GB"
   },
@@ -47039,7 +47039,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y30-128-gb-4-gb",
     "modelId": "m-vivo-vivo-y30",
     "storage": "128 GB",
-    "basePrice": 4666,
+    "basePrice": 4747,
     "active": true,
     "ram": "4 GB"
   },
@@ -47055,21 +47055,21 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x50-128-gb",
     "modelId": "m-vivo-vivo-x50",
     "storage": "128 GB",
-    "basePrice": 5777,
+    "basePrice": 5888,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-x50-256-gb",
     "modelId": "m-vivo-vivo-x50",
     "storage": "256 GB",
-    "basePrice": 6010,
+    "basePrice": 6121,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-x50-pro-256-gb-8-gb",
     "modelId": "m-vivo-vivo-x50-pro",
     "storage": "256 GB",
-    "basePrice": 9221,
+    "basePrice": 9313,
     "active": true,
     "ram": "8 GB"
   },
@@ -47077,7 +47077,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v20-128-gb",
     "modelId": "m-vivo-vivo-v20",
     "storage": "128 GB",
-    "basePrice": 6161,
+    "basePrice": 6272,
     "active": true
   },
   {
@@ -47091,7 +47091,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y20i-64-gb-3-gb",
     "modelId": "m-vivo-vivo-y20i",
     "storage": "64 GB",
-    "basePrice": 3707,
+    "basePrice": 3744,
     "active": true,
     "ram": "3 GB"
   },
@@ -47099,7 +47099,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y20-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y20",
     "storage": "64 GB",
-    "basePrice": 4383,
+    "basePrice": 4616,
     "active": true,
     "ram": "4 GB"
   },
@@ -47115,7 +47115,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v20-se-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v20-se",
     "storage": "128 GB",
-    "basePrice": 5818,
+    "basePrice": 5876,
     "active": true,
     "ram": "8 GB"
   },
@@ -47123,7 +47123,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v20-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v20-pro",
     "storage": "128 GB",
-    "basePrice": 8262,
+    "basePrice": 8345,
     "active": true,
     "ram": "8 GB"
   },
@@ -47131,7 +47131,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y51-2020-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y51-2020",
     "storage": "128 GB",
-    "basePrice": 5404,
+    "basePrice": 5458,
     "active": true,
     "ram": "8 GB"
   },
@@ -47139,7 +47139,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y20g-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y20g",
     "storage": "64 GB",
-    "basePrice": 4414,
+    "basePrice": 4458,
     "active": true,
     "ram": "4 GB"
   },
@@ -47155,7 +47155,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v20-2021-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v20-2021",
     "storage": "128 GB",
-    "basePrice": 5585,
+    "basePrice": 5641,
     "active": true,
     "ram": "8 GB"
   },
@@ -47163,7 +47163,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v20-2021-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v20-2021",
     "storage": "256 GB",
-    "basePrice": 5737,
+    "basePrice": 5818,
     "active": true,
     "ram": "8 GB"
   },
@@ -47171,7 +47171,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y51a-128-gb-6-gb",
     "modelId": "m-vivo-vivo-y51a",
     "storage": "128 GB",
-    "basePrice": 4585,
+    "basePrice": 4696,
     "active": true,
     "ram": "6 GB"
   },
@@ -47179,7 +47179,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y51a-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y51a",
     "storage": "128 GB",
-    "basePrice": 4969,
+    "basePrice": 4631,
     "active": true,
     "ram": "8 GB"
   },
@@ -47187,7 +47187,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y20a-64-gb-3-gb",
     "modelId": "m-vivo-vivo-y20a",
     "storage": "64 GB",
-    "basePrice": 3899,
+    "basePrice": 3938,
     "active": true,
     "ram": "3 GB"
   },
@@ -47195,7 +47195,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y31-2021-128-gb-6-gb",
     "modelId": "m-vivo-vivo-y31-2021",
     "storage": "128 GB",
-    "basePrice": 4898,
+    "basePrice": 4947,
     "active": true,
     "ram": "6 GB"
   },
@@ -47203,7 +47203,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x60-128-gb-8-gb",
     "modelId": "m-vivo-vivo-x60",
     "storage": "128 GB",
-    "basePrice": 9595,
+    "basePrice": 9691,
     "active": true,
     "ram": "8 GB"
   },
@@ -47211,7 +47211,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x60-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x60",
     "storage": "256 GB",
-    "basePrice": 10292,
+    "basePrice": 10413,
     "active": true,
     "ram": "12 GB"
   },
@@ -47219,7 +47219,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x60-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x60-pro",
     "storage": "256 GB",
-    "basePrice": 11857,
+    "basePrice": 11976,
     "active": true,
     "ram": "12 GB"
   },
@@ -47227,7 +47227,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x60-pro-plus-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x60-pro-plus",
     "storage": "256 GB",
-    "basePrice": 13443,
+    "basePrice": 13577,
     "active": true,
     "ram": "12 GB"
   },
@@ -47242,28 +47242,28 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v21-5g-256-gb",
     "modelId": "m-vivo-vivo-v21-5g",
     "storage": "256 GB",
-    "basePrice": 8757,
+    "basePrice": 8888,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-v21e-5g-128-gb",
     "modelId": "m-vivo-vivo-v21e-5g",
     "storage": "128 GB",
-    "basePrice": 7494,
+    "basePrice": 7569,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-v21e-5g-256-gb",
     "modelId": "m-vivo-vivo-v21e-5g",
     "storage": "256 GB",
-    "basePrice": 7838,
+    "basePrice": 7916,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-y73-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y73",
     "storage": "128 GB",
-    "basePrice": 6121,
+    "basePrice": 6182,
     "active": true,
     "ram": "8 GB"
   },
@@ -47271,7 +47271,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y72-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y72-5g",
     "storage": "128 GB",
-    "basePrice": 7838,
+    "basePrice": 7916,
     "active": true,
     "ram": "8 GB"
   },
@@ -47279,7 +47279,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y12s-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y12s",
     "storage": "32 GB",
-    "basePrice": 3788,
+    "basePrice": 3826,
     "active": true,
     "ram": "3 GB"
   },
@@ -47287,7 +47287,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y1s-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y1s",
     "storage": "32 GB",
-    "basePrice": 2414,
+    "basePrice": 2636,
     "active": true,
     "ram": "2 GB"
   },
@@ -47303,7 +47303,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y53s-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y53s",
     "storage": "128 GB",
-    "basePrice": 5626,
+    "basePrice": 5682,
     "active": true,
     "ram": "8 GB"
   },
@@ -47327,7 +47327,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y33s-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y33s",
     "storage": "128 GB",
-    "basePrice": 5626,
+    "basePrice": 5682,
     "active": true,
     "ram": "8 GB"
   },
@@ -47335,7 +47335,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y21-2021-64-gb",
     "modelId": "m-vivo-vivo-y21-2021",
     "storage": "64 GB",
-    "basePrice": 4434,
+    "basePrice": 4515,
     "active": true
   },
   {
@@ -47349,7 +47349,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x70-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-x70-pro",
     "storage": "128 GB",
-    "basePrice": 14423,
+    "basePrice": 14567,
     "active": true,
     "ram": "8 GB"
   },
@@ -47357,7 +47357,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x70-pro-256-gb-8-gb",
     "modelId": "m-vivo-vivo-x70-pro",
     "storage": "256 GB",
-    "basePrice": 14988,
+    "basePrice": 15150,
     "active": true,
     "ram": "8 GB"
   },
@@ -47365,7 +47365,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x70-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x70-pro",
     "storage": "256 GB",
-    "basePrice": 15988,
+    "basePrice": 16180,
     "active": true,
     "ram": "12 GB"
   },
@@ -47373,7 +47373,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y3s-2021-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y3s-2021",
     "storage": "32 GB",
-    "basePrice": 2848,
+    "basePrice": 2876,
     "active": true,
     "ram": "2 GB"
   },
@@ -47381,7 +47381,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y20t-64-gb-6-gb",
     "modelId": "m-vivo-vivo-y20t",
     "storage": "64 GB",
-    "basePrice": 4969,
+    "basePrice": 5019,
     "active": true,
     "ram": "6 GB"
   },
@@ -47389,7 +47389,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v23-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v23-5g",
     "storage": "128 GB",
-    "basePrice": 9656,
+    "basePrice": 9753,
     "active": true,
     "ram": "8 GB"
   },
@@ -47397,7 +47397,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v23-5g-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v23-5g",
     "storage": "256 GB",
-    "basePrice": 10666,
+    "basePrice": 10807,
     "active": true,
     "ram": "12 GB"
   },
@@ -47405,7 +47405,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v23-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v23-pro",
     "storage": "128 GB",
-    "basePrice": 10393,
+    "basePrice": 10497,
     "active": true,
     "ram": "8 GB"
   },
@@ -47413,7 +47413,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v23-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v23-pro",
     "storage": "256 GB",
-    "basePrice": 11686,
+    "basePrice": 11803,
     "active": true,
     "ram": "12 GB"
   },
@@ -47421,7 +47421,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y21t-128-gb-4-gb",
     "modelId": "m-vivo-vivo-y21t",
     "storage": "128 GB",
-    "basePrice": 4929,
+    "basePrice": 4978,
     "active": true,
     "ram": "4 GB"
   },
@@ -47437,7 +47437,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-5g-128-gb-6-gb",
     "modelId": "m-vivo-vivo-t1-5g",
     "storage": "128 GB",
-    "basePrice": 7726,
+    "basePrice": 7858,
     "active": true,
     "ram": "6 GB"
   },
@@ -47445,7 +47445,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t1-5g",
     "storage": "128 GB",
-    "basePrice": 8050,
+    "basePrice": 7858,
     "active": true,
     "ram": "8 GB"
   },
@@ -47453,7 +47453,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v23e-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v23e-5g",
     "storage": "128 GB",
-    "basePrice": 8878,
+    "basePrice": 8967,
     "active": true,
     "ram": "8 GB"
   },
@@ -47461,7 +47461,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y75-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y75-5g",
     "storage": "128 GB",
-    "basePrice": 7908,
+    "basePrice": 7987,
     "active": true,
     "ram": "8 GB"
   },
@@ -47469,7 +47469,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y21e-64-gb-3-gb",
     "modelId": "m-vivo-vivo-y21e",
     "storage": "64 GB",
-    "basePrice": 4000,
+    "basePrice": 4040,
     "active": true,
     "ram": "3 GB"
   },
@@ -47477,7 +47477,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y21a-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y21a",
     "storage": "64 GB",
-    "basePrice": 4212,
+    "basePrice": 4254,
     "active": true,
     "ram": "4 GB"
   },
@@ -47485,7 +47485,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y33t-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y33t",
     "storage": "128 GB",
-    "basePrice": 5585,
+    "basePrice": 5641,
     "active": true,
     "ram": "8 GB"
   },
@@ -47493,7 +47493,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y15s-2021-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y15s-2021",
     "storage": "32 GB",
-    "basePrice": 3060,
+    "basePrice": 3091,
     "active": true,
     "ram": "3 GB"
   },
@@ -47501,7 +47501,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y21g-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y21g",
     "storage": "64 GB",
-    "basePrice": 4404,
+    "basePrice": 4448,
     "active": true,
     "ram": "4 GB"
   },
@@ -47509,7 +47509,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x70-pro-plus-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x70-pro-plus",
     "storage": "256 GB",
-    "basePrice": 17665,
+    "basePrice": 17842,
     "active": true,
     "ram": "12 GB"
   },
@@ -47517,7 +47517,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x80-128-gb-8-gb",
     "modelId": "m-vivo-vivo-x80",
     "storage": "128 GB",
-    "basePrice": 15483,
+    "basePrice": 15638,
     "active": true,
     "ram": "8 GB"
   },
@@ -47525,7 +47525,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x80-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x80",
     "storage": "256 GB",
-    "basePrice": 17018,
+    "basePrice": 17170,
     "active": true,
     "ram": "12 GB"
   },
@@ -47533,7 +47533,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x80-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x80-pro",
     "storage": "256 GB",
-    "basePrice": 20533,
+    "basePrice": 20738,
     "active": true,
     "ram": "12 GB"
   },
@@ -47549,7 +47549,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-pro-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t1-pro-5g",
     "storage": "128 GB",
-    "basePrice": 8908,
+    "basePrice": 8783,
     "active": true,
     "ram": "8 GB"
   },
@@ -47557,7 +47557,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-128-gb-4-gb",
     "modelId": "m-vivo-vivo-t1",
     "storage": "128 GB",
-    "basePrice": 5414,
+    "basePrice": 5468,
     "active": true,
     "ram": "4 GB"
   },
@@ -47565,7 +47565,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-128-gb-6-gb",
     "modelId": "m-vivo-vivo-t1",
     "storage": "128 GB",
-    "basePrice": 5818,
+    "basePrice": 5468,
     "active": true,
     "ram": "6 GB"
   },
@@ -47573,7 +47573,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t1",
     "storage": "128 GB",
-    "basePrice": 6232,
+    "basePrice": 5468,
     "active": true,
     "ram": "8 GB"
   },
@@ -47581,7 +47581,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y75-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y75",
     "storage": "128 GB",
-    "basePrice": 6070,
+    "basePrice": 6131,
     "active": true,
     "ram": "8 GB"
   },
@@ -47589,7 +47589,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y01-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y01",
     "storage": "32 GB",
-    "basePrice": 2676,
+    "basePrice": 2703,
     "active": true,
     "ram": "2 GB"
   },
@@ -47597,7 +47597,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1x-64-gb-4-gb",
     "modelId": "m-vivo-vivo-t1x",
     "storage": "64 GB",
-    "basePrice": 4474,
+    "basePrice": 4519,
     "active": true,
     "ram": "4 GB"
   },
@@ -47605,7 +47605,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1x-128-gb-4-gb",
     "modelId": "m-vivo-vivo-t1x",
     "storage": "128 GB",
-    "basePrice": 4858,
+    "basePrice": 4907,
     "active": true,
     "ram": "4 GB"
   },
@@ -47613,7 +47613,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t1x-128-gb-6-gb",
     "modelId": "m-vivo-vivo-t1x",
     "storage": "128 GB",
-    "basePrice": 5242,
+    "basePrice": 4907,
     "active": true,
     "ram": "6 GB"
   },
@@ -47621,7 +47621,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v25-pro-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v25-pro-5g",
     "storage": "128 GB",
-    "basePrice": 12191,
+    "basePrice": 12313,
     "active": true,
     "ram": "8 GB"
   },
@@ -47629,7 +47629,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v25-pro-5g-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v25-pro-5g",
     "storage": "256 GB",
-    "basePrice": 12776,
+    "basePrice": 12918,
     "active": true,
     "ram": "12 GB"
   },
@@ -47637,7 +47637,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y22-2022-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y22-2022",
     "storage": "64 GB",
-    "basePrice": 4666,
+    "basePrice": 4713,
     "active": true,
     "ram": "4 GB"
   },
@@ -47661,7 +47661,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v25-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v25-5g",
     "storage": "128 GB",
-    "basePrice": 9666,
+    "basePrice": 9763,
     "active": true,
     "ram": "8 GB"
   },
@@ -47669,7 +47669,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v25-5g-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v25-5g",
     "storage": "256 GB",
-    "basePrice": 10605,
+    "basePrice": 10736,
     "active": true,
     "ram": "12 GB"
   },
@@ -47709,7 +47709,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y35-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y35",
     "storage": "128 GB",
-    "basePrice": 5454,
+    "basePrice": 5509,
     "active": true,
     "ram": "8 GB"
   },
@@ -47717,7 +47717,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y02-32-gb-3-gb",
     "modelId": "m-vivo-vivo-y02",
     "storage": "32 GB",
-    "basePrice": 3030,
+    "basePrice": 3060,
     "active": true,
     "ram": "3 GB"
   },
@@ -47725,7 +47725,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y100-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y100-5g",
     "storage": "128 GB",
-    "basePrice": 10958,
+    "basePrice": 11068,
     "active": true,
     "ram": "8 GB"
   },
@@ -47733,7 +47733,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y56-5g-128-gb-4-gb",
     "modelId": "m-vivo-vivo-y56-5g",
     "storage": "128 GB",
-    "basePrice": 9110,
+    "basePrice": 9272,
     "active": true,
     "ram": "4 GB"
   },
@@ -47741,7 +47741,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y56-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y56-5g",
     "storage": "128 GB",
-    "basePrice": 10373,
+    "basePrice": 9201,
     "active": true,
     "ram": "8 GB"
   },
@@ -47749,7 +47749,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v27-pro-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v27-pro",
     "storage": "128 GB",
-    "basePrice": 18079,
+    "basePrice": 18260,
     "active": true,
     "ram": "8 GB"
   },
@@ -47757,7 +47757,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v27-pro-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v27-pro",
     "storage": "256 GB",
-    "basePrice": 18715,
+    "basePrice": 18938,
     "active": true,
     "ram": "8 GB"
   },
@@ -47773,7 +47773,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v27-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v27",
     "storage": "128 GB",
-    "basePrice": 15968,
+    "basePrice": 16128,
     "active": true,
     "ram": "8 GB"
   },
@@ -47789,7 +47789,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y01a-32-gb-2-gb",
     "modelId": "m-vivo-vivo-y01a",
     "storage": "32 GB",
-    "basePrice": 2636,
+    "basePrice": 2662,
     "active": true,
     "ram": "2 GB"
   },
@@ -47797,7 +47797,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x90-256-gb-8-gb",
     "modelId": "m-vivo-vivo-x90",
     "storage": "256 GB",
-    "basePrice": 23705,
+    "basePrice": 23942,
     "active": true,
     "ram": "8 GB"
   },
@@ -47805,7 +47805,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x90-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x90",
     "storage": "256 GB",
-    "basePrice": 24492,
+    "basePrice": 23942,
     "active": true,
     "ram": "12 GB"
   },
@@ -47813,7 +47813,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x90-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-x90-pro",
     "storage": "256 GB",
-    "basePrice": 28603,
+    "basePrice": 28889,
     "active": true,
     "ram": "12 GB"
   },
@@ -47821,7 +47821,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y100a-5g-128-gb",
     "modelId": "m-vivo-vivo-y100a-5g",
     "storage": "128 GB",
-    "basePrice": 10777,
+    "basePrice": 10969,
     "active": true
   },
   {
@@ -47835,7 +47835,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y02t-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y02t",
     "storage": "64 GB",
-    "basePrice": 4757,
+    "basePrice": 4805,
     "active": true,
     "ram": "4 GB"
   },
@@ -47843,7 +47843,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t2-5g-128-gb-6-gb",
     "modelId": "m-vivo-vivo-t2-5g",
     "storage": "128 GB",
-    "basePrice": 10777,
+    "basePrice": 10908,
     "active": true,
     "ram": "6 GB"
   },
@@ -47851,7 +47851,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t2-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t2-5g",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 10885,
     "active": true,
     "ram": "8 GB"
   },
@@ -47875,7 +47875,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t2x-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t2x-5g",
     "storage": "128 GB",
-    "basePrice": 10595,
+    "basePrice": 10312,
     "active": true,
     "ram": "8 GB"
   },
@@ -47883,21 +47883,21 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v29e-128-gb",
     "modelId": "m-vivo-vivo-v29e",
     "storage": "128 GB",
-    "basePrice": 15776,
+    "basePrice": 15938,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-v29e-256-gb",
     "modelId": "m-vivo-vivo-v29e",
     "storage": "256 GB",
-    "basePrice": 16756,
+    "basePrice": 16948,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-y27-128-gb-6-gb",
     "modelId": "m-vivo-vivo-y27",
     "storage": "128 GB",
-    "basePrice": 7191,
+    "basePrice": 7263,
     "active": true,
     "ram": "6 GB"
   },
@@ -47905,7 +47905,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y36-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y36",
     "storage": "128 GB",
-    "basePrice": 8282,
+    "basePrice": 8365,
     "active": true,
     "ram": "8 GB"
   },
@@ -47913,7 +47913,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v29-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v29",
     "storage": "128 GB",
-    "basePrice": 17483,
+    "basePrice": 17658,
     "active": true,
     "ram": "8 GB"
   },
@@ -47921,7 +47921,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v29-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v29",
     "storage": "256 GB",
-    "basePrice": 18069,
+    "basePrice": 18513,
     "active": true,
     "ram": "12 GB"
   },
@@ -47929,7 +47929,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v29-pro-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v29-pro",
     "storage": "256 GB",
-    "basePrice": 19493,
+    "basePrice": 19695,
     "active": true,
     "ram": "8 GB"
   },
@@ -47937,7 +47937,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v29-pro-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v29-pro",
     "storage": "256 GB",
-    "basePrice": 19887,
+    "basePrice": 20079,
     "active": true,
     "ram": "12 GB"
   },
@@ -47959,7 +47959,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y17s-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y17s",
     "storage": "64 GB",
-    "basePrice": 5747,
+    "basePrice": 5804,
     "active": true,
     "ram": "4 GB"
   },
@@ -47975,7 +47975,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y200-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y200-5g",
     "storage": "128 GB",
-    "basePrice": 12342,
+    "basePrice": 12465,
     "active": true,
     "ram": "8 GB"
   },
@@ -48007,7 +48007,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y28-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y28-5g",
     "storage": "128 GB",
-    "basePrice": 10241,
+    "basePrice": 9827,
     "active": true,
     "ram": "8 GB"
   },
@@ -48031,7 +48031,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x100-pro-512-gb-16-gb",
     "modelId": "m-vivo-vivo-x100-pro",
     "storage": "512 GB",
-    "basePrice": 32663,
+    "basePrice": 32990,
     "active": true,
     "ram": "16 GB"
   },
@@ -48039,7 +48039,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v30-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v30",
     "storage": "128 GB",
-    "basePrice": 19109,
+    "basePrice": 19300,
     "active": true,
     "ram": "8 GB"
   },
@@ -48071,7 +48071,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v30-pro-512-gb-12-gb",
     "modelId": "m-vivo-vivo-v30-pro",
     "storage": "512 GB",
-    "basePrice": 22856,
+    "basePrice": 23085,
     "active": true,
     "ram": "12 GB"
   },
@@ -48079,7 +48079,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y200e-5g-128-gb-6-gb",
     "modelId": "m-vivo-vivo-y200e-5g",
     "storage": "128 GB",
-    "basePrice": 11585,
+    "basePrice": 11766,
     "active": true,
     "ram": "6 GB"
   },
@@ -48087,7 +48087,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y200e-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y200e-5g",
     "storage": "128 GB",
-    "basePrice": 12181,
+    "basePrice": 11701,
     "active": true,
     "ram": "8 GB"
   },
@@ -48111,7 +48111,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t3x-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t3x-5g",
     "storage": "128 GB",
-    "basePrice": 10837,
+    "basePrice": 10454,
     "active": true,
     "ram": "8 GB"
   },
@@ -48154,14 +48154,14 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y18-128-gb",
     "modelId": "m-vivo-vivo-y18",
     "storage": "128 GB",
-    "basePrice": 5343,
+    "basePrice": 5474,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-y18e-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y18e",
     "storage": "64 GB",
-    "basePrice": 5020,
+    "basePrice": 5070,
     "active": true,
     "ram": "4 GB"
   },
@@ -48169,7 +48169,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y200-pro-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y200-pro-5g",
     "storage": "128 GB",
-    "basePrice": 14211,
+    "basePrice": 14353,
     "active": true,
     "ram": "8 GB"
   },
@@ -48177,7 +48177,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-x-fold-3-pro-512-gb-16-gb",
     "modelId": "m-vivo-vivo-x-fold-3-pro",
     "storage": "512 GB",
-    "basePrice": 60176,
+    "basePrice": 60778,
     "active": true,
     "ram": "16 GB"
   },
@@ -48209,7 +48209,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y28s-5g-128-gb-6-gb",
     "modelId": "m-vivo-vivo-y28s-5g",
     "storage": "128 GB",
-    "basePrice": 9898,
+    "basePrice": 10050,
     "active": true,
     "ram": "6 GB"
   },
@@ -48217,7 +48217,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y28s-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y28s-5g",
     "storage": "128 GB",
-    "basePrice": 10100,
+    "basePrice": 10050,
     "active": true,
     "ram": "8 GB"
   },
@@ -48225,7 +48225,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y18i-64-gb-4-gb",
     "modelId": "m-vivo-vivo-y18i",
     "storage": "64 GB",
-    "basePrice": 5020,
+    "basePrice": 5070,
     "active": true,
     "ram": "4 GB"
   },
@@ -48240,14 +48240,14 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y28e-5g-128-gb",
     "modelId": "m-vivo-vivo-y28e-5g",
     "storage": "128 GB",
-    "basePrice": 8514,
+    "basePrice": 8636,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-v40-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v40",
     "storage": "128 GB",
-    "basePrice": 20291,
+    "basePrice": 20483,
     "active": true,
     "ram": "8 GB"
   },
@@ -48271,7 +48271,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v40-pro-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v40-pro",
     "storage": "256 GB",
-    "basePrice": 25533,
+    "basePrice": 25745,
     "active": true,
     "ram": "8 GB"
   },
@@ -48279,7 +48279,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v40-pro-512-gb-12-gb",
     "modelId": "m-vivo-vivo-v40-pro",
     "storage": "512 GB",
-    "basePrice": 27320,
+    "basePrice": 27593,
     "active": true,
     "ram": "12 GB"
   },
@@ -48287,7 +48287,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-y58-5g-128-gb-8-gb",
     "modelId": "m-vivo-vivo-y58-5g",
     "storage": "128 GB",
-    "basePrice": 11544,
+    "basePrice": 11659,
     "active": true,
     "ram": "8 GB"
   },
@@ -48302,7 +48302,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t3-pro-5g-256-gb",
     "modelId": "m-vivo-vivo-t3-pro-5g",
     "storage": "256 GB",
-    "basePrice": 17220,
+    "basePrice": 17433,
     "active": true
   },
   {
@@ -48323,7 +48323,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-t3-ultra-128-gb-8-gb",
     "modelId": "m-vivo-vivo-t3-ultra",
     "storage": "128 GB",
-    "basePrice": 17231,
+    "basePrice": 17403,
     "active": true,
     "ram": "8 GB"
   },
@@ -48347,7 +48347,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v50-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v50",
     "storage": "128 GB",
-    "basePrice": 20270,
+    "basePrice": 20776,
     "active": true,
     "ram": "8 GB"
   },
@@ -48355,7 +48355,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v50-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v50",
     "storage": "256 GB",
-    "basePrice": 22800,
+    "basePrice": 23028,
     "active": true,
     "ram": "8 GB"
   },
@@ -48363,7 +48363,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v50-512-gb-12-gb",
     "modelId": "m-vivo-vivo-v50",
     "storage": "512 GB",
-    "basePrice": 23000,
+    "basePrice": 23230,
     "active": true,
     "ram": "12 GB"
   },
@@ -48371,7 +48371,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v50e-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v50e",
     "storage": "128 GB",
-    "basePrice": 19090,
+    "basePrice": 19281,
     "active": true,
     "ram": "8 GB"
   },
@@ -48379,7 +48379,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v50e-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v50e",
     "storage": "256 GB",
-    "basePrice": 19500,
+    "basePrice": 19695,
     "active": true,
     "ram": "8 GB"
   },
@@ -48387,7 +48387,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v60",
     "storage": "128 GB",
-    "basePrice": 22600,
+    "basePrice": 23240,
     "active": true,
     "ram": "8 GB"
   },
@@ -48395,7 +48395,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v60",
     "storage": "256 GB",
-    "basePrice": 23900,
+    "basePrice": 24361,
     "active": true,
     "ram": "8 GB"
   },
@@ -48403,7 +48403,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v60",
     "storage": "256 GB",
-    "basePrice": 26700,
+    "basePrice": 26967,
     "active": true,
     "ram": "12 GB"
   },
@@ -48411,7 +48411,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60-512-gb-16-gb",
     "modelId": "m-vivo-vivo-v60",
     "storage": "512 GB",
-    "basePrice": 28270,
+    "basePrice": 28553,
     "active": true,
     "ram": "16 GB"
   },
@@ -48419,7 +48419,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60e-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v60e",
     "storage": "128 GB",
-    "basePrice": 20000,
+    "basePrice": 20392,
     "active": true,
     "ram": "8 GB"
   },
@@ -48427,7 +48427,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60e-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v60e",
     "storage": "256 GB",
-    "basePrice": 21540,
+    "basePrice": 21755,
     "active": true,
     "ram": "8 GB"
   },
@@ -48435,7 +48435,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v60e-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v60e",
     "storage": "256 GB",
-    "basePrice": 23520,
+    "basePrice": 23755,
     "active": true,
     "ram": "12 GB"
   },
@@ -48443,7 +48443,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v70-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v70",
     "storage": "256 GB",
-    "basePrice": 31660,
+    "basePrice": 32825,
     "active": true,
     "ram": "8 GB"
   },
@@ -48451,7 +48451,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v70-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v70",
     "storage": "256 GB",
-    "basePrice": 34360,
+    "basePrice": 35855,
     "active": true,
     "ram": "12 GB"
   },
@@ -48483,7 +48483,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v70-fe-128-gb-8-gb",
     "modelId": "m-vivo-vivo-v70-fe",
     "storage": "128 GB",
-    "basePrice": 23150,
+    "basePrice": 23927,
     "active": true,
     "ram": "8 GB"
   },
@@ -48491,7 +48491,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v70-fe-256-gb-8-gb",
     "modelId": "m-vivo-vivo-v70-fe",
     "storage": "256 GB",
-    "basePrice": 25700,
+    "basePrice": 26210,
     "active": true,
     "ram": "8 GB"
   },
@@ -48499,7 +48499,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-vivo-vivo-v70-fe-256-gb-12-gb",
     "modelId": "m-vivo-vivo-v70-fe",
     "storage": "256 GB",
-    "basePrice": 29050,
+    "basePrice": 29340,
     "active": true,
     "ram": "12 GB"
   },
@@ -48507,7 +48507,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-6-pro-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-6-pro",
     "storage": "64 GB",
-    "basePrice": 3010,
+    "basePrice": 3313,
     "active": true,
     "ram": "4 GB"
   },
@@ -48523,7 +48523,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-mi-a2-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-mi-a2",
     "storage": "64 GB",
-    "basePrice": 2565,
+    "basePrice": 2591,
     "active": true,
     "ram": "4 GB"
   },
@@ -48531,7 +48531,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-mi-a2-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-mi-a2",
     "storage": "128 GB",
-    "basePrice": 2868,
+    "basePrice": 2949,
     "active": true,
     "ram": "6 GB"
   },
@@ -48553,7 +48553,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-6-pro-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-6-pro",
     "storage": "32 GB",
-    "basePrice": 2192,
+    "basePrice": 2252,
     "active": true,
     "ram": "3 GB"
   },
@@ -48561,7 +48561,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-6-pro-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-6-pro",
     "storage": "64 GB",
-    "basePrice": 2333,
+    "basePrice": 2356,
     "active": true,
     "ram": "4 GB"
   },
@@ -48569,7 +48569,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-6a-16-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-6a",
     "storage": "16 GB",
-    "basePrice": 1454,
+    "basePrice": 1495,
     "active": true
   },
   {
@@ -48583,7 +48583,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-y2-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-y2",
     "storage": "32 GB",
-    "basePrice": 2161,
+    "basePrice": 2222,
     "active": true,
     "ram": "3 GB"
   },
@@ -48591,7 +48591,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-y2-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-y2",
     "storage": "64 GB",
-    "basePrice": 2343,
+    "basePrice": 2366,
     "active": true,
     "ram": "4 GB"
   },
@@ -48623,7 +48623,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-5-pro-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-5-pro",
     "storage": "64 GB",
-    "basePrice": 2525,
+    "basePrice": 2909,
     "active": true,
     "ram": "4 GB"
   },
@@ -48631,7 +48631,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-5-pro-64-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-5-pro",
     "storage": "64 GB",
-    "basePrice": 2828,
+    "basePrice": 2909,
     "active": true,
     "ram": "6 GB"
   },
@@ -48639,7 +48639,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-5-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-5",
     "storage": "32 GB",
-    "basePrice": 1798,
+    "basePrice": 1879,
     "active": true,
     "ram": "3 GB"
   },
@@ -48647,7 +48647,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-5-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-5",
     "storage": "64 GB",
-    "basePrice": 2161,
+    "basePrice": 2183,
     "active": true,
     "ram": "4 GB"
   },
@@ -48679,7 +48679,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-y1-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-y1",
     "storage": "64 GB",
-    "basePrice": 1424,
+    "basePrice": 1438,
     "active": true,
     "ram": "4 GB"
   },
@@ -48687,7 +48687,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-redmi-y1-lite-16-gb-2-gb",
     "modelId": "m-xiaomi-redmi-y1-lite",
     "storage": "16 GB",
-    "basePrice": 1071,
+    "basePrice": 1082,
     "active": true,
     "ram": "2 GB"
   },
@@ -48695,7 +48695,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-mi-mix-2-128-gb-6-gb",
     "modelId": "m-xiaomi-mi-mix-2",
     "storage": "128 GB",
-    "basePrice": 2868,
+    "basePrice": 2897,
     "active": true,
     "ram": "6 GB"
   },
@@ -48703,7 +48703,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-mi-max-2-32-gb",
     "modelId": "m-xiaomi-xiaomi-mi-max-2",
     "storage": "32 GB",
-    "basePrice": 1717,
+    "basePrice": 1778,
     "active": true
   },
   {
@@ -48732,7 +48732,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-7-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-7",
     "storage": "64 GB",
-    "basePrice": 3323,
+    "basePrice": 3356,
     "active": true,
     "ram": "4 GB"
   },
@@ -48740,7 +48740,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-7-pro-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-7-pro",
     "storage": "64 GB",
-    "basePrice": 3798,
+    "basePrice": 4010,
     "active": true,
     "ram": "4 GB"
   },
@@ -48756,7 +48756,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-7-pro-64-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-7-pro",
     "storage": "64 GB",
-    "basePrice": 3939,
+    "basePrice": 4010,
     "active": true,
     "ram": "6 GB"
   },
@@ -48771,7 +48771,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-go-16-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-go",
     "storage": "16 GB",
-    "basePrice": 1071,
+    "basePrice": 1121,
     "active": true
   },
   {
@@ -48786,7 +48786,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-7-32-gb-2-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-7",
     "storage": "32 GB",
-    "basePrice": 2525,
+    "basePrice": 2676,
     "active": true,
     "ram": "2 GB"
   },
@@ -48794,7 +48794,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-7-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-7",
     "storage": "32 GB",
-    "basePrice": 2596,
+    "basePrice": 2676,
     "active": true,
     "ram": "3 GB"
   },
@@ -48810,7 +48810,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-7s-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-7s",
     "storage": "32 GB",
-    "basePrice": 3444,
+    "basePrice": 3505,
     "active": true,
     "ram": "3 GB"
   },
@@ -48818,7 +48818,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-7s-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-7s",
     "storage": "64 GB",
-    "basePrice": 3565,
+    "basePrice": 3601,
     "active": true,
     "ram": "4 GB"
   },
@@ -48834,7 +48834,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-y3-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-y3",
     "storage": "64 GB",
-    "basePrice": 2525,
+    "basePrice": 2550,
     "active": true,
     "ram": "4 GB"
   },
@@ -48850,7 +48850,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-black-shark-2-256-gb-12-gb",
     "modelId": "m-xiaomi-xiaomi-black-shark-2",
     "storage": "256 GB",
-    "basePrice": 5929,
+    "basePrice": 6040,
     "active": true,
     "ram": "12 GB"
   },
@@ -48872,7 +48872,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-k20-pro-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-k20-pro",
     "storage": "128 GB",
-    "basePrice": 5969,
+    "basePrice": 6080,
     "active": true,
     "ram": "6 GB"
   },
@@ -48888,7 +48888,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-7a-16-gb-2-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-7a",
     "storage": "16 GB",
-    "basePrice": 1475,
+    "basePrice": 1525,
     "active": true,
     "ram": "2 GB"
   },
@@ -48896,7 +48896,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-7a-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-7a",
     "storage": "32 GB",
-    "basePrice": 1757,
+    "basePrice": 1808,
     "active": true,
     "ram": "3 GB"
   },
@@ -48904,7 +48904,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-7a-32-gb-2-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-7a",
     "storage": "32 GB",
-    "basePrice": 1626,
+    "basePrice": 1775,
     "active": true,
     "ram": "2 GB"
   },
@@ -48912,7 +48912,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-mi-a3-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-mi-a3",
     "storage": "64 GB",
-    "basePrice": 4070,
+    "basePrice": 4111,
     "active": true,
     "ram": "4 GB"
   },
@@ -48920,7 +48920,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-mi-a3-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-mi-a3",
     "storage": "128 GB",
-    "basePrice": 4394,
+    "basePrice": 4494,
     "active": true,
     "ram": "6 GB"
   },
@@ -48928,7 +48928,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-8a-32-gb-2-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-8a",
     "storage": "32 GB",
-    "basePrice": 2374,
+    "basePrice": 2565,
     "active": true,
     "ram": "2 GB"
   },
@@ -48936,7 +48936,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-8a-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-8a",
     "storage": "32 GB",
-    "basePrice": 2485,
+    "basePrice": 2565,
     "active": true,
     "ram": "3 GB"
   },
@@ -48944,7 +48944,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-redmi-8-64-gb-4-gb",
     "modelId": "m-xiaomi-redmi-8",
     "storage": "64 GB",
-    "basePrice": 3484,
+    "basePrice": 3519,
     "active": true,
     "ram": "4 GB"
   },
@@ -48952,7 +48952,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-32-gb-3-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8",
     "storage": "32 GB",
-    "basePrice": 3596,
+    "basePrice": 3676,
     "active": true,
     "ram": "3 GB"
   },
@@ -48960,7 +48960,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8",
     "storage": "64 GB",
-    "basePrice": 3949,
+    "basePrice": 4030,
     "active": true,
     "ram": "4 GB"
   },
@@ -48968,7 +48968,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8",
     "storage": "128 GB",
-    "basePrice": 4252,
+    "basePrice": 4323,
     "active": true,
     "ram": "6 GB"
   },
@@ -48976,7 +48976,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-pro-64-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8-pro",
     "storage": "64 GB",
-    "basePrice": 4565,
+    "basePrice": 4646,
     "active": true,
     "ram": "6 GB"
   },
@@ -48984,7 +48984,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-pro-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8-pro",
     "storage": "128 GB",
-    "basePrice": 4707,
+    "basePrice": 4787,
     "active": true,
     "ram": "6 GB"
   },
@@ -48992,7 +48992,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-8-pro-128-gb-8-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-8-pro",
     "storage": "128 GB",
-    "basePrice": 5161,
+    "basePrice": 4754,
     "active": true,
     "ram": "8 GB"
   },
@@ -49000,7 +49000,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-64-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro",
     "storage": "64 GB",
-    "basePrice": 4707,
+    "basePrice": 4754,
     "active": true,
     "ram": "4 GB"
   },
@@ -49008,7 +49008,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-128-gb-4-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro",
     "storage": "128 GB",
-    "basePrice": 5070,
+    "basePrice": 5151,
     "active": true,
     "ram": "4 GB"
   },
@@ -49016,7 +49016,7 @@ const MOBILE_VARIANTS_PART_7: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-note-9-pro-128-gb-6-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-note-9-pro",
     "storage": "128 GB",
-    "basePrice": 5282,
+    "basePrice": 5363,
     "active": true,
     "ram": "6 GB"
   }
@@ -49034,21 +49034,21 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-9-prime-128-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9-prime",
     "storage": "128 GB",
-    "basePrice": 3939,
+    "basePrice": 4010,
     "active": true
   },
   {
     "id": "v-m-xiaomi-xiaomi-redmi-9-64-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9",
     "storage": "64 GB",
-    "basePrice": 3212,
+    "basePrice": 3282,
     "active": true
   },
   {
     "id": "v-m-xiaomi-xiaomi-redmi-9-128-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9",
     "storage": "128 GB",
-    "basePrice": 3596,
+    "basePrice": 3656,
     "active": true
   },
   {
@@ -49062,7 +49062,7 @@ const MOBILE_VARIANTS_PART_8: DeviceVariantData[] = [
     "id": "v-m-xiaomi-xiaomi-redmi-9i-128-gb",
     "modelId": "m-xiaomi-xiaomi-redmi-9i",
     "storage": "128 GB",
-    "basePrice": 3454,
+    "basePrice": 3535,
     "active": true
   },
   {
@@ -59061,7 +59061,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0b591d95-5556-4a2d-b64b-a36b57c08b7a",
     "modelId": "57fc294d-9e6b-402c-9d92-0c62f4d1f086",
     "storage": "256 GB",
-    "basePrice": 19500,
+    "basePrice": 20150,
     "active": true,
     "ram": "8 GB"
   },
@@ -59069,7 +59069,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "923d7f58-a11a-4335-97fe-509b1ec3cfb1",
     "modelId": "57fc294d-9e6b-402c-9d92-0c62f4d1f086",
     "storage": "128 GB",
-    "basePrice": 19500,
+    "basePrice": 17029,
     "active": true,
     "ram": "8 GB"
   },
@@ -59077,7 +59077,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1976b6bb-db7a-4f2e-8eef-9a7205055b56",
     "modelId": "a042b2ac-5004-479d-a848-c00b760e904f",
     "storage": "128 GB",
-    "basePrice": 7650,
+    "basePrice": 7797,
     "active": true,
     "ram": "8 GB"
   },
@@ -59085,7 +59085,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8c8118c5-06f6-4c5d-8ed2-1cde02b5abf4",
     "modelId": "a042b2ac-5004-479d-a848-c00b760e904f",
     "storage": "128 GB",
-    "basePrice": 7650,
+    "basePrice": 7797,
     "active": true,
     "ram": "6 GB"
   },
@@ -59093,7 +59093,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e4c3e0e1-185c-470b-bbc3-a4080cb90bc9",
     "modelId": "9546f47b-960b-4b8b-bb6c-1f2df37f79be",
     "storage": "256 GB",
-    "basePrice": 34250,
+    "basePrice": 34936,
     "active": true,
     "ram": "12 GB"
   },
@@ -59101,7 +59101,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5f60f6fa-6d4b-47a6-bd7c-ab067afc0fa1",
     "modelId": "9546f47b-960b-4b8b-bb6c-1f2df37f79be",
     "storage": "512 GB",
-    "basePrice": 34250,
+    "basePrice": 36360,
     "active": true,
     "ram": "16 GB"
   },
@@ -59109,7 +59109,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "59eeae1a-0e25-42c9-bf6a-5e2d205ff9f6",
     "modelId": "e392fabb-6b0b-4057-9f82-c36504ab249b",
     "storage": "256 GB",
-    "basePrice": 29370,
+    "basePrice": 32320,
     "active": true,
     "ram": "8 GB"
   },
@@ -59117,7 +59117,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9fb855c6-fd16-4e22-a158-656eec998512",
     "modelId": "e392fabb-6b0b-4057-9f82-c36504ab249b",
     "storage": "256 GB",
-    "basePrice": 32070,
+    "basePrice": 34845,
     "active": true,
     "ram": "12 GB"
   },
@@ -59125,7 +59125,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a4694ee9-f76a-4846-bb80-1bd7c9288847",
     "modelId": "a0b4a525-1f69-4831-b25d-ac62f996b1b5",
     "storage": "32 GB",
-    "basePrice": 2850,
+    "basePrice": 3060,
     "active": true,
     "ram": "3 GB"
   },
@@ -59133,7 +59133,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e1ecca3c-ee7a-4fe3-a3a2-572198a7cafd",
     "modelId": "a0b4a525-1f69-4831-b25d-ac62f996b1b5",
     "storage": "64 GB",
-    "basePrice": 3510,
+    "basePrice": 3767,
     "active": true,
     "ram": "4 GB"
   },
@@ -59149,7 +59149,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5a08d69e-37b7-4886-9fc6-23617d900728",
     "modelId": "e0a51ea6-0996-4da0-b1f1-3b4caabfbace",
     "storage": "256 GB",
-    "basePrice": 16660,
+    "basePrice": 18069,
     "active": true,
     "ram": "12 GB"
   },
@@ -59157,7 +59157,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cea3eaaa-8fea-48bb-8e97-2c9a31e7fe51",
     "modelId": "e0a51ea6-0996-4da0-b1f1-3b4caabfbace",
     "storage": "128 GB",
-    "basePrice": 16660,
+    "basePrice": 16049,
     "active": true,
     "ram": "8 GB"
   },
@@ -59165,7 +59165,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "86006797-94db-420f-812f-c2d3c381b381",
     "modelId": "e0a51ea6-0996-4da0-b1f1-3b4caabfbace",
     "storage": "256 GB",
-    "basePrice": 16660,
+    "basePrice": 17059,
     "active": true,
     "ram": "8 GB"
   },
@@ -59235,7 +59235,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "05b6638f-8bc0-499e-96a5-1e8503df7656",
     "modelId": "0e8eac4d-d99c-4015-a360-1e8a17f45ffd",
     "storage": "256 GB",
-    "basePrice": 16930,
+    "basePrice": 17736,
     "active": true,
     "ram": "8 GB"
   },
@@ -59243,7 +59243,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "633a4ca2-3b21-4494-b254-4edace6388e4",
     "modelId": "0e8eac4d-d99c-4015-a360-1e8a17f45ffd",
     "storage": "128 GB",
-    "basePrice": 16930,
+    "basePrice": 16372,
     "active": true,
     "ram": "8 GB"
   },
@@ -59251,7 +59251,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "488a7c59-e2a7-49db-9372-e86546e4c47a",
     "modelId": "4e5f0a2c-cda1-48a2-9136-4ee728dc9788",
     "storage": "128 GB",
-    "basePrice": 5960,
+    "basePrice": 8059,
     "active": true,
     "ram": "8 GB"
   },
@@ -59291,7 +59291,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b86eaa57-45fe-4835-abb7-62a6bba361a2",
     "modelId": "b60b6bc7-f453-47c6-ab65-629ff64d6b39",
     "storage": "1 TB",
-    "basePrice": 42080,
+    "basePrice": 43430,
     "active": true,
     "ram": "16 GB"
   },
@@ -59299,7 +59299,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7c173c52-c0f6-427e-9895-cc66758f1c12",
     "modelId": "b60b6bc7-f453-47c6-ab65-629ff64d6b39",
     "storage": "512 GB",
-    "basePrice": 42080,
+    "basePrice": 39390,
     "active": true,
     "ram": "16 GB"
   },
@@ -59307,7 +59307,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b878596d-b868-40e0-83cd-24795ff421d1",
     "modelId": "b60b6bc7-f453-47c6-ab65-629ff64d6b39",
     "storage": "256 GB",
-    "basePrice": 42080,
+    "basePrice": 36865,
     "active": true,
     "ram": "12 GB"
   },
@@ -59315,7 +59315,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "59026e67-1e64-4e91-802b-7ea1d64dbde0",
     "modelId": "14f92231-15df-46f4-a606-27e82b610547",
     "storage": "64 GB",
-    "basePrice": 8075,
+    "basePrice": 5444,
     "active": true,
     "ram": "4 GB"
   },
@@ -59363,7 +59363,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4222d1e7-02f9-4455-8df4-ad737278f231",
     "modelId": "351b849b-3e58-44cd-bbb4-6abe975188ef",
     "storage": "64 GB",
-    "basePrice": 3010,
+    "basePrice": 3232,
     "active": true,
     "ram": "4 GB"
   },
@@ -59371,7 +59371,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0aafed0b-1f2e-41d5-ae72-1d4a03478baf",
     "modelId": "351b849b-3e58-44cd-bbb4-6abe975188ef",
     "storage": "128 GB",
-    "basePrice": 3210,
+    "basePrice": 3444,
     "active": true,
     "ram": "6 GB"
   },
@@ -59443,7 +59443,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "40815f33-a5c6-4fef-9978-1a40840d40ea",
     "modelId": "cd970116-58be-46ae-b6a8-0cf2347589b3",
     "storage": "256 GB",
-    "basePrice": 24550,
+    "basePrice": 25270,
     "active": true,
     "ram": "12 GB"
   },
@@ -59451,7 +59451,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "07a8b37b-46b0-4b18-bab4-5089a380cd70",
     "modelId": "cd970116-58be-46ae-b6a8-0cf2347589b3",
     "storage": "512 GB",
-    "basePrice": 24550,
+    "basePrice": 26603,
     "active": true,
     "ram": "12 GB"
   },
@@ -59459,7 +59459,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "57090bfb-673a-4ede-ad27-d1c10784103d",
     "modelId": "cd970116-58be-46ae-b6a8-0cf2347589b3",
     "storage": "256 GB",
-    "basePrice": 24550,
+    "basePrice": 24038,
     "active": true,
     "ram": "8 GB"
   },
@@ -59561,7 +59561,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "46605ddc-370f-4dd7-ab67-4d391b473372",
     "modelId": "3f89a2e8-c34d-455a-994b-b7c92838e87a",
     "storage": "64 GB",
-    "basePrice": 4390,
+    "basePrice": 4575,
     "active": true,
     "ram": "4 GB"
   },
@@ -59569,7 +59569,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f268fdb1-0df0-48df-abf0-6912c4cec173",
     "modelId": "3f89a2e8-c34d-455a-994b-b7c92838e87a",
     "storage": "128 GB",
-    "basePrice": 4390,
+    "basePrice": 5262,
     "active": true,
     "ram": "6 GB"
   },
@@ -59577,7 +59577,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "78bc8155-13fd-4bfb-86fd-690f83bb1374",
     "modelId": "3f89a2e8-c34d-455a-994b-b7c92838e87a",
     "storage": "128 GB",
-    "basePrice": 4390,
+    "basePrice": 5030,
     "active": true,
     "ram": "4 GB"
   },
@@ -59585,7 +59585,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9cb809c0-0c79-4487-af5e-06b85e96386b",
     "modelId": "3f89a2e8-c34d-455a-994b-b7c92838e87a",
     "storage": "128 GB",
-    "basePrice": 4390,
+    "basePrice": 5262,
     "active": true,
     "ram": "8 GB"
   },
@@ -59593,14 +59593,14 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b8c93b41-59fd-4380-be0d-da0149bf1b50",
     "modelId": "4cd5a88a-dcbe-48e8-abe2-f5554ead2c9a",
     "storage": "128 GB",
-    "basePrice": 12460,
+    "basePrice": 13564,
     "active": true
   },
   {
     "id": "b5062a49-cf2b-498d-9c07-82223442ef0f",
     "modelId": "4cd5a88a-dcbe-48e8-abe2-f5554ead2c9a",
     "storage": "256 GB",
-    "basePrice": 13830,
+    "basePrice": 15120,
     "active": true
   },
   {
@@ -59639,7 +59639,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4307eb12-ad68-4b31-ba4a-307da62dc9c5",
     "modelId": "bb2a05a1-a07c-4ea3-9071-eb260149956d",
     "storage": "128 GB",
-    "basePrice": 11450,
+    "basePrice": 11817,
     "active": true,
     "ram": "6 GB"
   },
@@ -59647,7 +59647,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "fa32f81b-9d8b-41f9-87ef-113378b5e183",
     "modelId": "bb2a05a1-a07c-4ea3-9071-eb260149956d",
     "storage": "128 GB",
-    "basePrice": 11450,
+    "basePrice": 13007,
     "active": true,
     "ram": "8 GB"
   },
@@ -59655,7 +59655,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c02eb034-8845-4d83-bcea-51fa92a90fe0",
     "modelId": "bb2a05a1-a07c-4ea3-9071-eb260149956d",
     "storage": "256 GB",
-    "basePrice": 11450,
+    "basePrice": 13928,
     "active": true,
     "ram": "8 GB"
   },
@@ -59663,7 +59663,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3689621a-4f0d-4e46-9979-5eadeae13ae5",
     "modelId": "def9a5ff-6ef4-453c-a044-c076346f4fab",
     "storage": "512 GB",
-    "basePrice": 54450,
+    "basePrice": 58580,
     "active": true,
     "ram": "12 GB"
   },
@@ -59671,7 +59671,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3b07dd4d-7ce5-4008-923f-a61b74ceaec8",
     "modelId": "def9a5ff-6ef4-453c-a044-c076346f4fab",
     "storage": "256 GB",
-    "basePrice": 54450,
+    "basePrice": 57873,
     "active": true,
     "ram": "12 GB"
   },
@@ -59695,7 +59695,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "6257874e-b3dd-4209-972f-716db92193fe",
     "modelId": "5a205838-0db2-4300-8c5f-02df5443c55c",
     "storage": "256 GB",
-    "basePrice": 16340,
+    "basePrice": 16665,
     "active": true,
     "ram": "12 GB"
   },
@@ -59703,7 +59703,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "acb25329-96e1-4933-96d7-f83bef88038d",
     "modelId": "5a205838-0db2-4300-8c5f-02df5443c55c",
     "storage": "256 GB",
-    "basePrice": 16340,
+    "basePrice": 16332,
     "active": true,
     "ram": "8 GB"
   },
@@ -59711,7 +59711,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "232aadbc-c064-430b-b324-45ac221f843f",
     "modelId": "5a205838-0db2-4300-8c5f-02df5443c55c",
     "storage": "512 GB",
-    "basePrice": 16340,
+    "basePrice": 16958,
     "active": true,
     "ram": "12 GB"
   },
@@ -59751,7 +59751,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2dbcbcb9-7db6-4363-9e6c-ddb6bc0416d9",
     "modelId": "d22152ce-fc5d-4f4b-838e-7d3da05100c9",
     "storage": "256 GB",
-    "basePrice": 28590,
+    "basePrice": 31310,
     "active": true,
     "ram": "8 GB"
   },
@@ -59759,7 +59759,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "366e171e-0903-4bcb-950b-aa13ecc39f6b",
     "modelId": "d22152ce-fc5d-4f4b-838e-7d3da05100c9",
     "storage": "256 GB",
-    "basePrice": 31040,
+    "basePrice": 33835,
     "active": true,
     "ram": "12 GB"
   },
@@ -59791,7 +59791,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "88f383d4-8966-4b0e-8544-d518d2e53e64",
     "modelId": "f79ff190-4d78-4b6d-8db7-ccc0064a66d9",
     "storage": "128 GB",
-    "basePrice": 4320,
+    "basePrice": 4484,
     "active": true,
     "ram": "4 GB"
   },
@@ -59799,7 +59799,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0b29bec6-9102-4ce7-9158-58de14b23dfc",
     "modelId": "f79ff190-4d78-4b6d-8db7-ccc0064a66d9",
     "storage": "128 GB",
-    "basePrice": 4320,
+    "basePrice": 4787,
     "active": true,
     "ram": "6 GB"
   },
@@ -59807,7 +59807,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "da45a681-dc47-487d-964b-0b84ad2ad39e",
     "modelId": "f79ff190-4d78-4b6d-8db7-ccc0064a66d9",
     "storage": "64 GB",
-    "basePrice": 4320,
+    "basePrice": 4333,
     "active": true,
     "ram": "4 GB"
   },
@@ -59839,7 +59839,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f59769a9-2722-49a1-9649-927f2b3701eb",
     "modelId": "26d20dd6-d2b2-4003-8fb6-7d1fa8d0fa9f",
     "storage": "128 GB",
-    "basePrice": 5440,
+    "basePrice": 5656,
     "active": true,
     "ram": "8 GB"
   },
@@ -59847,7 +59847,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "40632b43-28d2-490d-8436-f9acb16439e4",
     "modelId": "26d20dd6-d2b2-4003-8fb6-7d1fa8d0fa9f",
     "storage": "128 GB",
-    "basePrice": 5440,
+    "basePrice": 5535,
     "active": true,
     "ram": "6 GB"
   },
@@ -59855,7 +59855,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "fc5e1f9c-6a20-4a4d-99b2-bf6be631e746",
     "modelId": "26d20dd6-d2b2-4003-8fb6-7d1fa8d0fa9f",
     "storage": "64 GB",
-    "basePrice": 5440,
+    "basePrice": 5222,
     "active": true,
     "ram": "6 GB"
   },
@@ -59863,7 +59863,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "dcacdcb2-7704-4730-8ae4-c8702bea7f4b",
     "modelId": "214468be-2013-4edd-af47-e48d1767f884",
     "storage": "256 GB",
-    "basePrice": 11510,
+    "basePrice": 11857,
     "active": true,
     "ram": "8 GB"
   },
@@ -59871,7 +59871,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d23f1d59-0ce1-4afc-87c1-37aa654194a9",
     "modelId": "214468be-2013-4edd-af47-e48d1767f884",
     "storage": "256 GB",
-    "basePrice": 11510,
+    "basePrice": 12635,
     "active": true,
     "ram": "12 GB"
   },
@@ -59943,7 +59943,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0f77f552-07bd-4145-b198-bf3170362dab",
     "modelId": "fb0fc732-d63b-4017-bf28-7b57a278291b",
     "storage": "64 GB",
-    "basePrice": 1100,
+    "basePrice": 1121,
     "active": true,
     "ram": "3 GB"
   },
@@ -59951,7 +59951,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "33c1bc1a-84ad-43a7-85ee-089950ce0c6b",
     "modelId": "fb0fc732-d63b-4017-bf28-7b57a278291b",
     "storage": "32 GB",
-    "basePrice": 1100,
+    "basePrice": 1010,
     "active": true,
     "ram": "3 GB"
   },
@@ -60023,7 +60023,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b27b791d-f242-4b7a-ba25-3cdb3e475456",
     "modelId": "28709a32-c2d9-47dd-88f6-3552813987d5",
     "storage": "128 GB",
-    "basePrice": 17070,
+    "basePrice": 18332,
     "active": true,
     "ram": "8 GB"
   },
@@ -60031,7 +60031,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "86108638-c895-4071-8c3d-6f0269aa4981",
     "modelId": "28709a32-c2d9-47dd-88f6-3552813987d5",
     "storage": "256 GB",
-    "basePrice": 18250,
+    "basePrice": 19846,
     "active": true,
     "ram": "8 GB"
   },
@@ -60039,7 +60039,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ed89bd31-6970-4e0c-aa7d-9dfddf806bb8",
     "modelId": "28709a32-c2d9-47dd-88f6-3552813987d5",
     "storage": "256 GB",
-    "basePrice": 19230,
+    "basePrice": 20654,
     "active": true,
     "ram": "12 GB"
   },
@@ -60151,7 +60151,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9f361306-a703-4f70-a31a-f4ea3de8c95d",
     "modelId": "50cd484e-20ad-4e87-9f58-f44294a2eacf",
     "storage": "128 GB",
-    "basePrice": 3690,
+    "basePrice": 3757,
     "active": true,
     "ram": "8 GB"
   },
@@ -60159,7 +60159,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "96897038-4d23-499c-879a-2e57a2c681b1",
     "modelId": "50cd484e-20ad-4e87-9f58-f44294a2eacf",
     "storage": "64 GB",
-    "basePrice": 3690,
+    "basePrice": 3565,
     "active": true,
     "ram": "4 GB"
   },
@@ -60191,7 +60191,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "98200da1-3e70-46ee-9f01-4717ee3033bf",
     "modelId": "58081b01-6d07-40e3-a399-dcec2735cdab",
     "storage": "128 GB",
-    "basePrice": 14850,
+    "basePrice": 13696,
     "active": true,
     "ram": "8 GB"
   },
@@ -60199,7 +60199,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ee12d2ec-ba33-4ab8-9394-9690ec495652",
     "modelId": "58081b01-6d07-40e3-a399-dcec2735cdab",
     "storage": "128 GB",
-    "basePrice": 14850,
+    "basePrice": 13696,
     "active": true,
     "ram": "6 GB"
   },
@@ -60207,7 +60207,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "493374fe-ff6a-4879-8af5-07586bd0164f",
     "modelId": "58081b01-6d07-40e3-a399-dcec2735cdab",
     "storage": "128 GB",
-    "basePrice": 14850,
+    "basePrice": 12534,
     "active": true,
     "ram": "4 GB"
   },
@@ -60215,7 +60215,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e5afd415-e5b5-41e9-a462-74824c0c6c76",
     "modelId": "8dea4d16-a9d6-48ba-bd2e-32423e4a4125",
     "storage": "128 GB",
-    "basePrice": 22200,
+    "basePrice": 8343,
     "active": true,
     "ram": "8 GB"
   },
@@ -60223,7 +60223,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "950c2cba-455a-44e2-99d3-8e1f90f06831",
     "modelId": "8dea4d16-a9d6-48ba-bd2e-32423e4a4125",
     "storage": "256 GB",
-    "basePrice": 25470,
+    "basePrice": 8878,
     "active": true,
     "ram": "12 GB"
   },
@@ -60247,14 +60247,14 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "95b0339e-a4ec-4bb1-8d83-fd39dba97edf",
     "modelId": "cc41e0cb-2b2b-4667-b5c5-ec82e9f1b31e",
     "storage": "64 GB",
-    "basePrice": 3740,
+    "basePrice": 4020,
     "active": true
   },
   {
     "id": "7e5760e2-ade9-4294-afe1-c1b81c9a0901",
     "modelId": "cc41e0cb-2b2b-4667-b5c5-ec82e9f1b31e",
     "storage": "128 GB",
-    "basePrice": 4170,
+    "basePrice": 4484,
     "active": true
   },
   {
@@ -60397,7 +60397,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "df1a43fe-1f5d-49c2-9799-d3a03236383a",
     "modelId": "27ee4e09-c4bc-4424-8079-db22b7a0c69b",
     "storage": "128 GB",
-    "basePrice": 5780,
+    "basePrice": 5888,
     "active": true,
     "ram": "6 GB"
   },
@@ -60429,7 +60429,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5f6525f0-ecb7-41f1-9e9a-980e6ef34496",
     "modelId": "f3b44129-3277-4658-8cb5-602a3dd8acd1",
     "storage": "32 GB",
-    "basePrice": 3100,
+    "basePrice": 3434,
     "active": true,
     "ram": "2 GB"
   },
@@ -60437,7 +60437,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0735312b-6516-4d13-abc0-be0b3c81e9b1",
     "modelId": "f3b44129-3277-4658-8cb5-602a3dd8acd1",
     "storage": "64 GB",
-    "basePrice": 3330,
+    "basePrice": 3666,
     "active": true,
     "ram": "2 GB"
   },
@@ -60445,7 +60445,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2ce3da2c-776f-40b2-bd5d-3cdf489654d5",
     "modelId": "f3b44129-3277-4658-8cb5-602a3dd8acd1",
     "storage": "64 GB",
-    "basePrice": 3650,
+    "basePrice": 4040,
     "active": true,
     "ram": "4 GB"
   },
@@ -60453,7 +60453,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "58a1d0ef-dfed-48a5-aebe-753ac7e7181b",
     "modelId": "9fc9636a-3d15-49f2-9802-579c507e54f7",
     "storage": "128 GB",
-    "basePrice": 5230,
+    "basePrice": 5878,
     "active": true,
     "ram": "4 GB"
   },
@@ -60461,7 +60461,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c18c14fa-6e4c-4bd6-b0ac-2977492f2d63",
     "modelId": "9fc9636a-3d15-49f2-9802-579c507e54f7",
     "storage": "64 GB",
-    "basePrice": 5230,
+    "basePrice": 5171,
     "active": true,
     "ram": "4 GB"
   },
@@ -60469,14 +60469,14 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "dd701a1f-6d31-464e-be1f-dcd40efd152e",
     "modelId": "0a249600-fc67-4e5f-aa3e-751e90998b75",
     "storage": "64 GB",
-    "basePrice": 3950,
+    "basePrice": 4333,
     "active": true
   },
   {
     "id": "a3a9a02a-0e6c-41c4-aab0-42d1119bdfb2",
     "modelId": "0a249600-fc67-4e5f-aa3e-751e90998b75",
     "storage": "128 GB",
-    "basePrice": 4200,
+    "basePrice": 4515,
     "active": true
   },
   {
@@ -60523,7 +60523,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f28dc231-ca76-4d72-a4a5-a56d5961ff02",
     "modelId": "a33fc1f0-6cfb-4290-be1b-ba01bace51d5",
     "storage": "64 GB",
-    "basePrice": 3780,
+    "basePrice": 4161,
     "active": true,
     "ram": "3 GB"
   },
@@ -60531,7 +60531,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "13f8ada2-74d7-4273-a40c-5628457d3580",
     "modelId": "a33fc1f0-6cfb-4290-be1b-ba01bace51d5",
     "storage": "128 GB",
-    "basePrice": 4270,
+    "basePrice": 4585,
     "active": true,
     "ram": "4 GB"
   },
@@ -60539,7 +60539,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "003222ad-5240-4e4a-80ff-3850f5ca4097",
     "modelId": "a33fc1f0-6cfb-4290-be1b-ba01bace51d5",
     "storage": "128 GB",
-    "basePrice": 4470,
+    "basePrice": 4798,
     "active": true,
     "ram": "6 GB"
   },
@@ -60547,7 +60547,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "124fc0eb-54ec-4286-ab3d-5506cd68d82d",
     "modelId": "17985e49-3e75-434b-a552-486fc792a77c",
     "storage": "128 GB",
-    "basePrice": 8360,
+    "basePrice": 8646,
     "active": true,
     "ram": "8 GB"
   },
@@ -60555,7 +60555,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c2a0d793-f717-4bcc-b89a-7eb6d65caa12",
     "modelId": "17985e49-3e75-434b-a552-486fc792a77c",
     "storage": "256 GB",
-    "basePrice": 8360,
+    "basePrice": 8918,
     "active": true,
     "ram": "8 GB"
   },
@@ -60563,7 +60563,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "13a43056-c9a9-4fc9-b5a7-cbe747eb50ae",
     "modelId": "17985e49-3e75-434b-a552-486fc792a77c",
     "storage": "128 GB",
-    "basePrice": 8360,
+    "basePrice": 8565,
     "active": true,
     "ram": "6 GB"
   },
@@ -60571,7 +60571,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "16bce474-d109-4ace-9d66-3f588c54f4a7",
     "modelId": "78ccad15-45e3-431f-8bbb-aa4d060530f4",
     "storage": "256 GB",
-    "basePrice": 9150,
+    "basePrice": 9332,
     "active": true,
     "ram": "8 GB"
   },
@@ -60579,7 +60579,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a3f7b77e-ce67-4080-9935-a2fc79765a38",
     "modelId": "78ccad15-45e3-431f-8bbb-aa4d060530f4",
     "storage": "128 GB",
-    "basePrice": 9150,
+    "basePrice": 9019,
     "active": true,
     "ram": "8 GB"
   },
@@ -60587,7 +60587,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a8276524-eb5c-4958-a285-7b0dc69c57a5",
     "modelId": "78ccad15-45e3-431f-8bbb-aa4d060530f4",
     "storage": "128 GB",
-    "basePrice": 9150,
+    "basePrice": 8423,
     "active": true,
     "ram": "6 GB"
   },
@@ -60651,7 +60651,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8e1ddecf-144f-43c7-b2e9-3eb6d4c34203",
     "modelId": "1a196396-a6f2-4a2f-ac30-e4880e1d4232",
     "storage": "256 GB",
-    "basePrice": 118800,
+    "basePrice": 121200,
     "active": true,
     "ram": "12 GB"
   },
@@ -60659,7 +60659,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "57c81354-f69f-48f3-a52c-80f5cbbaf897",
     "modelId": "1a196396-a6f2-4a2f-ac30-e4880e1d4232",
     "storage": "512 GB",
-    "basePrice": 118800,
+    "basePrice": 128270,
     "active": true,
     "ram": "12 GB"
   },
@@ -60667,7 +60667,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0c87af26-019d-465f-866a-b66b1ac6583a",
     "modelId": "1a196396-a6f2-4a2f-ac30-e4880e1d4232",
     "storage": "1 TB",
-    "basePrice": 118800,
+    "basePrice": 141400,
     "active": true,
     "ram": "16 GB"
   },
@@ -60675,7 +60675,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3fce28e0-7ab2-403f-88ff-5ecaeb6b937c",
     "modelId": "1645778c-b39c-4581-b1ad-80e369f42af9",
     "storage": "128 GB",
-    "basePrice": 7910,
+    "basePrice": 8070,
     "active": true,
     "ram": "8 GB"
   },
@@ -60683,7 +60683,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a23b61cd-2c9e-4bf4-9e9f-f156cba9f64d",
     "modelId": "1645778c-b39c-4581-b1ad-80e369f42af9",
     "storage": "128 GB",
-    "basePrice": 7910,
+    "basePrice": 7878,
     "active": true,
     "ram": "6 GB"
   },
@@ -60691,7 +60691,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a05056f7-56e4-4e2c-b64f-25bb3d2b2ba0",
     "modelId": "e31036b9-7ce9-4a09-a576-dd6dab357a58",
     "storage": "64 GB",
-    "basePrice": 3860,
+    "basePrice": 4040,
     "active": true,
     "ram": "4 GB"
   },
@@ -60699,7 +60699,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "382ee9e9-f9d8-4d61-b477-f0a71e918e96",
     "modelId": "e31036b9-7ce9-4a09-a576-dd6dab357a58",
     "storage": "128 GB",
-    "basePrice": 3860,
+    "basePrice": 4696,
     "active": true,
     "ram": "4 GB"
   },
@@ -60707,7 +60707,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ef21dce8-d7ac-4946-bac9-3167585e5e02",
     "modelId": "5e4c20e0-86bf-42c3-9532-7cefe26b56b1",
     "storage": "256 GB",
-    "basePrice": 13460,
+    "basePrice": 13736,
     "active": true,
     "ram": "8 GB"
   },
@@ -60715,7 +60715,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4f3a9452-47f5-4ac9-abe9-2430bbecf45e",
     "modelId": "5e4c20e0-86bf-42c3-9532-7cefe26b56b1",
     "storage": "128 GB",
-    "basePrice": 13460,
+    "basePrice": 12827,
     "active": true,
     "ram": "8 GB"
   },
@@ -60723,7 +60723,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2f0c28fa-b0ce-49d9-9d42-f2d8700a4969",
     "modelId": "b641ea5e-8056-4304-80c3-d03cef9df099",
     "storage": "128 GB",
-    "basePrice": 7480,
+    "basePrice": 8110,
     "active": true,
     "ram": "6 GB"
   },
@@ -60731,7 +60731,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c7a558f9-f7fd-4a1e-ade5-94b30b1c920a",
     "modelId": "b641ea5e-8056-4304-80c3-d03cef9df099",
     "storage": "128 GB",
-    "basePrice": 7690,
+    "basePrice": 8262,
     "active": true,
     "ram": "8 GB"
   },
@@ -60763,7 +60763,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2bc22854-23e9-4885-8b72-6b943a38c949",
     "modelId": "bb0352fb-9522-424b-83f7-3e48e5ea5d1b",
     "storage": "64 GB",
-    "basePrice": 7280,
+    "basePrice": 4828,
     "active": true,
     "ram": "6 GB"
   },
@@ -60771,7 +60771,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "36511718-e622-491f-9de3-d291c5e4af4a",
     "modelId": "bb0352fb-9522-424b-83f7-3e48e5ea5d1b",
     "storage": "128 GB",
-    "basePrice": 7750,
+    "basePrice": 5050,
     "active": true,
     "ram": "6 GB"
   },
@@ -60779,7 +60779,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ea5f710f-36c3-4d02-9c7e-ba2d86017363",
     "modelId": "bb0352fb-9522-424b-83f7-3e48e5ea5d1b",
     "storage": "128 GB",
-    "basePrice": 4740,
+    "basePrice": 5171,
     "active": true,
     "ram": "8 GB"
   },
@@ -60819,7 +60819,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a576d2af-8a31-4f01-ab10-741acee3a453",
     "modelId": "ce5de1c6-a626-488b-b58a-f345dfb36f81",
     "storage": "128 GB",
-    "basePrice": 17220,
+    "basePrice": 17574,
     "active": true,
     "ram": "8 GB"
   },
@@ -60827,7 +60827,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e84b438d-792a-4203-bab0-ca60e552cd7a",
     "modelId": "ce5de1c6-a626-488b-b58a-f345dfb36f81",
     "storage": "256 GB",
-    "basePrice": 17220,
+    "basePrice": 20705,
     "active": true,
     "ram": "8 GB"
   },
@@ -60835,7 +60835,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "858a8fc5-8fa0-4c2d-b7f4-19a211bdc0b5",
     "modelId": "ce5de1c6-a626-488b-b58a-f345dfb36f81",
     "storage": "256 GB",
-    "basePrice": 17220,
+    "basePrice": 21210,
     "active": true,
     "ram": "12 GB"
   },
@@ -60843,7 +60843,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8549a7f7-61b8-48da-ad6b-e6fc467453c9",
     "modelId": "494c3c2a-0097-4bbe-89a0-a4873abdd6c8",
     "storage": "128 GB",
-    "basePrice": 7420,
+    "basePrice": 7817,
     "active": true,
     "ram": "6 GB"
   },
@@ -60851,7 +60851,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "be270fc2-da46-4e87-9d24-cae8b9c04ebc",
     "modelId": "494c3c2a-0097-4bbe-89a0-a4873abdd6c8",
     "storage": "128 GB",
-    "basePrice": 7420,
+    "basePrice": 8302,
     "active": true,
     "ram": "8 GB"
   },
@@ -60891,7 +60891,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4a621d9d-eb3a-46c6-97c8-8ce182108d6b",
     "modelId": "3a575f15-e228-4e04-a38a-d180a1b53d00",
     "storage": "64 GB",
-    "basePrice": 4010,
+    "basePrice": 4090,
     "active": true,
     "ram": "3 GB"
   },
@@ -60899,7 +60899,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1af465cf-925f-4462-8c7f-f49e86a9bce6",
     "modelId": "3a575f15-e228-4e04-a38a-d180a1b53d00",
     "storage": "128 GB",
-    "basePrice": 4010,
+    "basePrice": 4303,
     "active": true,
     "ram": "4 GB"
   },
@@ -60907,7 +60907,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9a4ab340-2d36-4359-89da-cf4f7e392945",
     "modelId": "632eea02-ac1b-4638-9d4a-d769a8e762ed",
     "storage": "64 GB",
-    "basePrice": 6370,
+    "basePrice": 6818,
     "active": true,
     "ram": "4 GB"
   },
@@ -60915,7 +60915,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "143a01aa-2c20-4d44-9eec-a770989c8f3a",
     "modelId": "632eea02-ac1b-4638-9d4a-d769a8e762ed",
     "storage": "128 GB",
-    "basePrice": 7370,
+    "basePrice": 7868,
     "active": true,
     "ram": "6 GB"
   },
@@ -60939,7 +60939,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a6d18997-f1a5-4e02-bb49-802b6e89b682",
     "modelId": "fa2bebe7-5fd5-4869-9ec6-faa8c4646e4f",
     "storage": "128 GB",
-    "basePrice": 14700,
+    "basePrice": 15150,
     "active": true,
     "ram": "8 GB"
   },
@@ -60947,7 +60947,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1ed96fe0-b375-4da7-bd50-46046496f557",
     "modelId": "fa2bebe7-5fd5-4869-9ec6-faa8c4646e4f",
     "storage": "256 GB",
-    "basePrice": 14700,
+    "basePrice": 17604,
     "active": true,
     "ram": "12 GB"
   },
@@ -60955,7 +60955,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "dda599e8-8e76-4e40-be9e-38471325dacc",
     "modelId": "fa2bebe7-5fd5-4869-9ec6-faa8c4646e4f",
     "storage": "256 GB",
-    "basePrice": 14700,
+    "basePrice": 16867,
     "active": true,
     "ram": "8 GB"
   },
@@ -60987,7 +60987,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4a50e8ac-516d-4f96-9760-c8a1b2e5df22",
     "modelId": "526692f3-0eb2-4b0e-8eeb-5a4568bb402f",
     "storage": "128 GB",
-    "basePrice": 7290,
+    "basePrice": 7545,
     "active": true,
     "ram": "8 GB"
   },
@@ -60995,7 +60995,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "493e2aa0-54b7-4c24-9155-451ad45df031",
     "modelId": "526692f3-0eb2-4b0e-8eeb-5a4568bb402f",
     "storage": "64 GB",
-    "basePrice": 7290,
+    "basePrice": 6989,
     "active": true,
     "ram": "4 GB"
   },
@@ -61003,7 +61003,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "88302555-b1f3-4918-944f-3f5f8a6b3d6d",
     "modelId": "526692f3-0eb2-4b0e-8eeb-5a4568bb402f",
     "storage": "64 GB",
-    "basePrice": 7290,
+    "basePrice": 6989,
     "active": true,
     "ram": "6 GB"
   },
@@ -61043,7 +61043,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "421aefc5-04bd-495f-9b8f-a83a37fa916a",
     "modelId": "f135194d-dd5c-4628-a873-1e30dc9f7954",
     "storage": "128 GB",
-    "basePrice": 6460,
+    "basePrice": 6585,
     "active": true,
     "ram": "6 GB"
   },
@@ -61051,7 +61051,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "79e3495d-e821-4c2f-a299-771275a97b40",
     "modelId": "f135194d-dd5c-4628-a873-1e30dc9f7954",
     "storage": "64 GB",
-    "basePrice": 6460,
+    "basePrice": 6171,
     "active": true,
     "ram": "4 GB"
   },
@@ -61059,7 +61059,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d681bd32-6508-4794-8523-8765d714b66f",
     "modelId": "fbdd1120-c0ab-4810-b4d1-57bdb64df1e6",
     "storage": "64 GB",
-    "basePrice": 3450,
+    "basePrice": 3626,
     "active": true,
     "ram": "4 GB"
   },
@@ -61067,7 +61067,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "499e47ea-80a1-4dd8-a73d-7d9e3433113a",
     "modelId": "fbdd1120-c0ab-4810-b4d1-57bdb64df1e6",
     "storage": "32 GB",
-    "basePrice": 3450,
+    "basePrice": 3313,
     "active": true,
     "ram": "3 GB"
   },
@@ -61091,7 +61091,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ac6d655b-d0d1-4a3b-a50e-3db0cc080444",
     "modelId": "fe1ecaa8-5495-4f71-b5f4-4936a149572f",
     "storage": "128 GB",
-    "basePrice": 12580,
+    "basePrice": 4988,
     "active": true,
     "ram": "6 GB"
   },
@@ -61099,7 +61099,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "38ea0830-d330-414f-9e8b-d2bfd6a7c054",
     "modelId": "fe1ecaa8-5495-4f71-b5f4-4936a149572f",
     "storage": "128 GB",
-    "basePrice": 13520,
+    "basePrice": 4988,
     "active": true,
     "ram": "8 GB"
   },
@@ -61139,7 +61139,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "94e44cc0-23e3-43e1-83e4-f5fbb1c4667e",
     "modelId": "bc8acfec-efc2-43cb-8091-d701471d4e84",
     "storage": "64 GB",
-    "basePrice": 5570,
+    "basePrice": 5686,
     "active": true,
     "ram": "4 GB"
   },
@@ -61147,7 +61147,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ae5d4da8-7c0c-409b-8051-59463f0326e7",
     "modelId": "bc8acfec-efc2-43cb-8091-d701471d4e84",
     "storage": "128 GB",
-    "basePrice": 5570,
+    "basePrice": 6110,
     "active": true,
     "ram": "6 GB"
   },
@@ -61155,7 +61155,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2f28dbc6-7685-4da3-b3b6-aa3db41d1154",
     "modelId": "bc8acfec-efc2-43cb-8091-d701471d4e84",
     "storage": "128 GB",
-    "basePrice": 5570,
+    "basePrice": 6414,
     "active": true,
     "ram": "8 GB"
   },
@@ -61193,7 +61193,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "10acaa21-fc3c-4ce7-86ab-22ba304cf333",
     "modelId": "1d15babf-3f11-4f84-bbd5-bea2b54697c8",
     "storage": "512 GB",
-    "basePrice": 40590,
+    "basePrice": 41410,
     "active": true,
     "ram": "12 GB"
   },
@@ -61201,7 +61201,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a5de76a3-18dd-486b-8198-3fdb21b9d7f3",
     "modelId": "1d15babf-3f11-4f84-bbd5-bea2b54697c8",
     "storage": "256 GB",
-    "basePrice": 40590,
+    "basePrice": 37370,
     "active": true,
     "ram": "12 GB"
   },
@@ -61209,7 +61209,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "237a3bf7-dcd2-4b5a-a4e1-f46447dea32c",
     "modelId": "9948bcb5-72f0-4c4e-842e-b7300615e1b1",
     "storage": "128 GB",
-    "basePrice": 7370,
+    "basePrice": 7918,
     "active": true,
     "ram": "6 GB"
   },
@@ -61217,7 +61217,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1430f23d-0792-4358-af14-ffc333c116f6",
     "modelId": "9948bcb5-72f0-4c4e-842e-b7300615e1b1",
     "storage": "128 GB",
-    "basePrice": 7760,
+    "basePrice": 8343,
     "active": true,
     "ram": "8 GB"
   },
@@ -61225,7 +61225,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9c5aa9cb-6594-46b0-b87d-aa9ef32b43f5",
     "modelId": "5fd4e6c1-8add-469e-b31f-6c2330ff9c42",
     "storage": "64 GB",
-    "basePrice": 1610,
+    "basePrice": 1717,
     "active": true,
     "ram": "4 GB"
   },
@@ -61233,7 +61233,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a690115e-28e8-4556-8bcc-f4bec81732fc",
     "modelId": "5fd4e6c1-8add-469e-b31f-6c2330ff9c42",
     "storage": "32 GB",
-    "basePrice": 1610,
+    "basePrice": 1545,
     "active": true,
     "ram": "3 GB"
   },
@@ -61241,7 +61241,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7aa630ba-d087-4d95-9f81-b941fa07223e",
     "modelId": "8389a846-17b4-4ef4-9339-90aad5e0a822",
     "storage": "128 GB",
-    "basePrice": 6220,
+    "basePrice": 6474,
     "active": true,
     "ram": "6 GB"
   },
@@ -61249,7 +61249,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7a66472d-87f5-41f7-8906-f2929dd8c91b",
     "modelId": "8389a846-17b4-4ef4-9339-90aad5e0a822",
     "storage": "128 GB",
-    "basePrice": 6220,
+    "basePrice": 5686,
     "active": true,
     "ram": "4 GB"
   },
@@ -61257,7 +61257,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1003a682-ac80-4daf-bf13-38f1cb232066",
     "modelId": "8389a846-17b4-4ef4-9339-90aad5e0a822",
     "storage": "64 GB",
-    "basePrice": 6220,
+    "basePrice": 5262,
     "active": true,
     "ram": "4 GB"
   },
@@ -61265,7 +61265,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "37b167a7-e64e-48a0-a320-4e2faba6ff8a",
     "modelId": "bbba07e3-2bf5-4ba5-adf4-9377606b7359",
     "storage": "128 GB",
-    "basePrice": 8810,
+    "basePrice": 8807,
     "active": true,
     "ram": "8 GB"
   },
@@ -61337,7 +61337,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "270c19ba-15db-4f15-9a5b-44ec128521fc",
     "modelId": "edf7013c-6843-4026-9f1c-b5668c8fe221",
     "storage": "64 GB",
-    "basePrice": 4460,
+    "basePrice": 4606,
     "active": true,
     "ram": "4 GB"
   },
@@ -61345,7 +61345,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cb6a8b9f-1b49-4088-b6ec-8cf33d38a440",
     "modelId": "edf7013c-6843-4026-9f1c-b5668c8fe221",
     "storage": "128 GB",
-    "basePrice": 4460,
+    "basePrice": 4777,
     "active": true,
     "ram": "6 GB"
   },
@@ -61465,14 +61465,14 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2edccefd-f4b2-4721-a687-2822dfc9905a",
     "modelId": "9f1de841-7644-480b-a10d-d718eee438b0",
     "storage": "128 GB",
-    "basePrice": 22170,
+    "basePrice": 10171,
     "active": true
   },
   {
     "id": "0a46e8fd-2279-4748-8cd0-73c3677db73e",
     "modelId": "9f1de841-7644-480b-a10d-d718eee438b0",
     "storage": "256 GB",
-    "basePrice": 24450,
+    "basePrice": 10514,
     "active": true
   },
   {
@@ -61567,7 +61567,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "9c7de271-0a28-41cc-85a8-b06718e6deed",
     "modelId": "1878a5f5-ecd3-462a-95d4-4d20331f5c52",
     "storage": "128 GB",
-    "basePrice": 8360,
+    "basePrice": 8979,
     "active": true,
     "ram": "6 GB"
   },
@@ -61575,7 +61575,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "40b3ef1a-92c2-425d-8486-0814d0c97af0",
     "modelId": "1878a5f5-ecd3-462a-95d4-4d20331f5c52",
     "storage": "128 GB",
-    "basePrice": 8710,
+    "basePrice": 9353,
     "active": true,
     "ram": "8 GB"
   },
@@ -61599,7 +61599,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "baef2649-2066-4d34-bb6f-018c125bf9c4",
     "modelId": "75b2611b-c8ba-45fb-8f78-d7945dfd2953",
     "storage": "128 GB",
-    "basePrice": 10300,
+    "basePrice": 10615,
     "active": true,
     "ram": "8 GB"
   },
@@ -61607,7 +61607,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "53be49e6-e8b1-4187-95c5-897694349ada",
     "modelId": "75b2611b-c8ba-45fb-8f78-d7945dfd2953",
     "storage": "256 GB",
-    "basePrice": 10300,
+    "basePrice": 12221,
     "active": true,
     "ram": "8 GB"
   },
@@ -61647,7 +61647,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "31d8f679-3956-42f1-909d-6ea862abc2a7",
     "modelId": "75dcc237-814e-4130-9524-9b0819a34ade",
     "storage": "32 GB",
-    "basePrice": 1760,
+    "basePrice": 1816,
     "active": true,
     "ram": "2 GB"
   },
@@ -61671,7 +61671,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7f1e9c5a-1eb0-410d-880f-519dda63c88d",
     "modelId": "c2cc3437-53ca-4c23-ac8d-9b8e33cb575f",
     "storage": "256 GB",
-    "basePrice": 11210,
+    "basePrice": 11017,
     "active": true,
     "ram": "8 GB"
   },
@@ -61679,7 +61679,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "6708f86c-b73b-499a-9ed9-bfff9de6876a",
     "modelId": "88808c97-0dc8-4c20-a1fb-92338118b6c7",
     "storage": "64 GB",
-    "basePrice": 3650,
+    "basePrice": 3919,
     "active": true,
     "ram": "4 GB"
   },
@@ -61687,7 +61687,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "10e29223-e761-4371-ae26-c4660934bd6a",
     "modelId": "88808c97-0dc8-4c20-a1fb-92338118b6c7",
     "storage": "128 GB",
-    "basePrice": 4420,
+    "basePrice": 4747,
     "active": true,
     "ram": "4 GB"
   },
@@ -61695,7 +61695,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "41711a50-47ab-4481-9132-b30a97e2e362",
     "modelId": "88808c97-0dc8-4c20-a1fb-92338118b6c7",
     "storage": "128 GB",
-    "basePrice": 4560,
+    "basePrice": 4969,
     "active": true,
     "ram": "6 GB"
   },
@@ -61703,7 +61703,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3098e015-e3a2-45a3-83f9-97ce202ee827",
     "modelId": "e19ac8b1-a575-400f-a086-55bdf748ff3c",
     "storage": "128 GB",
-    "basePrice": 10380,
+    "basePrice": 10585,
     "active": true,
     "ram": "4 GB"
   },
@@ -61711,7 +61711,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b322b39e-35f3-4980-8a55-7e218c11bd13",
     "modelId": "e19ac8b1-a575-400f-a086-55bdf748ff3c",
     "storage": "64 GB",
-    "basePrice": 10380,
+    "basePrice": 9999,
     "active": true,
     "ram": "4 GB"
   },
@@ -61719,7 +61719,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "29f2d65b-46ad-4bb0-a262-d1076c87aeac",
     "modelId": "a6c2574b-45bd-4024-81a1-5bac7c41fddb",
     "storage": "32 GB",
-    "basePrice": 2490,
+    "basePrice": 2757,
     "active": true,
     "ram": "3 GB"
   },
@@ -61727,7 +61727,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "02bd9ea0-1f18-4a02-886c-bf16f3c25ced",
     "modelId": "a6c2574b-45bd-4024-81a1-5bac7c41fddb",
     "storage": "64 GB",
-    "basePrice": 3140,
+    "basePrice": 3373,
     "active": true,
     "ram": "4 GB"
   },
@@ -61735,7 +61735,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5b8f66fc-3ea4-4a68-a9b7-6fe503b7e759",
     "modelId": "14ce08f6-ada2-47ae-b7a3-deb9793d0f57",
     "storage": "32 GB",
-    "basePrice": 3620,
+    "basePrice": 3888,
     "active": true,
     "ram": "2 GB"
   },
@@ -61743,7 +61743,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "603bcccb-3615-4105-91cb-d1be5e83f885",
     "modelId": "14ce08f6-ada2-47ae-b7a3-deb9793d0f57",
     "storage": "64 GB",
-    "basePrice": 3790,
+    "basePrice": 4070,
     "active": true,
     "ram": "4 GB"
   },
@@ -61751,7 +61751,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4ff06d1f-5cb8-4199-9d89-e940a8dad208",
     "modelId": "14ce08f6-ada2-47ae-b7a3-deb9793d0f57",
     "storage": "128 GB",
-    "basePrice": 3920,
+    "basePrice": 4212,
     "active": true,
     "ram": "4 GB"
   },
@@ -61759,7 +61759,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "fa84dba9-112d-4100-8f35-da5f01a0ab09",
     "modelId": "b79149ec-bdc3-48e2-9c0f-bccfc3cf9af2",
     "storage": "128 GB",
-    "basePrice": 5190,
+    "basePrice": 5575,
     "active": true,
     "ram": "4 GB"
   },
@@ -61767,7 +61767,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "45f75191-f63a-4869-b289-e45690b1c3dc",
     "modelId": "b79149ec-bdc3-48e2-9c0f-bccfc3cf9af2",
     "storage": "64 GB",
-    "basePrice": 4840,
+    "basePrice": 5191,
     "active": true,
     "ram": "6 GB"
   },
@@ -61775,7 +61775,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "35123e10-9163-41bd-91da-eaf390e8838c",
     "modelId": "b79149ec-bdc3-48e2-9c0f-bccfc3cf9af2",
     "storage": "128 GB",
-    "basePrice": 5210,
+    "basePrice": 5595,
     "active": true,
     "ram": "6 GB"
   },
@@ -61783,7 +61783,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0ffc7a2b-719f-42be-a91b-5bccc8c0953f",
     "modelId": "b593d6a0-3fd6-4d67-9b13-f523377d4230",
     "storage": "32 GB",
-    "basePrice": 2780,
+    "basePrice": 3091,
     "active": true,
     "ram": "3 GB"
   },
@@ -61791,7 +61791,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "620ad637-e052-4543-8530-ecc156d145c7",
     "modelId": "b593d6a0-3fd6-4d67-9b13-f523377d4230",
     "storage": "64 GB",
-    "basePrice": 3870,
+    "basePrice": 4151,
     "active": true,
     "ram": "4 GB"
   },
@@ -61799,7 +61799,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3a319699-18cf-4b7d-81b4-6cebfe159dba",
     "modelId": "8adf2eb6-3dfc-4f1a-b959-0d66d5830f31",
     "storage": "64 GB",
-    "basePrice": 7840,
+    "basePrice": 4252,
     "active": true,
     "ram": "4 GB"
   },
@@ -61807,7 +61807,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "556a3dd5-d3c2-4dba-8ce5-1333ba7050be",
     "modelId": "8adf2eb6-3dfc-4f1a-b959-0d66d5830f31",
     "storage": "128 GB",
-    "basePrice": 8830,
+    "basePrice": 4888,
     "active": true,
     "ram": "6 GB"
   },
@@ -61815,7 +61815,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "022e71a7-bde3-488a-bcf9-8aaf671f10a4",
     "modelId": "a2eeba8e-a872-44a1-a060-7cb41e4fad50",
     "storage": "32 GB",
-    "basePrice": 2580,
+    "basePrice": 3222,
     "active": true,
     "ram": "2 GB"
   },
@@ -61823,7 +61823,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b82bdefc-fbef-48be-a79c-f9965ff38f01",
     "modelId": "a2eeba8e-a872-44a1-a060-7cb41e4fad50",
     "storage": "32 GB",
-    "basePrice": 3000,
+    "basePrice": 3222,
     "active": true,
     "ram": "3 GB"
   },
@@ -61839,7 +61839,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "65644cf3-3f2e-4549-9b8b-56da4224b0fc",
     "modelId": "7a74aac7-e627-48c9-843d-61a8cf19cd5a",
     "storage": "64 GB",
-    "basePrice": 3300,
+    "basePrice": 3454,
     "active": true,
     "ram": "4 GB"
   },
@@ -61847,7 +61847,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e9729568-e609-4cd5-844f-8211aa35ece3",
     "modelId": "7a74aac7-e627-48c9-843d-61a8cf19cd5a",
     "storage": "32 GB",
-    "basePrice": 3300,
+    "basePrice": 3121,
     "active": true,
     "ram": "3 GB"
   },
@@ -61855,7 +61855,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1d8c058f-889f-42a9-8dee-b74d1b7fe6ef",
     "modelId": "c0a92b13-ed90-462d-93fd-dbb59a6e6b3c",
     "storage": "512 GB",
-    "basePrice": 48510,
+    "basePrice": 49490,
     "active": true,
     "ram": "16 GB"
   },
@@ -61863,7 +61863,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "39e39cbc-73d0-4449-900a-ba91ec4d6e2d",
     "modelId": "c0a92b13-ed90-462d-93fd-dbb59a6e6b3c",
     "storage": "256 GB",
-    "basePrice": 48510,
+    "basePrice": 46157,
     "active": true,
     "ram": "12 GB"
   },
@@ -61871,7 +61871,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "48ea5718-35ce-44ff-83a1-a5d93ea13ad4",
     "modelId": "c0a92b13-ed90-462d-93fd-dbb59a6e6b3c",
     "storage": "512 GB",
-    "basePrice": 48510,
+    "basePrice": 49490,
     "active": true,
     "ram": "12 GB"
   },
@@ -61911,7 +61911,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4400097e-9bad-4f3f-b36e-c36f45355e6c",
     "modelId": "1dde27a8-63cf-4c6b-b271-5926ebf8175f",
     "storage": "128 GB",
-    "basePrice": 10280,
+    "basePrice": 10858,
     "active": true,
     "ram": "8 GB"
   },
@@ -61919,7 +61919,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0bb0679d-74d6-4f50-9500-0b1fe1df2a4b",
     "modelId": "1dde27a8-63cf-4c6b-b271-5926ebf8175f",
     "storage": "256 GB",
-    "basePrice": 10450,
+    "basePrice": 11221,
     "active": true,
     "ram": "8 GB"
   },
@@ -61943,7 +61943,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5a16e0f2-c26d-43fe-a3a8-9e1a59719283",
     "modelId": "91467640-d292-4122-aadc-8b21070643f1",
     "storage": "64 GB",
-    "basePrice": 2290,
+    "basePrice": 2414,
     "active": true,
     "ram": "4 GB"
   },
@@ -61951,7 +61951,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4002cbb3-c672-4e4b-8d21-adacb8a4d429",
     "modelId": "91467640-d292-4122-aadc-8b21070643f1",
     "storage": "128 GB",
-    "basePrice": 2290,
+    "basePrice": 3252,
     "active": true,
     "ram": "4 GB"
   },
@@ -61959,7 +61959,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "239c3848-8054-42d6-8875-4bd7991e7a0a",
     "modelId": "ea4cc213-b678-4846-8ec7-06bd222e856e",
     "storage": "64 GB",
-    "basePrice": 4430,
+    "basePrice": 4757,
     "active": true,
     "ram": "4 GB"
   },
@@ -61967,7 +61967,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "03c32e65-f5ad-4f98-a8ca-2d77c68b3f9a",
     "modelId": "ea4cc213-b678-4846-8ec7-06bd222e856e",
     "storage": "128 GB",
-    "basePrice": 4690,
+    "basePrice": 5040,
     "active": true,
     "ram": "6 GB"
   },
@@ -61975,7 +61975,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cc0f7519-c8d1-48fd-8e27-e8dc6f5776b8",
     "modelId": "e5a8b63f-c09e-47fb-877b-04b255eeed5f",
     "storage": "64 GB",
-    "basePrice": 7620,
+    "basePrice": 7777,
     "active": true,
     "ram": "4 GB"
   },
@@ -61983,7 +61983,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "92c1d5bf-3e1a-4bb9-87d9-1ba06645ee0e",
     "modelId": "e5a8b63f-c09e-47fb-877b-04b255eeed5f",
     "storage": "128 GB",
-    "basePrice": 7620,
+    "basePrice": 8434,
     "active": true,
     "ram": "4 GB"
   },
@@ -61991,7 +61991,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4609fae5-5c7c-4753-9579-5b789401c433",
     "modelId": "e5a8b63f-c09e-47fb-877b-04b255eeed5f",
     "storage": "128 GB",
-    "basePrice": 7620,
+    "basePrice": 10070,
     "active": true,
     "ram": "6 GB"
   },
@@ -62047,7 +62047,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e6f10f35-630a-496d-a753-c96292046a37",
     "modelId": "53b0f722-c881-458b-9bbb-900f38e41e07",
     "storage": "64 GB",
-    "basePrice": 5010,
+    "basePrice": 5383,
     "active": true,
     "ram": "4 GB"
   },
@@ -62055,7 +62055,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5a768c6b-b4a6-478a-8139-2678dcbdcdac",
     "modelId": "53b0f722-c881-458b-9bbb-900f38e41e07",
     "storage": "128 GB",
-    "basePrice": 5810,
+    "basePrice": 6353,
     "active": true,
     "ram": "6 GB"
   },
@@ -62063,7 +62063,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "09f58649-fd86-4f88-a6dd-e3c70bb0ce54",
     "modelId": "1dc888ec-343c-470f-bb8e-f2daf71a5d21",
     "storage": "256 GB",
-    "basePrice": 20250,
+    "basePrice": 20654,
     "active": true,
     "ram": "12 GB"
   },
@@ -62071,7 +62071,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d4ed2d0a-80f8-4c7a-a086-fb246ed4ca55",
     "modelId": "1dc888ec-343c-470f-bb8e-f2daf71a5d21",
     "storage": "128 GB",
-    "basePrice": 20250,
+    "basePrice": 18332,
     "active": true,
     "ram": "8 GB"
   },
@@ -62079,7 +62079,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "67c73013-2ae7-4998-895a-4724c5845e0c",
     "modelId": "1dc888ec-343c-470f-bb8e-f2daf71a5d21",
     "storage": "256 GB",
-    "basePrice": 20250,
+    "basePrice": 19846,
     "active": true,
     "ram": "8 GB"
   },
@@ -62143,7 +62143,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "aad6c5fd-b111-466b-b4d1-0f6d7f90a33e",
     "modelId": "db30b600-24a1-4733-84c3-d73183df2b8f",
     "storage": "64 GB",
-    "basePrice": 5410,
+    "basePrice": 5808,
     "active": true,
     "ram": "4 GB"
   },
@@ -62151,7 +62151,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5bcde0f7-67ba-4389-89c1-c3c559b1c503",
     "modelId": "db30b600-24a1-4733-84c3-d73183df2b8f",
     "storage": "128 GB",
-    "basePrice": 5820,
+    "basePrice": 6252,
     "active": true,
     "ram": "6 GB"
   },
@@ -62159,7 +62159,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8bec30ab-861b-41cd-a2fe-bbbb99beca4c",
     "modelId": "40fc03b4-d731-4cb0-80b7-e818cea77426",
     "storage": "64 GB",
-    "basePrice": 4090,
+    "basePrice": 4232,
     "active": true,
     "ram": "4 GB"
   },
@@ -62167,7 +62167,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e72b5262-4fb9-4c4f-a033-e43dee79d9c7",
     "modelId": "40fc03b4-d731-4cb0-80b7-e818cea77426",
     "storage": "128 GB",
-    "basePrice": 4090,
+    "basePrice": 4515,
     "active": true,
     "ram": "4 GB"
   },
@@ -62199,7 +62199,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5a128170-767c-41f1-b0b5-6f56ccddf684",
     "modelId": "d11fbe17-70d6-433b-9722-88f877f8229a",
     "storage": "512 GB",
-    "basePrice": 79200,
+    "basePrice": 66306,
     "active": true,
     "ram": "12 GB"
   },
@@ -62207,7 +62207,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "841edbd0-2f90-4f48-9773-2d75d2970ba3",
     "modelId": "d11fbe17-70d6-433b-9722-88f877f8229a",
     "storage": "256 GB",
-    "basePrice": 79200,
+    "basePrice": 63756,
     "active": true,
     "ram": "12 GB"
   },
@@ -62215,7 +62215,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "483e80ab-48c1-4888-8d4a-1a68e8091216",
     "modelId": "61febfea-0bab-458e-a9f9-a3bac0df00c4",
     "storage": "256 GB",
-    "basePrice": 91580,
+    "basePrice": 95445,
     "active": true,
     "ram": "12 GB"
   },
@@ -62223,7 +62223,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "59681912-3b5f-4183-874b-a9a00588723e",
     "modelId": "61febfea-0bab-458e-a9f9-a3bac0df00c4",
     "storage": "1 TB",
-    "basePrice": 91580,
+    "basePrice": 99687,
     "active": true,
     "ram": "16 GB"
   },
@@ -62231,7 +62231,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2b3e4b7d-c824-4480-a2bd-e33b772e0470",
     "modelId": "7c845244-1d5d-457c-a6be-7cd690edc2c9",
     "storage": "64 GB",
-    "basePrice": 4420,
+    "basePrice": 4515,
     "active": true,
     "ram": "4 GB"
   },
@@ -62239,7 +62239,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1b4980ee-65ba-4f9a-8589-6e3b8c2d0189",
     "modelId": "7c845244-1d5d-457c-a6be-7cd690edc2c9",
     "storage": "128 GB",
-    "basePrice": 4420,
+    "basePrice": 4989,
     "active": true,
     "ram": "6 GB"
   },
@@ -62287,7 +62287,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e877965f-3cbb-44fe-8fc3-544527500762",
     "modelId": "a2aba2c4-6dff-4348-8062-7bf55e734162",
     "storage": "32 GB",
-    "basePrice": 2770,
+    "basePrice": 2909,
     "active": true,
     "ram": "3 GB"
   },
@@ -62295,7 +62295,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "be0d9e7a-811f-4776-a85d-946a410b9558",
     "modelId": "a2aba2c4-6dff-4348-8062-7bf55e734162",
     "storage": "32 GB",
-    "basePrice": 2770,
+    "basePrice": 2909,
     "active": true,
     "ram": "2 GB"
   },
@@ -62303,7 +62303,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1b216d67-55f7-42e0-a5fd-dcf4bdaf894c",
     "modelId": "0dedb125-fab7-4c26-982d-a5c80ad4ab88",
     "storage": "128 GB",
-    "basePrice": 7760,
+    "basePrice": 7918,
     "active": true,
     "ram": "6 GB"
   },
@@ -62311,7 +62311,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f5c93c21-145f-48a1-87c8-00f7f4144cf9",
     "modelId": "0dedb125-fab7-4c26-982d-a5c80ad4ab88",
     "storage": "128 GB",
-    "basePrice": 7760,
+    "basePrice": 8343,
     "active": true,
     "ram": "8 GB"
   },
@@ -62319,7 +62319,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5decf3f5-d3bc-47a5-a551-c9b0d50ace58",
     "modelId": "d7af6305-239e-4013-ae43-46d8338cb56d",
     "storage": "128 GB",
-    "basePrice": 4910,
+    "basePrice": 5111,
     "active": true,
     "ram": "6 GB"
   },
@@ -62327,7 +62327,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ef680202-bd3a-4a8a-92bb-7a3e075a8cd8",
     "modelId": "d7af6305-239e-4013-ae43-46d8338cb56d",
     "storage": "64 GB",
-    "basePrice": 4910,
+    "basePrice": 4565,
     "active": true,
     "ram": "6 GB"
   },
@@ -62335,7 +62335,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "974c3958-d2fc-48ef-b522-5ee7c6f80233",
     "modelId": "d7af6305-239e-4013-ae43-46d8338cb56d",
     "storage": "64 GB",
-    "basePrice": 4910,
+    "basePrice": 4565,
     "active": true,
     "ram": "4 GB"
   },
@@ -62343,7 +62343,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d921b8b0-c076-4915-ba94-8fdce42b18a0",
     "modelId": "4564ca3d-04be-4236-b6c4-7774d698aceb",
     "storage": "128 GB",
-    "basePrice": 10310,
+    "basePrice": 10938,
     "active": true,
     "ram": "4 GB"
   },
@@ -62351,7 +62351,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b20aaee7-3960-46a8-afc8-67cd2d0e31a8",
     "modelId": "4564ca3d-04be-4236-b6c4-7774d698aceb",
     "storage": "128 GB",
-    "basePrice": 12560,
+    "basePrice": 13635,
     "active": true,
     "ram": "8 GB"
   },
@@ -62383,7 +62383,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "47870f53-2357-4e1d-a967-7979795a7a60",
     "modelId": "bf5000bb-15d6-475d-865a-25a32eaef210",
     "storage": "64 GB",
-    "basePrice": 3930,
+    "basePrice": 4222,
     "active": true,
     "ram": "4 GB"
   },
@@ -62391,7 +62391,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2d110deb-2217-4aea-8ade-362e5a982657",
     "modelId": "bf5000bb-15d6-475d-865a-25a32eaef210",
     "storage": "128 GB",
-    "basePrice": 4350,
+    "basePrice": 4676,
     "active": true,
     "ram": "6 GB"
   },
@@ -62493,7 +62493,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "081bbb51-c722-4ca0-bdf3-eca35bbfbe7b",
     "modelId": "c00cf86a-9b5c-42fe-921c-fb550561e474",
     "storage": "128 GB",
-    "basePrice": 7920,
+    "basePrice": 8080,
     "active": true,
     "ram": "6 GB"
   },
@@ -62501,7 +62501,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "afc3d0b5-b765-4e0e-a497-480c15b2418d",
     "modelId": "c00cf86a-9b5c-42fe-921c-fb550561e474",
     "storage": "256 GB",
-    "basePrice": 7920,
+    "basePrice": 9292,
     "active": true,
     "ram": "8 GB"
   },
@@ -62509,7 +62509,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "cbbe7b4b-8258-44d0-a0f3-af0256a4180a",
     "modelId": "c00cf86a-9b5c-42fe-921c-fb550561e474",
     "storage": "128 GB",
-    "basePrice": 7920,
+    "basePrice": 7575,
     "active": true,
     "ram": "4 GB"
   },
@@ -62517,7 +62517,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e48e4fa2-6e2d-4667-9055-ed39afc414e0",
     "modelId": "c00cf86a-9b5c-42fe-921c-fb550561e474",
     "storage": "64 GB",
-    "basePrice": 7920,
+    "basePrice": 6565,
     "active": true,
     "ram": "4 GB"
   },
@@ -62525,7 +62525,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "497b60bd-7dfb-414b-b240-0aaf69a2ff0c",
     "modelId": "ffb9b4d6-7e6c-4953-96d4-bcd96bfc5d7a",
     "storage": "32 GB",
-    "basePrice": 4360,
+    "basePrice": 1656,
     "active": true,
     "ram": "3 GB"
   },
@@ -62533,7 +62533,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d02470d7-d505-4792-a2bc-52b73c85013b",
     "modelId": "ffb9b4d6-7e6c-4953-96d4-bcd96bfc5d7a",
     "storage": "64 GB",
-    "basePrice": 4600,
+    "basePrice": 1949,
     "active": true,
     "ram": "4 GB"
   },
@@ -62541,7 +62541,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e6ae713c-8aeb-496b-999c-ae62b1132212",
     "modelId": "2e01a5d6-6f19-4ea3-bcd8-da4765dbc678",
     "storage": "256 GB",
-    "basePrice": 17100,
+    "basePrice": 17736,
     "active": true,
     "ram": "8 GB"
   },
@@ -62549,7 +62549,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e9b18edb-e1e2-428f-936d-45e4510ca95c",
     "modelId": "2e01a5d6-6f19-4ea3-bcd8-da4765dbc678",
     "storage": "128 GB",
-    "basePrice": 17100,
+    "basePrice": 17554,
     "active": true,
     "ram": "8 GB"
   },
@@ -62557,7 +62557,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "16cc34d7-0568-48b9-9173-6e2c5520538e",
     "modelId": "64fa1ef1-6320-476b-9120-3f01c526197a",
     "storage": "256 GB",
-    "basePrice": 15350,
+    "basePrice": 15655,
     "active": true,
     "ram": "8 GB"
   },
@@ -62565,7 +62565,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5d580002-0d34-4b3e-8cf7-0687c7d3a47f",
     "modelId": "64fa1ef1-6320-476b-9120-3f01c526197a",
     "storage": "256 GB",
-    "basePrice": 15350,
+    "basePrice": 16554,
     "active": true,
     "ram": "12 GB"
   },
@@ -62573,7 +62573,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e0d5b310-8cbf-42d2-8013-854cf3f1be78",
     "modelId": "64fa1ef1-6320-476b-9120-3f01c526197a",
     "storage": "128 GB",
-    "basePrice": 15350,
+    "basePrice": 13847,
     "active": true,
     "ram": "8 GB"
   },
@@ -62581,7 +62581,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5c2cfb65-0fc2-4e16-b867-a242a644d1b6",
     "modelId": "3378a9ba-b4c9-4425-a2e5-c8e15d856661",
     "storage": "128 GB",
-    "basePrice": 13860,
+    "basePrice": 16049,
     "active": true,
     "ram": "8 GB"
   },
@@ -62589,7 +62589,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "bd0113c4-5830-44b6-9768-061f19b8b0ea",
     "modelId": "3378a9ba-b4c9-4425-a2e5-c8e15d856661",
     "storage": "256 GB",
-    "basePrice": 15050,
+    "basePrice": 17059,
     "active": true,
     "ram": "8 GB"
   },
@@ -62597,7 +62597,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4a9a18ac-93bd-411c-926e-bfb6f50e49f4",
     "modelId": "3378a9ba-b4c9-4425-a2e5-c8e15d856661",
     "storage": "256 GB",
-    "basePrice": 15830,
+    "basePrice": 18069,
     "active": true,
     "ram": "12 GB"
   },
@@ -62653,7 +62653,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "52ba97dc-95bc-4776-ae0b-8976466ee976",
     "modelId": "e44c8b29-bcd3-4127-aa7e-cedc260bab3b",
     "storage": "64 GB",
-    "basePrice": 8680,
+    "basePrice": 6343,
     "active": true,
     "ram": "4 GB"
   },
@@ -62661,7 +62661,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e253c3fe-27b0-43c3-8b4b-065986cfc25f",
     "modelId": "e44c8b29-bcd3-4127-aa7e-cedc260bab3b",
     "storage": "128 GB",
-    "basePrice": 9570,
+    "basePrice": 6999,
     "active": true,
     "ram": "6 GB"
   },
@@ -62701,7 +62701,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7a274e96-928c-46ae-afa3-3dbd222643ca",
     "modelId": "edb58480-7e85-4d86-908a-a9bd508f9b23",
     "storage": "128 GB",
-    "basePrice": 3150,
+    "basePrice": 3222,
     "active": true,
     "ram": "4 GB"
   },
@@ -62709,7 +62709,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "67cae3a8-941c-4715-b992-665c51fd4669",
     "modelId": "edb58480-7e85-4d86-908a-a9bd508f9b23",
     "storage": "128 GB",
-    "basePrice": 3150,
+    "basePrice": 3616,
     "active": true,
     "ram": "8 GB"
   },
@@ -62725,7 +62725,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "124ef97b-baac-4b74-8598-a145e8089f75",
     "modelId": "05ca10f8-14a4-4d3e-99f8-b2bf09740d29",
     "storage": "128 GB",
-    "basePrice": 7740,
+    "basePrice": 8565,
     "active": true,
     "ram": "6 GB"
   },
@@ -62733,7 +62733,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "46c5f986-32a6-408c-8560-91c77d2ed474",
     "modelId": "05ca10f8-14a4-4d3e-99f8-b2bf09740d29",
     "storage": "128 GB",
-    "basePrice": 7920,
+    "basePrice": 8646,
     "active": true,
     "ram": "8 GB"
   },
@@ -62741,7 +62741,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a214976a-6a0b-4714-a622-df9ec36bf962",
     "modelId": "05ca10f8-14a4-4d3e-99f8-b2bf09740d29",
     "storage": "256 GB",
-    "basePrice": 8170,
+    "basePrice": 8918,
     "active": true,
     "ram": "8 GB"
   },
@@ -62813,7 +62813,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2673561a-4ff5-40e6-8e45-4332aa8ebcb2",
     "modelId": "e0b2c8b3-bc2c-4bc0-99fc-586f4c17545f",
     "storage": "64 GB",
-    "basePrice": 4120,
+    "basePrice": 4343,
     "active": true,
     "ram": "4 GB"
   },
@@ -62821,7 +62821,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8ce1d182-12c9-48f0-b96f-ecc1381d33f4",
     "modelId": "e0b2c8b3-bc2c-4bc0-99fc-586f4c17545f",
     "storage": "128 GB",
-    "basePrice": 4120,
+    "basePrice": 5100,
     "active": true,
     "ram": "4 GB"
   },
@@ -62869,7 +62869,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "81f2462d-e31f-4d85-95a5-620d954eb598",
     "modelId": "0687901a-da84-4ae4-83dc-33fe9733d562",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 11332,
     "active": true,
     "ram": "6 GB"
   },
@@ -62877,7 +62877,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2672aa4f-bb85-4d17-9fe8-0d1ea516efc6",
     "modelId": "0687901a-da84-4ae4-83dc-33fe9733d562",
     "storage": "256 GB",
-    "basePrice": 11110,
+    "basePrice": 12888,
     "active": true,
     "ram": "8 GB"
   },
@@ -62885,7 +62885,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a4b3e90a-c36c-4c3a-a413-c1110904a955",
     "modelId": "0687901a-da84-4ae4-83dc-33fe9733d562",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 10514,
     "active": true,
     "ram": "4 GB"
   },
@@ -62893,7 +62893,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "462160b5-68e8-4a81-a8b5-e5b311164c62",
     "modelId": "0687901a-da84-4ae4-83dc-33fe9733d562",
     "storage": "128 GB",
-    "basePrice": 11110,
+    "basePrice": 11332,
     "active": true,
     "ram": "8 GB"
   },
@@ -62957,7 +62957,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "20e8a621-7c63-44cc-b9d2-84637dac679f",
     "modelId": "7cd10f4f-7b6f-49e7-a1c7-3809f364a676",
     "storage": "128 GB",
-    "basePrice": 15050,
+    "basePrice": 16160,
     "active": true,
     "ram": "8 GB"
   },
@@ -62965,7 +62965,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "17d743e2-ef4b-4986-b2e3-550b5fef00e8",
     "modelId": "7cd10f4f-7b6f-49e7-a1c7-3809f364a676",
     "storage": "256 GB",
-    "basePrice": 16120,
+    "basePrice": 17524,
     "active": true,
     "ram": "8 GB"
   },
@@ -62973,7 +62973,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "f11b5d90-955e-4680-8535-23ec6e0767dd",
     "modelId": "7cd10f4f-7b6f-49e7-a1c7-3809f364a676",
     "storage": "256 GB",
-    "basePrice": 16550,
+    "basePrice": 17776,
     "active": true,
     "ram": "12 GB"
   },
@@ -62989,7 +62989,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "63d072ab-bea7-4f4d-81ab-f5108c36b1d1",
     "modelId": "44fd7cff-d3de-46bb-ad86-7e67da749578",
     "storage": "64 GB",
-    "basePrice": 6230,
+    "basePrice": 6464,
     "active": true,
     "ram": "6 GB"
   },
@@ -62997,7 +62997,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "42f66f7f-a201-4a45-893a-24f3ae1c42b6",
     "modelId": "44fd7cff-d3de-46bb-ad86-7e67da749578",
     "storage": "128 GB",
-    "basePrice": 6230,
+    "basePrice": 7575,
     "active": true,
     "ram": "6 GB"
   },
@@ -63005,7 +63005,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "21eacb9c-1862-4c71-b140-110f701a580b",
     "modelId": "44fd7cff-d3de-46bb-ad86-7e67da749578",
     "storage": "128 GB",
-    "basePrice": 6230,
+    "basePrice": 7747,
     "active": true,
     "ram": "8 GB"
   },
@@ -63045,7 +63045,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "94607510-7d8a-491a-b579-8be785de6433",
     "modelId": "222f7a09-8dcc-49fd-9b99-93b4be828efa",
     "storage": "16 GB",
-    "basePrice": 3520,
+    "basePrice": 1202,
     "active": true,
     "ram": "2 GB"
   },
@@ -63053,7 +63053,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ab5d525f-4557-49a1-be36-a6e04733ac45",
     "modelId": "222f7a09-8dcc-49fd-9b99-93b4be828efa",
     "storage": "32 GB",
-    "basePrice": 3750,
+    "basePrice": 1424,
     "active": true,
     "ram": "3 GB"
   },
@@ -63061,7 +63061,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ac67b1dd-d54b-47e9-b8bf-0c3692814b80",
     "modelId": "8452adcd-2bbd-4e1d-89bd-a6aa488e2609",
     "storage": "64 GB",
-    "basePrice": 5150,
+    "basePrice": 5252,
     "active": true,
     "ram": "4 GB"
   },
@@ -63069,7 +63069,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8c5c4743-f466-4725-b8b7-cca20c76dc0e",
     "modelId": "8452adcd-2bbd-4e1d-89bd-a6aa488e2609",
     "storage": "128 GB",
-    "basePrice": 5150,
+    "basePrice": 5737,
     "active": true,
     "ram": "8 GB"
   },
@@ -63141,7 +63141,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5b038ff5-b878-424d-94b6-4cd79362e614",
     "modelId": "8fb1f284-3fd6-49d6-bd11-f863818a44b2",
     "storage": "128 GB",
-    "basePrice": 13170,
+    "basePrice": 14645,
     "active": true,
     "ram": "6 GB"
   },
@@ -63149,7 +63149,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "809a1423-c9e4-4a4e-82be-2298e1e98e23",
     "modelId": "8fb1f284-3fd6-49d6-bd11-f863818a44b2",
     "storage": "128 GB",
-    "basePrice": 15990,
+    "basePrice": 17170,
     "active": true,
     "ram": "8 GB"
   },
@@ -63157,7 +63157,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "be20b52f-621e-498a-9419-765bc0c32c06",
     "modelId": "8fb1f284-3fd6-49d6-bd11-f863818a44b2",
     "storage": "256 GB",
-    "basePrice": 16740,
+    "basePrice": 18180,
     "active": true,
     "ram": "8 GB"
   },
@@ -63189,7 +63189,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ded41736-0719-4fc6-8463-010c10458670",
     "modelId": "19b1f5c9-cb14-4bb5-ac84-31b5aa7d5ec3",
     "storage": "32 GB",
-    "basePrice": 6650,
+    "basePrice": 2818,
     "active": true,
     "ram": "2 GB"
   },
@@ -63197,7 +63197,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3085044f-57a2-453c-af82-274c6c3257c6",
     "modelId": "19b1f5c9-cb14-4bb5-ac84-31b5aa7d5ec3",
     "storage": "64 GB",
-    "basePrice": 8075,
+    "basePrice": 3535,
     "active": true,
     "ram": "4 GB"
   },
@@ -63261,7 +63261,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "ea2b5e9e-e34d-45fe-b943-2f87738cbd9f",
     "modelId": "8bb667e2-175d-44f4-b5ad-474a77145d06",
     "storage": "256 GB",
-    "basePrice": 11000,
+    "basePrice": 11221,
     "active": true,
     "ram": "8 GB"
   },
@@ -63269,7 +63269,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3b0d1aab-3bb9-4639-bc94-e3ef560b55e3",
     "modelId": "8bb667e2-175d-44f4-b5ad-474a77145d06",
     "storage": "128 GB",
-    "basePrice": 11000,
+    "basePrice": 10858,
     "active": true,
     "ram": "8 GB"
   },
@@ -63277,7 +63277,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "e2453821-6efd-45fb-91dc-304346e20d91",
     "modelId": "5f19f7a3-21e9-4e52-940b-7b740ae766ad",
     "storage": "128 GB",
-    "basePrice": 12330,
+    "basePrice": 12736,
     "active": true,
     "ram": "6 GB"
   },
@@ -63285,7 +63285,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "36b56a90-d23b-4fe9-ba37-be76327bff2c",
     "modelId": "5f19f7a3-21e9-4e52-940b-7b740ae766ad",
     "storage": "128 GB",
-    "basePrice": 12330,
+    "basePrice": 11292,
     "active": true,
     "ram": "4 GB"
   },
@@ -63333,7 +63333,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "68a3a394-4725-4ab2-8a3f-a822bc21c29c",
     "modelId": "5a38b1f7-5bf2-4157-bf1a-4306920b36e0",
     "storage": "64 GB",
-    "basePrice": 5770,
+    "basePrice": 5947,
     "active": true
   },
   {
@@ -63364,7 +63364,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "78e92632-f874-4343-ba45-d36bb2b4c4cd",
     "modelId": "80f9f8f4-52ab-49b4-a694-983431428e28",
     "storage": "128 GB",
-    "basePrice": 6950,
+    "basePrice": 7161,
     "active": true,
     "ram": "8 GB"
   },
@@ -63380,21 +63380,21 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b8553c4f-c5f4-49a9-8fa4-6cad60130ef6",
     "modelId": "3a016a11-aefe-4ca2-884d-b1e11adce484",
     "storage": "256 GB",
-    "basePrice": 45330,
+    "basePrice": 49197,
     "active": true
   },
   {
     "id": "65f9e426-9b27-4ec3-99fd-15c37605d8bd",
     "modelId": "3a016a11-aefe-4ca2-884d-b1e11adce484",
     "storage": "512 GB",
-    "basePrice": 50510,
+    "basePrice": 54237,
     "active": true
   },
   {
     "id": "00133d28-9eb6-4880-99b0-8c9d999cadde",
     "modelId": "387f12f9-50cc-4c6f-b484-def010fe504c",
     "storage": "128 GB",
-    "basePrice": 21460,
+    "basePrice": 26013,
     "active": true,
     "ram": "8 GB"
   },
@@ -63402,7 +63402,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "13f3b525-fb51-4454-91a9-9373f0373283",
     "modelId": "387f12f9-50cc-4c6f-b484-def010fe504c",
     "storage": "256 GB",
-    "basePrice": 25210,
+    "basePrice": 27775,
     "active": true,
     "ram": "8 GB"
   },
@@ -63410,7 +63410,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1024b87d-e1d3-460b-a2e6-4445e4480886",
     "modelId": "387f12f9-50cc-4c6f-b484-def010fe504c",
     "storage": "256 GB",
-    "basePrice": 29250,
+    "basePrice": 31815,
     "active": true,
     "ram": "12 GB"
   },
@@ -63490,7 +63490,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c443d909-09e0-4c53-b97d-0909319552d3",
     "modelId": "f3ca41ab-7c9e-487c-ac45-121445ba5885",
     "storage": "1 TB",
-    "basePrice": 15930,
+    "basePrice": 16251,
     "active": true,
     "ram": "12 GB"
   },
@@ -63498,7 +63498,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "b85f380e-c590-4d14-a627-aa74322abf7c",
     "modelId": "f3ca41ab-7c9e-487c-ac45-121445ba5885",
     "storage": "128 GB",
-    "basePrice": 15930,
+    "basePrice": 14433,
     "active": true,
     "ram": "8 GB"
   },
@@ -63506,7 +63506,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0a0a94ee-db67-4dfc-8be1-deeb01d8f0f2",
     "modelId": "f3ca41ab-7c9e-487c-ac45-121445ba5885",
     "storage": "256 GB",
-    "basePrice": 15930,
+    "basePrice": 15342,
     "active": true,
     "ram": "12 GB"
   },
@@ -63538,7 +63538,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8ec1a9e9-611c-4cc3-9308-a774d401ef47",
     "modelId": "68b7480f-c6c4-41bb-92af-67ceb62417f3",
     "storage": "128 GB",
-    "basePrice": 5040,
+    "basePrice": 5468,
     "active": true,
     "ram": "4 GB"
   },
@@ -63546,7 +63546,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2e37b372-d247-49eb-abd6-2953c37be06e",
     "modelId": "68b7480f-c6c4-41bb-92af-67ceb62417f3",
     "storage": "128 GB",
-    "basePrice": 5410,
+    "basePrice": 5468,
     "active": true,
     "ram": "6 GB"
   },
@@ -63554,7 +63554,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "84e69be4-1d96-4256-9111-6db20d8d6da9",
     "modelId": "68b7480f-c6c4-41bb-92af-67ceb62417f3",
     "storage": "128 GB",
-    "basePrice": 5810,
+    "basePrice": 5468,
     "active": true,
     "ram": "8 GB"
   },
@@ -63570,7 +63570,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a178aa7d-cac1-4f34-b8eb-06c0c1e15b60",
     "modelId": "4ee164a7-1678-498a-8373-549355a1a976",
     "storage": "32 GB",
-    "basePrice": 2850,
+    "basePrice": 3060,
     "active": true,
     "ram": "2 GB"
   },
@@ -63578,7 +63578,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "906b0b81-2f69-4efd-b6f2-4d0799759c72",
     "modelId": "4ee164a7-1678-498a-8373-549355a1a976",
     "storage": "64 GB",
-    "basePrice": 3060,
+    "basePrice": 3363,
     "active": true,
     "ram": "4 GB"
   },
@@ -63648,7 +63648,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "369c4b92-479a-4409-bddf-7608bcb309bf",
     "modelId": "ebb37713-543b-4369-9078-bd77cdc9c0c0",
     "storage": "256 GB",
-    "basePrice": 10020,
+    "basePrice": 10221,
     "active": true,
     "ram": "12 GB"
   },
@@ -63656,7 +63656,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "0a73e223-6a6f-4786-b7b8-76cbf5921be8",
     "modelId": "ebb37713-543b-4369-9078-bd77cdc9c0c0",
     "storage": "128 GB",
-    "basePrice": 10020,
+    "basePrice": 9827,
     "active": true,
     "ram": "8 GB"
   },
@@ -63696,7 +63696,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "3b631599-48d4-43c4-836f-d44feca7b52f",
     "modelId": "77b1c2c1-4369-40cd-b23f-4d67def9df05",
     "storage": "256 GB",
-    "basePrice": 8480,
+    "basePrice": 9302,
     "active": true,
     "ram": "8 GB"
   },
@@ -63704,7 +63704,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "249f51fc-a27c-49d7-b9c4-1d458957118a",
     "modelId": "8c9442d4-8572-4089-a058-a497ba5ee0eb",
     "storage": "32 GB",
-    "basePrice": 3150,
+    "basePrice": 3313,
     "active": true,
     "ram": "2 GB"
   },
@@ -63712,7 +63712,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8ee9bebb-0e97-4445-8c9e-2b9922f280aa",
     "modelId": "8c9442d4-8572-4089-a058-a497ba5ee0eb",
     "storage": "64 GB",
-    "basePrice": 3150,
+    "basePrice": 3878,
     "active": true,
     "ram": "4 GB"
   },
@@ -63830,7 +63830,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "14c45488-4a8d-4834-949a-3d7d45f901de",
     "modelId": "91096bf3-5d86-4f77-aa8c-49b071b53c3f",
     "storage": "128 GB",
-    "basePrice": 9500,
+    "basePrice": 10171,
     "active": true,
     "ram": "6 GB"
   },
@@ -63838,7 +63838,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "a42c72ea-7f07-4e59-a149-ff3babda68c6",
     "modelId": "91096bf3-5d86-4f77-aa8c-49b071b53c3f",
     "storage": "128 GB",
-    "basePrice": 9500,
+    "basePrice": 10171,
     "active": true,
     "ram": "8 GB"
   },
@@ -63846,7 +63846,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7d6bacb5-7416-4458-a47c-371230e095a1",
     "modelId": "91096bf3-5d86-4f77-aa8c-49b071b53c3f",
     "storage": "256 GB",
-    "basePrice": 11210,
+    "basePrice": 10514,
     "active": true,
     "ram": "8 GB"
   },
@@ -63894,7 +63894,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5641168a-b790-4462-9abb-f06e8f0a689d",
     "modelId": "91705fcb-d930-4a34-aa5e-76a067e4bebe",
     "storage": "128 GB",
-    "basePrice": 7520,
+    "basePrice": 8070,
     "active": true,
     "ram": "6 GB"
   },
@@ -63902,7 +63902,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "2ea26c03-0efe-403b-9001-879005b90aff",
     "modelId": "91705fcb-d930-4a34-aa5e-76a067e4bebe",
     "storage": "128 GB",
-    "basePrice": 7870,
+    "basePrice": 8454,
     "active": true,
     "ram": "8 GB"
   },
@@ -63918,7 +63918,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "05f94ee4-44bc-40a7-a578-202fb4654d3b",
     "modelId": "b850a4a4-34f5-4d73-b00b-dbe7e53d8ac8",
     "storage": "256 GB",
-    "basePrice": 23980,
+    "basePrice": 27775,
     "active": true,
     "ram": "8 GB"
   },
@@ -63926,7 +63926,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4abc1619-554b-46f8-bcdf-1b630d2c05ff",
     "modelId": "b850a4a4-34f5-4d73-b00b-dbe7e53d8ac8",
     "storage": "256 GB",
-    "basePrice": 25860,
+    "basePrice": 27775,
     "active": true,
     "ram": "12 GB"
   },
@@ -63958,7 +63958,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "d0889667-bfdc-40f4-94be-5176fd309ceb",
     "modelId": "041841f5-3798-45ec-8097-dffd8b8303cb",
     "storage": "128 GB",
-    "basePrice": 9500,
+    "basePrice": 5595,
     "active": true,
     "ram": "6 GB"
   },
@@ -63966,7 +63966,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "49b078b9-2f4f-44a3-9a26-bf9b1c74eeb0",
     "modelId": "041841f5-3798-45ec-8097-dffd8b8303cb",
     "storage": "128 GB",
-    "basePrice": 9500,
+    "basePrice": 5575,
     "active": true,
     "ram": "8 GB"
   },
@@ -64004,7 +64004,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "00371692-ef60-4b9c-a08f-e759e3496a32",
     "modelId": "38cfb6e6-32e9-4c4c-be39-7820cf6a488e",
     "storage": "64 GB",
-    "basePrice": 7180,
+    "basePrice": 7322,
     "active": true
   },
   {
@@ -64051,14 +64051,14 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7212f08c-c781-4e90-a367-5143a540a17a",
     "modelId": "41d5a72e-3c74-40b5-83ed-8d070fbf411d",
     "storage": "128 GB",
-    "basePrice": 46930,
+    "basePrice": 52025,
     "active": true
   },
   {
     "id": "0828c068-5fc6-49df-9c8b-b4d0d36745d3",
     "modelId": "41d5a72e-3c74-40b5-83ed-8d070fbf411d",
     "storage": "256 GB",
-    "basePrice": 47870,
+    "basePrice": 54065,
     "active": true
   },
   {
@@ -64073,7 +64073,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8620938c-6623-4f95-9f4a-64a1ce62e594",
     "modelId": "5973f62b-7c86-4dc1-8250-7f3523165573",
     "storage": "64 GB",
-    "basePrice": 5660,
+    "basePrice": 5888,
     "active": true,
     "ram": "4 GB"
   },
@@ -64081,7 +64081,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "4d08cf34-26c8-4a98-84e8-97e3bb2d2aa2",
     "modelId": "5973f62b-7c86-4dc1-8250-7f3523165573",
     "storage": "128 GB",
-    "basePrice": 5660,
+    "basePrice": 7393,
     "active": true,
     "ram": "6 GB"
   },
@@ -64089,7 +64089,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7315ed5a-6144-4d6a-aab9-a472003b19c6",
     "modelId": "8a31dbcf-2db5-441f-a767-23edf0f0dcb9",
     "storage": "128 GB",
-    "basePrice": 7050,
+    "basePrice": 7817,
     "active": true,
     "ram": "6 GB"
   },
@@ -64097,7 +64097,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "325b38dc-d6a6-4055-8c7f-709a4b673c14",
     "modelId": "8a31dbcf-2db5-441f-a767-23edf0f0dcb9",
     "storage": "128 GB",
-    "basePrice": 7620,
+    "basePrice": 8302,
     "active": true,
     "ram": "8 GB"
   },
@@ -64105,7 +64105,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "03af026a-9c79-4345-91bd-e69a16f05b9e",
     "modelId": "29f2e0b9-96e3-4228-9874-b7ceea0ce397",
     "storage": "128 GB",
-    "basePrice": 8000,
+    "basePrice": 8423,
     "active": true,
     "ram": "6 GB"
   },
@@ -64113,7 +64113,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "5663e412-4e2d-4241-ab77-66828bf3ef10",
     "modelId": "29f2e0b9-96e3-4228-9874-b7ceea0ce397",
     "storage": "128 GB",
-    "basePrice": 8400,
+    "basePrice": 9019,
     "active": true,
     "ram": "8 GB"
   },
@@ -64121,7 +64121,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "7b9f2bf7-c7e2-4d37-be62-b8f19b829b18",
     "modelId": "29f2e0b9-96e3-4228-9874-b7ceea0ce397",
     "storage": "256 GB",
-    "basePrice": 8690,
+    "basePrice": 9332,
     "active": true,
     "ram": "8 GB"
   },
@@ -64161,21 +64161,21 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "8aec99ce-520e-46f5-8012-ff6fa23c67b2",
     "modelId": "13b51d56-4c09-40c2-83c9-dd6dcf793cbd",
     "storage": "128 GB",
-    "basePrice": 15890,
+    "basePrice": 17554,
     "active": true
   },
   {
     "id": "c94b298d-a89a-41a6-8c51-9939f2a1c071",
     "modelId": "13b51d56-4c09-40c2-83c9-dd6dcf793cbd",
     "storage": "256 GB",
-    "basePrice": 16240,
+    "basePrice": 17736,
     "active": true
   },
   {
     "id": "e06c07e4-1766-4e50-9143-43fe2a57224d",
     "modelId": "da2dc74f-fe5b-4c6c-a12c-a41d45da4510",
     "storage": "128 GB",
-    "basePrice": 9690,
+    "basePrice": 10605,
     "active": true,
     "ram": "6 GB"
   },
@@ -64183,7 +64183,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c746e149-9d31-47ea-bea9-6ca1f29c667e",
     "modelId": "da2dc74f-fe5b-4c6c-a12c-a41d45da4510",
     "storage": "128 GB",
-    "basePrice": 10440,
+    "basePrice": 11332,
     "active": true,
     "ram": "8 GB"
   },
@@ -64191,7 +64191,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "c3c64824-c6b9-4061-b90c-7fe23b4e25d6",
     "modelId": "da2dc74f-fe5b-4c6c-a12c-a41d45da4510",
     "storage": "256 GB",
-    "basePrice": 10860,
+    "basePrice": 11666,
     "active": true,
     "ram": "8 GB"
   },
@@ -64207,7 +64207,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "46ff27c7-81a8-42ef-b902-bc6d091f8353",
     "modelId": "3a9ce52a-a95d-41d3-8477-e69d25a098bd",
     "storage": "128 GB",
-    "basePrice": 7910,
+    "basePrice": 8070,
     "active": true,
     "ram": "6 GB"
   },
@@ -64215,7 +64215,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1d8a790c-86ec-4f52-8a6e-7079678247e6",
     "modelId": "4b566116-1ab4-4303-9d62-5189d4ee855d",
     "storage": "256 GB",
-    "basePrice": 8400,
+    "basePrice": 8651,
     "active": true,
     "ram": "8 GB"
   },
@@ -64239,7 +64239,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "1121eb47-a3cb-4d93-8c67-5430881b9eaa",
     "modelId": "ac9a8c31-a808-4497-9a25-1c5844025864",
     "storage": "256 GB",
-    "basePrice": 25250,
+    "basePrice": 27775,
     "active": true,
     "ram": "8 GB"
   },
@@ -64333,7 +64333,7 @@ const MOBILE_VARIANTS_PART_13: DeviceVariantData[] = [
     "id": "6e5cd451-10d6-4294-b75a-c5fa8cbef731",
     "modelId": "5937730b-6ab6-4c15-b27f-19ea5c8e4b83",
     "storage": "128 GB",
-    "basePrice": 4950,
+    "basePrice": 5509,
     "active": true,
     "ram": "4 GB"
   },
@@ -72730,14 +72730,14 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-samsung-galaxy-s26-5g-256-gb",
     "modelId": "m-samsung-galaxy-s26-5g",
     "storage": "256 GB",
-    "basePrice": 51770,
+    "basePrice": 54065,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-5g-512-gb",
     "modelId": "m-samsung-galaxy-s26-5g",
     "storage": "512 GB",
-    "basePrice": 61110,
+    "basePrice": 63246,
     "active": true
   },
   // Samsung Galaxy S26 Plus 5G - Cashify Verified + 1%
@@ -72760,21 +72760,21 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-samsung-galaxy-s26-ultra-5g-256-gb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "256 GB",
-    "basePrice": 82740,
+    "basePrice": 86708,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-ultra-5g-512-gb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "512 GB",
-    "basePrice": 87120,
+    "basePrice": 91809,
     "active": true
   },
   {
     "id": "v-m-samsung-galaxy-s26-ultra-5g-1-tb",
     "modelId": "m-samsung-galaxy-s26-ultra-5g",
     "storage": "1 TB",
-    "basePrice": 102270,
+    "basePrice": 108131,
     "active": true
   },
   // Google Pixel 10 Pro Fold
@@ -73022,28 +73022,28 @@ const LATEST_2026_VARIANTS: DeviceVariantData[] = [
     "id": "v-m-xiaomi-redmi-note-14-5g-128-gb",
     "modelId": "m-xiaomi-redmi-note-14-5g",
     "storage": "128 GB",
-    "basePrice": 12986,
+    "basePrice": 11585,
     "active": true
   },
   {
     "id": "v-m-xiaomi-redmi-note-14-5g-256-gb",
     "modelId": "m-xiaomi-redmi-note-14-5g",
     "storage": "256 GB",
-    "basePrice": 14910,
+    "basePrice": 12776,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-x200-256-gb",
     "modelId": "m-vivo-vivo-x200",
     "storage": "256 GB",
-    "basePrice": 51943,
+    "basePrice": 33330,
     "active": true
   },
   {
     "id": "v-m-vivo-vivo-x200-512-gb",
     "modelId": "m-vivo-vivo-x200",
     "storage": "512 GB",
-    "basePrice": 58676,
+    "basePrice": 35855,
     "active": true
   },
   {

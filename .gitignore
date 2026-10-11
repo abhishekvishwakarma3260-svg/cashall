@@ -63,8 +63,13 @@ android-customer-app/app/build/
 android-customer-app/.gradle/
 hs_err*.log
 *.apk
+*.apk.zip
+*.zip
 /CashALL-Caller.apk
 /CashALL-Customer.apk
+keywords-*.csv
+linkedin_content/
+lib/cashify_icons.json
 database_backups/
 backups/
 database_backup_active_system/
@@ -72,7 +77,6 @@ home_screenshot.png
 cashall-*.json
 *serviceaccount*.json
 
-
-
 .vercel
 .env*
+
