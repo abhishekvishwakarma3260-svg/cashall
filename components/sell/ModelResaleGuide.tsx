@@ -23,9 +23,6 @@ export function ModelResaleGuide({
   return (
     <section className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/90 shadow-[0_2px_16px_-4px_rgba(0,0,0,0.04)] space-y-6">
       <div>
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2">
-          Recommerce Price Index (2026 Updated)
-        </div>
         <h2 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight">
           {displayName} resale value in India
         </h2>

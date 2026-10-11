@@ -33,6 +33,11 @@ import {
   Building,
   ChevronDown,
   ChevronUp,
+  Wallet,
+  CreditCard,
+  Gift,
+  QrCode,
+  Lock,
 } from "lucide-react";
 
 function PickupCheckoutContent() {
@@ -75,6 +80,15 @@ function PickupCheckoutContent() {
       setPickupSlot(validSlots[0]);
     }
   }, [pickupDate, pickupSlot]);
+
+  // Preferred Payout Choice states
+  const [payoutMethod, setPayoutMethod] = useState<"UPI" | "BANK_TRANSFER" | "GIFT_CARD">("UPI");
+  const [upiId, setUpiId] = useState("");
+  const [bankAccount, setBankAccount] = useState("");
+  const [bankIfsc, setBankIfsc] = useState("");
+
+  // Security Reassurance Check state
+  const [securityChecked, setSecurityChecked] = useState(false);
 
   // Legal declarations & consent states (strictly non-prechecked)
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -595,7 +609,9 @@ function PickupCheckoutContent() {
       estimatedPrice: quote?.estimatedPrice,
       declaredConditionSummary: fullDeviceName,
       selectedAnswersJson: quote?.selectedAnswersJson || "{}",
-      breakdownJson: quote?.breakdownJson || "{}",
+      payoutMethod,
+      payoutDetails: payoutMethod === "UPI" ? (upiId || "UPI on-site") : payoutMethod === "BANK_TRANSFER" ? `${bankAccount} / ${bankIfsc}` : "Brand e-Gift Card (+5% Bonus)",
+      securityWipeConfirmed: securityChecked,
       quote: quote || null,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -1120,19 +1136,180 @@ function PickupCheckoutContent() {
                 </div>
               </div>
 
-              {/* STEP 4: SELLER LEGAL DECLARATION & TERMS ACCEPTANCE */}
+              {/* STEP 4: PREFERRED PAYOUT CHOICE */}
               <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard space-y-4">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-3">
                   <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-brand-yellow shrink-0" />
-                    <h2 className="text-base font-bold text-brand-black">4. Seller Legal Declaration &amp; Terms <span className="text-red-500">*</span></h2>
+                    <Wallet className="w-5 h-5 text-brand-yellow shrink-0" />
+                    <h2 className="text-base font-bold text-brand-black">4. Preferred Payout Choice <span className="text-red-500">*</span></h2>
                   </div>
-                  <span className="text-[11px] font-bold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">
-                    Official Agreement
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                    Instant Spot Credit
                   </span>
                 </div>
 
-                <div className="space-y-3.5">
+                <p className="text-xs text-slate-500 font-medium">
+                  Select how you would like to receive your spot payment during doorstep inspection:
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {/* UPI OPTION */}
+                  <label
+                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between ${
+                      payoutMethod === "UPI"
+                        ? "border-emerald-600 bg-emerald-50/40 ring-2 ring-emerald-500/20 shadow-sm"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="w-9 h-9 rounded-xl bg-emerald-100/70 text-emerald-700 flex items-center justify-center">
+                        <QrCode className="w-5 h-5" />
+                      </div>
+                      <input
+                        type="radio"
+                        name="payout"
+                        value="UPI"
+                        checked={payoutMethod === "UPI"}
+                        onChange={() => setPayoutMethod("UPI")}
+                        className="accent-emerald-600 cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <div className="text-xs font-extrabold text-slate-900">Direct UPI Transfer</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">GPay, PhonePe, Paytm, BHIM</div>
+                    </div>
+                  </label>
+
+                  {/* BANK TRANSFER OPTION */}
+                  <label
+                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between ${
+                      payoutMethod === "BANK_TRANSFER"
+                        ? "border-emerald-600 bg-emerald-50/40 ring-2 ring-emerald-500/20 shadow-sm"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="w-9 h-9 rounded-xl bg-blue-100/70 text-blue-700 flex items-center justify-center">
+                        <CreditCard className="w-5 h-5" />
+                      </div>
+                      <input
+                        type="radio"
+                        name="payout"
+                        value="BANK_TRANSFER"
+                        checked={payoutMethod === "BANK_TRANSFER"}
+                        onChange={() => setPayoutMethod("BANK_TRANSFER")}
+                        className="accent-emerald-600 cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <div className="text-xs font-extrabold text-slate-900">Direct Bank IMPS</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">Instant NEFT/IMPS to Account</div>
+                    </div>
+                  </label>
+
+                  {/* BRAND GIFT CARD WITH BONUS */}
+                  <label
+                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all flex flex-col justify-between ${
+                      payoutMethod === "GIFT_CARD"
+                        ? "border-amber-500 bg-amber-50/40 ring-2 ring-amber-500/20 shadow-sm"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="w-9 h-9 rounded-xl bg-amber-100/80 text-amber-700 flex items-center justify-center">
+                        <Gift className="w-5 h-5" />
+                      </div>
+                      <span className="text-[9px] font-black uppercase tracking-wider bg-amber-500 text-slate-950 px-1.5 py-0.5 rounded">
+                        +5% Bonus
+                      </span>
+                    </div>
+                    <div>
+                      <div className="text-xs font-extrabold text-slate-900">Brand e-Gift Card</div>
+                      <div className="text-[11px] text-amber-700 font-semibold mt-0.5">
+                        +₹{Math.round((quote?.estimatedPrice || 30000) * 0.05).toLocaleString("en-IN")} Extra Value!
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                {/* PAYOUT DETAIL INPUT (CONDITIONAL) */}
+                {payoutMethod === "UPI" && (
+                  <div className="pt-2 animate-fadeIn">
+                    <label className="block text-xs font-bold text-slate-900 mb-1">
+                      UPI ID (Virtual Payment Address) <span className="text-slate-400 font-normal">(Optional now, can be verified on-site)</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={upiId}
+                      onChange={(e) => setUpiId(e.target.value)}
+                      placeholder="e.g., yourname@okhdfcbank or 9876543210@paytm"
+                      className="w-full px-3.5 py-2.5 text-xs bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:border-slate-900 font-mono font-medium"
+                    />
+                  </div>
+                )}
+
+                {payoutMethod === "BANK_TRANSFER" && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 animate-fadeIn">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-900 mb-1">Bank Account Number</label>
+                      <input
+                        type="text"
+                        value={bankAccount}
+                        onChange={(e) => setBankAccount(e.target.value)}
+                        placeholder="e.g., 50100234567890"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:border-slate-900 font-mono"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-900 mb-1">IFSC Code</label>
+                      <input
+                        type="text"
+                        value={bankIfsc}
+                        onChange={(e) => setBankIfsc(e.target.value.toUpperCase())}
+                        placeholder="e.g., HDFC0001234"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:border-slate-900 font-mono uppercase"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* STEP 5: SECURITY REASSURANCE CHECK & SELLER DECLARATION */}
+              <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard space-y-4">
+                <div className="flex items-center justify-between border-b border-gray-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <h2 className="text-base font-bold text-brand-black">5. Security Reassurance &amp; Legal Affirmation <span className="text-red-500">*</span></h2>
+                  </div>
+                  <span className="text-[11px] font-bold text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">
+                    Zero-Risk Handover
+                  </span>
+                </div>
+
+                {/* SECURITY REASSURANCE PROMPT BOX */}
+                <div className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-emerald-950">
+                    <Lock className="w-4 h-4 text-emerald-600" />
+                    <span>Security Reassurance Check Before Pickup</span>
+                  </div>
+                  <p className="text-xs text-emerald-900 leading-relaxed font-medium">
+                    Please back up your device and sign out of your iCloud, Google, or Samsung Account. Our certified CashALL agent will securely perform an on-site data wipe in your presence before device handover.
+                  </p>
+                  <label className="flex items-center gap-2.5 pt-1 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={securityChecked}
+                      onChange={(e) => setSecurityChecked(e.target.checked)}
+                      className="w-4 h-4 accent-emerald-600 rounded cursor-pointer shrink-0"
+                    />
+                    <span className="text-xs font-bold text-emerald-950">
+                      I understand that personal accounts must be signed out, and CashALL will conduct an on-site certified wipe.
+                    </span>
+                  </label>
+                </div>
+
+                <div className="space-y-3.5 pt-1">
                   {/* Statutory Affirmation Box */}
                   <div className="bg-neutral-50 rounded-2xl p-4 border border-brand-border text-xs text-brand-muted space-y-2 leading-relaxed">
                     <p className="font-bold text-brand-black">
@@ -1141,7 +1318,7 @@ function PickupCheckoutContent() {
                     <ul className="list-disc pl-4 space-y-1 text-[11px]">
                       <li>You declare you are the lawful, authorized owner with unrestricted right to sell.</li>
                       <li>The device is not stolen, lost, or subject to EMI financing claims, liens, or telecommunication blacklisting.</li>
-                      <li>Your personal data &amp; KYC details are processed strictly in compliance with the Digital Personal Data Protection (DPDP) Act 2023 for verification and payout.</li>
+                      <li>Your personal data &amp; KYC details are processed strictly in compliance with the Digital Personal Data Protection (DPDP) Act 2023.</li>
                       <li>The online quote is an automated estimate; final purchase price is confirmed after physical inspection.</li>
                       <li>You retain full right to decline any revised valuation at doorstep with <strong className="text-brand-black font-bold">₹0 cancellation fee</strong>.</li>
                     </ul>
@@ -1154,7 +1331,7 @@ function PickupCheckoutContent() {
                     </button>
                   </div>
 
-                  {/* Mandatory Affirmative Consent Checkbox (Strictly Unchecked by Default) */}
+                  {/* Mandatory Affirmative Consent Checkbox */}
                   <label className="flex items-start gap-3 p-3.5 bg-brand-bg rounded-2xl border border-brand-border cursor-pointer hover:border-brand-yellow transition-all">
                     <input
                       type="checkbox"

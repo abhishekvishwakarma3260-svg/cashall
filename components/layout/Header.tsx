@@ -11,6 +11,7 @@ import { NeedHelpModal } from "@/components/common/NeedHelpModal";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { getCartQuotes, CART_UPDATED_EVENT } from "@/lib/cart";
 import { clearCrossUserDataOnSwitch } from "@/lib/utils/customer-storage";
+import { DeviceSearch } from "@/components/home/DeviceSearch";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -202,33 +203,10 @@ export function Header() {
 
             </div>
 
-            {/* DESKTOP MAIN NAVIGATION */}
-            <nav className="hidden lg:flex items-center space-x-6 text-xs sm:text-sm font-semibold text-neutral-300">
-              <button
-                onClick={() => setDeviceChoiceOpen(true)}
-                className="hover:text-brand-yellow transition-colors font-bold text-white"
-              >
-                Sell Device
-              </button>
-              <Link href="/sell/mobile" className="hover:text-brand-yellow transition-colors">
-                Sell Phone
-              </Link>
-              <Link href="/sell/laptop" className="hover:text-brand-yellow transition-colors">
-                Sell Laptop
-              </Link>
-              <Link href="/sell/tablet" className="hover:text-brand-yellow transition-colors">
-                Sell Tablet
-              </Link>
-              {isWestBengal && (
-                <Link
-                  href="/rent/ps5"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/25 text-blue-300 hover:text-white hover:bg-blue-600/30 transition-all font-bold text-xs shadow-sm"
-                >
-                  <Gamepad2 className="w-3.5 h-3.5" />
-                  <span>Rent PS 5</span>
-                </Link>
-              )}
-            </nav>
+            {/* DESKTOP SEARCH BAR (BETWEEN LOCATION AND ACTIONS) */}
+            <div className="hidden md:flex flex-1 max-w-md lg:max-w-xl mx-4 lg:mx-8">
+              <DeviceSearch inHeader />
+            </div>
 
             {/* RIGHT ACTION BUTTONS */}
             <div className="hidden sm:flex items-center space-x-2.5">
@@ -330,6 +308,11 @@ export function Header() {
           </div>
         </div>
 
+        {/* MOBILE SEARCH BAR (ALWAYS ACCESSIBLE DIRECTLY ON MOBILE SCREENS) */}
+        <div className="block md:hidden px-3 sm:px-4 pb-2.5 pt-0">
+          <DeviceSearch inHeader />
+        </div>
+
         {/* MOBILE DRAWER MENU */}
         {mobileMenuOpen && (
           <div className="sm:hidden bg-brand-black border-b border-neutral-800 px-4 pt-3 pb-6 space-y-3 animate-fadeIn">
@@ -348,6 +331,11 @@ export function Header() {
               </div>
               <ChevronDown className="w-4 h-4 text-gray-400" />
             </button>
+
+            {/* MOBILE INSTANT DEVICE SEARCH */}
+            <div className="pt-1 pb-1">
+              <DeviceSearch inHeader />
+            </div>
 
             {/* AUTHENTICATION STATE MOBILE BUTTON */}
             {user ? (

@@ -45,10 +45,6 @@ export default function TabletModelSelectionPage() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-bold mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{brand.name} Tablets &amp; iPads</span>
-            </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-black">
               Sell Your {brand.name} Tablet
             </h1>

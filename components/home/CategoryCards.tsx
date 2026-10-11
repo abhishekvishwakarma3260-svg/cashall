@@ -80,16 +80,13 @@ export function CategoryCards() {
   ];
 
   return (
-    <section className="py-14 sm:py-16 bg-brand-bg">
+    <section className="py-14 sm:py-16 bg-[#F8FAFC]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-200 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2">
-            Instant Device Valuation
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-black tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Sell Your Device
           </h2>
-          <p className="text-sm text-neutral-600 mt-2 font-normal">
+          <p className="text-xs sm:text-sm text-slate-500 mt-2 font-normal leading-relaxed">
             Select your device category to calculate a guaranteed algorithmic price quote with ₹0 convenience fees.
           </p>
         </div>
@@ -99,11 +96,11 @@ export function CategoryCards() {
             <Link
               key={cat.id}
               href={cat.href}
-              className="bg-white rounded-3xl p-5 sm:p-6 border border-neutral-200/80 hover:border-brand-yellow/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_-6px_rgba(255,212,0,0.25)] transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1"
+              className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 hover:border-slate-300 shadow-xs hover:shadow-subtleCard transition-all duration-200 group flex flex-col justify-between hover:-translate-y-0.5 cursor-pointer"
             >
               <div>
                 {/* ACTUAL DEVICE PHOTOGRAPH */}
-                <div className="relative h-44 w-full rounded-2xl overflow-hidden mb-5 border border-neutral-100 shadow-xs bg-neutral-950 group-hover:border-brand-yellow/40 transition-all">
+                <div className="relative h-44 w-full rounded-2xl overflow-hidden mb-5 border border-slate-100 shadow-2xs bg-slate-950 group-hover:border-slate-300 transition-all">
                   <Image
                     src={cat.image}
                     alt={cat.title}
@@ -112,20 +109,17 @@ export function CategoryCards() {
                     sizes="(max-width: 768px) 100vw, 360px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute top-3 right-3 text-[10px] font-extrabold text-emerald-800 bg-white/95 backdrop-blur-md border border-emerald-200 px-2.5 py-0.5 rounded-full shadow-xs">
-                    Live Rates
-                  </span>
                 </div>
 
-                <h3 className="text-lg font-black text-brand-black group-hover:text-black">
+                <h3 className="font-heading text-lg font-extrabold text-slate-900 group-hover:text-black">
                   {cat.title}
                 </h3>
-                <p className="text-xs text-neutral-500 mt-1 leading-relaxed font-normal">
+                <p className="text-xs text-slate-500 mt-1 leading-relaxed font-normal">
                   {cat.subtitle}
                 </p>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs font-black text-brand-black mt-6 group-hover:text-amber-600 group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center gap-1.5 text-xs font-extrabold text-slate-900 mt-6 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all">
                 <span>{cat.btnText}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -137,8 +131,8 @@ export function CategoryCards() {
         {isWestBengal && (
           <div className="mt-8 rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-neutral-950 via-[#0a1636] to-neutral-950 border border-blue-900/40 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2.5 max-w-xl">
-              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-400/25 text-[11px] font-bold uppercase tracking-wider">
-                <Gamepad2 className="w-3.5 h-3.5 text-brand-yellow" />
+              <div className="flex items-center gap-2 text-brand-yellow text-xs font-bold uppercase tracking-wider">
+                <Gamepad2 className="w-3.5 h-3.5" />
                 PlayStation 5 Console Rental • Kolkata &amp; WB
               </div>
               <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">

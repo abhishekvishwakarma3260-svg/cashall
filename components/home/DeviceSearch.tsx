@@ -1,288 +1,302 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Search, ArrowRight, Smartphone, Laptop, Tablet, Sparkles, Calculator, MapPin } from "lucide-react";
-import { INITIAL_MODELS, INITIAL_BRANDS } from "@/lib/store";
-import { POPULAR_SEARCH_CHIPS } from "@/lib/data/keywords";
+import { Search, ArrowRight, Smartphone, Laptop, Tablet, Sparkles, Calculator, MapPin, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { INITIAL_MODELS, INITIAL_BRANDS, INITIAL_VARIANTS } from "@/lib/store";
 import { trackMetaStandardEvent } from "@/lib/analytics/meta";
 
-export function DeviceSearch() {
+interface SearchVariantItem {
+  id: string;
+  modelId: string;
+  storage: string;
+  ram?: string;
+  basePrice: number;
+  modelName: string;
+  brandName: string;
+  brandSlug: string;
+  modelSlug: string;
+  category: string;
+  imageUrl?: string | null;
+}
+
+interface DeviceSearchProps {
+  inHeader?: boolean;
+}
+
+export function DeviceSearch({ inHeader = false }: DeviceSearchProps) {
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Detect semantic intent from high-volume keyword queries
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setFocused(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Detect semantic intent from high-volume keyword queries (corridors, general valuations)
   const intentMatch = useMemo(() => {
     if (!query.trim()) return null;
     const q = query.toLowerCase().trim();
 
-    // City corridor intent
     if (q.includes("kolkata")) {
       return {
         type: "city",
-        title: "Sell Old Phone in Kolkata",
-        subtitle: "Express 2–4 Hr Doorstep Pickup across Kolkata & Salt Lake",
+        title: "Sell Old Phone in Kolkata Hub",
+        subtitle: "Express 2–4 Hr Doorstep Pickup across Kolkata & Salt Lake with ₹0 Fee",
         url: "/sell-phone-in-kolkata",
-      };
-    }
-    if (q.includes("ranchi")) {
-      return {
-        type: "city",
-        title: "Sell Old Phone in Ranchi (Jharkhand)",
-        subtitle: "Free 24-Hr Doorstep Pickup across Ranchi Hub",
-        url: "/sell-used-phone",
-      };
-    }
-    if (q.includes("patna")) {
-      return {
-        type: "city",
-        title: "Sell Old Phone in Patna (Bihar)",
-        subtitle: "Free Doorstep Pickup & Instant UPI Payout in Patna",
-        url: "/sell-used-phone",
-      };
-    }
-    if (q.includes("gorakhpur")) {
-      return {
-        type: "city",
-        title: "Sell Old Phone in Gorakhpur (UP)",
-        subtitle: "Doorstep Buyback Service across Gorakhpur",
-        url: "/sell-phone-in-gorakhpur",
       };
     }
     if (q.includes("howrah")) {
       return {
         type: "city",
         title: "Sell Old Phone in Howrah",
-        subtitle: "Express Doorstep Pickup across Howrah & Liluah",
+        subtitle: "Express Doorstep Pickup across Howrah, Liluah & Bally",
         url: "/sell-phone-in-howrah",
       };
     }
-
-    // Price calculator / generic buyback / second-hand intent
-    const isPriceCalc =
-      q.includes("price") ||
-      q.includes("calculator") ||
-      q.includes("valuation") ||
-      q.includes("worth") ||
-      q.includes("rate");
-
-    const isGenericBuyback =
-      q.includes("sell old phone") ||
-      q.includes("second hand mobile") ||
-      q.includes("2nd hand") ||
-      q.includes("cash for phone") ||
-      q.includes("sell phone") ||
-      q.includes("used mobile") ||
-      q.includes("sell my phone") ||
-      q.includes("refurbished") ||
-      q.includes("chasify") ||
-      q.includes("cashify") ||
-      q.includes("quick mobile");
-
-    if (isPriceCalc || isGenericBuyback) {
+    if (q.includes("gorakhpur")) {
+      return {
+        type: "city",
+        title: "Sell Old Phone in Gorakhpur",
+        subtitle: "Doorstep Buyback Service across Gorakhpur Hub",
+        url: "/sell-phone-in-gorakhpur",
+      };
+    }
+    if (q.includes("price") || q.includes("calculator") || q.includes("valuation") || q.includes("rate") || q.includes("worth") || q.includes("cashify")) {
       return {
         type: "calculator",
-        title: "Used Phone Price Calculator & Instant Valuation",
-        subtitle: "Get guaranteed quote in 60 seconds with ₹0 pickup fee",
+        title: "Used Device Resale Calculator & Instant Valuation",
+        subtitle: "Get guaranteed quote in 60 seconds with ₹0 inspection fee",
         url: "/sell-used-phone",
       };
     }
-
     return null;
   }, [query]);
 
-  const filteredResults = useMemo(() => {
-    if (!query.trim()) return [];
+  // Zero-friction variant and model matcher
+  const searchResults = useMemo(() => {
+    if (!query.trim() || query.trim().length < 2) return { models: [], variants: [] };
     const q = query.toLowerCase().trim();
 
-    // Exact model & brand matching
-    let matches = INITIAL_MODELS.filter((m) => {
+    // 1. Find matching models
+    const matchedModels = INITIAL_MODELS.filter((m) => {
       const brand = INITIAL_BRANDS.find((b) => b.id === m.brandId);
       const fullName = `${brand?.name || ""} ${m.name}`.toLowerCase();
-      return fullName.includes(q) || m.name.toLowerCase().includes(q);
+      return fullName.includes(q) || m.name.toLowerCase().includes(q) || m.slug.toLowerCase().includes(q);
+    }).slice(0, 5);
+
+    // 2. Expand into exact variants for instant 1-click valuation
+    const matchedVariants: SearchVariantItem[] = [];
+    matchedModels.forEach((model) => {
+      const brand = INITIAL_BRANDS.find((b) => b.id === model.brandId);
+      const brandName = brand?.name || "Device";
+      const brandSlug = brand?.slug || "general";
+      const modelVariants = INITIAL_VARIANTS.filter((v) => v.modelId === model.id && v.active);
+
+      if (modelVariants.length > 0) {
+        // Take top 2-3 most common storage tiers
+        modelVariants.slice(0, 3).forEach((v) => {
+          matchedVariants.push({
+            id: v.id,
+            modelId: model.id,
+            storage: v.storage,
+            ram: v.ram,
+            basePrice: v.basePrice,
+            modelName: model.name,
+            brandName,
+            brandSlug,
+            modelSlug: model.slug,
+            category: (model.category || "MOBILE").toLowerCase(),
+            imageUrl: model.imageUrl,
+          });
+        });
+      }
     });
 
-    // If query matches a generic category, return curated flagship models
-    if (matches.length === 0) {
-      if (q.includes("iphone") || q.includes("apple")) {
-        matches = INITIAL_MODELS.filter((m) => {
-          const brand = INITIAL_BRANDS.find((b) => b.id === m.brandId);
-          return brand?.slug === "apple";
-        });
-      } else if (q.includes("samsung") || q.includes("galaxy")) {
-        matches = INITIAL_MODELS.filter((m) => {
-          const brand = INITIAL_BRANDS.find((b) => b.id === m.brandId);
-          return brand?.slug === "samsung";
-        });
-      } else if (q.includes("laptop") || q.includes("macbook")) {
-        matches = INITIAL_MODELS.filter((m) => m.category === "LAPTOP");
-      } else if (q.includes("tablet") || q.includes("ipad")) {
-        matches = INITIAL_MODELS.filter((m) => m.category === "TABLET");
-      } else if (
-        q.includes("sell") ||
-        q.includes("phone") ||
-        q.includes("mobile") ||
-        q.includes("second hand") ||
-        q.includes("price")
-      ) {
-        // Return top in-demand models for broad searches
-        matches = INITIAL_MODELS.filter((m) =>
-          m.name.includes("16") ||
-          m.name.includes("15") ||
-          m.name.includes("S24") ||
-          m.name.includes("S23") ||
-          m.name.includes("OnePlus")
-        );
-      }
-    }
-
-    return matches.slice(0, 6);
+    return {
+      models: matchedModels,
+      variants: matchedVariants.slice(0, 6),
+    };
   }, [query]);
 
   return (
-    <div className="w-full max-w-3xl mx-auto relative z-30">
+    <div className={`w-full ${inHeader ? "" : "max-w-3xl mx-auto"} relative z-40`} ref={dropdownRef}>
       <div className="relative">
-        <div className="relative flex items-center">
-          <Search className="w-6 h-6 absolute left-5 text-brand-black/60 pointer-events-none z-10" />
+        <div
+          className={
+            inHeader
+              ? "relative flex items-center rounded-full bg-neutral-900 border border-neutral-700/90 hover:border-neutral-500 focus-within:border-brand-yellow focus-within:ring-2 focus-within:ring-brand-yellow/30 transition-all shadow-inner"
+              : "relative flex items-center shadow-stitchElevated rounded-2xl bg-white border border-slate-200/90 hover:border-slate-300 focus-within:border-slate-900 focus-within:ring-4 focus-within:ring-slate-900/5 transition-all"
+          }
+        >
+          <Search
+            className={
+              inHeader
+                ? "w-4 h-4 absolute left-3.5 text-brand-yellow pointer-events-none"
+                : "w-5 h-5 absolute left-4 text-slate-400 pointer-events-none"
+            }
+          />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setFocused(true)}
-            onBlur={() => setTimeout(() => setFocused(false), 200)}
-            placeholder="Search brand, model, or 'second hand mobile price' (e.g. iPhone 16, S24 Ultra, MacBook)"
-            className="w-full pl-14 pr-12 py-4 text-base md:text-lg font-medium text-brand-black bg-white rounded-2xl border-2 border-brand-border shadow-premium focus:outline-none focus:border-brand-yellow transition-all"
+            placeholder={
+              inHeader
+                ? "Search phone, laptop, or tablet to sell..."
+                : "Type your device (e.g., 'iPhone 13', 'MacBook Air', 'S24 Ultra')..."
+            }
+            className={
+              inHeader
+                ? "w-full pl-10 pr-16 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-white bg-transparent rounded-full focus:outline-none placeholder:text-neutral-400"
+                : "w-full pl-12 pr-16 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-slate-900 bg-transparent rounded-2xl focus:outline-none placeholder:text-slate-400"
+            }
           />
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="absolute right-4 text-xs font-bold text-gray-400 hover:text-brand-black bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-md"
+              className={
+                inHeader
+                  ? "absolute right-2.5 text-[11px] font-bold text-neutral-300 hover:text-white bg-neutral-800 hover:bg-neutral-700 px-2.5 py-0.5 rounded-full transition-colors cursor-pointer"
+                  : "absolute right-3 text-xs font-semibold text-slate-500 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-lg transition-colors cursor-pointer"
+              }
             >
               Clear
             </button>
           )}
         </div>
 
-        {/* AUTOCOMPLETE DROPDOWN */}
-        {focused && query.trim().length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl shadow-2xl border border-brand-border overflow-hidden z-50 animate-fadeIn">
+        {/* ZERO-FRICTION AUTOCOMPLETE DROPDOWN */}
+        {focused && query.trim().length >= 2 && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-fadeIn divide-y divide-slate-100">
             {/* INTENT-DRIVEN QUICK ACTION CARD */}
             {intentMatch && (
               <Link
                 href={intentMatch.url}
-                className="flex items-center justify-between px-5 py-3.5 bg-brand-yellow/15 hover:bg-brand-yellow/25 border-b border-brand-yellow/30 transition-colors group"
+                className="flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100/80 transition-colors group"
+                onClick={() => setFocused(false)}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-brand-black text-brand-yellow flex items-center justify-center font-bold">
+                  <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold shrink-0">
                     {intentMatch.type === "city" ? (
-                      <MapPin className="w-5 h-5" />
+                      <MapPin className="w-4 h-4 text-brand-yellow" />
                     ) : (
-                      <Calculator className="w-5 h-5" />
+                      <Calculator className="w-4 h-4 text-brand-yellow" />
                     )}
                   </div>
                   <div>
-                    <div className="text-sm font-black text-brand-black group-hover:text-black">
+                    <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-black">
                       {intentMatch.title}
                     </div>
-                    <div className="text-xs text-brand-muted font-medium">
+                    <div className="text-[11px] text-slate-500 font-medium">
                       {intentMatch.subtitle}
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs font-extrabold text-brand-black bg-brand-yellow px-3 py-1.5 rounded-lg group-hover:scale-105 transition-transform">
-                  <span>Calculate Now</span>
+                <div className="flex items-center gap-1 text-[11px] font-bold text-slate-900 bg-brand-yellow px-2.5 py-1.5 rounded-lg group-hover:bg-brand-yellowHover transition-colors shrink-0">
+                  <span>Explore Hub</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </Link>
             )}
 
-            {filteredResults.length > 0 ? (
-              <div className="divide-y divide-gray-100">
-                <div className="px-4 py-2 bg-brand-bg text-[11px] font-bold uppercase tracking-wider text-gray-400">
-                  Select Your Exact Device Model
+            {/* INSTANT VARIANTS: ZERO-FRICTION VALUATION */}
+            {searchResults.variants.length > 0 ? (
+              <div>
+                <div className="px-4 py-2 bg-slate-50/80 flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <Zap className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Exact Variants • Instant Valuation</span>
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-medium">Click to assess condition</span>
                 </div>
-                {filteredResults.map((item) => {
-                  const brand = INITIAL_BRANDS.find((b) => b.id === item.brandId);
-                  const targetUrl =
-                    item.category === "LAPTOP"
-                      ? `/sell/laptop/${brand?.slug}/${item.slug}`
-                      : item.category === "TABLET"
-                      ? `/sell/tablet/${brand?.slug}/${item.slug}`
-                      : `/sell/mobile/${brand?.slug}/${item.slug}`;
 
-                  return (
-                    <Link
-                      key={item.id}
-                      href={targetUrl}
-                      onClick={() => {
-                        trackMetaStandardEvent(
-                          "Search",
-                          {
+                <div className="divide-y divide-slate-100 max-h-[380px] overflow-y-auto">
+                  {searchResults.variants.map((variant) => {
+                    const assessUrl = `/sell/${variant.category}/${variant.brandSlug}/${variant.modelSlug}/assess?variantId=${variant.id}`;
+                    return (
+                      <Link
+                        key={variant.id}
+                        href={assessUrl}
+                        onClick={() => {
+                          setFocused(false);
+                          trackMetaStandardEvent("Search", {
                             search_string: query,
-                            content_category: item.category?.toLowerCase() || "device",
-                            content_name: item.name,
-                          },
-                          { eventId: `search_${query.trim().toLowerCase()}` }
-                        );
-                      }}
-                      className="flex items-center justify-between px-5 py-3.5 hover:bg-brand-yellow/10 transition-colors group"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center p-1 border border-gray-100 group-hover:border-brand-yellow/50">
-                          {item.imageUrl ? (
-                            <img
-                              src={item.imageUrl}
-                              alt={item.name}
-                              className="object-contain max-h-8 max-w-8"
-                            />
-                          ) : item.category === "LAPTOP" ? (
-                            <Laptop className="w-5 h-5 text-gray-400" />
-                          ) : item.category === "TABLET" ? (
-                            <Tablet className="w-5 h-5 text-gray-400" />
-                          ) : (
-                            <Smartphone className="w-5 h-5 text-gray-400" />
-                          )}
-                        </div>
-                        <div>
-                          <div className="text-sm font-bold text-brand-black group-hover:text-black">
-                            {item.name.toLowerCase().startsWith((brand?.name || "").toLowerCase())
-                              ? item.name
-                              : `${brand?.name} ${item.name}`}
+                            content_category: variant.category,
+                            content_name: `${variant.brandName} ${variant.modelName} ${variant.storage}`,
+                          });
+                        }}
+                        className="flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors group"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center p-1 border border-slate-200/70 shrink-0">
+                            {variant.imageUrl ? (
+                              <img
+                                src={variant.imageUrl}
+                                alt={variant.modelName}
+                                className="object-contain max-h-8 max-w-8"
+                              />
+                            ) : variant.category === "laptop" ? (
+                              <Laptop className="w-5 h-5 text-slate-400" />
+                            ) : variant.category === "tablet" ? (
+                              <Tablet className="w-5 h-5 text-slate-400" />
+                            ) : (
+                              <Smartphone className="w-5 h-5 text-slate-400" />
+                            )}
                           </div>
-                          <div className="text-[10px] text-gray-400 font-semibold uppercase">
-                            {item.category || "Device"}
+                          <div className="min-w-0">
+                            <div className="text-xs sm:text-sm font-bold text-slate-900 truncate group-hover:text-black">
+                              {variant.modelName.toLowerCase().startsWith(variant.brandName.toLowerCase())
+                                ? variant.modelName
+                                : `${variant.brandName} ${variant.modelName}`}{" "}
+                              <span className="text-slate-500 font-medium">({variant.storage})</span>
+                            </div>
+                            <div className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1.5 mt-0.5">
+                              <span className="tabular-nums">Up to ₹{variant.basePrice.toLocaleString("en-IN")}</span>
+                              <span className="text-slate-300">•</span>
+                              <span className="text-slate-500 font-normal">₹0 Pickup</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="flex items-center gap-1 text-xs font-extrabold text-brand-black group-hover:translate-x-1 transition-transform">
-                        <span>Get Price</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-brand-black" />
-                      </div>
-                    </Link>
-                  );
-                })}
+
+                        <div className="flex items-center gap-1.5 shrink-0 pl-3">
+                          <span className="text-xs font-bold text-slate-900 px-2.5 py-1.5 rounded-lg bg-slate-100 group-hover:bg-slate-900 group-hover:text-white transition-all flex items-center gap-1">
+                            <span>Get Price</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
             ) : !intentMatch ? (
-              <div className="p-8 text-center">
-                <Smartphone className="w-10 h-10 text-gray-300 mx-auto mb-2" />
-                <p className="text-sm font-bold text-brand-black">No devices found matching &quot;{query}&quot;</p>
-                <p className="text-xs text-brand-muted mt-1">
-                  Try searching for brand names like &quot;Apple&quot;, &quot;Samsung&quot; or &quot;sell old phone&quot;.
+              <div className="p-8 text-center bg-white">
+                <Smartphone className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                <p className="text-sm font-bold text-slate-900">No exact device found for &quot;{query}&quot;</p>
+                <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
+                  Try searching for brand or series like &quot;iPhone 14&quot;, &quot;Samsung S23&quot;, or &quot;MacBook M2&quot;.
                 </p>
                 <Link
-                  href="/sell-used-phone"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-black bg-brand-yellow px-4 py-2 rounded-xl mt-4 hover:bg-brand-yellowHover transition-colors"
+                  href="/sell"
+                  onClick={() => setFocused(false)}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 bg-brand-yellow px-4 py-2 rounded-xl mt-4 hover:bg-brand-yellowHover transition-colors"
                 >
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Open Price Calculator</span>
+                  <span>Browse Full Device Catalog</span>
                 </Link>
               </div>
             ) : null}
           </div>
         )}
       </div>
-
     </div>
   );
 }

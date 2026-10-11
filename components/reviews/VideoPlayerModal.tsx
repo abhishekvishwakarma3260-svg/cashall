@@ -167,10 +167,10 @@ export function VideoPlayerModal({ review, isOpen, onClose }: VideoPlayerModalPr
                 <Play className="w-8 h-8 text-brand-yellow fill-brand-yellow ml-1" />
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+              <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5 mb-4">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Verified Customer Video</span>
-              </div>
+              </p>
 
               <p className="text-white font-medium text-sm sm:text-base leading-relaxed max-w-xs italic mb-4">
                 &ldquo;{review.quote}&rdquo;

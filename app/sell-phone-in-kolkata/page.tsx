@@ -179,10 +179,10 @@ export default function SellPhoneInKolkataPage() {
             </div>
 
             <div className="max-w-3xl space-y-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/40 text-xs font-black tracking-wide uppercase">
+              <p className="text-xs font-bold text-brand-yellow uppercase tracking-wider flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Kolkata & Howrah Dedicated Doorstep Service</span>
-              </div>
+              </p>
 
               <h1 className="text-3xl sm:text-5xl font-black text-white leading-tight">
                 Sell Old Phone in Kolkata <br />

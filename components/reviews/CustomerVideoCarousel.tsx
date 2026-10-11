@@ -39,10 +39,6 @@ export function CustomerVideoCarousel({ onSelectVideo }: CustomerVideoCarouselPr
       {/* SECTION SUBHEADER WITH SCROLL CONTROLS */}
       <div className="flex items-center justify-between">
         <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/15 border border-brand-yellow/30 text-brand-black text-xs font-bold mb-1">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-            <span>Real Customer Video Stories</span>
-          </div>
           <h3 className="text-xl sm:text-2xl font-black text-brand-black">
             Watch Them Sell & Get Paid Live
           </h3>

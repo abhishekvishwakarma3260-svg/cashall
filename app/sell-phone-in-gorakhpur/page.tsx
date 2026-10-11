@@ -125,10 +125,10 @@ export default function SellPhoneInGorakhpurPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-black text-white rounded-3xl p-6 sm:p-12 relative overflow-hidden border border-neutral-800 shadow-2xl">
             <div className="max-w-3xl space-y-6 relative z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-yellow text-xs font-bold border border-brand-yellow/30">
+              <p className="text-xs font-bold text-brand-yellow uppercase tracking-wider flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5" />
                 Gorakhpur Hub • Golghar, Betiahata, Medical Road &amp; Mohaddipur
-              </div>
+              </p>
 
               <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
                 Sell Old Phone in <span className="text-brand-yellow">Gorakhpur</span> for Instant Cash

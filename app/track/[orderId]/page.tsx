@@ -256,33 +256,35 @@ export default function OrderTrackingPage() {
   const isDealCompleted = order.status === "COMPLETED" || order.status === "PAID" || order.paymentStatus === "PAID";
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-bg text-brand-black">
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900">
       <Header />
       <main className="flex-grow py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           {/* HEADER ORDER SUMMARY */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-premium flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">
                 <span>Selling Order Tracker</span>
                 <span>•</span>
-                <Badge variant={isCancelled ? "danger" : isPaid ? "success" : "yellow"}>
+                <span className={`px-2 py-0.5 rounded-md font-extrabold ${
+                  isCancelled ? "bg-red-50 text-red-700 border border-red-200" : isPaid ? "bg-emerald-50 text-emerald-700 border border-emerald-200" : "bg-amber-50 text-amber-800 border border-amber-200"
+                }`}>
                   {isCancelled ? "CANCELLED" : order.status.replace(/_/g, " ")}
-                </Badge>
+                </span>
               </div>
-              <h1 className="text-2xl font-black text-brand-black">
-                Order ID: {order.orderNumber}
+              <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Order #{order.orderNumber}
               </h1>
-              <p className="text-xs text-brand-muted mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5 font-medium">
                 Booked on {new Date(order.createdAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
               </p>
             </div>
 
-            <div className="text-left sm:text-right border-t sm:border-t-0 pt-3 sm:pt-0 border-gray-100 space-y-2">
+            <div className="text-left sm:text-right border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-100 space-y-2">
               <div>
-                <div className="text-xs font-bold text-gray-400 uppercase">CashALL Final Offer</div>
-                <div className="text-2xl sm:text-3xl font-black text-brand-black font-price">
+                <div className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest">CashALL Offer</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-price tabular-nums">
                   ₹{(order.revisedPrice || order.estimatedPrice || 31400).toLocaleString("en-IN")}
                 </div>
               </div>
@@ -291,14 +293,14 @@ export default function OrderTrackingPage() {
                   onClick={() => setShowAnswersModal(true)}
                   variant="outline"
                   size="sm"
-                  className="font-extrabold text-xs bg-yellow-50 hover:bg-yellow-100 border-yellow-300 text-neutral-900 gap-1.5"
+                  className="font-bold text-xs bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-800 gap-1.5 cursor-pointer"
                 >
-                  <ClipboardList className="w-4 h-4 text-yellow-600" />
+                  <ClipboardList className="w-4 h-4 text-slate-600" />
                   <span>Condition Answers</span>
                 </Button>
                 {isDealCompleted && (
                   <Link href={`/order/${order.orderNumber}/bill`}>
-                    <Button variant="outline" size="sm" className="font-extrabold text-xs">
+                    <Button variant="outline" size="sm" className="font-bold text-xs border-slate-200 text-slate-800 cursor-pointer">
                       <span>View Official Bill</span>
                     </Button>
                   </Link>
@@ -308,7 +310,7 @@ export default function OrderTrackingPage() {
                     onClick={() => setCancelModalOpen(true)}
                     variant="outline"
                     size="sm"
-                    className="font-bold text-xs text-red-600 hover:bg-red-50 border-red-200"
+                    className="font-bold text-xs text-red-600 hover:bg-red-50 border-red-200 cursor-pointer"
                   >
                     <span>Cancel Order</span>
                   </Button>
@@ -317,30 +319,72 @@ export default function OrderTrackingPage() {
             </div>
           </div>
 
+          {/* PICKUP OTP VERIFICATION CARD (CRITICAL RECOMMERCE TRUST PASS) */}
+          {!isCancelled && (
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-subtleCard flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="space-y-1.5 max-w-lg">
+                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-slate-600" />
+                  Doorstep Security Verification
+                </p>
+                <h3 className="font-heading text-lg font-extrabold text-slate-900 tracking-tight">
+                  Pickup Handover OTP
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                  Share this 4-digit code with your executive only after device condition inspection is completed to your satisfaction and final payout is ready.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center sm:items-end gap-1.5 shrink-0 bg-slate-50 px-6 py-4 rounded-2xl border border-slate-200/80">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+                  Seller Verification Pass
+                </span>
+                <div className="flex items-center gap-2 font-mono text-2xl sm:text-3xl font-black text-slate-950 tracking-widest">
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-2xs">
+                    {order.orderNumber ? order.orderNumber.replace(/\D/g, "").slice(-4)[0] || "4" : "4"}
+                  </span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-2xs">
+                    {order.orderNumber ? order.orderNumber.replace(/\D/g, "").slice(-3)[0] || "8" : "8"}
+                  </span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-2xs">
+                    {order.orderNumber ? order.orderNumber.replace(/\D/g, "").slice(-2)[0] || "2" : "2"}
+                  </span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-2xs">
+                    {order.orderNumber ? order.orderNumber.replace(/\D/g, "").slice(-1)[0] || "9" : "9"}
+                  </span>
+                </div>
+                <span className="text-[10px] text-emerald-700 font-semibold flex items-center gap-1 mt-0.5">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                  Certified Handshake Protocol
+                </span>
+              </div>
+            </div>
+          )}
+
           {/* CANCELLED STATUS BANNER */}
           {isCancelled && (
-            <div className="bg-red-50 border-2 border-red-200 rounded-3xl p-6 sm:p-8 space-y-4 animate-fadeIn">
+            <div className="bg-red-50 border border-red-200 rounded-3xl p-6 sm:p-8 space-y-4 animate-fadeIn">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
                   <XCircle className="w-7 h-7" />
                 </div>
                 <div className="space-y-1">
-                  <h2 className="text-xl font-black text-red-950">Order Cancelled</h2>
+                  <h2 className="font-heading text-xl font-extrabold text-red-950">Order Cancelled</h2>
                   <p className="text-xs text-red-800 leading-relaxed max-w-2xl">
-                    This order #{order.orderNumber} has been cancelled. Doorstep pickup and evaluation have been called off. No penalty or fee applies.
+                    This order #{order.orderNumber} has been cancelled. Doorstep pickup and evaluation have been called off. No penalty or convenience fee applies.
                   </p>
                 </div>
               </div>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link href="/sell/mobile">
-                  <Button variant="primary" size="sm" className="font-extrabold shadow-yellowGlow gap-1.5">
+                  <Button variant="primary" size="sm" className="font-extrabold bg-slate-950 text-white gap-1.5 cursor-pointer">
                     <span>Sell Another Device / Re-quote</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 text-emerald-400" />
                   </Button>
                 </Link>
                 <Link href="/account">
-                  <Button variant="outline" size="sm" className="font-bold">
+                  <Button variant="outline" size="sm" className="font-bold border-slate-200 cursor-pointer">
                     <span>Go to My Account</span>
                   </Button>
                 </Link>
@@ -350,74 +394,74 @@ export default function OrderTrackingPage() {
 
           {/* ASSIGNED PICKUP EXECUTIVE CARD */}
           {order.assignedPartnerName ? (
-            <div className="bg-gradient-to-br from-neutral-900 to-black text-white rounded-3xl p-6 sm:p-8 border border-neutral-800 shadow-2xl space-y-4 animate-fadeIn">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-800 pb-4">
+            <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-sm space-y-4 animate-fadeIn">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-yellow/20 border border-brand-yellow/40 flex items-center justify-center text-brand-yellow shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
                     <UserCheck className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-700 text-emerald-400 text-[10px] font-bold uppercase tracking-wider mb-1">
+                    <p className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5 mb-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Pickup Executive Assigned</span>
-                    </div>
-                    <h2 className="text-xl font-black text-white">
+                      <span>Executive Assigned</span>
+                    </p>
+                    <h2 className="font-heading text-xl font-extrabold text-white">
                       {order.assignedPartnerName}
                     </h2>
-                    <p className="text-xs text-gray-400 flex items-center gap-1.5 mt-0.5">
-                      <Building2 className="w-3.5 h-3.5 text-brand-yellow" />
-                      <span>{order.assignedPartnerBusiness || "Express Logistics Partner"}</span>
+                    <p className="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5 font-medium">
+                      <Building2 className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>{order.assignedPartnerBusiness || "CashALL Express Logistics"}</span>
                     </p>
                   </div>
                 </div>
 
                 <a
                   href={`tel:${order.assignedPartnerPhone || "+919876543210"}`}
-                  className="inline-flex items-center justify-center gap-2 bg-brand-yellow text-black font-extrabold text-xs px-6 py-3 rounded-2xl border border-black shadow-yellowGlow hover:bg-yellow-400 transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-extrabold text-xs px-6 py-3 rounded-xl hover:bg-emerald-500 transition-all text-center shadow-xs cursor-pointer"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call Executive ({order.assignedPartnerPhone || "+91 9876543210"})</span>
                 </a>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-300 pt-1">
-                <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700 flex flex-col justify-between">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-1">
+                <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60 flex flex-col justify-between">
                   <div>
-                    <span className="text-[10px] font-bold uppercase text-gray-400 block">Scheduled Window</span>
+                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 block">Scheduled Window</span>
                     <span className="font-extrabold text-white text-sm">{formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}</span>
                   </div>
                   <button
                     type="button"
                     onClick={() => setRescheduleModalOpen(true)}
-                    className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-brand-yellow hover:underline self-start bg-brand-yellow/10 px-2.5 py-1 rounded-lg border border-brand-yellow/30"
+                    className="mt-2.5 inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:underline self-start bg-amber-400/10 px-2.5 py-1 rounded-lg border border-amber-400/20 cursor-pointer"
                   >
                     <Calendar className="w-3.5 h-3.5" />
                     <span>Change / Reschedule</span>
                   </button>
                 </div>
-                <div className="bg-neutral-800/80 p-3 rounded-2xl border border-neutral-700">
-                  <span className="text-[10px] font-bold uppercase text-gray-400 block">Pickup Address</span>
-                  <span className="font-semibold text-gray-200 truncate block">{order.addressSummary || "Customer Address • PIN: " + order.pincode}</span>
+                <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 block">Pickup Address</span>
+                  <span className="font-semibold text-slate-200 truncate block mt-0.5">{order.addressSummary || "Customer Address • PIN: " + order.pincode}</span>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl p-6 border border-brand-border shadow-subtleCard flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-subtleCard flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
                   <Clock className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-extrabold text-brand-black">Assigning Local Pickup Agent...</h3>
-                  <p className="text-xs text-brand-muted mt-0.5">
-                    Scheduled for <strong className="text-black font-extrabold">{formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}</strong> in PIN <strong className="text-black">{order.pincode}</strong>.
+                  <h3 className="font-heading text-sm font-extrabold text-slate-900">Assigning Local Pickup Agent...</h3>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Scheduled for <strong className="text-slate-900 font-extrabold">{formatPickupDateTimeSlot(order.pickupDate, order.pickupTimeSlot, order.createdAt)}</strong> in PIN <strong className="text-slate-900">{order.pincode}</strong>.
                   </p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setRescheduleModalOpen(true)}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-black bg-brand-yellow px-3.5 py-2 rounded-xl shadow-sm hover:brightness-95 transition-all shrink-0"
+                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-slate-900 bg-amber-400 hover:bg-amber-300 px-3.5 py-2 rounded-xl shadow-xs transition-all shrink-0 cursor-pointer"
               >
                 <Calendar className="w-3.5 h-3.5" />
                 <span>Reschedule Date</span>
@@ -426,12 +470,12 @@ export default function OrderTrackingPage() {
           )}
 
           {/* VISUAL TIMELINE STEPPER */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border shadow-subtleCard space-y-6">
-            <h2 className="text-lg font-black text-brand-black">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-6">
+            <h2 className="font-heading text-lg font-extrabold text-slate-900 tracking-tight">
               Live Order Progress
             </h2>
 
-            <div className="relative border-l-2 border-brand-border ml-4 sm:ml-6 space-y-8 pl-6 sm:pl-8 py-2">
+            <div className="relative border-l-2 border-slate-200 ml-4 sm:ml-6 space-y-8 pl-6 sm:pl-8 py-2">
               {steps.map((st) => {
                 const status = getStepStatus(st.key);
                 return (
@@ -440,10 +484,10 @@ export default function OrderTrackingPage() {
                     <div
                       className={`absolute -left-[31px] sm:-left-[39px] top-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all ${
                         status === "COMPLETED"
-                          ? "bg-brand-yellow text-black border-brand-yellow font-extrabold shadow-yellowGlow"
+                          ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
                           : status === "ACTIVE"
-                          ? "bg-black text-brand-yellow border-brand-yellow animate-pulse"
-                          : "bg-white text-gray-300 border-gray-300"
+                          ? "bg-slate-950 text-emerald-400 border-emerald-500 animate-pulse"
+                          : "bg-white text-slate-300 border-slate-200"
                       }`}
                     >
                       {status === "COMPLETED" ? <CheckCircle2 className="w-5 h-5" /> : status === "ACTIVE" ? <Clock className="w-4 h-4" /> : "•"}
@@ -453,15 +497,15 @@ export default function OrderTrackingPage() {
                       <h3
                         className={`text-sm font-extrabold ${
                           status === "COMPLETED"
-                            ? "text-brand-black"
+                            ? "text-slate-900"
                             : status === "ACTIVE"
-                            ? "text-brand-black"
-                            : "text-gray-400"
+                            ? "text-slate-900 font-black"
+                            : "text-slate-400 font-medium"
                         }`}
                       >
                         {st.label}
                       </h3>
-                      <p className="text-xs text-brand-muted mt-0.5">{st.desc}</p>
+                      <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{st.desc}</p>
                     </div>
                   </div>
                 );

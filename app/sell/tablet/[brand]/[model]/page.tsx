@@ -218,10 +218,9 @@ export default function TabletVariantSelectionPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-neutral-100 text-neutral-600 text-[10px] font-bold uppercase tracking-wider mb-1">
-                    <Image src="/photos/CashALL_favicon.png" alt="CashALL" width={12} height={12} className="w-3 h-3 rounded-full" />
-                    <span>CashALL Price Lock Guarantee</span>
-                  </div>
+                  <p className="text-[11px] font-bold text-amber-700 uppercase tracking-wider mb-1">
+                    CashALL Price Lock Guarantee
+                  </p>
                   <h1 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                     {displayName}
                   </h1>
@@ -369,9 +368,6 @@ export default function TabletVariantSelectionPage() {
           {/* AEO / GEO PROGRAMMATIC RESALE GUIDE */}
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/90 shadow-[0_2px_16px_-4px_rgba(0,0,0,0.04)] space-y-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2">
-                Tablet Recommerce Index (2026 Updated)
-              </div>
               <h2 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight">
                 {displayName} resale value in India
               </h2>

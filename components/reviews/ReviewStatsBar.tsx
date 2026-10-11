@@ -2,31 +2,27 @@
 
 import React from "react";
 import { REVIEW_STATS } from "@/lib/data/reviewsData";
-import { Star, ShieldCheck, Zap, Lock, ThumbsUp } from "lucide-react";
+import { Star, CheckCircle2 } from "lucide-react";
 
 export function ReviewStatsBar() {
   const { averageRating, satisfactionRate, ratingBreakdown, totalOrders = 33, uniqueSellers = 26 } = REVIEW_STATS;
 
   const trustHighlights = [
     {
-      icon: Zap,
       title: "Instant UPI Payout",
-      subtitle: "Credited in under 5 mins",
+      subtitle: "Credited in under 5 mins before handover",
     },
     {
-      icon: Lock,
       title: "Certified Data Wipe",
-      subtitle: "Safe factory reset",
+      subtitle: "100% cryptographic factory reset on-site",
     },
     {
-      icon: ShieldCheck,
       title: "100% Price Match",
-      subtitle: "Zero hidden fee guarantee",
+      subtitle: "Zero hidden fees or surprise deductions",
     },
     {
-      icon: ThumbsUp,
       title: `${satisfactionRate}% Seller Love`,
-      subtitle: `${totalOrders} happy verified sellers`,
+      subtitle: `${totalOrders} happy verified customer orders`,
     },
   ];
 
@@ -35,10 +31,9 @@ export function ReviewStatsBar() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* LEFT: BIG RATING NUMBER & STARS */}
         <div className="lg:col-span-4 text-center lg:text-left space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span>Google & Platform Verified</span>
-          </div>
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Google & Platform Verified
+          </p>
 
           <div className="flex items-baseline justify-center lg:justify-start gap-3">
             <span className="text-5xl sm:text-6xl font-black text-brand-black tracking-tight font-price">
@@ -84,29 +79,21 @@ export function ReviewStatsBar() {
           })}
         </div>
 
-        {/* RIGHT: 4 TRUST SEALS */}
-        <div className="lg:col-span-4 grid grid-cols-2 gap-4">
-          {trustHighlights.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.title}
-                className="p-3 rounded-2xl bg-brand-bg border border-brand-border/70 flex flex-col justify-between"
-              >
-                <div className="w-8 h-8 rounded-xl bg-brand-yellow/20 text-brand-black flex items-center justify-center mb-2 border border-brand-yellow/30">
-                  <Icon className="w-4 h-4 text-brand-black" />
-                </div>
-                <div>
-                  <div className="text-xs font-extrabold text-brand-black leading-tight">
-                    {item.title}
-                  </div>
-                  <div className="text-[10px] text-brand-muted font-medium mt-0.5">
-                    {item.subtitle}
-                  </div>
-                </div>
+        {/* RIGHT: CLEAN VERIFIED SELLER GUARANTEES WITH TICK MARKS */}
+        <div className="lg:col-span-4 space-y-3.5 pl-0 lg:pl-4">
+          {trustHighlights.map((item) => (
+            <div key={item.title} className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div>
+                <p className="text-xs font-bold text-slate-900 leading-tight">
+                  {item.title}
+                </p>
+                <p className="text-[11px] text-slate-500 font-medium mt-0.5">
+                  {item.subtitle}
+                </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>

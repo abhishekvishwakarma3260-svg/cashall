@@ -15,97 +15,129 @@ export const TECH_NEWS: TechNewsItem[] = [
   {
     id: "news-1",
     slug: "apple-announces-trade-in-values-update-ahead-of-wwdc",
-    title: "More People In India Sell Their Old Phones Before Buying New Models",
-    excerpt: "Used phone sales are up by 28% as users prefer getting quick cash at home instead of bargaining at local shops.",
-    source: "CashALL News Desk",
+    title: "Pre-Owned Smartphone Recommerce Surges 32% Across Indian Metros Amid Flagship Price Inflation",
+    excerpt: "Rising retail prices for new mobile flagships drive unprecedented demand for verified second-hand smartphones with instant doorstep payouts.",
+    source: "CashALL Market Intelligence",
     publishedAt: "2026-09-24",
     category: "Market Trends",
     readTime: "3 min read",
     trending: true,
     content: [
-      "Selling used phones online has become hugely popular across Indian cities this year. Recent data shows a 28% rise in trade-ins as people sell their 2-year-old phones to fund their next purchase.",
-      "Most customers prefer doorstep inspection with instant UPI payment, avoiding the headache of visiting offline shops where dealers frequently bargain prices down.",
-      "Apple iPhones and Samsung Galaxy phones continue to hold top demand, getting sellers the highest payouts."
+      "Escalating component fabrication and memory costs have pushed new flagship smartphone retail pricing past record thresholds in India. Consequently, demand for certified pre-owned electronics has grown by 32% year-on-year.",
+      "Consumer behavior has shifted decisively toward direct doorstep liquidation. Sellers increasingly avoid offline bargaining in unorganized bazaars, opting instead for locked algorithmic quotes settled instantly via UPI prior to device handover.",
+      "Apple iPhone Pro models and Samsung Galaxy S-series devices continue leading secondary market liquidity, consistently securing the highest capital retention for upgrading consumers."
     ]
   },
   {
     id: "news-2",
     slug: "india-ceir-integration-tightens-second-hand-phone-security",
-    title: "Official Verification Makes Selling Used Phones Safer Across India",
-    excerpt: "Quick online IMEI checks ensure every sold phone is genuine, giving sellers a legal digital bill of sale.",
-    source: "Telecom & Safety News",
+    title: "National CEIR Telecommunication Database Integration Strengthens Secondary Market Safety",
+    excerpt: "Real-time IMEI blacklisting queries and automated digital Bills of Sale eliminate legal exposure for legitimate smartphone sellers across India.",
+    source: "Telecom & Cyber Security Bureau",
     publishedAt: "2026-09-22",
     category: "Gadget Industry",
     readTime: "3 min read",
     trending: true,
     content: [
-      "India's central equipment portal (CEIR) now helps verify phone authenticity in seconds.",
-      "CashALL uses this system during doorstep pickup to check your phone's IMEI on the spot. Once verified, you receive a digital bill of sale that officially transfers ownership, protecting you from any future misuse.",
-      "This simple step ensures complete peace of mind for genuine sellers in Kolkata, Howrah, and across the country."
+      "India's Central Equipment Identity Register (CEIR) framework has transformed the integrity of domestic recommerce transactions.",
+      "CashALL field agents query national telecom registries during on-site evaluations to instantly verify device legitimacy. Upon completing diagnostics, a digitally timestamped Bill of Sale is generated, officially terminating the seller's regulatory liability.",
+      "This systematic protocol safeguards genuine gadget owners in Kolkata, Howrah, Patna, and Ranchi against post-sale misuse or secondary disputes."
     ]
   },
   {
     id: "news-3",
     slug: "ai-chipsets-become-key-pricing-factor-in-used-flagships",
-    title: "Phones With AI Features Now Command Higher Resale Cash",
-    excerpt: "Second-hand buyers are actively looking for phones that support AI photo and voice features, giving sellers extra money.",
-    source: "Mobile Trends India",
+    title: "Hardware NPUs & On-Device AI Processors Drive 22% Secondary Market Valuation Premium",
+    excerpt: "Consumer demand for Apple Intelligence and Galaxy AI capabilities creates distinct price bifurcation in the Indian pre-owned mobile ecosystem.",
+    source: "Mobile Silicon Insights",
     publishedAt: "2026-09-19",
     category: "Smartphones",
     readTime: "3 min read",
     trending: false,
     content: [
-      "With built-in AI tools now available on newer phones, pre-owned buyers are ready to pay more for AI-capable models like the iPhone 15 Pro and Galaxy S24.",
-      "People want smart features like photo object removal, live voice translation, and note summaries without paying full price for a brand-new device.",
-      "CashALL's valuation system automatically rewards sellers of these phones with higher quotes."
+      "In 2026, silicon architecture has superseded camera megapixel counts as the primary value driver for pre-owned handsets.",
+      "Devices powered by dedicated Neural Processing Units (NPUs)—such as the Apple A17 Pro, A18, Snapdragon 8 Elite, and Google Tensor G4—command up to 22% higher trade-in valuations compared to legacy silicon.",
+      "Informed secondary buyers prioritize native on-device generative photo manipulation and real-time linguistic translation, driving premium valuation quotes on CashALL's pricing engine."
     ]
   },
   {
     id: "news-4",
     slug: "e-waste-reduction-targets-drive-doorstep-recommerce-adoption",
-    title: "How Selling Your Old Phone Helps Protect The Environment",
-    excerpt: "Over 65% of old working phones sit forgotten in home drawers. Selling them gives them a second life and cuts electronic waste.",
-    source: "Green Living India",
+    title: "MeitY Circular Economy Directives Accelerate Urban Smartphone Refurbishment Initiatives",
+    excerpt: "Structured doorstep buyback networks prevent millions of functional lithium-ion devices from entering domestic landfill waste streams.",
+    source: "Ecological Tech Review",
     publishedAt: "2026-09-15",
     category: "Market Trends",
     readTime: "3 min read",
     trending: false,
     content: [
-      "Electronic waste is one of the biggest environmental challenges today. Millions of working smartphones sit untouched in cupboards simply because people don't know an easy way to sell them.",
-      "Platforms like CashALL make it simple to sell old devices right from home with free pickup and instant cash.",
-      "Giving your device a second home keeps harmful electronic materials out of landfills and saves natural resources."
+      "E-waste containment has emerged as a national environmental priority as millions of decommissioned handsets remain dormant in Indian urban households.",
+      "Organized recommerce networks provide a transparent, economically incentivized bridge to extend device operating lifespans. Certified refurbishers restore functional modules while channeling irreparable units to authorized metallurgical recyclers.",
+      "Each device liquidated through structured doorstep channels prevents toxic lead, cobalt, and lithium leachates from compromising urban environments."
     ]
   },
   {
     id: "news-5",
     slug: "kolkata-emerges-as-fastest-growing-doorstep-device-buyback-hub",
-    title: "Kolkata Residents Switch To Free Doorstep Phone Pickup",
-    excerpt: "With fast pickup across Salt Lake, Howrah, and New Town, sellers prefer instant home payment over crowded shops.",
-    source: "Kolkata Commerce Daily",
+    title: "Kolkata & Howrah Urban Corridors Lead Eastern India in Doorstep Gadget Liquidation",
+    excerpt: "Consumers in Salt Lake, New Town, and Howrah bypass legacy Chandni Chowk dealers for verified 2-hour doorstep pickup and instant bank settlement.",
+    source: "Eastern Bengal Commerce Wire",
     publishedAt: "2026-09-10",
     category: "Gadget Industry",
     readTime: "3 min read",
     trending: true,
     content: [
-      "Smartphone owners in Kolkata are moving away from crowded electronics markets in Chandni Chowk and choosing convenient home pickup.",
-      "Sellers love the fact that they don't have to waste time traveling or arguing over prices. A trained technician comes to their address, checks the phone, and sends payment directly to their bank account.",
-      "CashALL covers all of Kolkata, Howrah, and nearby areas with fast same-day appointments."
+      "Tech-savvy consumers throughout Kolkata and Howrah are rapidly turning away from crowded physical repair markets in Chandni Chowk in favor of verified doorstep trade-ins.",
+      "Sellers cite algorithmic price locking and on-site instant UPI settlement as decisive factors over traditional offline counter bargaining.",
+      "CashALL operates dedicated logistics fleets covering 240+ regional pin codes across Kolkata, Howrah, Hooghly, and Barrackpore with express doorstep appointments."
     ]
   },
   {
     id: "news-6",
     slug: "second-hand-mobile-price-calculators-gain-massive-traction-in-ranchi-and-patna",
-    title: "Second Hand Mobile Price Calculators Surge in Popularity Across Eastern India",
-    excerpt: "Sellers in Ranchi, Patna, and Kolkata now rely on instant online price checks and free doorstep pickup, bypassing traditional offline bargaining.",
-    source: "Recommerce India Wire",
+    title: "Algorithmic Valuation Tools Disrupt Traditional Offline Counter Trading in Ranchi & Patna",
+    excerpt: "Smart trade-in calculators deliver price transparency to Eastern India tech hubs, securing sellers up to 15% higher returns than unorganized shops.",
+    source: "Recommerce Analytics Bureau",
     publishedAt: "2026-10-08",
     category: "Market Trends",
     readTime: "3 min read",
     trending: true,
     content: [
-      "Consumers in Tier-1 and Tier-2 hubs like Ranchi, Patna, and Kolkata are rapidly embracing automated price calculators to determine the fair resale value of used mobile phones.",
-      "Rather than negotiating with multiple offline dealers on Main Road or Fraser Road, sellers enter device details online to lock guaranteed valuations with ₹0 convenience deductions.",
-      "CashALL's expansion of free doorstep inspection with on-the-spot UPI bank transfers has accelerated this shift, creating a secure, legal alternative to informal classified ads."
+      "Smartphone sellers in rapidly expanding urban centers like Ranchi and Patna are increasingly utilizing automated algorithmic calculators to benchmark gadget valuations.",
+      "Bypassing fragmented offline storefronts along Main Road or Fraser Road, sellers leverage real-time secondary market analytics to lock guaranteed quotes with zero convenience deductions.",
+      "Coupled with free on-site physical evaluation and direct IMPS transfers, online recommerce platforms are standardizing consumer gadget trade-in experiences across non-metro regions."
+    ]
+  },
+  {
+    id: "news-7",
+    slug: "india-dpdp-act-mandates-cryptographic-wipe-for-smartphone-recommerce",
+    title: "DPDP Act Guidelines: Why Indian Smartphone Sellers Must Insist on Cryptographic Wiping Before Handover",
+    excerpt: "New privacy advisories warn that basic manual factory resets fail to clear flash memory sectors, urging sellers to demand on-site certified data erasure.",
+    source: "Cyber Law & Privacy India",
+    publishedAt: "2026-10-10",
+    category: "Gadget Industry",
+    readTime: "4 min read",
+    trending: true,
+    content: [
+      "India's Digital Personal Data Protection (DPDP) Act rules have heightened scrutiny over electronic device disposal and second-hand sales.",
+      "Forensic audits reveal that standard OS factory resets simply mark directory headers as free space while leaving photos and credentials recoverable in flash blocks. To eliminate legal liabilities, recommerce leaders must perform hardware-level cryptographic erasure.",
+      "CashALL field agents now execute an on-spot NIST 800-88 compliant sanitization and issue a digital certificate of erasure directly to the customer's phone before handover."
+    ]
+  },
+  {
+    id: "news-8",
+    slug: "5g-band-fragmentation-impacts-android-resale-value-in-2026",
+    title: "5G Band Disparity: Why Budget Phones with Fewer Bands Suffer Faster Resale Depreciation",
+    excerpt: "Second-hand buyers in Kolkata and Delhi prioritize full-spectrum standalone 5G support, leading to a 20% price penalty for compromised models.",
+    source: "Telecom Market Watch",
+    publishedAt: "2026-10-11",
+    category: "Smartphones",
+    readTime: "3 min read",
+    trending: false,
+    content: [
+      "In 2026, second-hand buyers are scrutinizing technical specifications beyond camera megapixels. Budget 5G phones launched with only 2 to 4 frequency bands are experiencing rapid value depreciation compared to devices supporting all 12+ Indian 5G bands.",
+      "Buyers are discovering that compromised handsets drop connection speeds in suburban areas, steering pre-owned demand toward full-spec models.",
+      "CashALL's valuation algorithm now dynamically balances band frequency compatibility, ensuring sellers of premium handsets receive the top-dollar quotes they deserve."
     ]
   }
 ];

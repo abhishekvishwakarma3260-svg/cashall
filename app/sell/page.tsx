@@ -22,9 +22,6 @@ export default function CategorySelectionPage() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2.5">
-              Instant Algorithmic Valuation
-            </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
               What Do You Want To Sell Today?
             </h1>

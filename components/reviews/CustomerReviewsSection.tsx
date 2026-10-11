@@ -5,21 +5,14 @@ import Link from "next/link";
 import { CUSTOMER_REVIEWS, REVIEW_STATS } from "@/lib/data/reviewsData";
 import { ReviewStatsBar } from "./ReviewStatsBar";
 import { CustomerReviewCard } from "./CustomerReviewCard";
-import { Sparkles, MessageSquare, ArrowRight, PenSquare, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { MessageSquare, ArrowRight, PenSquare, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function CustomerReviewsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Select the 4 best reviews: 5-star rating, verified, highest payout/feedback quality
-  const fourBestReviews = useMemo(() => {
-    return CUSTOMER_REVIEWS.filter((r) => r.rating === 5 && r.verified)
-      .sort((a, b) => (b.helpfulCount || 0) - (a.helpfulCount || 0))
-      .slice(0, 4);
-  }, []);
-
   const handleScroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-    const scrollAmount = 340;
+    const scrollAmount = 380;
     scrollRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -31,11 +24,6 @@ export function CustomerReviewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* MAIN SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-black text-xs font-extrabold shadow-sm">
-            <Sparkles className="w-4 h-4 text-brand-black" />
-            <span>{REVIEW_STATS.totalOrders} Completed Orders • Real Sellers • Verified Payouts</span>
-          </div>
-
           <h2 className="text-3xl sm:text-4xl font-black text-brand-black tracking-tight">
             Loved By <span className="text-brand-yellow bg-brand-black px-2 py-0.5 rounded-xl">{REVIEW_STATS.uniqueSellers}</span> Verified Device Sellers
           </h2>
@@ -48,17 +36,14 @@ export function CustomerReviewsSection() {
         {/* 1. AGGREGATE STATS & TRUST SEALS */}
         <ReviewStatsBar />
 
-        {/* 2. TOP 4 BEST REVIEWS SHOWCASE */}
+        {/* 2. COMPLETED ORDERS REVIEWS SHOWCASE */}
         <div className="space-y-6 pt-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-border pb-4">
             <div className="flex items-center gap-2.5">
               <MessageSquare className="w-5 h-5 text-brand-black" />
               <h3 className="text-xl font-extrabold text-brand-black">
-                Top Rated Customer Reviews
+                Verified Customer Order Reviews ({CUSTOMER_REVIEWS.length})
               </h3>
-              <span className="text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5 rounded-full flex items-center gap-1">
-                <Star className="w-3 h-3 fill-amber-500 text-amber-500" /> Top Verified Ratings
-              </span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -67,14 +52,14 @@ export function CustomerReviewsSection() {
                 <button
                   onClick={() => handleScroll("left")}
                   aria-label="Previous review"
-                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95"
+                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95 cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleScroll("right")}
                   aria-label="Next review"
-                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95"
+                  className="w-8 h-8 rounded-xl bg-white hover:bg-neutral-100 border border-brand-border flex items-center justify-center text-brand-black transition shadow-xs active:scale-95 cursor-pointer"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
@@ -97,18 +82,18 @@ export function CustomerReviewsSection() {
             </div>
           </div>
 
-          {/* 4 REVIEWS SCROLL VIEW / RESPONSIVE GRID */}
+          {/* ALL COMPLETED ORDERS REVIEWS HORIZONTAL SCROLL CAROUSEL */}
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 pb-2 no-scrollbar md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible"
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-5 pb-4 no-scrollbar"
             tabIndex={0}
             role="region"
-            aria-label="Top Customer Reviews carousel"
+            aria-label="All Completed Orders Reviews carousel"
           >
-            {fourBestReviews.map((review) => (
+            {CUSTOMER_REVIEWS.map((review) => (
               <div
                 key={review.id}
-                className="w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none md:shrink"
+                className="w-[85vw] sm:w-[360px] md:w-[380px] shrink-0 snap-start"
               >
                 <CustomerReviewCard review={review} />
               </div>

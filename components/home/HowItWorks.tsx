@@ -34,9 +34,6 @@ export function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 text-brand-yellow text-[11px] font-bold uppercase tracking-wider mb-2.5">
-            Simple 4-Step Process
-          </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             How CashALL Works
           </h2>

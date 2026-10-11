@@ -30,7 +30,7 @@ function ReviewsPageContent() {
   const [reviews, setReviews] = useState<CustomerReview[]>(CUSTOMER_REVIEWS);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(50);
 
   // Review Modal State
   const [isModalOpen, setIsModalOpen] = useState(initialAction === "write");
@@ -153,11 +153,6 @@ function ReviewsPageContent() {
           
           {/* TOP HERO SECTION */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-yellow/20 border border-brand-yellow/40 text-brand-black text-xs font-extrabold shadow-sm">
-              <Sparkles className="w-4 h-4 text-brand-black" />
-              <span>{reviews.length} Authentic Customer Stories • 100% Doorstep Payouts</span>
-            </div>
-
             <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight">
               Customer Reviews &amp; Ratings
             </h1>

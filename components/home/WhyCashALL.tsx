@@ -1,74 +1,75 @@
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, Truck, Zap, Lock, HeartHandshake, FileSearch, Sparkles } from "lucide-react";
 
 export function WhyCashALL() {
   const features = [
     {
       title: "Transparent Valuation",
       description: "We show you exact itemized line items for why your phone is valued at its price. No guesswork.",
-      icon: FileSearch,
+      image: "/images/trust/valuation.svg",
     },
     {
       title: "Fast & Free Doorstep Pickup",
       description: "Our certified agent collects your device directly from your home or office with express logistics.",
-      icon: Truck,
+      image: "/images/trust/pickup.svg",
     },
     {
       title: "Quick Direct Payment",
       description: "Receive instant funds directly to your UPI ID or Bank account upon inspection approval.",
-      icon: Zap,
+      image: "/images/trust/upi.svg",
     },
     {
       title: "Secure Data Wipe",
       description: "Assisted factory data wipe during pickup to keep your personal files completely safe.",
-      icon: Lock,
+      image: "/images/trust/data-wipe.svg",
     },
     {
       title: "Zero Hidden Fees",
       description: "No processing deductions, pickup convenience fees or hidden service charges.",
-      icon: ShieldCheck,
+      image: "/images/trust/shield.svg",
     },
     {
       title: "Human Support",
       description: "Real customer support team available to assist with questions or pickup adjustments.",
-      icon: HeartHandshake,
+      image: "/images/trust/support.svg",
     },
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-brand-bg border-t border-neutral-200/80">
+    <section className="py-16 sm:py-20 bg-white border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14">
         
         <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2.5">
-            Transparent &amp; Safe Buyback
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-black tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Why Sell On CashALL?
           </h2>
-          <p className="text-xs sm:text-sm text-neutral-500 mt-2 font-normal leading-relaxed">
-            Built on trust, speed, and complete pricing transparency for smartphone owners.
+          <p className="text-xs sm:text-sm text-slate-500 mt-2 font-normal leading-relaxed">
+            Built on algorithmic accuracy, speed, and complete pricing transparency for gadget owners.
           </p>
         </div>
 
         {/* FEATURES GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {features.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-6 border border-neutral-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_-6px_rgba(255,212,0,0.18)] hover:border-brand-yellow/60 transition-all duration-200 group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-brand-yellow/15 text-brand-black flex items-center justify-center mb-4 border border-brand-yellow/30 group-hover:scale-105 transition-transform">
-                  <Icon className="w-5 h-5 text-brand-black" />
+          {features.map((item) => (
+            <div
+              key={item.title}
+              className="bg-slate-50/50 rounded-2xl p-6 border border-slate-200/80 hover:border-slate-300 hover:bg-white shadow-2xs hover:shadow-subtleCard transition-all duration-200 group flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
-                <h3 className="text-base font-bold text-neutral-900 mb-1.5">{item.title}</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed font-normal">{item.description}</p>
+                <h3 className="font-heading text-base font-extrabold text-slate-900 mb-1.5">{item.title}</h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">{item.description}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {/* COMMERCIAL PROMO BANNER CAROUSEL / HIGHLIGHT */}
@@ -116,8 +117,14 @@ export function WhyCashALL() {
         {/* TRANSPARENT PRICING GUARANTEE BANNER */}
         <div className="bg-white rounded-2xl p-6 sm:p-7 border border-brand-yellow/50 shadow-[0_8px_30px_rgba(255,212,0,0.12)] max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-5">
-            <div className="w-12 h-12 rounded-xl bg-brand-yellow flex items-center justify-center shrink-0 shadow-yellowGlow text-black">
-              <ShieldCheck className="w-6 h-6 text-brand-black" />
+            <div className="w-12 h-12 flex items-center justify-center shrink-0">
+              <Image
+                src="/images/trust/shield.svg"
+                alt="Pricing Guarantee"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold text-neutral-900">

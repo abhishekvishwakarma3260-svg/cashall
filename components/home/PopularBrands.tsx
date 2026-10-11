@@ -38,28 +38,25 @@ export function PopularBrands() {
     .slice(0, 6);
 
   return (
-    <section className="py-14 sm:py-16 bg-white border-t border-neutral-200/80">
+    <section className="py-14 sm:py-16 bg-[#F8FAFC] border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2">
-              Smartphone Catalog
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-black tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               Popular Phone Brands
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-normal">
+            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal leading-relaxed">
               Select your smartphone manufacturer to view available models and live quotes.
             </p>
           </div>
 
           <Link
             href="/sell/mobile"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-900 hover:text-amber-600 group transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-extrabold text-slate-900 hover:text-emerald-700 group transition-colors cursor-pointer"
           >
             <span>View All Brands</span>
-            <ArrowRight className="w-3.5 h-3.5 text-neutral-900 group-hover:text-amber-600 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-slate-900 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
 
@@ -68,16 +65,16 @@ export function PopularBrands() {
             <Link
               key={brand.id}
               href={`/sell/mobile/${brand.slug}`}
-              className="bg-[#FAFAF9] rounded-2xl p-5 border border-neutral-200/70 hover:border-brand-yellow/80 hover:bg-white shadow-[0_2px_10px_-2px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_25px_-5px_rgba(255,212,0,0.2)] hover:-translate-y-0.5 transition-all duration-200 text-center group flex flex-col items-center justify-center space-y-2.5"
+              className="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-slate-300 shadow-2xs hover:shadow-subtleCard hover:-translate-y-0.5 transition-all duration-200 text-center group flex flex-col items-center justify-center space-y-2.5 cursor-pointer"
             >
               <div className="transition-transform group-hover:scale-105">
                 <BrandIcon name={brand.name} logoUrl={brand.logoUrl} />
               </div>
               <div>
-                <h3 className="text-sm font-bold text-brand-black group-hover:text-black">
+                <h3 className="font-heading text-sm font-extrabold text-slate-900 group-hover:text-black">
                   {brand.name}
                 </h3>
-                <p className="text-[10px] text-neutral-400 font-medium mt-0.5">
+                <p className="text-[10px] text-slate-400 font-medium mt-0.5">
                   Sell {brand.name}
                 </p>
               </div>

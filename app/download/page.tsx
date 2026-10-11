@@ -203,10 +203,10 @@ export default function AppDownloadHubPage() {
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold">
-                  <Lock className="w-3.5 h-3.5 text-amber-600" />
+                <p className="text-xs font-bold text-amber-800 uppercase tracking-wider flex items-center gap-2">
+                  <Lock className="w-3.5 h-3.5" />
                   <span>Private Distribution — Selected Access Only</span>
-                </div>
+                </p>
 
                 <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-tight">
                   CashALL Native <span className="bg-brand-yellow px-2 py-0.5 rounded-xl">Mobile Portals</span>

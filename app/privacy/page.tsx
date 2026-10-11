@@ -31,10 +31,6 @@ export default function PrivacyPage() {
             
             {/* HEADER */}
             <div className="border-b border-gray-100 pb-6 space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/20 text-brand-black text-xs font-bold">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                DPDP Act 2023 Compliant
-              </div>
               <h1 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                 CashALL Privacy Policy
               </h1>

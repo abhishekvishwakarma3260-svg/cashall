@@ -84,10 +84,10 @@ export default function RentHubPage() {
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200/60 text-xs font-semibold">
-                  <Gamepad2 className="w-4 h-4 text-blue-600" />
+                <p className="text-xs font-bold text-blue-600 uppercase tracking-wider flex items-center gap-2">
+                  <Gamepad2 className="w-4 h-4" />
                   <span>Doorstep Gaming Console Rentals • Kolkata &amp; Howrah</span>
-                </div>
+                </p>
 
                 <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-tight">
                   Rent PlayStation 5 <br />

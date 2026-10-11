@@ -497,20 +497,20 @@ function MobileAssessmentContent() {
   const currentHeaderInfo = stepTitles[step - 1] || stepTitles[0];
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-bg text-brand-black">
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900">
       <Header />
       <main className="flex-grow py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* BREADCRUMB */}
-          <div className="flex items-center gap-2 text-xs font-semibold text-brand-muted mb-6">
-            <Link href="/" className="hover:text-brand-black">Home</Link>
+          <div className="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-6">
+            <Link href="/" className="hover:text-slate-900 transition">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/sell/mobile" className="hover:text-brand-black">Sell Mobile</Link>
+            <Link href="/sell/mobile" className="hover:text-slate-900 transition">Sell Mobile</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href={`/sell/mobile/${brand.slug}`} className="hover:text-brand-black">{brand.name}</Link>
+            <Link href={`/sell/mobile/${brand.slug}`} className="hover:text-slate-900 transition">{brand.name}</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-brand-black font-bold">{model.name}</span>
+            <span className="text-slate-900 font-bold">{model.name}</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -529,7 +529,7 @@ function MobileAssessmentContent() {
 
               {/* ── STEP 1: Basic Device Functionality Check ── */}
               {step === 1 && (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-4">
                   <RadioQuestionItem
                     id="q-switch-on"
                     questionNumber={1}
@@ -609,51 +609,163 @@ function MobileAssessmentContent() {
                 </div>
               )}
 
-              {/* ── STEP 2: Screen & Body Defects (Visual Cards Multi-select) ── */}
+              {/* ── STEP 2: Screen & Body Defects (Visual Condition Tiers + Cards) ── */}
               {step === 2 && (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                    <VisualOptionCard
-                      id="defect-screen-broken"
-                      label="Broken/scratch on device screen"
-                      iconNode={<MobileDefectIllustration variant="broken_screen" />}
-                      selected={selectedDefects.includes("broken_screen")}
-                      onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "broken_screen"))}
-                    />
-                    <VisualOptionCard
-                      id="defect-dead-spot"
-                      label="Dead Spot/Visible line and Discoloration on screen"
-                      iconNode={<MobileDefectIllustration variant="dead_spot_lines" />}
-                      selected={selectedDefects.includes("dead_spot_lines")}
-                      onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "dead_spot_lines"))}
-                    />
-                    <VisualOptionCard
-                      id="defect-body-dent"
-                      label="Scratch/Dent on device body"
-                      iconNode={<MobileDefectIllustration variant="body_dent_scratch" />}
-                      selected={selectedDefects.includes("body_dent_scratch")}
-                      onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "body_dent_scratch"))}
-                    />
-                    <VisualOptionCard
-                      id="defect-panel-broken"
-                      label="Device panel missing/broken"
-                      iconNode={<MobileDefectIllustration variant="panel_missing" />}
-                      selected={selectedDefects.includes("panel_missing")}
-                      onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "panel_missing"))}
-                    />
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-6">
+                  {/* High-Fidelity 3-State Condition Master Selector */}
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-extrabold uppercase tracking-widest text-slate-500">
+                        Physical Condition Tier
+                      </span>
+                      <span className="text-xs font-semibold text-slate-400">
+                        Select overall device state
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      {/* FLAWLESS */}
+                      <button
+                        type="button"
+                        onClick={() => setSelectedDefects([])}
+                        className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
+                          selectedDefects.length === 0
+                            ? "border-emerald-600 bg-emerald-50/40 ring-1 ring-emerald-500/30 shadow-xs"
+                            : "border-slate-200 hover:border-slate-300 bg-white"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wide text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded-md">
+                            Flawless
+                          </span>
+                          {selectedDefects.length === 0 && (
+                            <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                          )}
+                        </div>
+                        <h4 className="font-heading font-extrabold text-sm text-slate-900 mt-2">
+                          Like New
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+                          Zero scratches, no dents, spotless screen and pristine chassis.
+                        </p>
+                      </button>
+
+                      {/* GOOD */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (selectedDefects.includes("broken_screen") || selectedDefects.includes("dead_spot_lines")) {
+                            setSelectedDefects(["body_dent_scratch"]);
+                          } else if (!selectedDefects.includes("body_dent_scratch")) {
+                            setSelectedDefects(["body_dent_scratch"]);
+                          }
+                        }}
+                        className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
+                          selectedDefects.includes("body_dent_scratch") &&
+                          !selectedDefects.includes("broken_screen") &&
+                          !selectedDefects.includes("dead_spot_lines")
+                            ? "border-amber-500 bg-amber-50/40 ring-1 ring-amber-500/30 shadow-xs"
+                            : "border-slate-200 hover:border-slate-300 bg-white"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wide text-amber-800 bg-amber-100/70 px-2 py-0.5 rounded-md">
+                            Good
+                          </span>
+                          {selectedDefects.includes("body_dent_scratch") &&
+                            !selectedDefects.includes("broken_screen") &&
+                            !selectedDefects.includes("dead_spot_lines") && (
+                              <span className="w-2 h-2 rounded-full bg-amber-500" />
+                            )}
+                        </div>
+                        <h4 className="font-heading font-extrabold text-sm text-slate-900 mt-2">
+                          Minor Wear
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+                          Normal everyday signs of use, minor surface scuffs or body dents.
+                        </p>
+                      </button>
+
+                      {/* BROKEN */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!selectedDefects.includes("broken_screen")) {
+                            setSelectedDefects([...selectedDefects.filter((d) => d !== "broken_screen"), "broken_screen"]);
+                          }
+                        }}
+                        className={`p-4 rounded-2xl border text-left transition-all duration-200 cursor-pointer ${
+                          selectedDefects.includes("broken_screen") || selectedDefects.includes("dead_spot_lines")
+                            ? "border-red-500 bg-red-50/40 ring-1 ring-red-500/30 shadow-xs"
+                            : "border-slate-200 hover:border-slate-300 bg-white"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wide text-red-800 bg-red-100/70 px-2 py-0.5 rounded-md">
+                            Broken
+                          </span>
+                          {(selectedDefects.includes("broken_screen") || selectedDefects.includes("dead_spot_lines")) && (
+                            <span className="w-2 h-2 rounded-full bg-red-500" />
+                          )}
+                        </div>
+                        <h4 className="font-heading font-extrabold text-sm text-slate-900 mt-2">
+                          Cracks / Defect
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
+                          Cracked display glass, dead pixels, discoloration lines, or severe impact.
+                        </p>
+                      </button>
+                    </div>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                    <p className="text-xs text-gray-500">
-                      {selectedDefects.length === 0 ? "No defects selected (Flawless condition)" : `${selectedDefects.length} defect(s) selected`}
+                  {/* Granular Visual Defect Cards */}
+                  <div className="space-y-3 pt-3 border-t border-slate-100">
+                    <span className="text-xs font-extrabold uppercase tracking-widest text-slate-500 block">
+                      Specific Defects Checklist
+                    </span>
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3.5">
+                      <VisualOptionCard
+                        id="defect-screen-broken"
+                        label="Broken/scratch on screen"
+                        iconNode={<MobileDefectIllustration variant="broken_screen" />}
+                        selected={selectedDefects.includes("broken_screen")}
+                        onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "broken_screen"))}
+                      />
+                      <VisualOptionCard
+                        id="defect-dead-spot"
+                        label="Dead Spot / Lines on screen"
+                        iconNode={<MobileDefectIllustration variant="dead_spot_lines" />}
+                        selected={selectedDefects.includes("dead_spot_lines")}
+                        onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "dead_spot_lines"))}
+                      />
+                      <VisualOptionCard
+                        id="defect-body-dent"
+                        label="Scratch / Dent on body"
+                        iconNode={<MobileDefectIllustration variant="body_dent_scratch" />}
+                        selected={selectedDefects.includes("body_dent_scratch")}
+                        onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "body_dent_scratch"))}
+                      />
+                      <VisualOptionCard
+                        id="defect-panel-broken"
+                        label="Device panel broken"
+                        iconNode={<MobileDefectIllustration variant="panel_missing" />}
+                        selected={selectedDefects.includes("panel_missing")}
+                        onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "panel_missing"))}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <p className="text-xs text-slate-500 font-medium">
+                      {selectedDefects.length === 0 ? "Zero defects selected (Flawless condition tier)" : `${selectedDefects.length} defect(s) flagged`}
                     </p>
                     {selectedDefects.length > 0 && (
                       <button
                         type="button"
                         onClick={() => setSelectedDefects([])}
-                        className="text-xs font-bold text-gray-500 hover:text-red-600 transition"
+                        className="text-xs font-bold text-slate-500 hover:text-red-600 transition cursor-pointer"
                       >
-                        Clear All
+                        Reset to Flawless
                       </button>
                     )}
                   </div>
@@ -662,7 +774,7 @@ function MobileAssessmentContent() {
 
               {/* ── STEP 3: Functional or Physical Problems (18 Visual Cards) ── */}
               {step === 3 && (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-4">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {/* FOR IPHONE: Battery Health & e-SIM placed at the VERY TOP */}
                     {isIPhone && (
@@ -817,7 +929,7 @@ function MobileAssessmentContent() {
 
               {/* ── STEP 4: Accessories (Multi-select) ── */}
               {step === 4 && (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-4">
                   <div className={`grid grid-cols-1 sm:grid-cols-2 ${isSamsungNoteOrUltra ? "md:grid-cols-3" : "md:grid-cols-2"} gap-4`}>
                     <VisualOptionCard
                       id="acc-box"
@@ -851,7 +963,7 @@ function MobileAssessmentContent() {
 
               {/* ── STEP 5: Mobile Age (Conditional: If Warranty = Yes) ── */}
               {step === 5 && underWarranty === true && (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-subtleCard space-y-4">
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-subtleCard space-y-4">
                   <RadioQuestionItem
                     id="q-mobile-age"
                     questionNumber={1}

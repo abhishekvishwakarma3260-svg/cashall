@@ -60,10 +60,6 @@ export default function ModelSelectionPage() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-900 text-[11px] font-bold uppercase tracking-wider mb-2.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>{brand.name} Smartphones</span>
-            </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
               Sell Your {brand.name} Phone
             </h1>

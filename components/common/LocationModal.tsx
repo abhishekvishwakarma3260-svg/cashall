@@ -46,7 +46,7 @@ const SERVICEABLE_STATES: ServiceableStateConfig[] = [
       { name: "Kolkata", tag: "Free Doorstep in 2-4 hrs", image: "/images/locations/kolkata.jpg" },
       { name: "Howrah", tag: "Express Doorstep Active", image: "/images/locations/howrah.jpg" },
       { name: "Hooghly", tag: "Doorstep Pickup Active", image: "/images/locations/hooghly.jpg" },
-      { name: "Barrackpore", tag: "Doorstep Pickup Active", image: "/images/locations/hooghly.jpg" },
+      { name: "Barrackpore", tag: "Doorstep Pickup Active", image: "/images/locations/barrackpore.jpg" },
     ],
   },
   {

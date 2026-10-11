@@ -52,9 +52,15 @@ export function Footer() {
 
         {/* TRUST BADGES RIBBON */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pb-12 mb-12 border-b border-neutral-800">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-dark flex items-center justify-center text-brand-yellow border border-neutral-800">
-              <Truck className="w-5 h-5" />
+          <div className="flex items-center gap-3.5">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-neutral-800 shadow-sm">
+              <Image
+                src="/images/trust/pickup.svg"
+                alt="Fast & Free Doorstep Pickup"
+                fill
+                className="object-cover"
+                unoptimized
+              />
             </div>
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Fast & Free Pickup</h4>
@@ -62,9 +68,15 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-dark flex items-center justify-center text-brand-yellow border border-neutral-800">
-              <Banknote className="w-5 h-5" />
+          <div className="flex items-center gap-3.5">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-neutral-800 shadow-sm">
+              <Image
+                src="/images/trust/upi.svg"
+                alt="Instant UPI Spot Payout"
+                fill
+                className="object-cover"
+                unoptimized
+              />
             </div>
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Instant Payment</h4>
@@ -72,9 +84,15 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-dark flex items-center justify-center text-brand-yellow border border-neutral-800">
-              <ShieldCheck className="w-5 h-5" />
+          <div className="flex items-center gap-3.5">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-neutral-800 shadow-sm">
+              <Image
+                src="/images/trust/shield.svg"
+                alt="Transparent 100% Fair Pricing"
+                fill
+                className="object-cover"
+                unoptimized
+              />
             </div>
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Transparent Pricing</h4>
@@ -82,9 +100,15 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-dark flex items-center justify-center text-brand-yellow border border-neutral-800">
-              <HelpCircle className="w-5 h-5" />
+          <div className="flex items-center gap-3.5">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-neutral-800 shadow-sm">
+              <Image
+                src="/images/trust/support.svg"
+                alt="24/7 Human Support"
+                fill
+                className="object-cover"
+                unoptimized
+              />
             </div>
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Human Support</h4>
