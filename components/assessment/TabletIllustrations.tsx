@@ -325,3 +325,194 @@ export function TabletHardwareIllustration({ variant }: { variant: TabletHardwar
     </svg>
   );
 }
+
+// ============================================================================
+// CASHALL TABLET BODY CONDITION ILLUSTRATIONS (Step 4: Body Defects)
+// ============================================================================
+
+export type TabletBodyVariant =
+  | "body_no_scr"
+  | "body_1_2_scr"
+  | "body_more_2_scr"
+  | "dent_none"
+  | "dent_1_2"
+  | "dent_major"
+  | "bent_none"
+  | "bent_body"
+  | "loose_screen"
+  | "panel_nodefect"
+  | "panel_broken";
+
+export function TabletBodyIllustration({ variant }: { variant: TabletBodyVariant }) {
+  return (
+    <svg viewBox="0 0 100 80" className="w-full h-full max-w-[84px] max-h-[68px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* ── 1. BODY SCRATCHES ── */}
+      {variant === "body_no_scr" && (
+        <g>
+          {/* Tablet back chassis */}
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          {/* Sparkles */}
+          <path d="M68 24L70 18L72 24L78 26L72 28L70 34L68 28L62 26Z" fill="#10B981" />
+          <path d="M30 52L31 48L32 52L36 53L32 54L31 58L30 54L26 53Z" fill="#34D399" />
+        </g>
+      )}
+
+      {variant === "body_1_2_scr" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          <line x1="24" y1="26" x2="40" y2="38" stroke="#EF4444" strokeWidth="1.6" strokeLinecap="round" />
+          <line x1="60" y1="46" x2="74" y2="54" stroke="#EF4444" strokeWidth="1.6" strokeLinecap="round" />
+        </g>
+      )}
+
+      {variant === "body_more_2_scr" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          <line x1="20" y1="20" x2="42" y2="36" stroke="#DC2626" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="28" y1="44" x2="48" y2="56" stroke="#DC2626" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="58" y1="22" x2="78" y2="38" stroke="#DC2626" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="54" y1="48" x2="80" y2="60" stroke="#DC2626" strokeWidth="1.8" strokeLinecap="round" />
+        </g>
+      )}
+
+      {/* ── 2. BODY DENTS ── */}
+      {variant === "dent_none" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          <path d="M68 24L70 18L72 24L78 26L72 28L70 34L68 28L62 26Z" fill="#10B981" />
+        </g>
+      )}
+
+      {variant === "dent_1_2" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          <ellipse cx="26" cy="24" rx="5" ry="3.5" fill="#FEE2E2" stroke="#EF4444" strokeWidth="1.5" />
+        </g>
+      )}
+
+      {variant === "dent_major" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <circle cx="50" cy="40" r="7" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1" />
+          {/* Major Dent on Corner / Rim */}
+          <ellipse cx="26" cy="24" rx="9" ry="6.5" fill="#FCA5A5" stroke="#DC2626" strokeWidth="2" />
+          <ellipse cx="72" cy="50" rx="7" ry="5" fill="#FCA5A5" stroke="#DC2626" strokeWidth="1.8" />
+        </g>
+      )}
+
+      {/* ── 3. BENT / LOOSE SCREEN ── */}
+      {variant === "bent_none" && (
+        <g>
+          {/* Straight horizontal edge profile */}
+          <rect x="10" y="34" width="80" height="12" rx="3" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <line x1="10" y1="38" x2="90" y2="38" stroke="#38BDF8" strokeWidth="1.5" />
+          <path d="M50 20L52 14L54 20L60 22L54 24L52 30L50 24L44 22Z" fill="#10B981" />
+        </g>
+      )}
+
+      {variant === "bent_body" && (
+        <g>
+          {/* Warped curved tablet chassis */}
+          <path d="M12 44Q50 24 88 44L86 54Q50 34 14 54Z" fill="#FEE2E2" stroke="#DC2626" strokeWidth="2.2" strokeLinejoin="round" />
+          {/* Warning stress arrows */}
+          <path d="M50 16V26M50 26L46 22M50 26L54 22" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      )}
+
+      {variant === "loose_screen" && (
+        <g>
+          <rect x="10" y="38" width="80" height="12" rx="3" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          {/* Screen glass lifting/separating upwards */}
+          <path d="M10 38C30 38 46 28 86 24" stroke="#EF4444" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M68 38V30M68 30L65 33M68 30L71 33" stroke="#DC2626" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      )}
+
+      {/* ── 4. PANEL CONDITION ── */}
+      {variant === "panel_nodefect" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          <path d="M50 34L52 28L54 34L60 36L54 38L52 44L50 38L44 36Z" fill="#10B981" />
+        </g>
+      )}
+
+      {variant === "panel_broken" && (
+        <g>
+          <rect x="8" y="8" width="84" height="64" rx="7" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" />
+          {/* Shattered back panel */}
+          <path d="M18 16L40 38L78 20" stroke="#DC2626" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M40 38L48 58L28 70" stroke="#DC2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M40 38L66 48L82 62" stroke="#EF4444" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="40" cy="38" r="3.5" fill="#EF4444" />
+        </g>
+      )}
+    </svg>
+  );
+}
+
+// ============================================================================
+// CASHALL TABLET ACCESSORY ILLUSTRATIONS (Step 5: Accessories)
+// ============================================================================
+
+export type TabletAccessoryVariant = "charger" | "box" | "stylus";
+
+export function TabletAccessoryIllustration({ variant }: { variant: TabletAccessoryVariant }) {
+  return (
+    <svg viewBox="0 0 100 100" className="w-full h-full max-w-[88px] max-h-[88px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* ── 1. CHARGER AVAILABLE ── */}
+      {variant === "charger" && (
+        <g>
+          <rect x="22" y="24" width="36" height="36" rx="8" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.5" />
+          <rect x="14" y="32" width="8" height="4" rx="1.5" fill="#CBD5E1" stroke="#1E293B" strokeWidth="1.5" />
+          <rect x="14" y="44" width="8" height="4" rx="1.5" fill="#CBD5E1" stroke="#1E293B" strokeWidth="1.5" />
+          <rect x="52" y="38" width="6" height="8" rx="3" fill="#0F172A" />
+          <path d="M40 34L35 43H41L38 52L46 41H40L40 34Z" fill="#FFD400" stroke="#D97706" strokeWidth="1" strokeLinejoin="round" />
+          <path d="M58 42C68 42 74 48 74 58C74 68 64 74 54 74C42 74 36 80 40 86C44 90 56 90 68 86" stroke="#64748B" strokeWidth="2.5" strokeLinecap="round" />
+          <rect x="68" y="76" width="14" height="8" rx="2" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
+          <rect x="82" y="78" width="5" height="4" rx="1" fill="#94A3B8" stroke="#1E293B" strokeWidth="1" />
+        </g>
+      )}
+
+      {/* ── 2. BOX WITH SAME IMEI ── */}
+      {variant === "box" && (
+        <g>
+          <path d="M50 16L84 32L50 48L16 32L50 16Z" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2.2" strokeLinejoin="round" />
+          <path d="M16 32V66L50 82V48L16 32Z" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2.2" strokeLinejoin="round" />
+          <path d="M84 32V66L50 82V48L84 32Z" fill="#CBD5E1" stroke="#1E293B" strokeWidth="2.2" strokeLinejoin="round" />
+          <line x1="16" y1="40" x2="50" y2="56" stroke="#94A3B8" strokeWidth="1.5" />
+          <line x1="84" y1="40" x2="50" y2="56" stroke="#94A3B8" strokeWidth="1.5" />
+          <g transform="translate(54, 55)">
+            <rect x="0" y="0" width="22" height="12" rx="2" fill="#FFFFFF" stroke="#64748B" strokeWidth="1" />
+            <line x1="3" y1="2" x2="3" y2="10" stroke="#1E293B" strokeWidth="1.2" />
+            <line x1="6" y1="2" x2="6" y2="10" stroke="#1E293B" strokeWidth="0.8" />
+            <line x1="9" y1="2" x2="9" y2="10" stroke="#1E293B" strokeWidth="1.5" />
+            <line x1="13" y1="2" x2="13" y2="10" stroke="#1E293B" strokeWidth="0.8" />
+            <line x1="16" y1="2" x2="16" y2="10" stroke="#1E293B" strokeWidth="1.2" />
+            <line x1="19" y1="2" x2="19" y2="10" stroke="#1E293B" strokeWidth="1" />
+          </g>
+          <circle cx="50" cy="32" r="7" fill="#FFD400" stroke="#D97706" strokeWidth="1.5" />
+          <path d="M47 32L49 34L53 30" stroke="#1E293B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      )}
+
+      {/* ── 3. APPLE PENCIL / S PEN / STYLUS ── */}
+      {variant === "stylus" && (
+        <g transform="rotate(-35 50 50)">
+          <rect x="46" y="10" width="8" height="70" rx="3" fill="#F8FAFC" stroke="#1E293B" strokeWidth="1.8" />
+          <path d="M46 80L50 92L54 80H46Z" fill="#CBD5E1" stroke="#1E293B" strokeWidth="1.2" strokeLinejoin="round" />
+          <circle cx="50" cy="92" r="1" fill="#0F172A" />
+          <rect x="47" y="6" width="6" height="5" rx="1" fill="#FFD400" stroke="#D97706" strokeWidth="1" />
+          {/* Wireless charging magnetic strip */}
+          <line x1="47" y1="28" x2="47" y2="52" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="46" y1="18" x2="54" y2="18" stroke="#CBD5E1" strokeWidth="1.5" />
+        </g>
+      )}
+    </svg>
+  );
+}
+

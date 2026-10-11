@@ -7,6 +7,11 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PriceUnlockModal } from "@/components/common/PriceUnlockModal";
 import { VisualOptionCard } from "@/components/assessment/VisualOptionCard";
+import {
+  MobileDefectIllustration,
+  MobileHardwareIllustration,
+  MobileAccessoryIllustration,
+} from "@/components/assessment/MobileIllustrations";
 import { RadioQuestionItem } from "@/components/assessment/RadioQuestionItem";
 import { AssessmentHeader } from "@/components/assessment/AssessmentHeader";
 import { AssessmentSidebar } from "@/components/assessment/AssessmentSidebar";
@@ -611,28 +616,28 @@ function MobileAssessmentContent() {
                     <VisualOptionCard
                       id="defect-screen-broken"
                       label="Broken/scratch on device screen"
-                      imageUrl="/api/v1/catalog/asset/62a31a9a6c17e.png"
+                      iconNode={<MobileDefectIllustration variant="broken_screen" />}
                       selected={selectedDefects.includes("broken_screen")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "broken_screen"))}
                     />
                     <VisualOptionCard
                       id="defect-dead-spot"
                       label="Dead Spot/Visible line and Discoloration on screen"
-                      imageUrl="/api/v1/catalog/asset/62a31ad88c473.png"
+                      iconNode={<MobileDefectIllustration variant="dead_spot_lines" />}
                       selected={selectedDefects.includes("dead_spot_lines")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "dead_spot_lines"))}
                     />
                     <VisualOptionCard
                       id="defect-body-dent"
                       label="Scratch/Dent on device body"
-                      imageUrl="/api/v1/catalog/asset/62a31b0b3b18d.png"
+                      iconNode={<MobileDefectIllustration variant="body_dent_scratch" />}
                       selected={selectedDefects.includes("body_dent_scratch")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "body_dent_scratch"))}
                     />
                     <VisualOptionCard
                       id="defect-panel-broken"
                       label="Device panel missing/broken"
-                      imageUrl="/api/v1/catalog/asset/62a87a14b538f.png"
+                      iconNode={<MobileDefectIllustration variant="panel_missing" />}
                       selected={selectedDefects.includes("panel_missing")}
                       onClick={() => setSelectedDefects(toggleArrayItem(selectedDefects, "panel_missing"))}
                     />
@@ -665,14 +670,14 @@ function MobileAssessmentContent() {
                         <VisualOptionCard
                           id="prob-bat-service"
                           label="Battery in Service (Health is less than 80%)"
-                          imageUrl="/api/v1/catalog/asset/5d244621b86f8.jpg"
+                          iconNode={<MobileHardwareIllustration variant="battery_service" />}
                           selected={selectedProblems.includes("battery_service")}
                           onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "battery_service"))}
                         />
                         <VisualOptionCard
                           id="prob-esim"
                           label="e-SIM / Cellular Not Working"
-                          imageUrl="/api/v1/catalog/asset/SIM_card_tray_broken_missing.png"
+                          iconNode={<MobileHardwareIllustration variant="esim_issue" />}
                           selected={selectedProblems.includes("esim_issue")}
                           onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "esim_issue"))}
                         />
@@ -682,112 +687,112 @@ function MobileAssessmentContent() {
                     <VisualOptionCard
                       id="prob-front-cam"
                       label="Front Camera not working"
-                      imageUrl="/api/v1/catalog/asset/5d2440e1d4b31.jpg"
+                      iconNode={<MobileHardwareIllustration variant="front_cam" />}
                       selected={selectedProblems.includes("front_camera")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "front_camera"))}
                     />
                     <VisualOptionCard
                       id="prob-back-cam"
                       label="Back Camera not working"
-                      imageUrl="/api/v1/catalog/asset/5d2441a16cca9.jpg"
+                      iconNode={<MobileHardwareIllustration variant="back_cam" />}
                       selected={selectedProblems.includes("back_camera")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "back_camera"))}
                     />
                     <VisualOptionCard
                       id="prob-vol-button"
                       label="Volume Button not working"
-                      imageUrl="/api/v1/catalog/asset/5d2443731c3db.jpg"
+                      iconNode={<MobileHardwareIllustration variant="volume_btn" />}
                       selected={selectedProblems.includes("volume_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "volume_button"))}
                     />
                     <VisualOptionCard
                       id="prob-finger-touch"
                       label="Finger Touch not working"
-                      imageUrl="/api/v1/catalog/asset/5d2444092bce8.jpg"
+                      iconNode={<MobileHardwareIllustration variant="finger_touch" />}
                       selected={selectedProblems.includes("finger_touch")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "finger_touch"))}
                     />
                     <VisualOptionCard
                       id="prob-wifi"
                       label="WiFi not working"
-                      imageUrl="/api/v1/catalog/asset/5d2442d22fa49.jpg"
+                      iconNode={<MobileHardwareIllustration variant="wifi" />}
                       selected={selectedProblems.includes("wifi")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "wifi"))}
                     />
                     <VisualOptionCard
                       id="prob-speaker"
                       label="Speaker Faulty"
-                      imageUrl="/api/v1/catalog/asset/5d244674ced62.jpg"
+                      iconNode={<MobileHardwareIllustration variant="speaker" />}
                       selected={selectedProblems.includes("speaker")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "speaker"))}
                     />
                     <VisualOptionCard
                       id="prob-silent-button"
                       label="Silent Button not working"
-                      imageUrl="/api/v1/catalog/asset/5df0e69829e5c.png"
+                      iconNode={<MobileHardwareIllustration variant="silent_button" />}
                       selected={selectedProblems.includes("silent_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "silent_button"))}
                     />
                     <VisualOptionCard
                       id="prob-face-sensor"
                       label="Face Sensor not working"
-                      imageUrl="/api/v1/catalog/asset/5d2448e9ec9d0.jpg"
+                      iconNode={<MobileHardwareIllustration variant="face_sensor" />}
                       selected={selectedProblems.includes("face_sensor")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "face_sensor"))}
                     />
                     <VisualOptionCard
                       id="prob-power-button"
                       label="Power Button not working"
-                      imageUrl="/api/v1/catalog/asset/5d244762197f4.jpg"
+                      iconNode={<MobileHardwareIllustration variant="power_button" />}
                       selected={selectedProblems.includes("power_button")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "power_button"))}
                     />
                     <VisualOptionCard
                       id="prob-charging-port"
                       label="Charging Port not working"
-                      imageUrl="/api/v1/catalog/asset/5d24486306b57.jpg"
+                      iconNode={<MobileHardwareIllustration variant="charging_port" />}
                       selected={selectedProblems.includes("charging_port")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "charging_port"))}
                     />
                     <VisualOptionCard
                       id="prob-audio-receiver"
                       label="Audio Receiver not working"
-                      imageUrl="/api/v1/catalog/asset/5dfb2607b7889.png"
+                      iconNode={<MobileHardwareIllustration variant="audio_receiver" />}
                       selected={selectedProblems.includes("audio_receiver")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "audio_receiver"))}
                     />
                     <VisualOptionCard
                       id="prob-camera-glass"
                       label="Camera Glass Broken"
-                      imageUrl="/api/v1/catalog/asset/5f868584a1a09.png"
+                      iconNode={<MobileHardwareIllustration variant="camera_glass" />}
                       selected={selectedProblems.includes("camera_glass")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "camera_glass"))}
                     />
                     <VisualOptionCard
                       id="prob-mic"
                       label="Microphone not working"
-                      imageUrl="/api/v1/catalog/asset/6023a3ef18975.png"
+                      iconNode={<MobileHardwareIllustration variant="microphone" />}
                       selected={selectedProblems.includes("microphone")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "microphone"))}
                     />
                     <VisualOptionCard
                       id="prob-bluetooth"
                       label="Bluetooth not working"
-                      imageUrl="/api/v1/catalog/asset/6023a363ad07d.png"
+                      iconNode={<MobileHardwareIllustration variant="bluetooth" />}
                       selected={selectedProblems.includes("bluetooth")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "bluetooth"))}
                     />
                     <VisualOptionCard
                       id="prob-vibrator"
                       label="Vibrator is not working"
-                      imageUrl="/api/v1/catalog/asset/6023a3a6f00e2.png"
+                      iconNode={<MobileHardwareIllustration variant="vibrator" />}
                       selected={selectedProblems.includes("vibrator")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "vibrator"))}
                     />
                     <VisualOptionCard
                       id="prob-prox-sensor"
                       label="Proximity Sensor not working"
-                      imageUrl="/api/v1/catalog/asset/6023a5bda784d.png"
+                      iconNode={<MobileHardwareIllustration variant="proximity_sensor" />}
                       selected={selectedProblems.includes("proximity_sensor")}
                       onClick={() => setSelectedProblems(toggleArrayItem(selectedProblems, "proximity_sensor"))}
                     />
@@ -817,7 +822,7 @@ function MobileAssessmentContent() {
                     <VisualOptionCard
                       id="acc-box"
                       label="Original Box with same IMEI"
-                      imageUrl="/api/v1/catalog/asset/5d244b6c82230.jpg"
+                      iconNode={<MobileAccessoryIllustration variant="box" />}
                       selected={selectedAccessories.includes("box")}
                       onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "box"))}
                       sublabel="Original retail packaging with matching IMEI barcode"
@@ -825,7 +830,7 @@ function MobileAssessmentContent() {
                     <VisualOptionCard
                       id="acc-charger"
                       label="Original Charger of Device"
-                      imageUrl="/api/v1/catalog/asset/Charger_Available.png"
+                      iconNode={<MobileAccessoryIllustration variant="charger" />}
                       selected={selectedAccessories.includes("charger")}
                       onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "charger"))}
                       sublabel="Working original power adapter & cable"
@@ -834,7 +839,7 @@ function MobileAssessmentContent() {
                       <VisualOptionCard
                         id="acc-spen"
                         label="Original S Pen"
-                        imageUrl="/api/v1/catalog/asset/6023a3a6f00e2.png"
+                        iconNode={<MobileAccessoryIllustration variant="spen" />}
                         selected={selectedAccessories.includes("spen")}
                         onClick={() => setSelectedAccessories(toggleArrayItem(selectedAccessories, "spen"))}
                         sublabel="Official Samsung stylus pen in working condition"

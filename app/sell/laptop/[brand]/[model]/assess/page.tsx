@@ -7,6 +7,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PriceUnlockModal } from "@/components/common/PriceUnlockModal";
 import { VisualOptionCard } from "@/components/assessment/VisualOptionCard";
+import {
+  LaptopHardwareIllustration,
+  LaptopScreenIllustration,
+  LaptopAccessoryIllustration,
+  LaptopBodyIllustration,
+} from "@/components/assessment/LaptopIllustrations";
 import { RadioQuestionItem } from "@/components/assessment/RadioQuestionItem";
 import { AssessmentHeader } from "@/components/assessment/AssessmentHeader";
 import { AssessmentSidebar } from "@/components/assessment/AssessmentSidebar";
@@ -585,77 +591,77 @@ function LaptopAssessmentContent() {
                     <VisualOptionCard
                       id="prob-laptop-kb"
                       label="Keyboard not working; key(s) missing/not working"
-                      imageUrl="/api/v1/catalog/asset/60ab9d8f386a4.png"
+                      iconNode={<LaptopHardwareIllustration variant="keyboard" />}
                       selected={functionalProblems.includes("keyboard")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "keyboard"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-cddvd"
                       label="CD/DVD Drive not working"
-                      imageUrl="/api/v1/catalog/asset/60ab9cb0aceb0.png"
+                      iconNode={<LaptopHardwareIllustration variant="cddvd" />}
                       selected={functionalProblems.includes("cddvd")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "cddvd"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-touchpad"
                       label="Touchpad not working; Left/Right click faulty"
-                      imageUrl="/api/v1/catalog/asset/60ab9cad03f51.png"
+                      iconNode={<LaptopHardwareIllustration variant="touchpad" />}
                       selected={functionalProblems.includes("touchpad")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "touchpad"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-battery"
                       label="Battery dead, backup < 60 mins, health < 80%, cycle count > 800"
-                      imageUrl="/api/v1/catalog/asset/60ab9cab2beab.png"
+                      iconNode={<LaptopHardwareIllustration variant="battery_dead" />}
                       selected={functionalProblems.includes("battery_dead")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "battery_dead"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-speakers"
                       label="Speakers not working; faulty/cracked sound"
-                      imageUrl="/api/v1/catalog/asset/60ab9ceeabfbd.png"
+                      iconNode={<LaptopHardwareIllustration variant="speakers" />}
                       selected={functionalProblems.includes("speakers")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "speakers"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-wifi"
                       label="Wi-Fi not working"
-                      imageUrl="/api/v1/catalog/asset/60ab9d25e5a56.png"
+                      iconNode={<LaptopHardwareIllustration variant="wifi" />}
                       selected={functionalProblems.includes("wifi")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "wifi"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-usb"
                       label="USB Port not working"
-                      imageUrl="/api/v1/catalog/asset/60ab9ddc6abb4.png"
+                      iconNode={<LaptopHardwareIllustration variant="usb" />}
                       selected={functionalProblems.includes("usb")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "usb"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-webcam"
                       label="Web Cam not working"
-                      imageUrl="/api/v1/catalog/asset/60ab9e0f2bf81.png"
+                      iconNode={<LaptopHardwareIllustration variant="webcam" />}
                       selected={functionalProblems.includes("webcam")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "webcam"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-charging"
                       label="Charging Port not working"
-                      imageUrl="/api/v1/catalog/asset/6148560d0c3b3.png"
+                      iconNode={<LaptopHardwareIllustration variant="charging_port" />}
                       selected={functionalProblems.includes("charging_port")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "charging_port"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-harddrive"
                       label="Hard Drive Missing/Defective"
-                      imageUrl="/api/v1/catalog/asset/61487866ea5a5.png"
+                      iconNode={<LaptopHardwareIllustration variant="hard_drive" />}
                       selected={functionalProblems.includes("hard_drive")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "hard_drive"))}
                     />
                     <VisualOptionCard
                       id="prob-laptop-mobo"
                       label="Motherboard issue - auto restart, hanging, heating/not booting"
-                      imageUrl="/api/v1/catalog/asset/62e0d8a3d520e.png"
+                      iconNode={<LaptopHardwareIllustration variant="motherboard" />}
                       selected={functionalProblems.includes("motherboard")}
                       onClick={() => setFunctionalProblems(toggleArrayItem(functionalProblems, "motherboard"))}
                     />
@@ -690,7 +696,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="scr-no-scratches"
                         label="No scratches on screen"
-                        imageUrl="/api/v1/catalog/asset/No_Scratches_on_screen.png"
+                        iconNode={<LaptopScreenIllustration variant="no_scratches" />}
                         selected={screenScratches === "no_scratches"}
                         onClick={() => setScreenScratches("no_scratches")}
                         multiSelect={false}
@@ -698,7 +704,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="scr-1-2-scratches"
                         label="1-2 scratches on screen"
-                        imageUrl="/api/v1/catalog/asset/Minor_scratches.png"
+                        iconNode={<LaptopScreenIllustration variant="1_2_scratches" />}
                         selected={screenScratches === "1_2_scratches"}
                         onClick={() => setScreenScratches("1_2_scratches")}
                         multiSelect={false}
@@ -706,7 +712,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="scr-more-2-scratches"
                         label="More than 2 scratches on screen"
-                        imageUrl="/api/v1/catalog/asset/Major_scratches.png"
+                        iconNode={<LaptopScreenIllustration variant="more_than_2" />}
                         selected={screenScratches === "more_than_2"}
                         onClick={() => setScreenScratches("more_than_2")}
                         multiSelect={false}
@@ -714,7 +720,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="scr-cracked-broken"
                         label="Screen Cracked or Broken"
-                        imageUrl="/api/v1/catalog/asset/Screen_Cracked.png"
+                        iconNode={<LaptopScreenIllustration variant="cracked_broken" />}
                         selected={screenScratches === "cracked_broken"}
                         onClick={() => setScreenScratches("cracked_broken")}
                         multiSelect={false}
@@ -731,7 +737,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="disc-no"
                         label="No Discolouration"
-                        imageUrl="/api/v1/catalog/asset/No_Discoloration.png"
+                        iconNode={<LaptopScreenIllustration variant="no_discoloration" />}
                         selected={screenDiscoloration === "no_discoloration"}
                         onClick={() => setScreenDiscoloration("no_discoloration")}
                         multiSelect={false}
@@ -739,7 +745,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="disc-minor"
                         label="Minor Discolouration"
-                        imageUrl="/api/v1/catalog/asset/Minor_Discoloration.png"
+                        iconNode={<LaptopScreenIllustration variant="minor_discoloration" />}
                         selected={screenDiscoloration === "minor"}
                         onClick={() => setScreenDiscoloration("minor")}
                         multiSelect={false}
@@ -747,7 +753,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="disc-major"
                         label="Major Discolouration"
-                        imageUrl="/api/v1/catalog/asset/Major_Discoloration.png"
+                        iconNode={<LaptopScreenIllustration variant="major_discoloration" />}
                         selected={screenDiscoloration === "major"}
                         onClick={() => setScreenDiscoloration("major")}
                         multiSelect={false}
@@ -764,7 +770,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="spot-no"
                         label="No spots on screen"
-                        imageUrl="/api/v1/catalog/asset/No_Spots.png"
+                        iconNode={<LaptopScreenIllustration variant="no_spots" />}
                         selected={screenSpots === "no_spots"}
                         onClick={() => setScreenSpots("no_spots")}
                         multiSelect={false}
@@ -772,7 +778,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="spot-minor"
                         label="1-2 minor spots on screen"
-                        imageUrl="/api/v1/catalog/asset/1-2_Spots_on_Screen-Display.png"
+                        iconNode={<LaptopScreenIllustration variant="minor_spots" />}
                         selected={screenSpots === "minor_spots"}
                         onClick={() => setScreenSpots("minor_spots")}
                         multiSelect={false}
@@ -780,7 +786,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="spot-heavy"
                         label="Large/ heavy visible spots on screen"
-                        imageUrl="/api/v1/catalog/asset/Heavy_Spots_on_Screen-Display.png"
+                        iconNode={<LaptopScreenIllustration variant="heavy_spots" />}
                         selected={screenSpots === "heavy_spots"}
                         onClick={() => setScreenSpots("heavy_spots")}
                         multiSelect={false}
@@ -797,7 +803,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="line-no"
                         label="No Lines"
-                        imageUrl="/api/v1/catalog/asset/No_Lines.png"
+                        iconNode={<LaptopScreenIllustration variant="no_lines" />}
                         selected={screenLines === "no_lines"}
                         onClick={() => setScreenLines("no_lines")}
                         multiSelect={false}
@@ -805,7 +811,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="line-visible"
                         label="Visible lines on Screen"
-                        imageUrl="/api/v1/catalog/asset/Visible_lines_on_Screen.png"
+                        iconNode={<LaptopScreenIllustration variant="visible_lines" />}
                         selected={screenLines === "visible_lines"}
                         onClick={() => setScreenLines("visible_lines")}
                         multiSelect={false}
@@ -813,7 +819,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="line-flickering"
                         label="Display Flickering"
-                        imageUrl="/api/v1/catalog/asset/Display_Flickering.png"
+                        iconNode={<LaptopScreenIllustration variant="flickering" />}
                         selected={screenLines === "flickering"}
                         onClick={() => setScreenLines("flickering")}
                         multiSelect={false}
@@ -821,7 +827,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="line-blackdots"
                         label="Black Dots on Screen"
-                        imageUrl="/api/v1/catalog/asset/Screen_Cracked_1.png"
+                        iconNode={<LaptopScreenIllustration variant="black_dots" />}
                         selected={screenLines === "black_dots"}
                         onClick={() => setScreenLines("black_dots")}
                         multiSelect={false}
@@ -838,7 +844,7 @@ function LaptopAssessmentContent() {
                     <VisualOptionCard
                       id="laptop-acc-box"
                       label="Original Box with same serial number"
-                      imageUrl="/api/v1/catalog/asset/Box_Available.png"
+                      iconNode={<LaptopAccessoryIllustration variant="box" />}
                       selected={accessories.includes("box")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "box"))}
                       sublabel="Original retail packaging with matching serial tag"
@@ -846,7 +852,7 @@ function LaptopAssessmentContent() {
                     <VisualOptionCard
                       id="laptop-acc-charger"
                       label="Original charger available"
-                      imageUrl="/api/v1/catalog/asset/Charger_Available.png"
+                      iconNode={<LaptopAccessoryIllustration variant="charger" />}
                       selected={accessories.includes("charger")}
                       onClick={() => setAccessories(toggleArrayItem(accessories, "charger"))}
                       sublabel="Official power adapter and charging cord"
@@ -855,7 +861,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="laptop-acc-stylus"
                         label="Original Stylus / Pen available"
-                        imageUrl="/api/v1/catalog/asset/spen.png"
+                        iconNode={<LaptopAccessoryIllustration variant="stylus" />}
                         selected={accessories.includes("stylus")}
                         onClick={() => setAccessories(toggleArrayItem(accessories, "stylus"))}
                         sublabel="Original stylus / active pen that ships with the device"
@@ -896,7 +902,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="bodyscr-no"
                         label="No Scratches"
-                        imageUrl="/api/v1/catalog/asset/No_Minor_Body_1.png"
+                        iconNode={<LaptopBodyIllustration variant="bodyscr_no" />}
                         selected={bodyScratches === "no_scratches"}
                         onClick={() => setBodyScratches("no_scratches")}
                         multiSelect={false}
@@ -904,7 +910,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="bodyscr-minor"
                         label="Minor Scratch on Body"
-                        imageUrl="/api/v1/catalog/asset/1-2_Minor_scratch_body.png"
+                        iconNode={<LaptopBodyIllustration variant="bodyscr_minor" />}
                         selected={bodyScratches === "minor"}
                         onClick={() => setBodyScratches("minor")}
                         multiSelect={false}
@@ -912,7 +918,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="bodyscr-major"
                         label="Major Scratch on Body"
-                        imageUrl="/api/v1/catalog/asset/Heavy_scratch-body.png"
+                        iconNode={<LaptopBodyIllustration variant="bodyscr_major" />}
                         selected={bodyScratches === "major"}
                         onClick={() => setBodyScratches("major")}
                         multiSelect={false}
@@ -929,7 +935,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="topdent-no"
                         label="No Dents on top panel"
-                        imageUrl="/api/v1/catalog/asset/No_Dents_on_top_panel.png"
+                        iconNode={<LaptopBodyIllustration variant="topdent_no" />}
                         selected={topPanelDents === "no_dents"}
                         onClick={() => setTopPanelDents("no_dents")}
                         multiSelect={false}
@@ -937,7 +943,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="topdent-upto2"
                         label="Upto 2 Minor Dents"
-                        imageUrl="/api/v1/catalog/asset/1_Minor_Dent_1.png"
+                        iconNode={<LaptopBodyIllustration variant="topdent_upto2" />}
                         selected={topPanelDents === "upto_2"}
                         onClick={() => setTopPanelDents("upto_2")}
                         multiSelect={false}
@@ -945,7 +951,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="topdent-more2"
                         label="More than 2 Minor Dents"
-                        imageUrl="/api/v1/catalog/asset/Multiple_Minor_Dents_1.png"
+                        iconNode={<LaptopBodyIllustration variant="topdent_more2" />}
                         selected={topPanelDents === "more_than_2"}
                         onClick={() => setTopPanelDents("more_than_2")}
                         multiSelect={false}
@@ -953,7 +959,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="topdent-major"
                         label="1 or more Major Dents"
-                        imageUrl="/api/v1/catalog/asset/Major_Dents_1.png"
+                        iconNode={<LaptopBodyIllustration variant="topdent_major" />}
                         selected={topPanelDents === "major"}
                         onClick={() => setTopPanelDents("major")}
                         multiSelect={false}
@@ -970,7 +976,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="basedent-no"
                         label="No Dents on base panel"
-                        imageUrl="/api/v1/catalog/asset/No_Dents_on_base_panel.png"
+                        iconNode={<LaptopBodyIllustration variant="basedent_no" />}
                         selected={basePanelDents === "no_dents"}
                         onClick={() => setBasePanelDents("no_dents")}
                         multiSelect={false}
@@ -978,7 +984,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="basedent-upto2"
                         label="Upto 2 Minor Dents"
-                        imageUrl="/api/v1/catalog/asset/1_Minor_Dent_Base.png"
+                        iconNode={<LaptopBodyIllustration variant="basedent_upto2" />}
                         selected={basePanelDents === "upto_2"}
                         onClick={() => setBasePanelDents("upto_2")}
                         multiSelect={false}
@@ -986,7 +992,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="basedent-more2"
                         label="More than 2 Minor Dents"
-                        imageUrl="/api/v1/catalog/asset/Multiple_Minor_Dents_Base.png"
+                        iconNode={<LaptopBodyIllustration variant="basedent_more2" />}
                         selected={basePanelDents === "more_than_2"}
                         onClick={() => setBasePanelDents("more_than_2")}
                         multiSelect={false}
@@ -994,7 +1000,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="basedent-major"
                         label="1 or more Major Dents"
-                        imageUrl="/api/v1/catalog/asset/Major_Dents_base.png"
+                        iconNode={<LaptopBodyIllustration variant="basedent_major" />}
                         selected={basePanelDents === "major"}
                         onClick={() => setBasePanelDents("major")}
                         multiSelect={false}
@@ -1011,7 +1017,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="hinges-no"
                         label="No Loose Hinges"
-                        imageUrl="/api/v1/catalog/asset/Hinges-No.png"
+                        iconNode={<LaptopBodyIllustration variant="hinges_no" />}
                         selected={looseHinges === "no_loose"}
                         onClick={() => setLooseHinges("no_loose")}
                         multiSelect={false}
@@ -1019,7 +1025,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="hinges-yes"
                         label="Yes - Loose Hinges"
-                        imageUrl="/api/v1/catalog/asset/Hinges_-Yes.png"
+                        iconNode={<LaptopBodyIllustration variant="hinges_yes" />}
                         selected={looseHinges === "loose"}
                         onClick={() => setLooseHinges("loose")}
                         multiSelect={false}
@@ -1036,7 +1042,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="panel-no"
                         label="No Cracked or Loose Panel"
-                        imageUrl="/api/v1/catalog/asset/No_Cracked_or_Loose_Panel.png"
+                        iconNode={<LaptopBodyIllustration variant="panel_no" />}
                         selected={panelCondition === "no_defect"}
                         onClick={() => setPanelCondition("no_defect")}
                         multiSelect={false}
@@ -1044,7 +1050,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="panel-loose"
                         label="Loose Panel"
-                        imageUrl="/api/v1/catalog/asset/Loose_Panel.png"
+                        iconNode={<LaptopBodyIllustration variant="panel_loose" />}
                         selected={panelCondition === "loose"}
                         onClick={() => setPanelCondition("loose")}
                         multiSelect={false}
@@ -1052,7 +1058,7 @@ function LaptopAssessmentContent() {
                       <VisualOptionCard
                         id="panel-crack"
                         label="Crack/Damage Panel"
-                        imageUrl="/api/v1/catalog/asset/Crack-Damage_Panel.png"
+                        iconNode={<LaptopBodyIllustration variant="panel_crack" />}
                         selected={panelCondition === "cracked"}
                         onClick={() => setPanelCondition("cracked")}
                         multiSelect={false}

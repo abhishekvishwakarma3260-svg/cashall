@@ -294,11 +294,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/api/v1/catalog/asset/:id',
-        destination: 'https://s3ng.cashify.in/cashify/productLinePartVariation/img/xhdpi/:id',
-        permanent: true,
-      },
-      {
         source: '/:path*',
         has: [
           {
