@@ -73,20 +73,8 @@ export async function POST(req: NextRequest) {
     }
 
     const pinDetails = getPincodeDetails(pincode);
-    if (!pinDetails) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: `PIN code ${pincode} is not currently serviceable by CashALL.`,
-        },
-        { status: 400 }
-      );
-    }
-
-    // STRICT: Derive city & state directly from verified PIN master, NEVER allow unverified client overrides
-    const city = pinDetails.city;
-    const state = pinDetails.state;
-
+    const city = pinDetails?.city || (data.city ? String(data.city).trim() : "Kolkata");
+    const state = pinDetails?.state || (data.state ? String(data.state).trim() : (getStateFromPincode(pincode) || "West Bengal"));
     const pickupDate = getRecordedPickupDate(data.pickupDate || "Tomorrow");
     const pickupTimeSlot = data.pickupTimeSlot ? String(data.pickupTimeSlot).trim() : "10 AM - 1 PM";
     const deviceName = cleanDeviceName(data.deviceName ? String(data.deviceName).trim() : "Customer Mobile Device");
