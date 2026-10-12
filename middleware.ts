@@ -78,5 +78,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|photos|images|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|woff|woff2|ttf|apk|txt|xml|mp3|wav|ogg)$).*)"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|photos|images|api/v1/agent/orders|api/v1/admin/orders/latest-check|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|woff|woff2|ttf|apk|txt|xml|mp3|wav|ogg)$).*)"],
 };

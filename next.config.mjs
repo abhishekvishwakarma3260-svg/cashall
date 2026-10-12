@@ -178,11 +178,29 @@ const nextConfig = {
         ],
       },
       {
+        source: '/api/v1/agent/orders',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=30, s-maxage=30, stale-while-revalidate=60',
+          },
+        ],
+      },
+      {
         source: '/api/v1/admin/:path*',
         headers: [
           {
             key: 'Cache-Control',
             value: 'private, no-cache, no-store, max-age=0, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/api/v1/admin/orders/latest-check',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=60, s-maxage=60, stale-while-revalidate=120',
           },
         ],
       },
