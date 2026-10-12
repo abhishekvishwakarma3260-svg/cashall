@@ -71,9 +71,9 @@ export const BALLIA_PINCODES: string[] = [
   "277001", "277506"
 ];
 
-// 7. Patna, Bihar (1 PIN code)
+// 7. Patna, Bihar (2 PIN codes)
 export const PATNA_PINCODES: string[] = [
-  "800003"
+  "800003", "800020"
 ];
 
 // 8. Ranchi, Jharkhand (3 PIN codes)
@@ -162,6 +162,8 @@ export const NAMED_LOCALITIES: Record<string, string> = {
   "834001": "Main Road / Station",
   "834002": "Harmu Road",
   "834003": "Kanke / Morabadi",
+  "800003": "Patna City",
+  "800020": "Ram Krishna Nagar / Kankarbagh",
 };
 
 // Fast lookup map for all serviceable pincodes (O(1) lookups)
