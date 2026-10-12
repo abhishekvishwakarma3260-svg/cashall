@@ -121,11 +121,8 @@ export function RecommerceSeoBlock() {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full">
-              The Smarter Way to Sell Used Electronics
-            </span>
             <h2 className="text-2xl sm:text-3xl font-black text-brand-black">
-              Why CashALL is India&apos;s #1 Choice to Sell Old Phones &amp; Laptops Online
+              Why CashALL would be your best choice to sell your used devices
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600">
               Direct comparison, guaranteed highest market price, zero doorstep deductions, and certified data wiping.

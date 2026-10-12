@@ -156,37 +156,37 @@ export function Hero() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <div className="relative p-5 sm:p-8 md:p-10 pb-9 sm:pb-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+          <div className="relative p-3.5 sm:p-6 md:p-10 pb-6 sm:pb-9 flex flex-row items-center justify-between gap-2.5 sm:gap-6 md:gap-8 overflow-hidden">
             {/* AMBIENT GLOW */}
             <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-brand-yellow/10 blur-3xl pointer-events-none" />
 
-            <div className="max-w-xl space-y-3 z-10 text-left w-full md:w-auto">
-              <p className="text-[11px] font-bold text-brand-yellow uppercase tracking-wider flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
+            <div className="flex-1 min-w-0 space-y-1 sm:space-y-3 z-10 text-left pl-5 sm:pl-7 md:pl-0">
+              <p className="text-[9px] sm:text-[11px] font-bold text-brand-yellow uppercase tracking-wider flex items-center gap-1.5 truncate">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow shrink-0" />
                 <span>{slide.badge}</span>
               </p>
 
-              <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+              <h2 className="text-xs xs:text-sm sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-snug line-clamp-2">
                 {slide.title}
               </h2>
 
-              <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
+              <p className="text-[10px] sm:text-xs md:text-sm text-slate-300 font-normal leading-relaxed line-clamp-2 hidden xs:block">
                 {slide.subtitle}
               </p>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              <div className="flex items-center gap-2 pt-0.5 sm:pt-2">
                 <Link href={slide.ctaLink}>
                   <Button
                     variant="primary"
-                    size="md"
-                    className="font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-yellowGlow gap-2 group cursor-pointer"
+                    size="sm"
+                    className="font-bold text-[10px] sm:text-sm px-3 py-1 sm:px-5 sm:py-2.5 rounded-lg sm:rounded-xl shadow-yellowGlow gap-1.5 group cursor-pointer"
                   >
                     <span>{slide.ctaText}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
 
-                <Link href={slide.secondaryCtaLink}>
+                <Link href={slide.secondaryCtaLink} className="hidden sm:inline-block">
                   <Button
                     variant="secondary"
                     size="md"
@@ -198,22 +198,22 @@ export function Hero() {
               </div>
             </div>
 
-            {/* VISUAL BADGE & PRODUCT IMAGE (VISIBLE ON MOBILE & DESKTOP) */}
-            <div className="flex flex-col items-center justify-center shrink-0 relative z-10 w-full md:w-auto mt-2 md:mt-0">
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl group">
+            {/* VISUAL BADGE & PRODUCT IMAGE (HORIZONTAL RECTANGLE ON ALL DEVICES) */}
+            <div className="shrink-0 relative z-10 pr-5 sm:pr-7 md:pr-0">
+              <div className="relative w-28 h-20 xs:w-36 xs:h-24 sm:w-48 sm:h-32 md:w-60 md:h-40 lg:w-72 lg:h-48 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl group">
                 <Image
                   src={slide.image}
                   alt={slide.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+                  sizes="(max-width: 640px) 144px, (max-width: 768px) 192px, 288px"
                   priority
                 />
               </div>
             </div>
 
             {/* SLIDE INDICATOR PILLS / DOTS */}
-            <div className="absolute bottom-2.5 sm:bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
+            <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
               {activeSlides.map((_, idx) => (
                 <button
                   key={idx}
@@ -232,16 +232,16 @@ export function Hero() {
             <button
               onClick={() => setCurrentSlide((prev) => (prev === 0 ? activeSlides.length - 1 : prev - 1))}
               aria-label="Previous slide"
-              className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
+              className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={() => setCurrentSlide((prev) => (prev + 1) % activeSlides.length)}
               aria-label="Next slide"
-              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
+              className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </div>
         </div>
