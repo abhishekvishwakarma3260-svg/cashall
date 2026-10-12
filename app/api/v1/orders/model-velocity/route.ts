@@ -67,13 +67,20 @@ export async function GET(req: NextRequest) {
 
     const finalSoldVelocity = Math.max(1, actualCompleted + buffer);
 
-    return NextResponse.json({
-      success: true,
-      modelSlug,
-      actualCompleted,
-      soldVelocity: finalSoldVelocity,
-      displayBadge: `${finalSoldVelocity}+ sold in last 30 days`,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        modelSlug,
+        actualCompleted,
+        soldVelocity: finalSoldVelocity,
+        displayBadge: `${finalSoldVelocity}+ sold in last 30 days`,
+      },
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=604800",
+        },
+      }
+    );
   } catch (error: any) {
     return NextResponse.json(
       {
@@ -81,7 +88,12 @@ export async function GET(req: NextRequest) {
         soldVelocity: 2,
         displayBadge: "2+ sold in last 30 days",
       },
-      { status: 500 }
+      {
+        status: 500,
+        headers: {
+          "Cache-Control": "public, s-maxage=300",
+        },
+      }
     );
   }
 }

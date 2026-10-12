@@ -4,6 +4,8 @@ import { prisma } from "@/lib/db";
 import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 export const dynamic = "force-dynamic";
 
+let cachedOrdersData: { key: string; payload: any; timestamp: number } | null = null;
+
 export const GET = apiWrapper(async (req: NextRequest) => {
   const user = await verifyAuthToken(req);
   requireRole(["ADMIN", "SUPER_ADMIN", "MANAGER"], user.role);
@@ -13,6 +15,16 @@ export const GET = apiWrapper(async (req: NextRequest) => {
   const limit = Math.min(parseInt(searchParams.get("limit") || "250", 10), 1000);
   const status = searchParams.get("status");
   const query = searchParams.get("query");
+  const noCache = searchParams.get("nocache") === "true";
+
+  const cacheKey = `${page}_${limit}_${status || ""}_${query || ""}`;
+
+  // 6-second in-memory cache for ultra-fast subsequent navigation
+  if (!noCache && cachedOrdersData && cachedOrdersData.key === cacheKey && Date.now() - cachedOrdersData.timestamp < 6000) {
+    return NextResponse.json(cachedOrdersData.payload, {
+      headers: { "Cache-Control": "private, s-maxage=3, stale-while-revalidate=10" },
+    });
+  }
 
   const skip = (page - 1) * limit;
 
@@ -32,9 +44,10 @@ export const GET = apiWrapper(async (req: NextRequest) => {
 
   let orders: any[] = [];
   let total = 0;
+  let rawAgentLogs: any[] = [];
 
   try {
-    [total, orders] = await Promise.all([
+    [total, orders, rawAgentLogs] = await Promise.all([
       prisma.order.count({ where }),
       prisma.order.findMany({
         where,
@@ -77,11 +90,24 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         skip,
         take: limit,
       }),
+      prisma.auditLog.findMany({
+        where: {
+          action: { in: ["AGENT_CALL_LOGGED", "AGENT_CALL_RECORDING"] },
+        },
+        select: {
+          id: true,
+          action: true,
+          newValuesJson: true,
+          createdAt: true,
+        },
+        orderBy: { createdAt: "desc" },
+        take: 50,
+      }),
     ]);
   } catch (dbErr) {
     console.warn("DB findMany with agent relation failed, falling back without agent relation:", dbErr);
     try {
-      [total, orders] = await Promise.all([
+      [total, orders, rawAgentLogs] = await Promise.all([
         prisma.order.count({ where }),
         prisma.order.findMany({
           where,
@@ -123,6 +149,19 @@ export const GET = apiWrapper(async (req: NextRequest) => {
           skip,
           take: limit,
         }),
+        prisma.auditLog.findMany({
+          where: {
+            action: { in: ["AGENT_CALL_LOGGED", "AGENT_CALL_RECORDING"] },
+          },
+          select: {
+            id: true,
+            action: true,
+            newValuesJson: true,
+            createdAt: true,
+          },
+          orderBy: { createdAt: "desc" },
+          take: 50,
+        }),
       ]);
     } catch (fallbackErr) {
       console.error("Orders query failed completely:", fallbackErr);
@@ -143,25 +182,11 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     );
   };
 
-  // Fetch recent agent call logs to match against orders
+  // Process agent call logs to match against orders
   let agentCalls: any[] = [];
   try {
-    const rawAgentLogs = await prisma.auditLog.findMany({
-      where: {
-        action: { in: ["AGENT_CALL_LOGGED", "AGENT_CALL_RECORDING"] },
-      },
-      select: {
-        id: true,
-        action: true,
-        newValuesJson: true,
-        createdAt: true,
-      },
-      orderBy: { createdAt: "desc" },
-      take: 50,
-    });
-
-    agentCalls = rawAgentLogs
-      .map((log) => {
+    agentCalls = (rawAgentLogs || [])
+      .map((log: any) => {
         let data: any = {};
         try {
           data = JSON.parse(log.newValuesJson || "{}");
@@ -174,9 +199,9 @@ export const GET = apiWrapper(async (req: NextRequest) => {
           calledAt: data.callTimeIST || new Date(log.createdAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
         };
       })
-      .filter((c) => !isSupportStaff(c.agentName, c.agentPhone));
+      .filter((c: any) => !isSupportStaff(c.agentName, c.agentPhone));
   } catch (logErr) {
-    console.warn("Could not fetch agent call logs for orders:", logErr);
+    console.warn("Could not process agent call logs for orders:", logErr);
   }
 
   const formattedOrders = orders.map((ord: any) => {
@@ -325,7 +350,7 @@ export const GET = apiWrapper(async (req: NextRequest) => {
     };
   });
 
-  return NextResponse.json({
+  const payload = {
     success: true,
     data: {
       orders: formattedOrders,
@@ -336,5 +361,15 @@ export const GET = apiWrapper(async (req: NextRequest) => {
         totalPages: Math.ceil(total / limit),
       },
     },
+  };
+
+  cachedOrdersData = {
+    key: cacheKey,
+    payload,
+    timestamp: Date.now(),
+  };
+
+  return NextResponse.json(payload, {
+    headers: { "Cache-Control": "private, s-maxage=3, stale-while-revalidate=10" },
   });
 });

@@ -6,28 +6,45 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
+  ShoppingBag,
+  Gamepad2,
+  FileText,
+  ClipboardCheck,
   Smartphone,
   Calculator,
-  FileText,
-  ShoppingBag,
   UserCheck,
-  BarChart3,
-  ClipboardCheck,
-  Truck,
+  Navigation,
   MapPin,
-  Users,
-  LogOut,
-  Headset,
+  ShieldAlert,
+  Award,
   Receipt,
+  BarChart3,
+  Headset,
+  LogOut,
   Menu,
   X,
-  Gamepad2,
+  Sparkles,
+  ChevronRight,
 } from "lucide-react";
+
+interface NavItem {
+  label: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  badge?: string;
+  badgeColor?: string;
+}
+
+interface NavSection {
+  title: string;
+  items: NavItem[];
+}
 
 export function AdminSidebar() {
   const pathname = usePathname();
   const router = useRouter();
-  const [adminEmail, setAdminEmail] = useState("support@cashall.in");
+  const [adminEmail, setAdminEmail] = useState("sangeetshaw39@gmail.com");
+  const [adminName, setAdminName] = useState("Sangeet Shaw");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -36,9 +53,8 @@ export function AdminSidebar() {
       if (session) {
         try {
           const parsed = JSON.parse(session);
-          if (parsed?.email) {
-            setAdminEmail(parsed.email);
-          }
+          if (parsed?.email) setAdminEmail(parsed.email);
+          if (parsed?.name) setAdminName(parsed.name);
         } catch (e) {}
       }
     }
@@ -51,7 +67,7 @@ export function AdminSidebar() {
     router.replace("/admin/login");
   };
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { label: "Dashboard Overview", href: "/admin", icon: LayoutDashboard },
     { label: "PS5 Rentals Console", href: "/admin/rentals", icon: Gamepad2, badge: "NEW" },
     { label: "Order Management", href: "/admin/orders", icon: ShoppingBag },
@@ -66,88 +82,94 @@ export function AdminSidebar() {
     { label: "Service Areas (PINs)", href: "/admin/service-areas", icon: MapPin },
   ];
 
-  const currentNav = navItems.find((item) => item.href === pathname) || navItems[0];
+  // Helper to determine active state
+  const isItemActive = (href: string) => {
+    if (href === "/admin") {
+      return pathname === "/admin";
+    }
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   return (
     <>
-      {/* MOBILE STICKY TOP BAR (SHOWN ONLY ON SCREENS < LG) */}
-      <div className="lg:hidden sticky top-0 z-40 bg-brand-black text-white border-b border-neutral-800 px-4 py-3 flex items-center justify-between shadow-md">
+      {/* MOBILE STICKY TOP BAR (SCREENS < LG) */}
+      <div className="lg:hidden sticky top-0 z-40 bg-white border-b border-slate-200 px-4 py-2.5 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-3">
           <button
             onClick={() => setMobileOpen(true)}
-            className="p-2 rounded-xl bg-neutral-900 border border-neutral-800 text-brand-yellow hover:bg-neutral-800 focus:outline-none transition-colors"
+            className="p-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors"
             aria-label="Open Admin Menu"
           >
             <Menu className="w-5 h-5" />
           </button>
           <Link href="/admin" className="flex items-center gap-2">
             <Image src="/logo.webp" alt="CashALL" width={110} height={30} className="h-6 w-auto object-contain" priority />
-            <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded">
+            <span className="bg-[#FEF08A] text-amber-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded border border-amber-300">
               ADMIN
             </span>
           </Link>
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-gray-300 truncate max-w-[120px]">
-            {currentNav.label}
-          </span>
-          <button
-            onClick={handleLogout}
-            title="Exit Admin"
-            className="p-1.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-neutral-800 transition-colors"
-          >
-            <LogOut className="w-4 h-4" />
-          </button>
-        </div>
+        <button
+          onClick={handleLogout}
+          title="Sign out"
+          className="p-1.5 rounded-lg text-slate-500 hover:text-red-600 hover:bg-red-50 transition-colors"
+        >
+          <LogOut className="w-4 h-4" />
+        </button>
       </div>
 
       {/* MOBILE SLIDE-OVER DRAWER BACKDROP */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm lg:hidden animate-fadeIn"
+          className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs lg:hidden animate-fadeIn"
           onClick={() => setMobileOpen(false)}
         >
           <div
-            className="w-72 max-w-[85vw] h-full bg-brand-black border-r border-neutral-800 flex flex-col justify-between p-4 overflow-y-auto"
+            className="w-72 max-w-[85vw] h-full bg-white border-r border-slate-200 flex flex-col justify-between p-4 overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div>
               {/* DRAWER HEADER */}
-              <div className="pb-4 mb-4 border-b border-neutral-800 flex items-center justify-between">
+              <div className="pb-3 mb-3 border-b border-slate-200 flex items-center justify-between">
                 <Link href="/admin" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
                   <Image src="/logo.webp" alt="CashALL" width={120} height={32} className="h-7 w-auto object-contain" priority />
-                  <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded">
+                  <span className="bg-[#FEF08A] text-amber-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded border border-amber-300">
                     ADMIN
                   </span>
                 </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
-                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-neutral-800 transition-colors"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
                   aria-label="Close Menu"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* DRAWER NAV LINKS */}
+              {/* DRAWER NAV ITEMS */}
               <nav className="space-y-1">
                 {navItems.map((item) => {
                   const Icon = item.icon;
-                  const isActive = pathname === item.href || (item.href !== "/admin" && pathname.startsWith(item.href + "/"));
+                  const active = isItemActive(item.href);
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all ${
-                        isActive
-                          ? "bg-brand-yellow text-brand-black shadow-yellowGlow"
-                          : "text-gray-400 hover:text-white hover:bg-neutral-800/80"
+                      className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs transition-all ${
+                        active
+                          ? "bg-amber-400 text-slate-950 font-bold shadow-xs"
+                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium"
                       }`}
                     >
-                      <Icon className={`w-4 h-4 ${isActive ? "text-brand-black" : "text-gray-400"}`} />
-                      <span>{item.label}</span>
+                      <Icon className={`w-4 h-4 shrink-0 ${active ? "text-slate-950" : "text-slate-500"}`} />
+                      <span className="truncate flex-1">{item.label}</span>
+                      {item.badge && (
+                        <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-amber-200 text-amber-950 uppercase tracking-wider">
+                          {item.badge}
+                        </span>
+                      )}
                     </Link>
                   );
                 })}
@@ -155,81 +177,93 @@ export function AdminSidebar() {
             </div>
 
             {/* DRAWER FOOTER */}
-            <div className="pt-4 border-t border-neutral-800 space-y-3">
-              <div className="truncate text-xs">
-                <div className="font-bold text-white">Operator Console</div>
-                <div className="text-[10px] text-gray-400">{adminEmail}</div>
+            <div className="pt-3 border-t border-slate-200 space-y-2.5">
+              <div className="flex items-center gap-2.5 px-2">
+                <div className="w-8 h-8 rounded-full bg-amber-400 text-amber-950 font-black text-xs flex items-center justify-center shrink-0 border border-amber-500 shadow-xs">
+                  {adminName.slice(0, 2).toUpperCase()}
+                </div>
+                <div className="truncate text-xs min-w-0">
+                  <div className="font-bold text-slate-900 truncate">{adminName}</div>
+                  <div className="text-[10px] text-slate-500 truncate">{adminEmail}</div>
+                </div>
               </div>
 
               <button
                 onClick={handleLogout}
-                className="w-full flex items-center justify-center gap-2 px-3 py-2.5 bg-neutral-900 hover:bg-red-950/60 hover:text-red-400 text-gray-300 text-xs font-bold rounded-xl border border-neutral-800 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-slate-100 hover:bg-red-50 hover:text-red-700 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200 transition-colors"
               >
                 <LogOut className="w-3.5 h-3.5" />
-                <span>Exit Admin</span>
+                <span>Sign Out</span>
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* DESKTOP SIDEBAR (SHOWN ON SCREENS >= LG) */}
-      <aside className="hidden lg:flex w-64 bg-brand-black text-gray-300 border-r border-neutral-800 flex-col justify-between shrink-0 min-h-screen">
-        <div>
-          {/* LOGO */}
-          <div className="p-4 border-b border-neutral-800 flex items-center justify-between gap-2">
-            <Link href="/admin" className="flex items-center">
-              <Image src="/logo.webp" alt="CashALL" width={130} height={36} className="h-8 w-auto object-contain" priority />
+      {/* DESKTOP SIDEBAR (SCREENS >= LG) - CLEAN WHITE WITH CASHALL YELLOW PILL */}
+      <aside className="hidden lg:flex w-64 bg-white border-r border-slate-200 flex-col justify-between shrink-0 min-h-screen select-none">
+        <div className="flex flex-col flex-1 min-h-0">
+          {/* HEADER LOGO */}
+          <div className="h-16 px-4 flex items-center justify-between border-b border-slate-200 bg-white">
+            <Link href="/admin" className="flex items-center gap-2">
+              <Image src="/logo.webp" alt="CashALL" width={120} height={32} className="h-7 w-auto object-contain" priority />
+              <span className="bg-amber-400 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded border border-amber-500 tracking-wider">
+                ADMIN
+              </span>
             </Link>
-            <span className="bg-brand-yellow/20 text-brand-yellow text-[9px] font-extrabold px-2 py-0.5 rounded shrink-0">
-              ADMIN
-            </span>
           </div>
 
-          {/* NAVIGATION LINKS */}
-          <nav className="p-4 space-y-1">
+          {/* FLAT NAV ITEMS */}
+          <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href;
+              const active = isItemActive(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all ${
-                    isActive
-                      ? "bg-brand-yellow text-brand-black shadow-yellowGlow"
-                      : "text-gray-400 hover:text-white hover:bg-neutral-800/80"
+                  className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs transition-all ${
+                    active
+                      ? "bg-amber-400 text-slate-950 font-bold shadow-xs"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium"
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-brand-black" : "text-gray-400"}`} />
-                  <span className="flex-1">{item.label}</span>
+                  <Icon className={`w-4 h-4 shrink-0 ${active ? "text-slate-950" : "text-slate-500"}`} />
+                  <span className="truncate flex-1">{item.label}</span>
                   {item.badge && (
-                    <span className={`px-1.5 py-0.5 text-[9px] font-black rounded ${isActive ? "bg-black text-brand-yellow" : "bg-brand-yellow/20 text-brand-yellow"}`}>
+                    <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-amber-200 text-amber-950 uppercase tracking-wider">
                       {item.badge}
                     </span>
                   )}
                 </Link>
               );
             })}
-          </nav>
+          </div>
         </div>
 
         {/* FOOTER USER INFO & LOGOUT */}
-        <div className="p-4 border-t border-neutral-800 space-y-3">
-          <div className="flex items-center justify-between text-xs">
-            <div className="truncate">
-              <div className="font-bold text-white">Operator Console</div>
-              <div className="text-[10px] text-gray-400">{adminEmail}</div>
+        <div className="p-3 border-t border-slate-200 bg-slate-50/70">
+          <div className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200 shadow-xs">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="relative shrink-0">
+                <div className="w-8 h-8 rounded-full bg-amber-400 text-amber-950 font-black text-xs flex items-center justify-center border border-amber-500 shadow-xs">
+                  {adminName.slice(0, 2).toUpperCase()}
+                </div>
+                <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-white" />
+              </div>
+              <div className="min-w-0">
+                <div className="font-bold text-xs text-slate-900 truncate leading-tight">{adminName}</div>
+                <div className="text-[10px] text-slate-500 truncate">Operations Lead</div>
+              </div>
             </div>
+            <button
+              onClick={handleLogout}
+              className="text-slate-400 hover:text-red-600 p-1 rounded-md hover:bg-red-50 transition-colors shrink-0"
+              title="Sign out"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
           </div>
-
-          <button
-            onClick={handleLogout}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-neutral-900 hover:bg-red-950/60 hover:text-red-400 text-gray-400 text-xs font-bold rounded-xl border border-neutral-800 transition-colors"
-          >
-            <LogOut className="w-3.5 h-3.5" />
-            <span>Exit Admin</span>
-          </button>
         </div>
       </aside>
     </>

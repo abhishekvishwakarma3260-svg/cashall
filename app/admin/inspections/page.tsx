@@ -3,10 +3,10 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
+import { AdminHeader } from "@/components/admin/AdminHeader";
 import { CustomerAnswersModal } from "@/components/admin/CustomerAnswersModal";
-import { Badge } from "@/components/ui/Badge";
 import { INITIAL_ORDERS, OrderData } from "@/lib/store";
-import { ClipboardCheck, CheckCircle2, ShieldCheck, Save, Loader2, Search, ArrowRight, ClipboardList } from "lucide-react";
+import { ClipboardCheck, CheckCircle2, ShieldCheck, Save, Loader2, ArrowRight, ClipboardList } from "lucide-react";
 
 function getAdminToken() {
   if (typeof window === "undefined") return "tok_admin_master_session";
@@ -38,7 +38,6 @@ function AdminInspectionsContent() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    // 1. Instant local load for fast UI rendering
     let initialList: OrderData[] = [];
     if (typeof window !== "undefined") {
       try {
@@ -64,59 +63,52 @@ function AdminInspectionsContent() {
         setImei(match.imeiNumber || "");
         setCustomerEmail(match.customerEmail || "");
       }
-    } else if (initialList.length > 0) {
+    } else if (initialList.length > 0 && !order) {
       setOrder(initialList[0]);
       setRevisedPrice(initialList[0].revisedPrice || initialList[0].estimatedPrice || "");
       setImei(initialList[0].imeiNumber || "");
       setCustomerEmail(initialList[0].customerEmail || "");
     }
 
-    // 2. Background database sync
+    // Background fetch real orders from DB
     const token = getAdminToken();
-    fetch(`/api/v1/admin/orders?t=${Date.now()}`, {
+    fetch(`/api/v1/admin/orders?limit=40`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
       .then((data) => {
-        const raw = data.data?.orders || data.orders || [];
-        if (Array.isArray(raw) && raw.length > 0) {
-          const mapped: OrderData[] = raw.map((ord: any) => ({
-            id: ord.id,
-            orderNumber: ord.orderNumber,
-            quoteId: ord.quoteId || "",
-            userId: ord.userId || "",
-            customerName: ord.user?.name || ord.customerName || "Customer",
-            customerPhone: ord.user?.phone || ord.customerPhone || "—",
-            customerEmail: ord.user?.email || ord.customerEmail || "",
-            imeiNumber: ord.imeiRecords?.[0]?.code || ord.qcReports?.[0]?.imeiNumber || ord.imeiNumber || "",
-            deviceName: ord.deviceName ||
-              (ord.quote?.variant?.model
-                ? `${ord.quote.variant.model.brand?.name || ""} ${ord.quote.variant.model.name}`.trim()
-                : "Mobile Device"),
-            addressSummary: ord.address
-              ? `${ord.address.house || ""}, ${ord.address.city || ""}, ${ord.address.state || ""} - ${ord.address.pincode || ""}`
-              : ord.addressSummary || "—",
-            pincode: ord.address?.pincode || ord.pincode || "700001",
-            pickupDate: ord.pickupDate || "Scheduled",
-            pickupTimeSlot: ord.pickupTimeSlot || "Standard Slot",
-            revisedPrice: ord.finalPrice || ord.revisedPrice || null,
-            estimatedPrice: ord.quote?.estimatedPrice || ord.estimatedPrice || 0,
-            declaredConditionSummary: ord.deviceName || "Customer Device",
-            status: ord.status || "PICKUP_SCHEDULED",
-            createdAt: ord.createdAt || new Date().toISOString(),
-            updatedAt: ord.updatedAt || new Date().toISOString(),
+        const dbOrders = data.data?.orders || data.orders;
+        if (Array.isArray(dbOrders) && dbOrders.length > 0) {
+          const mapped: OrderData[] = dbOrders.map((d: any) => ({
+            id: d.id,
+            orderNumber: d.orderNumber,
+            quoteId: d.quoteId || d.quote?.id || "",
+            userId: d.userId || d.user?.id || "",
+            pincode: d.pincode || d.address?.pincode || "—",
+            pickupDate: d.pickupDate || "—",
+            pickupTimeSlot: d.pickupTimeSlot || "10 AM - 1 PM",
+            customerName: d.user?.name || d.customerName || "Customer",
+            customerPhone: d.user?.phone || d.customerPhone || "—",
+            customerEmail: d.user?.email || d.customerEmail || "",
+            deviceName: d.deviceName || "Mobile Device",
+            estimatedPrice: d.quotedPrice || d.estimatedPrice || 0,
+            revisedPrice: d.requotedPrice || d.revisedPrice || d.quotedPrice || 0,
+            status: d.status || "PICKUP_SCHEDULED",
+            imeiNumber: d.imeiNumber || d.imeiRecords?.[0]?.code || "",
+            selectedAnswersJson: d.selectedAnswersJson || d.quote?.selectedAnswersJson,
+            breakdownJson: d.breakdownJson || d.quote?.breakdownJson,
+            priceDifferenceReason: d.priceDifferenceReason,
+            createdAt: d.createdAt,
+            updatedAt: d.updatedAt,
           }));
-
           setAllOrders(mapped);
-
-          // Update active order if selected
           if (orderIdParam) {
-            const matched = mapped.find((o) => o.orderNumber === orderIdParam || o.id === orderIdParam);
-            if (matched) {
-              setOrder(matched);
-              setRevisedPrice(matched.revisedPrice || matched.estimatedPrice || "");
-              setImei(matched.imeiNumber || "");
-              setCustomerEmail(matched.customerEmail || "");
+            const matchDb = mapped.find((o) => o.orderNumber === orderIdParam || o.id === orderIdParam);
+            if (matchDb) {
+              setOrder(matchDb);
+              setRevisedPrice(matchDb.revisedPrice || matchDb.estimatedPrice || "");
+              setImei(matchDb.imeiNumber || "");
+              setCustomerEmail(matchDb.customerEmail || "");
             }
           }
         }
@@ -139,11 +131,9 @@ function AdminInspectionsContent() {
 
     setSaving(true);
     const token = getAdminToken();
-
     const finalValuation = Number(revisedPrice) || 0;
 
     try {
-      // 1. Post inspection result to DB dedicated inspection route
       const res = await fetch(`/api/v1/admin/orders/${order.orderNumber}/inspection`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
@@ -162,7 +152,6 @@ function AdminInspectionsContent() {
         console.warn("API inspection save warn:", errorJson);
       }
 
-      // 2. Update local state & storage
       const updatedOrder: OrderData = {
         ...order,
         imeiNumber: imei.trim(),
@@ -178,16 +167,6 @@ function AdminInspectionsContent() {
 
       if (typeof window !== "undefined") {
         localStorage.setItem(`cashall_order_${order.id}`, JSON.stringify(updatedOrder));
-        localStorage.setItem(`cashall_order_${order.orderNumber}`, JSON.stringify(updatedOrder));
-
-        // Update all orders array in local storage
-        const rawLocal = JSON.parse(localStorage.getItem("cashall_all_orders") || "[]");
-        if (Array.isArray(rawLocal)) {
-          const updatedLocal = rawLocal.map((o: any) =>
-            o.orderNumber === order.orderNumber || o.id === order.id ? updatedOrder : o
-          );
-          localStorage.setItem("cashall_all_orders", JSON.stringify(updatedLocal));
-        }
       }
 
       setSaved(true);
@@ -200,277 +179,290 @@ function AdminInspectionsContent() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-900 text-white flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col lg:flex-row w-full max-w-full overflow-x-hidden font-sans">
       <AdminSidebar />
 
-      <main className="flex-1 w-full max-w-full p-4 sm:p-6 lg:p-8 space-y-6 overflow-x-hidden">
-        {/* HEADER TOOLBAR */}
-        <div className="flex items-center justify-between bg-neutral-800 p-6 rounded-3xl border border-neutral-700 shadow-xl">
-          <div>
-            <h1 className="text-2xl font-black text-yellow-400 tracking-wide font-price">
-              Doorstep Physical Inspection Console
-            </h1>
-            <p className="text-xs text-neutral-400 mt-1">
-              Verify IMEI numbers, physical device conditions, and lock revised payout offers
-            </p>
-          </div>
-        </div>
+      <div className="flex-1 flex flex-col min-w-0">
+        <AdminHeader title="Physical Inspection Console" />
 
-        {/* ACTIVE INSPECTION FORM */}
-        {order ? (
-          <div className="bg-neutral-800 border border-neutral-700 rounded-3xl p-6 shadow-2xl space-y-6">
-            <div className="flex flex-wrap items-center justify-between border-b border-neutral-700 pb-4 gap-3">
-              <div>
-                <div className="text-xs text-neutral-400 uppercase tracking-wider font-bold">Selected Device for Inspection</div>
-                <div className="text-xl font-black text-white font-price flex items-center gap-2 mt-0.5">
-                  <span>#{order.orderNumber}</span>
-                  <span className="text-yellow-400">• {order.deviceName}</span>
+        <main className="flex-1 w-full max-w-full p-4 sm:p-6 lg:p-8 space-y-6 overflow-x-hidden">
+          {/* HEADER TOOLBAR */}
+          <div className="flex items-center justify-between bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+            <div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center">
+                  <ClipboardCheck className="w-5 h-5 text-amber-700" />
                 </div>
-                <div className="text-xs text-neutral-300 mt-1">
-                  Customer: <strong className="text-white">{order.customerName}</strong> ({order.customerPhone})
-                </div>
-              </div>
-
-              <div className="text-right space-y-2">
                 <div>
-                  <div className="text-xs text-neutral-400">Initial Estimated Payout</div>
-                  <div className="text-2xl font-black text-green-400 font-price">
-                    ₹{(order.estimatedPrice || 0).toLocaleString("en-IN")}
-                  </div>
+                  <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                    Physical Inspections
+                  </h1>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Device diagnosis, IMEI verification &amp; price revisions
+                  </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setShowAuditModal(true)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-yellow-400 text-black text-xs font-black rounded-xl hover:bg-yellow-300 transition shadow-sm"
-                >
-                  <ClipboardList className="w-3.5 h-3.5" />
-                  <span>View Customer Answers (QC)</span>
-                </button>
               </div>
             </div>
-
-            <form onSubmit={handleSaveInspection} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* IMEI & HARDWARE VERIFICATION */}
-                <div className="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 space-y-4">
-                  <h3 className="text-xs font-bold text-yellow-400 uppercase tracking-wider flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>1. Hardware & IMEI Verification</span>
-                  </h3>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-300 mb-1">
-                      15-Digit Device IMEI / Serial Number *
-                    </label>
-                    <input
-                      type="text"
-                      value={imei}
-                      onChange={(e) => setImei(e.target.value)}
-                      required
-                      placeholder="e.g. 867500123456789"
-                      className="w-full px-4 py-2.5 text-xs font-mono font-bold bg-neutral-800 text-white rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-300 mb-1">
-                      Customer Email Address (for Bill & Tax Invoice)
-                    </label>
-                    <input
-                      type="email"
-                      value={customerEmail}
-                      onChange={(e) => setCustomerEmail(e.target.value)}
-                      placeholder="e.g. customer@gmail.com"
-                      className="w-full px-4 py-2.5 text-xs font-bold bg-neutral-800 text-white rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-semibold text-neutral-400 mb-1">Display Condition</label>
-                      <select
-                        value={screenFinding}
-                        onChange={(e) => setScreenFinding(e.target.value)}
-                        className="w-full px-3 py-2 text-xs bg-neutral-800 text-white rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400"
-                      >
-                        <option value="Flawless Screen">Flawless Screen</option>
-                        <option value="Minor Scratches">Minor Scratches</option>
-                        <option value="Heavy Scratches">Heavy Scratches</option>
-                        <option value="Cracked Screen / Display Glass">Cracked Screen / Display Glass</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-[11px] font-semibold text-neutral-400 mb-1">Body Condition</label>
-                      <select
-                        value={bodyFinding}
-                        onChange={(e) => setBodyFinding(e.target.value)}
-                        className="w-full px-3 py-2 text-xs bg-neutral-800 text-white rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400"
-                      >
-                        <option value="Flawless Body">Flawless Body</option>
-                        <option value="Minor Dents / Scratches">Minor Dents / Scratches</option>
-                        <option value="Heavy Dents / Bent Frame">Heavy Dents / Bent Frame</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* PRICE REVISION & FINAL OFFER */}
-                <div className="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 space-y-4">
-                  <h3 className="text-xs font-bold text-yellow-400 uppercase tracking-wider flex items-center gap-2">
-                    <ClipboardCheck className="w-4 h-4" />
-                    <span>2. Rate Revision & Settled Payout</span>
-                  </h3>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-300 mb-1">
-                      Final Agreed Purchase Price Payout (₹) *
-                    </label>
-                    <input
-                      type="number"
-                      placeholder="e.g. 25000"
-                      value={revisedPrice}
-                      onChange={(e) => setRevisedPrice(e.target.value)}
-                      required
-                      min={0}
-                      className="w-full px-4 py-2.5 text-lg font-black text-green-400 bg-neutral-800 rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400 font-price placeholder-neutral-600"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-semibold text-neutral-400 mb-1">
-                      Reason for Price Revision (Optional)
-                    </label>
-                    <input
-                      type="text"
-                      value={reason}
-                      onChange={(e) => setReason(e.target.value)}
-                      placeholder="e.g. Minor body scratch found during doorstep inspection"
-                      className="w-full px-3 py-2 text-xs bg-neutral-800 text-white rounded-xl border border-neutral-700 focus:outline-none focus:border-yellow-400"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* SAVE BUTTON & ALERT */}
-              <div className="flex items-center justify-between pt-2 border-t border-neutral-700">
-                {saved ? (
-                  <div className="flex items-center gap-2 text-xs font-bold text-green-400 bg-green-950/60 border border-green-700 px-4 py-2 rounded-xl">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Inspection Report Saved & Payout Locked at ₹{revisedPrice.toLocaleString("en-IN")}!</span>
-                  </div>
-                ) : (
-                  <div className="text-xs text-neutral-400">
-                    Submitting locks the final payout price and marks inspection completed.
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="flex items-center gap-2 text-xs font-black text-black bg-yellow-400 hover:bg-yellow-300 px-6 py-2.5 rounded-xl transition shadow-lg disabled:opacity-60"
-                >
-                  {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-                  <span>SAVE PHYSICAL INSPECTION</span>
-                </button>
-              </div>
-            </form>
-          </div>
-        ) : null}
-
-        {/* ALL ORDERS CARDS FOR QUICK INSPECTION SELECTION */}
-        <div className="bg-neutral-800 border border-neutral-700 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl space-y-4">
-          <div className="flex items-center justify-between border-b border-neutral-700 pb-3">
-            <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-              Doorstep Physical Inspection Log ({allOrders.length} Orders)
-            </h2>
           </div>
 
-          <div className="space-y-3">
-            {allOrders.map((ord) => (
-              <div
-                key={ord.id}
-                className={`bg-neutral-900 border ${
-                  order?.id === ord.id ? "border-yellow-400/80 bg-neutral-850" : "border-neutral-800 hover:border-neutral-700"
-                } rounded-2xl p-4 transition shadow-md space-y-3`}
-              >
-                {/* TOP ROW: ID + STATUS */}
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-mono font-black text-yellow-400 text-sm">
-                    #{ord.orderNumber}
-                  </span>
-                  <span
-                    className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider ${
-                      ["COMPLETED", "INSPECTION_COMPLETED"].includes(ord.status)
-                        ? "bg-green-950 text-green-400 border border-green-800"
-                        : "bg-amber-950 text-yellow-400 border border-yellow-800"
-                    }`}
-                  >
-                    {ord.status.replace(/_/g, " ")}
-                  </span>
-                </div>
-
-                {/* DEVICE & PAYOUT ROW */}
-                <div className="flex items-center justify-between gap-2 bg-black/40 border border-neutral-800/80 rounded-xl p-3">
-                  <div className="min-w-0">
-                    <span className="text-[11px] text-neutral-400 block font-semibold">Device</span>
-                    <span className="font-bold text-white text-xs sm:text-sm truncate block">
-                      {ord.deviceName}
-                    </span>
+          {/* ACTIVE INSPECTION FORM */}
+          {order ? (
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-6">
+              <div className="flex flex-wrap items-center justify-between border-b border-slate-100 pb-4 gap-3">
+                <div>
+                  <div className="text-xs text-slate-500 uppercase tracking-wider font-bold">Selected Device for Inspection</div>
+                  <div className="text-xl font-black text-slate-900 flex items-center gap-2 mt-0.5">
+                    <span>#{order.orderNumber}</span>
+                    <span className="text-amber-700">• {order.deviceName}</span>
                   </div>
-                  <div className="text-right shrink-0">
-                    <span className="text-[10px] text-neutral-400 block font-semibold">Settled Payout</span>
-                    <span className="font-black text-green-400 font-price text-sm sm:text-base">
-                      ₹{(ord.revisedPrice || ord.estimatedPrice || 0).toLocaleString("en-IN")}
-                    </span>
+                  <div className="text-xs text-slate-600 mt-1">
+                    Customer: <strong className="text-slate-900">{order.customerName}</strong> ({order.customerPhone})
                   </div>
                 </div>
 
-                {/* CUSTOMER & ACTION */}
-                <div className="flex items-center justify-between gap-3 pt-1">
-                  <div className="min-w-0">
-                    <div className="font-bold text-white text-xs truncate">{ord.customerName}</div>
-                    {ord.customerPhone && (
-                      <a
-                        href={`tel:${ord.customerPhone}`}
-                        className="text-[11px] text-neutral-400 hover:text-yellow-400 font-mono transition"
-                      >
-                        {ord.customerPhone}
-                      </a>
-                    )}
+                <div className="text-right space-y-2">
+                  <div>
+                    <div className="text-xs text-slate-500">Initial Estimated Payout</div>
+                    <div className="text-2xl font-black text-emerald-700 font-price">
+                      ₹{(order.estimatedPrice || 0).toLocaleString("en-IN")}
+                    </div>
                   </div>
-
                   <button
-                    onClick={() => handleSelectOrder(ord)}
-                    className="inline-flex items-center gap-1.5 text-xs font-black text-black bg-yellow-400 hover:bg-yellow-300 px-4 py-2 rounded-xl transition shadow-yellowGlow shrink-0"
+                    type="button"
+                    onClick={() => setShowAuditModal(true)}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-400 text-amber-950 text-xs font-black rounded-xl hover:bg-amber-500 border border-amber-500 transition shadow-2xs"
                   >
-                    <span>Inspect</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ClipboardList className="w-3.5 h-3.5" />
+                    <span>View Customer Answers (QC)</span>
                   </button>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* CUSTOMER ANSWERS AUDIT MODAL */}
-        <CustomerAnswersModal
-          isOpen={showAuditModal}
-          onClose={() => setShowAuditModal(false)}
-          orderOrQuote={order}
-        />
-      </main>
+              <form onSubmit={handleSaveInspection} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* IMEI & HARDWARE VERIFICATION */}
+                  <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-4">
+                    <h3 className="text-xs font-bold text-amber-800 uppercase tracking-wider flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-amber-600" />
+                      <span>1. Hardware & IMEI Verification</span>
+                    </h3>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">
+                        15-Digit Device IMEI / Serial Number *
+                      </label>
+                      <input
+                        type="text"
+                        value={imei}
+                        onChange={(e) => setImei(e.target.value)}
+                        required
+                        placeholder="e.g. 867500123456789"
+                        className="w-full px-4 py-2.5 text-xs font-mono font-bold bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">
+                        Customer Email Address (for Bill & Tax Invoice)
+                      </label>
+                      <input
+                        type="email"
+                        value={customerEmail}
+                        onChange={(e) => setCustomerEmail(e.target.value)}
+                        placeholder="e.g. customer@gmail.com"
+                        className="w-full px-4 py-2.5 text-xs font-bold bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-[11px] font-semibold text-slate-600 mb-1">Display Condition</label>
+                        <select
+                          value={screenFinding}
+                          onChange={(e) => setScreenFinding(e.target.value)}
+                          className="w-full px-3 py-2 text-xs bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400"
+                        >
+                          <option value="Flawless Screen">Flawless Screen</option>
+                          <option value="Minor Scratches">Minor Scratches</option>
+                          <option value="Heavy Scratches">Heavy Scratches</option>
+                          <option value="Cracked Screen / Display Glass">Cracked Screen / Display Glass</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-[11px] font-semibold text-slate-600 mb-1">Body Condition</label>
+                        <select
+                          value={bodyFinding}
+                          onChange={(e) => setBodyFinding(e.target.value)}
+                          className="w-full px-3 py-2 text-xs bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400"
+                        >
+                          <option value="Flawless Body">Flawless Body</option>
+                          <option value="Minor Dents / Scratches">Minor Dents / Scratches</option>
+                          <option value="Heavy Dents / Bent Frame">Heavy Dents / Bent Frame</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* PRICE REVISION & FINAL OFFER */}
+                  <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-4">
+                    <h3 className="text-xs font-bold text-amber-800 uppercase tracking-wider flex items-center gap-2">
+                      <ClipboardCheck className="w-4 h-4 text-amber-600" />
+                      <span>2. Rate Revision & Settled Payout</span>
+                    </h3>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">
+                        Final Agreed Purchase Price Payout (₹) *
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="e.g. 25000"
+                        value={revisedPrice}
+                        onChange={(e) => setRevisedPrice(e.target.value)}
+                        required
+                        min={0}
+                        className="w-full px-4 py-2.5 text-lg font-black text-emerald-700 bg-white rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400 font-price placeholder-slate-400"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                        Reason for Price Revision (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        value={reason}
+                        onChange={(e) => setReason(e.target.value)}
+                        placeholder="e.g. Minor body scratch found during doorstep inspection"
+                        className="w-full px-3 py-2 text-xs bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* SAVE BUTTON & ALERT */}
+                <div className="flex items-center justify-between pt-2 border-t border-slate-100">
+                  {saved ? (
+                    <div className="flex items-center gap-2 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 px-4 py-2 rounded-xl">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      <span>Inspection Report Saved & Payout Locked at ₹{Number(revisedPrice).toLocaleString("en-IN")}!</span>
+                    </div>
+                  ) : (
+                    <div className="text-xs text-slate-500">
+                      Submitting locks the final payout price and marks inspection completed.
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={saving}
+                    className="flex items-center gap-2 text-xs font-black text-amber-950 bg-amber-400 hover:bg-amber-500 px-6 py-2.5 rounded-xl border border-amber-500 transition shadow-xs disabled:opacity-60"
+                  >
+                    {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+                    <span>SAVE PHYSICAL INSPECTION</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          ) : null}
+
+          {/* ALL ORDERS CARDS FOR QUICK INSPECTION SELECTION */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+                Doorstep Physical Inspection Log ({allOrders.length} Orders)
+              </h2>
+            </div>
+
+            <div className="space-y-3">
+              {allOrders.map((ord) => (
+                <div
+                  key={ord.id}
+                  className={`border rounded-xl p-4 transition shadow-2xs space-y-3 ${
+                    order?.id === ord.id ? "border-amber-400 bg-amber-50/40" : "bg-slate-50 border-slate-200 hover:border-amber-300 hover:bg-white"
+                  }`}
+                >
+                  {/* TOP ROW: ID + STATUS */}
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-mono font-black text-amber-800 text-sm">
+                      #{ord.orderNumber}
+                    </span>
+                    <span
+                      className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border ${
+                        ["COMPLETED", "INSPECTION_COMPLETED"].includes(ord.status)
+                          ? "bg-emerald-50 text-emerald-800 border-emerald-300"
+                          : "bg-amber-100 text-amber-900 border-amber-300"
+                      }`}
+                    >
+                      {ord.status.replace(/_/g, " ")}
+                    </span>
+                  </div>
+
+                  {/* DEVICE & PAYOUT ROW */}
+                  <div className="flex items-center justify-between gap-2 bg-white border border-slate-200 rounded-xl p-3">
+                    <div className="min-w-0">
+                      <span className="text-[11px] text-slate-500 block font-semibold">Device</span>
+                      <span className="font-bold text-slate-900 text-xs sm:text-sm truncate block">
+                        {ord.deviceName}
+                      </span>
+                    </div>
+                    <div className="text-right shrink-0">
+                      <span className="text-[10px] text-slate-500 block font-semibold">Settled Payout</span>
+                      <span className="font-black text-emerald-700 font-price text-sm sm:text-base">
+                        ₹{(ord.revisedPrice || ord.estimatedPrice || 0).toLocaleString("en-IN")}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* CUSTOMER & ACTION */}
+                  <div className="flex items-center justify-between gap-3 pt-1">
+                    <div className="min-w-0">
+                      <div className="font-bold text-slate-900 text-xs truncate">{ord.customerName}</div>
+                      {ord.customerPhone && (
+                        <a
+                          href={`tel:${ord.customerPhone}`}
+                          className="text-[11px] text-slate-500 hover:text-amber-800 font-mono transition"
+                        >
+                          {ord.customerPhone}
+                        </a>
+                      )}
+                    </div>
+
+                    <button
+                      onClick={() => handleSelectOrder(ord)}
+                      className="inline-flex items-center gap-1.5 text-xs font-black text-amber-950 bg-amber-400 hover:bg-amber-500 px-4 py-2 rounded-xl border border-amber-500 transition shadow-2xs shrink-0"
+                    >
+                      <span>Inspect</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CUSTOMER ANSWERS AUDIT MODAL */}
+          <CustomerAnswersModal
+            isOpen={showAuditModal}
+            onClose={() => setShowAuditModal(false)}
+            orderOrQuote={order}
+          />
+        </main>
+      </div>
     </div>
   );
 }
 
 export default function AdminInspectionsPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-neutral-900 flex items-center justify-center text-white">
-        <Loader2 className="w-6 h-6 animate-spin text-yellow-400" />
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-slate-50 flex items-center justify-center text-slate-900">
+          <Loader2 className="w-6 h-6 animate-spin text-amber-500" />
+        </div>
+      }
+    >
       <AdminInspectionsContent />
     </Suspense>
   );

@@ -4,6 +4,51 @@ import { verifyAuthToken, requireRole } from "@/lib/middlewares/auth";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/utils/AppError";
 
+export const dynamic = "force-dynamic";
+
+export const GET = apiWrapper(async (req: NextRequest) => {
+  const [brands, models, variants] = await Promise.all([
+    prisma.brand.findMany({
+      where: { deletedAt: null },
+      orderBy: { sortOrder: "asc" },
+      include: {
+        _count: { select: { models: true } },
+      },
+    }),
+    prisma.deviceModel.findMany({
+      where: { deletedAt: null },
+      orderBy: { releaseYear: "desc" },
+      take: 200,
+      include: {
+        brand: { select: { name: true, slug: true } },
+        _count: { select: { variants: true } },
+      },
+    }),
+    prisma.deviceVariant.findMany({
+      where: { deletedAt: null },
+      orderBy: { createdAt: "desc" },
+      take: 200,
+      include: {
+        model: {
+          select: {
+            name: true,
+            brand: { select: { name: true } },
+          },
+        },
+      },
+    }),
+  ]);
+
+  return NextResponse.json({
+    success: true,
+    data: {
+      brands,
+      models,
+      variants,
+    },
+  });
+});
+
 export const POST = apiWrapper(async (req: NextRequest) => {
   const decodedUser = await verifyAuthToken(req);
   requireRole(["ADMIN", "SUPER_ADMIN"], decodedUser.role);
