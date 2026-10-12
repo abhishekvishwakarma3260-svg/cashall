@@ -123,6 +123,25 @@ export function Hero() {
 
   const slide = activeSlides[currentSlide] || activeSlides[0];
 
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diffX) > 40) {
+      if (diffX > 0) {
+        setCurrentSlide((prev) => (prev + 1) % activeSlides.length);
+      } else {
+        setCurrentSlide((prev) => (prev === 0 ? activeSlides.length - 1 : prev - 1));
+      }
+    }
+    touchStartX.current = null;
+  };
+
   return (
     <section className="relative bg-stitch-canvas text-slate-900 pt-4 sm:pt-6 pb-8 sm:pb-12 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,12 +153,14 @@ export function Hero() {
           className="relative overflow-hidden rounded-3xl border border-slate-900/90 bg-slate-950 text-white shadow-2xl"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
-          <div className="relative p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+          <div className="relative p-5 sm:p-8 md:p-10 pb-9 sm:pb-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
             {/* AMBIENT GLOW */}
             <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-brand-yellow/10 blur-3xl pointer-events-none" />
 
-            <div className="max-w-xl space-y-3 z-10">
+            <div className="max-w-xl space-y-3 z-10 text-left w-full md:w-auto">
               <p className="text-[11px] font-bold text-brand-yellow uppercase tracking-wider flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                 <span>{slide.badge}</span>
@@ -177,32 +198,48 @@ export function Hero() {
               </div>
             </div>
 
-            {/* VISUAL BADGE & PRODUCT IMAGE */}
-            <div className="hidden lg:flex flex-col items-center justify-center shrink-0 relative z-10">
-              <div className="relative w-56 h-56 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl group">
+            {/* VISUAL BADGE & PRODUCT IMAGE (VISIBLE ON MOBILE & DESKTOP) */}
+            <div className="flex flex-col items-center justify-center shrink-0 relative z-10 w-full md:w-auto mt-2 md:mt-0">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl group">
                 <Image
                   src={slide.image}
                   alt={slide.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="240px"
+                  sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
                   priority
                 />
               </div>
+            </div>
+
+            {/* SLIDE INDICATOR PILLS / DOTS */}
+            <div className="absolute bottom-2.5 sm:bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
+              {activeSlides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  className={`transition-all duration-300 rounded-full cursor-pointer ${
+                    currentSlide === idx
+                      ? "w-6 h-1.5 bg-brand-yellow"
+                      : "w-1.5 h-1.5 bg-slate-600 hover:bg-slate-400"
+                  }`}
+                />
+              ))}
             </div>
 
             {/* SLIDE NAVIGATION CONTROLS */}
             <button
               onClick={() => setCurrentSlide((prev) => (prev === 0 ? activeSlides.length - 1 : prev - 1))}
               aria-label="Previous slide"
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
+              className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={() => setCurrentSlide((prev) => (prev + 1) % activeSlides.length)}
               aria-label="Next slide"
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
+              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-900/80 border border-slate-700 text-white hover:bg-black transition-all flex items-center justify-center cursor-pointer z-20"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
