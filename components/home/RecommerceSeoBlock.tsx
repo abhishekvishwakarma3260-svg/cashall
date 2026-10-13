@@ -193,7 +193,7 @@ export function RecommerceSeoBlock() {
                 </p>
               </div>
               <Link
-                href="/sell/laptop"
+                href="/sell-old-laptop"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-emerald-800 hover:text-emerald-950 pt-2"
               >
                 <span>Sell Used Laptop Online</span>
@@ -319,7 +319,7 @@ export function RecommerceSeoBlock() {
                   { label: "Second Hand Mobile Price Check", href: "/sell-used-phone" },
                   { label: "Phone Valuation Tool Online", href: "/sell-used-phone" },
                   { label: "iPhone Resale Value", href: "/sell-old-mobile-phone/apple" },
-                  { label: "Laptop Resale Calculator", href: "/sell/laptop" },
+                  { label: "Laptop Resale Calculator", href: "/sell-old-laptop" },
                   { label: "Instant Guaranteed Quote", href: "/sell-used-phone" },
                 ].map((item, idx) => (
                   <Link key={idx} href={item.href}>{item.label}</Link>

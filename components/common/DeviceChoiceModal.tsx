@@ -61,7 +61,7 @@ export function DeviceChoiceModal({ isOpen, onClose }: DeviceChoiceModalProps) {
 
           {/* LAPTOP CARD */}
           <Link
-            href="/sell/laptop"
+            href="/sell-old-laptop"
             onClick={onClose}
             className="bg-brand-bg rounded-2xl p-5 border-2 border-brand-yellow/60 hover:border-brand-yellow hover:bg-white shadow-subtleCard hover:shadow-yellowGlow transition-all duration-300 group text-left flex flex-col justify-between"
           >
@@ -84,7 +84,7 @@ export function DeviceChoiceModal({ isOpen, onClose }: DeviceChoiceModalProps) {
 
           {/* TABLET CARD */}
           <Link
-            href="/sell/tablet"
+            href="/sell-old-tablet"
             onClick={onClose}
             className="bg-brand-bg rounded-2xl p-5 border-2 border-brand-yellow/60 hover:border-brand-yellow hover:bg-white shadow-subtleCard hover:shadow-yellowGlow transition-all duration-300 group text-left flex flex-col justify-between"
           >

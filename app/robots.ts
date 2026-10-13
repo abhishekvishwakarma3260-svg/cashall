@@ -42,24 +42,42 @@ export default function robots(): MetadataRoute.Robots {
     "/sell-old-phone",
     "/sell-old-mobile-phone",
     "/sell-old-mobile-phone/",
+    "/sell-old-laptop",
+    "/sell-old-laptop/",
+    "/sell-old-tablet",
+    "/sell-old-tablet/",
     "/sell/mobile/",
     "/sell/laptop/",
     "/sell/tablet/",
+    "/rent/",
     "/blog/",
     "/news/",
     "/articles/",
     "/compare/",
     "/about",
+    "/about-us",
     "/contact",
     "/faq",
     "/reviews",
     "/sitemap.xml",
   ];
 
-  const blockedBots = [
+  // AI & Answer Engine Bots (AEO & GEO Optimization)
+  // Explicitly welcomed to index CashALL recommerce valuations, blogs, and FAQs for citation in LLM answers
+  const aiSearchBots = [
+    "GPTBot",
+    "OAI-SearchBot",
+    "PerplexityBot",
+    "ClaudeBot",
+    "Google-Extended",
+    "Applebot-Extended",
+    "Bingbot",
+  ];
+
+  // Aggressive commercial scraper bots that burden bandwidth without attribution
+  const blockedScrapers = [
     "Bytespider",
     "CCBot",
-    "Amazonbot",
     "PetalBot",
     "SemrushBot",
     "AhrefsBot",
@@ -68,20 +86,27 @@ export default function robots(): MetadataRoute.Robots {
     "Diffbot",
     "Timpibot",
     "Webzio-Extended",
-    "Claude-Web",
     "BLEXBot",
     "DataForSeoBot",
   ];
 
   return {
     rules: [
+      // General web crawlers (Googlebot, Bing, etc.)
       {
         userAgent: "*",
         allow: allowedPaths,
         disallow: disallowedPaths,
-        crawlDelay: 10,
       },
-      ...blockedBots.map((bot) => ({
+      // AI Search Bots (Perplexity, ChatGPT, Claude, Gemini, Apple Intelligence)
+      // Maximum allowance for AEO / GEO citation indexing
+      ...aiSearchBots.map((bot) => ({
+        userAgent: bot,
+        allow: allowedPaths,
+        disallow: disallowedPaths,
+      })),
+      // Block unapproved scrapers
+      ...blockedScrapers.map((bot) => ({
         userAgent: bot,
         disallow: "/",
       })),

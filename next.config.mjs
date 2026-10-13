@@ -385,6 +385,68 @@ const nextConfig = {
         destination: '/sell-old-mobile-phone/:brand/:model/assess',
         permanent: true,
       },
+      // Laptop Permanent Redirects (Competitor Cashify & CashKR alignment)
+      {
+        source: '/sell-old-laptops',
+        destination: '/sell-old-laptop',
+        permanent: true,
+      },
+      {
+        source: '/sell-old-laptops/:path*',
+        destination: '/sell-old-laptop/:path*',
+        permanent: true,
+      },
+      {
+        source: '/sell/laptop',
+        destination: '/sell-old-laptop',
+        permanent: true,
+      },
+      {
+        source: '/sell/laptop/:brand',
+        destination: '/sell-old-laptop/:brand',
+        permanent: true,
+      },
+      {
+        source: '/sell/laptop/:brand/:model',
+        destination: '/sell-old-laptop/:brand/:model',
+        permanent: true,
+      },
+      {
+        source: '/sell/laptop/:brand/:model/assess',
+        destination: '/sell-old-laptop/:brand/:model/assess',
+        permanent: true,
+      },
+      // Tablet Permanent Redirects (Competitor Cashify & CashKR alignment)
+      {
+        source: '/sell-old-tablets',
+        destination: '/sell-old-tablet',
+        permanent: true,
+      },
+      {
+        source: '/sell-old-tablets/:path*',
+        destination: '/sell-old-tablet/:path*',
+        permanent: true,
+      },
+      {
+        source: '/sell/tablet',
+        destination: '/sell-old-tablet',
+        permanent: true,
+      },
+      {
+        source: '/sell/tablet/:brand',
+        destination: '/sell-old-tablet/:brand',
+        permanent: true,
+      },
+      {
+        source: '/sell/tablet/:brand/:model',
+        destination: '/sell-old-tablet/:brand/:model',
+        permanent: true,
+      },
+      {
+        source: '/sell/tablet/:brand/:model/assess',
+        destination: '/sell-old-tablet/:brand/:model/assess',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

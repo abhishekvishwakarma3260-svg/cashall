@@ -398,14 +398,14 @@ export function Header() {
               Sell Phone
             </Link>
             <Link
-              href="/sell/laptop"
+              href="/sell-old-laptop"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-base font-semibold text-gray-200 hover:text-brand-yellow"
             >
               Sell Laptop
             </Link>
             <Link
-              href="/sell/tablet"
+              href="/sell-old-tablet"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-base font-semibold text-gray-200 hover:text-brand-yellow"
             >

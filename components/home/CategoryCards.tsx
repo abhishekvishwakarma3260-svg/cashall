@@ -63,7 +63,7 @@ export function CategoryCards() {
       icon: Laptop,
       status: "AVAILABLE",
       available: true,
-      href: "/sell/laptop",
+      href: "/sell-old-laptop",
       btnText: "Sell Laptop",
     },
     {
@@ -74,7 +74,7 @@ export function CategoryCards() {
       icon: Tablet,
       status: "AVAILABLE",
       available: true,
-      href: "/sell/tablet",
+      href: "/sell-old-tablet",
       btnText: "Sell Tablet",
     },
   ];

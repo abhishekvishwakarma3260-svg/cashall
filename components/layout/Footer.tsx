@@ -195,12 +195,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/sell/laptop" className="hover:text-brand-yellow transition-colors">
+                <Link href="/sell-old-laptop" className="hover:text-brand-yellow transition-colors">
                   Sell Laptop
                 </Link>
               </li>
               <li>
-                <Link href="/sell/tablet" className="hover:text-brand-yellow transition-colors">
+                <Link href="/sell-old-tablet" className="hover:text-brand-yellow transition-colors">
                   Sell Tablet / iPad
                 </Link>
               </li>

@@ -90,8 +90,8 @@ export function VideoPlayerModal({ review, isOpen, onClose }: VideoPlayerModalPr
     review.deviceCategory === "MOBILE"
       ? `/sell-old-mobile-phone/${review.brandSlug}/${review.modelSlug}`
       : review.deviceCategory === "LAPTOP"
-      ? `/sell/laptop`
-      : `/sell/tablet`;
+      ? `/sell-old-laptop`
+      : `/sell-old-tablet`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
