@@ -232,7 +232,7 @@ export default function SellOldLaptopPage() {
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Top Value</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Cashify +1% Payout</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Instant Locked Valuation</div>
                     </div>
                   </div>
 
@@ -351,19 +351,20 @@ export default function SellOldLaptopPage() {
                   {/* BACKGROUND YELLOW GLOW */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-300/40 via-yellow-300/30 to-amber-100/50 rounded-3xl blur-2xl -z-10" />
 
-                  {/* HERO SHOWCASE CARD (YELLOW THEMED WITH REQUESTED MACBOOK M5 IMAGE) */}
+                  {/* HERO SHOWCASE CARD (APPLE MACBOOK PRO M5 SHOWCASE) */}
                   <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border-2 border-brand-yellow/70 relative overflow-hidden flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-2">
                       <span className="px-3 py-1 rounded-full bg-brand-yellow text-brand-black font-black text-[11px] uppercase tracking-wider">
-                        Highest Laptop Value
+                        Premium Laptop Buyback
                       </span>
-                      <span className="text-xs font-bold text-neutral-500">
-                        Cashify +1% Payout
-                      </span>
+                      <div className="flex items-center gap-1.5 text-xs text-neutral-600 font-bold">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                        <span>Pickup in 2-4 Hours</span>
+                      </div>
                     </div>
 
                     <h3 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight leading-tight mt-1">
-                      MacBook &amp; Premium Laptops
+                      Apple MacBook Pro (M4 / M5)
                     </h3>
                     <p className="text-xs text-neutral-500 mt-1 leading-relaxed">
                       Instant quote in 60s with free doorstep evaluation &amp; instant bank transfer.
@@ -381,16 +382,16 @@ export default function SellOldLaptopPage() {
                     {/* MINI SPEC COMPARISON TABLE */}
                     <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 text-xs">
                       <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">Apple MacBook Pro 2024</span>
+                        <span className="font-semibold">MacBook Pro 16" (M4 Pro / M5)</span>
+                        <span className="font-black text-brand-black">Up to ₹1,84,000</span>
+                      </div>
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">MacBook Pro 14" (M4 / M5)</span>
                         <span className="font-black text-brand-black">Up to ₹1,42,000</span>
                       </div>
                       <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">Dell XPS 15 (Core i9 / 32GB)</span>
-                        <span className="font-black text-brand-black">Up to ₹72,800</span>
-                      </div>
-                      <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">MacBook Air 2025</span>
-                        <span className="font-black text-brand-black">Up to ₹71,500</span>
+                        <span className="font-semibold">MacBook Air 15" (M3 / M4)</span>
+                        <span className="font-black text-brand-black">Up to ₹78,500</span>
                       </div>
                     </div>
 

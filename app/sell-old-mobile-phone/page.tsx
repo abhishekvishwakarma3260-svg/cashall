@@ -227,7 +227,7 @@ export default function SellOldMobilePhonePage() {
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Best Prices</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Cashify +1% Payout</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Instant Locked Valuation</div>
                     </div>
                   </div>
 
@@ -346,19 +346,20 @@ export default function SellOldMobilePhonePage() {
                   {/* BACKGROUND YELLOW GLOW */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-300/40 via-yellow-300/30 to-amber-100/50 rounded-3xl blur-2xl -z-10" />
 
-                  {/* HERO SHOWCASE CARD (YELLOW THEMED WITH REQUESTED IPHONE IMAGE) */}
+                  {/* HERO SHOWCASE CARD (APPLE IPHONE 18 PRO MAX SHOWCASE) */}
                   <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border-2 border-brand-yellow/70 relative overflow-hidden flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-2">
                       <span className="px-3 py-1 rounded-full bg-brand-yellow text-brand-black font-black text-[11px] uppercase tracking-wider">
-                        Highest Value Guarantee
+                        Premium Buyback
                       </span>
-                      <span className="text-xs font-bold text-neutral-500">
-                        Cashify +1% Payout
-                      </span>
+                      <div className="flex items-center gap-1.5 text-xs text-neutral-600 font-bold">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                        <span>Pickup in 2-4 Hours</span>
+                      </div>
                     </div>
 
                     <h3 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight leading-tight mt-1">
-                      Sell iPhone 16 & Galaxy S24
+                      Apple iPhone 18 Pro Max
                     </h3>
                     <p className="text-xs text-neutral-500 mt-1 leading-relaxed">
                       Instant quote in 60s with free doorstep evaluation & instant bank transfer.
@@ -373,19 +374,19 @@ export default function SellOldMobilePhonePage() {
                       />
                     </div>
 
-                    {/* MINI SPEC COMPARISON TABLE (CASHIFY +1% VERIFIED RATES) */}
+                    {/* MINI SPEC COMPARISON TABLE (IPHONE 18 PRO MAX PRICING) */}
                     <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 text-xs">
                       <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">Apple iPhone 16 Pro Max</span>
-                        <span className="font-black text-brand-black">Up to ₹91,300</span>
+                        <span className="font-semibold">iPhone 18 Pro Max (1 TB)</span>
+                        <span className="font-black text-brand-black">Up to ₹1,46,450</span>
                       </div>
                       <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">Samsung Galaxy S24 Ultra</span>
-                        <span className="font-black text-brand-black">Up to ₹67,200</span>
+                        <span className="font-semibold">iPhone 18 Pro Max (512 GB)</span>
+                        <span className="font-black text-brand-black">Up to ₹1,38,370</span>
                       </div>
                       <div className="flex items-center justify-between text-neutral-800">
-                        <span className="font-semibold">Apple iPhone 16 (128 GB)</span>
-                        <span className="font-black text-brand-black">Up to ₹45,000</span>
+                        <span className="font-semibold">iPhone 18 Pro Max (256 GB)</span>
+                        <span className="font-black text-brand-black">Up to ₹1,31,300</span>
                       </div>
                     </div>
 

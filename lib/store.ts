@@ -143,7 +143,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-apple",
     "name": "Apple",
     "slug": "apple",
-    "logoUrl": "/api/v1/catalog/brand-logo/apple",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/2e7cdc22-5a5f.jpg?w=200",
     "category": "ALL",
     "sortOrder": 1,
     "active": true
@@ -152,7 +152,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-samsung",
     "name": "Samsung",
     "slug": "samsung",
-    "logoUrl": "/api/v1/catalog/brand-logo/samsung",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/406a512d-e8dd.jpg?w=200",
     "category": "ALL",
     "sortOrder": 2,
     "active": true
@@ -161,7 +161,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-oneplus",
     "name": "OnePlus",
     "slug": "oneplus",
-    "logoUrl": "/api/v1/catalog/brand-logo/oneplus",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/dfb6c340-010f.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 3,
     "active": true
@@ -170,7 +170,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-xiaomi",
     "name": "Xiaomi",
     "slug": "xiaomi",
-    "logoUrl": "/api/v1/catalog/brand-logo/xiaomi",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/cb96df6e-080f.jpg?w=200",
     "category": "ALL",
     "sortOrder": 4,
     "active": true
@@ -179,7 +179,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-vivo",
     "name": "Vivo",
     "slug": "vivo",
-    "logoUrl": "/api/v1/catalog/brand-logo/vivo",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/20922c34-8afc.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 5,
     "active": true
@@ -188,7 +188,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-oppo",
     "name": "OPPO",
     "slug": "oppo",
-    "logoUrl": "/api/v1/catalog/brand-logo/oppo",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/ac5c9a7b-76b5.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 6,
     "active": true
@@ -197,7 +197,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-realme",
     "name": "Realme",
     "slug": "realme",
-    "logoUrl": "/api/v1/catalog/brand-logo/realme",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/0124cc45-3a6c.jpg?w=200",
     "category": "ALL",
     "sortOrder": 7,
     "active": true
@@ -206,7 +206,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-poco",
     "name": "POCO",
     "slug": "poco",
-    "logoUrl": "/api/v1/catalog/brand-logo/poco",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/3e072dc2-6d7b.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 8,
     "active": true
@@ -215,7 +215,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-motorola",
     "name": "Motorola",
     "slug": "motorola",
-    "logoUrl": "/api/v1/catalog/brand-logo/motorola",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/1dcd7fda-0141.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 9,
     "active": true
@@ -224,7 +224,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-google",
     "name": "Google",
     "slug": "google",
-    "logoUrl": "/api/v1/catalog/brand-logo/google",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/dacc50a2-77a9.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 10,
     "active": true
@@ -233,7 +233,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-iqoo",
     "name": "iQOO",
     "slug": "iqoo",
-    "logoUrl": "/api/v1/catalog/brand-logo/iqoo",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/e1b13cbc-ef06.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 11,
     "active": true
@@ -242,7 +242,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-nothing",
     "name": "Nothing",
     "slug": "nothing",
-    "logoUrl": "/api/v1/catalog/brand-logo/nothing",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/06bc74db-4d38.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 12,
     "active": true
@@ -251,7 +251,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-honor",
     "name": "Honor",
     "slug": "honor",
-    "logoUrl": "/api/v1/catalog/brand-logo/honor",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/cfeaabff-69bf.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 13,
     "active": true
@@ -260,7 +260,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-infinix",
     "name": "Infinix",
     "slug": "infinix",
-    "logoUrl": "/api/v1/catalog/brand-logo/infinix",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/738cb1f1-7ddf.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 14,
     "active": true
@@ -269,7 +269,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-tecno",
     "name": "Tecno",
     "slug": "tecno",
-    "logoUrl": "/api/v1/catalog/brand-logo/tecno",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/55424ad4-0400.jpg?w=200",
     "category": "MOBILE",
     "sortOrder": 15,
     "active": true
@@ -278,7 +278,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-nokia",
     "name": "Nokia",
     "slug": "nokia",
-    "logoUrl": "/api/v1/catalog/brand-logo/nokia",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/fef4e5ae-6507.jpg?w=200",
     "category": "ALL",
     "sortOrder": 16,
     "active": true
@@ -287,7 +287,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-huawei",
     "name": "Huawei",
     "slug": "huawei",
-    "logoUrl": "/api/v1/catalog/brand-logo/huawei",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/056706c5-adeb.jpg?w=200",
     "category": "MOBILE_TABLET",
     "sortOrder": 17,
     "active": true
@@ -296,7 +296,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-lg",
     "name": "LG",
     "slug": "lg",
-    "logoUrl": "/api/v1/catalog/brand-logo/lg",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/bdbdc48e-dd24.jpg?w=200",
     "category": "BOTH",
     "sortOrder": 18,
     "active": true
@@ -305,7 +305,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-dell",
     "name": "Dell",
     "slug": "dell",
-    "logoUrl": "/api/v1/catalog/brand-logo/dell",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/d3b4fdda-2d57.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 19,
     "active": true
@@ -314,7 +314,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-hp",
     "name": "HP",
     "slug": "hp",
-    "logoUrl": "/api/v1/catalog/brand-logo/hp",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/f78db5fb-857c.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 20,
     "active": true
@@ -323,7 +323,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-lenovo",
     "name": "Lenovo",
     "slug": "lenovo",
-    "logoUrl": "/api/v1/catalog/brand-logo/lenovo",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/4834825a-7f10.jpg?w=200",
     "category": "ALL",
     "sortOrder": 21,
     "active": true
@@ -332,7 +332,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-asus",
     "name": "Asus",
     "slug": "asus",
-    "logoUrl": "/api/v1/catalog/brand-logo/asus",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/bf25222a-a2a7.jpg?w=200",
     "category": "BOTH",
     "sortOrder": 22,
     "active": true
@@ -341,7 +341,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-acer",
     "name": "Acer",
     "slug": "acer",
-    "logoUrl": "/api/v1/catalog/brand-logo/acer",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/2c350ab6-da4f.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 23,
     "active": true
@@ -350,7 +350,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-microsoft",
     "name": "Microsoft",
     "slug": "microsoft",
-    "logoUrl": "/api/v1/catalog/brand-logo/microsoft",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/b00e17d8-fdd0.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 24,
     "active": true
@@ -359,7 +359,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-msi",
     "name": "MSI",
     "slug": "msi",
-    "logoUrl": "/api/v1/catalog/brand-logo/msi",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/3e0e18bd-7fa2.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 25,
     "active": true
@@ -368,7 +368,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-avita",
     "name": "AVITA",
     "slug": "avita",
-    "logoUrl": "/api/v1/catalog/brand-logo/avita",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/8ae5b678-550c.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 26,
     "active": true
@@ -377,7 +377,7 @@ export const INITIAL_BRANDS: BrandData[] = [
     "id": "b-other-laptop",
     "name": "Other Laptop",
     "slug": "other-laptop",
-    "logoUrl": "/api/v1/catalog/brand-logo/other-laptop",
+    "logoUrl": "https://s3ng.cashify.in/cashify/brand/img/xhdpi/da0de74d-0f4d.jpg?w=200",
     "category": "LAPTOP",
     "sortOrder": 27,
     "active": true

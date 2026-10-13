@@ -62,10 +62,6 @@ export default function SellMobileBrandsDirectoryPage() {
 
           {/* PAGE HERO */}
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>All 30+ Smartphone Brands Supported</span>
-            </div>
             <h1 className="text-2xl sm:text-4xl font-black text-brand-black tracking-tight">
               Select Your Smartphone Brand
             </h1>
@@ -83,39 +79,6 @@ export default function SellMobileBrandsDirectoryPage() {
                 placeholder="Search phone brand (e.g. Apple, Samsung, Vivo, OnePlus)..."
                 className="w-full pl-11 pr-4 py-3 text-sm font-medium bg-white rounded-2xl border border-neutral-200 focus:outline-none focus:border-brand-yellow focus:ring-4 focus:ring-brand-yellow/20 shadow-xs transition-all"
               />
-            </div>
-          </div>
-
-          {/* VALUE BADGES */}
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 max-w-3xl mx-auto mb-10">
-            <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-2xs">
-              <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs font-extrabold text-neutral-900 leading-tight">100% Safe</div>
-                <div className="text-[10px] text-neutral-500 hidden sm:block">Zero Data Risk</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-2xs">
-              <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
-                <TrendingUp className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs font-extrabold text-neutral-900 leading-tight">Best Prices</div>
-                <div className="text-[10px] text-neutral-500 hidden sm:block">Realtime Market AI</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-2xs">
-              <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
-                <Zap className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs font-extrabold text-neutral-900 leading-tight">Instant Cash</div>
-                <div className="text-[10px] text-neutral-500 hidden sm:block">Paid before Handover</div>
-              </div>
             </div>
           </div>
 

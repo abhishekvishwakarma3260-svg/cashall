@@ -230,7 +230,7 @@ export default function SellOldTabletPage() {
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Best Value</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Up to 5% Higher</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Instant Locked Valuation</div>
                     </div>
                   </div>
 
@@ -358,10 +358,17 @@ export default function SellOldTabletPage() {
                         </div>
                       </div>
 
+                      <h3 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight leading-tight mt-1">
+                        Apple iPad Pro 13" (M4)
+                      </h3>
+                      <p className="text-xs text-neutral-600 mt-0.5 leading-relaxed">
+                        Instant quote in 60s with free doorstep evaluation &amp; instant bank transfer.
+                      </p>
+
                       <div className="relative h-48 sm:h-56 w-full flex items-center justify-center p-2 bg-white/80 backdrop-blur-xs rounded-2xl border border-amber-200/60 shadow-inner">
                         <Image
-                          src="https://itechstore.co.in/uploads/products/mac_m5_product.webp"
-                          alt="Sell Old Latest Tablet Pro Online on CashALL"
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREKuLjcYWWVQY09KwJzcQkxKicpvelbGwJvCoRP9IFv86K6-iAyXLUJUk7&s=10"
+                          alt="Apple iPad Pro M4 Tablet"
                           width={320}
                           height={220}
                           className="object-contain max-h-full drop-shadow-xl"
@@ -372,8 +379,12 @@ export default function SellOldTabletPage() {
 
                       <div className="space-y-2 pt-2 border-t border-amber-200/80">
                         <div className="flex justify-between items-baseline">
-                          <span className="text-xs text-neutral-700 font-bold">Apple iPad Pro 13 (M4)</span>
+                          <span className="text-xs text-neutral-700 font-bold">Apple iPad Pro 13" (M4)</span>
                           <span className="text-lg font-black text-neutral-900">Up to ₹1,18,000</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                          <span className="text-xs text-neutral-700 font-bold">Apple iPad Pro 11" (M4)</span>
+                          <span className="text-lg font-black text-amber-900">Up to ₹84,000</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                           <span className="text-xs text-neutral-700 font-bold">Samsung Galaxy Tab S9 Ultra</span>
