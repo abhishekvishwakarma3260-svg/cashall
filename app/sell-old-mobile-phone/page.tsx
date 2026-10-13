@@ -30,71 +30,71 @@ import {
   ChevronDown
 } from "lucide-react";
 
-// Top Trending Models to highlight
+// Top Trending Models to highlight (Strictly Cashify +1% Buyback Valuation)
 const TOP_SELLING_MODELS = [
   {
     name: "Apple iPhone 16 Pro Max",
     brandSlug: "apple",
     modelSlug: "apple-iphone-16-pro-max",
-    upToPrice: "1,12,000",
+    upToPrice: "91,300",
     badge: "Top Seller",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/d197e3f8-6b8c.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/d197ee88-ccff.jpg?w=800",
   },
   {
     name: "Samsung Galaxy S24 Ultra 5G",
     brandSlug: "samsung",
     modelSlug: "samsung-galaxy-s24-ultra-5g",
-    upToPrice: "74,500",
+    upToPrice: "67,200",
     badge: "High Demand",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/a69ef814-16a7.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/a69ef28f-fe68.jpg?w=800",
   },
   {
     name: "Apple iPhone 16",
     brandSlug: "apple",
     modelSlug: "apple-iphone-16",
-    upToPrice: "64,500",
+    upToPrice: "45,000",
     badge: "Trending",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/db36ce85-b1a7.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/db36cde6-e6e5.jpg?w=800",
   },
   {
     name: "Samsung Galaxy S24 5G",
     brandSlug: "samsung",
     modelSlug: "samsung-galaxy-s24-5g",
-    upToPrice: "46,800",
+    upToPrice: "38,600",
     badge: "Popular",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/dab0d813-f9a7.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/dab0d987-4d22.jpg?w=800",
   },
   {
     name: "Apple iPhone 15 Pro Max",
     brandSlug: "apple",
     modelSlug: "apple-iphone-15-pro-max",
-    upToPrice: "78,000",
+    upToPrice: "69,200",
     badge: "Best Value",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/e14bb608-8e6c.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/e14bb4d9-988f.jpg?w=800",
   },
   {
     name: "OnePlus 12 5G",
     brandSlug: "oneplus",
     modelSlug: "oneplus-12",
-    upToPrice: "42,500",
+    upToPrice: "36,900",
     badge: "Fast Selling",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/e3692881-2292.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/3ba10c91-7df6.jpg?w=800",
   },
   {
     name: "Google Pixel 9 Pro",
     brandSlug: "google",
     modelSlug: "google-pixel-9-pro",
-    upToPrice: "61,000",
+    upToPrice: "52,500",
     badge: "Hot Deal",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/9848c205-d144.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/0e3992a1-b89f.jpg?w=800",
   },
   {
     name: "Apple iPhone 15",
     brandSlug: "apple",
     modelSlug: "apple-iphone-15",
-    upToPrice: "48,500",
+    upToPrice: "39,900",
     badge: "Most Sold",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/e2c7d953-659c.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/e2c7dff8-23a0.jpg?w=800",
   },
 ];
 
@@ -195,17 +195,11 @@ export default function SellOldMobilePhonePage() {
               {/* LEFT COLUMN: HERO CONTENT & BRAND QUICK SELECTOR */}
               <div className="lg:col-span-7 space-y-6">
                 
-                {/* TRUST PILL */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Highest Market Resale Value • ₹0 Doorstep Fee • Instant Cash</span>
-                </div>
-
-                {/* H1 HEADLINE (Competitor style: CashKR & Cashify keywords) */}
+                {/* H1 HEADLINE (Clean Recommerce) */}
                 <div>
                   <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-[1.15]">
                     Sell Old{" "}
-                    <span className="text-emerald-600 bg-clip-text">
+                    <span className="text-amber-500">
                       Phone Online
                     </span>{" "}
                     for Instant Cash
@@ -218,7 +212,7 @@ export default function SellOldMobilePhonePage() {
                 {/* VALUE PROPOSITION BADGES */}
                 <div className="grid grid-cols-3 gap-2.5 sm:gap-4 pt-1 pb-1">
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
                       <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
@@ -233,17 +227,17 @@ export default function SellOldMobilePhonePage() {
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Best Prices</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Up to 5% Higher</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Cashify +1% Payout</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
                       <Zap className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-extrabold text-neutral-900 leading-tight">Quick</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Instant UPI Payout</div>
+                      <div className="text-xs font-extrabold text-neutral-900 leading-tight">Instant Cash</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Instant UPI Transfer</div>
                     </div>
                   </div>
                 </div>
@@ -332,11 +326,11 @@ export default function SellOldMobilePhonePage() {
                   </div>
                 </div>
 
-                {/* BIG START SELLING BUTTON */}
+                {/* BIG START SELLING BUTTON (BRAND YELLOW) */}
                 <div className="pt-2">
                   <button
                     onClick={scrollToBrands}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/35 transition-all duration-200 active:scale-[0.99]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black text-base shadow-lg shadow-yellow-400/25 hover:shadow-yellow-400/35 transition-all duration-200 active:scale-[0.99]"
                   >
                     <span>Start Selling Phone</span>
                     <ArrowRight className="w-5 h-5" />
@@ -345,59 +339,66 @@ export default function SellOldMobilePhonePage() {
 
               </div>
 
-              {/* RIGHT COLUMN: HERO SMARTPHONE SHOWCASE */}
+              {/* RIGHT COLUMN: HERO SMARTPHONE SHOWCASE (CASHALL BRAND YELLOW THEME) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-sm sm:max-w-md">
                   
-                  {/* BACKGROUND GLOW */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-300/30 via-emerald-300/20 to-yellow-200/40 rounded-3xl blur-2xl -z-10" />
+                  {/* BACKGROUND YELLOW GLOW */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-300/40 via-yellow-300/30 to-amber-100/50 rounded-3xl blur-2xl -z-10" />
 
-                  {/* HERO SHOWCASE CARD */}
-                  <div className="bg-gradient-to-br from-neutral-900 via-neutral-950 to-black text-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-neutral-800 relative overflow-hidden">
-                    <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
-
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 rounded-full bg-amber-400 text-black font-black text-[11px] uppercase tracking-wider">
-                        ⚡ Certified Buyback
+                  {/* HERO SHOWCASE CARD (YELLOW THEMED WITH REQUESTED IPHONE IMAGE) */}
+                  <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border-2 border-brand-yellow/70 relative overflow-hidden flex flex-col justify-between">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-3 py-1 rounded-full bg-brand-yellow text-brand-black font-black text-[11px] uppercase tracking-wider">
+                        Highest Value Guarantee
                       </span>
-                      <span className="text-xs font-bold text-neutral-400">
-                        Live Payout Rates
+                      <span className="text-xs font-bold text-neutral-500">
+                        Cashify +1% Payout
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-black tracking-tight leading-tight">
-                      Got an iPhone 16 or Galaxy S24?
+                    <h3 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight leading-tight mt-1">
+                      Sell iPhone 16 & Galaxy S24
                     </h3>
-                    <p className="text-xs text-neutral-300 mt-1.5 leading-relaxed">
-                      CashALL pays the highest instant price in India with locked valuation and doorstep payment.
+                    <p className="text-xs text-neutral-500 mt-1 leading-relaxed">
+                      Instant quote in 60s with free doorstep evaluation & instant bank transfer.
                     </p>
 
-                    {/* MINI SPEC COMPARISON TABLE */}
-                    <div className="my-5 p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 space-y-2 text-xs">
-                      <div className="flex items-center justify-between text-neutral-300">
-                        <span>Apple iPhone 16 Pro Max</span>
-                        <span className="font-extrabold text-emerald-400">Up to ₹1,12,000</span>
+                    {/* PHONE SHOWCASE IMAGE */}
+                    <div className="my-3 py-2 flex items-center justify-center">
+                      <img
+                        src="https://media-ik.croma.com/Croma%20Assets/Communication/Mobiles/Images/324774_0_LTsaRyswN.png?updatedAt=1789034028966"
+                        alt="Apple iPhone 18 Pro Max"
+                        className="h-52 sm:h-60 object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* MINI SPEC COMPARISON TABLE (CASHIFY +1% VERIFIED RATES) */}
+                    <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 text-xs">
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">Apple iPhone 16 Pro Max</span>
+                        <span className="font-black text-brand-black">Up to ₹91,300</span>
                       </div>
-                      <div className="flex items-center justify-between text-neutral-300">
-                        <span>Samsung Galaxy S24 Ultra</span>
-                        <span className="font-extrabold text-emerald-400">Up to ₹74,500</span>
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">Samsung Galaxy S24 Ultra</span>
+                        <span className="font-black text-brand-black">Up to ₹67,200</span>
                       </div>
-                      <div className="flex items-center justify-between text-neutral-300">
-                        <span>Apple iPhone 16 (128 GB)</span>
-                        <span className="font-extrabold text-emerald-400">Up to ₹64,500</span>
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">Apple iPhone 16 (128 GB)</span>
+                        <span className="font-black text-brand-black">Up to ₹45,000</span>
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2">
-                      <div className="flex items-center gap-1.5 text-xs text-neutral-400 font-medium">
-                        <Check className="w-4 h-4 text-emerald-400" />
+                    <div className="flex items-center justify-between pt-3">
+                      <div className="flex items-center gap-1.5 text-xs text-neutral-700 font-bold">
+                        <Check className="w-4 h-4 text-emerald-600" />
                         <span>Instant UPI Payout</span>
                       </div>
                       <button
                         onClick={scrollToBrands}
-                        className="text-xs font-extrabold text-brand-yellow hover:text-white flex items-center gap-1"
+                        className="text-xs font-black text-neutral-900 bg-brand-yellow hover:bg-yellow-400 px-4 py-2 rounded-xl transition-colors shadow-xs"
                       >
-                        Check My Phone &rarr;
+                        Check Exact Value &rarr;
                       </button>
                     </div>
 
@@ -416,10 +417,6 @@ export default function SellOldMobilePhonePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
               <div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-black text-amber-700 tracking-wider uppercase mb-1">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Trending Buyback Rates</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                   Top Selling Mobile Phones
                 </h2>
@@ -453,13 +450,14 @@ export default function SellOldMobilePhonePage() {
                     </div>
 
                     <div className="w-full aspect-square bg-white rounded-xl mb-3 p-3 flex items-center justify-center border border-neutral-100 group-hover:border-amber-200 transition-colors">
-                      <Image
+                      <img
                         src={item.imageUrl}
                         alt={item.name}
-                        width={140}
-                        height={140}
                         className="object-contain max-h-28 w-auto group-hover:scale-105 transition-transform"
-                        unoptimized
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = "/images/devices/phone.jpg";
+                        }}
                       />
                     </div>
 
@@ -471,7 +469,7 @@ export default function SellOldMobilePhonePage() {
                   <div className="pt-3 border-t border-neutral-200/60 mt-3 flex items-center justify-between">
                     <div>
                       <div className="text-[10px] text-neutral-500 font-medium">Get up to</div>
-                      <div className="text-sm font-black text-emerald-600">
+                      <div className="text-sm font-black text-amber-700">
                         ₹{item.upToPrice}
                       </div>
                     </div>
@@ -554,57 +552,69 @@ export default function SellOldMobilePhonePage() {
         </section>
 
         {/* ========================================================= */}
-        {/* HOW CASHALL WORKS (3 SIMPLE STEPS)                        */}
+        {/* HOW CASHALL WORKS (3 STEPS WITH ILLUSTRATIONS)            */}
         {/* ========================================================= */}
         <section className="py-14 bg-white border-b border-neutral-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-black text-amber-700 uppercase tracking-widest">
-                Simple 3-Step Process
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight mt-1">
+              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                 How to Sell Your Old Phone on CashALL
               </h2>
-              <p className="text-xs sm:text-sm text-neutral-500 mt-1">
+              <p className="text-xs sm:text-sm text-neutral-500 mt-1.5">
                 No complicated paperwork, no haggling with strangers, no waiting days for payment.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 relative">
-                <div className="w-12 h-12 rounded-2xl bg-amber-400 text-black font-black text-lg flex items-center justify-center mb-4 shadow-sm">
-                  1
+              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/valuation.svg" alt="Check Price" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 1
+                  </span>
+                  <h3 className="text-base font-extrabold text-neutral-900 mb-2">
+                    Check Price in 60s
+                  </h3>
+                  <p className="text-xs text-neutral-600 leading-relaxed">
+                    Select your exact smartphone model and answer a few quick questions about screen condition, body scratches, and functional health for an instant locked quote.
+                  </p>
                 </div>
-                <h3 className="text-base font-extrabold text-neutral-900 mb-2">
-                  Check Price in 60s
-                </h3>
-                <p className="text-xs text-neutral-600 leading-relaxed">
-                  Select your exact smartphone model and answer a few quick questions about screen condition, body scratches, and functional health for an instant locked quote.
-                </p>
               </div>
 
-              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 relative">
-                <div className="w-12 h-12 rounded-2xl bg-amber-400 text-black font-black text-lg flex items-center justify-center mb-4 shadow-sm">
-                  2
+              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/pickup.svg" alt="Free Doorstep Pickup" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 2
+                  </span>
+                  <h3 className="text-base font-extrabold text-neutral-900 mb-2">
+                    Free Doorstep Pickup
+                  </h3>
+                  <p className="text-xs text-neutral-600 leading-relaxed">
+                    Choose a convenient date and time slot. Our background-verified logistics executive arrives right at your home or office with ₹0 convenience or pickup fee.
+                  </p>
                 </div>
-                <h3 className="text-base font-extrabold text-neutral-900 mb-2">
-                  Free Doorstep Pickup
-                </h3>
-                <p className="text-xs text-neutral-600 leading-relaxed">
-                  Choose a convenient date and time slot. Our background-verified logistics executive arrives right at your home or office with ₹0 convenience or pickup fee.
-                </p>
               </div>
 
-              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 relative">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white font-black text-lg flex items-center justify-center mb-4 shadow-sm">
-                  3
+              <div className="bg-brand-bg rounded-2xl p-6 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/upi.svg" alt="Instant Payment Before Handover" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 3
+                  </span>
+                  <h3 className="text-base font-extrabold text-neutral-900 mb-2">
+                    Instant Payment Before Handover
+                  </h3>
+                  <p className="text-xs text-neutral-600 leading-relaxed">
+                    After a quick 3-minute physical inspection, the money is transferred immediately to your UPI (GPay, PhonePe, Paytm) or bank account before taking your phone.
+                  </p>
                 </div>
-                <h3 className="text-base font-extrabold text-neutral-900 mb-2">
-                  Instant Payment Before Handover
-                </h3>
-                <p className="text-xs text-neutral-600 leading-relaxed">
-                  After a quick 3-minute physical inspection, the money is transferred immediately to your UPI (GPay, PhonePe, Paytm) or bank account before taking your phone.
-                </p>
               </div>
             </div>
           </div>
@@ -707,10 +717,7 @@ export default function SellOldMobilePhonePage() {
         <section className="py-14 bg-white border-b border-neutral-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <span className="text-xs font-black text-amber-700 uppercase tracking-widest">
-                Frequently Asked Questions
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight mt-1">
+              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                 Got Questions About Selling Your Old Phone?
               </h2>
             </div>

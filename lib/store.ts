@@ -1,4 +1,4 @@
-﻿// CashALL Unified Catalog Store
+// CashALL Unified Catalog Store
 // Mobiles, Laptops, and Tablets (Base Cashify/Cashkr Valuation +1% Real Pricing, Customer Display: Up to +5% Benefit)
 
 import { SERVICEABLE_DISTRICTS } from "./serviceability";
@@ -33556,21 +33556,21 @@ const MOBILE_VARIANTS_PART_1: DeviceVariantData[] = [
     "id": "v-m-apple-apple-iphone-16-pro-max-256-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "256 GB",
-    "basePrice": 87193,
+    "basePrice": 77972,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-512-gb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "512 GB",
-    "basePrice": 88759,
+    "basePrice": 82820,
     "active": true
   },
   {
     "id": "v-m-apple-apple-iphone-16-pro-max-1-tb",
     "modelId": "m-apple-apple-iphone-16-pro-max",
     "storage": "1 TB",
-    "basePrice": 92092,
+    "basePrice": 91304,
     "active": true
   },
   {

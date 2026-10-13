@@ -30,37 +30,37 @@ import {
   ChevronDown
 } from "lucide-react";
 
-// Top Selling Laptop Models to highlight (Cashify & CashKR keywords)
+// Top Selling Laptop Models to highlight (Strictly Cashify +1% Valuation)
 const TOP_SELLING_LAPTOPS = [
   {
-    name: "Apple MacBook Pro 16 (M3 Max / M3 Pro)",
+    name: "Apple MacBook Pro 2024",
     brandSlug: "apple",
-    modelSlug: "macbook-pro-16-inch-m3-pro-max-2023",
-    upToPrice: "1,85,000",
+    modelSlug: "macbook-pro-2024",
+    upToPrice: "1,42,000",
     badge: "Top Seller",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/7610c1e5-8a21.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/32cf8149-3645.jpg?w=800",
   },
   {
-    name: "Apple MacBook Air 13 (M2 Chip)",
+    name: "Apple MacBook Air 2025",
     brandSlug: "apple",
-    modelSlug: "macbook-air-2022-m2",
-    upToPrice: "68,500",
+    modelSlug: "macbook-air-2025",
+    upToPrice: "71,500",
     badge: "Most Popular",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/6cb511eb-980e.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/866ba979-b24c.jpg?w=800",
   },
   {
     name: "Dell XPS 15 (Core i7 / i9)",
     brandSlug: "dell",
     modelSlug: "dell-xps-15-series",
-    upToPrice: "72,000",
+    upToPrice: "72,800",
     badge: "High Demand",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/082b2afc-85c7.jpg?w=800",
   },
   {
     name: "HP Pavilion 15 Gaming / Intel",
     brandSlug: "hp",
     modelSlug: "hp-pavilion-series",
-    upToPrice: "38,500",
+    upToPrice: "38,900",
     badge: "Trending",
     imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
   },
@@ -68,33 +68,33 @@ const TOP_SELLING_LAPTOPS = [
     name: "Lenovo ThinkPad X1 Carbon",
     brandSlug: "lenovo",
     modelSlug: "thinkpad-x-series",
-    upToPrice: "56,000",
+    upToPrice: "56,600",
     badge: "Business Choice",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/fa4c6c5f-b279.jpg?w=800",
   },
   {
     name: "Asus ROG Strix G16 Gaming",
     brandSlug: "asus",
     modelSlug: "rog-series",
-    upToPrice: "64,000",
+    upToPrice: "64,700",
     badge: "Gamers Top Pick",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/486a4239-2e1e.jpg?w=800",
   },
   {
-    name: "Apple MacBook Air 13 (M1 Chip)",
+    name: "Apple MacBook Pro 2023",
     brandSlug: "apple",
-    modelSlug: "macbook-air-m1-2020",
-    upToPrice: "48,000",
+    modelSlug: "macbook-pro-2023",
+    upToPrice: "89,000",
     badge: "Fast Selling",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/10b50304-db9e.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/5f32d963-46a3.jpg?w=800",
   },
   {
-    name: "Microsoft Surface Laptop 5",
+    name: "Microsoft Surface Series",
     brandSlug: "microsoft",
     modelSlug: "surface-laptop-5",
-    upToPrice: "52,500",
+    upToPrice: "53,000",
     badge: "Premium Ultrabook",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/04ab7c03-3fee.jpg?w=800",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
   },
 ];
 
@@ -200,17 +200,11 @@ export default function SellOldLaptopPage() {
               {/* LEFT COLUMN: HERO CONTENT & BRAND QUICK SELECTOR */}
               <div className="lg:col-span-7 space-y-6">
                 
-                {/* TRUST PILL */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>NIST 800-88 Certified SSD Wipe • ₹0 Doorstep Inspection • Instant Cash</span>
-                </div>
-
-                {/* H1 HEADLINE (Competitor style: CashKR & Cashify keywords) */}
+                {/* H1 HEADLINE (Clean Recommerce) */}
                 <div>
                   <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-[1.15]">
                     Sell Old{" "}
-                    <span className="text-emerald-600 bg-clip-text">
+                    <span className="text-amber-500">
                       Laptop Online
                     </span>{" "}
                     for Instant Cash
@@ -223,7 +217,7 @@ export default function SellOldLaptopPage() {
                 {/* VALUE PROPOSITION BADGES */}
                 <div className="grid grid-cols-3 gap-2.5 sm:gap-4 pt-1 pb-1">
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
                       <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
@@ -238,12 +232,12 @@ export default function SellOldLaptopPage() {
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Top Value</div>
-                      <div className="text-[10px] text-neutral-500 hidden sm:block">Up to 5% Higher</div>
+                      <div className="text-[10px] text-neutral-500 hidden sm:block">Cashify +1% Payout</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
                       <Zap className="w-4 h-4" />
                     </div>
                     <div>
@@ -337,11 +331,11 @@ export default function SellOldLaptopPage() {
                   </div>
                 </div>
 
-                {/* BIG START SELLING BUTTON */}
+                {/* BIG START SELLING BUTTON (BRAND YELLOW) */}
                 <div className="pt-2">
                   <button
                     onClick={scrollToBrands}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/35 transition-all duration-200 active:scale-[0.99]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black text-base shadow-lg shadow-yellow-400/25 hover:shadow-yellow-400/35 transition-all duration-200 active:scale-[0.99]"
                   >
                     <span>Start Selling Laptop</span>
                     <ArrowRight className="w-5 h-5" />
@@ -350,52 +344,69 @@ export default function SellOldLaptopPage() {
 
               </div>
 
-              {/* RIGHT COLUMN: HERO LAPTOP SHOWCASE */}
+              {/* RIGHT COLUMN: HERO LAPTOP SHOWCASE (CASHALL BRAND YELLOW THEME) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-sm sm:max-w-md">
-                  <div className="relative rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-950 p-6 sm:p-8 text-white shadow-2xl border border-neutral-700/60 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-                    <div className="relative z-10 space-y-5">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800/60">
-                          Live Laptop Recommerce
-                        </span>
-                        <div className="flex items-center gap-1.5 text-xs text-neutral-300 font-semibold">
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                          <span>Pickup in 2-4 Hours</span>
-                        </div>
-                      </div>
+                  
+                  {/* BACKGROUND YELLOW GLOW */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-300/40 via-yellow-300/30 to-amber-100/50 rounded-3xl blur-2xl -z-10" />
 
-                      <div className="relative h-44 sm:h-52 w-full flex items-center justify-center">
-                        <Image
-                          src="https://s3ng.cashify.in/cashify/product/img/xhdpi/7610c1e5-8a21.jpg"
-                          alt="Sell Old Laptop Online on CashALL"
-                          width={320}
-                          height={200}
-                          className="object-contain max-h-full drop-shadow-2xl"
-                          priority
-                        />
-                      </div>
-
-                      <div className="space-y-2 pt-2 border-t border-neutral-700/60">
-                        <div className="flex justify-between items-baseline">
-                          <span className="text-xs text-neutral-400 font-medium">Apple MacBook Pro 16 M3 Max</span>
-                          <span className="text-lg font-black text-emerald-400">Up to ₹1,85,000</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                          <span className="text-xs text-neutral-400 font-medium">Dell XPS 15 (Core i9 / 32GB)</span>
-                          <span className="text-lg font-black text-amber-400">Up to ₹72,000</span>
-                        </div>
-                      </div>
-
-                      <Link
-                        href="/sell-old-laptop/brands"
-                        className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-black text-sm transition-all shadow-md active:scale-[0.99]"
-                      >
-                        <span>Check Your Laptop Value</span>
-                        <ChevronRight className="w-4 h-4" />
-                      </Link>
+                  {/* HERO SHOWCASE CARD (YELLOW THEMED WITH REQUESTED MACBOOK M5 IMAGE) */}
+                  <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border-2 border-brand-yellow/70 relative overflow-hidden flex flex-col justify-between">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-3 py-1 rounded-full bg-brand-yellow text-brand-black font-black text-[11px] uppercase tracking-wider">
+                        Highest Laptop Value
+                      </span>
+                      <span className="text-xs font-bold text-neutral-500">
+                        Cashify +1% Payout
+                      </span>
                     </div>
+
+                    <h3 className="text-xl sm:text-2xl font-black text-brand-black tracking-tight leading-tight mt-1">
+                      MacBook &amp; Premium Laptops
+                    </h3>
+                    <p className="text-xs text-neutral-500 mt-1 leading-relaxed">
+                      Instant quote in 60s with free doorstep evaluation &amp; instant bank transfer.
+                    </p>
+
+                    {/* MACBOOK SHOWCASE IMAGE */}
+                    <div className="my-3 py-2 flex items-center justify-center">
+                      <img
+                        src="https://itechstore.co.in/uploads/products/mac_m5_product.webp"
+                        alt="Apple MacBook Pro M5"
+                        className="h-48 sm:h-56 object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* MINI SPEC COMPARISON TABLE */}
+                    <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 space-y-2 text-xs">
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">Apple MacBook Pro 2024</span>
+                        <span className="font-black text-brand-black">Up to ₹1,42,000</span>
+                      </div>
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">Dell XPS 15 (Core i9 / 32GB)</span>
+                        <span className="font-black text-brand-black">Up to ₹72,800</span>
+                      </div>
+                      <div className="flex items-center justify-between text-neutral-800">
+                        <span className="font-semibold">MacBook Air 2025</span>
+                        <span className="font-black text-brand-black">Up to ₹71,500</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-3">
+                      <div className="flex items-center gap-1.5 text-xs text-neutral-700 font-bold">
+                        <Check className="w-4 h-4 text-emerald-600" />
+                        <span>Instant UPI Payout</span>
+                      </div>
+                      <button
+                        onClick={scrollToBrands}
+                        className="text-xs font-black text-neutral-900 bg-brand-yellow hover:bg-yellow-400 px-4 py-2 rounded-xl transition-colors shadow-xs"
+                      >
+                        Check Exact Value &rarr;
+                      </button>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -414,21 +425,17 @@ export default function SellOldLaptopPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold mb-2">
-                  <TrendingUp className="w-3.5 h-3.5" />
-                  <span>High Resale Demand</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
-                  Top Selling Laptops & MacBooks
+                  Top Selling Laptops &amp; MacBooks
                 </h2>
                 <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium">
-                  Instant locked payouts for trending laptops this week in Kolkata, Howrah, Patna & Across India.
+                  Instant locked payouts for trending laptops this week in Kolkata, Howrah, Patna &amp; Across India.
                 </p>
               </div>
 
               <Link
                 href="/sell-old-laptop/brands"
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-emerald-600 hover:text-emerald-700"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-700 hover:text-amber-800"
               >
                 <span>View all models</span>
                 <ChevronRight className="w-4 h-4" />
@@ -440,34 +447,36 @@ export default function SellOldLaptopPage() {
                 <Link
                   key={idx}
                   href={`/sell-old-laptop/${laptop.brandSlug}/${laptop.modelSlug}`}
-                  className="group relative bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/80 hover:border-emerald-500 hover:shadow-xl transition-all duration-200 flex flex-col justify-between"
+                  className="group relative bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/80 hover:border-brand-yellow hover:shadow-xl transition-all duration-200 flex flex-col justify-between"
                 >
                   <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 text-[10px] font-extrabold uppercase tracking-wider">
                     {laptop.badge}
                   </span>
 
                   <div className="relative w-full h-36 sm:h-40 my-3 flex items-center justify-center">
-                    <Image
+                    <img
                       src={laptop.imageUrl}
                       alt={`Sell ${laptop.name} online for cash`}
-                      width={180}
-                      height={140}
-                      className="object-contain max-h-full group-hover:scale-105 transition-transform duration-200"
+                      className="object-contain max-h-36 w-auto group-hover:scale-105 transition-transform duration-200"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/images/devices/laptop.jpg";
+                      }}
                     />
                   </div>
 
                   <div className="space-y-1.5 pt-2 border-t border-neutral-100">
-                    <h3 className="text-xs sm:text-sm font-bold text-neutral-900 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xs sm:text-sm font-bold text-neutral-900 line-clamp-2 group-hover:text-amber-800 transition-colors">
                       {laptop.name}
                     </h3>
                     <div className="flex items-baseline justify-between pt-1">
                       <span className="text-[11px] text-neutral-500 font-medium">Get up to</span>
-                      <span className="text-sm sm:text-base font-black text-neutral-900">
+                      <span className="text-sm sm:text-base font-black text-amber-800">
                         ₹{laptop.upToPrice}
                       </span>
                     </div>
 
-                    <div className="w-full mt-2 py-2 rounded-xl bg-neutral-50 group-hover:bg-emerald-50 text-neutral-700 group-hover:text-emerald-700 text-xs font-bold text-center transition-colors flex items-center justify-center gap-1">
+                    <div className="w-full mt-2 py-2 rounded-xl bg-neutral-50 group-hover:bg-amber-100 text-neutral-700 group-hover:text-amber-950 text-xs font-bold text-center transition-colors flex items-center justify-center gap-1">
                       <span>Sell Now</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </div>
@@ -537,15 +546,12 @@ export default function SellOldLaptopPage() {
         </section>
 
         {/* ========================================================= */}
-        {/* HOW TO SELL LAPTOP ONLINE ON CASHALL (3 SIMPLE STEPS)     */}
+        {/* HOW TO SELL LAPTOP ONLINE ON CASHALL (3 STEPS)            */}
         {/* ========================================================= */}
         <section className="py-12 sm:py-16 bg-white border-b border-neutral-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
-                Effortless Buyback Experience
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight mt-3">
+              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                 How to Sell Your Used Laptop in 3 Easy Steps
               </h2>
               <p className="text-xs sm:text-sm text-neutral-600 mt-2 font-medium">
@@ -554,40 +560,55 @@ export default function SellOldLaptopPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-emerald-500/20">
-                  1
+              <div className="bg-brand-bg rounded-3xl p-6 sm:p-8 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/valuation.svg" alt="Select Model & Specifications" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 1
+                  </span>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Select Model &amp; Specifications
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    Choose your laptop manufacturer and configure your processor, RAM, and SSD storage. Answer simple questions about your screen condition, keyboard, and battery health.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Select Model &amp; Specifications
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  Choose your laptop manufacturer and configure your processor, RAM, and SSD storage. Answer simple questions about your screen condition, keyboard, and battery health.
-                </p>
               </div>
 
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-amber-500 text-neutral-950 font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-amber-500/20">
-                  2
+              <div className="bg-brand-bg rounded-3xl p-6 sm:p-8 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/pickup.svg" alt="Free Doorstep Inspection Slot" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 2
+                  </span>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Free Doorstep Inspection Slot
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    Schedule a pickup slot convenient for your schedule. Our certified technician visits your home or workplace with full diagnostic tools at zero pickup fee.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Free Doorstep Inspection Slot
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  Schedule a pickup slot convenient for your schedule. Our certified technician visits your home or workplace with full diagnostic tools at zero pickup fee.
-                </p>
               </div>
 
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-blue-600/20">
-                  3
+              <div className="bg-brand-bg rounded-3xl p-6 sm:p-8 border border-neutral-200/80 hover:border-amber-300 transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-white border border-neutral-200/80 flex items-center justify-center mb-4 p-2.5 shadow-sm">
+                    <img src="/images/trust/upi.svg" alt="Data Wipe & Instant Cash Handover" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-brand-yellow/80 text-brand-black font-black text-[11px] uppercase tracking-wider mb-2">
+                    Step 3
+                  </span>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Data Wipe &amp; Instant Cash Handover
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    We assist with a certified NIST 800-88 cryptographic SSD data wipe so no files remain. The agreed payment is credited straight to your UPI or Bank account before device handover.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Data Wipe &amp; Instant Cash Handover
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  We assist with a certified NIST 800-88 cryptographic SSD data wipe so no files remain. The agreed payment is credited straight to your UPI or Bank account before device handover.
-                </p>
               </div>
             </div>
           </div>

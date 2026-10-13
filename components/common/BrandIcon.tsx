@@ -14,8 +14,8 @@ interface BrandIconProps {
 export function BrandIcon({
   name,
   logoUrl,
-  className = "w-20 h-20 sm:w-24 sm:h-24",
-  imageClassName = "max-h-16 max-w-16 sm:max-h-20 sm:max-w-20",
+  className = "w-14 h-14",
+  imageClassName = "max-h-full max-w-full object-contain",
   fallbackType = "MOBILE",
 }: BrandIconProps) {
   const [error, setError] = useState(false);
@@ -80,9 +80,18 @@ export function BrandIcon({
       return <span className="text-xl sm:text-2xl font-black tracking-wider text-red-600 font-mono">MSI</span>;
     }
 
-    // 10. LG
-    if (brandUpper.includes("LG")) {
-      return <span className="text-xl sm:text-2xl font-black tracking-tight text-red-700 font-sans">LG</span>;
+    // 10. LG (Official LG Red Circle Mark)
+    if (brandUpper === "LG" || brandUpper.startsWith("LG ")) {
+      return (
+        <div className="flex flex-col items-center justify-center">
+          <svg className="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="48" fill="#A50034" />
+            <circle cx="34" cy="38" r="4.5" fill="#FFFFFF" />
+            <path d="M47 30V65H68" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M50 16C31.22 16 16 31.22 16 50C16 68.78 31.22 84 50 84C66.8 84 80.7 71.8 83.5 55.5H77.2C74.6 68.4 63.4 78 50 78C34.54 78 22 65.46 22 50C22 34.54 34.54 22 50 22C61.2 22 70.8 28.6 75.3 38.2L81 35.5C75.2 23.8 63.6 16 50 16Z" fill="#FFFFFF" />
+          </svg>
+        </div>
+      );
     }
 
     // 11. GOOGLE
@@ -133,7 +142,7 @@ export function BrandIcon({
 
   return (
     <div
-      className={`${className} rounded-2xl bg-white flex items-center justify-center p-2 border border-gray-100 shadow-sm relative shrink-0 transition-transform`}
+      className={`${className} flex items-center justify-center relative shrink-0 transition-transform`}
     >
       {logoUrl && !error ? (
         <img

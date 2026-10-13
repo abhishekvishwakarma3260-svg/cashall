@@ -134,11 +134,12 @@ export default function SellMobileBrandsDirectoryPage() {
                   href={`/sell-old-mobile-phone/${brand.slug}`}
                   className="bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/80 hover:border-brand-yellow hover:shadow-[0_10px_25px_-5px_rgba(255,212,0,0.25)] transition-all duration-200 flex flex-col items-center justify-between text-center group hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-neutral-50/80 rounded-2xl flex items-center justify-center p-3 mb-3 border border-neutral-100 group-hover:border-amber-200 transition-colors">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-2xl flex items-center justify-center p-2.5 mb-3 border border-neutral-100 shadow-2xs group-hover:border-brand-yellow group-hover:shadow-xs transition-all">
                     <BrandIcon
                       name={brand.name}
                       logoUrl={brand.logoUrl}
-                      className="w-12 h-12 sm:w-14 sm:h-14 object-contain group-hover:scale-110 transition-transform duration-200"
+                      className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
+                      imageClassName="max-h-10 max-w-10 sm:max-h-12 sm:max-w-12 object-contain"
                     />
                   </div>
                   <div>

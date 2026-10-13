@@ -29,44 +29,45 @@ import {
 } from "lucide-react";
 
 // Top Selling Tablet Models to highlight (Cashify & CashKR keywords)
+// Top Selling Tablet Models to highlight (Strictly Cashify +1% Valuation)
 const TOP_SELLING_TABLETS = [
   {
     name: "Apple iPad Pro 13 (M4 Chip)",
     brandSlug: "apple",
-    modelSlug: "ipad-pro-13-inch-m4-2024",
-    upToPrice: "1,18,000",
+    modelSlug: "ipad-pro-m4-13-wi-fi-only",
+    upToPrice: "88,500",
     badge: "Top Seller",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/a8b9e59d-648b.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/57301cf3a2212.jpg?w=800",
   },
   {
     name: "Apple iPad Air 11 (M2 Chip)",
     brandSlug: "apple",
-    modelSlug: "ipad-air-11-inch-m2-2024",
+    modelSlug: "ipad-air-4th-gen-wi-fi-only",
     upToPrice: "48,500",
     badge: "Most Popular",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/a8b9e59d-648b.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/788ebf32-1631.jpg?w=800",
   },
   {
     name: "Apple iPad 10th Gen (10.9-inch)",
     brandSlug: "apple",
-    modelSlug: "ipad-10th-gen-10-9-inch-wi-fi-cellular",
-    upToPrice: "28,000",
+    modelSlug: "ipad-mini-6th-gen-wi-fi-only",
+    upToPrice: "28,500",
     badge: "Trending",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/51a37a93-5ba9.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/ec662f46-bdef.jpg?w=800",
   },
   {
     name: "Samsung Galaxy Tab S9 Ultra 5G",
     brandSlug: "samsung",
     modelSlug: "samsung-galaxy-tab-s9-ultra-5g",
-    upToPrice: "68,000",
+    upToPrice: "68,700",
     badge: "Flagship Choice",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/95ddee04-9f31.jpg?w=800",
   },
   {
     name: "Xiaomi Pad 6 (Snapdragon 870)",
     brandSlug: "xiaomi",
     modelSlug: "xiaomi-pad-6",
-    upToPrice: "18,500",
+    upToPrice: "18,700",
     badge: "Best Value",
     imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
   },
@@ -74,7 +75,7 @@ const TOP_SELLING_TABLETS = [
     name: "OnePlus Pad 2 (Snapdragon 8 Gen 3)",
     brandSlug: "oneplus",
     modelSlug: "oneplus-pad-2",
-    upToPrice: "34,000",
+    upToPrice: "34,300",
     badge: "High Demand",
     imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
   },
@@ -82,15 +83,15 @@ const TOP_SELLING_TABLETS = [
     name: "Apple iPad mini 6th Gen",
     brandSlug: "apple",
     modelSlug: "ipad-mini-6th-gen-wi-fi-cellular",
-    upToPrice: "32,500",
+    upToPrice: "32,800",
     badge: "Compact Pick",
-    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/51a37a93-5ba9.jpg",
+    imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/d332696f-876c.jpg?w=800",
   },
   {
     name: "Lenovo Tab P12 Pro",
     brandSlug: "lenovo",
     modelSlug: "lenovo-tab-p12-pro",
-    upToPrice: "24,000",
+    upToPrice: "24,200",
     badge: "Productivity",
     imageUrl: "https://s3ng.cashify.in/cashify/product/img/xhdpi/532d7a4a-3ad8.jpg?w=800",
   },
@@ -196,18 +197,12 @@ export default function SellOldTabletPage() {
               
               {/* LEFT COLUMN: HERO CONTENT & BRAND QUICK SELECTOR */}
               <div className="lg:col-span-7 space-y-6">
-                
-                {/* TRUST PILL */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Highest Market Resale Value • ₹0 Doorstep Inspection • Instant Cash</span>
-                </div>
 
-                {/* H1 HEADLINE (Competitor style: CashKR & Cashify keywords) */}
+                {/* H1 HEADLINE */}
                 <div>
                   <h1 className="text-3xl sm:text-5xl font-black text-brand-black tracking-tight leading-[1.15]">
                     Sell Old{" "}
-                    <span className="text-emerald-600 bg-clip-text">
+                    <span className="underline decoration-brand-yellow decoration-4 underline-offset-4">
                       Tablet Online
                     </span>{" "}
                     for Instant Cash
@@ -220,8 +215,8 @@ export default function SellOldTabletPage() {
                 {/* VALUE PROPOSITION BADGES */}
                 <div className="grid grid-cols-3 gap-2.5 sm:gap-4 pt-1 pb-1">
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
-                      <ShieldCheck className="w-4 h-4" />
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 shrink-0 font-bold">
+                      <ShieldCheck className="w-4 h-4 text-amber-800" />
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">100% Safe</div>
@@ -230,8 +225,8 @@ export default function SellOldTabletPage() {
                   </div>
 
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
-                      <TrendingUp className="w-4 h-4" />
+                    <div className="w-8 h-8 rounded-xl bg-yellow-100 flex items-center justify-center text-yellow-900 shrink-0 font-bold">
+                      <TrendingUp className="w-4 h-4 text-yellow-900" />
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Best Value</div>
@@ -240,8 +235,8 @@ export default function SellOldTabletPage() {
                   </div>
 
                   <div className="flex items-center gap-2 p-2.5 sm:p-3 rounded-2xl bg-white border border-neutral-200/90 shadow-xs">
-                    <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
-                      <Zap className="w-4 h-4" />
+                    <div className="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-900 shrink-0 font-bold">
+                      <Zap className="w-4 h-4 text-amber-900" />
                     </div>
                     <div>
                       <div className="text-xs font-extrabold text-neutral-900 leading-tight">Fast Payout</div>
@@ -289,7 +284,7 @@ export default function SellOldTabletPage() {
                   )}
                 </div>
 
-                {/* SELECT TABLET BRAND: QUICK ROW (CASHKR & CASHIFY PATTERN) */}
+                {/* SELECT TABLET BRAND: QUICK ROW */}
                 <div className="pt-2">
                   <div className="flex items-center justify-between mb-3">
                     <h2 className="text-xs sm:text-sm font-black text-neutral-800 tracking-wide uppercase">
@@ -297,7 +292,7 @@ export default function SellOldTabletPage() {
                     </h2>
                     <Link
                       href="/sell-old-tablet/brands"
-                      className="text-xs font-bold text-amber-700 hover:text-amber-800 hover:underline flex items-center gap-1"
+                      className="text-xs font-bold text-amber-800 hover:text-amber-900 hover:underline flex items-center gap-1"
                     >
                       View all brands ({tabletBrands.length}) <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
@@ -319,7 +314,7 @@ export default function SellOldTabletPage() {
                       </Link>
                     ))}
 
-                    {/* "MORE (ALL BRANDS)" CARD LIKE CASHKR / CASHIFY */}
+                    {/* "MORE (ALL BRANDS)" CARD */}
                     <Link
                       href="/sell-old-tablet/brands"
                       className="bg-amber-50/80 hover:bg-amber-100/90 rounded-2xl p-3 border border-amber-300/80 hover:border-amber-400 transition-all duration-200 flex flex-col items-center justify-center text-center group hover:-translate-y-0.5"
@@ -334,11 +329,11 @@ export default function SellOldTabletPage() {
                   </div>
                 </div>
 
-                {/* BIG START SELLING BUTTON */}
+                {/* BIG START SELLING BUTTON (CASHALL BRAND YELLOW) */}
                 <div className="pt-2">
                   <button
                     onClick={scrollToBrands}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/35 transition-all duration-200 active:scale-[0.99]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black text-base shadow-lg shadow-brand-yellow/25 hover:shadow-brand-yellow/35 transition-all duration-200 active:scale-[0.99]"
                   >
                     <span>Start Selling Tablet</span>
                     <ArrowRight className="w-5 h-5" />
@@ -347,47 +342,48 @@ export default function SellOldTabletPage() {
 
               </div>
 
-              {/* RIGHT COLUMN: HERO TABLET SHOWCASE */}
+              {/* RIGHT COLUMN: HERO TABLET SHOWCASE (YELLOW BRAND THEME WITH LATEST TABLET PRO) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-sm sm:max-w-md">
-                  <div className="relative rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-950 p-6 sm:p-8 text-white shadow-2xl border border-neutral-700/60 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="relative rounded-3xl bg-gradient-to-br from-amber-50 via-yellow-100/70 to-amber-100 p-6 sm:p-8 text-neutral-900 shadow-xl border-2 border-brand-yellow/80 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-yellow/30 rounded-full blur-3xl pointer-events-none" />
                     <div className="relative z-10 space-y-5">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800/60">
-                          Live Tablet Recommerce
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-900 font-extrabold bg-brand-yellow px-3 py-1 rounded-full border border-yellow-400 shadow-xs">
+                          Live Tablet Buyback
                         </span>
-                        <div className="flex items-center gap-1.5 text-xs text-neutral-300 font-semibold">
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                        <div className="flex items-center gap-1.5 text-xs text-neutral-800 font-bold">
+                          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                           <span>Pickup in 2-4 Hours</span>
                         </div>
                       </div>
 
-                      <div className="relative h-44 sm:h-52 w-full flex items-center justify-center">
+                      <div className="relative h-48 sm:h-56 w-full flex items-center justify-center p-2 bg-white/80 backdrop-blur-xs rounded-2xl border border-amber-200/60 shadow-inner">
                         <Image
-                          src="https://s3ng.cashify.in/cashify/product/img/xhdpi/a8b9e59d-648b.jpg"
-                          alt="Sell Old Tablet Online on CashALL"
-                          width={300}
-                          height={200}
-                          className="object-contain max-h-full drop-shadow-2xl"
+                          src="https://itechstore.co.in/uploads/products/mac_m5_product.webp"
+                          alt="Sell Old Latest Tablet Pro Online on CashALL"
+                          width={320}
+                          height={220}
+                          className="object-contain max-h-full drop-shadow-xl"
                           priority
+                          unoptimized
                         />
                       </div>
 
-                      <div className="space-y-2 pt-2 border-t border-neutral-700/60">
+                      <div className="space-y-2 pt-2 border-t border-amber-200/80">
                         <div className="flex justify-between items-baseline">
-                          <span className="text-xs text-neutral-400 font-medium">Apple iPad Pro 13 (M4)</span>
-                          <span className="text-lg font-black text-emerald-400">Up to ₹1,18,000</span>
+                          <span className="text-xs text-neutral-700 font-bold">Apple iPad Pro 13 (M4)</span>
+                          <span className="text-lg font-black text-neutral-900">Up to ₹1,18,000</span>
                         </div>
                         <div className="flex justify-between items-baseline">
-                          <span className="text-xs text-neutral-400 font-medium">Samsung Galaxy Tab S9 Ultra</span>
-                          <span className="text-lg font-black text-amber-400">Up to ₹68,000</span>
+                          <span className="text-xs text-neutral-700 font-bold">Samsung Galaxy Tab S9 Ultra</span>
+                          <span className="text-lg font-black text-amber-900">Up to ₹68,000</span>
                         </div>
                       </div>
 
                       <Link
                         href="/sell-old-tablet/brands"
-                        className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-black text-sm transition-all shadow-md active:scale-[0.99]"
+                        className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-brand-yellow hover:bg-yellow-400 text-brand-black font-black text-sm transition-all shadow-md active:scale-[0.99] border border-yellow-400"
                       >
                         <span>Check Your Tablet Value</span>
                         <ChevronRight className="w-4 h-4" />
@@ -405,16 +401,12 @@ export default function SellOldTabletPage() {
         <AiVerificationBar />
 
         {/* ========================================================= */}
-        {/* TOP SELLING TABLETS SECTION (ALIGNED WITH COMPETITOR)     */}
+        {/* TOP SELLING TABLETS SECTION                               */}
         {/* ========================================================= */}
         <section className="py-12 sm:py-16 bg-white border-b border-neutral-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold mb-2">
-                  <TrendingUp className="w-3.5 h-3.5" />
-                  <span>High Resale Demand</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
                   Top Selling Tablets &amp; iPads
                 </h2>
@@ -425,7 +417,7 @@ export default function SellOldTabletPage() {
 
               <Link
                 href="/sell-old-tablet/brands"
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-emerald-600 hover:text-emerald-700"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-800 hover:text-amber-900"
               >
                 <span>View all models</span>
                 <ChevronRight className="w-4 h-4" />
@@ -437,9 +429,9 @@ export default function SellOldTabletPage() {
                 <Link
                   key={idx}
                   href={`/sell-old-tablet/${tablet.brandSlug}/${tablet.modelSlug}`}
-                  className="group relative bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/80 hover:border-emerald-500 hover:shadow-xl transition-all duration-200 flex flex-col justify-between"
+                  className="group relative bg-white rounded-2xl p-4 sm:p-5 border border-neutral-200/80 hover:border-brand-yellow hover:shadow-xl transition-all duration-200 flex flex-col justify-between"
                 >
-                  <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 text-[10px] font-extrabold uppercase tracking-wider">
+                  <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 text-[10px] font-extrabold uppercase tracking-wider">
                     {tablet.badge}
                   </span>
 
@@ -450,21 +442,25 @@ export default function SellOldTabletPage() {
                       width={180}
                       height={140}
                       className="object-contain max-h-full group-hover:scale-105 transition-transform duration-200"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "/images/devices/tablet.jpg";
+                      }}
+                      unoptimized
                     />
                   </div>
 
                   <div className="space-y-1.5 pt-2 border-t border-neutral-100">
-                    <h3 className="text-xs sm:text-sm font-bold text-neutral-900 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xs sm:text-sm font-bold text-neutral-900 line-clamp-2 group-hover:text-amber-900 transition-colors">
                       {tablet.name}
                     </h3>
                     <div className="flex items-baseline justify-between pt-1">
                       <span className="text-[11px] text-neutral-500 font-medium">Get up to</span>
-                      <span className="text-sm sm:text-base font-black text-neutral-900">
+                      <span className="text-sm sm:text-base font-black text-amber-900">
                         ₹{tablet.upToPrice}
                       </span>
                     </div>
 
-                    <div className="w-full mt-2 py-2 rounded-xl bg-neutral-50 group-hover:bg-emerald-50 text-neutral-700 group-hover:text-emerald-700 text-xs font-bold text-center transition-colors flex items-center justify-center gap-1">
+                    <div className="w-full mt-2 py-2 rounded-xl bg-neutral-50 group-hover:bg-brand-yellow group-hover:text-brand-black text-neutral-700 text-xs font-bold text-center transition-colors flex items-center justify-center gap-1">
                       <span>Sell Now</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </div>
@@ -534,73 +530,103 @@ export default function SellOldTabletPage() {
         </section>
 
         {/* ========================================================= */}
-        {/* HOW TO SELL TABLET ONLINE ON CASHALL (3 SIMPLE STEPS)     */}
+        {/* HOW TO SELL TABLET ONLINE ON CASHALL (3 STEPS WITH IMAGES)*/}
         {/* ========================================================= */}
         <section className="py-12 sm:py-16 bg-white border-b border-neutral-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
-                Effortless Tablet Buyback
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight mt-3">
-                How to Sell Your Tablet in 3 Easy Steps
+              <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
+                How to Sell Your Tablet on CashALL
               </h2>
               <p className="text-xs sm:text-sm text-neutral-600 mt-2 font-medium">
-                Safe, transparent, and direct recommerce without classified ads or dealer discounts.
+                No complicated paperwork, free doorstep inspection, and instant UPI payment before handover.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500 text-white font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-emerald-500/20">
-                  1
+              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative flex flex-col justify-between">
+                <div>
+                  <div className="relative w-full h-36 mb-5 bg-white rounded-2xl border border-neutral-200/80 flex items-center justify-center p-3 shadow-xs">
+                    <Image
+                      src="/images/trust/valuation.svg"
+                      alt="Instant price quote for old tablet"
+                      width={120}
+                      height={90}
+                      className="object-contain max-h-full"
+                    />
+                    <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-brand-yellow text-brand-black font-black text-xs">
+                      Step 1
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Check Price in 60s
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    Pick your Apple iPad or Android tablet model. Answer simple questions regarding screen scratches, touch responsiveness, and included stylus or original charger.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Select Model &amp; Storage
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  Pick your Apple iPad or Android tablet model. Answer simple questions regarding screen scratches, touch responsiveness, and included stylus or original charger.
-                </p>
               </div>
 
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-amber-500 text-neutral-950 font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-amber-500/20">
-                  2
+              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative flex flex-col justify-between">
+                <div>
+                  <div className="relative w-full h-36 mb-5 bg-white rounded-2xl border border-neutral-200/80 flex items-center justify-center p-3 shadow-xs">
+                    <Image
+                      src="/images/trust/pickup.svg"
+                      alt="Free doorstep pickup for tablet"
+                      width={120}
+                      height={90}
+                      className="object-contain max-h-full"
+                    />
+                    <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-brand-yellow text-brand-black font-black text-xs">
+                      Step 2
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Free Doorstep Pickup
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    Choose a convenient pickup date and time window. Our background-verified logistics executive arrives right at your home or office with zero pickup fee.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Free Doorstep Inspection Slot
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  Choose a convenient pickup date and time window. Our certified field technician visits your address for an on-site hardware check at zero pickup cost.
-                </p>
               </div>
 
-              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-black text-lg flex items-center justify-center mb-5 shadow-md shadow-blue-600/20">
-                  3
+              <div className="bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/70 relative flex flex-col justify-between">
+                <div>
+                  <div className="relative w-full h-36 mb-5 bg-white rounded-2xl border border-neutral-200/80 flex items-center justify-center p-3 shadow-xs">
+                    <Image
+                      src="/images/trust/upi.svg"
+                      alt="Instant payment before tablet handover"
+                      width={120}
+                      height={90}
+                      className="object-contain max-h-full"
+                    />
+                    <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-brand-yellow text-brand-black font-black text-xs">
+                      Step 3
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-neutral-900 mb-2">
+                    Instant Payment Before Handover
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                    After a quick 3-minute physical inspection, the agreed amount is credited immediately to your UPI (GPay, PhonePe, Paytm) or bank account before taking your tablet.
+                  </p>
                 </div>
-                <h3 className="text-lg font-black text-neutral-900 mb-2">
-                  Spot Payment Handover
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
-                  We verify iCloud or Google account sign-out and device reset. The agreed amount is credited immediately to your UPI or bank account before the technician departs.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* ========================================================= */}
-        {/* TABLET FAQS ACCORDION (AEO & GEO SCHEMA READY)            */}
+        {/* TABLET FAQS ACCORDION                                     */}
         {/* ========================================================= */}
         <section className="py-12 sm:py-16 bg-brand-bg">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-xl mx-auto mb-10">
               <h2 className="text-2xl sm:text-3xl font-black text-brand-black tracking-tight">
-                Frequently Asked Questions
+                Got Questions About Selling Your Tablet?
               </h2>
               <p className="text-xs sm:text-sm text-neutral-500 mt-2 font-medium">
-                Everything you need to know about selling old tablets and iPads on CashALL.
+                Everything you need to know about valuation, pickup inspection, and payment on CashALL.
               </p>
             </div>
 
