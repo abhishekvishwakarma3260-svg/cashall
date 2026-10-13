@@ -38,7 +38,7 @@ export function DeviceChoiceModal({ isOpen, onClose }: DeviceChoiceModalProps) {
           
           {/* MOBILE PHONE CARD */}
           <Link
-            href="/sell/mobile"
+            href="/sell-old-mobile-phone"
             onClick={onClose}
             className="bg-brand-bg rounded-2xl p-5 border-2 border-brand-yellow/60 hover:border-brand-yellow hover:bg-white shadow-subtleCard hover:shadow-yellowGlow transition-all duration-300 group text-left flex flex-col justify-between"
           >

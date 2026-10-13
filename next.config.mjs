@@ -355,6 +355,36 @@ const nextConfig = {
         destination: '/robots.txt',
         permanent: true,
       },
+      {
+        source: '/sell-old-mobile-phones',
+        destination: '/sell-old-mobile-phone',
+        permanent: true,
+      },
+      {
+        source: '/sell-old-mobile-phones/:path*',
+        destination: '/sell-old-mobile-phone/:path*',
+        permanent: true,
+      },
+      {
+        source: '/sell/mobile',
+        destination: '/sell-old-mobile-phone',
+        permanent: true,
+      },
+      {
+        source: '/sell/mobile/:brand',
+        destination: '/sell-old-mobile-phone/:brand',
+        permanent: true,
+      },
+      {
+        source: '/sell/mobile/:brand/:model',
+        destination: '/sell-old-mobile-phone/:brand/:model',
+        permanent: true,
+      },
+      {
+        source: '/sell/mobile/:brand/:model/assess',
+        destination: '/sell-old-mobile-phone/:brand/:model/assess',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

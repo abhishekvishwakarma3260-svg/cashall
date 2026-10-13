@@ -88,7 +88,7 @@ export function VideoPlayerModal({ review, isOpen, onClose }: VideoPlayerModalPr
   // Route URL for selling this device
   const sellUrl =
     review.deviceCategory === "MOBILE"
-      ? `/sell/mobile/${review.brandSlug}/${review.modelSlug}`
+      ? `/sell-old-mobile-phone/${review.brandSlug}/${review.modelSlug}`
       : review.deviceCategory === "LAPTOP"
       ? `/sell/laptop`
       : `/sell/tablet`;

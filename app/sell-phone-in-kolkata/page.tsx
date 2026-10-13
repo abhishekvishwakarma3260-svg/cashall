@@ -195,7 +195,7 @@ export default function SellPhoneInKolkataPage() {
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/sell/mobile"
+                  href="/sell-old-mobile-phone"
                   className="px-8 py-4 rounded-2xl bg-brand-yellow text-black font-black text-sm hover:bg-yellow-400 shadow-yellowGlow transition-transform active:scale-95 flex items-center gap-2"
                 >
                   <Smartphone className="w-4 h-4" />
@@ -256,7 +256,7 @@ export default function SellPhoneInKolkataPage() {
               ].map((brand) => (
                 <Link
                   key={brand.slug}
-                  href={`/sell/mobile/${brand.slug}`}
+                  href={`/sell-old-mobile-phone/${brand.slug}`}
                   className={`p-4 rounded-2xl bg-brand-bg border border-brand-border text-center font-bold text-xs hover:bg-white hover:shadow-premium transition-all ${brand.color}`}
                 >
                   <span className="block truncate">{brand.name}</span>
@@ -400,7 +400,7 @@ export default function SellPhoneInKolkataPage() {
               </p>
               <div className="pt-2">
                 <Link
-                  href="/sell/mobile"
+                  href="/sell-old-mobile-phone"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-brand-yellow text-black font-black text-sm hover:bg-yellow-400 shadow-yellowGlow transition-transform active:scale-95"
                 >
                   <span>Start Valuation Now</span>

@@ -40,6 +40,8 @@ export default function robots(): MetadataRoute.Robots {
     "/sell",
     "/sell-used-phone",
     "/sell-old-phone",
+    "/sell-old-mobile-phone",
+    "/sell-old-mobile-phone/",
     "/sell/mobile/",
     "/sell/laptop/",
     "/sell/tablet/",

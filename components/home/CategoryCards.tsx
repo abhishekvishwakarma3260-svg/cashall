@@ -52,7 +52,7 @@ export function CategoryCards() {
       icon: Smartphone,
       status: "AVAILABLE",
       available: true,
-      href: "/sell/mobile",
+      href: "/sell-old-mobile-phone",
       btnText: "Sell Mobile Phone",
     },
     {

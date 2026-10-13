@@ -4,14 +4,14 @@ import { CUSTOMER_REVIEWS, REVIEW_STATS } from "@/lib/data/reviewsData";
 export const metadata: Metadata = {
   title: "Customer Reviews & Real Selling Experiences | CashALL",
   description:
-    "Read 2,800+ verified customer reviews for CashALL (Aarna Enterprise). 4.8/5 average rating across Kolkata, Howrah, Gorakhpur, Patna, and India. Safe instant UPI payouts, free doorstep inspection, and 100% certified data wipe.",
+    "Read 65 verified customer reviews for CashALL (Aarna Enterprise). 4.8/5 average rating across Kolkata, Howrah, Gorakhpur, Patna, and India. Safe instant UPI payouts, free doorstep inspection, and 100% certified data wipe.",
   alternates: {
     canonical: "https://www.cashall.in/reviews",
   },
   openGraph: {
     title: "CashALL Customer Reviews | 4.8/5 Star Rated Device Buyback",
     description:
-      "See real feedback from customers who sold their old phones, laptops, and tablets to CashALL. Real reviews, transparent valuations, and instant doorstep payments.",
+      "See real feedback from 65 verified customers who sold their old phones, laptops, and tablets to CashALL. Real reviews, transparent valuations, and instant doorstep payments.",
     url: "https://www.cashall.in/reviews",
     type: "website",
     images: ["/photos/CashALL_logo.png"],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CashALL Verified Customer Reviews & Testimonials",
     description:
-      "4.8/5 stars across 2,840+ verified sellers. Instant bank and UPI payouts at your doorstep with CashALL.",
+      "4.8/5 stars across 65 verified sellers. Instant bank and UPI payouts at your doorstep with CashALL.",
     images: ["/photos/CashALL_logo.png"],
   },
 };
@@ -80,11 +80,11 @@ export default function ReviewsLayout({
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "2840",
-          "ratingCount": "2840",
+          "ratingValue": REVIEW_STATS.averageRating.toString(),
+          "reviewCount": REVIEW_STATS.totalReviews.toString(),
+          "ratingCount": REVIEW_STATS.totalReviews.toString(),
           "bestRating": "5",
-          "worstRating": "1",
+          "worstRating": "3",
         },
         "review": schemaReviews,
       },

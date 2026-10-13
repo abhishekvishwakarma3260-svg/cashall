@@ -30,7 +30,7 @@ function ReviewsPageContent() {
   const [reviews, setReviews] = useState<CustomerReview[]>(CUSTOMER_REVIEWS);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(50);
+  const [visibleCount, setVisibleCount] = useState(100);
 
   // Review Modal State
   const [isModalOpen, setIsModalOpen] = useState(initialAction === "write");

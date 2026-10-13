@@ -87,7 +87,7 @@ export function RecommerceSeoBlock() {
               </p>
             </div>
             <Link
-              href="/sell/mobile"
+              href="/sell-old-mobile-phone/brands"
               className="text-xs font-black text-brand-black hover:text-amber-600 flex items-center gap-1 shrink-0"
             >
               <span>Explore All 25+ Brands</span>
@@ -99,7 +99,7 @@ export function RecommerceSeoBlock() {
             {BRANDS.map((brand) => (
               <Link
                 key={brand.slug}
-                href={`/sell/mobile/${brand.slug}`}
+                href={`/sell-old-mobile-phone/${brand.slug}`}
                 className="bg-white rounded-2xl p-5 border border-brand-border hover:border-brand-yellow hover:shadow-subtleCard transition text-center group space-y-1"
               >
                 <div className="font-extrabold text-sm sm:text-base text-brand-black group-hover:text-black">
@@ -171,7 +171,7 @@ export function RecommerceSeoBlock() {
                 </p>
               </div>
               <Link
-                href="/sell/mobile/apple"
+                href="/sell-old-mobile-phone/apple"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-blue-800 hover:text-blue-950 pt-2"
               >
                 <span>Check iPhone Resale Value</span>
@@ -215,7 +215,7 @@ export function RecommerceSeoBlock() {
                 </p>
               </div>
               <Link
-                href="/sell/mobile/samsung"
+                href="/sell-old-mobile-phone/samsung"
                 className="inline-flex items-center gap-1.5 text-xs font-black text-purple-800 hover:text-purple-950 pt-2"
               >
                 <span>Sell Samsung Phone for Cash</span>
@@ -279,12 +279,12 @@ export function RecommerceSeoBlock() {
                 {[
                   { label: "Sell Old Phone", href: "/sell-used-phone" },
                   { label: "Sell Used Phone Online", href: "/sell-used-phone" },
-                  { label: "Cash for Phone", href: "/sell/mobile" },
+                  { label: "Cash for Phone", href: "/sell-old-mobile-phone" },
                   { label: "Old Phone Sell Online", href: "/sell-used-phone" },
-                  { label: "Sell Old Handset", href: "/sell/mobile" },
+                  { label: "Sell Old Handset", href: "/sell-old-mobile-phone" },
                   { label: "Sold Old Phone", href: "/sell-used-phone" },
-                  { label: "Sell Dead Phone", href: "/sell/mobile" },
-                  { label: "Sell Broken Screen Phone", href: "/sell/mobile" },
+                  { label: "Sell Dead Phone", href: "/sell-old-mobile-phone" },
+                  { label: "Sell Broken Screen Phone", href: "/sell-old-mobile-phone" },
                 ].map((item, idx) => (
                   <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
@@ -295,14 +295,14 @@ export function RecommerceSeoBlock() {
               <h3>Second Hand &amp; 2nd Hand Mobile</h3>
               <div>
                 {[
-                  { label: "Second Hand Mobile", href: "/sell/mobile" },
-                  { label: "2nd Hand Mobile Phones", href: "/sell/mobile" },
-                  { label: "Used Second Hand Mobile", href: "/sell/mobile" },
-                  { label: "2 Hand Mobile Phone", href: "/sell/mobile" },
-                  { label: "Second Hand iPhone", href: "/sell/mobile/apple" },
-                  { label: "Refurbished Mobiles", href: "/sell/mobile" },
-                  { label: "Refurbished Phones", href: "/sell/mobile" },
-                  { label: "Buy Second Hand Mobile", href: "/sell/mobile" },
+                  { label: "Second Hand Mobile", href: "/sell-old-mobile-phone" },
+                  { label: "2nd Hand Mobile Phones", href: "/sell-old-mobile-phone" },
+                  { label: "Used Second Hand Mobile", href: "/sell-old-mobile-phone" },
+                  { label: "2 Hand Mobile Phone", href: "/sell-old-mobile-phone" },
+                  { label: "Second Hand iPhone", href: "/sell-old-mobile-phone/apple" },
+                  { label: "Refurbished Mobiles", href: "/sell-old-mobile-phone" },
+                  { label: "Refurbished Phones", href: "/sell-old-mobile-phone" },
+                  { label: "Buy Second Hand Mobile", href: "/sell-old-mobile-phone" },
                 ].map((item, idx) => (
                   <Link key={idx} href={item.href}>{item.label}</Link>
                 ))}
@@ -318,7 +318,7 @@ export function RecommerceSeoBlock() {
                   { label: "Used Phone Price Calculator", href: "/sell-used-phone" },
                   { label: "Second Hand Mobile Price Check", href: "/sell-used-phone" },
                   { label: "Phone Valuation Tool Online", href: "/sell-used-phone" },
-                  { label: "iPhone Resale Value", href: "/sell/mobile/apple" },
+                  { label: "iPhone Resale Value", href: "/sell-old-mobile-phone/apple" },
                   { label: "Laptop Resale Calculator", href: "/sell/laptop" },
                   { label: "Instant Guaranteed Quote", href: "/sell-used-phone" },
                 ].map((item, idx) => (

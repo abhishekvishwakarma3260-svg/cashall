@@ -52,7 +52,7 @@ export function PopularBrands() {
           </div>
 
           <Link
-            href="/sell/mobile"
+            href="/sell-old-mobile-phone/brands"
             className="inline-flex items-center gap-1.5 text-xs font-extrabold text-slate-900 hover:text-emerald-700 group transition-colors cursor-pointer"
           >
             <span>View All Brands</span>
@@ -64,7 +64,7 @@ export function PopularBrands() {
           {mobileBrands.map((brand) => (
             <Link
               key={brand.id}
-              href={`/sell/mobile/${brand.slug}`}
+              href={`/sell-old-mobile-phone/${brand.slug}`}
               className="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-slate-300 shadow-2xs hover:shadow-subtleCard hover:-translate-y-0.5 transition-all duration-200 text-center group flex flex-col items-center justify-center space-y-2.5 cursor-pointer"
             >
               <div className="transition-transform group-hover:scale-105">

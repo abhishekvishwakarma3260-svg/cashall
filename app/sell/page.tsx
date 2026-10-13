@@ -35,7 +35,7 @@ export default function CategorySelectionPage() {
             
             {/* MOBILE PHONE CARD */}
             <Link
-              href="/sell/mobile"
+              href="/sell-old-mobile-phone"
               className="bg-white rounded-2xl p-7 border border-neutral-200/80 hover:border-brand-yellow/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_-6px_rgba(255,212,0,0.2)] transition-all duration-300 group text-left flex flex-col justify-between hover:-translate-y-0.5"
             >
               <div>

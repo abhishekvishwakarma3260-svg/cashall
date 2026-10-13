@@ -391,7 +391,7 @@ export function Header() {
               Sell Device (Phone, Laptop or Tablet)
             </button>
             <Link
-              href="/sell/mobile"
+              href="/sell-old-mobile-phone"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-base font-semibold text-gray-200 hover:text-brand-yellow"
             >

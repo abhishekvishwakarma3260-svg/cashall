@@ -22,7 +22,7 @@ export function ReviewStatsBar() {
     },
     {
       title: `${satisfactionRate}% Seller Love`,
-      subtitle: `${totalOrders} happy verified customer orders`,
+      subtitle: `${REVIEW_STATS.totalReviews} verified customer reviews`,
     },
   ];
 

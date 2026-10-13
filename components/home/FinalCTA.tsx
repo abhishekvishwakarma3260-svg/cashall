@@ -20,7 +20,7 @@ export function FinalCTA() {
         </p>
 
         <div className="pt-3 flex justify-center">
-          <Link href="/sell/mobile">
+          <Link href="/sell-old-mobile-phone">
             <Button variant="primary" size="lg" className="text-sm font-extrabold px-8 py-3.5 gap-2 bg-brand-yellow hover:bg-yellow-400 text-slate-950 border-transparent rounded-xl shadow-yellowGlow cursor-pointer">
               <span>Check Phone Value Now</span>
               <ArrowRight className="w-4 h-4 text-slate-950" />

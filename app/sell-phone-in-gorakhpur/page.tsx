@@ -140,7 +140,7 @@ export default function SellPhoneInGorakhpurPage() {
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <Link
-                  href="/sell/mobile"
+                  href="/sell-old-mobile-phone"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-brand-yellow text-brand-black font-extrabold text-sm hover:bg-brand-yellowHover transition shadow-yellowGlow active:scale-95"
                 >
                   <Smartphone className="w-5 h-5" />

@@ -33,7 +33,7 @@ export default function NotFound() {
           {/* ACTION BUTTONS */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Link
-              href="/sell/mobile"
+              href="/sell-old-mobile-phone"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-brand-yellow text-brand-black font-extrabold text-xs sm:text-sm hover:bg-brand-yellowHover transition shadow-yellowGlow active:scale-95"
             >
               <Smartphone className="w-4 h-4" />

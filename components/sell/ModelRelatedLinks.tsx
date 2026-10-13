@@ -45,13 +45,13 @@ export function ModelRelatedLinks({
         </p>
         <div className="flex flex-wrap gap-2">
           <Link
-            href="/sell/mobile"
+            href="/sell-old-mobile-phone"
             className="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-[#FAFAF9] text-neutral-700 border border-neutral-200/80 hover:border-brand-yellow hover:bg-white hover:text-black transition-all"
           >
             Sell Old Phone Online
           </Link>
           <Link
-            href={`/sell/mobile/${currentBrandSlug}`}
+            href={`/sell-old-mobile-phone/${currentBrandSlug}`}
             className="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-[#FAFAF9] text-neutral-700 border border-neutral-200/80 hover:border-brand-yellow hover:bg-white hover:text-black transition-all"
           >
             Sell Old {brandName} Phone Online
@@ -59,7 +59,7 @@ export function ModelRelatedLinks({
           {sameBrandModels.map((m) => (
             <Link
               key={m.id}
-              href={`/sell/mobile/${currentBrandSlug}/${m.slug}`}
+              href={`/sell-old-mobile-phone/${currentBrandSlug}/${m.slug}`}
               className="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-[#FAFAF9] text-neutral-700 border border-neutral-200/80 hover:border-brand-yellow hover:bg-white hover:text-black transition-all"
             >
               {m.name}

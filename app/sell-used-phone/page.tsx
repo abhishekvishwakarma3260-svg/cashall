@@ -68,15 +68,15 @@ export const metadata: Metadata = {
 };
 
 const POPULAR_BRANDS = [
-  { name: "Apple iPhone", slug: "apple", popular: "iPhone 11 to 16 Pro Max, 17 Pro", href: "/sell/mobile/apple" },
-  { name: "Samsung Galaxy", slug: "samsung", popular: "S21 to S25 Ultra, Z Fold/Flip", href: "/sell/mobile/samsung" },
-  { name: "OnePlus", slug: "oneplus", popular: "OnePlus 9 to 13, Nord Series", href: "/sell/mobile/oneplus" },
-  { name: "Xiaomi / Redmi", slug: "xiaomi", popular: "Note 10 to 14 Pro, Mi Series", href: "/sell/mobile/xiaomi" },
-  { name: "Vivo", slug: "vivo", popular: "V25 to V40, X80 to X100 Pro", href: "/sell/mobile/vivo" },
-  { name: "Oppo", slug: "oppo", popular: "Reno 8 to 12, Find Series", href: "/sell/mobile/oppo" },
-  { name: "Realme", slug: "realme", popular: "GT Series, Number Series", href: "/sell/mobile/realme" },
-  { name: "Google Pixel", slug: "google", popular: "Pixel 6 to 9 Pro XL", href: "/sell/mobile/google" },
-  { name: "Motorola", slug: "motorola", popular: "Edge & Razr Series", href: "/sell/mobile/motorola" },
+  { name: "Apple iPhone", slug: "apple", popular: "iPhone 11 to 16 Pro Max, 17 Pro", href: "/sell-old-mobile-phone/apple" },
+  { name: "Samsung Galaxy", slug: "samsung", popular: "S21 to S25 Ultra, Z Fold/Flip", href: "/sell-old-mobile-phone/samsung" },
+  { name: "OnePlus", slug: "oneplus", popular: "OnePlus 9 to 13, Nord Series", href: "/sell-old-mobile-phone/oneplus" },
+  { name: "Xiaomi / Redmi", slug: "xiaomi", popular: "Note 10 to 14 Pro, Mi Series", href: "/sell-old-mobile-phone/xiaomi" },
+  { name: "Vivo", slug: "vivo", popular: "V25 to V40, X80 to X100 Pro", href: "/sell-old-mobile-phone/vivo" },
+  { name: "Oppo", slug: "oppo", popular: "Reno 8 to 12, Find Series", href: "/sell-old-mobile-phone/oppo" },
+  { name: "Realme", slug: "realme", popular: "GT Series, Number Series", href: "/sell-old-mobile-phone/realme" },
+  { name: "Google Pixel", slug: "google", popular: "Pixel 6 to 9 Pro XL", href: "/sell-old-mobile-phone/google" },
+  { name: "Motorola", slug: "motorola", popular: "Edge & Razr Series", href: "/sell-old-mobile-phone/motorola" },
 ];
 
 const SERVICE_REGIONS = [
@@ -205,7 +205,7 @@ export default function SellUsedPhonePage() {
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
-                    href="/sell/mobile"
+                    href="/sell-old-mobile-phone"
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-brand-yellow text-brand-black font-black text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all shadow-yellowGlow"
                   >
                     <span>Select Your Phone Brand</span>
@@ -462,19 +462,19 @@ export default function SellUsedPhonePage() {
             </h3>
             <div className="flex flex-wrap gap-2 text-xs">
               {[
-                { label: "Second Hand Mobile Price Check", href: "/sell/mobile" },
-                { label: "Used Phone Price Calculator", href: "/sell/mobile" },
+                { label: "Second Hand Mobile Price Check", href: "/sell-old-mobile-phone" },
+                { label: "Used Phone Price Calculator", href: "/sell-old-mobile-phone" },
                 { label: "Sell Old Phone Online", href: "/sell-used-phone" },
-                { label: "Cash for Phone", href: "/sell/mobile" },
-                { label: "2nd Hand Mobile Phones", href: "/sell/mobile" },
-                { label: "Sell Old Phone Ranchi", href: "/sell/mobile" },
+                { label: "Cash for Phone", href: "/sell-old-mobile-phone" },
+                { label: "2nd Hand Mobile Phones", href: "/sell-old-mobile-phone" },
+                { label: "Sell Old Phone Ranchi", href: "/sell-old-mobile-phone" },
                 { label: "Sell Old Phone Kolkata", href: "/sell-phone-in-kolkata" },
                 { label: "Sell Old Phone Howrah", href: "/sell-phone-in-howrah" },
                 { label: "Sell Old Phone Gorakhpur", href: "/sell-phone-in-gorakhpur" },
-                { label: "Sell iPhone Online", href: "/sell/mobile/apple" },
-                { label: "Sell Samsung Galaxy", href: "/sell/mobile/samsung" },
-                { label: "Refurbished Mobiles Valuation", href: "/sell/mobile" },
-                { label: "Mobile Resale Value Calculator", href: "/sell/mobile" },
+                { label: "Sell iPhone Online", href: "/sell-old-mobile-phone/apple" },
+                { label: "Sell Samsung Galaxy", href: "/sell-old-mobile-phone/samsung" },
+                { label: "Refurbished Mobiles Valuation", href: "/sell-old-mobile-phone" },
+                { label: "Mobile Resale Value Calculator", href: "/sell-old-mobile-phone" },
               ].map((item, idx) => (
                 <Link
                   key={idx}
@@ -495,7 +495,7 @@ export default function SellUsedPhonePage() {
             </p>
             <div className="mt-6">
               <Link
-                href="/sell/mobile"
+                href="/sell-old-mobile-phone"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-brand-black text-white font-black text-sm uppercase tracking-wider hover:bg-neutral-800 transition-colors shadow-lg"
               >
                 <span>Calculate Your Price Now</span>

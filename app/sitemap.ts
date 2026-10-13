@@ -33,7 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/sell/mobile`,
+      url: `${baseUrl}/sell-old-mobile-phone`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/sell-old-mobile-phone/brands`,
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
@@ -213,7 +219,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const mobileBrandPages: MetadataRoute.Sitemap = mobileBrands.map((brand) => ({
-    url: `${baseUrl}/sell/mobile/${brand}`,
+    url: `${baseUrl}/sell-old-mobile-phone/${brand}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,

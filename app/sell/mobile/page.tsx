@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { INITIAL_BRANDS, INITIAL_MODELS, BrandData } from "@/lib/store";
@@ -10,8 +11,13 @@ import { BrandIcon } from "@/components/common/BrandIcon";
 import { AiVerificationBar } from "@/components/common/AiVerificationBar";
 
 export default function BrandSelectionPage() {
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [brands, setBrands] = useState<BrandData[]>(INITIAL_BRANDS);
+
+  useEffect(() => {
+    router.replace("/sell-old-mobile-phone");
+  }, [router]);
 
   useEffect(() => {
     async function loadBrands() {
