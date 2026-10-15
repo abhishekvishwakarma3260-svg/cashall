@@ -335,8 +335,22 @@ export default function RootLayout({
         <link rel="author" href="/humans.txt" />
         <link rel="help" href="/llms.txt" />
         <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="CashALL Search" />
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERW4207TJ8" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-ERW4207TJ8');
+            `,
+          }}
+        />
       </head>
       <body className="bg-brand-bg text-brand-black min-h-screen font-sans antialiased">
+
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
